@@ -1,0 +1,13 @@
+{
+  "title": "Notifier Evidence Gate blocked (smoke-run-006)",
+  "description": "Cannot close notifier evidence gate for smoke-run-006. Blockers: (1) SLACK_WEBHOOK_URL missing in runtime; Slack notifier logs presence=False and cannot send. (2) macOS notifications failing: /usr/bin/osascript returns -2740 even with minimal display notification script from Terminal; LaunchAgent context likely also blocked. Terminal-notifier fallback not installed (no Homebrew sudo; user-local install not yet configured). Evidence bundle cannot be produced without Slack and macOS notification proofs. Env precedence preserved (env vars still override .env).",
+  "severity": "High",
+  "source": "webhook_notification_system",
+  "metadata": {
+    "run_id": "smoke-run-006",
+    "needs_slack_webhook_url": true,
+    "osascript_error": "-2740",
+    "terminal_notifier_missing": true
+  },
+  "next_step": "Provide SLACK_WEBHOOK_URL via LaunchAgent EnvironmentVariables and restart; or allow secure injection. Resolve macOS notification path: fix osascript in LaunchAgent context or install user-local terminal-notifier. Re-run smoke-run-006 after both are available and capture full evidence bundle."
+}

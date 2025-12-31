@@ -1,0 +1,11 @@
+{
+  "phase4": {
+    "trigger_file": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/ChatGPT-Code-Review-Agent-Trigger/01_inbox/HANDOFF__ChatGPT-Code-Review-Agent__dev-runtime-health-workflow-20251211__20251211T023131Z.md"
+  },
+  "phase4b": {
+    "trigger_file": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/Claude-MM1-Agent-Trigger/01_inbox/HANDOFF__Claude-MM1-Agent__dev-runtime-health-workflow-20251211__20251211T023131Z.md"
+  },
+  "phase5": {
+    "trigger_file": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/Notion-AI-Research-Agent-Trigger/01_inbox/HANDOFF__Notion-AI-Research-Agent__dev-runtime-health-workflow-20251211__20251211T023131Z.md"
+  }
+}

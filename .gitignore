@@ -1,0 +1,32 @@
+
+# Environment files
+.env
+.env.*
+*.env
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+
+# Embedded git repos (handle as submodules if needed)
+background-agents-project/
+seren-media-workflows/
+
+# Client environment files (contain secrets)
+clients/.env.*
+clients/.env
+
+# Backup files with secrets
+monolithic-scripts/.env.backup
+
+# Security findings (may contain tokens)
+security_findings.json
+
+# State files that may contain tokens
+var/state/**/*.json
+var/pending_notion_writes/**/*.json
+

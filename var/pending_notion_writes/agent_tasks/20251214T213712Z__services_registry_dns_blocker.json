@@ -1,0 +1,10 @@
+{
+  "title": "Handoff Help Request: Restore Notion DNS connectivity for Services Registry STEP 0",
+  "status": "Ready",
+  "task_type": "Handoff",
+  "priority": "High",
+  "dependency_status": "Blocked",
+  "description": "Notion unreachable due to DNS resolution failure (api.notion.com). Need network/DNS fix so Services Registry STEP 0 baseline and governance entries can proceed. See pending I+Q payload and diagnostics.",
+  "created_at": "20251214T213712Z",
+  "dependency": "Notion connectivity"
+}

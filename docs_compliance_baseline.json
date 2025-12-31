@@ -1,0 +1,1222 @@
+{
+  "summary": {
+    "total": 63,
+    "compliant": 13,
+    "partial": 21,
+    "non_compliant": 29,
+    "compliance_percentage": 20.634920634920633
+  },
+  "results": [
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/drivesheetsync-integration-orchestration-complete.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/seren_marketing_system_L0_master_spec.md",
+      "status": "\u26a0\ufe0f PARTIAL",
+      "issues": [
+        "Missing required sections: Non-Negotiable.*Rules?"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Non-Negotiable.*Rules?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": true
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/orchestration-invariants-documentation-update-summary-2025-01-09.md",
+      "status": "\u2705 COMPLIANT",
+      "issues": [],
+      "missing_invariants": [],
+      "missing_sections": [],
+      "has_must_language": true,
+      "has_compliance_footer": true
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/SYSTEM_STATE_RADAR_HANDOFF_TASKS_COMPLETE_2025-12-08.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/dev-orchestration-agent-task-specifications-2025-01-03.md",
+      "status": "\u26a0\ufe0f PARTIAL",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/dev-orchestration-workflow-execution-log-2025-01-03-run2.md",
+      "status": "\u26a0\ufe0f PARTIAL",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/agent-trigger-paths-specification.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing MUST/MUST NOT language",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": false,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/dev-orchestration-workflow-execution-log-2025-01-09.md",
+      "status": "\u26a0\ufe0f PARTIAL",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/runtime_health_audit_preflight.md",
+      "status": "\u26a0\ufe0f PARTIAL",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/drivesheetsync-meta-surfaces-and-agent-usage.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/orchestration-invariants-visual-diagrams.md",
+      "status": "\u26a0\ufe0f PARTIAL",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/orchestration-invariants-runbooks-2025-01-09.md",
+      "status": "\u26a0\ufe0f PARTIAL",
+      "issues": [
+        "Missing required sections: Non-Negotiable.*Rules?"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Non-Negotiable.*Rules?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": true
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/HANDOFF_TASKS_EXECUTION_INSTRUCTIONS_2025-12-08.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/RUNTIME_HEALTH_AUDIT_IMPLEMENTATION_SUMMARY_2025-01-27.md",
+      "status": "\u26a0\ufe0f PARTIAL",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/orchestration-invariants-agent-tasks-specification-2025-01-09.md",
+      "status": "\u2705 COMPLIANT",
+      "issues": [],
+      "missing_invariants": [],
+      "missing_sections": [],
+      "has_must_language": true,
+      "has_compliance_footer": true
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/marketing_workflows_and_use_case_catalog.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/workspace_area_and_database_map_current_vs_target.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/orchestration-invariants-documentation-comprehensive-review-audit-report-2025-01-09.md",
+      "status": "\u2705 COMPLIANT",
+      "issues": [],
+      "missing_invariants": [],
+      "missing_sections": [],
+      "has_must_language": true,
+      "has_compliance_footer": true
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/DOMAIN_CORRECTION_NOTE.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/dev-orchestration-workflow-execution-log-2025-01-03.md",
+      "status": "\u26a0\ufe0f PARTIAL",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/agent-trigger-inbox-global-single-item-rule.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing MUST/MUST NOT language",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": false,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/SYSTEM_STATE_RADAR_IMPLEMENTATION_COMPLETE_2025-12-08.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/drivesheetsync-agent-integration-pattern.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing MUST/MUST NOT language",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": false,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/webhook_url_remediation_report_20251208-200533.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing MUST/MUST NOT language",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": false,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/orchestration-invariants-known-gaps-and-remediation-2025-01-09.md",
+      "status": "\u2705 COMPLIANT",
+      "issues": [],
+      "missing_invariants": [],
+      "missing_sections": [],
+      "has_must_language": true,
+      "has_compliance_footer": true
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/SYSTEM_STATE_RADAR_HANDOFF_TASKS_SUMMARY_2025-12-08.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/RUNTIME_HEALTH_AUDIT_FINAL_REPORT_2025-01-27.md",
+      "status": "\u26a0\ufe0f PARTIAL",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/dev-orchestration-workflow-phase0-execution-log-2025-01-09.md",
+      "status": "\u26a0\ufe0f PARTIAL",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/orchestration-invariants-policy-compliance-checklist-footer-template.md",
+      "status": "\u2705 COMPLIANT",
+      "issues": [],
+      "missing_invariants": [],
+      "missing_sections": [],
+      "has_must_language": true,
+      "has_compliance_footer": true
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/drivesheetsync-agent-reference-spec.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing MUST/MUST NOT language",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": false,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/orchestration-invariants-next-actions-completion-summary-2025-01-09.md",
+      "status": "\u2705 COMPLIANT",
+      "issues": [],
+      "missing_invariants": [],
+      "missing_sections": [],
+      "has_must_language": true,
+      "has_compliance_footer": true
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/seren_marketing_system_program_roadmap_and_status.md",
+      "status": "\u26a0\ufe0f PARTIAL",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/orchestration-invariants-documentation-update-plan-2025-01-09.md",
+      "status": "\u2705 COMPLIANT",
+      "issues": [],
+      "missing_invariants": [],
+      "missing_sections": [],
+      "has_must_language": true,
+      "has_compliance_footer": true
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/universal_codebase_audit_and_discovery_system.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/NOTION_REMEDIATION_FINAL_STATUS.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing MUST/MUST NOT language",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": false,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/runtime_health_and_cloudflare_webhook_audit.md",
+      "status": "\u26a0\ufe0f PARTIAL",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/dev-orchestration-workflow-completion-summary-2025-01-03.md",
+      "status": "\u26a0\ufe0f PARTIAL",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/orchestration-invariants-post-remediation-review-schedule.md",
+      "status": "\u26a0\ufe0f PARTIAL",
+      "issues": [
+        "Missing MUST/MUST NOT language"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [],
+      "has_must_language": false,
+      "has_compliance_footer": true
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/orchestration-invariants-final-implementation-ready-summary-2025-01-09.md",
+      "status": "\u2705 COMPLIANT",
+      "issues": [],
+      "missing_invariants": [],
+      "missing_sections": [],
+      "has_must_language": true,
+      "has_compliance_footer": true
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/dev-orchestration-workflow-execution-log-2025-01-09-phase0-complete.md",
+      "status": "\u26a0\ufe0f PARTIAL",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/orchestration-invariants-documentation-audit-report-2025-01-09.md",
+      "status": "\u2705 COMPLIANT",
+      "issues": [],
+      "missing_invariants": [],
+      "missing_sections": [],
+      "has_must_language": true,
+      "has_compliance_footer": true
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/NOTION_RESEARCH_REPORT_REMEDIATION_COMPLETE.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/workspace_end_state_and_marketing_ops_playbook.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/orchestration-invariants-next-actions-execution-summary-2025-01-09.md",
+      "status": "\u2705 COMPLIANT",
+      "issues": [],
+      "missing_invariants": [],
+      "missing_sections": [],
+      "has_must_language": true,
+      "has_compliance_footer": true
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/NOTION_RESEARCH_REPORT_RESPONSE_2025-12-08.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing MUST/MUST NOT language",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": false,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/system/retrofit_component_backlog_and_status.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing MUST/MUST NOT language",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": false,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/agents/mcp_and_agent_orchestration_contracts.md",
+      "status": "\u2705 COMPLIANT",
+      "issues": [],
+      "missing_invariants": [],
+      "missing_sections": [],
+      "has_must_language": true,
+      "has_compliance_footer": true
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/agents/agent_capability_map_and_handoff_catalog.md",
+      "status": "\u26a0\ufe0f PARTIAL",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/agents/agent_trigger_cleanup_log.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing MUST/MUST NOT language",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": false,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/agents/cursor_mm1_desktop_automation_and_gas_hybrid_prompt.md",
+      "status": "\u2705 COMPLIANT",
+      "issues": [],
+      "missing_invariants": [],
+      "missing_sections": [],
+      "has_must_language": true,
+      "has_compliance_footer": true
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/agents/handoff_context_population_methodology.md",
+      "status": "\u26a0\ufe0f PARTIAL",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/agents/agent_trigger_cleanup_policy_decisions_20251208.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/agents/agent_trigger_cleanup_and_documentation_validation_report_2025-12-08.md",
+      "status": "\u26a0\ufe0f PARTIAL",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/notion/notion_control_plane_and_registry_contracts.md",
+      "status": "\u2705 COMPLIANT",
+      "issues": [],
+      "missing_invariants": [],
+      "missing_sections": [],
+      "has_must_language": true,
+      "has_compliance_footer": true
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/observability/system_state_radar_implementation_notes.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/observability/system_state_radar_and_compliance_report.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing MUST/MUST NOT language"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": false,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/observability/data_quality_metrics_and_dashboard_spec.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/observability/system_state_radar_strategic_handoff_template.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing MUST/MUST NOT language"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": false,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/observability/logging_metrics_and_execution_logs_standard.md",
+      "status": "\u26a0\ufe0f PARTIAL",
+      "issues": [
+        "Missing required sections: Non-Negotiable.*Rules?, orchestration.*invariants?"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": true
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/runtime/environment_and_deployment_matrix.md",
+      "status": "\u26a0\ufe0f PARTIAL",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?"
+      ],
+      "missing_invariants": [],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/runtime/gcp_oauth_configuration.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/runtime/desktop_automation_and_webhook_telemetry_architecture.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    },
+    {
+      "file_path": "/Users/brianhellemn/Projects/github-production/docs/runtime/launch_agent_and_local_runtime_environment_spec.md",
+      "status": "\u274c NON-COMPLIANT",
+      "issues": [
+        "Missing Policy Compliance Checklist footer",
+        "Missing required sections: Policy Compliance Checklist, Non-Negotiable.*Rules?, orchestration.*invariants?",
+        "Missing invariant references: 9"
+      ],
+      "missing_invariants": [
+        "Global Single Candidate Invariant",
+        "Canonical vs Secondary Database Rules",
+        "Agent-Trigger Folder Enforcement",
+        "Folders DB as Canonical Registry",
+        "Environment & Credential Discovery Routine",
+        "Phase Completion Checklists",
+        "Mandatory Agent-Task Handoffs",
+        "DEV vs PROD Run Modes",
+        "Error-Streak & Self-Course-Correction"
+      ],
+      "missing_sections": [
+        "Policy Compliance Checklist",
+        "Non-Negotiable.*Rules?",
+        "orchestration.*invariants?"
+      ],
+      "has_must_language": true,
+      "has_compliance_footer": false
+    }
+  ]
+}

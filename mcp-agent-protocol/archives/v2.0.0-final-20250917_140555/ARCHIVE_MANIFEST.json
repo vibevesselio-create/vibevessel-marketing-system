@@ -1,0 +1,1916 @@
+{
+  "version": "2.0.0",
+  "timestamp": "20250917_140555",
+  "archive_date": "2025-09-17T14:05:55.195490",
+  "project": "MCP Agent Protocol v2.0",
+  "description": "Complete implementation of MCP Agent Protocol v2.0",
+  "files": {
+    "VERSIONING_ARCHIVAL_SUMMARY.md": {
+      "size": 6857,
+      "checksum": "78b97180776bc4495aa616093752738a0233e6b95591dc49444d4830a601f4db",
+      "modified": 1758055610.0940192
+    },
+    "FINAL_COMPLETION_SUMMARY_V2.0.md": {
+      "size": 9135,
+      "checksum": "add8e392466496823487e54e19e5859bc3c275909e6f71919ffe7ea2f1aeb08a",
+      "modified": 1758061803.9652772
+    },
+    "PROJECT_SUMMARY.md": {
+      "size": 11215,
+      "checksum": "a4f509800a767dd115e26b745a8f3d32e04d101a84086cb561aa03bffe59785c",
+      "modified": 1758057234.900808
+    },
+    "FINAL_VERIFICATION_REPORT_COMPLETE.md": {
+      "size": 8997,
+      "checksum": "821faca668e58f41fe0ef17d5d5d28ec967eb51fa7e33636c1b9171a5a7d533b",
+      "modified": 1758055610.0978003
+    },
+    "IMPLEMENTATION_REPORT.md": {
+      "size": 12679,
+      "checksum": "353dcd6c16b78dea64971d0338a21fbfa400c1bc2d9619f7a4ae2a3cb1ebb65f",
+      "modified": 1758027349.2827034
+    },
+    "AI_CHAT_CONVERSATION_LOG_OPTIMIZATION_V6.md": {
+      "size": 13605,
+      "checksum": "c9a8aab77580e044dde9ce024092ea0dedd9e6dc18b3fac15bfdc436e140c449",
+      "modified": 1758027652.057345
+    },
+    "run_example.sh": {
+      "size": 755,
+      "checksum": "7c4a98f795e167f62784a2d24e035d4c82661c25a98b5cf0d87654c48ffb4c99",
+      "modified": 1758061612.507474
+    },
+    "COMPLETION_SUMMARY_v2.md": {
+      "size": 6597,
+      "checksum": "a5d4badf9ac5ebd7b61d6bbb4f3d934a146c1f0c663086fbc8d45dd2c38d6992",
+      "modified": 1758126610.8196964
+    },
+    "MCP_V2_IMPLEMENTATION_COMPLETION_REPORT.md": {
+      "size": 6757,
+      "checksum": "b93852206950fef118c4d2a6ce335e62e29e08e2da5f3388489c3faef943868d",
+      "modified": 1758028953.4189649
+    },
+    "FINAL_VERIFICATION_AND_COMPLETION_REPORT.md": {
+      "size": 8218,
+      "checksum": "75bf37a4de067cde5086e05e969cf53a86ca38cfb2a6c92e83a322aa7db4e10d",
+      "modified": 1758057418.4266224
+    },
+    "AI_CHAT_CONVERSATION_LOG_OPTIMIZATION_V6.0.md": {
+      "size": 15302,
+      "checksum": "477e3212ed896574c83274ebeb26dcb39399af67cb15cb66c4f6c9880a79a957",
+      "modified": 1758029270.0571628
+    },
+    "CHANGELOG_v2.0.0.md": {
+      "size": 7751,
+      "checksum": "d48558c2029067400f5dea5450121ba9846c602d641777b2c0f1718847454724",
+      "modified": 1758126610.880077
+    },
+    "PROMPT_OPTIMIZATION_ANALYSIS_V5.md": {
+      "size": 16512,
+      "checksum": "5ae41d15ceafbf9183011b06c2412bcf202d65f9137dffd2c3af956881541214",
+      "modified": 1758056745.168235
+    },
+    "NOTION_FINAL_DOCUMENTATION_ENTRY.md": {
+      "size": 10682,
+      "checksum": "53c805cd088386c3053d4e2537cbc656d7ffb1705ced18eb537e98bf0f8202a3",
+      "modified": 1758024247.7117813
+    },
+    "verification.py": {
+      "size": 14381,
+      "checksum": "1ab6ee782e9f913ce7635da670154a0f596ee7fdc84e2bbcb1587539ec4d010f",
+      "modified": 1758061612.505933
+    },
+    "CHANGELOG_V2.0.1.md": {
+      "size": 7517,
+      "checksum": "7b33ef1f5c25da2bba090d189e4c5a7909654b6da10295dabda07731e4c21a93",
+      "modified": 1758028953.4187295
+    },
+    "PROMPT_OPTIMIZATION_ANALYSIS_V4.md": {
+      "size": 13042,
+      "checksum": "92a1f6abd4a0449a123b403eb6616c2c6ee40e47f9395c5e972064aa5405c2a0",
+      "modified": 1758025745.5099556
+    },
+    "simple_validation.py": {
+      "size": 7658,
+      "checksum": "23fcf4e63e0eba0750cbd4cbe9caa5462aafee391705119ed9fe380b8945e58b",
+      "modified": 1758027349.2827125
+    },
+    "COMPLETION_SUMMARY.md": {
+      "size": 6960,
+      "checksum": "42af6d30792d069cc3c689112d4cb3ed73b07f3b260a99e445ecf935ac82b7b4",
+      "modified": 1758021619.4386313
+    },
+    "FINAL_PROMPT_OPTIMIZATION_SUMMARY_V6.0.md": {
+      "size": 16265,
+      "checksum": "f308c871564687e71b844d757812bd40490f1f7d124a41219a9d22c4ceccb4d7",
+      "modified": 1758029270.0569549
+    },
+    "test_agent.py": {
+      "size": 5954,
+      "checksum": "87700fbd69ac77a103a6d338852a7e0f4bf0bbe501b3b2ef95c16a6070c819e5",
+      "modified": 1758057861.9553127
+    },
+    "config.py": {
+      "size": 3723,
+      "checksum": "3519c6f3284deadd30376f7182d9d09773d85d53e91591a8edc0b03463e7d09d",
+      "modified": 1758126611.0851502
+    },
+    "PROJECT_STRUCTURE.md": {
+      "size": 4493,
+      "checksum": "4d375ac5652fce2d5a0d6ce332003b07765f968e40afbefb645463512f4aebe1",
+      "modified": 1758059620.4679465
+    },
+    "AI_CHAT_CONVERSATION_LOG_V2.0_FINAL.md": {
+      "size": 6142,
+      "checksum": "88f975c0f2951f03a0a6df38f69aa58026582e9771cf3b5b86ca11e4d1fb188a",
+      "modified": 1758061939.6679864
+    },
+    "AI_CHAT_CONVERSATION_LOG.md": {
+      "size": 16474,
+      "checksum": "fa875daf7191ac23a11c924939ad9cca26f64ee6cc11852ea7c187d160c605ab",
+      "modified": 1758028351.9907267
+    },
+    "PROMPT_OPTIMIZATION_SUMMARY.md": {
+      "size": 6841,
+      "checksum": "c310d6c29385047472fabf6cab96e785caaefdbc0c75c49389d119035db690cf",
+      "modified": 1758021866.8238068
+    },
+    "PROJECT_STRUCTURE_FINAL_V2.0.md": {
+      "size": 7929,
+      "checksum": "83ed11047f400d0d04175223970a64c026e1e89e13ef87c29a7f1d97e69ac05e",
+      "modified": 1758057995.175336
+    },
+    "LICENSE": {
+      "size": 1074,
+      "checksum": "613e87ac59631d21ec2139e8de924710efe4ea12362b73a07aa679d9020ab446",
+      "modified": 1758057234.9272282
+    },
+    "IMPLEMENTATION_GUIDE_v2.md": {
+      "size": 10417,
+      "checksum": "9d4bb50ae52f5abb782c87ef8333f2097e6a72dbebf27f36f0b179dd1ce166a2",
+      "modified": 1758126610.8061683
+    },
+    "requirements.txt": {
+      "size": 150,
+      "checksum": "f1a5b3353ea4a74a5f6128c7061eb3cc840f8db2a5f1b8815ad66b41849b36ff",
+      "modified": 1758135520.6494195
+    },
+    "config.example.env": {
+      "size": 156,
+      "checksum": "5506c4eef2e8340d399c29a7f3ce0a1b3f7adc0bbba8f4cd623c7688fb619c6e",
+      "modified": 1758057861.9432685
+    },
+    "ULTIMATE_COMPLETION_SUMMARY_FINAL.md": {
+      "size": 8826,
+      "checksum": "b2fc292b8d974f342f5e0955183d7be469c1c2cd3753531348da00d3276cfc1c",
+      "modified": 1758055610.0942562
+    },
+    "NOTION_LOG_ENTRY.md": {
+      "size": 7137,
+      "checksum": "290eb28ac1fdc372edabc18b1e79e3dc86f1e4e5a98e97fe571c190ace128741",
+      "modified": 1758021866.8202322
+    },
+    "ENHANCED_IMPLEMENTATION_GUIDE_V2.0.md": {
+      "size": 6751,
+      "checksum": "e7e11edd8f7d0f96a8a368f0ffd13a842d9f22425575803c5a0e5d35b8e167f7",
+      "modified": 1758061939.668121
+    },
+    "ORGANIZATIONAL_ALIGNMENT_VALIDATION_FINAL.md": {
+      "size": 5629,
+      "checksum": "f507ebb7f21d8d09601c4adb3985769a50ac07ab360ffa8322027848feb29fbf",
+      "modified": 1758060929.1159818
+    },
+    "IMPLEMENTATION_SUMMARY.md": {
+      "size": 8675,
+      "checksum": "e8a3849bca6ac46d447a18eb316eaf1a58192478893d5cc0ccfcf58279bc4604",
+      "modified": 1758135520.6498587
+    },
+    "CHANGELOG.md": {
+      "size": 5522,
+      "checksum": "7dba49563c063e6d9a8f339e786eae00194a3ee8a55121a66835d74c0526973d",
+      "modified": 1758057234.952258
+    },
+    "PROMPT_OPTIMIZATION_SUMMARY_V2.md": {
+      "size": 10824,
+      "checksum": "401250a65fcedbedcae14a8a472b794dc80879d517cb06af4b02aeefeef4fa5f",
+      "modified": 1758025037.7350888
+    },
+    "NOTION_FINAL_MCP_V2_COMPLETION_LOG.md": {
+      "size": 4210,
+      "checksum": "bd1c8703354ceef2111a023a006a804115df1470f6c88e95fd10f8fcc2b57576",
+      "modified": 1758028953.4230847
+    },
+    "enhanced_logger.py": {
+      "size": 13909,
+      "checksum": "61a89c541abac21c8c714fefd289d357c7103e6500ffea38495b097b2b4481c0",
+      "modified": 1758021528.1406739
+    },
+    "ORGANIZATIONAL_ALIGNMENT_VALIDATION_V2.md": {
+      "size": 8451,
+      "checksum": "3c60c2d4bb200665d80f499ba7429505fa9321c6eae2b3659c207c0806b65fbf",
+      "modified": 1758056464.4984102
+    },
+    "PROMPT_OPTIMIZATION_ANALYSIS.md": {
+      "size": 9253,
+      "checksum": "ec8118228ded96ff70e6830adec8778a1513b57a1d54af6208d68b9d9777dc89",
+      "modified": 1758021866.8188353
+    },
+    "AI_CHAT_CONVERSATION_LOG_OPTIMIZATION.md": {
+      "size": 11256,
+      "checksum": "64479de368d06d8ecfe6845f6aeba579f5a3b52e1583be5df0007d4b0165cab9",
+      "modified": 1758025745.5104525
+    },
+    "FINAL_WORK_COMPLETION_VERIFICATION_REPORT.md": {
+      "size": 8780,
+      "checksum": "54a5781da16e5e254c13a703e3d69d488e802f6468a99bc33ecd67dbe8bf95f7",
+      "modified": 1758026119.4010725
+    },
+    "NOTION_FINAL_COMPLETION_LOG_ENTRY.md": {
+      "size": 8237,
+      "checksum": "11c1bcde26751610d88f9f24ceff319ed696177a117f00e00e3048f4d662487d",
+      "modified": 1758055610.0941486
+    },
+    "CHANGELOG_V2.md": {
+      "size": 5892,
+      "checksum": "4115c26b58a5e0ce299536f052fca64b87a432d1578978ed7df5c0c4c28710f2",
+      "modified": 1758027968.8254986
+    },
+    "NOTION_FINAL_COMPLETION_LOG_ENTRY_V2.0.md": {
+      "size": 11302,
+      "checksum": "cf88ede219c42da8cec3633f7cac3bf19aecede5d65f78186c49226a2acad219",
+      "modified": 1758057418.4266427
+    },
+    "simple_archive.py": {
+      "size": 8498,
+      "checksum": "e11a22111b2511990fbdc2798dea072710e62aa5b88042013a9486d2504c53bb",
+      "modified": 1758023683.9547503
+    },
+    "MCP_V2_IMPLEMENTATION_SUMMARY.md": {
+      "size": 9144,
+      "checksum": "0b3a06076ffe5c209a498aae4231bf7662239e41404c1771d29c021dd7b68a15",
+      "modified": 1758023228.4292347
+    },
+    "run_agent.py": {
+      "size": 865,
+      "checksum": "8ab6d959021207b2746b374077d5b998c093ceb4516b83b09d14060d274a0fa6",
+      "modified": 1758126611.1782181
+    },
+    "PROMPT_OPTIMIZATION_ANALYSIS_FINAL_V2.0.md": {
+      "size": 16353,
+      "checksum": "6d14c4e6abf75de63b83cc6a978f30195cb5a0c122717158f7bb8e750dea9827",
+      "modified": 1758058422.1423085
+    },
+    "PROMPT_OPTIMIZATION_IMPLEMENTATION_GUIDE_V3.md": {
+      "size": 12055,
+      "checksum": "336c861e2b2c5f2cfa87ccea91a9432dddbbe750d2c4c0f3c39a2d14a8d42870",
+      "modified": 1758028351.990791
+    },
+    "AI_CHAT_CONVERSATION_LOG_V2.0_FINAL_OPTIMIZED.md": {
+      "size": 20344,
+      "checksum": "5731d420c062b26697bea1cd66cc91a60b7b23b85d11cfa4991bdbbf2e4ee0ec",
+      "modified": 1758126611.2838483
+    },
+    "PROMPT_OPTIMIZATION_RECOMMENDATIONS_V2.0.md": {
+      "size": 3241,
+      "checksum": "4d5732e3a4c66d8bee23f3965d4d58264a13dac7f2b64e42d0dd36992501999b",
+      "modified": 1758061939.6651366
+    },
+    "mcp_agent_protocol_v2.py": {
+      "size": 24885,
+      "checksum": "eea773c67761bc77b747e8b47cea1106c4f2524f580f733be585f8391b74dac7",
+      "modified": 1758126610.5449607
+    },
+    "FINAL_VERIFICATION_AND_COMPLETION_REPORT_V2.0.md": {
+      "size": 8480,
+      "checksum": "6783245c2f7fe620331c7546c00ea717719ab006523d81974974dd2d15fe2db3",
+      "modified": 1758057995.175259
+    },
+    "FINAL_COMPLETION_VERIFICATION_REPORT_V2.0.md": {
+      "size": 7672,
+      "checksum": "1526c209e003134230cd9834682d13faf0467868a1c93232ab7fcc4d48f558f9",
+      "modified": 1758059865.6689126
+    },
+    "AI_CHAT_CONVERSATION_LOG_FINAL_V2.0.md": {
+      "size": 19458,
+      "checksum": "af2b98eb382877c28e4993441a1d38fe9264e0037899ad476dc0f2e98c0b9386",
+      "modified": 1758058422.1425579
+    },
+    "mcp_agent_protocol.py": {
+      "size": 22789,
+      "checksum": "fe9050d1620a30b3c36815c846a0f29c01de266862d182f50580dc52855ce196",
+      "modified": 1758126610.9698331
+    },
+    "COMPLETION_REPORT.md": {
+      "size": 8917,
+      "checksum": "8d11f5b713e8ef2fb925ef27498f9810f449c743c7cae678f4ce4530315264fb",
+      "modified": 1758027349.2868235
+    },
+    "env_example.txt": {
+      "size": 273,
+      "checksum": "cc73457e3a83ad0c31b30c2c08c4d52c00d025f69014346e19f17a97c2f2c7c6",
+      "modified": 1758126611.005618
+    },
+    "__init__.py": {
+      "size": 1014,
+      "checksum": "a910a4bfb2182004b2d954982b144751708fb1422708bf0ac5e5e33a524c4b1f",
+      "modified": 1758061612.5061467
+    },
+    "ORGANIZATIONAL_ALIGNMENT_VALIDATION_V2.0_FINAL.md": {
+      "size": 7324,
+      "checksum": "cc21d0d45f1cb4889c8be9f25354e497e1ad2834fa896884d423c9b14a20e8f0",
+      "modified": 1758059865.669354
+    },
+    "notion_integration.py": {
+      "size": 13599,
+      "checksum": "8f1972ca0fda3c4fd80aef2d3c17aa083b4b7f606c12a8fe379c4981bc1d01ea",
+      "modified": 1758057861.9434056
+    },
+    "mcp_notion_client.py": {
+      "size": 6904,
+      "checksum": "8f8a4cd254205440b85be5638f92a6ecd1ceda73794266b685afba696404b59d",
+      "modified": 1758060380.9205718
+    },
+    "NOTION_FINAL_COMPLETION_LOG_ENTRY_V2.0_FINAL.md": {
+      "size": 6257,
+      "checksum": "6dcdeecc8415cf99fc4fe874276a6588b2739f6411b817aaf1adb714e8f06d3f",
+      "modified": 1758126611.2343376
+    },
+    "AI_CHAT_CONVERSATION_LOG_OPTIMIZATION_V2.0_FINAL.md": {
+      "size": 6970,
+      "checksum": "1974fff80b684f154096f38e0b25a425dcdd8d824dd97d06b159328e5ef0f9f0",
+      "modified": 1758061109.1125414
+    },
+    "FINAL_OPTIMIZATION_SUMMARY_V2.0.md": {
+      "size": 4618,
+      "checksum": "92fe0ecb415f89556eef62fe20078c07b3520bf1a76f536d996135576d2389cf",
+      "modified": 1758061164.426983
+    },
+    "test.py": {
+      "size": 6823,
+      "checksum": "7422deb0ecdeaa19deff5144f30f9d0677cd84fa3e3460a7d892e93409f0c064",
+      "modified": 1758059620.4527457
+    },
+    "logger.py": {
+      "size": 3040,
+      "checksum": "bcf633db4d91d5ee93b3526dafd7f4ba4a4e41e45dded344378e0daea7d57b22",
+      "modified": 1758061612.5060577
+    },
+    "example_usage.py": {
+      "size": 6905,
+      "checksum": "c9906aa28a6200a8c7d7d3f25bf079f913e180fb9bcc26ddcc2be0849349804b",
+      "modified": 1758061612.5062752
+    },
+    "test_implementation.py": {
+      "size": 5329,
+      "checksum": "321b107a7baa7565840e1be9258329decde3f39d4b17046a9ac69d768db5c220",
+      "modified": 1758126611.1867485
+    },
+    "PROMPT_OPTIMIZATION_ANALYSIS_FINAL.md": {
+      "size": 12376,
+      "checksum": "66e713173d83df3dbea2d73a77478daf1ed5d7dfdfa1e2bb2a2d756ebac3a4f6",
+      "modified": 1758057739.7101579
+    },
+    "README_MCP_V2_COMPLETE.md": {
+      "size": 15893,
+      "checksum": "c48443bc742e613f6e80da533f6eee1b5f9b5258b20d555e24cdd5ba5851c16f",
+      "modified": 1758027094.7852046
+    },
+    "FINAL_COMPLETION_VERIFICATION_REPORT_V2.0_FINAL.md": {
+      "size": 8368,
+      "checksum": "e0f95fcda2e53c739ac480f11a9a4e0f7df29e0715f39daf9be2b81fa1294a52",
+      "modified": 1758126611.227971
+    },
+    "validate_implementation.py": {
+      "size": 19190,
+      "checksum": "a6b742fc7b6e14e2283429aeb706e41a1869134cde9a8472aab3f1d184bc230f",
+      "modified": 1758027349.2868524
+    },
+    "FINAL_WORK_COMPLETION_SUMMARY.md": {
+      "size": 8359,
+      "checksum": "312518936d38f694315715c390ddb6979305a777a4c74c52d6974f71146f34e3",
+      "modified": 1758027968.825773
+    },
+    "ENHANCED_PROMPT_OPTIMIZATION_IMPLEMENTATION_GUIDE_V5.md": {
+      "size": 24644,
+      "checksum": "f2f2b2611698c259928c45d855b666f7c555bc0406815e6a18ad42bad0a42e8e",
+      "modified": 1758026471.6525578
+    },
+    "VERSIONING_ARCHIVAL_SUMMARY_V2.md": {
+      "size": 6523,
+      "checksum": "881b50583b695804673cc29b5e155d25aab90596375718a178b0f17a80b4e83f",
+      "modified": 1758056464.4952302
+    },
+    "PROMPT_OPTIMIZATION_FINAL_SUMMARY_V4.md": {
+      "size": 10045,
+      "checksum": "b4e16d70afdcae08ab8cd4f6c180283f649ffa37fff51b95213e38d51c565680",
+      "modified": 1758055886.3754485
+    },
+    "README.md": {
+      "size": 1388,
+      "checksum": "5378303b97fdba5b6f6da5f90300c4d7b25fbda6e2f4214eb8e820a6ddee31b2",
+      "modified": 1758135520.6435714
+    },
+    "VERSION.md": {
+      "size": 2643,
+      "checksum": "b5577386c9e38080f9f86c2ea257ce7d7280d1759a640ab63e298896ad7a7b97",
+      "modified": 1758135814.66436
+    },
+    "agent_router.py": {
+      "size": 10039,
+      "checksum": "9b938755d351b546961c1ec8b069b7122a8dd9eb43bf9dda8f923a01862014d3",
+      "modified": 1758061612.5053296
+    },
+    "PROJECT_STRUCTURE_FINAL.md": {
+      "size": 7128,
+      "checksum": "f62beaed5f66e4dbe2d088d3cb4426dc98b3a0d0510fc8196a18dac0514d337c",
+      "modified": 1758057418.4266644
+    },
+    "ULTIMATE_COMPLETION_SUMMARY_FINAL_V2.0.md": {
+      "size": 13484,
+      "checksum": "c5a7ee35650145e96b8411ef5f0572441aa81bc5960aa6ae808b49c172089744",
+      "modified": 1758061226.7113223
+    },
+    "FINAL_STATUS_REPORT.md": {
+      "size": 4726,
+      "checksum": "8938eb86404e226c8fd714d4bd946e42a208b69af993f806b501403e4caca962",
+      "modified": 1758057418.426689
+    },
+    "AI_CHAT_CONVERSATION_LOG_V4_UPDATE.md": {
+      "size": 12394,
+      "checksum": "d0ef70c50b8f9264460622b65bd104dfd459649e9204f9761cf28d1667bc2469",
+      "modified": 1758055886.3662906
+    },
+    "ORGANIZATIONAL_ALIGNMENT_V2.md": {
+      "size": 8174,
+      "checksum": "9c4cb07f22643eccfe100b2239164f3838118f1f9bd54ff628e33aed366351e2",
+      "modified": 1758027968.8255754
+    },
+    "NOTION_FINAL_DOCUMENTATION_ENTRY_v2.md": {
+      "size": 7311,
+      "checksum": "898fc224ba7e844df356b39025dbae952e8484b265299cc86ef050bedb3b4d77",
+      "modified": 1758126610.9278986
+    },
+    "setup.py": {
+      "size": 3688,
+      "checksum": "e1ad1200ba7b453edb24568e564d1be03cb0561c38f4d3b20960f0798d82750f",
+      "modified": 1758135520.6560318
+    },
+    "example_v2.py": {
+      "size": 2944,
+      "checksum": "6e82ec1ec907bf7499a226e1e419c0744628295d8a8ef09e7a423ce320e697d5",
+      "modified": 1758126610.730184
+    },
+    "ORGANIZATIONAL_ALIGNMENT_VALIDATION_V2.0.1.md": {
+      "size": 10222,
+      "checksum": "b174b5a58a6f4905a908097f9020148583335deb056547a988f515d5086085cc",
+      "modified": 1758028953.4203482
+    },
+    "ARCHIVAL_PROCEDURES.md": {
+      "size": 5871,
+      "checksum": "f77c6a47c9689307e7c72b249fa025d845f8e6cb9b49937a84507f137aec9c5a",
+      "modified": 1758061803.9426
+    },
+    "example.py": {
+      "size": 4431,
+      "checksum": "e6d6762281729dfe65b635407039f1ea0db6500979792b3df908ac04e25992fc",
+      "modified": 1758126610.5197694
+    },
+    "simple_validate.py": {
+      "size": 4948,
+      "checksum": "09ae90b32881a3411d78026647712631dc02dfef34ff0f7cf418eb9456aa1421",
+      "modified": 1758023683.957011
+    },
+    "NOTION_LOG_ENTRY_MCP_V2_COMPLETE.md": {
+      "size": 10462,
+      "checksum": "21c8edd54baefeab04db051301074fc6ea0dc3d4b669d95e851e2f9773837e5b",
+      "modified": 1758023683.9356935
+    },
+    "VERSION": {
+      "size": 9,
+      "checksum": "37e6891769d6be15314a306272548a31de643b01a04c43ddf4c810ad7ab2bc6a",
+      "modified": 1758126611.2506661
+    },
+    "README_MCP_V2.md": {
+      "size": 12254,
+      "checksum": "dfc0e3c77c18cd86fff17f4ae45a27b4fa841c3d7b1ac1b5e4228afb101bbca1",
+      "modified": 1758023228.4224918
+    },
+    "PROMPT_OPTIMIZATION_RECOMMENDATIONS_V2.0_FINAL.md": {
+      "size": 16540,
+      "checksum": "668975b6fb1138bde6bda6ddc4f4ab05629f8209fda796fe414ee911f8c61da4",
+      "modified": 1758126611.2662957
+    },
+    "ENHANCED_PROMPT_OPTIMIZATION_RECOMMENDATIONS_V5.md": {
+      "size": 16433,
+      "checksum": "97c1a90963ccb7127d3cc84fec991616aec52ea2a83917e691a61bbd915ce5fb",
+      "modified": 1758026471.6523745
+    },
+    "PROMPT_OPTIMIZATION_IMPLEMENTATION_GUIDE_V4.md": {
+      "size": 11084,
+      "checksum": "855f3eadb05980909ac0317f5cc09e74e33f153d48b92c42063fe6fdcb94d39c",
+      "modified": 1758055886.3831384
+    },
+    "ULTIMATE_COMPLETION_SUMMARY_V2.0_FINAL_OPTIMIZED.md": {
+      "size": 14075,
+      "checksum": "b3f2aad1949ee34690be2f9043f5cb999215d9fcaf193315918c82a222e7a512",
+      "modified": 1758126611.2925985
+    },
+    "FINAL_VERIFICATION_REPORT_v2.md": {
+      "size": 6350,
+      "checksum": "89052228652cd39089f652f11876a5a317da34ba52a46c5f652b0768f6d7cba4",
+      "modified": 1758126610.861296
+    },
+    "IMPLEMENTATION_COMPLETE_v2.md": {
+      "size": 7507,
+      "checksum": "d1e78e5b7ff3a99ec70a07c39bb63088dcb6dee8dcae3e692cc3b564d7e7696e",
+      "modified": 1758056244.6021726
+    },
+    "task_manager.py": {
+      "size": 17999,
+      "checksum": "ba24f970600cd6de88f91168dbc273aaa2973dcb8b07a3389b47fc24426ed7d2",
+      "modified": 1758060775.6135588
+    },
+    "test_mcp_v2.py": {
+      "size": 18213,
+      "checksum": "0e0b6bcab6d3c806364520b45e2362a39f68a324b507b37fc25707c0f65df589",
+      "modified": 1758126610.791895
+    },
+    "agent_manager.py": {
+      "size": 17465,
+      "checksum": "d0d625fb36d52f89aa3cae9f4f37abd003d48d776ccc7208e1b4bfb091cdeac9",
+      "modified": 1758126610.2123308
+    },
+    "PROMPT_OPTIMIZATION_COMPLETE.md": {
+      "size": 977,
+      "checksum": "1a93745296d4894c3dd4089fded2ae83b24f82998c7a9e4eab740e379537b3b2",
+      "modified": 1758025736.2867785
+    },
+    "archive_mcp_v2_implementation.py": {
+      "size": 14913,
+      "checksum": "f5392420e14ec3860817feb8e37701fac90faabb6012aab1d62f4f0488f6b971",
+      "modified": 1758028953.4188163
+    },
+    "PROMPT_OPTIMIZATION_FINAL_SUMMARY_V5.md": {
+      "size": 15825,
+      "checksum": "b918b71c23124dba80b356056b4cb88c870da0331bc7cb8278e549b1bbbe7bc0",
+      "modified": 1758056745.1687014
+    },
+    "ULTIMATE_COMPLETION_SUMMARY_FINAL_V2.md": {
+      "size": 10723,
+      "checksum": "1c1a732a9782842ebea391f02ddbeebb166648fc3ebb9d010af9ab0ed786b215",
+      "modified": 1758056464.4983304
+    },
+    "FINAL_STATUS_REPORT_V2.0.md": {
+      "size": 2001,
+      "checksum": "9d550f9310671708a0341b47a550c2b51551434423941775dbbbcc9da4919b65",
+      "modified": 1758126611.256426
+    },
+    "config_v2.py": {
+      "size": 4545,
+      "checksum": "9e742a2932a9e4b0464dc16cb0509020d732151185b047c87b8e93488a6c02d4",
+      "modified": 1758126610.63807
+    },
+    "OPTIMIZATION_IMPLEMENTATION_GUIDE_V2.0.md": {
+      "size": 15595,
+      "checksum": "fd038097874b2536023b5d2e9147b3ae26250fe33dc77d512ed5a4f2824bcd33",
+      "modified": 1758058422.1423492
+    },
+    "task_executor.py": {
+      "size": 14600,
+      "checksum": "99b184c9c3eaf6893cffcce677c51775e1be3188def70f33473335c0f1f380d1",
+      "modified": 1758061612.5052652
+    },
+    "deploy.sh": {
+      "size": 1782,
+      "checksum": "c03dce6ebf1ea0ac26e9af825342f7094c5c1112e045d5b8a66b7a01510aeb7b",
+      "modified": 1758059620.4524326
+    },
+    "error_handler.py": {
+      "size": 13356,
+      "checksum": "451cfd08faa5c7facd4b4747bbb94fae59f9a80453454b2136cf8c25baa44813",
+      "modified": 1758061612.5058029
+    },
+    "NOTION_FINAL_VERIFICATION_LOG_ENTRY.md": {
+      "size": 7442,
+      "checksum": "92fd41c2cd63d65242f9a8b1f22ae3b3addb29cc8daab995cfbd7f32a4e2185d",
+      "modified": 1758026119.4010527
+    },
+    "ULTIMATE_COMPLETION_SUMMARY.md": {
+      "size": 10784,
+      "checksum": "ee2385e4404e8df6620604d8e352314942998653a23ee086997937bc36884ce3",
+      "modified": 1758024247.711737
+    },
+    "validate_mcp_v2.py": {
+      "size": 22938,
+      "checksum": "f715a0c6f79161fc43465d9f70c97ace6a99e505d8bcd2c1ef043bd05a433736",
+      "modified": 1758023683.9545314
+    },
+    "FINAL_STATUS_UPDATE_V2.0.md": {
+      "size": 3677,
+      "checksum": "afe40853a7f8a79c91c390ec686daa7b05836d7cae0b6bbe26e8ae584abfecae",
+      "modified": 1758061939.6937742
+    },
+    "AI_CHAT_CONVERSATION_LOG_V5_UPDATE.md": {
+      "size": 16787,
+      "checksum": "f7db6a8d80b53d2abc5e7bb8ac02c47e73eba590e3d3f15b4801908dcc66db65",
+      "modified": 1758056745.168639
+    },
+    "FINAL_COMPLETION_VERIFICATION_REPORT.md": {
+      "size": 9406,
+      "checksum": "35ec2366ba5725506e4e89f8dfb57d50e12441275c5c7f5ad2ef4b8990ec00fd",
+      "modified": 1758055610.094
+    },
+    "PROMPT_OPTIMIZATION_RECOMMENDATIONS_V6.0.md": {
+      "size": 22121,
+      "checksum": "5481509d59c2e8a62ae4a6e6d63c000410ba2eaa9efa752289ece5c4a706c780",
+      "modified": 1758029270.0569117
+    },
+    "WORK_COMPLETION_FINAL_STATUS_REPORT.md": {
+      "size": 8494,
+      "checksum": "c10fac267cd757f2afe1a6e657beecf6cb3dc147219f7eafc7eeb643f2e38eda",
+      "modified": 1758059865.6690245
+    },
+    "FINAL_VERIFICATION_REPORT_V2.0.md": {
+      "size": 4557,
+      "checksum": "6d0c4c31fd811ca2caa4ac8a00f7eb1c2c988346b68338bb8425816c7c022d14",
+      "modified": 1758061803.9426432
+    },
+    "FINAL_VERIFICATION_REPORT.md": {
+      "size": 10572,
+      "checksum": "9712be8cf78f5de210c2eeb096144a59b96bf0d92411cb1547149e0be509af38",
+      "modified": 1758024247.7117567
+    },
+    "PROMPT_OPTIMIZATION_ANALYSIS_V3.md": {
+      "size": 12717,
+      "checksum": "e7fa1ec7840bd58ec1c4f5e7afc57be6187b880701e6421e766abf739ed615bf",
+      "modified": 1758028351.9952915
+    },
+    "main.py": {
+      "size": 3371,
+      "checksum": "70c9ea9f708ebecc26a7ab07d39a33cb8e6b9f50543b585f2e814cd0968c4637",
+      "modified": 1758135520.650639
+    },
+    "FINAL_COMPLETION_SUMMARY.md": {
+      "size": 11134,
+      "checksum": "490aeb13f072fe35b3e01b24d412d63d632d10352b4efe2fd2375f98966a0870",
+      "modified": 1758023683.954692
+    },
+    "NOTION_LOG_ENTRY_V2.0_FINAL.md": {
+      "size": 2557,
+      "checksum": "cb7242be8aefc58b57217f510338ac1f42cc0895e94854055f9b630a53e1fcfd",
+      "modified": 1758061803.9423847
+    },
+    "agent_coordinator.py": {
+      "size": 15964,
+      "checksum": "929b624ed72f7d16da0d344298e8e5982bc34428fef437e062a45c54a00d1ab9",
+      "modified": 1758021528.1406534
+    },
+    "FINAL_WORK_COMPLETION_STATUS_REPORT.md": {
+      "size": 6263,
+      "checksum": "1b1335f35b0e6a7186cdebd722c77e5bcb38ed2beda54a70c2eda962f1dcc712",
+      "modified": 1758037387.297987
+    },
+    "VERSIONING_ARCHIVAL_SUMMARY_V2.0_FINAL.md": {
+      "size": 6500,
+      "checksum": "96216683786a1302593c5ce84d6c225185d17c81e51b4c76a42d02d745a9bda7",
+      "modified": 1758126611.242401
+    },
+    "FINAL_PROMPT_OPTIMIZATION_SUMMARY.md": {
+      "size": 14493,
+      "checksum": "4133d7bd2264b638279180f0e03674c51db1be9945307bc2f8b4976081e5e0a2",
+      "modified": 1758027652.0574915
+    },
+    "AI_CHAT_CONVERSATION_LOG_FINAL.md": {
+      "size": 13958,
+      "checksum": "8826dc233a0bf69f18870e521618e395ed838fe77bcbc6df7d444590dc18fc30",
+      "modified": 1758057739.710187
+    },
+    "task_execution.py": {
+      "size": 15295,
+      "checksum": "260523b0db25b17cc303d2eeb5755202d67ce1cfa0534303aa9a268bd9b74ca6",
+      "modified": 1758057861.9434147
+    },
+    "NOTION_FINAL_IMPLEMENTATION_REPORT.md": {
+      "size": 7087,
+      "checksum": "a660418483ace1937d0e2dda88e969d50b7435c9cec23075f292f2f0c214c0cd",
+      "modified": 1758027968.8256748
+    },
+    "NOTION_FINAL_COMPLETION_LOG_ENTRY_V2.md": {
+      "size": 6856,
+      "checksum": "b91046973816d2d6b5d213e5eb2039d355295332db00863ea19a1e8e4e711865",
+      "modified": 1758056464.4945853
+    },
+    "test_mcp.py": {
+      "size": 5269,
+      "checksum": "0bff401a30e2bc7e23e1b50c29c0619db0af224be3d9556cfd187fff1ac1b5ab",
+      "modified": 1758060775.6339016
+    },
+    "COMPREHENSIVE_SUMMARY.md": {
+      "size": 13920,
+      "checksum": "97f2e15bdf8a0380f549036a8e3f15ed4b505567e57e378aa55b17627d49f3b4",
+      "modified": 1758023041.460213
+    },
+    "ORGANIZATIONAL_ALIGNMENT.md": {
+      "size": 10780,
+      "checksum": "d6954341d983863b0b9b539abff5bee486bb498801d24fde0c9c55c0a93f8f7e",
+      "modified": 1758023683.9359736
+    },
+    "VALIDATION_REPORT.md": {
+      "size": 7262,
+      "checksum": "045154306e6c144f00f4a451190117aadbce669e188966002c9458d01cf84833",
+      "modified": 1758021619.4384983
+    },
+    "AI_CHAT_CONVERSATION_LOG_OPTIMIZATION_V5.md": {
+      "size": 10622,
+      "checksum": "665ea16b790f8c296ec5aec1eb9cd129de9f15e263473c26b5cae5f9b0d6bade",
+      "modified": 1758026471.652625
+    },
+    "agent_routing.py": {
+      "size": 18736,
+      "checksum": "dda0e893406d53221420f3b3b0cac461ab7c5f80259a3bba0408c76b8131c0f1",
+      "modified": 1758057861.9460483
+    },
+    "PROMPT_OPTIMIZATION_ANALYSIS_V2.md": {
+      "size": 15482,
+      "checksum": "48dddcbc6f3572602ce02be4a1d5cb061f4cefc69697f34fad33b51ff21604cc",
+      "modified": 1758024606.888485
+    },
+    "README_v2.md": {
+      "size": 6294,
+      "checksum": "2c87acdfdabbf30c0dcdc59f0e8ffa03c59fe5e572cef81482bf752d84dacb74",
+      "modified": 1758126610.7424831
+    },
+    "OPTIMIZATION_IMPLEMENTATION_SUMMARY.md": {
+      "size": 11387,
+      "checksum": "f4588134b612d4ac3a3bb36d2c0586595826c6ea023858e764361846f5738bce",
+      "modified": 1758057739.7102594
+    },
+    "PROMPT_OPTIMIZATION_V4_RECOMMENDATIONS.md": {
+      "size": 6027,
+      "checksum": "e3d85ff8317cf3302375ca72ac6d73646206a645e23d05dc49a694c2862eff6a",
+      "modified": 1758055886.366272
+    },
+    "FINAL_VERIFICATION_AND_COMPLETION_REPORT_V2.0_FINAL.md": {
+      "size": 6597,
+      "checksum": "aa47f6aee63d310c5475a6853d3a61aa2d8bc653f387e77e216f7ad58e3ea284",
+      "modified": 1758060929.1157942
+    },
+    "MCP_V2_IMPLEMENTATION_COMPLETE.md": {
+      "size": 8757,
+      "checksum": "b234a6f0ed3459950c56c72aa85227698311aeaa44fdac40b4fbd4b18b656f83",
+      "modified": 1758027810.8019288
+    },
+    "NOTION_FINAL_STATUS_UPDATE.md": {
+      "size": 5273,
+      "checksum": "b8b7a177d3976079bf108e1ae8767bb8063195a507b7e016e24d2e47234f630e",
+      "modified": 1758025129.543355
+    },
+    "IMPLEMENTATION_COMPLETE_V2.0_FINAL.md": {
+      "size": 8350,
+      "checksum": "6e0a8d3ea1d74808affd92ed86ddf307b5bf92cbf17e1247a457f79f324447b8",
+      "modified": 1758061612.5063138
+    },
+    "PROMPT_OPTIMIZATION_ANALYSIS_V6.md": {
+      "size": 14147,
+      "checksum": "bf9f7471c28cadb4860c51c340a719c2ae52c842048151aa88e28a0877bf1052",
+      "modified": 1758027652.0570433
+    },
+    "env.example": {
+      "size": 324,
+      "checksum": "00c257aadacdf2d18439c2170b1ae598496c3c0a43815ad213623537070d5771",
+      "modified": 1758135520.649404
+    },
+    "QUICK_START.md": {
+      "size": 5629,
+      "checksum": "a8084081bf8f40a7cbb4c2d8713f47a297667b93bf460b2ef39b4ad70d7f90ed",
+      "modified": 1758021528.1436548
+    },
+    "NOTION_FINAL_DOCUMENTATION_ENTRY_V2.0_FINAL.md": {
+      "size": 8630,
+      "checksum": "28ef5976fa633039f39bc7bcf338ddfe1cdb8c12cfe7cacfc857642688790745",
+      "modified": 1758059865.670025
+    },
+    "NOTION_FINAL_STATUS_UPDATE_COMPLETE.md": {
+      "size": 9013,
+      "checksum": "3047998434044e888715250b22a0c218b4944a5d6fc0290e47c65c9fab463461",
+      "modified": 1758055610.0943682
+    },
+    "start_agent.sh": {
+      "size": 813,
+      "checksum": "3e11f7b0a674fcfaed001968396026a0f54fb0e6ea9d26cd53d3620d3235fd54",
+      "modified": 1758057861.9553962
+    },
+    "impromptu_executor.py": {
+      "size": 23764,
+      "checksum": "0594aec39a95e895c699036d8c86ef1fa7fa9ec07d86a90a7e2ee9502f4c7096",
+      "modified": 1758126610.4724534
+    },
+    "PROMPT_OPTIMIZATION_IMPLEMENTATION_GUIDE.md": {
+      "size": 14927,
+      "checksum": "1ef511695f2a839e05e555bfbe9af1dd1b1565b0f18951ecf1b6ca51da5fece1",
+      "modified": 1758024907.961693
+    },
+    "ULTIMATE_COMPLETION_SUMMARY_V2.0_FINAL.md": {
+      "size": 10439,
+      "checksum": "60a83675ff4b2a130b8408ecb3f62daae951a37be6ebe56f418cd530898e53e7",
+      "modified": 1758061939.6935418
+    },
+    "tests/test_protocol.py": {
+      "size": 8209,
+      "checksum": "d603053e8b2134c92a109366e598c3e56dc91a0093383843d7f5e50496013c73",
+      "modified": 1758055402.0932786
+    },
+    "tests/__init__.py": {
+      "size": 49,
+      "checksum": "5c936d91f1f5105760c5ef1a293db6d7abe31875c856431018eb7c7bcd5c9206",
+      "modified": 1758057234.9007974
+    },
+    "tests/test_task_manager.py": {
+      "size": 8962,
+      "checksum": "39d49a9f83fc6483e9b52bd4f1728cebe626e54a2177af7b5566f2f8e995ae75",
+      "modified": 1758057234.9005938
+    },
+    "tests/test_notion_client.py": {
+      "size": 4053,
+      "checksum": "3df3247c7cab0932e4e0c96bf99a0f8b34ca8f5104bf84fe0d0e93b6242442c0",
+      "modified": 1758057234.9005826
+    },
+    "tests/test_models.py": {
+      "size": 5935,
+      "checksum": "6acc72ef12070b43f9e7b78a8f9429b417682d30912bc0222a840c37976d0fe9",
+      "modified": 1758135520.6498342
+    },
+    "tests/test_error_handler.py": {
+      "size": 9556,
+      "checksum": "b7ba8fae135583d192adc4211c43315c2cbeeff18ea08892fcd876e733472f60",
+      "modified": 1758135520.6498444
+    },
+    "tests/__pycache__/test_notion_client.cpython-313.pyc": {
+      "size": 6042,
+      "checksum": "7b18f71b857e68d4bc81a717181dac0029229dc78ea776a3dad66ddf8522751f",
+      "modified": 1758135770.7783012
+    },
+    "tests/__pycache__/test_task_manager.cpython-313.pyc": {
+      "size": 10824,
+      "checksum": "9c94c68d3fdb46f9e73d1d06ac472e81e58ac49744be01a3a7086727faef2026",
+      "modified": 1758135770.7515209
+    },
+    "tests/__pycache__/test_protocol.cpython-313.pyc": {
+      "size": 11955,
+      "checksum": "0b858bcc222a0bc2e967239909fdd907ba670ff04cc8f2325c38bf9778ce7fcf",
+      "modified": 1758135770.6977937
+    },
+    "tests/__pycache__/test_error_handler.cpython-313.pyc": {
+      "size": 14846,
+      "checksum": "55efa417ee5c84c14f24bc2deeb7d058ba535327430e9ea68d6d8b486ae94dff",
+      "modified": 1758135770.833371
+    },
+    "tests/__pycache__/test_models.cpython-313.pyc": {
+      "size": 9297,
+      "checksum": "41983a9594fb21e390eeb4df9c87b79417fc0ee861415fd271286ffe5ffb5404",
+      "modified": 1758135770.8054838
+    },
+    "tests/__pycache__/__init__.cpython-313.pyc": {
+      "size": 175,
+      "checksum": "72470978c90da9ae27c773bf956667e219063d3410509e55198b0beee4f99295",
+      "modified": 1758135770.7241614
+    },
+    "prompt_templates_v4/VALIDATION_PROMPT_V4.md": {
+      "size": 4513,
+      "checksum": "d05021e2cb7d02cc1b3e100d76fb56ccbb31f24c4a3b167ecb0a5e7077964255",
+      "modified": 1758055886.3662398
+    },
+    "prompt_templates_v4/MASTER_CONTEXT_V4.md": {
+      "size": 2606,
+      "checksum": "d63735856bfe305f7107b1db34d4d72d472c13f67a25f7c79d8d9dbac2eb4e13",
+      "modified": 1758055886.366214
+    },
+    "prompt_templates_v4/IMPLEMENTATION_PROMPT_V4.md": {
+      "size": 6868,
+      "checksum": "5d4b16a1ed86bbbae169c256dfcc6c4f83a54bcb564cf529c8fe03fcabe4bf97",
+      "modified": 1758055886.366432
+    },
+    "agents/claude_mm1_agent.py": {
+      "size": 11953,
+      "checksum": "badceab971b4e7bbda059bf3ca2822fc57f834f289735f8cd340386d4749e38b",
+      "modified": 1758126611.0709975
+    },
+    "agents/__init__.py": {
+      "size": 16,
+      "checksum": "12560d33644d58b41a78e746ebe63f78bf11873e5ec90b555dc2be3020e95d55",
+      "modified": 1758126611.1692948
+    },
+    "agents/data_ops_agent.py": {
+      "size": 11075,
+      "checksum": "ffc513442b2a712679457b8b77bcbe43eb664f0f5486312bf21a46a4e248747c",
+      "modified": 1758126611.036448
+    },
+    "agents/notion_ai_agent.py": {
+      "size": 3872,
+      "checksum": "5ac02c4edb9dc6d47444bbb1b3b6f9a150806d5d25135920a2c5ca6917cba7a0",
+      "modified": 1758059620.44829
+    },
+    "agents/cursor_mm1_agent.py": {
+      "size": 12422,
+      "checksum": "bfd545f03ffe87a6f2ee737918404070154f1d4a2ddedf8891acb091c87ecf3d",
+      "modified": 1758126611.0624747
+    },
+    "agents/__pycache__/claude_mm1_agent.cpython-313.pyc": {
+      "size": 12771,
+      "checksum": "a58e7e286cce12d1de9d5b80d531ac4e1637afc98659bf35fc171700715dbac1",
+      "modified": 1758135770.9182298
+    },
+    "agents/__pycache__/cursor_mm1_agent.cpython-313.pyc": {
+      "size": 14338,
+      "checksum": "e4becf8a98589717181afcaeaa55e266dd1679fb0be7a056df449e44467f57ca",
+      "modified": 1758135771.028606
+    },
+    "agents/__pycache__/data_ops_agent.cpython-313.pyc": {
+      "size": 13835,
+      "checksum": "776e441c76611e809bf2f8eca1f3c449dea159906b32be44f6b643e43d58da86",
+      "modified": 1758135770.9734383
+    },
+    "agents/__pycache__/notion_ai_agent.cpython-313.pyc": {
+      "size": 4969,
+      "checksum": "2543319d0f204494020e4600f3dbd8d82f2c363ae78343e51afe9d1b5731ddfa",
+      "modified": 1758135771.0012133
+    },
+    "agents/__pycache__/__init__.cpython-313.pyc": {
+      "size": 117,
+      "checksum": "48f649e4c00f9f6c71578a98be011f6a82eb09e3b9c171469ea76596f291eced",
+      "modified": 1758135770.945236
+    },
+    "utils/notion_client.py": {
+      "size": 11764,
+      "checksum": "c27d94b33844747d717069bd709f3b4566f3dc8011d2b2722c5660216a1446f3",
+      "modified": 1758126611.1048036
+    },
+    "utils/__init__.py": {
+      "size": 17,
+      "checksum": "7a15da8c74cecd4bf0282a6e04c571992e21c992cef77adf622e7324e8cd5d40",
+      "modified": 1758126611.1639385
+    },
+    "utils/logger.py": {
+      "size": 4778,
+      "checksum": "98d4c4193ef3575cc8a4b5c7fc5a67013cf6f4583211eb71f9781faf88ad0f40",
+      "modified": 1758126611.0937974
+    },
+    "utils/__pycache__/logger.cpython-313.pyc": {
+      "size": 6697,
+      "checksum": "af277019f017bc3e59ab70ce766e0f0bff0a752e2cac4c7ff6438d6b0a08cc55",
+      "modified": 1758135771.1151128
+    },
+    "utils/__pycache__/__init__.cpython-313.pyc": {
+      "size": 116,
+      "checksum": "cdf967538b1e363dfcad837eb0f16887848ea85d8c7e5c247f0889f8a5d48513",
+      "modified": 1758135771.0872428
+    },
+    "utils/__pycache__/notion_client.cpython-313.pyc": {
+      "size": 11365,
+      "checksum": "87f413ddf3b89c703dfce933e565b1934507c8551924c3aa854b5f026f70c7d3",
+      "modified": 1758135771.0597353
+    },
+    "__pycache__/main.cpython-313.pyc": {
+      "size": 5730,
+      "checksum": "52cfdf3392d940c79712f44da14cc614eb63189dcb0a366341141d7e569751ee",
+      "modified": 1758135773.4648004
+    },
+    "__pycache__/agent_coordinator.cpython-313.pyc": {
+      "size": 18088,
+      "checksum": "02f12e46fe785fddeac99db69f3daae309591f627f919f9f95b6154398f2c769",
+      "modified": 1758135773.495386
+    },
+    "__pycache__/verification.cpython-313.pyc": {
+      "size": 17421,
+      "checksum": "778f79d9341a20c166551ee1e73d8e68e8f28bd231722e09677bdb4a82a66774",
+      "modified": 1758135770.4674244
+    },
+    "__pycache__/test_implementation.cpython-313.pyc": {
+      "size": 7087,
+      "checksum": "ed73dbbf5aa00b88c23621931155aca13afea49af8275344c56507e9cf681d48",
+      "modified": 1758135772.4076824
+    },
+    "__pycache__/config.cpython-313.pyc": {
+      "size": 3936,
+      "checksum": "16d68f4111018f18ed3b592e1b338a7c7506474bdb2b9e9327121ad1a20244e8",
+      "modified": 1758135770.5550687
+    },
+    "__pycache__/example_usage.cpython-313.pyc": {
+      "size": 9032,
+      "checksum": "449cc630e19d69697e0f8004e3611b0234bd91ecc1a61cd6f2ab2f0b92cbb620",
+      "modified": 1758135772.3784091
+    },
+    "__pycache__/error_handler.cpython-313.pyc": {
+      "size": 18390,
+      "checksum": "9fe65b559a9c1067871370a9a59b09105a6c1fd0c397ee387f90e801987a8a61",
+      "modified": 1758135773.4000943
+    },
+    "__pycache__/mcp_notion_client.cpython-313.pyc": {
+      "size": 8209,
+      "checksum": "ec25940278730d5c542959cc4318d0484ab07c3812c5ed20d59aa7fe9ed6295b",
+      "modified": 1758135772.2928853
+    },
+    "__pycache__/mcp_agent_protocol_v2.cpython-313.pyc": {
+      "size": 27820,
+      "checksum": "094d3af5c5ce365a1fc42b4d7b050f8f160cc47eaed18e67e7a2b5a7d4f29b78",
+      "modified": 1758135770.669412
+    },
+    "__pycache__/validate_implementation.cpython-313.pyc": {
+      "size": 22027,
+      "checksum": "53e7ef27a34e6f5c5638b526102100e07b40e0aee020e003b0c7fd817e211b27",
+      "modified": 1758135772.437316
+    },
+    "__pycache__/logger.cpython-313.pyc": {
+      "size": 5228,
+      "checksum": "adf678f7ede61d3f7f05b9fb93a022ad2c6c929f15bb8a48ec217f4380cfd162",
+      "modified": 1758135772.349217
+    },
+    "__pycache__/enhanced_logger.cpython-313.pyc": {
+      "size": 16465,
+      "checksum": "bfc6eeb0f9e9f4441ee9d24266bc6440aae97e09503d12dd77c1b884fd50be00",
+      "modified": 1758135770.583538
+    },
+    "__pycache__/agent_router.cpython-313.pyc": {
+      "size": 11529,
+      "checksum": "93006b1f25aa8b8908c2cb57cd5a43a8795be1ad2352ee400aa584a2ceee9aa1",
+      "modified": 1758135772.4655917
+    },
+    "__pycache__/setup.cpython-313.pyc": {
+      "size": 5785,
+      "checksum": "256eddec34ac1b22443f94f3d3494b631e5268bf3b770cd60c05e95fdfb3f3ad",
+      "modified": 1758135772.4939344
+    },
+    "__pycache__/impromptu_executor.cpython-313.pyc": {
+      "size": 26014,
+      "checksum": "c192b29c3aa877abe04a6806727d4bd0629a97670c13f351df3eb827f10ae8df",
+      "modified": 1758135773.6797843
+    },
+    "__pycache__/test_mcp_v2.cpython-313.pyc": {
+      "size": 26358,
+      "checksum": "d42fe3b0f0893835a341e045060435172ce94cb9931ecd07515960e722e79e4e",
+      "modified": 1758135773.1537576
+    },
+    "__pycache__/config_v2.cpython-313.pyc": {
+      "size": 4996,
+      "checksum": "37eaf51b9a802908b83d46ca611cbf049199c2f99f6c50df69fa7c253bf70b18",
+      "modified": 1758135773.3381479
+    },
+    "__pycache__/test_mcp.cpython-313.pyc": {
+      "size": 7827,
+      "checksum": "3c495824f65889cc73235138e011f96fa24e50e08c7bb04999edf778e7461e87",
+      "modified": 1758135773.5788004
+    },
+    "__pycache__/notion_integration.cpython-313.pyc": {
+      "size": 15212,
+      "checksum": "6fbaa2f6eed9202baf3cadbe75593169209b7a7fbf8bcb140d45d53ac420db44",
+      "modified": 1758135771.1435351
+    },
+    "__pycache__/test_agent.cpython-313.pyc": {
+      "size": 8072,
+      "checksum": "0b7f3cd1b83a893785acb1e8de744654c3a6694ad64f231799d99d163194db47",
+      "modified": 1758135770.5272293
+    },
+    "__pycache__/test.cpython-313.pyc": {
+      "size": 9574,
+      "checksum": "625c3d2a315c21d76b293c973c6c955242b261e1c5df2115f31f2710dff98bc9",
+      "modified": 1758135772.3210375
+    },
+    "__pycache__/agent_manager.cpython-313.pyc": {
+      "size": 21624,
+      "checksum": "9c620a15e8f7d9421b6485441e4708c75b5ee39fa082c063b3dc3c61c6a38742",
+      "modified": 1758135773.2468364
+    },
+    "__pycache__/task_manager.cpython-313.pyc": {
+      "size": 19956,
+      "checksum": "4099777bcc5b58fc7a9b701fbe29eb0fd8d46bc386081bba23fa0f70800cc719",
+      "modified": 1758135773.1078143
+    },
+    "__pycache__/agent_routing.cpython-313.pyc": {
+      "size": 23416,
+      "checksum": "324711f69226e3ab94a7ad1ebd1b520519ec9a4387a5d2c5352ac1a0c94cc2ae",
+      "modified": 1758135773.6183271
+    },
+    "__pycache__/example_v2.cpython-313.pyc": {
+      "size": 4403,
+      "checksum": "95bd0916583fd1258b19f1cc764dcd0d502695472e51a370ba7f1031a77307b6",
+      "modified": 1758135772.5210743
+    },
+    "__pycache__/run_agent.cpython-313.pyc": {
+      "size": 1293,
+      "checksum": "72622a11b74124dd5ad6d1ff4be5536dee0024fea44bb7c3ea29f6aada5455a5",
+      "modified": 1758135770.6400213
+    },
+    "__pycache__/archive_mcp_v2_implementation.cpython-313.pyc": {
+      "size": 16794,
+      "checksum": "48aba9f85a6959ef7b0b17d9765fe8b45187d2936f6b8fc88418bd2bff5b623b",
+      "modified": 1758135773.30938
+    },
+    "__pycache__/simple_validate.cpython-313.pyc": {
+      "size": 5755,
+      "checksum": "e002fea45875dc658ed16956adb423d21fdfe9bbc8b918872ebaa83f1bd21039",
+      "modified": 1758135772.5755723
+    },
+    "__pycache__/example.cpython-313.pyc": {
+      "size": 5651,
+      "checksum": "8a64c9a79f2ade21eb025bcbac2c2eaf8d59e348ef354e114a57e3a55773b8a2",
+      "modified": 1758135772.5487368
+    },
+    "__pycache__/task_executor.cpython-313.pyc": {
+      "size": 15168,
+      "checksum": "fd068c28d9b639930ec9776dab991d191883a17d2d0e8181a21b72e8f5ddf4d9",
+      "modified": 1758135773.3681052
+    },
+    "__pycache__/validate_mcp_v2.cpython-313.pyc": {
+      "size": 23193,
+      "checksum": "00934ff2cde03e5bd39602569b9d799eef80574aafe02818cacfda35fe81f12c",
+      "modified": 1758135773.4341242
+    },
+    "__pycache__/__init__.cpython-313.pyc": {
+      "size": 1055,
+      "checksum": "b3db39f33ce463f95edb53438974f654e99f71480b8a43d2140eb4cabdc34175",
+      "modified": 1758135770.8900003
+    },
+    "__pycache__/mcp_agent_protocol.cpython-313.pyc": {
+      "size": 24932,
+      "checksum": "043fd0c043d8d9ad378e4180aded6bcbf334365549a4588bdd4fe57d62269d05",
+      "modified": 1758135770.8633916
+    },
+    "__pycache__/notion_client.cpython-313.pyc": {
+      "size": 8242,
+      "checksum": "241e61a12f23d1605ea7c31d924d79cefa22c351b9fe3d2ddd60357edbcf0993",
+      "modified": 1758060892.689297
+    },
+    "__pycache__/simple_archive.cpython-313.pyc": {
+      "size": 9951,
+      "checksum": "4acabfc9f9bea752d3303ab54b90676e3afdfb1ff53d512db499f3230884f61e",
+      "modified": 1758135770.6124303
+    },
+    "__pycache__/task_execution.cpython-313.pyc": {
+      "size": 18750,
+      "checksum": "3c5bf46b004f2e46501583102314ac01546f967b081d78750df84e6bf7c7e5f7",
+      "modified": 1758135773.547322
+    },
+    "__pycache__/simple_validation.cpython-313.pyc": {
+      "size": 7461,
+      "checksum": "07a20b370b14dcb804ac204ef0450381a017a8a1e20ba553a7a2e0db8436aa88",
+      "modified": 1758135770.4980752
+    },
+    "docs/EXAMPLES.md": {
+      "size": 16378,
+      "checksum": "5d158281d38835b826f124689c0975d5d1597c3fe352e7a97009811c5b6bf1ad",
+      "modified": 1758021528.1436172
+    },
+    "docs/USER_GUIDE.md": {
+      "size": 7409,
+      "checksum": "f364147565afc06c81b7f37f850f8972101f29407bf175936dca6edd72be724c",
+      "modified": 1758057234.9005306
+    },
+    "docs/ARCHITECTURE.md": {
+      "size": 10514,
+      "checksum": "5f0951d23ddedcdcdd90e2dc81c9dc59d9561d29374f03d3943937104f68627e",
+      "modified": 1758055402.0898564
+    },
+    "docs/AI_CHAT_CONVERSATION_LOG.md": {
+      "size": 11444,
+      "checksum": "626d03432f156e5c80f5c1f1c4ecff82e7e78b5a089082fa8130b1566073079f",
+      "modified": 1758023041.4600954
+    },
+    "docs/API_REFERENCE.md": {
+      "size": 12108,
+      "checksum": "db80d3842b024ab0d243accee4df2d9c21da677cc61761bb45e9746706a6ed78",
+      "modified": 1758135520.6638331
+    },
+    "docs/IMPLEMENTATION_GUIDE_v2.md": {
+      "size": 12983,
+      "checksum": "0af85aaa109a444c9ec92c127d87c3b436861839876c4a851a018bccdda70b6c",
+      "modified": 1758056244.5879393
+    },
+    "docs/README.md": {
+      "size": 7075,
+      "checksum": "b65f62a79536ab2e9f5072eb9fa8bf2ab63df6855907bcf709e2b833d039c71d",
+      "modified": 1758135520.649824
+    },
+    "docs/DEPLOYMENT_GUIDE.md": {
+      "size": 10973,
+      "checksum": "611735287ebf1465e7f0d9442a5f55e3eb70d17daf12002d9da23d994fb9521a",
+      "modified": 1758057234.900849
+    },
+    "docs/PROMPT_OPTIMIZATION_GUIDE.md": {
+      "size": 13596,
+      "checksum": "1f6dd1d53c5a85a5d6ac0f8eb40bd4e029845940fed2a1ca7ccc0feb3a65b316",
+      "modified": 1758057739.7200916
+    },
+    "docs/PROMPT_OPTIMIZATION_RECOMMENDATIONS.md": {
+      "size": 23188,
+      "checksum": "3853efe4a040348587106899a1bc254b466a9e8ad59df11a17ebcb338ee3cbc8",
+      "modified": 1758023041.4600778
+    },
+    "docs/INSTALLATION.md": {
+      "size": 8132,
+      "checksum": "b7f22094961be9c98467d3f01621f96fa77298cc9630e751471a2a9eca3f1345",
+      "modified": 1758021528.1436403
+    },
+    "docs/PROMPT_IMPROVEMENT_RECOMMENDATIONS.md": {
+      "size": 15057,
+      "checksum": "17f6702f13cb0485659ad3147eecb94c1ea5f5dd2e89bed27a506939c3b74f0d",
+      "modified": 1758135902.2067354
+    },
+    "docs/QUICK_START.md": {
+      "size": 5416,
+      "checksum": "dc3b74ced87b7258806928456c5ab0c908785de7392f05eaf734a243045d18ad",
+      "modified": 1758055402.0930953
+    },
+    "prompt_templates_v5/VALIDATION_TEMPLATE_V5.md": {
+      "size": 11965,
+      "checksum": "f7c99aaa200c7c202b3a1fe9ce91511e63cc1e619c11f60c36b3ff3d204da691",
+      "modified": 1758056745.168613
+    },
+    "prompt_templates_v5/MASTER_CONTEXT_V5.md": {
+      "size": 6682,
+      "checksum": "e921fa86442bae5102979b01db2c6bd5c5981c10bf9ba7e44b588fc80ad0a20d",
+      "modified": 1758056745.168288
+    },
+    "logs/mcp_agent.log": {
+      "size": 1092,
+      "checksum": "81a7bff714f88175b7c6b0b2b25f6895fb481ba057811fbe762a276ea7465b13",
+      "modified": 1758063530.4837418
+    },
+    "logs/error_handler.log": {
+      "size": 1056,
+      "checksum": "3871fde6368bce50f2a0fe02122d63bb073dc3022f9f327eafc1f26c64295fda",
+      "modified": 1758060895.1669507
+    },
+    "performance_monitoring/performance_monitor.py": {
+      "size": 21351,
+      "checksum": "ad4ad61b29c508b0774770399cb21642662a5aaf86bc47df851b9d4a53db7eed",
+      "modified": 1758058422.1424809
+    },
+    "performance_monitoring/__pycache__/performance_monitor.cpython-313.pyc": {
+      "size": 24479,
+      "checksum": "955d5a8a2253ec36ee5b02eef286f77b873113415e90616088dcc61a69649aae",
+      "modified": 1758135772.6044934
+    },
+    "examples/basic_usage.py": {
+      "size": 5433,
+      "checksum": "be1fb206fc66d18ac482742c016d6ac49be739df1c6239ec26eda90b36a83f11",
+      "modified": 1758135520.6497986
+    },
+    "examples/__init__.py": {
+      "size": 52,
+      "checksum": "0ac75869d1a16145d01bfe731303e330baa573c794e38fbe9632acfe9b9551dd",
+      "modified": 1758057234.9005
+    },
+    "examples/notion_query_examples.py": {
+      "size": 5093,
+      "checksum": "7b24d9aad1ce4870ec12e63bd6ffde03cf8eda8039101ece7140a760f4244bfc",
+      "modified": 1758135520.649787
+    },
+    "examples/mcp_v2_example.py": {
+      "size": 11437,
+      "checksum": "c70a2cb156573bccc92a9dbf3cb99225f8b189c05d8663d83482ce85f79c666a",
+      "modified": 1758023228.4223785
+    },
+    "examples/example_usage_v2.py": {
+      "size": 8513,
+      "checksum": "36009cdcded7504abd8b22ac45f8b75cf34452007fe165eef18d26431848f881",
+      "modified": 1758056244.5987911
+    },
+    "examples/advanced_coordination.py": {
+      "size": 6128,
+      "checksum": "07628094d48b2a2a7bdf9c04e7ec410624496901f102c05caaa1e91e04ba94c6",
+      "modified": 1758055402.0812132
+    },
+    "examples/__pycache__/basic_usage.cpython-313.pyc": {
+      "size": 7732,
+      "checksum": "cbd5c41703ba8583d60439fe6337c76c84fcff814f4233cbc32c9b1ecbb2aabf",
+      "modified": 1758135772.7425923
+    },
+    "examples/__pycache__/example_usage_v2.cpython-313.pyc": {
+      "size": 11840,
+      "checksum": "e0c0ae309f14204e5d964c8300c241d6b9383bdc5b4952b83469e8aef4f22ec7",
+      "modified": 1758135773.0064766
+    },
+    "examples/__pycache__/notion_query_examples.cpython-313.pyc": {
+      "size": 8170,
+      "checksum": "2f0e287097162817bddc0c79551305af15deaec1f0f9060c327da3384837b885",
+      "modified": 1758135772.9165814
+    },
+    "examples/__pycache__/advanced_coordination.cpython-313.pyc": {
+      "size": 8338,
+      "checksum": "95ec7f3aadf095fbfc60b0279d738369409924c685dfba6dcd6d8e8223ddb8b1",
+      "modified": 1758135773.0680723
+    },
+    "examples/__pycache__/mcp_v2_example.cpython-313.pyc": {
+      "size": 13288,
+      "checksum": "558d4206374aae62e35497ab7889009468009fe53c7d651289fe519fb6d6a7c3",
+      "modified": 1758135772.9652874
+    },
+    "examples/__pycache__/__init__.cpython-313.pyc": {
+      "size": 181,
+      "checksum": "05c07f0467bc9ba6d0e5f0b7e00267ec049ea73bc357fc5bf475109abc796cb9",
+      "modified": 1758135772.8747103
+    },
+    "scripts/run_agent.py": {
+      "size": 419,
+      "checksum": "107886fd6a2710e28006031f39a5817df31128f6bd018112472547e24610b758",
+      "modified": 1758057234.9006035
+    },
+    "scripts/update_notion_documentation.py": {
+      "size": 16665,
+      "checksum": "d343b782187956fa22987f1eaead2900397722d2c425f45c327eaafeb246fa08",
+      "modified": 1758135952.419748
+    },
+    "scripts/deploy_and_archive.py": {
+      "size": 13884,
+      "checksum": "634d40650839487932dc161a0c9063c96522b752e81fb32a818fcc12b6626b2f",
+      "modified": 1758135858.610142
+    },
+    "scripts/archive_and_deploy.py": {
+      "size": 14184,
+      "checksum": "76d3e6b9e8f5e10a8abaa1d3eae19afaba170643457c96eecfb8191180cdcdea",
+      "modified": 1758023683.9353108
+    },
+    "scripts/__pycache__/archive_and_deploy.cpython-313.pyc": {
+      "size": 16179,
+      "checksum": "a0967729f31f8373d75512b99afb5a28bea92a0149a3c031b3a9e2414a85b1ed",
+      "modified": 1758135773.2149167
+    },
+    "scripts/__pycache__/run_agent.cpython-313.pyc": {
+      "size": 716,
+      "checksum": "d2697c980f04382015675a01de0eaae3cd3d3d78706a21e9695531838330ff99",
+      "modified": 1758135773.1847858
+    },
+    "context_management/context_registry.py": {
+      "size": 16127,
+      "checksum": "2d02ea22583d47cf57846dc783e4dcfe893949a1112196cf61817774dc4a90a6",
+      "modified": 1758058422.1427023
+    },
+    "context_management/__pycache__/context_registry.cpython-313.pyc": {
+      "size": 20019,
+      "checksum": "6fb5594205a04c8365abb2e89d2536d72a23ec96af0fcded9cd5e9e3c29ce01b",
+      "modified": 1758135773.2795305
+    },
+    "reports/deployment_report_20250916_065327.json": {
+      "size": 1189,
+      "checksum": "15038f3f79616af30b13a2e5cd4db389bec018926b929af2fb17a05f183eab9b",
+      "modified": 1758023607.0568151
+    },
+    "prompt_templates/TECHNICAL_SPECIFICATION_PROMPT_V4.md": {
+      "size": 18161,
+      "checksum": "c10192d449457cd7c215222a44956bd0e52708f9882c371ef2a0d301eb2257e8",
+      "modified": 1758025745.5101106
+    },
+    "prompt_templates/VALIDATION_PROMPT_V4.md": {
+      "size": 15968,
+      "checksum": "c15d24cd293ad2a2c5208afd1d6980943dfd835fff3e9d381a440afbc0ae459d",
+      "modified": 1758025745.5100245
+    },
+    "prompt_templates/MASTER_CONTEXT_PROMPT_V6.0.md": {
+      "size": 18875,
+      "checksum": "a0942279ff1ae42c88919c25ce13ee655a1ada43d414b284e93db09e8d9aacea",
+      "modified": 1758029270.0571284
+    },
+    "prompt_templates/MASTER_CONTEXT_PROMPT_V4.md": {
+      "size": 15283,
+      "checksum": "363d5f1d9ae379f8ba11f8396f1ee26c92e568d84819e98c2da69ba733a9ba98",
+      "modified": 1758025745.5101552
+    },
+    "prompt_templates/ENHANCED_PERFORMANCE_MONITORING_TEMPLATE.md": {
+      "size": 13403,
+      "checksum": "bcf07e59b00d391e2c16007628b6a4ba90c4b7decea8db7053ebcd9b98dee293",
+      "modified": 1758057739.7215743
+    },
+    "prompt_templates/ENHANCED_CONTEXT_TEMPLATE.md": {
+      "size": 7145,
+      "checksum": "12bae16d98e15327aac4f4c1e10e49b75d1de5eda55eb51eeb766bb155694051",
+      "modified": 1758057739.7102404
+    },
+    "prompt_templates/DOCUMENTATION_PROMPT_V2.md": {
+      "size": 8895,
+      "checksum": "edbb0a7b9dff57fd95b7015fa095180dbca13128be7f1b29fa1e2a1c69c4c2f3",
+      "modified": 1758024014.9526322
+    },
+    "prompt_templates/DOCUMENTATION_PROMPT_V3.md": {
+      "size": 10168,
+      "checksum": "ad94a98e0e7f28ccd41edfc61332dca764393f247fbcb2e8c9d565c55d2d1645",
+      "modified": 1758025037.7349787
+    },
+    "prompt_templates/enhanced_prompt_templates.py": {
+      "size": 17614,
+      "checksum": "51c762d736eaa9585feeb37b1edd8a6e6ca843732d3bb0cee9dabe0f3896ba76",
+      "modified": 1758058422.1426253
+    },
+    "prompt_templates/MASTER_CONTEXT_PROMPT_V5.md": {
+      "size": 19696,
+      "checksum": "021469ee24ee38959dcd4b6dbe9888721a6f76eaa2432978a1e1be4328226db0",
+      "modified": 1758026471.6525176
+    },
+    "prompt_templates/MASTER_CONTEXT_PROMPT_V2.md": {
+      "size": 5462,
+      "checksum": "b485a2ca12e9c957e846c97833fef3090dbdcc551218a0e122879e756416624a",
+      "modified": 1758024014.9432073
+    },
+    "prompt_templates/DOCUMENTATION_PROMPT.md": {
+      "size": 8216,
+      "checksum": "8a87792f76c882b0e0a3c622da11d70792cdfd6175d8487c1b895ae28c72f836",
+      "modified": 1758021866.818896
+    },
+    "prompt_templates/DOCUMENTATION_PROMPT_V4.md": {
+      "size": 14008,
+      "checksum": "2320f88f08a19beea4fe90683db72c5fae2da5ffe01d8de1764592ab5cd1b4f9",
+      "modified": 1758025745.5100648
+    },
+    "prompt_templates/MASTER_CONTEXT_PROMPT_V3.md": {
+      "size": 6480,
+      "checksum": "1ba819098903684b7a05fbe65fb232df619ba17ebb91cbff7f870850321996dd",
+      "modified": 1758028351.9907613
+    },
+    "prompt_templates/ENHANCED_TECHNICAL_SPECIFICATION_PROMPT_V2.md": {
+      "size": 15621,
+      "checksum": "eae8306d81101cb2a5e0f5b7587b7f2b8d2d0119b6b2698ea9d3bab58e5e47e6",
+      "modified": 1758027652.0575182
+    },
+    "prompt_templates/TECHNICAL_SPECIFICATION_PROMPT_V2.md": {
+      "size": 13606,
+      "checksum": "6a51fe4956e8c6f634f03ad000b5ba48593c4aaef3b2c391a1093105e29cebdd",
+      "modified": 1758024014.943183
+    },
+    "prompt_templates/VALIDATION_PROMPT.md": {
+      "size": 6979,
+      "checksum": "71b2f8f3e7f67c315db50967d197a8da41579b1090b64c86abce1dc4ee626eaf",
+      "modified": 1758021866.8189254
+    },
+    "prompt_templates/VALIDATION_PROMPT_V3.md": {
+      "size": 5648,
+      "checksum": "7e7bb6a2a9ee78831a301b645503ad6c873bc9b436aadfed123df36d842ffb2a",
+      "modified": 1758028351.9906974
+    },
+    "prompt_templates/TECHNICAL_SPECIFICATION_PROMPT.md": {
+      "size": 7499,
+      "checksum": "260e7d7c5b4e7a222c042aed2965bc551811ccaa3cdfe649fab705d2c59425a1",
+      "modified": 1758028347.142495
+    },
+    "prompt_templates/VALIDATION_PROMPT_V2.md": {
+      "size": 12417,
+      "checksum": "ed9b97fdc6de8a026844e15af66da2ce027643125dfc0d32f4154ba467b86e83",
+      "modified": 1758024014.9431965
+    },
+    "prompt_templates/ENHANCED_MASTER_PROMPT_TEMPLATE.md": {
+      "size": 6757,
+      "checksum": "f0e12737bddbb4ded70a1ecbf2968e05b2b224e6d0f3cdfd0184acfbca120910",
+      "modified": 1758057739.7102056
+    },
+    "prompt_templates/TECHNICAL_SPECIFICATION_PROMPT_V3.md": {
+      "size": 14209,
+      "checksum": "4cb0fcfde7d0cc1e97ccf5dd05601482af675b5048fa7fff5895ecfcdfcd139a",
+      "modified": 1758025037.7348711
+    },
+    "prompt_templates/MASTER_CONTEXT_PROMPT.md": {
+      "size": 3144,
+      "checksum": "b8f80555f8cc03ae3de9fae4ec78a7e7b61b907df9179d66950596b1410c2ef7",
+      "modified": 1758021866.8187647
+    },
+    "prompt_templates/__pycache__/enhanced_prompt_templates.cpython-313.pyc": {
+      "size": 23606,
+      "checksum": "101e90477a2cf50b33c10fef956b0319428d1bda27401b86bdcb58fe695be4e4",
+      "modified": 1758135773.6484656
+    },
+    "src/agent_coordinator_v2.py": {
+      "size": 17887,
+      "checksum": "c69125264ba4820134cc5bd76dbca011446f52c766386f69ee671dee0913e1cd",
+      "modified": 1758056464.49123
+    },
+    "src/enhanced_notion_client.py": {
+      "size": 53529,
+      "checksum": "555f81546cec3871985407a9abd5c3d38bea394f1cf7fb1729b163420d66e650",
+      "modified": 1758029813.9507864
+    },
+    "src/config.py": {
+      "size": 22874,
+      "checksum": "73b6cbdc3d59483885624b6226503732da05d8a64db836ad02478dad7be4aa15",
+      "modified": 1758035479.7335804
+    },
+    "src/notion_client_legacy.py": {
+      "size": 28189,
+      "checksum": "4492579004acc7b24f3f7103c0a09eb0f3f65d10bfa9bdd74a688cd892ea8821",
+      "modified": 1758023683.9704373
+    },
+    "src/enhanced_logger.py": {
+      "size": 24184,
+      "checksum": "1a466651473d9c4ce6e09ed1fd2e486bfc2f6c20475aabdc4a96085a36c0ebe1",
+      "modified": 1758035548.8543153
+    },
+    "src/__init__.py": {
+      "size": 323,
+      "checksum": "9b2f31e77ba3730f2ff5af6075907a37f89f00929f21b546346c231a4b7665aa",
+      "modified": 1758135520.6494565
+    },
+    "src/enhanced_logger_v2.py": {
+      "size": 20142,
+      "checksum": "27303cbb7e69c744f8623958748074194a792e5fdd9580a7906cc7a0b12b87b5",
+      "modified": 1758056244.5877733
+    },
+    "src/mcp_execution_engine_v2.py": {
+      "size": 28485,
+      "checksum": "30c302b09bb0a48813c40c120e4dcd1922649ea6f792b1c6ecd9c85b44b00326",
+      "modified": 1758056464.494304
+    },
+    "src/mcp_v2_validator.py": {
+      "size": 37348,
+      "checksum": "6bac3ccf22ba18b7ec1ab98040b4012920de8727be0c3330621f5c3d76b8bdeb",
+      "modified": 1758029813.9604924
+    },
+    "src/notion_client_v2.py": {
+      "size": 17345,
+      "checksum": "3625c20828540faf9e7690e6f2f3c3d9bca81ebaef5403b1ab6b68ab5051f091",
+      "modified": 1758056244.5874767
+    },
+    "src/error_handler.py": {
+      "size": 38797,
+      "checksum": "fc646d263b9730107f0b568a25341824c51a08bcd99ba8c865a0e1edb02adc93",
+      "modified": 1758029813.951069
+    },
+    "src/main.py": {
+      "size": 4699,
+      "checksum": "e354eafdbc08a5d0f847ac0d7f670ca94d62df830bfd774e0de4feebf6e75cb4",
+      "modified": 1758057234.9005075
+    },
+    "src/agent_coordinator.py": {
+      "size": 63386,
+      "checksum": "c8979fcc32e577dfae9e5c57e7c7ed822575a24b9b47efff0fd19605614fcab1",
+      "modified": 1758029813.95076
+    },
+    "src/enhanced_validation_framework.py": {
+      "size": 37903,
+      "checksum": "9669f48e42065547c9ffdd4dce55baa393ec7780855b90e6ad905222f9d2af33",
+      "modified": 1758027652.0573015
+    },
+    "src/task_manager_v2.py": {
+      "size": 24588,
+      "checksum": "198f47be824cca637a9356b8f02c3a4932e426b12f1241c5bce3a0f8bcd21290",
+      "modified": 1758056464.4881494
+    },
+    "src/validation_framework_v2.py": {
+      "size": 29423,
+      "checksum": "e96d988f2c54e889ef358f706ddb037e776b55d7ead33314540c3c1118be5229",
+      "modified": 1758056464.4944806
+    },
+    "src/validation.py": {
+      "size": 23171,
+      "checksum": "5a964a335f2632c08fe1a83cf0cea55db822ddfcc84a04b3751885e6b730d409",
+      "modified": 1758022628.7319405
+    },
+    "src/core/task.py": {
+      "size": 12426,
+      "checksum": "3d7eb54602e4629807c86f80f083ff534e3fe8e056c13e3468575788d8574e4d",
+      "modified": 1758057234.9001436
+    },
+    "src/core/config.py": {
+      "size": 2007,
+      "checksum": "9689318f5e77309b57c016ef06b806af9e4c331824e21e803efb84b72ade58bc",
+      "modified": 1758135520.6494405
+    },
+    "src/core/models.py": {
+      "size": 5194,
+      "checksum": "b895715a46bc69b0b3a5eafd8ec7e64ffa424f294c67d7cfe074291cfacaa9b3",
+      "modified": 1758135520.6494498
+    },
+    "src/core/execution_engine.py": {
+      "size": 10589,
+      "checksum": "cf134507c02b011dcdaa79584ba24537e133aa5ded5b9ea267aa0fcd3c750710",
+      "modified": 1758135520.6499333
+    },
+    "src/core/protocol.py": {
+      "size": 8368,
+      "checksum": "119fbae6fe6572f960cce6311c774e657f86a9deaf412674e511f4c598b95323",
+      "modified": 1758055402.0587196
+    },
+    "src/core/validation_framework.py": {
+      "size": 23684,
+      "checksum": "02b6a6ceced42c91fbbb1c4f568913765cd66203ef45a45ad8e4906e91dead7b",
+      "modified": 1758055402.065388
+    },
+    "src/core/__init__.py": {
+      "size": 338,
+      "checksum": "9e3fdeb5d68b66aa7d2396e3aea4b412eb000b48dc65d2ec70a69ccc27b4545c",
+      "modified": 1758057234.9001904
+    },
+    "src/core/task_manager.py": {
+      "size": 10889,
+      "checksum": "0c6a2c152656279e68c5524588be006ba12bcb7a440caac234fc215001d52d61",
+      "modified": 1758135520.6494827
+    },
+    "src/core/agent.py": {
+      "size": 10146,
+      "checksum": "ea62b18a2c11f4fb50c8923ee6181ccf6ff9f6df0f9525cbe080ddf589ad236a",
+      "modified": 1758057234.900172
+    },
+    "src/core/error_handler.py": {
+      "size": 13189,
+      "checksum": "3b6ea4ea66bd94ffb87b529bc8ecb2026de963572349b488183c02e8332cf06c",
+      "modified": 1758135520.6497722
+    },
+    "src/core/agent_coordinator.py": {
+      "size": 14380,
+      "checksum": "0840207a05d162acd7f44662e1bb2d6f45ee899a18f6c5298054cd1700d016d6",
+      "modified": 1758055402.0652921
+    },
+    "src/core/validation.py": {
+      "size": 16267,
+      "checksum": "9e5fc3ed5ff09a732c347836bf5fa3b474a4c531c152883e2fb0a963f589e6f8",
+      "modified": 1758057234.9002223
+    },
+    "src/core/__pycache__/agent_coordinator.cpython-313.pyc": {
+      "size": 17525,
+      "checksum": "9bc7e81ba70742385202a02b11cb4b873be8c508f00d19a677d7c82c054d6259",
+      "modified": 1758135774.0934234
+    },
+    "src/core/__pycache__/execution_engine.cpython-313.pyc": {
+      "size": 14516,
+      "checksum": "dfb5abad318a28c1bd2ed013e832e5c046a467dbf811e2d77a8f980009d80640",
+      "modified": 1758135773.889607
+    },
+    "src/core/__pycache__/config.cpython-313.pyc": {
+      "size": 3283,
+      "checksum": "e64fc55a859e2c83f7f2d376f4b9448b3921fa45504ad1de9ce5d6caf32ef354",
+      "modified": 1758135773.8321369
+    },
+    "src/core/__pycache__/error_handler.cpython-313.pyc": {
+      "size": 18883,
+      "checksum": "424b501c9a0da78177b4758c053b5f79eebf8ca9aaf438b52eb4a4afad60847b",
+      "modified": 1758135774.063722
+    },
+    "src/core/__pycache__/validation_framework.cpython-313.pyc": {
+      "size": 26816,
+      "checksum": "e220d8430e9142d92d98490fadfd434e829658e12b03da6ebf1a078b58f5332a",
+      "modified": 1758135773.948426
+    },
+    "src/core/__pycache__/models.cpython-313.pyc": {
+      "size": 9188,
+      "checksum": "b94cee047ec37732c7bb4a25789a0387a181d04fe6eb389b17c0fc5ca02370e2",
+      "modified": 1758135773.8601308
+    },
+    "src/core/__pycache__/task_manager.cpython-313.pyc": {
+      "size": 12538,
+      "checksum": "79fa1e32f58b98172504685b424cc1ae6534c2bf1fd2968eac59f29c770c2bc6",
+      "modified": 1758135774.0047922
+    },
+    "src/core/__pycache__/agent.cpython-313.pyc": {
+      "size": 11988,
+      "checksum": "8e1aee9456298a1949b18a8aa222ae2daf7353f5817265f66dff82fe4c3ad7be",
+      "modified": 1758135774.0336435
+    },
+    "src/core/__pycache__/task.cpython-313.pyc": {
+      "size": 15735,
+      "checksum": "1d4ac7f7a9cb14545d234c82a02053e5fce3cffaf977e44e31e072e5b931eeb0",
+      "modified": 1758135773.80403
+    },
+    "src/core/__pycache__/protocol.cpython-313.pyc": {
+      "size": 12390,
+      "checksum": "8fb68393d5a37e1e5f7c261ad57e430742a88a9e853f2c5c7fadc8c7dc78a085",
+      "modified": 1758135773.9180784
+    },
+    "src/core/__pycache__/validation.cpython-313.pyc": {
+      "size": 18601,
+      "checksum": "05cd5614a38d4edc9046adfdb5f721381de7283ad4f5d06161ab116e5c62bab6",
+      "modified": 1758135774.1219444
+    },
+    "src/core/__pycache__/__init__.cpython-313.pyc": {
+      "size": 476,
+      "checksum": "8508696e64e369a642d116dff2a702fed9545019b585740065aa02378248660a",
+      "modified": 1758135773.976351
+    },
+    "src/agents/coordinator.py": {
+      "size": 13103,
+      "checksum": "f426114e74cad3281f4671da63b2af133e2c717c0e6110f8e0961d7b5607f707",
+      "modified": 1758135520.6498122
+    },
+    "src/agents/claude_mm1_agent.py": {
+      "size": 9798,
+      "checksum": "280bb5780c8f803abe090607646ae28d089bd08b23684c52e9e8a9c7657f9b5a",
+      "modified": 1758057234.9004579
+    },
+    "src/agents/base_agent.py": {
+      "size": 9231,
+      "checksum": "4b2293d625bc7abad7b2cb3208e46726756e9eda031516c19a5ad22fae1ec7c8",
+      "modified": 1758057234.9002116
+    },
+    "src/agents/__init__.py": {
+      "size": 329,
+      "checksum": "8fa59ed71ed6c1c597c3e4145e12f7235da522de2bc647cf27cd4ec7349cb211",
+      "modified": 1758057234.9004767
+    },
+    "src/agents/notion_ai_agent.py": {
+      "size": 9862,
+      "checksum": "0f5bcc54723e5b34b0732646e054d8fdda99a1724d3a8b2e5211a65390e6ef50",
+      "modified": 1758057234.9004898
+    },
+    "src/agents/notion_ai_data_ops_agent.py": {
+      "size": 19421,
+      "checksum": "4b2e562150e72ede1b94d060310a93899b720c36766d6654ec28f2d8efb1992b",
+      "modified": 1758055402.065403
+    },
+    "src/agents/cursor_mm1_agent.py": {
+      "size": 9745,
+      "checksum": "0bc81fa08cd5ad1fae05806e8785d686631ea00624047256be2f887770b0f378",
+      "modified": 1758057234.90088
+    },
+    "src/agents/__pycache__/claude_mm1_agent.cpython-313.pyc": {
+      "size": 10354,
+      "checksum": "4c45c0050cb90b175aa9427b03a944b40d3b254cae0d1542c106f43f1b0e2f99",
+      "modified": 1758135774.2722058
+    },
+    "src/agents/__pycache__/coordinator.cpython-313.pyc": {
+      "size": 15500,
+      "checksum": "aa3607fe10ac35ed6ac54d99549811c8a33d29e3121f95f2277c6a48fb09f7ec",
+      "modified": 1758135774.2440677
+    },
+    "src/agents/__pycache__/cursor_mm1_agent.cpython-313.pyc": {
+      "size": 10244,
+      "checksum": "369c6d12841e96225ce64472c03b2b413a1e1f7090ad9d58d9a6ad64178d70ae",
+      "modified": 1758135774.4164102
+    },
+    "src/agents/__pycache__/notion_ai_agent.cpython-313.pyc": {
+      "size": 10434,
+      "checksum": "f02834d93c80109c94176d7eda1d7645d3af41d2d72a5b56f292040f789b6123",
+      "modified": 1758135774.3606067
+    },
+    "src/agents/__pycache__/notion_ai_data_ops_agent.cpython-313.pyc": {
+      "size": 20109,
+      "checksum": "8c64370eb7464cac9c640c025a58ce495fbdc9f979f5ca991288b56d2c41f4e5",
+      "modified": 1758135774.3893628
+    },
+    "src/agents/__pycache__/base_agent.cpython-313.pyc": {
+      "size": 10739,
+      "checksum": "7d1180a1cb8e008bc6dc18f2fd96737cd534f23d13a528b2a723d42a20a59577",
+      "modified": 1758135774.3005328
+    },
+    "src/agents/__pycache__/__init__.cpython-313.pyc": {
+      "size": 452,
+      "checksum": "f4110733650bd86dbca704a5d1a60d49dbf2b61434437573e58d67d9defbf9ec",
+      "modified": 1758135774.3323781
+    },
+    "src/utils/enhanced_logger.py": {
+      "size": 13815,
+      "checksum": "b8f9f124ceabfb1ec13e2abb76246d683173a46cb7c981f0f6629a5bc8ecec5a",
+      "modified": 1758055402.0653212
+    },
+    "src/utils/__init__.py": {
+      "size": 177,
+      "checksum": "6ce21d6c19f4e42736305f072b997462574aa3fa4ec9e9ccde803c4b80eacb20",
+      "modified": 1758057234.9002423
+    },
+    "src/utils/logger.py": {
+      "size": 10839,
+      "checksum": "16130415269aa3a7456d16156c983ebaa65368a95d13141810649588274de11b",
+      "modified": 1758057234.9001555
+    },
+    "src/utils/__pycache__/logger.cpython-313.pyc": {
+      "size": 11868,
+      "checksum": "98866ed66637a3b9fbdc264f633fb32dd364dedabc9f6c268d7886e479606c51",
+      "modified": 1758135774.5299075
+    },
+    "src/utils/__pycache__/enhanced_logger.cpython-313.pyc": {
+      "size": 17183,
+      "checksum": "d3aa847fd4264152f0cd3dafd77ba7992da44676be6468c903e62f733ff9bf14",
+      "modified": 1758135774.4735398
+    },
+    "src/utils/__pycache__/__init__.cpython-313.pyc": {
+      "size": 305,
+      "checksum": "215d71a290be0a7bd292ee30aefd4d2c770d21a71abada4592b87f8ca9d1a584",
+      "modified": 1758135774.5013733
+    },
+    "src/__pycache__/main.cpython-313.pyc": {
+      "size": 6835,
+      "checksum": "2c887795d8aaee5acc10573dca183f31927eed185fcd400d695c25dd790db86d",
+      "modified": 1758135774.8009365
+    },
+    "src/__pycache__/agent_coordinator.cpython-313.pyc": {
+      "size": 60491,
+      "checksum": "1b0c6e6eba6a73ff6805bb7cfa9b0402994daff904c9c994fd596a9ae6c3a20c",
+      "modified": 1758135774.83334
+    },
+    "src/__pycache__/task_manager_v2.cpython-313.pyc": {
+      "size": 28395,
+      "checksum": "32b43d1e7bbe9674c5bfd82faed3d745e91b21266a66750062166402663ea521",
+      "modified": 1758135774.8933449
+    },
+    "src/__pycache__/agent_coordinator_v2.cpython-313.pyc": {
+      "size": 20065,
+      "checksum": "78701659bd8be8b674cda7591d60d6fc7b49a16c55b82ec14610f1d34c15acab",
+      "modified": 1758135773.709956
+    },
+    "src/__pycache__/validation_framework_v2.cpython-313.pyc": {
+      "size": 31286,
+      "checksum": "52add11a5e9c37d7b3840e4bbae02bbf59d41037bd205cdf35d606fd4b3873e2",
+      "modified": 1758135774.9239702
+    },
+    "src/__pycache__/config.cpython-313.pyc": {
+      "size": 28064,
+      "checksum": "519c5b1af8da53ce04ab133b578a61591418b8d3b0abb54c02bbfb4c8e80de33",
+      "modified": 1758135773.7744904
+    },
+    "src/__pycache__/error_handler.cpython-313.pyc": {
+      "size": 40081,
+      "checksum": "c6e766bfaa303f5b0aa5a5362dccc49682d396bf391226da861067200ec07702",
+      "modified": 1758135774.7729316
+    },
+    "src/__pycache__/enhanced_logger.cpython-313.pyc": {
+      "size": 30943,
+      "checksum": "75ee861180079977bb4adec6d9b6b1d127ae8c4d1f9a488dc56cdc6fa1617832",
+      "modified": 1758135774.1846437
+    },
+    "src/__pycache__/enhanced_notion_client.cpython-313.pyc": {
+      "size": 58484,
+      "checksum": "d25d049c015491c8941a1a974b41fb0093fb82b71af501983672366bc33465eb",
+      "modified": 1758135773.7431645
+    },
+    "src/__pycache__/enhanced_logger_v2.cpython-313.pyc": {
+      "size": 24421,
+      "checksum": "3a578d731bc5c49d4ed7aeb2779b56d85488decd32b28cf21d12e1e2d10b1199",
+      "modified": 1758135774.44467
+    },
+    "src/__pycache__/enhanced_validation_framework.cpython-313.pyc": {
+      "size": 42318,
+      "checksum": "2df0e71dfe7bbb8a1889c42df099ac65feb57b5236874d2a85c2e71b670ec012",
+      "modified": 1758135774.8640416
+    },
+    "src/__pycache__/notion_client_legacy.cpython-313.pyc": {
+      "size": 32700,
+      "checksum": "4d04a7cba258bb8250f42473cb98c49ecd5aff1eedee59de2afa4b60bc9e8fbc",
+      "modified": 1758135774.1532137
+    },
+    "src/__pycache__/mcp_execution_engine_v2.cpython-313.pyc": {
+      "size": 33787,
+      "checksum": "bc87b2a6115ecc7786234bde9aa3af341d681ab09cbbf9decac6128eb6ab76fb",
+      "modified": 1758135774.5898104
+    },
+    "src/__pycache__/validation.cpython-313.pyc": {
+      "size": 31208,
+      "checksum": "63b63bae0fe83fdf2696406a5caf6c51a3a3958ad20c86f33799e43276a9d439",
+      "modified": 1758135774.9825714
+    },
+    "src/__pycache__/notion_client_v2.cpython-313.pyc": {
+      "size": 17475,
+      "checksum": "9189feed4d420922acd36b0789966687842de34c60e8bc29731867fd563bfbff",
+      "modified": 1758135774.6503491
+    },
+    "src/__pycache__/__init__.cpython-313.pyc": {
+      "size": 470,
+      "checksum": "e7691ff9d6b7d8426989f2e89b9bdcbe17890b27ffc1cf669e2f2ca1f2b92e5f",
+      "modified": 1758135774.2145112
+    },
+    "src/__pycache__/notion_client.cpython-313.pyc": {
+      "size": 32730,
+      "checksum": "b5473e123b68bf3684cd61d1eb6f5e4383b15bc35ead0029166997eff412f647",
+      "modified": 1758027262.8647132
+    },
+    "src/__pycache__/mcp_v2_validator.cpython-313.pyc": {
+      "size": 35699,
+      "checksum": "a20c659cc95104a785d6617dba82be85f6e64b02c7324282cbf9217d7687c362",
+      "modified": 1758135774.6212153
+    },
+    "src/notion/client.py": {
+      "size": 16671,
+      "checksum": "baaa4cae680bbefc1c0581bc6668d1257e8399be5ff999ba9d66f7b77bd3e80f",
+      "modified": 1758135520.6497376
+    },
+    "src/notion/__pycache__/client.cpython-313.pyc": {
+      "size": 17596,
+      "checksum": "9c45d9a3eae0f4e9ff7baca238617b85d7975d62083b56349f6f713e7a3038aa",
+      "modified": 1758135774.5599768
+    },
+    "src/api/notion_client.py": {
+      "size": 7478,
+      "checksum": "fff7b009a00b294f3f0d8c75bcc0a2ca08db56c88a6b8c779905bfc3e2f5f805",
+      "modified": 1758057234.900124
+    },
+    "src/api/__init__.py": {
+      "size": 122,
+      "checksum": "2d5199067a39afb3493da4b2a2420be8eb0e0c7d230aca45f496dc6140c5ca79",
+      "modified": 1758057234.9001331
+    },
+    "src/api/__pycache__/__init__.cpython-313.pyc": {
+      "size": 264,
+      "checksum": "4283d01622455adbd97dd0674b28149a84a6915496f2f5a907cf0bc6788d1c81",
+      "modified": 1758135774.74102
+    },
+    "src/api/__pycache__/notion_client.cpython-313.pyc": {
+      "size": 8459,
+      "checksum": "6f682448ef49c4d37e2d8db63e26fb56e6531ef1db9e01f541ea14feeea4829d",
+      "modified": 1758135774.7130704
+    },
+    "src/logging/logger.py": {
+      "size": 9343,
+      "checksum": "b745b88a66f1b4422a6bb689c18ddfc04d0961d71866a185567fdca5755a5bec",
+      "modified": 1758135520.6497567
+    },
+    "src/logging/__pycache__/logger.cpython-313.pyc": {
+      "size": 13343,
+      "checksum": "5903c45a9d0846e06b8873f19a3b4505559dd32f43e5ec104b129664e8ca912b",
+      "modified": 1758135774.9534864
+    }
+  },
+  "directories": {},
+  "checksums": {}
+}

@@ -1,0 +1,242 @@
+{
+  "artist": "certifiedalejo",
+  "artist_url": "https://soundcloud.com/certifiedalejo",
+  "generated_at": "2025-12-20",
+  "rules": {
+    "exclude_title_patterns": [
+      "\\bfull\\s*set\\b",
+      "\\bheadline\\s*set\\b",
+      "\\b(dj\\s*)?set\\b",
+      "\\bmix\\b",
+      "\\bminimix\\b",
+      "\\bradio\\s*mix\\b",
+      "\\blive\\b",
+      "\\blive\\s*tool\\b",
+      "\\bsessions?\\b",
+      "\\bshowcase\\b",
+      "\\bperformance\\b",
+      "\\b(b2b|back\\s*to\\s*back)\\b",
+      "\\bhour\\s*(mix|set)\\b",
+      "\\brecorded\\s*live\\b",
+      "\\bedc\\b.*\\bset\\b",
+      "\\bcoachella\\b.*\\bset\\b",
+      "\\bfestival\\b.*\\bset\\b",
+      "\\bwip\\b",
+      "\\bwork\\s*in\\s*progress\\b",
+      "\\bunfinished\\b",
+      "\\bdemo\\b",
+      "\\bsketch\\b",
+      "\\brough\\s*cut\\b"
+    ],
+    "duration_threshold_seconds": 1800,
+    "exclude_wip": true,
+    "source_tracks_url": "https://soundcloud.com/certifiedalejo/tracks",
+    "pipeline": "soundcloud_track_index_exporter.py",
+    "run_id": "sc-track-index-20251220T033458Z"
+  },
+  "section": {
+    "index": 1,
+    "range": "001-049",
+    "chunk_size": 50
+  },
+  "total_tracks": 49,
+  "tracks_in_section": 49,
+  "tracks": [
+    {
+      "title": "\"Artist\" - Too Much To Ask For (Alejo Bootleg)",
+      "url": "https://soundcloud.com/certifiedalejo/artist-too-much-to-ask-for-alejo-bootleg"
+    },
+    {
+      "title": "01 Psydell & Alejo - Phonetic Flex",
+      "url": "https://soundcloud.com/certifiedalejo/01-psydell-alejo-phonetic-flex"
+    },
+    {
+      "title": "02 Psydell & Alejo - Anita 2000",
+      "url": "https://soundcloud.com/certifiedalejo/02-psydell-alejo-anita-2000"
+    },
+    {
+      "title": "03 Psydell & Alejo - Other Than Ourselves",
+      "url": "https://soundcloud.com/certifiedalejo/03-psydell-alejo-other-than"
+    },
+    {
+      "title": "75 Dollar Buick",
+      "url": "https://soundcloud.com/certifiedalejo/75-dollar-buick"
+    },
+    {
+      "title": "Alejo & Aytiko - Crude Awakening (Clip)",
+      "url": "https://soundcloud.com/certifiedalejo/alejo-aytiko-crude-awakening-clip-mstr"
+    },
+    {
+      "title": "Alejo - Double You",
+      "url": "https://soundcloud.com/certifiedalejo/alejo-double-you"
+    },
+    {
+      "title": "Alejo - Inciting Ferdinand",
+      "url": "https://soundcloud.com/certifiedalejo/alejo-inciting-ferdinand"
+    },
+    {
+      "title": "Alejo - Ripple",
+      "url": "https://soundcloud.com/certifiedalejo/alejo-ripple"
+    },
+    {
+      "title": "Alejo - Spectral Fiber",
+      "url": "https://soundcloud.com/certifiedalejo/alejo-spectral-fiber"
+    },
+    {
+      "title": "Alejo - The Come Up [Wormhole Music Group]",
+      "url": "https://soundcloud.com/certifiedalejo/alejo-the-come-up"
+    },
+    {
+      "title": "Alejo - What I Say (Flip) [Free Download]",
+      "url": "https://soundcloud.com/certifiedalejo/alejo-what-i-say-flipfree-download"
+    },
+    {
+      "title": "Alejo X JuJu Beats - Micro Flip [Free Download]",
+      "url": "https://soundcloud.com/certifiedalejo/alejo-x-juju-beats-micro-flip"
+    },
+    {
+      "title": "Antecede (feat. Mr Scissors)",
+      "url": "https://soundcloud.com/certifiedalejo/antecede-feat-mr-scissors"
+    },
+    {
+      "title": "Ask Flex [Free Download]",
+      "url": "https://soundcloud.com/certifiedalejo/ask-flex"
+    },
+    {
+      "title": "Broken Record",
+      "url": "https://soundcloud.com/certifiedalejo/broken-record"
+    },
+    {
+      "title": "Catchin' Freights",
+      "url": "https://soundcloud.com/certifiedalejo/catchin-freights"
+    },
+    {
+      "title": "Christopher Kalimboss (feat. E Lovasz)",
+      "url": "https://soundcloud.com/certifiedalejo/christopher-kalimboss-feat-e"
+    },
+    {
+      "title": "Denouement [Free Download]",
+      "url": "https://soundcloud.com/certifiedalejo/denouement"
+    },
+    {
+      "title": "Enjoy (Dnb Edit) [Free Download]",
+      "url": "https://soundcloud.com/certifiedalejo/enjoy-dnb-edit"
+    },
+    {
+      "title": "Enjoy [Free Download]",
+      "url": "https://soundcloud.com/certifiedalejo/alejo-enjoy"
+    },
+    {
+      "title": "Extremisms",
+      "url": "https://soundcloud.com/certifiedalejo/extremisms"
+    },
+    {
+      "title": "Flamingos on Parade",
+      "url": "https://soundcloud.com/certifiedalejo/flamingos-on-parade"
+    },
+    {
+      "title": "Flip Side [Free Download]",
+      "url": "https://soundcloud.com/certifiedalejo/flip-side"
+    },
+    {
+      "title": "Gas Wagon",
+      "url": "https://soundcloud.com/certifiedalejo/gas-wagon"
+    },
+    {
+      "title": "Griselda - Dr. Birds (Alejo Bootleg) [Free Download]",
+      "url": "https://soundcloud.com/certifiedalejo/griselda-dr-birds-alejo-bootleg"
+    },
+    {
+      "title": "Holdup [Free Download]",
+      "url": "https://soundcloud.com/certifiedalejo/holdup-free-download"
+    },
+    {
+      "title": "Horangutangin",
+      "url": "https://soundcloud.com/certifiedalejo/horangutangin"
+    },
+    {
+      "title": "Hullabalo0 - Reality Check Ft. Eden Dowlen (Alejo Remix) [Free Download]",
+      "url": "https://soundcloud.com/certifiedalejo/hullabalo0-reality-check-ft-eden-dowlen-alejo-remix-free-download"
+    },
+    {
+      "title": "kLL sMTH - Splatterdashery (Alejo RMX)",
+      "url": "https://soundcloud.com/certifiedalejo/kll-smth-splatterdashery-alejo-rmx"
+    },
+    {
+      "title": "Lackluster",
+      "url": "https://soundcloud.com/certifiedalejo/lackluster"
+    },
+    {
+      "title": "Leadfoot",
+      "url": "https://soundcloud.com/certifiedalejo/leadfoot"
+    },
+    {
+      "title": "Might Be",
+      "url": "https://soundcloud.com/certifiedalejo/might-be"
+    },
+    {
+      "title": "Mind the Gap",
+      "url": "https://soundcloud.com/certifiedalejo/mind-the-gap"
+    },
+    {
+      "title": "Nitrous Outlaw [Free Download]",
+      "url": "https://soundcloud.com/certifiedalejo/nitrous-outlaw"
+    },
+    {
+      "title": "Of The Trees - Feather Of Truth (Alejo Remix)",
+      "url": "https://soundcloud.com/certifiedalejo/of-the-trees-feather-of-truth-alejo-remix"
+    },
+    {
+      "title": "Omelette Rage",
+      "url": "https://soundcloud.com/certifiedalejo/omelette-rage"
+    },
+    {
+      "title": "Put the Mic On (feat. Schmoop)",
+      "url": "https://soundcloud.com/certifiedalejo/put-the-mic-on-feat-schmoop"
+    },
+    {
+      "title": "Say Something Else (feat. Danny Grooves)",
+      "url": "https://soundcloud.com/certifiedalejo/say-something-else-feat-danny"
+    },
+    {
+      "title": "The Boys",
+      "url": "https://soundcloud.com/certifiedalejo/the-boys"
+    },
+    {
+      "title": "The Scientific Ultra Violet Light Generator",
+      "url": "https://soundcloud.com/certifiedalejo/the-scientific-ultra-violet"
+    },
+    {
+      "title": "The Waiting Room",
+      "url": "https://soundcloud.com/certifiedalejo/the-waiting-room"
+    },
+    {
+      "title": "Thought Process & Alejo - Ephewhen Cay (Alejo VIP)",
+      "url": "https://soundcloud.com/certifiedalejo/ephewhen_cay_alejo_vip"
+    },
+    {
+      "title": "Thug Season",
+      "url": "https://soundcloud.com/certifiedalejo/thug-season"
+    },
+    {
+      "title": "Thylacine",
+      "url": "https://soundcloud.com/certifiedalejo/thylacine"
+    },
+    {
+      "title": "Uppercut (feat. Vusive)",
+      "url": "https://soundcloud.com/certifiedalejo/uppercut-feat-vusive"
+    },
+    {
+      "title": "Visceral [Wormhole Music Group]",
+      "url": "https://soundcloud.com/certifiedalejo/visceral-wormhole-music-group"
+    },
+    {
+      "title": "Vullinoid",
+      "url": "https://soundcloud.com/certifiedalejo/vullinoid"
+    },
+    {
+      "title": "White Knuckle Grip",
+      "url": "https://soundcloud.com/certifiedalejo/white-knuckle-grip"
+    }
+  ]
+}

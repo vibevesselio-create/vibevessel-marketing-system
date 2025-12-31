@@ -1,0 +1,115 @@
+{
+  "timestamp": "2025-12-20T15:01:13.437Z",
+  "total_archive_symbols": 396,
+  "total_current_symbols": 517,
+  "covered_count": 58,
+  "partial_count": 0,
+  "missing_count": 338,
+  "shim_count": 338,
+  "coverage_percentage": 14.646464646464647,
+  "gap_percentage": 85.35353535353535,
+  "shim_coverage_percentage": 100.0,
+  "symbols_by_category": {
+    "process": {
+      "covered": 2,
+      "partial": 0,
+      "missing": 57,
+      "shims": 57
+    },
+    "connection": {
+      "covered": 1,
+      "partial": 0,
+      "missing": 49,
+      "shims": 49
+    },
+    "plan": {
+      "covered": 10,
+      "partial": 0,
+      "missing": 14,
+      "shims": 14
+    },
+    "workflow": {
+      "covered": 13,
+      "partial": 0,
+      "missing": 18,
+      "shims": 18
+    },
+    "other": {
+      "covered": 1,
+      "partial": 0,
+      "missing": 8,
+      "shims": 8
+    },
+    "extraction_projects": {
+      "covered": 9,
+      "partial": 0,
+      "missing": 115,
+      "shims": 115
+    },
+    "extraction_timelines": {
+      "covered": 1,
+      "partial": 0,
+      "missing": 6,
+      "shims": 6
+    },
+    "extraction_clips": {
+      "covered": 2,
+      "partial": 0,
+      "missing": 55,
+      "shims": 55
+    },
+    "testing": {
+      "covered": 1,
+      "partial": 0,
+      "missing": 1,
+      "shims": 1
+    },
+    "state": {
+      "covered": 12,
+      "partial": 0,
+      "missing": 9,
+      "shims": 9
+    },
+    "diff": {
+      "covered": 2,
+      "partial": 0,
+      "missing": 5,
+      "shims": 5
+    },
+    "notion": {
+      "covered": 2,
+      "partial": 0,
+      "missing": 0,
+      "shims": 0
+    },
+    "notion_schema": {
+      "covered": 2,
+      "partial": 0,
+      "missing": 0,
+      "shims": 0
+    },
+    "extraction_media_pool": {
+      "covered": 0,
+      "partial": 0,
+      "missing": 1,
+      "shims": 1
+    }
+  },
+  "shim_modules": [
+    "compat/process.py",
+    "compat/connection.py",
+    "compat/plan.py",
+    "compat/extraction/projects.py",
+    "compat/extraction/clips.py",
+    "compat/workflows/sync.py",
+    "compat/state/sqlite_store.py",
+    "compat/extraction/timelines.py",
+    "compat/diff.py",
+    "compat/base.py",
+    "compat/tests.py",
+    "compat/extraction/media_pool.py"
+  ],
+  "unaccounted_symbols": [],
+  "effective_coverage": 14.646464646464647,
+  "notes": "Shims generated 2025-12-20 by shim_generator.py. All 338 missing symbols now have stub implementations."
+}

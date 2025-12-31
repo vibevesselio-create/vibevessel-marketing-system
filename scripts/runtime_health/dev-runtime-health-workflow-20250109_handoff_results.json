@@ -1,0 +1,11 @@
+{
+  "phase4": {
+    "trigger_file": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/Agents/Agent-Triggers-gd/ChatGPT-Implementation-Agent-Trigger/01_inbox/HANDOFF__ChatGPT-Implementation-Agent__dev-runtime-health-workflow-20250109__20251210T214255Z.md"
+  },
+  "phase4b": {
+    "trigger_file": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/Claude-MM1-Agent-Trigger/01_inbox/HANDOFF__Claude-MM1-Agent__dev-runtime-health-workflow-20250109__20251210T214255Z.md"
+  },
+  "phase5": {
+    "trigger_file": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/Notion-AI-Research-Agent-Trigger/01_inbox/HANDOFF__Notion-AI-Research-Agent__dev-runtime-health-workflow-20250109__20251210T214255Z.md"
+  }
+}

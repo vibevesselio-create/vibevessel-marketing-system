@@ -1,0 +1,43 @@
+{
+  "run_id": "a4331634-26fb-4ca2-875e-5e8b28b5af2c",
+  "generated_at": "2025-12-03T10:19:32.395834+00:00",
+  "mode": "report-only",
+  "summary": {
+    "total_databases": 3,
+    "databases_with_drift": 0,
+    "started_at": "2025-12-03T10:19:32.395730+00:00",
+    "ended_at": "2025-12-03T10:19:32.395834+00:00"
+  },
+  "databases": [
+    {
+      "database_id": "27be73616c278033a323dca0fafa80e6",
+      "registry_key": "execution_logs",
+      "database_name": "Execution-Logs",
+      "has_canonical_definition": false,
+      "has_live_schema": false,
+      "diff": {}
+    },
+    {
+      "database_id": "284e73616c278018872aeb14e82e0392",
+      "registry_key": "agent_tasks",
+      "database_name": "Agent-Tasks",
+      "has_canonical_definition": false,
+      "has_live_schema": false,
+      "diff": {}
+    },
+    {
+      "database_id": "299e73616c2780f1b264f020e4a4b041",
+      "registry_key": "workspace_registry",
+      "database_name": "workspace-databases",
+      "has_canonical_definition": false,
+      "has_live_schema": false,
+      "diff": {}
+    }
+  ],
+  "drivesheets_sync_status": {
+    "available": true,
+    "last_run": "2025-12-01T01:32:43.500377",
+    "status": "healthy",
+    "recommendation": "DriveSheetsSync appears healthy"
+  }
+}

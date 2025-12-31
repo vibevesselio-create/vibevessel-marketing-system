@@ -1,0 +1,44 @@
+[
+  {
+    "capability_id": "DRIVE_SHEETS_META_DB_SYNC",
+    "title": "DriveSheets Meta-DB Sync",
+    "description": "Two-way Notion Data Sources ↔ Google Drive CSV/Sheets sync that keeps schemas and rows aligned while updating the Meta-DB registry.",
+    "priority": "P0",
+    "area": "Sync",
+    "dependencies": ["MS.LOGGING.CANONICAL"],
+    "required_inputs": ["Notion data_sources", "Workspace CSV/Sheet exports", "Registry sheet path"],
+    "required_outputs": ["Registry updates", "Execution Logs entries", "CSV backups"],
+    "references": {
+      "paths": ["gas-scripts/drive-sheets-sync/Code.gs"],
+      "identifiers": ["Notion ↔ Google Drive + Sheets Sync", "Notion Meta-DB Registry", "Workspace-DB registry"]
+    }
+  },
+  {
+    "capability_id": "WORKSPACE_DATABASES_REGISTRY_TRACKING",
+    "title": "Workspace Databases Registry Tracking",
+    "description": "Keep Workspace databases indexed in the Meta-DB Registry Sheets and Workspace-DB Notion database for control-plane visibility.",
+    "priority": "P1",
+    "area": "Control_Plane",
+    "dependencies": ["DRIVE_SHEETS_META_DB_SYNC"],
+    "required_inputs": ["Data source metadata", "Registry spreadsheet location"],
+    "required_outputs": ["Updated registry rows", "Workspace-DB status pages"],
+    "references": {
+      "paths": ["gas-scripts/drive-sheets-sync/Code.gs"],
+      "identifiers": ["Notion Meta-DB Registry", "Databases sheet", "Properties sheet"]
+    }
+  },
+  {
+    "capability_id": "WORKSPACE_DB_LOGGING",
+    "title": "Workspace DB Logging",
+    "description": "Optional logging of DriveSheets sync results into the Workspace-DB Notion database and Execution-Logs pages.",
+    "priority": "P1",
+    "area": "Observability",
+    "dependencies": ["MS.LOGGING.CANONICAL"],
+    "required_inputs": ["Execution log destinations", "Workspace-DB database id"],
+    "required_outputs": ["Execution-Logs updates", "Workspace-DB status rows"],
+    "references": {
+      "paths": ["gas-scripts/drive-sheets-sync/Code.gs"],
+      "identifiers": ["Execution-Logs", "Workspace-DB", "UnifiedLoggerGAS"]
+    }
+  }
+]

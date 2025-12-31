@@ -1,0 +1,246 @@
+{
+  "artist": "mportaudio",
+  "artist_url": "https://soundcloud.com/mportaudio",
+  "generated_at": "2025-12-20",
+  "rules": {
+    "exclude_title_patterns": [
+      "\\bfull\\s*set\\b",
+      "\\bheadline\\s*set\\b",
+      "\\b(dj\\s*)?set\\b",
+      "\\bmix\\b",
+      "\\bminimix\\b",
+      "\\bradio\\s*mix\\b",
+      "\\blive\\b",
+      "\\blive\\s*tool\\b",
+      "\\bsessions?\\b",
+      "\\bshowcase\\b",
+      "\\bperformance\\b",
+      "\\b(b2b|back\\s*to\\s*back)\\b",
+      "\\bhour\\s*(mix|set)\\b",
+      "\\brecorded\\s*live\\b",
+      "\\bedc\\b.*\\bset\\b",
+      "\\bcoachella\\b.*\\bset\\b",
+      "\\bfestival\\b.*\\bset\\b",
+      "\\bwip\\b",
+      "\\bwork\\s*in\\s*progress\\b",
+      "\\bunfinished\\b",
+      "\\bdemo\\b",
+      "\\bsketch\\b",
+      "\\brough\\s*cut\\b"
+    ],
+    "duration_threshold_seconds": 1800,
+    "exclude_wip": true,
+    "source_tracks_url": "https://soundcloud.com/mportaudio/tracks",
+    "pipeline": "soundcloud_track_index_exporter.py",
+    "run_id": "sc-track-index-20251220T033458Z"
+  },
+  "section": {
+    "index": 1,
+    "range": "001-050",
+    "chunk_size": 50
+  },
+  "total_tracks": 109,
+  "tracks_in_section": 50,
+  "tracks": [
+    {
+      "title": "\"rings Like\" {an internal Monologue} (Watch Music Video lol)",
+      "url": "https://soundcloud.com/mportaudio/rings-like-an-internal-monologue"
+    },
+    {
+      "title": "#GetWrecked [Intro Song]",
+      "url": "https://soundcloud.com/mportaudio/getwrecked-intro-song"
+    },
+    {
+      "title": "55 Wubs",
+      "url": "https://soundcloud.com/mportaudio/55-wubs"
+    },
+    {
+      "title": "8Line",
+      "url": "https://soundcloud.com/mportaudio/8line"
+    },
+    {
+      "title": "Anything",
+      "url": "https://soundcloud.com/mportaudio/anything"
+    },
+    {
+      "title": "Anyway",
+      "url": "https://soundcloud.com/mportaudio/anyway"
+    },
+    {
+      "title": "Astronaut In The Ocean (Mport Remix) [Full Version in DL/onYT)",
+      "url": "https://soundcloud.com/mportaudio/aitomport"
+    },
+    {
+      "title": "Aviva - Bloody Sunday (Feat. Treyy G) [Mport Remix]",
+      "url": "https://soundcloud.com/mportaudio/aviva-bloody-sunday-feat-treyy-g-mport-remix"
+    },
+    {
+      "title": "Ay OH! (Get In The Back, The Piano Is Driving - Type Beat)",
+      "url": "https://soundcloud.com/mportaudio/ay-oh-get-in-the-back-the-piano-is-driving-type-beat"
+    },
+    {
+      "title": "Bang Bang (Feat. Emily Anderson)",
+      "url": "https://soundcloud.com/mportaudio/bang-bang-feat-emily-anderson"
+    },
+    {
+      "title": "Beatking (feat. Queendome Come) - Then Leave  [Mport Remix]",
+      "url": "https://soundcloud.com/mportaudio/beatking-feat-queendome-come-then-leave-mport-remix"
+    },
+    {
+      "title": "Belly Dancer (Free DL)",
+      "url": "https://soundcloud.com/mportaudio/belly-dancer-free-dl"
+    },
+    {
+      "title": "Belly Dancer VIP",
+      "url": "https://soundcloud.com/mportaudio/belly-dancer-vip"
+    },
+    {
+      "title": "Blazin' That (Happy 420)",
+      "url": "https://soundcloud.com/mportaudio/blazin-that-happy-420"
+    },
+    {
+      "title": "Blume [Love]",
+      "url": "https://soundcloud.com/mportaudio/blume-love"
+    },
+    {
+      "title": "Cardi B - Bodak Yellow (Mport Remix)",
+      "url": "https://soundcloud.com/mportaudio/cardi-b-bodak-yellow-mport-remix"
+    },
+    {
+      "title": "Catz 'n Dogz & Claude VonStroke -  RAGADAGA (Mport Edit)",
+      "url": "https://soundcloud.com/mportaudio/claud-von-stroke-ragadaga-mport-flip"
+    },
+    {
+      "title": "Chaos N Confusion",
+      "url": "https://soundcloud.com/mportaudio/chaos-n-confusion"
+    },
+    {
+      "title": "Cloonee, Young M.A. & InntRaw - Stephanie (Mport Flip) [Inspired by HNTR Remix]",
+      "url": "https://soundcloud.com/mportaudio/cloonee-stephanie-hntr-remix"
+    },
+    {
+      "title": "Cyclops - Tear Jerker (Mport Flip)",
+      "url": "https://soundcloud.com/mportaudio/cyclops-tear-jerker-mport-flip"
+    },
+    {
+      "title": "Deepa",
+      "url": "https://soundcloud.com/mportaudio/deepa"
+    },
+    {
+      "title": "Desire",
+      "url": "https://soundcloud.com/mportaudio/desire"
+    },
+    {
+      "title": "Dirt Monkey - Lift Off (Mport Remix) [Free DL]",
+      "url": "https://soundcloud.com/mportaudio/dirt-monkey-lift-off-mport-remixfree-dl"
+    },
+    {
+      "title": "Dirt Monkey- Jungle Juice (Parks N' Wreck Remix)",
+      "url": "https://soundcloud.com/mportaudio/dirt-monkey-jungle-juice-parks-n-wreck-remix"
+    },
+    {
+      "title": "EAZYBAKED x MontyCler - Certified (Mport Flip)",
+      "url": "https://soundcloud.com/mportaudio/certifiedport"
+    },
+    {
+      "title": "Eminem - Without Me (Mport lil Beat Edit)",
+      "url": "https://soundcloud.com/mportaudio/eminem-withoutmeport"
+    },
+    {
+      "title": "Empire (Free DL)",
+      "url": "https://soundcloud.com/mportaudio/empire"
+    },
+    {
+      "title": "Everybody Move (Playable 2022)",
+      "url": "https://soundcloud.com/mportaudio/everybody-move-idea"
+    },
+    {
+      "title": "Fearless",
+      "url": "https://soundcloud.com/mportaudio/fearless"
+    },
+    {
+      "title": "Flesh (Halloween Track) [Free DL]",
+      "url": "https://soundcloud.com/mportaudio/flesh-free-dl-halloween"
+    },
+    {
+      "title": "Floor Flex",
+      "url": "https://soundcloud.com/mportaudio/floor-flex-original-mix"
+    },
+    {
+      "title": "Forever",
+      "url": "https://soundcloud.com/mportaudio/forever"
+    },
+    {
+      "title": "Grin",
+      "url": "https://soundcloud.com/mportaudio/grin"
+    },
+    {
+      "title": "Hamdi ft. Princess Superstar - Counting (Mport Flip)",
+      "url": "https://soundcloud.com/mportaudio/hamdi-ft-princess-superstar-counting-mport-flip"
+    },
+    {
+      "title": "Hangin' Around",
+      "url": "https://soundcloud.com/mportaudio/hangin-around"
+    },
+    {
+      "title": "Harry Potter Puppet Pals (Mport Remix)",
+      "url": "https://soundcloud.com/mportaudio/harry-potter-puppet-pals-mport-remix"
+    },
+    {
+      "title": "Here We Go Again",
+      "url": "https://soundcloud.com/mportaudio/here-we-go-again"
+    },
+    {
+      "title": "Hit The Road Jack w/ Bass Physics",
+      "url": "https://soundcloud.com/mportaudio/hittheroadjack"
+    },
+    {
+      "title": "HOT DAMN w/ Shank Aaron",
+      "url": "https://soundcloud.com/mportaudio/hotdamn"
+    },
+    {
+      "title": "Hot Rod [Cool Beans]",
+      "url": "https://soundcloud.com/mportaudio/hot-rod-cool-beans"
+    },
+    {
+      "title": "How It Feels",
+      "url": "https://soundcloud.com/mportaudio/how-it-feels"
+    },
+    {
+      "title": "I Promise [Bonus Beat]",
+      "url": "https://soundcloud.com/mportaudio/i-promise-beat"
+    },
+    {
+      "title": "I'm An Island Boy (Mport Remix) [Free DL]",
+      "url": "https://soundcloud.com/mportaudio/island-boy-remix-free-dl"
+    },
+    {
+      "title": "IDEU",
+      "url": "https://soundcloud.com/mportaudio/ideu-1"
+    },
+    {
+      "title": "Intro track for my Denver headline @ Black Box [System Test]",
+      "url": "https://soundcloud.com/mportaudio/blackboxmportintro"
+    },
+    {
+      "title": "KILL WILL",
+      "url": "https://soundcloud.com/mportaudio/kill-will"
+    },
+    {
+      "title": "Kompany & Ivory - Jackpot (feat. Raxdflipnote) (Mport Flip)",
+      "url": "https://soundcloud.com/mportaudio/jackport"
+    },
+    {
+      "title": "Lavish",
+      "url": "https://soundcloud.com/mportaudio/lavish-original-mix"
+    },
+    {
+      "title": "Level 9",
+      "url": "https://soundcloud.com/mportaudio/level-9"
+    },
+    {
+      "title": "Level 9 (Concentrates Remix)",
+      "url": "https://soundcloud.com/mportaudio/level-9-concentrates-remix"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "title": "Blocker: Track details missing for download request",
+  "type": ["Internal Issue"],
+  "status": "Unreported",
+  "priority": "High",
+  "component": "Music Workflow",
+  "blocked": true,
+  "description": "Instruction to 'try downloading the single track first, and then proceeding with all fixes' lacks track URL/ID/source platform. Cannot proceed without exact track info and intended script/pipeline.",
+  "evidence": {
+    "context": "No track specified; only prior active file is Notion DNS blocker stub.",
+    "notion_connectivity_check": "curl -I https://api.notion.com/v1/databases -> HTTP/2 401 (token missing, DNS resolves)"
+  },
+  "source": "Codex-MM1 agent",
+  "created_at": "${ts}"
+}

@@ -1,0 +1,93 @@
+{
+  "test_summary": {
+    "total_tests": 9,
+    "passed_tests": 7,
+    "failed_tests": 2,
+    "success_rate": 77.77777777777779,
+    "test_duration": "0:00:53.757787"
+  },
+  "test_results": [
+    {
+      "test_name": "Module Loading",
+      "success": true,
+      "message": "Successfully loaded main script module",
+      "details": null,
+      "timestamp": "2025-10-24T16:07:23.633950"
+    },
+    {
+      "test_name": "Spotify Availability",
+      "success": true,
+      "message": "Spotify integration is available",
+      "details": null,
+      "timestamp": "2025-10-24T16:07:23.633959"
+    },
+    {
+      "test_name": "Environment Variables",
+      "success": true,
+      "message": "All environment variables present",
+      "details": null,
+      "timestamp": "2025-10-24T16:07:23.633968"
+    },
+    {
+      "test_name": "Spotify Track Retrieval",
+      "success": true,
+      "message": "Retrieved 0 Spotify tracks",
+      "details": {
+        "track_count": 0
+      },
+      "timestamp": "2025-10-24T16:07:40.159370"
+    },
+    {
+      "test_name": "Track Data Extraction",
+      "success": true,
+      "message": "Successfully extracted track data",
+      "details": {
+        "extracted_fields": [
+          "page_id",
+          "title",
+          "artist",
+          "album",
+          "genre",
+          "soundcloud_url",
+          "spotify_id",
+          "spotify_url",
+          "bpm",
+          "key",
+          "duration_seconds",
+          "eagle_file_id"
+        ]
+      },
+      "timestamp": "2025-10-24T16:07:40.162582"
+    },
+    {
+      "test_name": "Track Type Detection",
+      "success": false,
+      "message": "Failed to detect Spotify track",
+      "details": null,
+      "timestamp": "2025-10-24T16:07:40.162634"
+    },
+    {
+      "test_name": "Select Pages Integration",
+      "success": false,
+      "message": "Error in select_pages: Notion error 404: {\"object\":\"error\",\"status\":404,\"code\":\"object_not_found\",\"message\":\"Could not find database with ID: 23de7361-6c27-80a9-a867-f78317b32d22. Make sure the relevant pages and databases are shared with your integration.\",\"request_id\":\"79251708-e715-461c-bde9-beb7257b1d00\"}",
+      "details": null,
+      "timestamp": "2025-10-24T16:08:15.411349"
+    },
+    {
+      "test_name": "Metadata Update Function",
+      "success": true,
+      "message": "update_track_metadata function available",
+      "details": null,
+      "timestamp": "2025-10-24T16:08:15.411490"
+    },
+    {
+      "test_name": "Error Handling",
+      "success": true,
+      "message": "Error handling works correctly",
+      "details": {
+        "handled_invalid_data": true
+      },
+      "timestamp": "2025-10-24T16:08:15.411545"
+    }
+  ]
+}

@@ -1,0 +1,1014 @@
+{
+  "handoff_id": "694f316b-29d6-459b-b3bb-15d4e556d7c6",
+  "timestamp": "2025-12-17T19:33:08.903360+00:00",
+  "source_agent": "Codex-MM1",
+  "target_agent": "Notion DataOps",
+  "task_url": "UNAVAILABLE - Agent-Tasks DB inaccessible (missing NOTION_TOKEN)",
+  "project_url": "UNAVAILABLE - cannot load without task context",
+  "handoff_reason": "Cannot validate Single In Progress constraint or load tasks because NOTION_TOKEN is missing and Notion access is blocked.",
+  "context": {
+    "current_step": "Step 1.1 - validate In Progress tasks per Four-Agent protocol",
+    "blocking_issue": "Environment has no NOTION_TOKEN and network access is restricted, so Agent-Tasks and Issues+Questions databases cannot be queried or updated.",
+    "work_completed": "Confirmed AGENTS.md requirements, checked environment for NOTION_TOKEN (absent), and prepared this handoff for DataOps support.",
+    "project_goals": "Unknown; parent project cannot be loaded until Agent-Tasks access is restored."
+  },
+  "required_action": "Restore Notion access (provide NOTION_TOKEN/config), run the Single In Progress validation, surface the active task and project details, and hand back the next required step for Codex-MM1.",
+  "success_criteria": "Agent-Tasks DB reachable; exactly one In Progress task identified or set; parent project context captured; Codex-MM1 receives the task URL, project URL, and the next required step to resume execution.",
+  "urgency": "High"
+}
+================================================================================
+FOUR-AGENT COORDINATED TASK EXECUTION PROTOCOL
+Single "In Progress" Task Enforcement & Mandatory Action Framework
+================================================================================
+
+⚠️ CORE DIRECTIVE — NO INACTION PERMITTED
+
+This prompt REQUIRES action. The executing agent MUST perform one of these
+outcomes in every invocation:
+
+1. EXECUTE — Complete work on the current "In Progress" task
+2. ADVANCE — Progress the task forward, even incrementally  
+3. HANDOFF — Route to another agent via trigger folder if blocked
+4. ESCALATE — Create sub-task and assign to appropriate agent
+
+Inaction is a protocol violation. If no "In Progress" task exists AND no
+"Ready" tasks exist, the agent must document this state and trigger a task
+discovery/creation workflow.
+
+================================================================================
+SECTION 1: MANDATORY INITIALIZATION SEQUENCE
+================================================================================
+
+Upon invocation, execute these steps IN ORDER:
+
+─────────────────────────────────────────────────────────────────────────────────
+Step 1.1: Validate Single "In Progress" Constraint
+─────────────────────────────────────────────────────────────────────────────────
+
+Query:
+  SELECT COUNT(*) FROM Agent-Tasks
+  WHERE Status = 'In Progress' 
+  AND Assigned-Agent CONTAINS [executing agent URL
+]
+  AND Archive = false
+
+Result Handling:
+  ┌─────────────┬────────────────────────────────────────────────────────────┐
+  │ Count = 0   │ Query for highest-priority "Ready" task, set to            │
+  │             │ "In Progress"                                              │
+  ├─────────────┼────────────────────────────────────────────────────────────┤
+  │ Count = 1   │ Load that task — proceed to Step 1.2                       │
+  ├─────────────┼────────────────────────────────────────────────────────────┤
+  │ Count > 1   │ VIOLATION: Immediately archive/complete older tasks        │
+  │             │ until Count = 1                                            │
+  └─────────────┴────────────────────────────────────────────────────────────┘
+
+─────────────────────────────────────────────────────────────────────────────────
+Step 1.2: Load Active Task with Full Context
+─────────────────────────────────────────────────────────────────────────────────
+
+Query the single "In Progress" task and load ALL of these properties:
+
+TASK IDENTITY:
+  • Task Name, url, Status, Priority, Task Type
+  • Assigned-Agent, Projects (relation), Parent item, Sub-item
+
+EXECUTION STATE:
+  • Steps, Next Required Step, Success Criteria, Verification Checklist
+  • Resume From Here, Pre-Flight Passed, Dependency Status
+  • Execution Log, Decision Log, MCP Validation Results, Artifacts
+
+COORDINATION:
+  • Prerequisite Tasks, Dependent Tasks
+  • Agent Trigger Folder Path, Agent Handoff Folder Path
+  • Blocking Reason, Issues+Questions
+
+─────────────────────────────────────────────────────────────────────────────────
+Step 1.3: Load Parent Project Context
+─────────────────────────────────────────────────────────────────────────────────
+
+REQUIRED: If Projects relation is populated:
+
+  1. Load the linked Project page
+  2. Extract Project goals, success criteria, and current status
+  3. Verify task alignment with project objectives
+  4. Note any project-level blockers or dependencies
+
+If Projects relation is empty: Flag as compliance gap and continue execution.
+
+================================================================================
+SECTION 2: TASK EXECUTION PROTOCOL
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────────
+2.1 Determine Execution Mode
+─────────────────────────────────────────────────────────────────────────────────
+
+Evaluate the task and select ONE execution path:
+
+  ┌─────────────────────────────────┬───────────────┬─────────────────────────┐
+  │ Condition                       │ Mode          │ Action                  │
+  ├─────────────────────────────────┼───────────────┼─────────────────────────┤
+  │ Task can be completed in full   │ COMPLETE      │ Execute all steps,      │
+  │                                 │               │ validate, mark Done     │
+  ├─────────────────────────────────┼───────────────┼─────────────────────────┤
+  │ Task can be partially advanced  │ ADVANCE       │ Execute what's possible,│
+  │                                 │               │ update progress, handoff│
+  ├─────────────────────────────────┼───────────────┼─────────────────────────┤
+  │ Task blocked by dependencies    │ HANDOFF       │ Route to dependency-    │
+  │                                 │               │ owning agent immediately│
+  ├─────────────────────────────────┼───────────────┼─────────────────────────┤
+  │ Task exceeds agent capability   │ HANDOFF       │ Route to capable agent  │
+  │                                 │               │ with full context       │
+  ├─────────────────────────────────┼───────────────┼─────────────────────────┤
+  │ Task blocked by external factor │ ESCALATE      │ Create blocking issue,  │
+  │                                 │               │ assign remediation task │
+  └─────────────────────────────────┴───────────────┴─────────────────────────┘
+
+─────────────────────────────────────────────────────────────────────────────────
+2.2 Execute with Project Alignment
+─────────────────────────────────────────────────────────────────────────────────
+
+For every action taken, verify: [_
+] Action advances the parent Project toward its goals
+  [_
+] Action does not conflict with Project success criteria
+  [_
+] Action maintains consistency with related Project tasks
+  [_
+] Progress is documented in task AND reflected in Project status
+
+─────────────────────────────────────────────────────────────────────────────────
+2.3 Mandatory Progress Documentation
+─────────────────────────────────────────────────────────────────────────────────
+
+After ANY execution (even partial), update these properties:
+
+Execution Log: [ISO-8601 timestamp
+] [Agent Name
+]
+  ACTION: [specific action taken
+]
+  OUTCOME: [result of action
+]
+  PROJECT IMPACT: [how this advances parent project
+]
+  
+Decision Log: [ISO-8601 timestamp
+] [Agent Name
+]
+  DECISION: [what was decided
+]
+  RATIONALE: [why this decision
+]
+  ALTERNATIVES CONSIDERED: [what else was evaluated
+]
+
+MCP Validation Results:
+  Results=[PASS|PARTIAL|FAIL|HANDOFF
+]
+  Steps completed: X/Y
+  Project alignment: [ALIGNED|DRIFT DETECTED
+]
+  Next action: [specific next step or handoff target
+]
+
+================================================================================
+SECTION 3: MANDATORY HANDOFF PROTOCOL
+================================================================================
+
+⚡ TRIGGER CONDITION
+
+If ANY of these conditions are true, IMMEDIATELY initiate handoff: [_
+] Agent cannot complete next required step (capability limit)
+  [_
+] Task blocked by dependency owned by another agent
+  [_
+] External blocker requires different agent's access/tools
+  [_
+] Task has been "In Progress" by this agent for >2 execution cycles
+      without progress
+  [_
+] Error encountered that requires different agent expertise
+
+─────────────────────────────────────────────────────────────────────────────────
+3.1 Identify Target Agent
+─────────────────────────────────────────────────────────────────────────────────
+
+  ┌──────────────────────────────┬─────────────────────┬─────────────────────────┐
+  │ Blocker Type                 │ Target Agent        │ Trigger Folder          │
+  ├──────────────────────────────┼─────────────────────┼─────────────────────────┤
+  │ Code/implementation needed   │ Cursor MM1 Agent    │ /Cursor-MM1-Agent-      │
+  │                              │                     │ Trigger/                │
+  ├──────────────────────────────┼─────────────────────┼─────────────────────────┤
+  │ Research/analysis needed     │ Claude MM1 Agent    │ /Claude-MM1-Agent-      │
+  │                              │                     │ Trigger/                │
+  ├──────────────────────────────┼─────────────────────┼─────────────────────────┤
+  │ Data operations/schema work  │ Notion AI Data Ops  │ (Notion AI native)      │
+  ├──────────────────────────────┼─────────────────────┼─────────────────────────┤
+  │ Documentation/synthesis      │ Notion AI Research  │ (Notion AI native)      │
+  └──────────────────────────────┴─────────────────────┴─────────────────────────┘
+
+─────────────────────────────────────────────────────────────────────────────────
+3.2 Generate Trigger File (NEVER SKIP)
+─────────────────────────────────────────────────────────────────────────────────
+
+Create a JSON trigger file in the target agent's trigger folder: {
+  "handoff_id": "[UUID]",
+  "timestamp": "[ISO-8601]",
+  "source_agent": "[executing agent name]",
+  "target_agent": "[target agent name]",
+  "task_url": "[Agent-Tasks page URL]",
+  "project_url": "[Parent Project URL]",
+  "handoff_reason": "[specific reason for handoff]",
+  "context": {
+    "current_step": "[where execution stopped]",
+    "blocking_issue": "[what's preventing progress]",
+    "work_completed": "[summary of completed work]",
+    "project_goals": "[relevant project objectives]"
+  },
+  "required_action": "[specific action needed from target agent]",
+  "success_criteria": "[what 'done' looks like for this handoff]",
+  "urgency": "[Critical|High|Medium|Low]"
+}
+
+─────────────────────────────────────────────────────────────────────────────────
+3.3 Update Task Properties Before Handoff
+─────────────────────────────────────────────────────────────────────────────────
+
+REQUIRED updates before handoff:
+
+  Status: "In Progress"              # DO NOT change - target agent takes over
+  Assigned-Agent: [ADD target agent to relation
+]
+  Agent Handoff File Links: [append trigger file URL
+]
+  Resume From Here: "[exact resumption point]"
+  Next Required Step: "[clear instruction for target agent]"
+  Decision Log: "[timestamp] HANDOFF to [target agent]: [reason]"
+
+─────────────────────────────────────────────────────────────────────────────────
+3.4 Confirm Handoff
+─────────────────────────────────────────────────────────────────────────────────
+
+  • Verify trigger file exists in target folder
+  • Log handoff confirmation in Execution Log
+  • If Notion AI agent: Explicitly state handoff in response
+
+================================================================================
+SECTION 4: SINGLE "IN PROGRESS" ENFORCEMENT
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────────
+4.1 Pre-Execution Validation
+─────────────────────────────────────────────────────────────────────────────────
+
+Before starting any work, confirm:
+
+  IF (count of "In Progress" tasks for this agent) > 1:
+      → VIOLATION: Immediately resolve by:
+         1. Complete or archive older "In Progress" tasks
+         2. OR handoff excess tasks to other agents
+         3. Ensure exactly ONE task remains "In Progress"
+
+─────────────────────────────────────────────────────────────────────────────────
+4.2 Cross-Agent Coordination
+─────────────────────────────────────────────────────────────────────────────────
+
+All agents in the Four-Agent Framework enforce:
+
+  • One "In Progress" per agent — No agent may have multiple concurrent
+    "In Progress" tasks
+  • Handoff completes current work — Sending agent remains accountable
+    until target agent acknowledges
+  • Project coherence — All task work aligns with parent Project goals
+  • No orphan tasks — Every task has clear ownership and forward path
+
+─────────────────────────────────────────────────────────────────────────────────
+4.3 Violation Recovery
+─────────────────────────────────────────────────────────────────────────────────
+
+If constraint violation detected:
+
+  1. Log violation in Decision Log with details
+  2. Identify oldest "In Progress" task 
+  3. Evaluate completion status:
+     • If >80% complete → Complete immediately
+     • If <80% complete → Handoff or set to "Blocked" with reason
+  4. Resume single-task execution
+
+================================================================================
+SECTION 5: PROJECT ALIGNMENT REQUIREMENTS
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────────
+5.1 Before Executing Any Step
+─────────────────────────────────────────────────────────────────────────────────
+
+Answer these questions (document in Decision Log):
+
+  1. What is the parent Project's primary goal?
+  2. How does this specific task advance that goal?
+  3. Are there other tasks in this Project that affect/depend on this work?
+  4. Will completing this task unblock other Project work?
+
+─────────────────────────────────────────────────────────────────────────────────
+5.2 During Execution
+─────────────────────────────────────────────────────────────────────────────────
+
+Continuously verify: [_
+] Actions directly support Project success criteria
+  [_
+] No actions contradict Project constraints
+  [_
+] Dependencies between Project tasks are respected
+  [_
+] Progress is visible at Project level (update Project status if needed)
+
+─────────────────────────────────────────────────────────────────────────────────
+5.3 At Completion or Handoff
+─────────────────────────────────────────────────────────────────────────────────
+
+Document Project impact:
+
+  MCP Validation Results:
+    ...
+    PROJECT: [Project Name
+]
+    PROJECT STATUS: [Updated status if changed
+]
+    PROJECT PROGRESS: [How this task moved the project forward
+]
+    UNBLOCKED TASKS: [List any Dependent Tasks now unblocked
+]
+
+================================================================================
+SECTION 6: NO-TASK SCENARIO HANDLING
+================================================================================
+
+If Agent-Tasks Database Has No "In Progress" or "Ready" Tasks:
+
+This is NOT a valid reason for inaction. Execute this sequence:
+
+  1. Query for any non-Completed, non-Archived tasks:
+
+     SELECT * FROM Agent-Tasks
+     WHERE Status NOT IN ('Completed', 'Archived')
+     AND Archive = false
+     ORDER BY Priority DESC, Created time ASC
+     LIMIT 5
+
+  2. If tasks exist but none "Ready":
+     • Identify blocking reasons
+     • Create unblocking sub-tasks
+     • Handoff to appropriate agent
+
+  3. If truly no tasks exist:
+     • Document in execution log: "[timestamp] No actionable tasks in
+       Agent-Tasks database. Database state: [count
+] total,
+[count
+]
+       Completed,
+[count
+] Archived"
+     • Trigger task discovery workflow if defined
+     • Notify via Slack/webhook if configured
+
+================================================================================
+SECTION 7: COORDINATED MULTI-AGENT ENFORCEMENT
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────────
+7.1 Shared Commitments
+─────────────────────────────────────────────────────────────────────────────────
+
+All agents operating under this protocol commit to:
+
+  ┌──────────────────────────────┬─────────────────────────────────────────────┐
+  │ Commitment                   │ Enforcement Mechanism                       │
+  ├──────────────────────────────┼─────────────────────────────────────────────┤
+  │ Single "In Progress" task    │ Query validation at start of every          │
+  │                              │ execution                                   │
+  ├──────────────────────────────┼─────────────────────────────────────────────┤
+  │ No inaction                  │ Every invocation produces documented action │
+  ├──────────────────────────────┼─────────────────────────────────────────────┤
+  │ Project alignment            │ Project context loaded and verified for     │
+  │                              │ every task                                  │
+  ├──────────────────────────────┼─────────────────────────────────────────────┤
+  │ Clean handoffs               │ Trigger file + property updates required    │
+  ├──────────────────────────────┼─────────────────────────────────────────────┤
+  │ Progress visibility          │ Execution Log + Decision Log updated always │
+  ├──────────────────────────────┼─────────────────────────────────────────────┤
+  │ Accountability               │ Agent chain tracked in Execution Log        │
+  └──────────────────────────────┴─────────────────────────────────────────────┘
+
+─────────────────────────────────────────────────────────────────────────────────
+7.2 Chain of Custody
+─────────────────────────────────────────────────────────────────────────────────
+
+Every task maintains an auditable chain:
+
+  Task Created → [Agent 1
+] In Progress → [Agent 1
+] Handoff →
+  [Agent 2
+] In Progress → [Agent 2
+] Complete → Review → Completed
+
+Each transition logged with:
+  • Timestamp
+  • Acting agent
+  • Action taken
+  • Reason for transition
+  • State at transition
+
+─────────────────────────────────────────────────────────────────────────────────
+7.3 Coordinated Problem Solving
+─────────────────────────────────────────────────────────────────────────────────
+
+When a task is blocked across multiple agents:
+
+  1. First agent to detect: Creates Issues+Questions entry
+  2. Each subsequent agent: Reviews issue, adds analysis to Decision Log
+  3. Resolution agent: Documents fix, links evidence
+  4. Final agent: Validates resolution, closes issue
+
+================================================================================
+SECTION 8: COMPLETION GATES
+================================================================================
+
+Task may only be marked Completed when: [_
+] All Steps executed or explicitly deferred with rationale
+  [_
+] Success Criteria met (documented in MCP Validation Results)
+  [_
+] Verification Checklist 100% addressed
+  [_
+] No unresolved items in Issues+Questions
+  [_
+] Review Outcome = Pass (after agent chain review)
+  [_
+] Evidence artifacts linked in Artifacts or
+      Notion-AI-Research-Analysis-Docs
+
+================================================================================
+SECTION 9: EXECUTION CHECKLIST (USE EVERY TIME)
+================================================================================
+
+PRE-EXECUTION: [_
+] Validated single "In Progress" constraint (Count = 1)
+  [_
+] Loaded active task with full properties
+  [_
+] Loaded parent Project context and goals
+  [_
+] Reviewed prior agent Execution Log and Decision Log
+  [_
+] Identified execution mode (COMPLETE/ADVANCE/HANDOFF/ESCALATE)
+
+DURING EXECUTION: [_
+] Every action aligned with Project goals
+  [_
+] Progress documented in Execution Log
+  [_
+] Decisions documented in Decision Log
+  [_
+] Blockers identified immediately (not deferred)
+
+POST-EXECUTION: [_
+] MCP Validation Results updated
+  [_
+] Next Required Step clear (or task Completed)
+  [_
+] IF HANDOFF: Trigger file created, Assigned-Agent updated
+  [_
+] IF COMPLETE: Verification Checklist addressed, Status = Review
+  [_
+] Parent Project status updated if applicable
+
+FINAL VERIFICATION: [_
+] Did I take action? (YES required)
+  [_
+] Is the task closer to completion? (YES required)
+  [_
+] Is the handoff chain clear? (YES if handed off)
+
+================================================================================
+REFERENCES
+================================================================================
+
+  • Agent-Tasks Database: [Agent-Tasks database URL
+]
+  • Agent-Tasks Data Source: [Data source URL
+]
+  • Settings Page: [Notion AI Settings Page URL
+]
+  • Database Parent Page: [database-parent-page URL
+]
+  • Research Agent Profile: [Notion AI Research Agent URL
+]
+  • Data Operations Agent: [Notion AI Data Operations Agent URL
+]
+================================================================================
+FOUR-AGENT COORDINATED TASK EXECUTION PROTOCOL
+Single "In Progress" Task Enforcement & Mandatory Action Framework
+================================================================================
+
+⚠️ CORE DIRECTIVE — NO INACTION PERMITTED
+
+This prompt REQUIRES action. The executing agent MUST perform one of these
+outcomes in every invocation:
+
+1. EXECUTE — Complete work on the current "In Progress" task
+2. ADVANCE — Progress the task forward, even incrementally  
+3. HANDOFF — Route to another agent via trigger folder if blocked
+4. ESCALATE — Create sub-task and assign to appropriate agent
+
+Inaction is a protocol violation. If no "In Progress" task exists AND no
+"Ready" tasks exist, the agent must document this state and trigger a task
+discovery/creation workflow.
+
+================================================================================
+SECTION 1: MANDATORY INITIALIZATION SEQUENCE
+================================================================================
+
+Upon invocation, execute these steps IN ORDER:
+
+─────────────────────────────────────────────────────────────────────────────────
+Step 1.1: Validate Single "In Progress" Constraint
+─────────────────────────────────────────────────────────────────────────────────
+
+Query:
+  SELECT COUNT(*) FROM Agent-Tasks
+  WHERE Status = 'In Progress' 
+  AND Assigned-Agent CONTAINS [executing agent URL
+]
+  AND Archive = false
+
+Result Handling:
+  ┌─────────────┬────────────────────────────────────────────────────────────┐
+  │ Count = 0   │ Query for highest-priority "Ready" task, set to            │
+  │             │ "In Progress"                                              │
+  ├─────────────┼────────────────────────────────────────────────────────────┤
+  │ Count = 1   │ Load that task — proceed to Step 1.2                       │
+  ├─────────────┼────────────────────────────────────────────────────────────┤
+  │ Count > 1   │ VIOLATION: Immediately archive/complete older tasks        │
+  │             │ until Count = 1                                            │
+  └─────────────┴────────────────────────────────────────────────────────────┘
+
+─────────────────────────────────────────────────────────────────────────────────
+Step 1.2: Load Active Task with Full Context
+─────────────────────────────────────────────────────────────────────────────────
+
+Query the single "In Progress" task and load ALL of these properties:
+
+TASK IDENTITY:
+  • Task Name, url, Status, Priority, Task Type
+  • Assigned-Agent, Projects (relation), Parent item, Sub-item
+
+EXECUTION STATE:
+  • Steps, Next Required Step, Success Criteria, Verification Checklist
+  • Resume From Here, Pre-Flight Passed, Dependency Status
+  • Execution Log, Decision Log, MCP Validation Results, Artifacts
+
+COORDINATION:
+  • Prerequisite Tasks, Dependent Tasks
+  • Agent Trigger Folder Path, Agent Handoff Folder Path
+  • Blocking Reason, Issues+Questions
+
+─────────────────────────────────────────────────────────────────────────────────
+Step 1.3: Load Parent Project Context
+─────────────────────────────────────────────────────────────────────────────────
+
+REQUIRED: If Projects relation is populated:
+
+  1. Load the linked Project page
+  2. Extract Project goals, success criteria, and current status
+  3. Verify task alignment with project objectives
+  4. Note any project-level blockers or dependencies
+
+If Projects relation is empty: Flag as compliance gap and continue execution.
+
+================================================================================
+SECTION 2: TASK EXECUTION PROTOCOL
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────────
+2.1 Determine Execution Mode
+─────────────────────────────────────────────────────────────────────────────────
+
+Evaluate the task and select ONE execution path:
+
+  ┌─────────────────────────────────┬───────────────┬─────────────────────────┐
+  │ Condition                       │ Mode          │ Action                  │
+  ├─────────────────────────────────┼───────────────┼─────────────────────────┤
+  │ Task can be completed in full   │ COMPLETE      │ Execute all steps,      │
+  │                                 │               │ validate, mark Done     │
+  ├─────────────────────────────────┼───────────────┼─────────────────────────┤
+  │ Task can be partially advanced  │ ADVANCE       │ Execute what's possible,│
+  │                                 │               │ update progress, handoff│
+  ├─────────────────────────────────┼───────────────┼─────────────────────────┤
+  │ Task blocked by dependencies    │ HANDOFF       │ Route to dependency-    │
+  │                                 │               │ owning agent immediately│
+  ├─────────────────────────────────┼───────────────┼─────────────────────────┤
+  │ Task exceeds agent capability   │ HANDOFF       │ Route to capable agent  │
+  │                                 │               │ with full context       │
+  ├─────────────────────────────────┼───────────────┼─────────────────────────┤
+  │ Task blocked by external factor │ ESCALATE      │ Create blocking issue,  │
+  │                                 │               │ assign remediation task │
+  └─────────────────────────────────┴───────────────┴─────────────────────────┘
+
+─────────────────────────────────────────────────────────────────────────────────
+2.2 Execute with Project Alignment
+─────────────────────────────────────────────────────────────────────────────────
+
+For every action taken, verify: [_
+] Action advances the parent Project toward its goals
+  [_
+] Action does not conflict with Project success criteria
+  [_
+] Action maintains consistency with related Project tasks
+  [_
+] Progress is documented in task AND reflected in Project status
+
+─────────────────────────────────────────────────────────────────────────────────
+2.3 Mandatory Progress Documentation
+─────────────────────────────────────────────────────────────────────────────────
+
+After ANY execution (even partial), update these properties:
+
+Execution Log: [ISO-8601 timestamp
+] [Agent Name
+]
+  ACTION: [specific action taken
+]
+  OUTCOME: [result of action
+]
+  PROJECT IMPACT: [how this advances parent project
+]
+  
+Decision Log: [ISO-8601 timestamp
+] [Agent Name
+]
+  DECISION: [what was decided
+]
+  RATIONALE: [why this decision
+]
+  ALTERNATIVES CONSIDERED: [what else was evaluated
+]
+
+MCP Validation Results:
+  Results=[PASS|PARTIAL|FAIL|HANDOFF
+]
+  Steps completed: X/Y
+  Project alignment: [ALIGNED|DRIFT DETECTED
+]
+  Next action: [specific next step or handoff target
+]
+
+================================================================================
+SECTION 3: MANDATORY HANDOFF PROTOCOL
+================================================================================
+
+⚡ TRIGGER CONDITION
+
+If ANY of these conditions are true, IMMEDIATELY initiate handoff: [_
+] Agent cannot complete next required step (capability limit)
+  [_
+] Task blocked by dependency owned by another agent
+  [_
+] External blocker requires different agent's access/tools
+  [_
+] Task has been "In Progress" by this agent for >2 execution cycles
+      without progress
+  [_
+] Error encountered that requires different agent expertise
+
+─────────────────────────────────────────────────────────────────────────────────
+3.1 Identify Target Agent
+─────────────────────────────────────────────────────────────────────────────────
+
+  ┌──────────────────────────────┬─────────────────────┬─────────────────────────┐
+  │ Blocker Type                 │ Target Agent        │ Trigger Folder          │
+  ├──────────────────────────────┼─────────────────────┼─────────────────────────┤
+  │ Code/implementation needed   │ Cursor MM1 Agent    │ /Cursor-MM1-Agent-      │
+  │                              │                     │ Trigger/                │
+  ├──────────────────────────────┼─────────────────────┼─────────────────────────┤
+  │ Research/analysis needed     │ Claude MM1 Agent    │ /Claude-MM1-Agent-      │
+  │                              │                     │ Trigger/                │
+  ├──────────────────────────────┼─────────────────────┼─────────────────────────┤
+  │ Data operations/schema work  │ Notion AI Data Ops  │ (Notion AI native)      │
+  ├──────────────────────────────┼─────────────────────┼─────────────────────────┤
+  │ Documentation/synthesis      │ Notion AI Research  │ (Notion AI native)      │
+  └──────────────────────────────┴─────────────────────┴─────────────────────────┘
+
+─────────────────────────────────────────────────────────────────────────────────
+3.2 Generate Trigger File (NEVER SKIP)
+─────────────────────────────────────────────────────────────────────────────────
+
+Create a JSON trigger file in the target agent's trigger folder: {
+  "handoff_id": "[UUID]",
+  "timestamp": "[ISO-8601]",
+  "source_agent": "[executing agent name]",
+  "target_agent": "[target agent name]",
+  "task_url": "[Agent-Tasks page URL]",
+  "project_url": "[Parent Project URL]",
+  "handoff_reason": "[specific reason for handoff]",
+  "context": {
+    "current_step": "[where execution stopped]",
+    "blocking_issue": "[what's preventing progress]",
+    "work_completed": "[summary of completed work]",
+    "project_goals": "[relevant project objectives]"
+  },
+  "required_action": "[specific action needed from target agent]",
+  "success_criteria": "[what 'done' looks like for this handoff]",
+  "urgency": "[Critical|High|Medium|Low]"
+}
+
+─────────────────────────────────────────────────────────────────────────────────
+3.3 Update Task Properties Before Handoff
+─────────────────────────────────────────────────────────────────────────────────
+
+REQUIRED updates before handoff:
+
+  Status: "In Progress"              # DO NOT change - target agent takes over
+  Assigned-Agent: [ADD target agent to relation
+]
+  Agent Handoff File Links: [append trigger file URL
+]
+  Resume From Here: "[exact resumption point]"
+  Next Required Step: "[clear instruction for target agent]"
+  Decision Log: "[timestamp] HANDOFF to [target agent]: [reason]"
+
+─────────────────────────────────────────────────────────────────────────────────
+3.4 Confirm Handoff
+─────────────────────────────────────────────────────────────────────────────────
+
+  • Verify trigger file exists in target folder
+  • Log handoff confirmation in Execution Log
+  • If Notion AI agent: Explicitly state handoff in response
+
+================================================================================
+SECTION 4: SINGLE "IN PROGRESS" ENFORCEMENT
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────────
+4.1 Pre-Execution Validation
+─────────────────────────────────────────────────────────────────────────────────
+
+Before starting any work, confirm:
+
+  IF (count of "In Progress" tasks for this agent) > 1:
+      → VIOLATION: Immediately resolve by:
+         1. Complete or archive older "In Progress" tasks
+         2. OR handoff excess tasks to other agents
+         3. Ensure exactly ONE task remains "In Progress"
+
+─────────────────────────────────────────────────────────────────────────────────
+4.2 Cross-Agent Coordination
+─────────────────────────────────────────────────────────────────────────────────
+
+All agents in the Four-Agent Framework enforce:
+
+  • One "In Progress" per agent — No agent may have multiple concurrent
+    "In Progress" tasks
+  • Handoff completes current work — Sending agent remains accountable
+    until target agent acknowledges
+  • Project coherence — All task work aligns with parent Project goals
+  • No orphan tasks — Every task has clear ownership and forward path
+
+─────────────────────────────────────────────────────────────────────────────────
+4.3 Violation Recovery
+─────────────────────────────────────────────────────────────────────────────────
+
+If constraint violation detected:
+
+  1. Log violation in Decision Log with details
+  2. Identify oldest "In Progress" task 
+  3. Evaluate completion status:
+     • If >80% complete → Complete immediately
+     • If <80% complete → Handoff or set to "Blocked" with reason
+  4. Resume single-task execution
+
+================================================================================
+SECTION 5: PROJECT ALIGNMENT REQUIREMENTS
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────────
+5.1 Before Executing Any Step
+─────────────────────────────────────────────────────────────────────────────────
+
+Answer these questions (document in Decision Log):
+
+  1. What is the parent Project's primary goal?
+  2. How does this specific task advance that goal?
+  3. Are there other tasks in this Project that affect/depend on this work?
+  4. Will completing this task unblock other Project work?
+
+─────────────────────────────────────────────────────────────────────────────────
+5.2 During Execution
+─────────────────────────────────────────────────────────────────────────────────
+
+Continuously verify: [_
+] Actions directly support Project success criteria
+  [_
+] No actions contradict Project constraints
+  [_
+] Dependencies between Project tasks are respected
+  [_
+] Progress is visible at Project level (update Project status if needed)
+
+─────────────────────────────────────────────────────────────────────────────────
+5.3 At Completion or Handoff
+─────────────────────────────────────────────────────────────────────────────────
+
+Document Project impact:
+
+  MCP Validation Results:
+    ...
+    PROJECT: [Project Name
+]
+    PROJECT STATUS: [Updated status if changed
+]
+    PROJECT PROGRESS: [How this task moved the project forward
+]
+    UNBLOCKED TASKS: [List any Dependent Tasks now unblocked
+]
+
+================================================================================
+SECTION 6: NO-TASK SCENARIO HANDLING
+================================================================================
+
+If Agent-Tasks Database Has No "In Progress" or "Ready" Tasks:
+
+This is NOT a valid reason for inaction. Execute this sequence:
+
+  1. Query for any non-Completed, non-Archived tasks:
+
+     SELECT * FROM Agent-Tasks
+     WHERE Status NOT IN ('Completed', 'Archived')
+     AND Archive = false
+     ORDER BY Priority DESC, Created time ASC
+     LIMIT 5
+
+  2. If tasks exist but none "Ready":
+     • Identify blocking reasons
+     • Create unblocking sub-tasks
+     • Handoff to appropriate agent
+
+  3. If truly no tasks exist:
+     • Document in execution log: "[timestamp] No actionable tasks in
+       Agent-Tasks database. Database state: [count
+] total,
+[count
+]
+       Completed,
+[count
+] Archived"
+     • Trigger task discovery workflow if defined
+     • Notify via Slack/webhook if configured
+
+================================================================================
+SECTION 7: COORDINATED MULTI-AGENT ENFORCEMENT
+================================================================================
+
+─────────────────────────────────────────────────────────────────────────────────
+7.1 Shared Commitments
+─────────────────────────────────────────────────────────────────────────────────
+
+All agents operating under this protocol commit to:
+
+  ┌──────────────────────────────┬─────────────────────────────────────────────┐
+  │ Commitment                   │ Enforcement Mechanism                       │
+  ├──────────────────────────────┼─────────────────────────────────────────────┤
+  │ Single "In Progress" task    │ Query validation at start of every          │
+  │                              │ execution                                   │
+  ├──────────────────────────────┼─────────────────────────────────────────────┤
+  │ No inaction                  │ Every invocation produces documented action │
+  ├──────────────────────────────┼─────────────────────────────────────────────┤
+  │ Project alignment            │ Project context loaded and verified for     │
+  │                              │ every task                                  │
+  ├──────────────────────────────┼─────────────────────────────────────────────┤
+  │ Clean handoffs               │ Trigger file + property updates required    │
+  ├──────────────────────────────┼─────────────────────────────────────────────┤
+  │ Progress visibility          │ Execution Log + Decision Log updated always │
+  ├──────────────────────────────┼─────────────────────────────────────────────┤
+  │ Accountability               │ Agent chain tracked in Execution Log        │
+  └──────────────────────────────┴─────────────────────────────────────────────┘
+
+─────────────────────────────────────────────────────────────────────────────────
+7.2 Chain of Custody
+─────────────────────────────────────────────────────────────────────────────────
+
+Every task maintains an auditable chain:
+
+  Task Created → [Agent 1
+] In Progress → [Agent 1
+] Handoff →
+  [Agent 2
+] In Progress → [Agent 2
+] Complete → Review → Completed
+
+Each transition logged with:
+  • Timestamp
+  • Acting agent
+  • Action taken
+  • Reason for transition
+  • State at transition
+
+─────────────────────────────────────────────────────────────────────────────────
+7.3 Coordinated Problem Solving
+─────────────────────────────────────────────────────────────────────────────────
+
+When a task is blocked across multiple agents:
+
+  1. First agent to detect: Creates Issues+Questions entry
+  2. Each subsequent agent: Reviews issue, adds analysis to Decision Log
+  3. Resolution agent: Documents fix, links evidence
+  4. Final agent: Validates resolution, closes issue
+
+================================================================================
+SECTION 8: COMPLETION GATES
+================================================================================
+
+Task may only be marked Completed when: [_
+] All Steps executed or explicitly deferred with rationale
+  [_
+] Success Criteria met (documented in MCP Validation Results)
+  [_
+] Verification Checklist 100% addressed
+  [_
+] No unresolved items in Issues+Questions
+  [_
+] Review Outcome = Pass (after agent chain review)
+  [_
+] Evidence artifacts linked in Artifacts or
+      Notion-AI-Research-Analysis-Docs
+
+================================================================================
+SECTION 9: EXECUTION CHECKLIST (USE EVERY TIME)
+================================================================================
+
+PRE-EXECUTION: [_
+] Validated single "In Progress" constraint (Count = 1)
+  [_
+] Loaded active task with full properties
+  [_
+] Loaded parent Project context and goals
+  [_
+] Reviewed prior agent Execution Log and Decision Log
+  [_
+] Identified execution mode (COMPLETE/ADVANCE/HANDOFF/ESCALATE)
+
+DURING EXECUTION: [_
+] Every action aligned with Project goals
+  [_
+] Progress documented in Execution Log
+  [_
+] Decisions documented in Decision Log
+  [_
+] Blockers identified immediately (not deferred)
+
+POST-EXECUTION: [_
+] MCP Validation Results updated
+  [_
+] Next Required Step clear (or task Completed)
+  [_
+] IF HANDOFF: Trigger file created, Assigned-Agent updated
+  [_
+] IF COMPLETE: Verification Checklist addressed, Status = Review
+  [_
+] Parent Project status updated if applicable
+
+FINAL VERIFICATION: [_
+] Did I take action? (YES required)
+  [_
+] Is the task closer to completion? (YES required)
+  [_
+] Is the handoff chain clear? (YES if handed off)
+
+================================================================================
+REFERENCES
+================================================================================
+
+  • Agent-Tasks Database: [Agent-Tasks database URL
+]
+  • Agent-Tasks Data Source: [Data source URL
+]
+  • Settings Page: [Notion AI Settings Page URL
+]
+  • Database Parent Page: [database-parent-page URL
+]
+  • Research Agent Profile: [Notion AI Research Agent URL
+]
+  • Data Operations Agent: [Notion AI Data Operations Agent URL
+]
+
+================================================================================
+END OF PROTOCOL — ACTION REQUIRED
+================================================================================
+
+================================================================================
+END OF PROTOCOL — ACTION REQUIRED
+================================================================================

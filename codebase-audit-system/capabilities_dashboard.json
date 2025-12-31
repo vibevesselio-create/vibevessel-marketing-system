@@ -1,0 +1,32 @@
+[
+  {
+    "capability_id": "AGENT_DASHBOARD_HEALTH_MONITORING",
+    "title": "Agent Coordination Dashboard – Health Monitoring",
+    "description": "Expose real-time health status for launch agents with unified logging and control-plane visibility.",
+    "priority": "P1",
+    "area": "Observability",
+    "dependencies": ["MS.LOGGING.CANONICAL", "MS.VARIABLES.HUB"],
+    "required_inputs": ["Agent process state", "Resource metrics"],
+    "required_outputs": ["Health summaries", "Status alerts"]
+  },
+  {
+    "capability_id": "AGENT_DASHBOARD_HISTORY_PERSISTENCE",
+    "title": "Agent Coordination Dashboard – History Persistence",
+    "description": "Persist agent health and resource usage history in an internal SQLite store with retention pruning.",
+    "priority": "P1",
+    "area": "Observability",
+    "dependencies": ["AGENT_DASHBOARD_HEALTH_MONITORING"],
+    "required_inputs": ["Health snapshots", "Resource usage snapshots"],
+    "required_outputs": ["Historical trends", "Retention-pruned records"]
+  },
+  {
+    "capability_id": "AGENT_DASHBOARD_ALERTING",
+    "title": "Agent Coordination Dashboard – Alerting",
+    "description": "Generate structured alerts for unhealthy agents and resource threshold breaches ready for Notion/registry sync.",
+    "priority": "P2",
+    "area": "Control_Plane",
+    "dependencies": ["AGENT_DASHBOARD_HEALTH_MONITORING"],
+    "required_inputs": ["Threshold configs", "Health metrics"],
+    "required_outputs": ["Alert records", "Alert summaries"]
+  }
+]

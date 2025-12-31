@@ -1,0 +1,64 @@
+{
+  "issues": [
+    {
+      "id": "DS-001",
+      "title": "Trigger Overlap / Concurrency Guard Missing",
+      "severity": "Critical",
+      "priority": "P0",
+      "area": "Operations",
+      "component": "gas-scripts/drive-sheets-sync/Code.gs",
+      "description": "Time-based trigger fires every 10 minutes while MAX_RUNTIME_MS allows ~29 minutes of work. Without a script-level lock, overlapping runs can corrupt rotation pointers, duplicate registry writes, and race CSV updates.\n\nImpact: Data races, registry skew, and possible log corruption when two runs overlap.\n\nLocation: manualRunDriveSheets entrypoint.\n\nRemediation: Use LockService.getScriptLock with 5–10s wait; log WARN and exit cleanly when lock unavailable; release lock in finally block so failures do not orphan the lock.",
+      "suggested_linear_team": "platform",
+      "labels": ["drive-sheets", "concurrency", "safety", "control-plane"],
+      "github_labels": ["drive-sheets", "bug", "concurrency"],
+      "blocking": true,
+      "related_capabilities": ["DRIVE_SHEETS_META_DB_SYNC"],
+      "suggested_fix_path": "gas-scripts/drive-sheets-sync/Code.gs"
+    },
+    {
+      "id": "DS-002",
+      "title": "Schema Deletion / Rename Data-Loss Risk",
+      "severity": "High",
+      "priority": "P0",
+      "area": "Schema",
+      "component": "gas-scripts/drive-sheets-sync/Code.gs",
+      "description": "Schema sync treats missing CSV columns as deletions when isSafeToDeleteProp_ passes. A renamed Notion property looks like delete+add, causing data loss.\n\nImpact: Property data can be dropped if a rename is misinterpreted as removal.\n\nLocation: syncSchemaFromCsvToNotion_.\n\nRemediation: Gate deletions behind CONFIG.SYNC.ALLOW_SCHEMA_DELETIONS (default false), log skipped deletions, and add rename-aware heuristics before enabling deletes.",
+      "suggested_linear_team": "platform",
+      "labels": ["drive-sheets", "schema", "safety"],
+      "github_labels": ["drive-sheets", "bug"],
+      "blocking": true,
+      "related_capabilities": ["DRIVE_SHEETS_META_DB_SYNC", "WORKSPACE_DATABASES_REGISTRY_TRACKING"],
+      "suggested_fix_path": "gas-scripts/drive-sheets-sync/Code.gs"
+    },
+    {
+      "id": "DS-003",
+      "title": "Diagnostic Helpers Drift From Data Sources API",
+      "severity": "Medium",
+      "priority": "P2",
+      "area": "Diagnostics",
+      "component": "gas-scripts/drive-sheets-sync/Code.gs",
+      "description": "listAllNotionDatabases/resolveRuntime/runMetaDatabaseSync were added for diagnostics but previously relied on search filters that are incompatible with the data_sources-first model.\n\nImpact: Confusing diagnostics and potential misuse of legacy database objects.\n\nLocation: helper section around resolveRuntime.\n\nRemediation: Keep helpers explicitly meta-only, route them through data_sources search, and consider consolidating them or removing dead code paths.",
+      "suggested_linear_team": "platform",
+      "labels": ["drive-sheets", "diagnostics", "maintenance"],
+      "github_labels": ["drive-sheets", "enhancement"],
+      "blocking": false,
+      "related_capabilities": ["WORKSPACE_DATABASES_REGISTRY_TRACKING"],
+      "suggested_fix_path": "gas-scripts/drive-sheets-sync/Code.gs"
+    },
+    {
+      "id": "DS-004",
+      "title": "Rename Detection Not Automated",
+      "severity": "Low",
+      "priority": "P2",
+      "area": "Schema",
+      "component": "gas-scripts/drive-sheets-sync/Code.gs",
+      "description": "Even with deletions disabled by default, the script does not attempt to reconcile renames. Operators must manually map renamed properties before re-enabling deletes.\n\nImpact: Manual effort and risk of future misconfiguration when enabling schema deletions.\n\nLocation: syncSchemaFromCsvToNotion_.\n\nRemediation: Add rename heuristics (id-based mapping, fuzzy name matching) and a dry-run report before permitting deletions in guarded environments.",
+      "suggested_linear_team": "platform",
+      "labels": ["drive-sheets", "schema", "maintenance"],
+      "github_labels": ["drive-sheets", "enhancement"],
+      "blocking": false,
+      "related_capabilities": ["DRIVE_SHEETS_META_DB_SYNC"],
+      "suggested_fix_path": "gas-scripts/drive-sheets-sync/Code.gs"
+    }
+  ]
+}

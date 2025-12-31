@@ -1,0 +1,91 @@
+{
+  "artist": "mportaudio",
+  "artist_url": "https://soundcloud.com/mportaudio",
+  "generated_at": "2025-12-20",
+  "rules": {
+    "exclude_title_patterns": [
+      "\\bfull\\s*set\\b",
+      "\\bheadline\\s*set\\b",
+      "\\bdj\\s*set\\b",
+      "\\bset\\s*@\\b",
+      "\\bset\\s*\\d",
+      "\\bset\\s*\\(",
+      "\\bset\\s*\\[",
+      "\\bset\\s*from\\b",
+      "\\b\\w+\\s+set\\s*$",
+      "\\bmix\\b",
+      "\\bminimix\\b",
+      "\\bradio\\s*mix\\b",
+      "\\blive\\s+at\\b",
+      "\\blive\\s*tool\\b",
+      "\\b\\(live\\)\\b",
+      "\\blive\\s*\\)\\s*$",
+      "\\brecorded\\s*live\\b",
+      "\\bsessions?\\b",
+      "\\bshowcase\\b",
+      "\\bperformance\\b",
+      "\\b(b2b|back\\s*to\\s*back)\\b",
+      "\\bhour\\s*(mix|set)\\b",
+      "\\bedc\\b.*\\bset\\b",
+      "\\bcoachella\\b.*\\bset\\b",
+      "\\bfestival\\b.*\\bset\\b",
+      "set\\s*intro\\s*track",
+      "\\bwip\\b",
+      "\\bwork\\s*in\\s*progress\\b",
+      "\\bunfinished\\b",
+      "\\bdemo\\b",
+      "\\bsketch\\b",
+      "\\brough\\s*cut\\b"
+    ],
+    "duration_threshold_seconds": 1800,
+    "exclude_wip": true,
+    "source_tracks_url": "https://soundcloud.com/mportaudio/tracks",
+    "pipeline": "soundcloud_track_index_exporter.py",
+    "run_id": "sc-track-index-20251220T034000Z"
+  },
+  "section": {
+    "index": 3,
+    "range": "101-109",
+    "chunk_size": 50
+  },
+  "total_tracks": 109,
+  "tracks_in_section": 9,
+  "tracks": [
+    {
+      "title": "Wanna",
+      "url": "https://soundcloud.com/mportaudio/wana"
+    },
+    {
+      "title": "War Nearing",
+      "url": "https://soundcloud.com/mportaudio/war-nearing"
+    },
+    {
+      "title": "Weed Heads Dub (ft. Michael Cusack) [Happy 420]",
+      "url": "https://soundcloud.com/mportaudio/weed-heads-dub-ft-michael-cusack-happy-420"
+    },
+    {
+      "title": "What Sector (ft Evan Breen)",
+      "url": "https://soundcloud.com/mportaudio/what-sector-ft-evan-breen"
+    },
+    {
+      "title": "Whoa, Fire!",
+      "url": "https://soundcloud.com/mportaudio/whoah-fire"
+    },
+    {
+      "title": "Wonder",
+      "url": "https://soundcloud.com/mportaudio/wonder"
+    },
+    {
+      "title": "Wumbology",
+      "url": "https://soundcloud.com/mportaudio/wumbology"
+    },
+    {
+      "title": "YNG Martyr -50k (Mport Remix) [Thanks for 50k on insta]",
+      "url": "https://soundcloud.com/mportaudio/yng-martyr-50k-mport-remix-1"
+    },
+    {
+      "title": "Zeds Dead X GRiZ - Ecstasy Of Soul (Mport Flip) [Full Song on YT/Free DL]",
+      "url": "https://soundcloud.com/mportaudio/xofmportsoul"
+    }
+  ]
+}

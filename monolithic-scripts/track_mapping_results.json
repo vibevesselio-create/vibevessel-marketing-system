@@ -1,0 +1,125 @@
+[
+  {
+    "app_track": {
+      "title": "Cheap Thrills",
+      "artist": "Rasp-5 & Tygris",
+      "label": "Deep State Audio",
+      "bpm": null,
+      "key": "9A",
+      "duration_seconds": 147,
+      "has_checkmark": false
+    },
+    "notion_match": null,
+    "local_file_match": null,
+    "match_confidence": 0.0,
+    "match_type": "none"
+  },
+  {
+    "app_track": {
+      "title": "Ghost In T...",
+      "artist": "Wessanders x Rasp 5 (feat. Tygris)",
+      "label": "a 40oz Collective",
+      "bpm": 87,
+      "key": "9A",
+      "duration_seconds": 201,
+      "has_checkmark": false
+    },
+    "notion_match": null,
+    "local_file_match": null,
+    "match_confidence": 0.0,
+    "match_type": "none"
+  },
+  {
+    "app_track": {
+      "title": "Tetanus Shot",
+      "artist": "Tygris",
+      "label": "The Rust Music",
+      "bpm": 95,
+      "key": "10A",
+      "duration_seconds": 212,
+      "has_checkmark": false
+    },
+    "notion_match": {
+      "page_id": "289e7361-6c27-81ee-b22b-e00492f09914",
+      "url": "https://www.notion.so/Tetanus-Shot-289e73616c2781eeb22be00492f09914"
+    },
+    "local_file_match": null,
+    "match_confidence": 0.8,
+    "match_type": "notion_match"
+  },
+  {
+    "app_track": {
+      "title": "Get the Money",
+      "artist": "Rasp-5 X Tygris",
+      "label": "The Gradient Perspective",
+      "bpm": 88,
+      "key": "9A",
+      "duration_seconds": 201,
+      "has_checkmark": true
+    },
+    "notion_match": null,
+    "local_file_match": null,
+    "match_confidence": 0.0,
+    "match_type": "none"
+  },
+  {
+    "app_track": {
+      "title": "Jaws of Life",
+      "artist": "Rasp 5 & Tygris",
+      "label": "TYGRIS",
+      "bpm": 86,
+      "key": "4A",
+      "duration_seconds": 216,
+      "has_checkmark": true
+    },
+    "notion_match": null,
+    "local_file_match": null,
+    "match_confidence": 0.0,
+    "match_type": "none"
+  },
+  {
+    "app_track": {
+      "title": "Cinderblock Tires",
+      "artist": "Rasp-5 & Tygris",
+      "label": "TYGRIS",
+      "bpm": 132,
+      "key": "11A",
+      "duration_seconds": 139,
+      "has_checkmark": false
+    },
+    "notion_match": null,
+    "local_file_match": null,
+    "match_confidence": 0.0,
+    "match_type": "none"
+  },
+  {
+    "app_track": {
+      "title": "Duck & Cover",
+      "artist": "Rasp-5 X Tygris",
+      "label": "The Gradient Perspective",
+      "bpm": 88,
+      "key": "4A",
+      "duration_seconds": 238,
+      "has_checkmark": false
+    },
+    "notion_match": null,
+    "local_file_match": null,
+    "match_confidence": 0.0,
+    "match_type": "none"
+  },
+  {
+    "app_track": {
+      "title": "Duck & Cover [INSTRUMENTAL]",
+      "artist": "Rasp-5 X Tygris",
+      "label": "The Gradient Perspective",
+      "bpm": 89,
+      "key": "4A",
+      "duration_seconds": 238,
+      "has_checkmark": false
+    },
+    "notion_match": null,
+    "local_file_match": null,
+    "match_confidence": 0.0,
+    "match_type": "none"
+  }
+]

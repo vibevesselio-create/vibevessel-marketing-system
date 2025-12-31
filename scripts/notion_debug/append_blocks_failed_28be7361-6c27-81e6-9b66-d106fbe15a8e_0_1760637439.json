@@ -1,0 +1,19 @@
+{
+  "block_id": "28be7361-6c27-81e6-9b66-d106fbe15a8e",
+  "chunk_index": 0,
+  "chunk_len": 1,
+  "chunk": [
+    {
+      "object": "block",
+      "type": "image",
+      "image": {
+        "type": "file",
+        "file": {
+          "file_id": "28ee7361-6c27-81d7-b1a9-00b22f252fbc"
+        }
+      }
+    }
+  ],
+  "response_status": 400,
+  "response_text": "{\"object\":\"error\",\"status\":400,\"code\":\"validation_error\",\"message\":\"body failed validation. Fix one:\\nbody.children[0].image.external should be defined, instead was `undefined`.\\nbody.children[0].image.file_upload should be defined, instead was `undefined`.\",\"request_id\":\"6f8bda76-7325-412d-a2a7-2dec128f4d0f\"}"
+}

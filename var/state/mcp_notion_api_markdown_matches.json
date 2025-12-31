@@ -1,0 +1,1428 @@
+{
+  "AGENT_FUNCTIONS_COMPLIANCE_REPORT.md": [
+    {
+      "line": 2623,
+      "text": "- **MCP Dual-Feed Pipeline: Phase 0 - Baseline Documentation & Inventory (Notion AI Data Operations Agent)**"
+    }
+  ],
+  "CLAUDE_MM1_TASK_STATUS_REPORT_2025-01-29.md": [
+    {
+      "line": 16,
+      "text": "- \u26a0\ufe0f MCP Notion API reported 404 errors for canonical databases (possibly integration permission issue)"
+    },
+    {
+      "line": 173,
+      "text": "- **Root Cause:** MCP Notion API query format issues OR no active task exists"
+    },
+    {
+      "line": 177,
+      "text": "- Fix MCP Notion API query format"
+    },
+    {
+      "line": 263,
+      "text": "### MCP Notion API (\u26a0\ufe0f Reported Issues)"
+    },
+    {
+      "line": 412,
+      "text": "- MCP Notion API: \u26a0\ufe0f Needs revalidation (404 errors reported 2025-01-27)"
+    }
+  ],
+  "HANDOFF_EXECUTION_REPORT_2025-12-24.md": [
+    {
+      "line": 179,
+      "text": "- Updated Agent-Task status via MCP Notion API (limited access available)"
+    },
+    {
+      "line": 200,
+      "text": "**Method:** MCP Notion API (`mcp_notionApi_API-patch-page`)"
+    }
+  ],
+  "HANDOFF_GENERATION_EXECUTION_REPORT_2025-01-28.md": [
+    {
+      "line": 9,
+      "text": "**Check:** MCP Notion API access confirmed via `get-self` endpoint"
+    },
+    {
+      "line": 40,
+      "text": "**Blocking Issue:** MCP Notion API has limitations for complex queries and page creation operations. The existing script `execute_handoff_generation_complete.py` requires `NOTION_TOKEN` environment variable to perform these operations."
+    },
+    {
+      "line": 161,
+      "text": "The MCP Notion API has limitations for:"
+    }
+  ],
+  "HANDOFF_GENERATION_EXECUTION_REPORT_2025-12-28.md": [
+    {
+      "line": 146,
+      "text": "4. **MCP Access:** Notion MCP server access is working correctly. Can query databases and read pages, but page creation requires direct Notion API access (not available via MCP server)."
+    }
+  ],
+  "LOGGING_COMPLETION_REPORT_2025-10-26.md": [
+    {
+      "line": 426,
+      "text": "6. MCP Notion Docs: https://docs.claude.com (for Notion API patterns)"
+    }
+  ],
+  "PHASE_4B_FINAL_COMPREHENSIVE_REPORT_2025-01-10.md": [
+    {
+      "line": 301,
+      "text": "- Use MCP Notion API to create tasks"
+    }
+  ],
+  "agent-coordination-system/CLAUDE_AGENT_ORCHESTRATOR_IMPLEMENTATION_PLAN.md": [
+    {
+      "line": 14,
+      "text": "4. **Task & Handoff Coverage:** Create explicit MCP tasks for Claude MM1 Agent (implementation) and Notion AI Data Operations Agent (data/documentation alignment) with instructions to log executions, sync to Notion, and issue follow-on review handoffs (Cursor MM1 + Notion AI Research Agent)."
+    }
+  ],
+  "agent-coordination-system/COMPREHENSIVE_IMPLEMENTATION_ANALYSIS.md": [
+    {
+      "line": 261,
+      "text": "- **Location:** `/Users/brianhellemn/Projects/github-production/mcp-agent-protocol/scripts/sync_notion_scripts.py`"
+    }
+  ],
+  "agent-coordination-system/MCP_DUAL_FEED_IMPLEMENTATION_STATUS.md": [
+    {
+      "line": 12,
+      "text": "- URL: https://www.notion.so/MCP-Dual-Feed-Pipeline-Phase-0-Baseline-Documentation-Inventory-Notion-AI-Data-Operations-Agen-2b8e73616c2781de9affee9f772908fe"
+    }
+  ],
+  "analysis/music_bot/review_notes.md": [
+    {
+      "line": 19,
+      "text": "- MCP-backed workflow to backfill missing metadata via Spotify, SoundCloud, and Notion APIs."
+    }
+  ],
+  "artifacts/handoff_generation_execution_2025-01-28.md": [
+    {
+      "line": 8,
+      "text": "**Method:** MCP Notion API confirmed accessible"
+    }
+  ],
+  "artifacts/handoff_generation_execution_2025-01-28_v2_3.md": [
+    {
+      "line": 13,
+      "text": "Handoff generation process initiated per DOC_AGENT_HANDOFF_TASK_GENERATOR v2.3. Process blocked at Phase 0 due to NOTION_TOKEN not being available in environment or unified_config. MCP Notion API access confirmed (user info retrieved successfully), but full Notion client operations require NOTION_TOKEN environment variable."
+    },
+    {
+      "line": 21,
+      "text": "- \u2705 MCP Notion API access confirmed (API-get-self successful)"
+    },
+    {
+      "line": 240,
+      "text": "- MCP Notion API access is available but limited for complex queries"
+    }
+  ],
+  "artifacts/handoff_generation_execution_2025-01-28_v2_3_cursor_mm1.md": [
+    {
+      "line": 13,
+      "text": "Handoff generation process initiated per DOC_AGENT_HANDOFF_TASK_GENERATOR v2.3. Process entered OFFLINE MODE at Phase 0 due to NOTION_TOKEN not being available in environment. MCP Notion API search successfully retrieved task information, but full Notion client operations require NOTION_TOKEN environment variable."
+    },
+    {
+      "line": 16,
+      "text": "- MCP Notion API access confirmed (user info and search API working)"
+    },
+    {
+      "line": 27,
+      "text": "- \u2705 MCP Notion API access confirmed (API-get-self successful)"
+    },
+    {
+      "line": 28,
+      "text": "- \u2705 MCP Notion Search API working (retrieved task information)"
+    },
+    {
+      "line": 44,
+      "text": "Using MCP Notion Search API with query \"Cursor MM1 Agent In Progress\", found:"
+    },
+    {
+      "line": 198,
+      "text": "- MCP Notion API search performed"
+    },
+    {
+      "line": 263,
+      "text": "- MCP Notion API access is available but limited for complex queries"
+    }
+  ],
+  "artifacts/handoff_generation_execution_2025-01-29_v2_3.md": [
+    {
+      "line": 21,
+      "text": "- \u2705 MCP Notion API access confirmed (API-get-self successful)"
+    }
+  ],
+  "docs/20_workflows/DEV_RUNTIME_HEALTH_WORKFLOW_2025-01-27_COMPLETION_SUMMARY.md": [
+    {
+      "line": 116,
+      "text": "1. **Notion Agent-Tasks:** Create manually via MCP server or run handoff script with valid Notion token"
+    },
+    {
+      "line": 132,
+      "text": "- **Notion Agent-Tasks:** Not created due to missing Notion token in execution environment. Can be created manually via MCP server or by running the handoff script with a valid Notion token."
+    }
+  ],
+  "docs/20_workflows/DEV_Run_Runtime_Health_DriveSheetsSync_Enhancement_2025-01-27.md": [
+    {
+      "line": 215,
+      "text": "- Create Agent-Task manually in Notion or via MCP server with NOTION_TOKEN set"
+    },
+    {
+      "line": 234,
+      "text": "- Create Agent-Task manually in Notion or via MCP server with NOTION_TOKEN set"
+    },
+    {
+      "line": 285,
+      "text": "1. Create Agent-Tasks in Notion (manually or via MCP with NOTION_TOKEN)"
+    }
+  ],
+  "docs/DAVINCI_RESOLVE_SCRIPTS_AGGREGATED_GAP_ANALYSIS.md": [
+    {
+      "line": 981,
+      "text": "3. **Aligns with System Architecture:** MCP compliance, Notion-centric, orchestration"
+    }
+  ],
+  "docs/DRIVESHEETSSYNC_DEPLOYMENT_HANDOFF_SUMMARY.md": [
+    {
+      "line": 59,
+      "text": "The legacy MCP Tasks database is not shared with the Notion integration or has been archived/deleted."
+    }
+  ],
+  "docs/agents/AGENTS_CLAUDE_MD_FIXES_APPLIED__20250127.md": [
+    {
+      "line": 11,
+      "text": "**Issue:** Task Selection Protocol pointed to MCP Tasks DB as primary, conflicting with Notion Operations guidance."
+    }
+  ],
+  "docs/agents/AGENT_HANDOFF_TASK_GENERATOR_V3.0.md": [
+    {
+      "line": 53,
+      "text": "### \ud83d\udea8 CRITICAL: MCP Notion API Query Endpoints Are BROKEN"
+    },
+    {
+      "line": 55,
+      "text": "**MANDATORY:** **DO NOT USE** `mcp_notionApi_API-query-data-source` or `mcp_notionApi_API-retrieve-a-data-source`. These endpoints are **BROKEN** and will always fail with \"Invalid request URL\" errors."
+    },
+    {
+      "line": 67,
+      "text": "See: `/Users/brianhellemn/Projects/github-production/docs/ops/MCP_NOTION_API_QUERY_ENDPOINT_DEPRECATED.md`"
+    }
+  ],
+  "docs/agents/BLOCKER_HANDOFF_GENERATION_NO_ACTIVE_TASK_2025-01-27.md": [
+    {
+      "line": 19,
+      "text": "1. **MCP Notion API Query:**"
+    },
+    {
+      "line": 21,
+      "text": "- Method: `mcp_notionApi_API-query-data-source`"
+    },
+    {
+      "line": 24,
+      "text": "2. **MCP Notion API Search:**"
+    },
+    {
+      "line": 25,
+      "text": "- Method: `mcp_notionApi_API-post-search`"
+    },
+    {
+      "line": 48,
+      "text": "2. Task exists but query format incorrect for MCP Notion API"
+    },
+    {
+      "line": 51,
+      "text": "5. MCP Notion API query endpoint has incorrect format/parameters"
+    },
+    {
+      "line": 62,
+      "text": "2. **Fix MCP Notion API Query Format:**"
+    },
+    {
+      "line": 63,
+      "text": "- Review MCP Notion API documentation"
+    },
+    {
+      "line": 91,
+      "text": "2. **Short-term:** Fix MCP Notion API query format or use alternative method"
+    }
+  ],
+  "docs/agents/HANDOFF_GENERATION_EXECUTION_2025-12-27.md": [
+    {
+      "line": 34,
+      "text": "- Method: `mcp_notionApi_API-query-data-source`"
+    },
+    {
+      "line": 40,
+      "text": "- Method: `mcp_notionApi_API-post-search`"
+    },
+    {
+      "line": 53,
+      "text": "The query API format may not match the MCP Notion API expectations. Property names may also vary:"
+    },
+    {
+      "line": 108,
+      "text": "- Attempted: `mcp_notionApi_API-query-data-source` with filter object"
+    },
+    {
+      "line": 114,
+      "text": "- Verify correct query format for MCP Notion API"
+    }
+  ],
+  "docs/agents/HANDOFF_GENERATION_EXECUTION_2025-12-27_CURRENT.md": [
+    {
+      "line": 19,
+      "text": "- **Token Check:** \u2705 Valid (confirmed via `mcp_notionApi_API-get-self`)"
+    },
+    {
+      "line": 32,
+      "text": "1. **MCP Notion API Query:**"
+    },
+    {
+      "line": 34,
+      "text": "- Method: `mcp_notionApi_API-query-data-source`"
+    },
+    {
+      "line": 37,
+      "text": "2. **MCP Notion API Search:**"
+    },
+    {
+      "line": 38,
+      "text": "- Method: `mcp_notionApi_API-post-search`"
+    },
+    {
+      "line": 55,
+      "text": "The MCP Notion API query format may not match expected structure. Property names in Agent-Tasks DB may vary:"
+    },
+    {
+      "line": 155,
+      "text": "### Issue 2: MCP Notion API Query Format"
+    },
+    {
+      "line": 157,
+      "text": "**Problem:** `mcp_notionApi_API-query-data-source` returns \"Invalid request URL\" error."
+    },
+    {
+      "line": 160,
+      "text": "1. Review MCP Notion API documentation for correct query format"
+    },
+    {
+      "line": 171,
+      "text": "3. **Medium-term:** Fix MCP Notion API query format issues"
+    }
+  ],
+  "docs/agents/HANDOFF_GENERATION_FINAL_SUMMARY_2025-12-27.md": [
+    {
+      "line": 114,
+      "text": "### Issue 2: MCP Notion API Query Format"
+    }
+  ],
+  "docs/agents/HANDOFF_GENERATION_SUMMARY_2025-12-27.md": [
+    {
+      "line": 42,
+      "text": "The MCP Notion API `query-data-source` endpoint returned an \"Invalid request URL\" error when attempting to query the Agent-Tasks database with filters. This suggests:"
+    },
+    {
+      "line": 56,
+      "text": "- Error: \"Invalid request URL\" when using `mcp_notionApi_API-query-data-source`"
+    },
+    {
+      "line": 61,
+      "text": "1. Verify correct query format for MCP Notion API `query-data-source` endpoint"
+    }
+  ],
+  "docs/agents/PHASE_0_AUDIT_2025-12-26_AGENT_WORKFLOW_FRAMEWORK_EXECUTION.md": [
+    {
+      "line": 34,
+      "text": "**Issue:** Direct MCP Notion API queries (`retrieve-a-data-source`, `query-data-source`) are failing with \"invalid_request_url\" errors for all database IDs tested."
+    },
+    {
+      "line": 45,
+      "text": "1. \u23f3 Investigate MCP Notion API query format requirements"
+    },
+    {
+      "line": 110,
+      "text": "### \ud83d\udd34 High Priority: MCP Notion API Query Failures"
+    },
+    {
+      "line": 112,
+      "text": "**Issue:** All direct database queries via MCP Notion API (`retrieve-a-data-source`, `query-data-source`) are failing with \"invalid_request_url\" errors."
+    },
+    {
+      "line": 117,
+      "text": "1. \u23f3 Investigate MCP Notion API query format and endpoint requirements"
+    },
+    {
+      "line": 155,
+      "text": "- [ ] Direct MCP Notion API database queries (all failing with invalid_request_url)"
+    },
+    {
+      "line": 163,
+      "text": "- MCP Notion API query investigation and remediation"
+    }
+  ],
+  "docs/agents/PHASE_0_NOTION_ENTRIES_REQUIRED.md": [
+    {
+      "line": 72,
+      "text": "- These entries should be created via Notion MCP API or Python script using `shared_core.notion.execution_logs.create_execution_log()` and Agent-Tasks creation functions"
+    }
+  ],
+  "docs/agents/PHASE_0_TO_PHASE_1_HANDOFF_2025-12-24.md": [
+    {
+      "line": 71,
+      "text": "1. Create Execution-Log entry via MCP Notion API"
+    }
+  ],
+  "docs/agents/PHASE_0_TO_PHASE_1_HANDOFF_2025-12-26.md": [
+    {
+      "line": 20,
+      "text": "- \u26a0\ufe0f Direct MCP Notion API queries failing (investigation required)"
+    },
+    {
+      "line": 41,
+      "text": "### 2. Agent-Task: MCP Notion API Query Investigation"
+    },
+    {
+      "line": 44,
+      "text": "- **Task Name:** \"Investigate and Remediate MCP Notion API Query Failures\""
+    },
+    {
+      "line": 49,
+      "text": "- **Description:** \"All direct MCP Notion API queries (retrieve-a-data-source, query-data-source) are failing with 'invalid_request_url' errors. Investigation needed to determine correct API format, endpoint requirements, or authentication issues.\""
+    },
+    {
+      "line": 50,
+      "text": "- **Success Criteria:** \"MCP Notion API queries successfully retrieve database schemas and content for all canonical databases\""
+    },
+    {
+      "line": 53,
+      "text": "- Review MCP Notion API documentation"
+    },
+    {
+      "line": 77,
+      "text": "- **Action:** Investigate MCP Notion API query format"
+    }
+  ],
+  "docs/agents/agent_capability_map_and_handoff_catalog.md": [
+    {
+      "line": 33,
+      "text": "The system operates with multiple specialized agents that coordinate through MCP v2.0, using Notion as the central coordination hub and Agent-Trigger folders for handoffs."
+    },
+    {
+      "line": 619,
+      "text": "The system operates with multiple specialized agents that coordinate through MCP v2.0, using Notion as the central coordination hub and Agent-Trigger folders for handoffs."
+    }
+  ],
+  "docs/agents/mcp_and_agent_orchestration_contracts.md": [
+    {
+      "line": 33,
+      "text": "The system operates with multiple specialized agents that coordinate through the MCP (Multi-Agent Coordination Protocol) v2.0, using Notion as the central coordination hub."
+    }
+  ],
+  "docs/agents/unified_task_delivery_blueprint.md": [
+    {
+      "line": 6,
+      "text": "**Related Docs:** DOC_MCP_AGENT_ORCHESTRATION, DOC_NOTION_CONTROL_PLANE, DOC_LAUNCH_AGENT_RUNTIME, DOC_DESKTOP_WEBHOOK_SYSTEM"
+    }
+  ],
+  "docs/chatgpt-strategic-agent-docs/01_seren_marketing_system_L0_master_spec.md": [
+    {
+      "line": 408,
+      "text": "- **Gateway/MCP-First Model:** All Notion operations use MCP server or shared gateway (no direct API keys in code)"
+    }
+  ],
+  "docs/chatgpt-strategic-agent-docs/06_mcp_and_agent_orchestration_contracts.md": [
+    {
+      "line": 33,
+      "text": "The system operates with multiple specialized agents that coordinate through the MCP (Multi-Agent Coordination Protocol) v2.0, using Notion as the central coordination hub."
+    }
+  ],
+  "docs/chatgpt-strategic-agent-docs/07_agent_capability_map_and_handoff_catalog.md": [
+    {
+      "line": 33,
+      "text": "The system operates with multiple specialized agents that coordinate through MCP v2.0, using Notion as the central coordination hub and Agent-Trigger folders for handoffs."
+    },
+    {
+      "line": 619,
+      "text": "The system operates with multiple specialized agents that coordinate through MCP v2.0, using Notion as the central coordination hub and Agent-Trigger folders for handoffs."
+    }
+  ],
+  "docs/chatgpt-strategic-agent-docs/21_davinci_resolve_scripts_aggregated_gap_analysis.md": [
+    {
+      "line": 981,
+      "text": "3. **Aligns with System Architecture:** MCP compliance, Notion-centric, orchestration"
+    }
+  ],
+  "docs/davinci_resolve/COMPREHENSIVE_GAP_ANALYSIS_2025-12-19.md": [
+    {
+      "line": 254,
+      "text": "| MCP Screenshot Service report | Notion-AI-Research-Analysis-Docs | **EXISTS** |"
+    }
+  ],
+  "docs/docs/risk_decision_and_guardrail_log.md": [
+    {
+      "line": 121,
+      "text": "**Decision:** Use MCP v2.0 protocol with Notion as coordination hub"
+    },
+    {
+      "line": 552,
+      "text": "**Decision:** Use MCP v2.0 protocol with Notion as coordination hub"
+    }
+  ],
+  "docs/incidents/notion_401_ndm_deliverables_summary.md": [
+    {
+      "line": 77,
+      "text": "- **MCP/Agent Orchestration:** Notion availability gate + NDM contract"
+    }
+  ],
+  "docs/observability/dashboard_index_report_marketing_system_monitoring.md": [
+    {
+      "line": 167,
+      "text": "- **MCP Screenshot Service & DaVinci Resolve Projects Report:** Contains detailed guidance for Notion-linked event/screenshot monitoring, but is not a live dashboard; no evidence of real-time or periodic updates in Notion[[2]](https://www.notion.so/serenmedia/MCP-Screenshot-Service-DaVinci-Resolve-Projects-Implementation-Alignment-and-Modularization-Repor-278e73616c2780fd8c43feedbeeb5ea1?pvs=53)."
+    }
+  ],
+  "docs/ops/MANDATORY_PROACTIVE_TOOL_USAGE.md": [
+    {
+      "line": 38,
+      "text": "1. mcp_notionApi_API-retrieve-a-data-source (check if exists)"
+    },
+    {
+      "line": 39,
+      "text": "2. mcp_notionApi_API-query-data-source (check contents)"
+    },
+    {
+      "line": 40,
+      "text": "3. mcp_notionApi_API-retrieve-a-page (if page-based)"
+    },
+    {
+      "line": 65,
+      "text": "1. **Notion MCP Server** (`mcp_notionApi_*`)"
+    },
+    {
+      "line": 151,
+      "text": "- [ ] **Used MCP servers** if available (Notion, etc.)?"
+    },
+    {
+      "line": 174,
+      "text": "db = mcp_notionApi_API-retrieve-a-data-source(data_source_id=db_id)"
+    },
+    {
+      "line": 176,
+      "text": "results = mcp_notionApi_API-query-data-source(data_source_id=db_id)"
+    },
+    {
+      "line": 233,
+      "text": "1. \u2705 Use Notion MCP: mcp_notionApi_API-retrieve-a-data-source(db_id)"
+    },
+    {
+      "line": 257,
+      "text": "1. \u2705 Use Notion MCP server tools (mcp_notionApi_API-query-data-source)"
+    },
+    {
+      "line": 258,
+      "text": "2. \u2705 If MCP fails: Try direct Notion client"
+    }
+  ],
+  "docs/ops/MCP_NOTION_API_QUERY_ENDPOINT_DEPRECATED.md": [
+    {
+      "line": 1,
+      "text": "# \ud83d\udea8 CRITICAL: MCP Notion API Query Endpoints Are BROKEN - DO NOT USE"
+    },
+    {
+      "line": 12,
+      "text": "**The MCP Notion API query endpoints (`mcp_notionApi_API-query-data-source`, `mcp_notionApi_API-retrieve-a-data-source`) are BROKEN and will ALWAYS fail.**"
+    },
+    {
+      "line": 28,
+      "text": "The MCP server implementation has incorrect URL construction or parameter validation that doesn't match the actual Notion API requirements. This is a **known issue** that has been documented multiple times but agents keep trying to use these broken endpoints."
+    },
+    {
+      "line": 70,
+      "text": "- `mcp-agent-protocol/src/notion_client_v2.py` - Uses `Client(auth=token)`"
+    },
+    {
+      "line": 77,
+      "text": "- \u274c `mcp_notionApi_API-query-data-source`"
+    },
+    {
+      "line": 78,
+      "text": "- \u274c `mcp_notionApi_API-retrieve-a-data-source`"
+    },
+    {
+      "line": 79,
+      "text": "- \u274c Any MCP Notion API tool that queries databases"
+    },
+    {
+      "line": 81,
+      "text": "**Exception:** `mcp_notionApi_API-get-self` works for token validation only."
+    },
+    {
+      "line": 92,
+      "text": "4. **NEVER** use MCP Notion API query endpoints"
+    },
+    {
+      "line": 103,
+      "text": "- **MCP Notion API Review:** `/Users/brianhellemn/Projects/github-production/docs/reviews/MCP_NOTION_API_IMPLEMENTATION_REVIEW_2025-12-27.md`"
+    }
+  ],
+  "docs/ops/agent_functions_compliance_review.md": [
+    {
+      "line": 274,
+      "text": "- [Simplify MCP Execution Tracking Properties](https://www.notion.so/09837106582b4589b877730a2f05208d)"
+    }
+  ],
+  "docs/reviews/MCP_NOTION_API_CLAUDE_MM1_VALIDATION_REPORT.md": [
+    {
+      "line": 1,
+      "text": "# MCP Notion API Implementation - Claude MM1 Technical Validation Report"
+    },
+    {
+      "line": 43,
+      "text": "- `mcp-agent-protocol/utils/notion_client.py` - proper error imports"
+    },
+    {
+      "line": 44,
+      "text": "- `mcp-agent-protocol/src/notion_client_v2.py` - comprehensive implementation"
+    },
+    {
+      "line": 76,
+      "text": "1. **`mcp-agent-protocol/utils/notion_client.py`** (lines 66-107):"
+    },
+    {
+      "line": 446,
+      "text": "**Document Path:** `docs/reviews/MCP_NOTION_API_CLAUDE_MM1_VALIDATION_REPORT.md`"
+    }
+  ],
+  "docs/reviews/MCP_NOTION_API_IMPLEMENTATION_REVIEW_2025-12-27.md": [
+    {
+      "line": 1,
+      "text": "# MCP Notion API Implementation Review & Replacement Plan"
+    },
+    {
+      "line": 12,
+      "text": "The current MCP Notion API implementation is **technically unsound** and requires immediate replacement. This review identifies critical issues, validates against industry best practices, and provides a comprehensive replacement plan using the official `notion-client` Python library."
+    },
+    {
+      "line": 15,
+      "text": "- \u274c MCP API tools (`mcp_notionApi_API-*`) fail with \"Invalid request URL\" errors"
+    },
+    {
+      "line": 28,
+      "text": "**Problem:** The MCP Notion API tools (`mcp_notionApi_API-query-data-source`, `mcp_notionApi_API-post-page`, etc.) consistently fail with errors like:"
+    },
+    {
+      "line": 36,
+      "text": "mcp_notionApi_API-query-data-source("
+    },
+    {
+      "line": 44,
+      "text": "**Root Cause:** The MCP server implementation appears to have incorrect URL construction or parameter validation that doesn't match the actual Notion API requirements."
+    },
+    {
+      "line": 50,
+      "text": "1. `mcp-agent-protocol/src/notion_client_v2.py` - MCPNotionClientV2"
+    },
+    {
+      "line": 51,
+      "text": "2. `mcp-agent-protocol/mcp_notion_client.py` - MCPNotionClient"
+    },
+    {
+      "line": 52,
+      "text": "3. `mcp_agent_protocol/notion_client.py` - NotionClient"
+    },
+    {
+      "line": 53,
+      "text": "4. `mcp-agent-protocol/src/api/notion_client.py` - NotionAPIClient"
+    },
+    {
+      "line": 54,
+      "text": "5. `mcp-agent-protocol/utils/notion_client.py` - EnhancedNotionClient"
+    },
+    {
+      "line": 537,
+      "text": "- `mcp-agent-protocol/src/notion_client_v2.py` - Partial implementation"
+    }
+  ],
+  "docs/reviews/MCP_NOTION_API_REVIEW_SUMMARY_2025-12-27.md": [
+    {
+      "line": 1,
+      "text": "# MCP Notion API Implementation Review - Summary"
+    },
+    {
+      "line": 23,
+      "text": "**Location:** `docs/reviews/MCP_NOTION_API_IMPLEMENTATION_REVIEW_2025-12-27.md`"
+    },
+    {
+      "line": 36,
+      "text": "**Trigger File:** `/Users/brianhellemn/Documents/Agents/Agent-Triggers/Claude-MM1-Agent-Trigger/01_inbox/20251227T193000Z__MCP-Notion-API-Implementation-Secondary-Review__Cursor-MM1.md`"
+    },
+    {
+      "line": 47,
+      "text": "1. **MCP API Tools Fail:** All `mcp_notionApi_API-*` tools fail with \"Invalid request URL\" errors"
+    },
+    {
+      "line": 87,
+      "text": "- `docs/reviews/MCP_NOTION_API_IMPLEMENTATION_REVIEW_2025-12-27.md`"
+    },
+    {
+      "line": 90,
+      "text": "- `/Users/brianhellemn/Documents/Agents/Agent-Triggers/Claude-MM1-Agent-Trigger/01_inbox/20251227T193000Z__MCP-Notion-API-Implementation-Secondary-Review__Cursor-MM1.md`"
+    },
+    {
+      "line": 94,
+      "text": "- `docs/reviews/MCP_NOTION_API_REVIEW_SUMMARY_2025-12-27.md` (this file)"
+    }
+  ],
+  "docs/security/CREDENTIAL_REMEDIATION_PLAN.md": [
+    {
+      "line": 72,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp_automation/execution_report_20250917.md` | 68 | docs | ntn_[redacted:62...rh] | `NOTION_TOKEN = \"ntn_[redacted:62...rh]\"` |"
+    },
+    {
+      "line": 153,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp-agent-protocol/CHANGELOG_v2.0.0.md` | 80 | docs | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 154,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp-agent-protocol/IMPLEMENTATION_GUIDE_v2.md` | 68 | docs | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 157,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp-agent-protocol/QUICK_START.md` | 34 | docs | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 158,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp-agent-protocol/README_MCP_V2.md` | 72 | docs | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 159,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp-agent-protocol/README_MCP_V2_COMPLETE.md` | 59 | docs | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 161,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp-agent-protocol/README_v2_comprehensive.md` | 145 | docs | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 162,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp-agent-protocol/README_v2_optimized.md` | 54 | docs | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 163,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp-agent-protocol/archives/mcp_v2_implementation_20250916_081940/QUICK_START.md` | 34 | docs | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 164,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp-agent-protocol/archives/mcp_v2_implementation_20250916_081940/README.md` | 52 | docs | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 165,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp-agent-protocol/archives/mcp_v2_implementation_20250916_081940/README_MCP_V2.md` | 72 | docs | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 166,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp-agent-protocol/archives/mcp_v2_implementation_20250916_081940/README_MCP_V2_COMPLETE.md` | 59 | docs | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 174,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp-agent-protocol/archives/v2.0.0-final-20250917_140555/docs/INSTALLATION.md` | 40 | docs | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 179,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp-agent-protocol/archives/v2.0.0-final-20250917_140555/examples/mcp_v2_example.py` | 234 | backups/archives | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 181,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp-agent-protocol/config_v2_optimized.py` | 333 | code/scripts | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 182,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp-agent-protocol/deploy.sh` | 112 | code/scripts | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 187,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp-agent-protocol/docs/INSTALLATION.md` | 40 | docs | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 195,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp-agent-protocol/examples/mcp_v2_example.py` | 234 | code/scripts | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 196,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp-agent-protocol/examples/notion_api_examples.py` | 16 | code/scripts | 26de...000a | `DATABASE_ID = \"26de...000a\"` |"
+    },
+    {
+      "line": 197,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp-agent-protocol/notion_query_client.py` | 12 | code/scripts | 26de...000a | `DATABASE_ID = \"26de...000a\"` |"
+    },
+    {
+      "line": 202,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp_agent_protocol/IMPLEMENTATION_COMPLETE.md` | 101 | docs | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 204,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp_agent_protocol/QUICK_START.md` | 20 | docs | 26de...000a | `# NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 205,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp_agent_protocol/QUICK_START.md` | 58 | docs | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 206,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp_agent_protocol/VERSION.md` | 93 | docs | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 210,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp_agent_protocol/docs/QUICK_START_GUIDE.md` | 36 | docs | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 211,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp_agent_protocol/docs/USER_GUIDE.md` | 26 | docs | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 212,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp_agent_protocol/env.example` | 3 | code/scripts | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 213,
+      "text": "| `/Users/brianhellemn/Projects/github-production/mcp_agent_protocol/setup.py` | 68 | code/scripts | 26de...000a | `NOTION_DATABASE_ID=26de...000a` |"
+    },
+    {
+      "line": 278,
+      "text": "| `/Users/brianhellemn/Projects/github-production/agent-coordination-system/MCP_DUAL_FEED_IMPLEMENTATION_STATUS.md` | 12 | docs | `- URL: https://www.notion.so/MCP-Dual-Feed-Pipeline-Phase-0-Baseline-Documentation-Inventory-Notion-AI-Data-Operations-Agen-2b8e...08fe` |"
+    },
+    {
+      "line": 279,
+      "text": "| `/Users/brianhellemn/Projects/github-production/agent-coordination-system/MCP_DUAL_FEED_IMPLEMENTATION_STATUS.md` | 17 | docs | `- URL: https://www.notion.so/MCP-Dual-Feed-Pipeline-Architecture-Review-Validation-Claude-MM1-Agent-2b8e...5444` |"
+    },
+    {
+      "line": 280,
+      "text": "| `/Users/brianhellemn/Projects/github-production/agent-coordination-system/MCP_DUAL_FEED_IMPLEMENTATION_STATUS.md` | 22 | docs | `- URL: https://www.notion.so/MCP-Dual-Feed-Pipeline-Task-Planning-Coordination-ChatGPT-Strategic-Agent-2b8e...b1d8` |"
+    },
+    {
+      "line": 367,
+      "text": "| `/Users/brianhellemn/Projects/github-production/docs/observability/dashboard_index_report_marketing_system_monitoring.md` | 167 | docs | `- **MCP Screenshot Service & DaVinci Resolve Projects Report:** Contains detailed guidance for Notion-linked event/screenshot monitoring,...` |"
+    }
+  ],
+  "docs/system/HANDOFF_TASKS_EXECUTION_INSTRUCTIONS_2025-12-08.md": [
+    {
+      "line": 62,
+      "text": "1. Open MCP Tasks database in Notion"
+    }
+  ],
+  "docs/system/NOTION_RESEARCH_REPORT_REMEDIATION_COMPLETE.md": [
+    {
+      "line": 221,
+      "text": "\u2705 **Notion MCP Server:** Scripts designed to work with Notion API (can be adapted to MCP)"
+    }
+  ],
+  "docs/system/SYSTEM_STATE_RADAR_HANDOFF_TASKS_COMPLETE_2025-12-08.md": [
+    {
+      "line": 65,
+      "text": "1. Open MCP Tasks database in Notion"
+    }
+  ],
+  "docs/system/orchestration-invariants-agent-tasks-specification-2025-01-09.md": [
+    {
+      "line": 14,
+      "text": "**Note:** Agent-Tasks creation attempted via MCP but encountered database access issues. Tasks should be created manually in Notion Agent-Tasks database (`284e73616c278018872aeb14e82e0392`) or via alternative method."
+    }
+  ],
+  "docs/system/orchestration-invariants-documentation-audit-report-2025-01-09.md": [
+    {
+      "line": 634,
+      "text": "**Note:** Agent-Tasks creation attempted via MCP but encountered database access issues (404 errors). Tasks should be created manually in Notion or via alternative method. All task specifications are documented above."
+    }
+  ],
+  "docs/system/orchestration-invariants-documentation-comprehensive-review-audit-report-2025-01-09.md": [
+    {
+      "line": 36,
+      "text": "The MCP framework documentation includes a dedicated Non-Negotiable Rules section, enforcing \"MUST\" and \"MUST NOT\" language for agent assignment, single-candidate enforcement, and status filtering. Safeguard systems such as multi-layer validation and retry limits are explicitly defined, and references to canonical MCP Tasks DBs are provided[[2]](https://www.notion.so/serenmedia/Complete-System-Documentation-MCP-Framework-Workflow-Management-26ce73616c2781a29c32f4aa82092176?pvs=53)."
+    },
+    {
+      "line": 106,
+      "text": "All core documentation files now include a Non-Negotiable Rules section using \"MUST\" and \"MUST NOT\" language. The nine core invariants are explicitly enumerated, and violations are clearly marked as non-compliant. Required sections include single-candidate enforcement, canonical DB rules, agent-trigger folder requirements, and phase completion checklists[[9]](https://www.notion.so/serenmedia/MCP-Task-Documentation-Structure-Enforcement-1b1b1191ea0a44d9b845c67257afb481?pvs=53)[[10]](https://www.notion.so/serenmedia/Documentation-Database-Review-Audit-Synchronization-Framework-1df41034b65f47e39ac4a678e8adc1a8?pvs=53)."
+    }
+  ],
+  "docs/system/seren_marketing_system_L0_master_spec.md": [
+    {
+      "line": 408,
+      "text": "- **Gateway/MCP-First Model:** All Notion operations use MCP server or shared gateway (no direct API keys in code)"
+    }
+  ],
+  "mcp-agent-protocol/AI_CHAT_CONVERSATION_LOG_OPTIMIZATION_V6.0.md": [
+    {
+      "line": 241,
+      "text": "- **NOTION_FINAL_MCP_V2_COMPLETION_LOG.md**: Final Notion documentation entry"
+    }
+  ],
+  "mcp-agent-protocol/AI_CHAT_CONVERSATION_LOG_V2.0_FINAL.md": [
+    {
+      "line": 24,
+      "text": "- MCPAgentProtocol class with Notion integration"
+    }
+  ],
+  "mcp-agent-protocol/ARCHIVAL_DOCUMENTATION_v2.md": [
+    {
+      "line": 12,
+      "text": "This archive contains the complete implementation of the MCP Agent Protocol v2.0, a comprehensive multi-agent coordination system for automated task management, agent coordination, and workflow execution with Notion integration."
+    }
+  ],
+  "mcp-agent-protocol/CHANGELOG_V2.md": [
+    {
+      "line": 10,
+      "text": "- **MCP v2.0 Compliant Notion Queries**: Official Notion API operators with correct database ID `26de73616c278038b839c5333237000a`"
+    },
+    {
+      "line": 11,
+      "text": "- **Direct API Integration**: Complete removal of MCP proxy tools, direct HTTP calls to `api.notion.com/v1`"
+    }
+  ],
+  "mcp-agent-protocol/CHANGELOG_v2.0.0.md": [
+    {
+      "line": 9,
+      "text": "This release implements the complete MCP Agent Protocol v2.0 specification with optimized Notion API integration, comprehensive agent coordination, and robust task management capabilities."
+    },
+    {
+      "line": 82,
+      "text": "MCP_AGENT_TYPE=notion_ai"
+    }
+  ],
+  "mcp-agent-protocol/COMPLETION_REPORT.md": [
+    {
+      "line": 19,
+      "text": "| `mcp_v2_notion_client` | Implement MCP v2.0 compliant Notion client with proper query functionality | \u2705 Complete | 2025-01-16 11:35:00 |"
+    },
+    {
+      "line": 185,
+      "text": "The MCP Agent Protocol v2.0 implementation is **COMPLETE** and **PRODUCTION READY**. All work has been finished, all documentation procedures have been executed, and all versioning and archival procedures have been performed. The organizational alignment and adherence to workspace requirements have been validated and documented in Notion."
+    }
+  ],
+  "mcp-agent-protocol/COMPLETION_SUMMARY_v2.md": [
+    {
+      "line": 5,
+      "text": "I have successfully implemented the MCP Agent Protocol v2.0 according to the exact specifications provided. This implementation provides a comprehensive framework for multi-agent coordination using Notion as the central task management system."
+    },
+    {
+      "line": 132,
+      "text": "agent = MCPAgentProtocolV2(notion_token=\"your_token\")"
+    },
+    {
+      "line": 155,
+      "text": "export MCP_AGENT_TYPE=\"notion_ai\""
+    }
+  ],
+  "mcp-agent-protocol/ENHANCED_IMPLEMENTATION_GUIDE_V2.0.md": [
+    {
+      "line": 16,
+      "text": "1. **MCPAgentProtocol** - Main protocol with Notion integration"
+    }
+  ],
+  "mcp-agent-protocol/FINAL_COMPLETION_SUMMARY.md": [
+    {
+      "line": 91,
+      "text": "- `src/enhanced_notion_client.py` - MCP v2.0 compliant Notion API client"
+    },
+    {
+      "line": 103,
+      "text": "- `NOTION_LOG_ENTRY_MCP_V2_COMPLETE.md` - Notion documentation entry"
+    }
+  ],
+  "mcp-agent-protocol/FINAL_COMPLETION_VERIFICATION_REPORT_V2.0_FINAL.md": [
+    {
+      "line": 17,
+      "text": "- `mcp_agent_protocol.py` - Main protocol with full Notion integration"
+    }
+  ],
+  "mcp-agent-protocol/FINAL_PROJECT_SUMMARY_v2.0.md": [
+    {
+      "line": 12,
+      "text": "The MCP Agent Protocol v2.0 implementation has been **SUCCESSFULLY COMPLETED** with full compliance to all requirements, organizational standards, and quality metrics. This implementation provides a comprehensive framework for multi-agent coordination using Notion as the central task management system."
+    },
+    {
+      "line": 192,
+      "text": "The MCP Agent Protocol v2.0 implementation project has been **SUCCESSFULLY COMPLETED** with full compliance to all requirements, organizational standards, and quality metrics. The implementation provides a robust, production-ready foundation for multi-agent coordination using Notion as the central task management system."
+    }
+  ],
+  "mcp-agent-protocol/FINAL_PROMPT_OPTIMIZATION_SUMMARY_V6.0.md": [
+    {
+      "line": 217,
+      "text": "- **NOTION_FINAL_MCP_V2_COMPLETION_LOG.md**: Final Notion documentation entry"
+    }
+  ],
+  "mcp-agent-protocol/FINAL_VERIFICATION_REPORT.md": [
+    {
+      "line": 32,
+      "text": "- **NOTION_LOG_ENTRY_MCP_V2_COMPLETE.md**: \u2705 Complete Notion documentation entry"
+    }
+  ],
+  "mcp-agent-protocol/FINAL_VERIFICATION_REPORT_COMPLETE.md": [
+    {
+      "line": 95,
+      "text": "- \u2705 Property Mapping: Correct MCP to Notion conversion"
+    },
+    {
+      "line": 226,
+      "text": "The MCP Agent Protocol v2.0 implementation has been successfully completed with full compliance to all specified requirements. All documentation procedures have been executed, versioning and archival procedures have been performed, and organizational alignment has been validated. The system is ready for production deployment with comprehensive documentation and logging in Notion."
+    }
+  ],
+  "mcp-agent-protocol/FINAL_VERIFICATION_REPORT_v2.md": [
+    {
+      "line": 159,
+      "text": "The MCP Agent Protocol v2.0 implementation is **COMPLETE** and **PRODUCTION READY**. All requirements have been met, quality standards achieved, and organizational alignment confirmed. The implementation provides a robust foundation for multi-agent coordination using Notion as the central task management system."
+    }
+  ],
+  "mcp-agent-protocol/FINAL_WORK_COMPLETION_SUMMARY.md": [
+    {
+      "line": 17,
+      "text": "1. **MCP v2.0 Compliant Notion Query** \u2705 COMPLETE"
+    }
+  ],
+  "mcp-agent-protocol/IMPLEMENTATION_COMPLETE_V2.0_FINAL.md": [
+    {
+      "line": 11,
+      "text": "The MCP Agent Protocol v2.0 has been successfully implemented as a comprehensive Multi-Agent Coordination Framework for task execution and management using Notion as the central coordination hub."
+    },
+    {
+      "line": 125,
+      "text": "protocol = MCPAgentProtocol(config.notion_token, config.agent_id)"
+    }
+  ],
+  "mcp-agent-protocol/IMPLEMENTATION_COMPLETE_v2.md": [
+    {
+      "line": 17,
+      "text": "- **MCPNotionClientV2** - Notion API integration"
+    }
+  ],
+  "mcp-agent-protocol/IMPLEMENTATION_COMPLETION_SUMMARY_v2.md": [
+    {
+      "line": 5,
+      "text": "Successfully implemented a comprehensive MCP Agent Protocol v2.0 system with full compliance to the specified requirements, including agent coordination, Notion integration, validation, logging, and deployment capabilities."
+    },
+    {
+      "line": 205,
+      "text": "agent = MCPAgentProtocolV2(\"notion_token\")"
+    }
+  ],
+  "mcp-agent-protocol/IMPLEMENTATION_GUIDE_v2.md": [
+    {
+      "line": 7,
+      "text": "The MCP Agent Protocol v2.0 is a comprehensive framework for multi-agent coordination using Notion as the central task management system. It provides optimized querying, agent coordination, and execution tracking."
+    },
+    {
+      "line": 72,
+      "text": "MCP_AGENT_TYPE=notion_ai"
+    }
+  ],
+  "mcp-agent-protocol/IMPLEMENTATION_REPORT.md": [
+    {
+      "line": 9,
+      "text": "The MCP Agent Protocol v2.0 has been successfully implemented with full compliance to the technical specifications. This comprehensive implementation provides a production-ready framework for multi-agent task management and coordination using Notion as the central database."
+    },
+    {
+      "line": 100,
+      "text": "- **MCP v2.0 Properties**: Updates all required Notion properties"
+    }
+  ],
+  "mcp-agent-protocol/IMPLEMENTATION_SUMMARY.md": [
+    {
+      "line": 5,
+      "text": "I have successfully implemented a comprehensive MCP (Multi-Agent Coordination Protocol) v2.0 system that provides task management, agent coordination, and automated workflow execution with Notion integration."
+    }
+  ],
+  "mcp-agent-protocol/MCP_V2_IMPLEMENTATION_COMPLETE.md": [
+    {
+      "line": 13,
+      "text": "### 1. MCP v2.0 Compliant Notion Query \u2705"
+    },
+    {
+      "line": 23,
+      "text": "- **No MCP Proxy Tools**: All calls use official Notion SDK and HTTP client"
+    }
+  ],
+  "mcp-agent-protocol/MCP_V2_IMPLEMENTATION_SUMMARY.md": [
+    {
+      "line": 5,
+      "text": "This document summarizes the complete implementation of the MCP Agent Protocol v2.0, a comprehensive multi-agent coordination system designed for task management and execution using Notion as the central database."
+    }
+  ],
+  "mcp-agent-protocol/MCP_V2_OPTIMIZED_COMPLETION_REPORT.md": [
+    {
+      "line": 9,
+      "text": "The MCP Agent Protocol v2.0 optimized implementation has been successfully completed with all specified features and requirements. This implementation provides a comprehensive Multi-Agent Coordination Framework with direct Notion API integration, optimized for token efficiency while maintaining full functionality."
+    },
+    {
+      "line": 165,
+      "text": "agent = MCPAgentProtocolV2Optimized(notion_token=\"your_token\")"
+    },
+    {
+      "line": 178,
+      "text": "python3 run_mcp_v2_optimized.py --agent-type notion_ai"
+    }
+  ],
+  "mcp-agent-protocol/NOTION_FINAL_COMPLETION_LOG_ENTRY_V2.md": [
+    {
+      "line": 22,
+      "text": "4. **MCPNotionClientV2** - Notion API integration"
+    }
+  ],
+  "mcp-agent-protocol/NOTION_FINAL_DOCUMENTATION_ENTRY.md": [
+    {
+      "line": 1,
+      "text": "# MCP Agent Protocol v2.0 - Final Notion Documentation Entry"
+    },
+    {
+      "line": 65,
+      "text": "- `src/enhanced_notion_client.py` - MCP v2.0 compliant Notion API client"
+    }
+  ],
+  "mcp-agent-protocol/NOTION_FINAL_DOCUMENTATION_ENTRY_V2.0_FINAL.md": [
+    {
+      "line": 22,
+      "text": "- **MCP Current Action**: Final documentation and Notion logging"
+    },
+    {
+      "line": 29,
+      "text": "- **MCP Project Context**: Complete implementation of MCP Agent Protocol v2.0 with multi-agent support, Notion integration, and comprehensive documentation"
+    }
+  ],
+  "mcp-agent-protocol/NOTION_FINAL_DOCUMENTATION_ENTRY_v2.md": [
+    {
+      "line": 11,
+      "text": "Successfully implemented the complete MCP Agent Protocol v2.0 specification with optimized Notion API integration, comprehensive agent coordination, and robust task management capabilities. The implementation is production-ready and fully compliant with all v2.0 requirements."
+    },
+    {
+      "line": 156,
+      "text": "The MCP Agent Protocol v2.0 implementation project has been **SUCCESSFULLY COMPLETED** with full compliance to all requirements, organizational standards, and quality metrics. The implementation is production-ready and provides a robust foundation for multi-agent coordination using Notion as the central task management system."
+    }
+  ],
+  "mcp-agent-protocol/NOTION_FINAL_IMPLEMENTATION_REPORT.md": [
+    {
+      "line": 1,
+      "text": "# MCP Agent Protocol v2.0 - Final Implementation Report for Notion"
+    },
+    {
+      "line": 26,
+      "text": "1. **MCP v2.0 Compliant Notion Queries** \u2705"
+    }
+  ],
+  "mcp-agent-protocol/NOTION_FINAL_MCP_V2_COMPLETION_LOG.md": [
+    {
+      "line": 109,
+      "text": "*This entry serves as the final documentation log for the MCP Agent Protocol v2.0 implementation completion in the Notion database.*"
+    }
+  ],
+  "mcp-agent-protocol/NOTION_FINAL_STATUS_UPDATE_COMPLETE.md": [
+    {
+      "line": 264,
+      "text": "The MCP Agent Protocol v2.0 implementation has been successfully completed with full compliance to all specified requirements. All documentation procedures have been executed, versioning and archival procedures have been performed, and organizational alignment has been validated. The system is ready for production deployment with comprehensive documentation and logging in Notion."
+    }
+  ],
+  "mcp-agent-protocol/NOTION_LOG_ENTRY_V2.0_FINAL.md": [
+    {
+      "line": 13,
+      "text": "1. **MCPAgentProtocol** - Notion API integration and task management"
+    }
+  ],
+  "mcp-agent-protocol/PROJECT_STRUCTURE.md": [
+    {
+      "line": 26,
+      "text": "- **MCPAgentProtocol**: Base class with full Notion integration"
+    }
+  ],
+  "mcp-agent-protocol/PROJECT_SUMMARY.md": [
+    {
+      "line": 5,
+      "text": "The MCP Agent Protocol v2.0 is a comprehensive multi-agent coordination framework designed for task execution and management using Notion as the central database. This implementation provides a complete, production-ready solution for automated task processing with specialized agent types."
+    }
+  ],
+  "mcp-agent-protocol/QUICK_START.md": [
+    {
+      "line": 5,
+      "text": "The MCP Agent Protocol v2.0 is a comprehensive multi-agent coordination framework for task execution using Notion as the central database. This guide will get you up and running quickly."
+    }
+  ],
+  "mcp-agent-protocol/README_MCP_V2.md": [
+    {
+      "line": 5,
+      "text": "The MCP Agent Protocol v2.0 is a comprehensive multi-agent coordination system designed for task management and execution using Notion as the central database. This implementation provides full compliance with the MCP v2.0 specification including impromptu execution, dual-assignment support, FCFS claiming, and content-based agent assignment."
+    },
+    {
+      "line": 13,
+      "text": "- **Agent Types**: Support for all MCP agent types (Cursor MM1/MM2, Claude MM1/MM2, Notion AI Data Ops)"
+    }
+  ],
+  "mcp-agent-protocol/README_MCP_V2_COMPLETE.md": [
+    {
+      "line": 5,
+      "text": "The MCP Agent Protocol v2.0 is a comprehensive, production-ready framework for multi-agent task management and coordination using Notion as the central database. This implementation provides full compliance with the MCP v2.0 specification, including dual-assignment support, FCFS task claiming, impromptu execution fallback, and comprehensive error handling."
+    }
+  ],
+  "mcp-agent-protocol/README_v2.md": [
+    {
+      "line": 3,
+      "text": "A comprehensive implementation of the MCP (Multi-Agent Coordination Protocol) v2.0 for task management, agent coordination, and execution tracking with Notion integration."
+    },
+    {
+      "line": 116,
+      "text": "MCP_AGENT_TYPE=notion_ai"
+    }
+  ],
+  "mcp-agent-protocol/README_v2_comprehensive.md": [
+    {
+      "line": 3,
+      "text": "A complete implementation of the Multi-Agent Coordination Protocol (MCP) v2.0 for automated task management, agent coordination, and workflow execution with Notion integration."
+    },
+    {
+      "line": 51,
+      "text": "export MCP_AGENT_TYPE=\"cursor_mm1\"  # or claude_mm1, notion_ai, etc."
+    },
+    {
+      "line": 67,
+      "text": "agent = MCPAgentProtocolV2(config.notion_token, config.database_id)"
+    },
+    {
+      "line": 245,
+      "text": "agent = MCPAgentProtocolV2(\"your_notion_token\")"
+    }
+  ],
+  "mcp-agent-protocol/README_v2_optimized.md": [
+    {
+      "line": 58,
+      "text": "MCP_AGENT_TYPE=notion_ai  # Options: cursor_mm1, claude_mm1, notion_ai, cursor_mm2, claude_mm2"
+    },
+    {
+      "line": 90,
+      "text": "agent = MCPAgentProtocolV2Optimized(notion_token=\"your_token\")"
+    }
+  ],
+  "mcp-agent-protocol/SCRIPT_MAPPING_ANALYSIS.md": [
+    {
+      "line": 22,
+      "text": "- **Description**: Convenience script for running MCP agents  Usage: python scripts/run_agent.py cursor-mm1 python scripts/run_agent.py claude-mm1 python scripts/run_agent.py notion-ai"
+    },
+    {
+      "line": 94,
+      "text": "- **Description**: Convenience script for running MCP agents  Usage: python scripts/run_agent.py cursor-mm1 python scripts/run_agent.py claude-mm1 python scripts/run_agent.py notion-ai"
+    },
+    {
+      "line": 182,
+      "text": "\"Description\": {\"rich_text\": [{\"text\": {\"content\": \"Convenience script for running MCP agents  Usage: python scripts/run_agent.py cursor-mm1 python scripts/run_agent.py claude-mm1 python scripts/run_agent.py notion-ai\"}}]},"
+    }
+  ],
+  "mcp-agent-protocol/SCRIPT_SYNC_COMPLETION_REPORT.md": [
+    {
+      "line": 8,
+      "text": "All script files in the MCP Agent Protocol v2.0 project have been successfully analyzed, mapped, and prepared for synchronization with the Notion Scripts Database. The implementation follows the HOTFIX guidance requiring direct Notion API usage and provides comprehensive documentation and tooling for ongoing synchronization."
+    }
+  ],
+  "mcp-agent-protocol/ULTIMATE_COMPLETION_SUMMARY.md": [
+    {
+      "line": 124,
+      "text": "- `src/enhanced_notion_client.py` - MCP v2.0 compliant Notion API client"
+    }
+  ],
+  "mcp-agent-protocol/ULTIMATE_COMPLETION_SUMMARY_FINAL.md": [
+    {
+      "line": 103,
+      "text": "- **Property Mapping**: Correct MCP to Notion property conversion"
+    },
+    {
+      "line": 219,
+      "text": "The MCP Agent Protocol v2.0 implementation has been successfully completed with full compliance to all specified requirements. All documentation procedures have been executed, versioning and archival procedures have been performed, and organizational alignment has been validated. The system is ready for production deployment with comprehensive documentation and logging in Notion."
+    }
+  ],
+  "mcp-agent-protocol/ULTIMATE_COMPLETION_SUMMARY_FINAL_V2.0.md": [
+    {
+      "line": 163,
+      "text": "- `mcp_notion_client.py` - Notion API client"
+    }
+  ],
+  "mcp-agent-protocol/ULTIMATE_COMPLETION_SUMMARY_FINAL_V2.md": [
+    {
+      "line": 23,
+      "text": "- **MCPNotionClientV2** - Notion API integration"
+    }
+  ],
+  "mcp-agent-protocol/docs/ARCHITECTURE.md": [
+    {
+      "line": 18,
+      "text": "The MCP Agent Protocol v2.0 is designed as a distributed, multi-agent system for task management and coordination using Notion as the central data store. The architecture follows a microservices pattern with clear separation of concerns."
+    },
+    {
+      "line": 46,
+      "text": "- **Query Building**: Converts MCP queries to Notion API format"
+    },
+    {
+      "line": 47,
+      "text": "- **Property Mapping**: Converts between MCP and Notion property formats"
+    },
+    {
+      "line": 104,
+      "text": "Agent \u2192 TaskManager \u2192 NotionMCPClient \u2192 Notion API \u2192 Database"
+    }
+  ],
+  "mcp-agent-protocol/docs/DEPLOYMENT_GUIDE.md": [
+    {
+      "line": 208,
+      "text": "ExecStart=/opt/mcp-agent-protocol/venv/bin/python -m src.main notion-ai"
+    }
+  ],
+  "mcp-agent-protocol/docs/IMPLEMENTATION_GUIDE_v2.md": [
+    {
+      "line": 16,
+      "text": "4. **MCPNotionClientV2** - Notion API integration"
+    },
+    {
+      "line": 430,
+      "text": "### MCPNotionClientV2"
+    }
+  ],
+  "mcp-agent-protocol/docs/PROMPT_IMPROVEMENT_RECOMMENDATIONS.md": [
+    {
+      "line": 13,
+      "text": "4. **Direct API Integration**: Bypassed MCP proxy tools for direct Notion API usage"
+    }
+  ],
+  "mcp-agent-protocol/docs/QUICK_START.md": [
+    {
+      "line": 118,
+      "text": "from mcp_agent_protocol.api.notion_client import NotionMCPClient"
+    },
+    {
+      "line": 135,
+      "text": "from mcp_agent_protocol.agents.notion_ai_data_ops_agent import NotionAIDataOpsAgent"
+    }
+  ],
+  "mcp-agent-protocol/docs/README.md": [
+    {
+      "line": 5,
+      "text": "The MCP (Multi-Agent Coordination Protocol) v2.0 is a comprehensive framework for managing task execution, agent coordination, and automated workflow management with Notion integration."
+    }
+  ],
+  "mcp-agent-protocol/docs/SCRIPT_SYNCHRONIZATION_GUIDE.md": [
+    {
+      "line": 11,
+      "text": "Following the **HOTFIX** guidance provided in the MCP Agent Protocol v2.0 documentation, we use the official Notion API directly rather than MCP proxy tools:"
+    }
+  ],
+  "mcp-agent-protocol/prompt_templates/ENHANCED_TECHNICAL_SPECIFICATION_PROMPT_V2.md": [
+    {
+      "line": 160,
+      "text": "# MCP v2.0 Notion Client Requirements"
+    }
+  ],
+  "mcp_agent_protocol/ENHANCED_PROMPT_OPTIMIZATION_RECOMMENDATIONS.md": [
+    {
+      "line": 85,
+      "text": "\"Implement the MCP Agent Protocol v2.0 with comprehensive features including task selection, execution, agent coordination, Notion integration, enhanced logging, error handling, and status management.\""
+    }
+  ],
+  "mcp_agent_protocol/NOTION_DOCUMENTATION.md": [
+    {
+      "line": 1,
+      "text": "# MCP Agent Protocol v2.0 - Notion Documentation"
+    }
+  ],
+  "mcp_agent_protocol/OPTIMIZED_PROMPTS.md": [
+    {
+      "line": 280,
+      "text": "- **Standards Compliance**: MCP Protocol v2.0 compliance, Notion API standards"
+    }
+  ],
+  "mcp_agent_protocol/README.md": [
+    {
+      "line": 3,
+      "text": "A comprehensive implementation of the MCP (Multi-Agent Coordination Protocol) for task management, agent coordination, and Notion integration."
+    }
+  ],
+  "mcp_agent_protocol/docs/PROMPT_TEMPLATES.md": [
+    {
+      "line": 180,
+      "text": "- **Standards**: MCP Protocol v2.0 specifications, Notion API standards"
+    }
+  ],
+  "mcp_automation/FINAL_VALIDATION_REPORT.md": [
+    {
+      "line": 38,
+      "text": "- **NotionMCPClient** \u2705 - Notion API client initialized correctly"
+    }
+  ],
+  "mcp_automation/VALIDATION_REPORT.md": [
+    {
+      "line": 35,
+      "text": "- \u2705 **NotionMCPClient** - Notion API client initialized correctly"
+    },
+    {
+      "line": 68,
+      "text": "- **MCP Task Processing** - Successfully processes MCP tasks from Notion"
+    },
+    {
+      "line": 132,
+      "text": "1. **MCP Task Processing** - Can process real MCP tasks from Notion"
+    }
+  ],
+  "seren-media-workflows/python-scripts/MCP_TASK_EXECUTION_SUMMARY.md": [
+    {
+      "line": 114,
+      "text": "The MCP task execution demonstrates that Cursor automation works with real MCP prompts that result in Notion actions. The system successfully:"
+    }
+  ],
+  "universal_codebase_audit/schema_registry/SCHEMA_DRIFT_PATROL_COMPLETION_2025-12-05.md": [
+    {
+      "line": 18,
+      "text": "- \u2705 Notion MCP Integration (`notion_mcp_integration.py`) \u2014 Complete"
+    }
+  ],
+  "universal_codebase_audit/schema_registry/SCHEMA_DRIFT_PATROL_COMPLETION_2025-12-06.md": [
+    {
+      "line": 248,
+      "text": "- [x] Notion MCP Integration (`notion_mcp_integration.py`)"
+    }
+  ],
+  "universal_codebase_audit/schema_registry/SCHEMA_DRIFT_PATROL_IMPLEMENTATION_COMPLETE_2025-12-05.md": [
+    {
+      "line": 42,
+      "text": "4. **Notion MCP Integration** (`notion_mcp_integration.py`)"
+    }
+  ],
+  "universal_codebase_audit/schema_registry/SCHEMA_DRIFT_PATROL_IMPLEMENTATION_SUMMARY_2025-12-05.md": [
+    {
+      "line": 18,
+      "text": "- \u2705 Notion MCP Integration (`notion_mcp_integration.py`)"
+    }
+  ],
+  "universal_codebase_audit/schema_registry/SCHEMA_DRIFT_PATROL_IMPLEMENTATION_SUMMARY_2025-12-05_FINAL.md": [
+    {
+      "line": 18,
+      "text": "- \u2705 Notion MCP Integration (`notion_mcp_integration.py`)"
+    }
+  ],
+  "universal_codebase_audit/schema_registry/VERIFICATION_CHECKLIST_2025-12-05.md": [
+    {
+      "line": 35,
+      "text": "- [x] **Notion MCP Integration** (`notion_mcp_integration.py`)"
+    }
+  ],
+  "var/logs/handoff_generation_20250127_execution.md": [
+    {
+      "line": 13,
+      "text": "**Check:** Notion API access confirmed via `mcp_notionApi_API-get-self`"
+    }
+  ],
+  "var/logs/handoff_generation_20250128_final.md": [
+    {
+      "line": 44,
+      "text": "**Limitation:** MCP Notion API has constraints on complex queries and data source template access."
+    }
+  ],
+  "var/logs/handoff_generation_20250128_status.md": [
+    {
+      "line": 8,
+      "text": "Handoff generation process initiated per prompt directive. Current status: **BLOCKED** - No active \"In Progress\" task found, and MCP Notion API query format limitations prevent full compliance check execution."
+    },
+    {
+      "line": 40,
+      "text": "- **Reason:** MCP Notion API query format issues"
+    },
+    {
+      "line": 68,
+      "text": "2. **Short-term:** Resolve MCP Notion API query format issues or use Python script with direct Notion client"
+    }
+  ]
+}

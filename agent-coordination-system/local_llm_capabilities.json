@@ -1,0 +1,38 @@
+[
+  {
+    "capability_id": "LOCAL_LLM_DRIVE_SHEETS_RUN_SUMMARY",
+    "title": "Local LLM – DriveSheets Run Summary",
+    "description": "Summarize recent DriveSheets sync runs from Execution-Logs or UnifiedLogger JSONL output to highlight success/failure patterns.",
+    "priority": "P2",
+    "area": "LocalLLM",
+    "references": {
+      "paths": [
+        "agent-coordination-system/llm/drive_sheets_hooks.py",
+        "gas-scripts/drive-sheets-sync/Code.gs"
+      ],
+      "identifiers": [
+        "DriveSheets",
+        "Execution-Logs DB",
+        "UnifiedLoggerGAS"
+      ]
+    }
+  },
+  {
+    "capability_id": "LOCAL_LLM_DRIVE_SHEETS_ANOMALY_HINTS",
+    "title": "Local LLM – DriveSheets Anomaly Detection Hints",
+    "description": "Use local models to flag unusual failure rates, unreachable data sources, or repeated schema skips in DriveSheets runs.",
+    "priority": "P2",
+    "area": "LocalLLM",
+    "references": {
+      "paths": [
+        "agent-coordination-system/llm/drive_sheets_hooks.py",
+        "gas-scripts/drive-sheets-sync/Code.gs"
+      ],
+      "identifiers": [
+        "Notion ↔ Google Drive + Sheets Sync",
+        "CONFIG.EXECUTION_LOGS_DB_ID",
+        "run summaries"
+      ]
+    }
+  }
+]

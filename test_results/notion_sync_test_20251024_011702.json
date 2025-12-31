@@ -1,0 +1,147 @@
+{
+  "test_date": "2025-10-24T01:16:06.519797",
+  "environment": {
+    "NOTION_TOKEN": {
+      "set": true,
+      "value": "ntn_620653..."
+    },
+    "NOTION_API_KEY": {
+      "set": true,
+      "value": "ntn_620653..."
+    },
+    "METRICOOL_API_KEY": {
+      "set": false,
+      "value": null
+    },
+    "PLAYLISTS_DB_ID": {
+      "set": false,
+      "value": null
+    },
+    "TRACKS_DB_ID": {
+      "set": true,
+      "value": "27ce73616c..."
+    },
+    "IMGBB_API_KEY": {
+      "set": false,
+      "value": null
+    },
+    "VIBES_ROOT": {
+      "set": true,
+      "value": "/Volumes/V..."
+    }
+  },
+  "scripts": {
+    "notion_script_runner": {
+      "description": "Main Notion script execution system",
+      "path": "scripts/notion_script_runner_v2.0_20251023.py",
+      "exists": true,
+      "import": {
+        "importable": true,
+        "error": null
+      },
+      "dry_run": {
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "01:16:08 - INFO - ================================================================================\n01:16:08 - INFO - NOTION SCRIPT RUNNER v2.0 - Automated Execution System\n01:16:08 - INFO - ================================================================================\n01:16:08 - INFO - Started: 2025-10-24T01:16:08.550972\n01:16:08 - INFO - \ud83d\udd0d DRY RUN MODE - No scripts will be executed\n01:16:10 - INFO - \u2713 No scripts found with ACTION='RUN'\n",
+        "success": true
+      }
+    },
+    "metricool_sync": {
+      "description": "Metricool to Notion synchronization",
+      "path": "scripts/metricool_notion_sync_runner.py",
+      "exists": true,
+      "import": {
+        "importable": true,
+        "error": null
+      },
+      "dry_run": {
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "Traceback (most recent call last):\n  File \"/Users/brianhellemn/Projects/github-production/scripts/metricool_notion_sync_runner.py\", line 14, in <module>\n    from shared_core.metricool_api_client import MetricoolAPIClient\n  File \"<frozen importlib._bootstrap>\", line 1007, in _find_and_load\n  File \"<frozen importlib._bootstrap>\", line 986, in _find_and_load_unlocked\n  File \"<frozen importlib._bootstrap>\", line 680, in _load_unlocked\n  File \"<frozen importlib._bootstrap_external>\", line 846, in exe",
+        "success": false
+      }
+    },
+    "website_mapper_v3": {
+      "description": "Website content to Notion mapping (V3)",
+      "path": "scripts/website_notion_mapping_modular-V3.py",
+      "exists": true,
+      "import": {
+        "importable": true,
+        "error": null
+      },
+      "dry_run": {
+        "returncode": 0,
+        "stdout": "\u26a0\ufe0f Using inline NOTION_VERSION constant (shared_core/constants.py not found)\n\u2705 Loaded configuration from .env file\nusage: website_notion_mapping_modular-V3.py [-h] [--respect-robots]\n                                            [--dry-run] [--yes]\n                                            [--token TOKEN]\n                                            [--no-default-blocklist]\n                                            [--resume] [--no-resume]\n                                            [--save-int",
+        "stderr": "",
+        "success": true
+      }
+    },
+    "website_mapper_v2": {
+      "description": "Website content to Notion mapping (V2)",
+      "path": "Documents 06.00.04/website_notion_mapping_modular.py",
+      "exists": true,
+      "import": {
+        "importable": true,
+        "error": null
+      },
+      "dry_run": {
+        "success": false,
+        "error": "Script timeout (10s)"
+      }
+    },
+    "playlist_export": {
+      "description": "Export Notion playlists to various formats",
+      "path": "monolithic-scripts/notion_playlist_export.py",
+      "exists": true,
+      "import": {
+        "importable": true,
+        "error": null
+      },
+      "dry_run": {
+        "success": false,
+        "error": "Script timeout (10s)"
+      }
+    },
+    "delete_db_items": {
+      "description": "Bulk delete Notion database items",
+      "path": "scripts/delete_db_items.py",
+      "exists": true,
+      "import": {
+        "importable": true,
+        "error": null
+      },
+      "dry_run": {
+        "success": false,
+        "error": "Script timeout (10s)"
+      }
+    },
+    "eagle_sync": {
+      "description": "Eagle to Google Drive and Notion sync",
+      "path": "monolithic-scripts/eagle_sync_to_GD_and_Notion-fingerprint-cursor-2.py",
+      "exists": true,
+      "import": {
+        "importable": true,
+        "error": null
+      },
+      "dry_run": {
+        "returncode": 1,
+        "stdout": "",
+        "stderr": "  File \"/Users/brianhellemn/Projects/github-production/monolithic-scripts/eagle_sync_to_GD_and_Notion-fingerprint-cursor-2.py\", line 40\n    ---\n       ^\nSyntaxError: invalid syntax\n",
+        "success": false
+      }
+    },
+    "soundcloud_download": {
+      "description": "SoundCloud download with Notion integration",
+      "path": "soundcloud_download_prod_merge-2.py",
+      "exists": true,
+      "import": {
+        "importable": true,
+        "error": null
+      },
+      "dry_run": {
+        "success": false,
+        "error": "Script timeout (10s)"
+      }
+    }
+  }
+}

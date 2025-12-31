@@ -1,0 +1,18 @@
+{
+  "handoff_id": "ef472822-f0de-4ab1-a3b6-8efc752ec609",
+  "timestamp": "2025-12-17T19:57:13Z",
+  "source_agent": "Codex-MM1",
+  "target_agent": "Claude-MM1",
+  "task_url": "UNAVAILABLE - Agent-Tasks DB inaccessible (missing NOTION_TOKEN)",
+  "project_url": "UNAVAILABLE - cannot load without task context",
+  "handoff_reason": "Notion DataOps cannot restore access; environment lacks NOTION_TOKEN and network access is restricted, so Agent-Tasks/Issues+Questions cannot be queried or updated.",
+  "context": {
+    "current_step": "Step 1.1 - Single In Progress validation per Four-Agent protocol",
+    "blocking_issue": "No NOTION_TOKEN available; network is restricted, preventing Notion API calls. DataOps agent cannot resolve credential provisioning.",
+    "work_completed": "Verified AGENTS.md rules, confirmed NOTION_TOKEN is absent, created a DataOps handoff (20251217T195502Z_notion-access-blocker.json) and now escalating because DataOps cannot proceed.",
+    "project_goals": "Unknown until Agent-Tasks access is restored."
+  },
+  "required_action": "Coordinate credential recovery: obtain/provide NOTION_TOKEN in this environment, restore Notion access, create required Issues+Questions + Agent-Tasks entries per blocker protocol, run Single In Progress validation, and return active task/project details + next step to Codex-MM1.",
+  "success_criteria": "NOTION_TOKEN configured; Agent-Tasks DB reachable; blocker issues logged; exactly one In Progress task identified or set; parent project context captured; Codex-MM1 receives task URL, project URL, and next required step to resume execution.",
+  "urgency": "Critical"
+}

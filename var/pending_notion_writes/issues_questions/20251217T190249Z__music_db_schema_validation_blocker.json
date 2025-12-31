@@ -1,0 +1,17 @@
+{
+  "title": "Music database schema validation blocked (no Notion access)",
+  "description": "Cannot validate Music Tracks / Music Artists schemas (and discover Music Playlists) because Notion access is unavailable in this session. Environment is network_access=restricted with no NOTION token configured, so required database queries, property/type checks, and relation integrity verification cannot run.",
+  "severity": "Critical",
+  "source": "Music Workflow",
+  "metadata": {
+    "network_access": "restricted",
+    "notion_token_present": false,
+    "component": "Music database schema validation",
+    "target_dbs": [
+      "27ce73616c2780fbb40efefdd47d6640",
+      "20ee73616c27816d9817d4348f6de07c",
+      "Music Playlists (discover)"
+    ]
+  },
+  "next_step": "Provide NOTION_TOKEN and allow Notion network access (or run from an environment with credentials) so Music Tracks/Artists/Playlists schemas can be inspected, property alignment verified, and relations validated per 4-agent chain requirements."
+}

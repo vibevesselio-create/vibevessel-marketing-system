@@ -1,0 +1,114 @@
+{
+  "db_info": {
+    "properties": {
+      "Name": {
+        "id": "title",
+        "name": "Name",
+        "type": "title",
+        "title": {}
+      },
+      "Tags": {
+        "id": "tags",
+        "name": "Tags",
+        "type": "multi_select",
+        "multi_select": {}
+      }
+    }
+  },
+  "entries": [
+    {
+      "id": "page_client_proposal",
+      "created_time": "2024-09-01T10:00:00Z",
+      "last_edited_time": "2024-09-02T12:00:00Z",
+      "properties": {
+        "Name": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "plain_text": "Client Proposal",
+              "text": {
+                "content": "Client Proposal"
+              }
+            }
+          ]
+        },
+        "Tags": {
+          "id": "tags",
+          "type": "multi_select",
+          "multi_select": [
+            {
+              "id": "priority",
+              "name": "Priority"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "page_client_proposal_copy",
+      "created_time": "2024-09-03T09:30:00Z",
+      "last_edited_time": "2024-09-04T08:45:00Z",
+      "properties": {
+        "Name": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "plain_text": "Client Proposal_2",
+              "text": {
+                "content": "Client Proposal_2"
+              }
+            }
+          ]
+        },
+        "Tags": {
+          "id": "tags",
+          "type": "multi_select",
+          "multi_select": [
+            {
+              "id": "priority",
+              "name": "Priority"
+            },
+            {
+              "id": "followup",
+              "name": "Follow Up"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "page_team_notes",
+      "created_time": "2024-08-28T14:15:00Z",
+      "last_edited_time": "2024-08-30T16:00:00Z",
+      "properties": {
+        "Name": {
+          "id": "title",
+          "type": "title",
+          "title": [
+            {
+              "type": "text",
+              "plain_text": "Team Meeting Notes",
+              "text": {
+                "content": "Team Meeting Notes"
+              }
+            }
+          ]
+        },
+        "Tags": {
+          "id": "tags",
+          "type": "multi_select",
+          "multi_select": [
+            {
+              "id": "internal",
+              "name": "Internal"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

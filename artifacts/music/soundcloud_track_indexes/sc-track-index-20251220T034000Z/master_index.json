@@ -1,0 +1,58 @@
+{
+  "generated_at": "2025-12-20",
+  "run_id": "sc-track-index-20251220T034000Z",
+  "counts": {
+    "total_artists": 3,
+    "total_tracks": 191,
+    "total_excluded": 22
+  },
+  "artists": [
+    {
+      "artist": "mportaudio",
+      "artist_url": "https://soundcloud.com/mportaudio",
+      "counts": {
+        "total_items_seen": 121,
+        "excluded_count": 12,
+        "total_tracks": 109
+      },
+      "files": {
+        "full": "artists/mportaudio.json",
+        "chunks": [
+          "artists/mportaudio/chunks/mportaudio__001-050.json",
+          "artists/mportaudio/chunks/mportaudio__051-100.json",
+          "artists/mportaudio/chunks/mportaudio__101-109.json"
+        ]
+      }
+    },
+    {
+      "artist": "certifiedalejo",
+      "artist_url": "https://soundcloud.com/certifiedalejo",
+      "counts": {
+        "total_items_seen": 58,
+        "excluded_count": 8,
+        "total_tracks": 50
+      },
+      "files": {
+        "full": "artists/certifiedalejo.json",
+        "chunks": [
+          "artists/certifiedalejo/chunks/certifiedalejo__001-050.json"
+        ]
+      }
+    },
+    {
+      "artist": "luzcid",
+      "artist_url": "https://soundcloud.com/luzcid",
+      "counts": {
+        "total_items_seen": 34,
+        "excluded_count": 2,
+        "total_tracks": 32
+      },
+      "files": {
+        "full": "artists/luzcid.json",
+        "chunks": [
+          "artists/luzcid/chunks/luzcid__001-032.json"
+        ]
+      }
+    }
+  ]
+}

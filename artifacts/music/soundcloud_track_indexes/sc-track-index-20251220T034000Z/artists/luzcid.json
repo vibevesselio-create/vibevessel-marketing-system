@@ -1,0 +1,193 @@
+{
+  "artist": "luzcid",
+  "artist_url": "https://soundcloud.com/luzcid",
+  "generated_at": "2025-12-20",
+  "rules": {
+    "exclude_title_patterns": [
+      "\\bfull\\s*set\\b",
+      "\\bheadline\\s*set\\b",
+      "\\bdj\\s*set\\b",
+      "\\bset\\s*@\\b",
+      "\\bset\\s*\\d",
+      "\\bset\\s*\\(",
+      "\\bset\\s*\\[",
+      "\\bset\\s*from\\b",
+      "\\b\\w+\\s+set\\s*$",
+      "\\bmix\\b",
+      "\\bminimix\\b",
+      "\\bradio\\s*mix\\b",
+      "\\blive\\s+at\\b",
+      "\\blive\\s*tool\\b",
+      "\\b\\(live\\)\\b",
+      "\\blive\\s*\\)\\s*$",
+      "\\brecorded\\s*live\\b",
+      "\\bsessions?\\b",
+      "\\bshowcase\\b",
+      "\\bperformance\\b",
+      "\\b(b2b|back\\s*to\\s*back)\\b",
+      "\\bhour\\s*(mix|set)\\b",
+      "\\bedc\\b.*\\bset\\b",
+      "\\bcoachella\\b.*\\bset\\b",
+      "\\bfestival\\b.*\\bset\\b",
+      "set\\s*intro\\s*track",
+      "\\bwip\\b",
+      "\\bwork\\s*in\\s*progress\\b",
+      "\\bunfinished\\b",
+      "\\bdemo\\b",
+      "\\bsketch\\b",
+      "\\brough\\s*cut\\b"
+    ],
+    "duration_threshold_seconds": 1800,
+    "exclude_wip": true,
+    "source_tracks_url": "https://soundcloud.com/luzcid/tracks",
+    "pipeline": "soundcloud_track_index_exporter.py",
+    "run_id": "sc-track-index-20251220T034000Z"
+  },
+  "counts": {
+    "total_items_seen": 34,
+    "excluded_count": 2,
+    "total_tracks": 32
+  },
+  "excluded_items": [
+    {
+      "title": "Levitate EP Mini Mix",
+      "url": "https://soundcloud.com/luzcid/levitate-ep-minimix",
+      "reason": "matched_title_rule:\\bmix\\b"
+    },
+    {
+      "title": "Road To VSC 2018 Mix Series #011: LUZCID",
+      "url": "https://soundcloud.com/luzcid/road-to-vsc-2018-mix-series-012-luzcid",
+      "reason": "matched_title_rule:\\bmix\\b"
+    }
+  ],
+  "tracks": [
+    {
+      "title": "Buunshin - Cancelled (LUZCID Remix)",
+      "url": "https://soundcloud.com/luzcid/buunshin-cancelled-luzcid-remix-1"
+    },
+    {
+      "title": "Crave You (LUZCID Bootleg)",
+      "url": "https://soundcloud.com/luzcid/crave-you-luzcid-bootleg"
+    },
+    {
+      "title": "Dope Bitch",
+      "url": "https://soundcloud.com/luzcid/dope-bitch"
+    },
+    {
+      "title": "DREAMTEMPO Vol. 1",
+      "url": "https://soundcloud.com/luzcid/dt1"
+    },
+    {
+      "title": "Everyday",
+      "url": "https://soundcloud.com/luzcid/luzcid-everyday"
+    },
+    {
+      "title": "G Jones Into The Digtal Abyss (LUZCID Remix)",
+      "url": "https://soundcloud.com/luzcid/g-jones-into-the-digtal-abyss-luzcid-remix"
+    },
+    {
+      "title": "HUSH Flip",
+      "url": "https://soundcloud.com/luzcid/hush-flip"
+    },
+    {
+      "title": "HYPNAGOGIA MIXTAPE",
+      "url": "https://soundcloud.com/luzcid/luzcid-hypnagogia-mixtape"
+    },
+    {
+      "title": "Impact ft. Messinian",
+      "url": "https://soundcloud.com/luzcid/impact"
+    },
+    {
+      "title": "Kendrick Lamar - Humble (LUZCID Flip)",
+      "url": "https://soundcloud.com/luzcid/kendrick-lamar-humble-luzcid-flip"
+    },
+    {
+      "title": "Laid Back",
+      "url": "https://soundcloud.com/luzcid/laid-back"
+    },
+    {
+      "title": "Liquid Lightning",
+      "url": "https://soundcloud.com/luzcid/liquid-lightning"
+    },
+    {
+      "title": "LUZCID & Projectory - Here Comes The Rain Ft. Morgan Hall",
+      "url": "https://soundcloud.com/luzcid/herecomestherain"
+    },
+    {
+      "title": "LUZCID - Amber Drift",
+      "url": "https://soundcloud.com/luzcid/ambdrift"
+    },
+    {
+      "title": "LUZCID - Aurora Slipstream",
+      "url": "https://soundcloud.com/luzcid/aurslip"
+    },
+    {
+      "title": "LUZCID - Bass Lock",
+      "url": "https://soundcloud.com/luzcid/luzcid-bass-lock-1"
+    },
+    {
+      "title": "LUZCID - Cruisin' (Feat. Gary Carpentier)",
+      "url": "https://soundcloud.com/luzcid/cruisin"
+    },
+    {
+      "title": "LUZCID - Dancing In The Rain",
+      "url": "https://soundcloud.com/luzcid/luzcid-dancing-in-the-rain"
+    },
+    {
+      "title": "LUZCID - Destruction",
+      "url": "https://soundcloud.com/luzcid/luzcid-destruction"
+    },
+    {
+      "title": "LUZCID - Ghost Town Roulette",
+      "url": "https://soundcloud.com/luzcid/gtr"
+    },
+    {
+      "title": "LUZCID - Invasion",
+      "url": "https://soundcloud.com/luzcid/luzcid-invasion"
+    },
+    {
+      "title": "LUZCID - Jitter Bug Lovin' Feat. Gary Carpentier",
+      "url": "https://soundcloud.com/luzcid/jitter-bug-lovin-feat-gary-carpentier"
+    },
+    {
+      "title": "LUZCID - My Name Is",
+      "url": "https://soundcloud.com/luzcid/luzcid-my-name-is"
+    },
+    {
+      "title": "LUZCID - Open Your Eyes",
+      "url": "https://soundcloud.com/luzcid/luzcid-open-your-eyes"
+    },
+    {
+      "title": "LUZCID - Rasta Vibe",
+      "url": "https://soundcloud.com/luzcid/luzcid-rasta-vibe"
+    },
+    {
+      "title": "LUZCID - Set Me Free",
+      "url": "https://soundcloud.com/luzcid/luzcid-set-me-free"
+    },
+    {
+      "title": "LUZCID - Stardust",
+      "url": "https://soundcloud.com/luzcid/stardust"
+    },
+    {
+      "title": "LUZCID x MIDIcinal Feat. Livolsi - Wet N' Jolly",
+      "url": "https://soundcloud.com/luzcid/luzcid-x-midicinal-feat-1"
+    },
+    {
+      "title": "Move For Me (LUZCID Bootleg)",
+      "url": "https://soundcloud.com/luzcid/move-for-me-luzcid-bootleg"
+    },
+    {
+      "title": "Orygin - Osiris (Luzcid Remix)",
+      "url": "https://soundcloud.com/luzcid/orygin-osiris-luzcid-remix"
+    },
+    {
+      "title": "Sing Me To Sleep",
+      "url": "https://soundcloud.com/luzcid/sing-me-to-sleep"
+    },
+    {
+      "title": "Sing Me To Sleep (TLZMN Remix)",
+      "url": "https://soundcloud.com/luzcid/luzcid-sing-me-to-sleep-tlzmn-remix"
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "generated_at": "2025-12-19T01:55:17.594103+00:00",
+  "base_path": "/Users/brianhellemn/Documents/Agents/Agent-Triggers",
+  "scripts_db_id": "26ce73616c278178bc77f43aff00eddf",
+  "related_agent_task_id": "2cde73616c27818890d8ea481d60e2de",
+  "scripts": [
+    {
+      "name": "trigger_folder_orchestrator.py",
+      "path": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/trigger_folder_orchestrator.py",
+      "description": "Real-time watcher that scans agent trigger inboxes, creates Agent-Tasks in Notion, and archives processed files.",
+      "language": "Python",
+      "type": "Python Main Entrypoint",
+      "version": "v1.0",
+      "status": "4-Ready to Use",
+      "environment": "Production",
+      "action": "RUN",
+      "run_command": "python3 trigger_folder_orchestrator.py",
+      "scripts_db_page_id": "2cde7361-6c27-81eb-8466-dac9e1238fcf"
+    },
+    {
+      "name": "trigger_file_processor.py",
+      "path": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/trigger_file_processor.py",
+      "description": "Batch processor that scans agent trigger inboxes, parses trigger files (JSON/MD), and archives them with reporting and dry-run support.",
+      "language": "Python",
+      "type": "Python Main Entrypoint",
+      "version": "v1.0",
+      "status": "4-Ready to Use",
+      "environment": "Production",
+      "action": "RUN",
+      "run_command": "python3 trigger_file_processor.py",
+      "scripts_db_page_id": "2cde7361-6c27-8157-a195-d0cbbb913590"
+    }
+  ],
+  "folder_audit": {
+    "ChatGPT-Code-Review-Agent-Trigger": [
+      "01_inbox",
+      "02_processed",
+      "03_failed"
+    ],
+    "ChatGPT-Personal-Assistant-Agent-Trigger": [
+      "01_inbox",
+      "02_processed",
+      "03_failed"
+    ],
+    "ChatGPT-Strategic-Agent-Trigger": [
+      "01_inbox",
+      "02_processed",
+      "03_failed"
+    ],
+    "Claude-MM1-Agent-Research-Trigger": [
+      "01_inbox",
+      "02_processed",
+      "03_failed"
+    ],
+    "Claude-MM1-Agent-Trigger": [
+      "01_inbox",
+      "02_processed",
+      "03_failed",
+      "prompts"
+    ],
+    "Claude-MM2-Agent-Trigger": [
+      "01_inbox",
+      "02_processed",
+      "03_failed"
+    ],
+    "Codex-MM1-Agent-Trigger": [
+      "01_inbox",
+      "02_processed",
+      "03_failed"
+    ],
+    "Cursor-MM1-Agent-Trigger": [
+      "01_inbox",
+      "02_processed",
+      "03_failed"
+    ],
+    "Cursor-MM2-Agent-Trigger": [
+      "01_inbox",
+      "02_processed",
+      "03_failed"
+    ],
+    "Notion-AI-Data-Operations-Agent-Trigger": [
+      "01_inbox",
+      "02_processed",
+      "03_failed"
+    ],
+    "Notion-AI-Research-Agent-Trigger": [
+      "01_inbox",
+      "02_processed",
+      "03_failed"
+    ],
+    "_archive": [
+      "scripts"
+    ],
+    "orchestrator_logs": []
+  },
+  "orphaned_files": [
+    ".DS_Store",
+    ".orchestrator_state.json",
+    "20251217__MASTER-COORDINATION__Music-Workflow-4-Agent-Review.md",
+    "AGENT_COORDINATION_DOWNSTREAM_CONTEXT_TEMPLATE_v2.md",
+    "CHAIN-PROTOCOL__Self-Propagating-Handoff-v1.md",
+    "FOUR_AGENT_AUTONOMOUS_EXECUTION_PROTOCOL_v5.md",
+    "README.md",
+    "co.serenmedia.trigger-folder-orchestrator.plist",
+    "processing_report_20251218.json",
+    "processing_report_20251219.json",
+    "scripts_manifest.json",
+    "trigger_file_processor.py",
+    "trigger_folder_orchestrator.py"
+  ],
+  "notes": [
+    "Folder parity now shows Claude-MM1-Agent-Research-Trigger includes 03_failed.",
+    "processing_report_20251219.json generated via dry-run (no moves)."
+  ]
+}

@@ -1,0 +1,765 @@
+{
+  "run_id": "de5da8d165cc0dc5dd79f2ee8bbd2508",
+  "generated_at": "2025-12-10T15:25:57.411803+00:00",
+  "snapshot": {
+    "run_id": "de5da8d165cc0dc5dd79f2ee8bbd2508",
+    "discovered_at": "2025-12-10T15:25:57.409993+00:00",
+    "folders": [
+      {
+        "name": "Chatgpt Personal Assistant Agent – Primary Trigger Inbox",
+        "agent_name": "Chatgpt Personal Assistant Agent",
+        "role": "primary",
+        "environment": "local",
+        "host": "Mac.lan",
+        "local_path": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/ChatGPT-Personal-Assistant-Agent-Trigger/01_inbox",
+        "remote_path": null,
+        "owning_service": "trigger_monitor",
+        "mirror_target": null,
+        "failover_mode": "normal",
+        "registered_scripts": [],
+        "registered_km_macros": [],
+        "registered_workflows": [],
+        "registered_backup_routes": [],
+        "discovered_consumers": [],
+        "health": {
+          "status": "broken",
+          "flags": [
+            "unregistered",
+            "no_consumer",
+            "logs_missing"
+          ],
+          "last_event_time": null,
+          "observed_events_window": 0,
+          "stale_trigger_count": 0,
+          "last_discovery_timestamp": "2025-12-10T15:25:57.368783+00:00"
+        },
+        "related_execution_logs": [],
+        "related_desktop_events": [],
+        "related_webhook_events": []
+      },
+      {
+        "name": "Chatgpt Code Review Agent – Primary Trigger Inbox",
+        "agent_name": "Chatgpt Code Review Agent",
+        "role": "primary",
+        "environment": "local",
+        "host": "Mac.lan",
+        "local_path": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/ChatGPT-Code-Review-Agent-Trigger/01_inbox",
+        "remote_path": null,
+        "owning_service": "trigger_monitor",
+        "mirror_target": null,
+        "failover_mode": "normal",
+        "registered_scripts": [],
+        "registered_km_macros": [],
+        "registered_workflows": [],
+        "registered_backup_routes": [],
+        "discovered_consumers": [],
+        "health": {
+          "status": "broken",
+          "flags": [
+            "unregistered",
+            "no_consumer",
+            "trigger_stale",
+            "logs_missing"
+          ],
+          "last_event_time": "2025-12-10T15:00:32.464253+00:00",
+          "observed_events_window": 2,
+          "stale_trigger_count": 2,
+          "last_discovery_timestamp": "2025-12-10T15:25:57.370160+00:00"
+        },
+        "related_execution_logs": [],
+        "related_desktop_events": [],
+        "related_webhook_events": []
+      },
+      {
+        "name": "Notion AI Research Agent – Primary Trigger Inbox",
+        "agent_name": "Notion AI Research Agent",
+        "role": "primary",
+        "environment": "local",
+        "host": "Mac.lan",
+        "local_path": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/Notion-AI-Research-Agent-Trigger/01_inbox",
+        "remote_path": null,
+        "owning_service": "trigger_monitor",
+        "mirror_target": null,
+        "failover_mode": "normal",
+        "registered_scripts": [],
+        "registered_km_macros": [],
+        "registered_workflows": [],
+        "registered_backup_routes": [],
+        "discovered_consumers": [
+          {
+            "consumer_type": "km_macro",
+            "consumer_id": null,
+            "consumer_name": "KM Macro (discovered)",
+            "config_path": null,
+            "registered": false,
+            "discovered": true,
+            "trigger_role": "consumer"
+          }
+        ],
+        "health": {
+          "status": "degraded",
+          "flags": [
+            "unregistered",
+            "unregistered_consumer",
+            "trigger_stale",
+            "logs_missing"
+          ],
+          "last_event_time": "2025-12-10T15:00:32.755894+00:00",
+          "observed_events_window": 5,
+          "stale_trigger_count": 19,
+          "last_discovery_timestamp": "2025-12-10T15:25:57.372027+00:00"
+        },
+        "related_execution_logs": [],
+        "related_desktop_events": [],
+        "related_webhook_events": []
+      },
+      {
+        "name": "Codex MM1 Agent – Primary Trigger Inbox",
+        "agent_name": "Codex MM1 Agent",
+        "role": "primary",
+        "environment": "local",
+        "host": "Mac.lan",
+        "local_path": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/Codex-MM1-Agent-Trigger/01_inbox",
+        "remote_path": null,
+        "owning_service": "trigger_monitor",
+        "mirror_target": null,
+        "failover_mode": "normal",
+        "registered_scripts": [],
+        "registered_km_macros": [],
+        "registered_workflows": [],
+        "registered_backup_routes": [],
+        "discovered_consumers": [],
+        "health": {
+          "status": "broken",
+          "flags": [
+            "unregistered",
+            "no_consumer",
+            "trigger_stale",
+            "logs_missing"
+          ],
+          "last_event_time": "2025-12-10T15:00:33.939160+00:00",
+          "observed_events_window": 5,
+          "stale_trigger_count": 57,
+          "last_discovery_timestamp": "2025-12-10T15:25:57.374100+00:00"
+        },
+        "related_execution_logs": [],
+        "related_desktop_events": [],
+        "related_webhook_events": []
+      },
+      {
+        "name": "Notion AI Data Operations Agent – Primary Trigger Inbox",
+        "agent_name": "Notion AI Data Operations Agent",
+        "role": "primary",
+        "environment": "local",
+        "host": "Mac.lan",
+        "local_path": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/Notion-AI-Data-Operations-Agent-Trigger/01_inbox",
+        "remote_path": null,
+        "owning_service": "trigger_monitor",
+        "mirror_target": null,
+        "failover_mode": "normal",
+        "registered_scripts": [],
+        "registered_km_macros": [],
+        "registered_workflows": [],
+        "registered_backup_routes": [],
+        "discovered_consumers": [
+          {
+            "consumer_type": "km_macro",
+            "consumer_id": null,
+            "consumer_name": "KM Macro (discovered)",
+            "config_path": null,
+            "registered": false,
+            "discovered": true,
+            "trigger_role": "consumer"
+          }
+        ],
+        "health": {
+          "status": "degraded",
+          "flags": [
+            "unregistered",
+            "unregistered_consumer",
+            "trigger_stale",
+            "logs_missing"
+          ],
+          "last_event_time": "2025-12-10T07:41:30.999075+00:00",
+          "observed_events_window": 5,
+          "stale_trigger_count": 26,
+          "last_discovery_timestamp": "2025-12-10T15:25:57.384864+00:00"
+        },
+        "related_execution_logs": [],
+        "related_desktop_events": [],
+        "related_webhook_events": []
+      },
+      {
+        "name": "Chatgpt Strategic Agent – Primary Trigger Inbox",
+        "agent_name": "Chatgpt Strategic Agent",
+        "role": "primary",
+        "environment": "local",
+        "host": "Mac.lan",
+        "local_path": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/ChatGPT-Strategic-Agent-Trigger/01_inbox",
+        "remote_path": null,
+        "owning_service": "trigger_monitor",
+        "mirror_target": null,
+        "failover_mode": "normal",
+        "registered_scripts": [],
+        "registered_km_macros": [],
+        "registered_workflows": [],
+        "registered_backup_routes": [],
+        "discovered_consumers": [],
+        "health": {
+          "status": "broken",
+          "flags": [
+            "unregistered",
+            "no_consumer",
+            "trigger_stale",
+            "logs_missing"
+          ],
+          "last_event_time": "2025-12-10T15:00:32.464312+00:00",
+          "observed_events_window": 3,
+          "stale_trigger_count": 8,
+          "last_discovery_timestamp": "2025-12-10T15:25:57.385119+00:00"
+        },
+        "related_execution_logs": [],
+        "related_desktop_events": [],
+        "related_webhook_events": []
+      },
+      {
+        "name": "Claude MM1 Agent Research Trigger – Primary Trigger Inbox",
+        "agent_name": "Claude MM1 Agent Research Trigger",
+        "role": "primary",
+        "environment": "local",
+        "host": "Mac.lan",
+        "local_path": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/Claude-MM1-Agent-Research-Trigger/01_inbox",
+        "remote_path": null,
+        "owning_service": "trigger_monitor",
+        "mirror_target": null,
+        "failover_mode": "normal",
+        "registered_scripts": [],
+        "registered_km_macros": [],
+        "registered_workflows": [],
+        "registered_backup_routes": [],
+        "discovered_consumers": [],
+        "health": {
+          "status": "broken",
+          "flags": [
+            "unregistered",
+            "no_consumer",
+            "trigger_stale",
+            "logs_missing"
+          ],
+          "last_event_time": "2025-12-09T02:08:18.056436+00:00",
+          "observed_events_window": 0,
+          "stale_trigger_count": 2,
+          "last_discovery_timestamp": "2025-12-10T15:25:57.385578+00:00"
+        },
+        "related_execution_logs": [],
+        "related_desktop_events": [],
+        "related_webhook_events": []
+      },
+      {
+        "name": "Claude MM1 Agent – Primary Trigger Inbox",
+        "agent_name": "Claude MM1 Agent",
+        "role": "primary",
+        "environment": "local",
+        "host": "Mac.lan",
+        "local_path": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/Claude-MM1-Agent-Trigger/01_inbox",
+        "remote_path": null,
+        "owning_service": "trigger_monitor",
+        "mirror_target": null,
+        "failover_mode": "normal",
+        "registered_scripts": [],
+        "registered_km_macros": [],
+        "registered_workflows": [],
+        "registered_backup_routes": [],
+        "discovered_consumers": [
+          {
+            "consumer_type": "km_macro",
+            "consumer_id": null,
+            "consumer_name": "KM Macro (discovered)",
+            "config_path": null,
+            "registered": false,
+            "discovered": true,
+            "trigger_role": "consumer"
+          }
+        ],
+        "health": {
+          "status": "degraded",
+          "flags": [
+            "unregistered",
+            "unregistered_consumer",
+            "trigger_stale",
+            "logs_missing"
+          ],
+          "last_event_time": "2025-11-29T21:17:32.146744+00:00",
+          "observed_events_window": 0,
+          "stale_trigger_count": 29,
+          "last_discovery_timestamp": "2025-12-10T15:25:57.390534+00:00"
+        },
+        "related_execution_logs": [],
+        "related_desktop_events": [],
+        "related_webhook_events": []
+      },
+      {
+        "name": "Cursor MM2 Agent – Primary Trigger Inbox",
+        "agent_name": "Cursor MM2 Agent",
+        "role": "primary",
+        "environment": "local",
+        "host": "Mac.lan",
+        "local_path": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/Cursor-MM2-Agent-Trigger/01_inbox",
+        "remote_path": null,
+        "owning_service": "trigger_monitor",
+        "mirror_target": null,
+        "failover_mode": "normal",
+        "registered_scripts": [],
+        "registered_km_macros": [],
+        "registered_workflows": [],
+        "registered_backup_routes": [],
+        "discovered_consumers": [],
+        "health": {
+          "status": "broken",
+          "flags": [
+            "unregistered",
+            "no_consumer",
+            "trigger_stale",
+            "logs_missing"
+          ],
+          "last_event_time": "2025-12-09T02:08:18.057678+00:00",
+          "observed_events_window": 0,
+          "stale_trigger_count": 2,
+          "last_discovery_timestamp": "2025-12-10T15:25:57.390953+00:00"
+        },
+        "related_execution_logs": [],
+        "related_desktop_events": [],
+        "related_webhook_events": []
+      },
+      {
+        "name": "Cursor MM1 Agent – Primary Trigger Inbox",
+        "agent_name": "Cursor MM1 Agent",
+        "role": "primary",
+        "environment": "local",
+        "host": "Mac.lan",
+        "local_path": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/Cursor-MM1-Agent-Trigger/01_inbox",
+        "remote_path": null,
+        "owning_service": "trigger_monitor",
+        "mirror_target": null,
+        "failover_mode": "normal",
+        "registered_scripts": [],
+        "registered_km_macros": [],
+        "registered_workflows": [],
+        "registered_backup_routes": [],
+        "discovered_consumers": [
+          {
+            "consumer_type": "km_macro",
+            "consumer_id": null,
+            "consumer_name": "KM Macro (discovered)",
+            "config_path": null,
+            "registered": false,
+            "discovered": true,
+            "trigger_role": "consumer"
+          }
+        ],
+        "health": {
+          "status": "degraded",
+          "flags": [
+            "unregistered",
+            "unregistered_consumer",
+            "trigger_stale",
+            "logs_missing"
+          ],
+          "last_event_time": "2025-12-10T15:00:32.464442+00:00",
+          "observed_events_window": 7,
+          "stale_trigger_count": 53,
+          "last_discovery_timestamp": "2025-12-10T15:25:57.402824+00:00"
+        },
+        "related_execution_logs": [],
+        "related_desktop_events": [],
+        "related_webhook_events": []
+      },
+      {
+        "name": "Claude MM2 Agent – Primary Trigger Inbox",
+        "agent_name": "Claude MM2 Agent",
+        "role": "primary",
+        "environment": "local",
+        "host": "Mac.lan",
+        "local_path": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/Claude-MM2-Agent-Trigger/01_inbox",
+        "remote_path": null,
+        "owning_service": "trigger_monitor",
+        "mirror_target": null,
+        "failover_mode": "normal",
+        "registered_scripts": [],
+        "registered_km_macros": [],
+        "registered_workflows": [],
+        "registered_backup_routes": [],
+        "discovered_consumers": [
+          {
+            "consumer_type": "km_macro",
+            "consumer_id": null,
+            "consumer_name": "KM Macro (discovered)",
+            "config_path": null,
+            "registered": false,
+            "discovered": true,
+            "trigger_role": "consumer"
+          }
+        ],
+        "health": {
+          "status": "degraded",
+          "flags": [
+            "unregistered",
+            "unregistered_consumer",
+            "trigger_stale",
+            "logs_missing"
+          ],
+          "last_event_time": "2025-12-09T02:08:18.058691+00:00",
+          "observed_events_window": 0,
+          "stale_trigger_count": 4,
+          "last_discovery_timestamp": "2025-12-10T15:25:57.403364+00:00"
+        },
+        "related_execution_logs": [],
+        "related_desktop_events": [],
+        "related_webhook_events": []
+      },
+      {
+        "name": "Codex MM1 Gd Agent – Backup Trigger Inbox",
+        "agent_name": "Codex MM1 Gd Agent",
+        "role": "backup",
+        "environment": "gas",
+        "host": "Mac.lan",
+        "local_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/Agents/Agent-Triggers-gd/Codex-MM1-Agent-Trigger-gd/01_inbox",
+        "remote_path": null,
+        "owning_service": "trigger_monitor",
+        "mirror_target": null,
+        "failover_mode": "normal",
+        "registered_scripts": [],
+        "registered_km_macros": [],
+        "registered_workflows": [],
+        "registered_backup_routes": [],
+        "discovered_consumers": [],
+        "health": {
+          "status": "broken",
+          "flags": [
+            "unregistered",
+            "no_consumer",
+            "trigger_stale",
+            "logs_missing"
+          ],
+          "last_event_time": "2025-12-03T16:21:08.338395+00:00",
+          "observed_events_window": 0,
+          "stale_trigger_count": 5,
+          "last_discovery_timestamp": "2025-12-10T15:25:57.404573+00:00"
+        },
+        "related_execution_logs": [],
+        "related_desktop_events": [],
+        "related_webhook_events": []
+      },
+      {
+        "name": "Chatgpt Personal Assistant Gd Agent – Backup Trigger Inbox",
+        "agent_name": "Chatgpt Personal Assistant Gd Agent",
+        "role": "backup",
+        "environment": "gas",
+        "host": "Mac.lan",
+        "local_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/Agents/Agent-Triggers-gd/ChatGPT-Personal-Assistant-Agent-Trigger-gd/01_inbox",
+        "remote_path": null,
+        "owning_service": "trigger_monitor",
+        "mirror_target": null,
+        "failover_mode": "normal",
+        "registered_scripts": [],
+        "registered_km_macros": [],
+        "registered_workflows": [],
+        "registered_backup_routes": [],
+        "discovered_consumers": [],
+        "health": {
+          "status": "broken",
+          "flags": [
+            "unregistered",
+            "no_consumer",
+            "logs_missing"
+          ],
+          "last_event_time": null,
+          "observed_events_window": 0,
+          "stale_trigger_count": 0,
+          "last_discovery_timestamp": "2025-12-10T15:25:57.404630+00:00"
+        },
+        "related_execution_logs": [],
+        "related_desktop_events": [],
+        "related_webhook_events": []
+      },
+      {
+        "name": "Claude MM2 Gd Agent – Backup Trigger Inbox",
+        "agent_name": "Claude MM2 Gd Agent",
+        "role": "backup",
+        "environment": "gas",
+        "host": "Mac.lan",
+        "local_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/Agents/Agent-Triggers-gd/Claude-MM2-Agent-Trigger-gd/01_inbox",
+        "remote_path": null,
+        "owning_service": "trigger_monitor",
+        "mirror_target": null,
+        "failover_mode": "normal",
+        "registered_scripts": [],
+        "registered_km_macros": [],
+        "registered_workflows": [],
+        "registered_backup_routes": [],
+        "discovered_consumers": [],
+        "health": {
+          "status": "broken",
+          "flags": [
+            "unregistered",
+            "no_consumer",
+            "logs_missing"
+          ],
+          "last_event_time": null,
+          "observed_events_window": 0,
+          "stale_trigger_count": 0,
+          "last_discovery_timestamp": "2025-12-10T15:25:57.404677+00:00"
+        },
+        "related_execution_logs": [],
+        "related_desktop_events": [],
+        "related_webhook_events": []
+      },
+      {
+        "name": "Chatgpt Code Review Gd Agent – Backup Trigger Inbox",
+        "agent_name": "Chatgpt Code Review Gd Agent",
+        "role": "backup",
+        "environment": "gas",
+        "host": "Mac.lan",
+        "local_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/Agents/Agent-Triggers-gd/ChatGPT-Code-Review-Agent-Trigger-gd/01_inbox",
+        "remote_path": null,
+        "owning_service": "trigger_monitor",
+        "mirror_target": null,
+        "failover_mode": "normal",
+        "registered_scripts": [],
+        "registered_km_macros": [],
+        "registered_workflows": [],
+        "registered_backup_routes": [],
+        "discovered_consumers": [],
+        "health": {
+          "status": "broken",
+          "flags": [
+            "unregistered",
+            "no_consumer",
+            "trigger_stale",
+            "logs_missing"
+          ],
+          "last_event_time": "2025-12-01T07:30:52.141217+00:00",
+          "observed_events_window": 0,
+          "stale_trigger_count": 1,
+          "last_discovery_timestamp": "2025-12-10T15:25:57.405008+00:00"
+        },
+        "related_execution_logs": [],
+        "related_desktop_events": [],
+        "related_webhook_events": []
+      },
+      {
+        "name": "Cursor MM1 Gd Agent – Backup Trigger Inbox",
+        "agent_name": "Cursor MM1 Gd Agent",
+        "role": "backup",
+        "environment": "gas",
+        "host": "Mac.lan",
+        "local_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/Agents/Agent-Triggers-gd/Cursor-MM1-Agent-Trigger-gd/01_inbox",
+        "remote_path": null,
+        "owning_service": "trigger_monitor",
+        "mirror_target": null,
+        "failover_mode": "normal",
+        "registered_scripts": [],
+        "registered_km_macros": [],
+        "registered_workflows": [],
+        "registered_backup_routes": [],
+        "discovered_consumers": [],
+        "health": {
+          "status": "broken",
+          "flags": [
+            "unregistered",
+            "no_consumer",
+            "trigger_stale",
+            "logs_missing"
+          ],
+          "last_event_time": "2025-12-10T15:00:32.454534+00:00",
+          "observed_events_window": 1,
+          "stale_trigger_count": 2,
+          "last_discovery_timestamp": "2025-12-10T15:25:57.406244+00:00"
+        },
+        "related_execution_logs": [],
+        "related_desktop_events": [],
+        "related_webhook_events": []
+      },
+      {
+        "name": "Notion AI Data Operations Gd Agent – Backup Trigger Inbox",
+        "agent_name": "Notion AI Data Operations Gd Agent",
+        "role": "backup",
+        "environment": "gas",
+        "host": "Mac.lan",
+        "local_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/Agents/Agent-Triggers-gd/Notion-AI-Data-Operations-Agent-Trigger-gd/01_inbox",
+        "remote_path": null,
+        "owning_service": "trigger_monitor",
+        "mirror_target": null,
+        "failover_mode": "normal",
+        "registered_scripts": [],
+        "registered_km_macros": [],
+        "registered_workflows": [],
+        "registered_backup_routes": [],
+        "discovered_consumers": [],
+        "health": {
+          "status": "broken",
+          "flags": [
+            "unregistered",
+            "no_consumer",
+            "trigger_stale",
+            "logs_missing"
+          ],
+          "last_event_time": "2025-12-01T07:32:43.506352+00:00",
+          "observed_events_window": 0,
+          "stale_trigger_count": 4,
+          "last_discovery_timestamp": "2025-12-10T15:25:57.407145+00:00"
+        },
+        "related_execution_logs": [],
+        "related_desktop_events": [],
+        "related_webhook_events": []
+      },
+      {
+        "name": "Notion AI Research Gd Agent – Backup Trigger Inbox",
+        "agent_name": "Notion AI Research Gd Agent",
+        "role": "backup",
+        "environment": "gas",
+        "host": "Mac.lan",
+        "local_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/Agents/Agent-Triggers-gd/Notion-AI-Research-Agent-Trigger-gd/01_inbox",
+        "remote_path": null,
+        "owning_service": "trigger_monitor",
+        "mirror_target": null,
+        "failover_mode": "normal",
+        "registered_scripts": [],
+        "registered_km_macros": [],
+        "registered_workflows": [],
+        "registered_backup_routes": [],
+        "discovered_consumers": [],
+        "health": {
+          "status": "broken",
+          "flags": [
+            "unregistered",
+            "no_consumer",
+            "trigger_stale",
+            "logs_missing"
+          ],
+          "last_event_time": "2025-12-10T15:00:32.459903+00:00",
+          "observed_events_window": 1,
+          "stale_trigger_count": 4,
+          "last_discovery_timestamp": "2025-12-10T15:25:57.408657+00:00"
+        },
+        "related_execution_logs": [],
+        "related_desktop_events": [],
+        "related_webhook_events": []
+      },
+      {
+        "name": "Cursor MM2 Gd Agent – Backup Trigger Inbox",
+        "agent_name": "Cursor MM2 Gd Agent",
+        "role": "backup",
+        "environment": "gas",
+        "host": "Mac.lan",
+        "local_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/Agents/Agent-Triggers-gd/Cursor-MM2-Agent-Trigger-gd/01_inbox",
+        "remote_path": null,
+        "owning_service": "trigger_monitor",
+        "mirror_target": null,
+        "failover_mode": "normal",
+        "registered_scripts": [],
+        "registered_km_macros": [],
+        "registered_workflows": [],
+        "registered_backup_routes": [],
+        "discovered_consumers": [],
+        "health": {
+          "status": "broken",
+          "flags": [
+            "unregistered",
+            "no_consumer",
+            "logs_missing"
+          ],
+          "last_event_time": null,
+          "observed_events_window": 0,
+          "stale_trigger_count": 0,
+          "last_discovery_timestamp": "2025-12-10T15:25:57.408713+00:00"
+        },
+        "related_execution_logs": [],
+        "related_desktop_events": [],
+        "related_webhook_events": []
+      },
+      {
+        "name": "Chatgpt Strategic Gd Agent – Backup Trigger Inbox",
+        "agent_name": "Chatgpt Strategic Gd Agent",
+        "role": "backup",
+        "environment": "gas",
+        "host": "Mac.lan",
+        "local_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/Agents/Agent-Triggers-gd/ChatGPT-Strategic-Agent-Trigger-gd/01_inbox",
+        "remote_path": null,
+        "owning_service": "trigger_monitor",
+        "mirror_target": null,
+        "failover_mode": "normal",
+        "registered_scripts": [],
+        "registered_km_macros": [],
+        "registered_workflows": [],
+        "registered_backup_routes": [],
+        "discovered_consumers": [],
+        "health": {
+          "status": "broken",
+          "flags": [
+            "unregistered",
+            "no_consumer",
+            "trigger_stale",
+            "logs_missing"
+          ],
+          "last_event_time": "2025-12-10T15:23:56.059702+00:00",
+          "observed_events_window": 1,
+          "stale_trigger_count": 4,
+          "last_discovery_timestamp": "2025-12-10T15:25:57.409514+00:00"
+        },
+        "related_execution_logs": [],
+        "related_desktop_events": [],
+        "related_webhook_events": []
+      },
+      {
+        "name": "Claude MM1 Gd Agent – Backup Trigger Inbox",
+        "agent_name": "Claude MM1 Gd Agent",
+        "role": "backup",
+        "environment": "gas",
+        "host": "Mac.lan",
+        "local_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/Agents/Agent-Triggers-gd/Claude-MM1-Agent-Trigger-gd/01_inbox",
+        "remote_path": null,
+        "owning_service": "trigger_monitor",
+        "mirror_target": null,
+        "failover_mode": "normal",
+        "registered_scripts": [],
+        "registered_km_macros": [],
+        "registered_workflows": [],
+        "registered_backup_routes": [],
+        "discovered_consumers": [],
+        "health": {
+          "status": "broken",
+          "flags": [
+            "unregistered",
+            "no_consumer",
+            "trigger_stale",
+            "logs_missing"
+          ],
+          "last_event_time": "2025-11-26T09:34:02.078743+00:00",
+          "observed_events_window": 0,
+          "stale_trigger_count": 5,
+          "last_discovery_timestamp": "2025-12-10T15:25:57.409985+00:00"
+        },
+        "related_execution_logs": [],
+        "related_desktop_events": [],
+        "related_webhook_events": []
+      }
+    ],
+    "metrics": {
+      "trigger_folders_total": 21,
+      "trigger_folders_healthy": 0,
+      "trigger_folders_degraded": 5,
+      "trigger_folders_broken": 16,
+      "trigger_folders_unknown": 0,
+      "unregistered_trigger_folders": 21
+    }
+  },
+  "metrics": {
+    "trigger_folders_total": 21,
+    "trigger_folders_healthy": 0,
+    "trigger_folders_degraded": 5,
+    "trigger_folders_broken": 16,
+    "trigger_folders_unknown": 0,
+    "unregistered_trigger_folders": 21
+  }
+}

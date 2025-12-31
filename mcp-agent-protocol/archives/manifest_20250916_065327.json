@@ -1,0 +1,28 @@
+{
+  "manifest_version": "1.0",
+  "project": {
+    "name": "MCP Agent Protocol",
+    "version": "2.0.0",
+    "description": "Multi-agent coordination protocol for task management and execution"
+  },
+  "created": "20250916_065327",
+  "archives": {
+    "source": "mcp-agent-protocol-v2.0.0-20250916_065327.tar.gz",
+    "documentation": "mcp-agent-protocol-docs-v2.0.0-20250916_065327.zip",
+    "deployment": "mcp-agent-protocol-deploy-v2.0.0-20250916_065327.tar.gz"
+  },
+  "requirements": {
+    "python_version": ">=3.8",
+    "dependencies": [
+      "pydantic>=2.0.0",
+      "pydantic-settings>=2.0.0",
+      "httpx>=0.24.0",
+      "notion-client>=2.0.0"
+    ]
+  },
+  "mcp_v2_compliance": {
+    "database_id": "26de73616c278038b839c5333237000a",
+    "notion_version": "2022-06-28",
+    "compliance_score": "100%"
+  }
+}

@@ -1,0 +1,3006 @@
+{
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/REMOVE_DUPLICATES-1016.py": {
+    "line_count": 2083,
+    "functions": [
+      {
+        "name": "filter",
+        "lineno": 54
+      },
+      {
+        "name": "fuzzy_ratio",
+        "lineno": 76
+      },
+      {
+        "name": "fuzzy_ratio",
+        "lineno": 80
+      },
+      {
+        "name": "setup_logging",
+        "lineno": 114
+      },
+      {
+        "name": "_env_or_default",
+        "lineno": 169
+      },
+      {
+        "name": "_env_flag",
+        "lineno": 177
+      },
+      {
+        "name": "_normalize_label",
+        "lineno": 189
+      },
+      {
+        "name": "_expand_variants",
+        "lineno": 194
+      },
+      {
+        "name": "_normalize_uuid",
+        "lineno": 205
+      },
+      {
+        "name": "_to_dashed_uuid",
+        "lineno": 219
+      },
+      {
+        "name": "_emoji",
+        "lineno": 228
+      },
+      {
+        "name": "_collect_property_entries",
+        "lineno": 237
+      },
+      {
+        "name": "_score_entry",
+        "lineno": 254
+      },
+      {
+        "name": "_resolve_primary_field",
+        "lineno": 260
+      },
+      {
+        "name": "_mask",
+        "lineno": 266
+      },
+      {
+        "name": "_safe_get",
+        "lineno": 318
+      },
+      {
+        "name": "_get_text_prop_from",
+        "lineno": 327
+      },
+      {
+        "name": "_get_text_prop",
+        "lineno": 348
+      },
+      {
+        "name": "_get_number_prop",
+        "lineno": 353
+      },
+      {
+        "name": "_get_url_prop",
+        "lineno": 358
+      },
+      {
+        "name": "_duration_bucket",
+        "lineno": 363
+      },
+      {
+        "name": "_strip_bracketed",
+        "lineno": 372
+      },
+      {
+        "name": "_extract_artist",
+        "lineno": 376
+      },
+      {
+        "name": "_artist_schema_norm",
+        "lineno": 384
+      },
+      {
+        "name": "_extract_duration_seconds",
+        "lineno": 398
+      },
+      {
+        "name": "_dur_ok_entries",
+        "lineno": 418
+      },
+      {
+        "name": "_do_not_merge",
+        "lineno": 431
+      },
+      {
+        "name": "_parse_args",
+        "lineno": 443
+      },
+      {
+        "name": "__init__",
+        "lineno": 604
+      },
+      {
+        "name": "quick_verify_matching",
+        "lineno": 640
+      },
+      {
+        "name": "_with_retries",
+        "lineno": 690
+      },
+      {
+        "name": "_api_request",
+        "lineno": 714
+      },
+      {
+        "name": "_api_get",
+        "lineno": 725
+      },
+      {
+        "name": "_api_post",
+        "lineno": 729
+      },
+      {
+        "name": "_query_api",
+        "lineno": 733
+      },
+      {
+        "name": "_iso_to_dt",
+        "lineno": 750
+      },
+      {
+        "name": "_prop_type_map",
+        "lineno": 757
+      },
+      {
+        "name": "_nonempty",
+        "lineno": 761
+      },
+      {
+        "name": "_pick_latest_nonempty",
+        "lineno": 767
+      },
+      {
+        "name": "_union_multi_select",
+        "lineno": 774
+      },
+      {
+        "name": "_union_ids",
+        "lineno": 785
+      },
+      {
+        "name": "_union_files",
+        "lineno": 798
+      },
+      {
+        "name": "file_key",
+        "lineno": 821
+      },
+      {
+        "name": "_merge_property",
+        "lineno": 838
+      },
+      {
+        "name": "_choose_keeper",
+        "lineno": 932
+      },
+      {
+        "name": "nonempty_count",
+        "lineno": 934
+      },
+      {
+        "name": "_merge_group_into_keeper",
+        "lineno": 950
+      },
+      {
+        "name": "_write_rich_text_prop",
+        "lineno": 1033
+      },
+      {
+        "name": "_extract_title",
+        "lineno": 1079
+      },
+      {
+        "name": "_clean_title",
+        "lineno": 1109
+      },
+      {
+        "name": "_key_for",
+        "lineno": 1119
+      },
+      {
+        "name": "_extract_uuid_from_obj",
+        "lineno": 1137
+      },
+      {
+        "name": "_normalize_candidate",
+        "lineno": 1139
+      },
+      {
+        "name": "_normalize_url",
+        "lineno": 1172
+      },
+      {
+        "name": "_spotify_id_from_url",
+        "lineno": 1192
+      },
+      {
+        "name": "_norm",
+        "lineno": 1199
+      },
+      {
+        "name": "_artist_ok",
+        "lineno": 1203
+      },
+      {
+        "name": "_derive_track_id",
+        "lineno": 1211
+      },
+      {
+        "name": "_state_push",
+        "lineno": 1232
+      },
+      {
+        "name": "_is_music_tracks_db",
+        "lineno": 1263
+      },
+      {
+        "name": "_trigger_cross_platform_matcher",
+        "lineno": 1271
+      },
+      {
+        "name": "find_duplicates",
+        "lineno": 1401
+      },
+      {
+        "name": "__init__",
+        "lineno": 1463
+      },
+      {
+        "name": "add",
+        "lineno": 1467
+      },
+      {
+        "name": "find",
+        "lineno": 1472
+      },
+      {
+        "name": "union",
+        "lineno": 1477
+      },
+      {
+        "name": "register_group",
+        "lineno": 1495
+      },
+      {
+        "name": "conflicting_ids",
+        "lineno": 1656
+      },
+      {
+        "name": "collect",
+        "lineno": 1657
+      },
+      {
+        "name": "collect_num",
+        "lineno": 1668
+      },
+      {
+        "name": "fetch_database_entries",
+        "lineno": 1711
+      },
+      {
+        "name": "sort_key",
+        "lineno": 1873
+      },
+      {
+        "name": "_merge_blocks",
+        "lineno": 1886
+      },
+      {
+        "name": "archive_duplicates",
+        "lineno": 1933
+      },
+      {
+        "name": "run",
+        "lineno": 1981
+      },
+      {
+        "name": "main",
+        "lineno": 2068
+      }
+    ],
+    "classes": [
+      {
+        "name": "SuppressNTNWarning",
+        "lineno": 52
+      }
+    ]
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/auto_repair_system.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/comprehensive_metadata_and_tags_fix.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/comprehensive_workflow_orchestrator_fixed.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/comprehensive_workflow_orchestrator_optimized.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/database_workflow_manager.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/enhanced_client 2.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/enhanced_client.py": {
+    "line_count": 2382,
+    "functions": [
+      {
+        "name": "__init__",
+        "lineno": 21
+      },
+      {
+        "name": "_headers",
+        "lineno": 48
+      },
+      {
+        "name": "_load_tracks_cache",
+        "lineno": 56
+      },
+      {
+        "name": "_save_tracks_cache",
+        "lineno": 68
+      },
+      {
+        "name": "_prepare_track_properties",
+        "lineno": 547
+      },
+      {
+        "name": "_notion_page_to_track_data",
+        "lineno": 1526
+      },
+      {
+        "name": "_extract_property_value",
+        "lineno": 1542
+      },
+      {
+        "name": "_extract_artists",
+        "lineno": 1562
+      },
+      {
+        "name": "_notion_page_to_track_data",
+        "lineno": 1678
+      },
+      {
+        "name": "_get_title_prop_name",
+        "lineno": 1728
+      },
+      {
+        "name": "_extract_property_value",
+        "lineno": 2154
+      },
+      {
+        "name": "_extract_artists",
+        "lineno": 2207
+      }
+    ],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/enhanced_orchestrator.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/enhanced_playlist_processor.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/enhanced_playlist_processor_automated.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/enhanced_playlist_processor_with_state_tracking.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/enhanced_production_builder.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/enhanced_state_tracker.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/enhanced_sync_system_v2.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/json_spotify_processor.py": {
+    "line_count": 1145,
+    "functions": [
+      {
+        "name": "save_to_file",
+        "lineno": 60
+      },
+      {
+        "name": "load_from_file",
+        "lineno": 69
+      },
+      {
+        "name": "__post_init__",
+        "lineno": 94
+      },
+      {
+        "name": "__post_init__",
+        "lineno": 112
+      },
+      {
+        "name": "__post_init__",
+        "lineno": 137
+      },
+      {
+        "name": "__init__",
+        "lineno": 146
+      },
+      {
+        "name": "_make_request",
+        "lineno": 158
+      },
+      {
+        "name": "query_database",
+        "lineno": 189
+      },
+      {
+        "name": "create_page",
+        "lineno": 212
+      },
+      {
+        "name": "update_page",
+        "lineno": 216
+      },
+      {
+        "name": "get_database_schema",
+        "lineno": 219
+      },
+      {
+        "name": "update_database",
+        "lineno": 222
+      },
+      {
+        "name": "search_for_database",
+        "lineno": 226
+      },
+      {
+        "name": "validate_database_access",
+        "lineno": 234
+      },
+      {
+        "name": "__init__",
+        "lineno": 238
+      },
+      {
+        "name": "_initialize_databases",
+        "lineno": 270
+      },
+      {
+        "name": "_ensure_track_properties",
+        "lineno": 329
+      },
+      {
+        "name": "_ensure_artist_properties",
+        "lineno": 381
+      },
+      {
+        "name": "_ensure_playlist_properties",
+        "lineno": 409
+      },
+      {
+        "name": "sync_artist_to_notion",
+        "lineno": 449
+      },
+      {
+        "name": "sync_track_to_notion",
+        "lineno": 506
+      },
+      {
+        "name": "sync_playlist_to_notion",
+        "lineno": 590
+      },
+      {
+        "name": "_is_track_data",
+        "lineno": 686
+      },
+      {
+        "name": "clean_html",
+        "lineno": 702
+      },
+      {
+        "name": "detect_source_from_data",
+        "lineno": 712
+      },
+      {
+        "name": "extract_hybrid_playlist",
+        "lineno": 742
+      },
+      {
+        "name": "extract_soundcloud_playlist",
+        "lineno": 804
+      },
+      {
+        "name": "extract_soundcloud_track",
+        "lineno": 831
+      },
+      {
+        "name": "extract_spotify_playlist",
+        "lineno": 850
+      },
+      {
+        "name": "extract_spotify_track",
+        "lineno": 872
+      },
+      {
+        "name": "extract_spotify_artist",
+        "lineno": 906
+      },
+      {
+        "name": "process_json_file",
+        "lineno": 923
+      },
+      {
+        "name": "process_directory",
+        "lineno": 1022
+      },
+      {
+        "name": "main",
+        "lineno": 1051
+      }
+    ],
+    "classes": [
+      {
+        "name": "ProcessingMode",
+        "lineno": 47
+      }
+    ]
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/matching_engine.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/music_metadata_population.py": {
+    "line_count": 652,
+    "functions": [
+      {
+        "name": "__init__",
+        "lineno": 28
+      },
+      {
+        "name": "setup_logging",
+        "lineno": 58
+      },
+      {
+        "name": "create_script_run_log",
+        "lineno": 75
+      },
+      {
+        "name": "update_script_run_log",
+        "lineno": 97
+      },
+      {
+        "name": "get_spotify_token",
+        "lineno": 118
+      },
+      {
+        "name": "search_spotify_track",
+        "lineno": 155
+      },
+      {
+        "name": "find_best_spotify_match",
+        "lineno": 213
+      },
+      {
+        "name": "search_soundcloud_track",
+        "lineno": 267
+      },
+      {
+        "name": "find_best_soundcloud_match",
+        "lineno": 311
+      },
+      {
+        "name": "fuzzy_match",
+        "lineno": 357
+      },
+      {
+        "name": "get_music_tracks_missing_metadata",
+        "lineno": 365
+      },
+      {
+        "name": "update_track_metadata",
+        "lineno": 425
+      },
+      {
+        "name": "process_track",
+        "lineno": 467
+      },
+      {
+        "name": "extract_property_text",
+        "lineno": 514
+      },
+      {
+        "name": "run_metadata_population",
+        "lineno": 529
+      }
+    ],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/music_metadata_updater.py": {
+    "line_count": 562,
+    "functions": [
+      {
+        "name": "__init__",
+        "lineno": 42
+      },
+      {
+        "name": "validate_configuration",
+        "lineno": 75
+      },
+      {
+        "name": "authenticate_apis",
+        "lineno": 92
+      },
+      {
+        "name": "get_notion_tracks",
+        "lineno": 123
+      },
+      {
+        "name": "parse_notion_page",
+        "lineno": 174
+      },
+      {
+        "name": "get_property_value",
+        "lineno": 204
+      },
+      {
+        "name": "search_spotify",
+        "lineno": 223
+      },
+      {
+        "name": "search_soundcloud",
+        "lineno": 283
+      },
+      {
+        "name": "update_notion_track",
+        "lineno": 339
+      },
+      {
+        "name": "process_track",
+        "lineno": 371
+      },
+      {
+        "name": "process_batch",
+        "lineno": 433
+      },
+      {
+        "name": "generate_report",
+        "lineno": 446
+      },
+      {
+        "name": "save_report",
+        "lineno": 475
+      },
+      {
+        "name": "print_summary",
+        "lineno": 488
+      },
+      {
+        "name": "run",
+        "lineno": 520
+      },
+      {
+        "name": "main",
+        "lineno": 548
+      }
+    ],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/music_workflow_automation.py": {
+    "line_count": 610,
+    "functions": [
+      {
+        "name": "__post_init__",
+        "lineno": 77
+      },
+      {
+        "name": "__init__",
+        "lineno": 84
+      },
+      {
+        "name": "get_track_safely",
+        "lineno": 94
+      },
+      {
+        "name": "get_artist_genres",
+        "lineno": 106
+      },
+      {
+        "name": "__init__",
+        "lineno": 118
+      },
+      {
+        "name": "search_track_safely",
+        "lineno": 124
+      },
+      {
+        "name": "__init__",
+        "lineno": 162
+      },
+      {
+        "name": "query_database_with_filters",
+        "lineno": 165
+      },
+      {
+        "name": "update_page_properties",
+        "lineno": 177
+      },
+      {
+        "name": "get_page",
+        "lineno": 185
+      },
+      {
+        "name": "verify_api_connections",
+        "lineno": 193
+      },
+      {
+        "name": "get_first_testable_track",
+        "lineno": 237
+      },
+      {
+        "name": "gather_track_metadata",
+        "lineno": 261
+      },
+      {
+        "name": "find_relevant_playlists_for_track",
+        "lineno": 320
+      },
+      {
+        "name": "populate_playlist_relations_safely",
+        "lineno": 371
+      },
+      {
+        "name": "test_comprehensive_workflow",
+        "lineno": 408
+      },
+      {
+        "name": "process_tracks_batch",
+        "lineno": 495
+      },
+      {
+        "name": "main",
+        "lineno": 564
+      }
+    ],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/notion_integration.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/notion_integration_fixed.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/notion_relation_populator.py": {
+    "line_count": 1152,
+    "functions": [
+      {
+        "name": "retry",
+        "lineno": 64
+      },
+      {
+        "name": "decorator",
+        "lineno": 65
+      },
+      {
+        "name": "to_dict",
+        "lineno": 94
+      },
+      {
+        "name": "__init__",
+        "lineno": 234
+      },
+      {
+        "name": "record_document_processed",
+        "lineno": 273
+      },
+      {
+        "name": "record_relation_populated",
+        "lineno": 281
+      },
+      {
+        "name": "record_error",
+        "lineno": 290
+      },
+      {
+        "name": "get_performance_summary",
+        "lineno": 294
+      },
+      {
+        "name": "__init__",
+        "lineno": 319
+      },
+      {
+        "name": "_extract_page_title",
+        "lineno": 395
+      },
+      {
+        "name": "_extract_page_description",
+        "lineno": 408
+      },
+      {
+        "name": "_extract_keywords",
+        "lineno": 422
+      },
+      {
+        "name": "_generate_synonyms",
+        "lineno": 429
+      },
+      {
+        "name": "analyze_document_with_context",
+        "lineno": 442
+      },
+      {
+        "name": "_pattern_based_analysis",
+        "lineno": 500
+      },
+      {
+        "name": "_context_based_analysis",
+        "lineno": 533
+      },
+      {
+        "name": "_semantic_similarity_analysis",
+        "lineno": 573
+      },
+      {
+        "name": "__init__",
+        "lineno": 599
+      },
+      {
+        "name": "_build_unpopulated_filter",
+        "lineno": 715
+      },
+      {
+        "name": "_is_relation_populated",
+        "lineno": 900
+      },
+      {
+        "name": "_matches_to_relation_urls",
+        "lineno": 911
+      },
+      {
+        "name": "_extract_document_title",
+        "lineno": 996
+      }
+    ],
+    "classes": [
+      {
+        "name": "SerenError",
+        "lineno": 53
+      }
+    ]
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/pipeline.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/production_music_sync_demo.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/seren_autonomous_scripting_system_v7.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/single_track_orchestrator.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/single_track_workflow.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/soundcloud_download_aligned.py": {
+    "line_count": 3786,
+    "functions": [
+      {
+        "name": "analyze_audio_loudness",
+        "lineno": 69
+      },
+      {
+        "name": "detect_and_repair_clipping",
+        "lineno": 112
+      },
+      {
+        "name": "apply_warmth_saturation",
+        "lineno": 156
+      },
+      {
+        "name": "apply_loudness_normalization",
+        "lineno": 194
+      },
+      {
+        "name": "normalize_audio_platinum_notes_style",
+        "lineno": 256
+      },
+      {
+        "name": "__init__",
+        "lineno": 401
+      },
+      {
+        "name": "setup_logging",
+        "lineno": 406
+      },
+      {
+        "name": "info",
+        "lineno": 420
+      },
+      {
+        "name": "warning",
+        "lineno": 427
+      },
+      {
+        "name": "error",
+        "lineno": 434
+      },
+      {
+        "name": "debug",
+        "lineno": 441
+      },
+      {
+        "name": "__init__",
+        "lineno": 457
+      },
+      {
+        "name": "_req",
+        "lineno": 465
+      },
+      {
+        "name": "query_database",
+        "lineno": 486
+      },
+      {
+        "name": "update_page",
+        "lineno": 494
+      },
+      {
+        "name": "_get_tracks_db_props",
+        "lineno": 508
+      },
+      {
+        "name": "find_next_track",
+        "lineno": 521
+      },
+      {
+        "name": "find_all_tracks_for_processing",
+        "lineno": 582
+      },
+      {
+        "name": "find_all_tracks_with_soundcloud_urls",
+        "lineno": 643
+      },
+      {
+        "name": "find_tracks_for_reprocessing",
+        "lineno": 671
+      },
+      {
+        "name": "find_tracks_with_eagle_items_but_no_id",
+        "lineno": 756
+      },
+      {
+        "name": "find_tracks_with_playlist_relations",
+        "lineno": 811
+      },
+      {
+        "name": "extract_track_data",
+        "lineno": 880
+      },
+      {
+        "name": "get_text",
+        "lineno": 884
+      },
+      {
+        "name": "get_url",
+        "lineno": 892
+      },
+      {
+        "name": "get_number",
+        "lineno": 898
+      },
+      {
+        "name": "get_select",
+        "lineno": 904
+      },
+      {
+        "name": "upsert_track_page",
+        "lineno": 924
+      },
+      {
+        "name": "safe_update",
+        "lineno": 975
+      },
+      {
+        "name": "parse_soundcloud_url",
+        "lineno": 1039
+      },
+      {
+        "name": "detect_key",
+        "lineno": 1056
+      },
+      {
+        "name": "convert_to_camelot",
+        "lineno": 1112
+      },
+      {
+        "name": "get_playlist_names_from_track",
+        "lineno": 1131
+      },
+      {
+        "name": "generate_comprehensive_tags",
+        "lineno": 1172
+      },
+      {
+        "name": "eagle_request",
+        "lineno": 1333
+      },
+      {
+        "name": "eagle_switch_library",
+        "lineno": 1432
+      },
+      {
+        "name": "eagle_get_or_create_folder",
+        "lineno": 1436
+      },
+      {
+        "name": "eagle_add_item",
+        "lineno": 1445
+      },
+      {
+        "name": "eagle_import_with_duplicate_management",
+        "lineno": 1498
+      },
+      {
+        "name": "eagle_move_to_trash",
+        "lineno": 1572
+      },
+      {
+        "name": "eagle_delete_item",
+        "lineno": 1601
+      },
+      {
+        "name": "eagle_find_items_by_path",
+        "lineno": 1612
+      },
+      {
+        "name": "eagle_find_items_by_filename",
+        "lineno": 1625
+      },
+      {
+        "name": "eagle_analyze_item_quality",
+        "lineno": 1653
+      },
+      {
+        "name": "eagle_find_best_matching_item",
+        "lineno": 1700
+      },
+      {
+        "name": "eagle_cleanup_duplicate_items",
+        "lineno": 1732
+      },
+      {
+        "name": "eagle_needs_reprocessing",
+        "lineno": 1763
+      },
+      {
+        "name": "reset_track_for_reprocessing",
+        "lineno": 1803
+      },
+      {
+        "name": "update_audio_processing_status",
+        "lineno": 1829
+      },
+      {
+        "name": "set_comprehensive_audio_processing_status",
+        "lineno": 1843
+      },
+      {
+        "name": "create_audio_processing_summary",
+        "lineno": 1930
+      },
+      {
+        "name": "check_for_music_embed",
+        "lineno": 2261
+      },
+      {
+        "name": "add_music_embed_to_page",
+        "lineno": 2296
+      },
+      {
+        "name": "add_summary_to_notion_page",
+        "lineno": 2365
+      },
+      {
+        "name": "cleanup_existing_summary_blocks",
+        "lineno": 2386
+      },
+      {
+        "name": "split_summary_into_large_sections",
+        "lineno": 2440
+      },
+      {
+        "name": "update_audio_processing_properties",
+        "lineno": 2554
+      },
+      {
+        "name": "find_track_by_title_and_artist",
+        "lineno": 2660
+      },
+      {
+        "name": "cleanup_files_for_reprocessing",
+        "lineno": 2691
+      },
+      {
+        "name": "reprocess_track",
+        "lineno": 2727
+      },
+      {
+        "name": "auto_reprocess_tracks",
+        "lineno": 2769
+      },
+      {
+        "name": "batch_process_tracks",
+        "lineno": 2792
+      },
+      {
+        "name": "process_track",
+        "lineno": 2899
+      },
+      {
+        "name": "download_track",
+        "lineno": 2944
+      },
+      {
+        "name": "import_and_update",
+        "lineno": 3405
+      },
+      {
+        "name": "main",
+        "lineno": 3603
+      },
+      {
+        "name": "fix_eagle_file_id_property_type",
+        "lineno": 3735
+      }
+    ],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/soundcloud_download_prod_merge-2.py": {
+    "line_count": 8190,
+    "functions": [
+      {
+        "name": "__init__",
+        "lineno": 101
+      },
+      {
+        "name": "debug",
+        "lineno": 113
+      },
+      {
+        "name": "info",
+        "lineno": 114
+      },
+      {
+        "name": "warning",
+        "lineno": 115
+      },
+      {
+        "name": "error",
+        "lineno": 116
+      },
+      {
+        "name": "logger",
+        "lineno": 119
+      },
+      {
+        "name": "get_metrics",
+        "lineno": 120
+      },
+      {
+        "name": "close",
+        "lineno": 121
+      },
+      {
+        "name": "setup_logging",
+        "lineno": 128
+      },
+      {
+        "name": "_env_or_default",
+        "lineno": 160
+      },
+      {
+        "name": "format_database_id",
+        "lineno": 170
+      },
+      {
+        "name": "_normalize_uuid",
+        "lineno": 179
+      },
+      {
+        "name": "_truthy",
+        "lineno": 190
+      },
+      {
+        "name": "__init__",
+        "lineno": 202
+      },
+      {
+        "name": "__getattr__",
+        "lineno": 210
+      },
+      {
+        "name": "logger",
+        "lineno": 214
+      },
+      {
+        "name": "record_processed",
+        "lineno": 218
+      },
+      {
+        "name": "record_failed",
+        "lineno": 221
+      },
+      {
+        "name": "record_skipped",
+        "lineno": 224
+      },
+      {
+        "name": "temp_dir_created",
+        "lineno": 227
+      },
+      {
+        "name": "temp_dir_cleaned",
+        "lineno": 230
+      },
+      {
+        "name": "script_end",
+        "lineno": 233
+      },
+      {
+        "name": "close",
+        "lineno": 253
+      },
+      {
+        "name": "_extract_priority_value",
+        "lineno": 303
+      },
+      {
+        "name": "_priority_from_props",
+        "lineno": 325
+      },
+      {
+        "name": "_title_from_props",
+        "lineno": 366
+      },
+      {
+        "name": "order_candidates",
+        "lineno": 379
+      },
+      {
+        "name": "get_meter",
+        "lineno": 495
+      },
+      {
+        "name": "analyze_audio_loudness",
+        "lineno": 506
+      },
+      {
+        "name": "analyze_audio_loudness_fallback",
+        "lineno": 564
+      },
+      {
+        "name": "detect_and_repair_clipping",
+        "lineno": 629
+      },
+      {
+        "name": "apply_warmth_saturation",
+        "lineno": 673
+      },
+      {
+        "name": "apply_loudness_normalization",
+        "lineno": 711
+      },
+      {
+        "name": "apply_loudness_normalization_fallback",
+        "lineno": 784
+      },
+      {
+        "name": "normalize_audio_platinum_notes_style",
+        "lineno": 861
+      },
+      {
+        "name": "notion_unarchive_if_needed",
+        "lineno": 1003
+      },
+      {
+        "name": "_notion_set_url_or_text",
+        "lineno": 1013
+      },
+      {
+        "name": "_filter_audio_processing_statuses",
+        "lineno": 1056
+      },
+      {
+        "name": "update_audio_processing_status",
+        "lineno": 1077
+      },
+      {
+        "name": "_sc_slug_from_url",
+        "lineno": 1113
+      },
+      {
+        "name": "_eagle_list",
+        "lineno": 1126
+      },
+      {
+        "name": "_eagle_find_existing",
+        "lineno": 1156
+      },
+      {
+        "name": "_sha1_short",
+        "lineno": 1203
+      },
+      {
+        "name": "_ext_from_path",
+        "lineno": 1209
+      },
+      {
+        "name": "_eagle_list_by_tag",
+        "lineno": 1215
+      },
+      {
+        "name": "_eagle_headers",
+        "lineno": 1237
+      },
+      {
+        "name": "_clean_eagle_tags",
+        "lineno": 1248
+      },
+      {
+        "name": "eagle_add_from_path",
+        "lineno": 1261
+      },
+      {
+        "name": "eagle_add_from_paths",
+        "lineno": 1286
+      },
+      {
+        "name": "eagle_force_tags",
+        "lineno": 1321
+      },
+      {
+        "name": "eagle_info",
+        "lineno": 1332
+      },
+      {
+        "name": "eagle_find_recent_by_name",
+        "lineno": 1343
+      },
+      {
+        "name": "_eagle_set_url",
+        "lineno": 1361
+      },
+      {
+        "name": "_eagle_remove_tag",
+        "lineno": 1372
+      },
+      {
+        "name": "eagle_update_tags",
+        "lineno": 1396
+      },
+      {
+        "name": "complete_track_notion_update",
+        "lineno": 1449
+      },
+      {
+        "name": "_set_path",
+        "lineno": 1491
+      },
+      {
+        "name": "verify_track_will_not_reprocess",
+        "lineno": 1543
+      },
+      {
+        "name": "_is_eagle_api_available",
+        "lineno": 1600
+      },
+      {
+        "name": "_resolve_open_command",
+        "lineno": 1616
+      },
+      {
+        "name": "ensure_eagle_app_running",
+        "lineno": 1629
+      },
+      {
+        "name": "switch_to_configured_eagle_library",
+        "lineno": 1675
+      },
+      {
+        "name": "_eagle_import_file_direct",
+        "lineno": 1733
+      },
+      {
+        "name": "eagle_add_item_adapter",
+        "lineno": 1821
+      },
+      {
+        "name": "ensure_writable_dir",
+        "lineno": 1858
+      },
+      {
+        "name": "_resolve_workspace_path",
+        "lineno": 1918
+      },
+      {
+        "name": "_resolve_ffmpeg_path",
+        "lineno": 1964
+      },
+      {
+        "name": "_sanitize_filename_component",
+        "lineno": 2009
+      },
+      {
+        "name": "find_existing_outputs",
+        "lineno": 2015
+      },
+      {
+        "name": "pre_download_repair_if_outputs_exist",
+        "lineno": 2051
+      },
+      {
+        "name": "__init__",
+        "lineno": 2074
+      },
+      {
+        "name": "_req",
+        "lineno": 2082
+      },
+      {
+        "name": "query_database",
+        "lineno": 2104
+      },
+      {
+        "name": "update_page",
+        "lineno": 2122
+      },
+      {
+        "name": "filter",
+        "lineno": 2141
+      },
+      {
+        "name": "update_track_with_registry",
+        "lineno": 2170
+      },
+      {
+        "name": "_normalize_url",
+        "lineno": 2224
+      },
+      {
+        "name": "_clean_title",
+        "lineno": 2237
+      },
+      {
+        "name": "_page_text_for",
+        "lineno": 2246
+      },
+      {
+        "name": "_score_page_for_keeper",
+        "lineno": 2261
+      },
+      {
+        "name": "has_path",
+        "lineno": 2266
+      },
+      {
+        "name": "_union_unique",
+        "lineno": 2291
+      },
+      {
+        "name": "_merge_values",
+        "lineno": 2298
+      },
+      {
+        "name": "_build_update_payload",
+        "lineno": 2358
+      },
+      {
+        "name": "_limit_multi_select_entries",
+        "lineno": 2455
+      },
+      {
+        "name": "_build_trimmed_update_payload",
+        "lineno": 2477
+      },
+      {
+        "name": "_merge_group_into_keeper",
+        "lineno": 2512
+      },
+      {
+        "name": "_fetch_by_equals",
+        "lineno": 2593
+      },
+      {
+        "name": "_fetch_recent",
+        "lineno": 2616
+      },
+      {
+        "name": "dedupe_for_meta",
+        "lineno": 2628
+      },
+      {
+        "name": "try_merge_duplicates_for_page",
+        "lineno": 2679
+      },
+      {
+        "name": "_get_tracks_db_prop_types",
+        "lineno": 2723
+      },
+      {
+        "name": "_resolve_prop_name",
+        "lineno": 2742
+      },
+      {
+        "name": "_filter_is_empty",
+        "lineno": 2752
+      },
+      {
+        "name": "_filter_is_not_empty",
+        "lineno": 2771
+      },
+      {
+        "name": "query_soundcloud_playlist",
+        "lineno": 2788
+      },
+      {
+        "name": "_build_url_filter",
+        "lineno": 2877
+      },
+      {
+        "name": "check_track_exists_in_database",
+        "lineno": 2896
+      },
+      {
+        "name": "add_new_track_to_database",
+        "lineno": 2934
+      },
+      {
+        "name": "_filter_checkbox_equals",
+        "lineno": 3015
+      },
+      {
+        "name": "_prop_text_value",
+        "lineno": 3023
+      },
+      {
+        "name": "should_reprocess_page",
+        "lineno": 3060
+      },
+      {
+        "name": "_get_prop",
+        "lineno": 3065
+      },
+      {
+        "name": "_get_tracks_db_props",
+        "lineno": 3117
+      },
+      {
+        "name": "find_next_track",
+        "lineno": 3130
+      },
+      {
+        "name": "_build_unprocessed_tracks_query",
+        "lineno": 3227
+      },
+      {
+        "name": "find_all_tracks_for_processing",
+        "lineno": 3266
+      },
+      {
+        "name": "run_all_mode",
+        "lineno": 3289
+      },
+      {
+        "name": "find_tracks_for_processing_batch",
+        "lineno": 3354
+      },
+      {
+        "name": "_extract_track_meta_for_dedupe",
+        "lineno": 3404
+      },
+      {
+        "name": "_get",
+        "lineno": 3407
+      },
+      {
+        "name": "_group_batch_duplicates",
+        "lineno": 3417
+      },
+      {
+        "name": "find",
+        "lineno": 3424
+      },
+      {
+        "name": "union",
+        "lineno": 3429
+      },
+      {
+        "name": "process_track_page_wrapper",
+        "lineno": 3463
+      },
+      {
+        "name": "process_pages_parallel",
+        "lineno": 3493
+      },
+      {
+        "name": "dedupe_within_batch",
+        "lineno": 3527
+      },
+      {
+        "name": "process_batch_immediately",
+        "lineno": 3552
+      },
+      {
+        "name": "find_all_tracks_with_soundcloud_urls",
+        "lineno": 3593
+      },
+      {
+        "name": "find_tracks_for_reprocessing",
+        "lineno": 3620
+      },
+      {
+        "name": "find_tracks_with_eagle_items_but_no_id",
+        "lineno": 3688
+      },
+      {
+        "name": "find_tracks_with_playlist_relations",
+        "lineno": 3747
+      },
+      {
+        "name": "extract_track_data",
+        "lineno": 3780
+      },
+      {
+        "name": "get_text",
+        "lineno": 3784
+      },
+      {
+        "name": "get_url",
+        "lineno": 3792
+      },
+      {
+        "name": "get_number",
+        "lineno": 3798
+      },
+      {
+        "name": "get_select",
+        "lineno": 3804
+      },
+      {
+        "name": "get_priority",
+        "lineno": 3810
+      },
+      {
+        "name": "get_priority_rank",
+        "lineno": 3815
+      },
+      {
+        "name": "upsert_track_page",
+        "lineno": 3835
+      },
+      {
+        "name": "set_rich_or_title",
+        "lineno": 3860
+      },
+      {
+        "name": "set_select",
+        "lineno": 3870
+      },
+      {
+        "name": "set_number",
+        "lineno": 3877
+      },
+      {
+        "name": "set_checkbox",
+        "lineno": 3882
+      },
+      {
+        "name": "set_multi_select",
+        "lineno": 3887
+      },
+      {
+        "name": "set_date",
+        "lineno": 3894
+      },
+      {
+        "name": "parse_soundcloud_url",
+        "lineno": 4005
+      },
+      {
+        "name": "detect_key",
+        "lineno": 4022
+      },
+      {
+        "name": "convert_to_camelot",
+        "lineno": 4078
+      },
+      {
+        "name": "get_playlist_names_from_track",
+        "lineno": 4097
+      },
+      {
+        "name": "compute_file_fingerprint",
+        "lineno": 4138
+      },
+      {
+        "name": "estimate_tempo_from_onset",
+        "lineno": 4146
+      },
+      {
+        "name": "generate_comprehensive_tags",
+        "lineno": 4152
+      },
+      {
+        "name": "eagle_request",
+        "lineno": 4318
+      },
+      {
+        "name": "eagle_switch_library",
+        "lineno": 4421
+      },
+      {
+        "name": "eagle_get_or_create_folder",
+        "lineno": 4439
+      },
+      {
+        "name": "eagle_import_with_duplicate_management",
+        "lineno": 4448
+      },
+      {
+        "name": "eagle_move_to_trash",
+        "lineno": 4529
+      },
+      {
+        "name": "eagle_delete_item",
+        "lineno": 4558
+      },
+      {
+        "name": "eagle_find_items_by_path",
+        "lineno": 4569
+      },
+      {
+        "name": "eagle_fetch_all_items",
+        "lineno": 4582
+      },
+      {
+        "name": "eagle_find_items_by_filename",
+        "lineno": 4591
+      },
+      {
+        "name": "_sanitize_match_string",
+        "lineno": 4618
+      },
+      {
+        "name": "eagle_find_best_matching_item",
+        "lineno": 4625
+      },
+      {
+        "name": "eagle_analyze_item_quality",
+        "lineno": 4691
+      },
+      {
+        "name": "eagle_cleanup_duplicate_items",
+        "lineno": 4738
+      },
+      {
+        "name": "eagle_needs_reprocessing",
+        "lineno": 4769
+      },
+      {
+        "name": "reset_track_for_reprocessing",
+        "lineno": 4815
+      },
+      {
+        "name": "set_comprehensive_audio_processing_status",
+        "lineno": 4873
+      },
+      {
+        "name": "create_audio_processing_summary",
+        "lineno": 4955
+      },
+      {
+        "name": "check_for_music_embed",
+        "lineno": 5286
+      },
+      {
+        "name": "add_music_embed_to_page",
+        "lineno": 5321
+      },
+      {
+        "name": "add_summary_to_notion_page",
+        "lineno": 5390
+      },
+      {
+        "name": "cleanup_existing_summary_blocks",
+        "lineno": 5411
+      },
+      {
+        "name": "split_summary_into_large_sections",
+        "lineno": 5465
+      },
+      {
+        "name": "update_audio_processing_properties",
+        "lineno": 5579
+      },
+      {
+        "name": "find_track_by_title_and_artist",
+        "lineno": 5702
+      },
+      {
+        "name": "cleanup_files_for_reprocessing",
+        "lineno": 5733
+      },
+      {
+        "name": "reprocess_track",
+        "lineno": 5769
+      },
+      {
+        "name": "auto_reprocess_tracks",
+        "lineno": 5824
+      },
+      {
+        "name": "process_tracks_in_batches",
+        "lineno": 5857
+      },
+      {
+        "name": "batch_process_tracks",
+        "lineno": 6034
+      },
+      {
+        "name": "efficient_batch_process_tracks",
+        "lineno": 6043
+      },
+      {
+        "name": "check_eagle_for_existing_file",
+        "lineno": 6056
+      },
+      {
+        "name": "process_track",
+        "lineno": 6120
+      },
+      {
+        "name": "is_geo_restricted",
+        "lineno": 6189
+      },
+      {
+        "name": "try_youtube_download",
+        "lineno": 6217
+      },
+      {
+        "name": "search_youtube_for_track",
+        "lineno": 6326
+      },
+      {
+        "name": "get_youtube_url_from_notion",
+        "lineno": 6406
+      },
+      {
+        "name": "update_notion_download_source",
+        "lineno": 6426
+      },
+      {
+        "name": "clean_title_advanced",
+        "lineno": 6462
+      },
+      {
+        "name": "extract_artists_from_title",
+        "lineno": 6533
+      },
+      {
+        "name": "clean_artist_name",
+        "lineno": 6582
+      },
+      {
+        "name": "is_collaboration",
+        "lineno": 6613
+      },
+      {
+        "name": "cleanup_processing_artifacts",
+        "lineno": 6648
+      },
+      {
+        "name": "_attempt_youtube_fallback",
+        "lineno": 6685
+      },
+      {
+        "name": "_cleanup_temp_dir_only",
+        "lineno": 6705
+      },
+      {
+        "name": "download_track",
+        "lineno": 6746
+      },
+      {
+        "name": "import_and_update",
+        "lineno": 7335
+      },
+      {
+        "name": "main",
+        "lineno": 7537
+      },
+      {
+        "name": "_normalize_uuid_for_query",
+        "lineno": 7599
+      },
+      {
+        "name": "_fixed_query_database",
+        "lineno": 7615
+      },
+      {
+        "name": "_debugging_req",
+        "lineno": 7654
+      },
+      {
+        "name": "fix_eagle_file_id_property_type",
+        "lineno": 7836
+      },
+      {
+        "name": "verify_audio_processing_quality",
+        "lineno": 7886
+      },
+      {
+        "name": "iterate_database_query",
+        "lineno": 8078
+      },
+      {
+        "name": "query_database_paginated",
+        "lineno": 8175
+      }
+    ],
+    "classes": [
+      {
+        "name": "_SuppressNTNWarning",
+        "lineno": 2140
+      },
+      {
+        "name": "GeoRestrictedError",
+        "lineno": 6179
+      },
+      {
+        "name": "DownloadSourceUnavailableError",
+        "lineno": 6184
+      }
+    ]
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/soundcloud_notion_integration.py": {
+    "line_count": 1401,
+    "functions": [
+      {
+        "name": "run_startup_tests",
+        "lineno": 1
+      },
+      {
+        "name": "get_progress_report",
+        "lineno": 196
+      },
+      {
+        "name": "__init__",
+        "lineno": 215
+      },
+      {
+        "name": "setup_logging",
+        "lineno": 218
+      },
+      {
+        "name": "info",
+        "lineno": 240
+      },
+      {
+        "name": "error",
+        "lineno": 247
+      },
+      {
+        "name": "warning",
+        "lineno": 260
+      },
+      {
+        "name": "__init__",
+        "lineno": 270
+      },
+      {
+        "name": "wait_if_needed",
+        "lineno": 277
+      },
+      {
+        "name": "retry_with_backoff",
+        "lineno": 290
+      },
+      {
+        "name": "decorator",
+        "lineno": 292
+      },
+      {
+        "name": "wrapper",
+        "lineno": 294
+      },
+      {
+        "name": "__init__",
+        "lineno": 335
+      },
+      {
+        "name": "normalize_artist",
+        "lineno": 343
+      },
+      {
+        "name": "normalize_title",
+        "lineno": 361
+      },
+      {
+        "name": "calculate_match_confidence",
+        "lineno": 374
+      },
+      {
+        "name": "find_best_match",
+        "lineno": 401
+      },
+      {
+        "name": "_find_best_match_enhanced",
+        "lineno": 421
+      },
+      {
+        "name": "_find_best_match_basic",
+        "lineno": 466
+      },
+      {
+        "name": "__init__",
+        "lineno": 539
+      },
+      {
+        "name": "get_database_schema",
+        "lineno": 548
+      },
+      {
+        "name": "query_music_tracks",
+        "lineno": 580
+      },
+      {
+        "name": "update_track_with_soundcloud_url",
+        "lineno": 656
+      },
+      {
+        "name": "update_track_with_playlists",
+        "lineno": 701
+      },
+      {
+        "name": "log_interaction",
+        "lineno": 721
+      },
+      {
+        "name": "__init__",
+        "lineno": 792
+      },
+      {
+        "name": "extract_track_info",
+        "lineno": 819
+      },
+      {
+        "name": "process_batch",
+        "lineno": 1033
+      },
+      {
+        "name": "get_playlist_tracks",
+        "lineno": 1071
+      },
+      {
+        "name": "export_results",
+        "lineno": 1144
+      },
+      {
+        "name": "run_integration",
+        "lineno": 1176
+      },
+      {
+        "name": "main",
+        "lineno": 1339
+      }
+    ],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/soundcloud_notion_integration_backup.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/spotify-download-dual-output.py": {
+    "line_count": 1717,
+    "functions": [
+      {
+        "name": "_get_tracks_db_props",
+        "lineno": 152
+      },
+      {
+        "name": "ok",
+        "lineno": 184
+      },
+      {
+        "name": "warn",
+        "lineno": 185
+      },
+      {
+        "name": "fail",
+        "lineno": 186
+      },
+      {
+        "name": "get_spotify_access_token",
+        "lineno": 191
+      },
+      {
+        "name": "__init__",
+        "lineno": 228
+      },
+      {
+        "name": "_create_log_page",
+        "lineno": 257
+      },
+      {
+        "name": "_prop",
+        "lineno": 271
+      },
+      {
+        "name": "_post",
+        "lineno": 285
+      },
+      {
+        "name": "_patch",
+        "lineno": 288
+      },
+      {
+        "name": "_get",
+        "lineno": 291
+      },
+      {
+        "name": "_req",
+        "lineno": 294
+      },
+      {
+        "name": "log",
+        "lineno": 316
+      },
+      {
+        "name": "flush",
+        "lineno": 324
+      },
+      {
+        "name": "close",
+        "lineno": 344
+      },
+      {
+        "name": "_timer_loop",
+        "lineno": 414
+      },
+      {
+        "name": "_collect_log_text",
+        "lineno": 420
+      },
+      {
+        "name": "_notion_req",
+        "lineno": 449
+      },
+      {
+        "name": "_query_track_page_by_url",
+        "lineno": 471
+      },
+      {
+        "name": "upsert_track_page",
+        "lineno": 493
+      },
+      {
+        "name": "safe_update",
+        "lineno": 554
+      },
+      {
+        "name": "set_debug",
+        "lineno": 606
+      },
+      {
+        "name": "extract_playlist_id_from_spotify_url",
+        "lineno": 617
+      },
+      {
+        "name": "fetch_playlist_tracks_from_spotify",
+        "lineno": 638
+      },
+      {
+        "name": "create_json_from_spotify_api",
+        "lineno": 717
+      },
+      {
+        "name": "collect_playlists_from_notion",
+        "lineno": 758
+      },
+      {
+        "name": "collect_playlists_from_json",
+        "lineno": 856
+      },
+      {
+        "name": "collect_playlists",
+        "lineno": 897
+      },
+      {
+        "name": "detect_key",
+        "lineno": 921
+      },
+      {
+        "name": "convert_to_camelot",
+        "lineno": 962
+      },
+      {
+        "name": "tag_aiff",
+        "lineno": 981
+      },
+      {
+        "name": "eagle_item_exists",
+        "lineno": 1038
+      },
+      {
+        "name": "parse_spotify_url",
+        "lineno": 1074
+      },
+      {
+        "name": "resolve_album",
+        "lineno": 1094
+      },
+      {
+        "name": "duration_seconds",
+        "lineno": 1109
+      },
+      {
+        "name": "verify_with_ffmpeg",
+        "lineno": 1137
+      },
+      {
+        "name": "verify_with_librosa",
+        "lineno": 1146
+      },
+      {
+        "name": "verify_with_mutagen",
+        "lineno": 1154
+      },
+      {
+        "name": "verify_and_fix_tags",
+        "lineno": 1163
+      },
+      {
+        "name": "cleanup_duplicates",
+        "lineno": 1183
+      },
+      {
+        "name": "launch_eagle_app",
+        "lineno": 1234
+      },
+      {
+        "name": "eagle_request",
+        "lineno": 1256
+      },
+      {
+        "name": "eagle_switch_library",
+        "lineno": 1314
+      },
+      {
+        "name": "eagle_get_or_create_folder",
+        "lineno": 1326
+      },
+      {
+        "name": "eagle_add_item",
+        "lineno": 1351
+      },
+      {
+        "name": "write_m3u8",
+        "lineno": 1377
+      },
+      {
+        "name": "load_state",
+        "lineno": 1398
+      },
+      {
+        "name": "save_state",
+        "lineno": 1407
+      },
+      {
+        "name": "build_playlist_entries_from_disk",
+        "lineno": 1414
+      },
+      {
+        "name": "download_track",
+        "lineno": 1437
+      },
+      {
+        "name": "run_tests",
+        "lineno": 1465
+      },
+      {
+        "name": "self_test",
+        "lineno": 1532
+      },
+      {
+        "name": "main",
+        "lineno": 1568
+      }
+    ],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/spotify_incremental_sync_backup.py": {
+    "line_count": 530,
+    "functions": [
+      {
+        "name": "normalize_text_for_comparison",
+        "lineno": 50
+      },
+      {
+        "name": "calculate_similarity",
+        "lineno": 64
+      },
+      {
+        "name": "load_state",
+        "lineno": 77
+      },
+      {
+        "name": "save_state",
+        "lineno": 110
+      },
+      {
+        "name": "check_if_track_exists",
+        "lineno": 131
+      },
+      {
+        "name": "create_safe_notion_properties",
+        "lineno": 268
+      },
+      {
+        "name": "find_next_unprocessed_track",
+        "lineno": 394
+      },
+      {
+        "name": "process_single_track_with_state",
+        "lineno": 454
+      },
+      {
+        "name": "main",
+        "lineno": 521
+      }
+    ],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/spotify_playlists_to_notion.py": {
+    "line_count": 534,
+    "functions": [
+      {
+        "name": "__init__",
+        "lineno": 48
+      },
+      {
+        "name": "fetch_user_playlists",
+        "lineno": 65
+      },
+      {
+        "name": "fetch_playlist_tracks",
+        "lineno": 101
+      },
+      {
+        "name": "upsert_playlist_page",
+        "lineno": 155
+      },
+      {
+        "name": "append_track_list",
+        "lineno": 264
+      },
+      {
+        "name": "process_single_playlist",
+        "lineno": 359
+      },
+      {
+        "name": "run",
+        "lineno": 397
+      },
+      {
+        "name": "main",
+        "lineno": 499
+      }
+    ],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/spotify_to_notion_artists_only_full_fixed.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/spotify_to_notion_enhanced_with_logging.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/test_core_workflow_clean.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/test_spotify_tracks_with_verification.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/ultimate_music_workflow_fixed.py": {
+    "line_count": 1265,
+    "functions": [
+      {
+        "name": "__init__",
+        "lineno": 117
+      },
+      {
+        "name": "_load_comprehensive_config",
+        "lineno": 120
+      },
+      {
+        "name": "validate",
+        "lineno": 213
+      },
+      {
+        "name": "add_error",
+        "lineno": 287
+      },
+      {
+        "name": "get_duration",
+        "lineno": 297
+      },
+      {
+        "name": "get_summary",
+        "lineno": 302
+      },
+      {
+        "name": "_is_permalink",
+        "lineno": 343
+      },
+      {
+        "name": "__init__",
+        "lineno": 352
+      },
+      {
+        "name": "_init_services",
+        "lineno": 372
+      },
+      {
+        "name": "_init_state_management",
+        "lineno": 418
+      },
+      {
+        "name": "_init_utilities",
+        "lineno": 435
+      },
+      {
+        "name": "_init_processing",
+        "lineno": 482
+      },
+      {
+        "name": "_convert_spotify_track",
+        "lineno": 663
+      },
+      {
+        "name": "_convert_soundcloud_track",
+        "lineno": 674
+      },
+      {
+        "name": "_process_single_track_sync",
+        "lineno": 779
+      },
+      {
+        "name": "generate_report",
+        "lineno": 912
+      },
+      {
+        "name": "create_parser",
+        "lineno": 1084
+      }
+    ],
+    "classes": [
+      {
+        "name": "WorkflowState",
+        "lineno": 237
+      }
+    ]
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/unified_music_sync_orchestrator.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/unified_music_workflow copy.py": {
+    "line_count": 670,
+    "functions": [
+      {
+        "name": "__init__",
+        "lineno": 129
+      },
+      {
+        "name": "_headers",
+        "lineno": 138
+      },
+      {
+        "name": "__init__",
+        "lineno": 303
+      },
+      {
+        "name": "_get_token",
+        "lineno": 317
+      },
+      {
+        "name": "__init__",
+        "lineno": 388
+      },
+      {
+        "name": "_search_sync",
+        "lineno": 412
+      },
+      {
+        "name": "search",
+        "lineno": 462
+      },
+      {
+        "name": "__init__",
+        "lineno": 485
+      },
+      {
+        "name": "main",
+        "lineno": 659
+      }
+    ],
+    "classes": [
+      {
+        "name": "TrackSource",
+        "lineno": 54
+      }
+    ]
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/unified_music_workflow.py": {
+    "line_count": 2917,
+    "functions": [
+      {
+        "name": "__init__",
+        "lineno": 129
+      },
+      {
+        "name": "_headers",
+        "lineno": 141
+      },
+      {
+        "name": "__init__",
+        "lineno": 725
+      },
+      {
+        "name": "_get_token",
+        "lineno": 739
+      },
+      {
+        "name": "__init__",
+        "lineno": 889
+      },
+      {
+        "name": "__init__",
+        "lineno": 1048
+      },
+      {
+        "name": "_search_sync",
+        "lineno": 1076
+      },
+      {
+        "name": "search",
+        "lineno": 1125
+      },
+      {
+        "name": "__init__",
+        "lineno": 1148
+      },
+      {
+        "name": "main",
+        "lineno": 1359
+      },
+      {
+        "name": "search",
+        "lineno": 1403
+      },
+      {
+        "name": "__init__",
+        "lineno": 1426
+      },
+      {
+        "name": "main",
+        "lineno": 1627
+      },
+      {
+        "name": "search",
+        "lineno": 1671
+      },
+      {
+        "name": "__init__",
+        "lineno": 1694
+      },
+      {
+        "name": "main",
+        "lineno": 1905
+      },
+      {
+        "name": "search",
+        "lineno": 1949
+      },
+      {
+        "name": "__init__",
+        "lineno": 1972
+      },
+      {
+        "name": "main",
+        "lineno": 2183
+      },
+      {
+        "name": "search",
+        "lineno": 2227
+      },
+      {
+        "name": "__init__",
+        "lineno": 2250
+      },
+      {
+        "name": "main",
+        "lineno": 2424
+      },
+      {
+        "name": "search",
+        "lineno": 2468
+      },
+      {
+        "name": "__init__",
+        "lineno": 2491
+      },
+      {
+        "name": "main",
+        "lineno": 2665
+      },
+      {
+        "name": "search",
+        "lineno": 2709
+      },
+      {
+        "name": "__init__",
+        "lineno": 2732
+      },
+      {
+        "name": "main",
+        "lineno": 2906
+      }
+    ],
+    "classes": [
+      {
+        "name": "TrackSource",
+        "lineno": 54
+      }
+    ]
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/unified_music_workflow_enhanced.py": {
+    "line_count": 2321,
+    "functions": [
+      {
+        "name": "_parse_retry_after",
+        "lineno": 31
+      },
+      {
+        "name": "format",
+        "lineno": 193
+      },
+      {
+        "name": "__init__",
+        "lineno": 220
+      },
+      {
+        "name": "update_operation",
+        "lineno": 227
+      },
+      {
+        "name": "set_current_operation",
+        "lineno": 236
+      },
+      {
+        "name": "_print_heartbeat",
+        "lineno": 240
+      },
+      {
+        "name": "final_summary",
+        "lineno": 255
+      },
+      {
+        "name": "get_normalized_name",
+        "lineno": 299
+      },
+      {
+        "name": "get_normalized_artists",
+        "lineno": 303
+      },
+      {
+        "name": "get_normalized_album",
+        "lineno": 307
+      },
+      {
+        "name": "_normalize_text",
+        "lineno": 311
+      },
+      {
+        "name": "get_artist_variations",
+        "lineno": 324
+      },
+      {
+        "name": "__init__",
+        "lineno": 344
+      },
+      {
+        "name": "add_track_to_cache",
+        "lineno": 351
+      },
+      {
+        "name": "find_duplicates",
+        "lineno": 371
+      },
+      {
+        "name": "_calculate_artist_similarity",
+        "lineno": 492
+      },
+      {
+        "name": "_normalize_text",
+        "lineno": 515
+      },
+      {
+        "name": "__init__",
+        "lineno": 532
+      },
+      {
+        "name": "_initialize_csv_files",
+        "lineno": 558
+      },
+      {
+        "name": "backup_track",
+        "lineno": 573
+      },
+      {
+        "name": "backup_artist",
+        "lineno": 602
+      },
+      {
+        "name": "backup_playlist",
+        "lineno": 622
+      },
+      {
+        "name": "__init__",
+        "lineno": 658
+      },
+      {
+        "name": "_refresh_token",
+        "lineno": 664
+      },
+      {
+        "name": "__init__",
+        "lineno": 758
+      },
+      {
+        "name": "norm",
+        "lineno": 783
+      },
+      {
+        "name": "strong_title_match",
+        "lineno": 798
+      },
+      {
+        "name": "artist_present",
+        "lineno": 804
+      },
+      {
+        "name": "duration_ok",
+        "lineno": 808
+      },
+      {
+        "name": "_search",
+        "lineno": 821
+      },
+      {
+        "name": "__init__",
+        "lineno": 870
+      },
+      {
+        "name": "_headers",
+        "lineno": 882
+      },
+      {
+        "name": "load_tracks_cache",
+        "lineno": 889
+      },
+      {
+        "name": "save_tracks_cache",
+        "lineno": 901
+      },
+      {
+        "name": "update_tracks_cache",
+        "lineno": 910
+      },
+      {
+        "name": "_extract_track_data",
+        "lineno": 978
+      },
+      {
+        "name": "_get_rich_text_value",
+        "lineno": 1005
+      },
+      {
+        "name": "_get_title_value",
+        "lineno": 1011
+      },
+      {
+        "name": "_load_schema_cache",
+        "lineno": 1017
+      },
+      {
+        "name": "_save_schema_cache",
+        "lineno": 1030
+      },
+      {
+        "name": "normalize_text",
+        "lineno": 1065
+      },
+      {
+        "name": "artist_overlap",
+        "lineno": 1072
+      },
+      {
+        "name": "duration_close",
+        "lineno": 1077
+      },
+      {
+        "name": "__init__",
+        "lineno": 1649
+      }
+    ],
+    "classes": [
+      {
+        "name": "ColoredFormatter",
+        "lineno": 181
+      },
+      {
+        "name": "TrackSource",
+        "lineno": 277
+      },
+      {
+        "name": "AuthenticationError",
+        "lineno": 647
+      }
+    ]
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/unified_music_workflow_fixed.py": {
+    "line_count": 908,
+    "functions": [
+      {
+        "name": "__init__",
+        "lineno": 78
+      },
+      {
+        "name": "get_valid_token",
+        "lineno": 87
+      },
+      {
+        "name": "__init__",
+        "lineno": 151
+      },
+      {
+        "name": "_headers",
+        "lineno": 164
+      },
+      {
+        "name": "__init__",
+        "lineno": 528
+      },
+      {
+        "name": "__init__",
+        "lineno": 612
+      },
+      {
+        "name": "__init__",
+        "lineno": 663
+      },
+      {
+        "name": "main",
+        "lineno": 903
+      }
+    ],
+    "classes": [
+      {
+        "name": "TrackSource",
+        "lineno": 55
+      }
+    ]
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/unified_music_workflow_working.py": {
+    "line_count": 525,
+    "functions": [
+      {
+        "name": "__init__",
+        "lineno": 136
+      },
+      {
+        "name": "_headers",
+        "lineno": 147
+      },
+      {
+        "name": "__init__",
+        "lineno": 406
+      },
+      {
+        "name": "__init__",
+        "lineno": 449
+      },
+      {
+        "name": "search",
+        "lineno": 457
+      },
+      {
+        "name": "__init__",
+        "lineno": 474
+      }
+    ],
+    "classes": [
+      {
+        "name": "TrackSource",
+        "lineno": 47
+      }
+    ]
+  },
+  "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/unified_playlist_workflow_real.py": {
+    "line_count": 0,
+    "functions": [],
+    "classes": []
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "handoff_id": "973ae180-ec77-425e-ac88-f747f644b750",
+  "timestamp": "2025-12-19T01:57:35.142927+00:00",
+  "source_agent": "Codex MM1 Agent",
+  "target_agent": "Claude MM1 Agent",
+  "priority": "Medium",
+  "task_url": "https://www.notion.so/serenmedia/284e73616c278018872aeb14e82e0392",
+  "handoff_reason": "Manifest + processing report regeneration after protocol v5.1 patches and folder parity fix.",
+  "chain_tracking": {
+    "chain_id": "f58b57c7-b920-4c69-81fb-cc2588d99df8",
+    "chain_phase": 3,
+    "dedupe_key": "protocol-v5-audit_claude-mm1_codex-mm1_2025-12-18",
+    "agent_task_id": null,
+    "execution_log_id": null,
+    "issue_ids": [],
+    "mcp_status": "Running"
+  },
+  "context": {
+    "current_step": "Regenerated manifest and processing report; verified folder parity and protocol checksums.",
+    "work_completed": [
+      "Ran trigger_file_processor.py --dry-run with report -> /Users/brianhellemn/Documents/Agents/Agent-Triggers/processing_report_20251219.json (10 files scanned, no moves).",
+      "Updated scripts_manifest.json in Documents and repo with latest folder audit (all trigger folders now have 01/02/03, including Claude-MM1-Agent-Research-Trigger).",
+      "Recorded protocol checksum divergence: Documents copy sha256=5e8a3f856748f0f4c53cc42d8bd5e378515bd8e7930bfff0dd83e472c6999102 vs AgentSystem copy sha256=5441ca66fe22ea1d78c3b466808c532f5663479348cfa1091c87ed82049f1df8.",
+      "Processing report and manifest notes include parity status and dry-run note."
+    ],
+    "blocking_issue": null,
+    "project_goals": "Keep Agent-Triggers parity and documentation current post-protocol patches."
+  },
+  "required_action": "Align AgentSystem protocol copy to canonical Documents version (or add checksum/header), review new manifest/report, and proceed with next remediation steps.",
+  "success_criteria": [
+    "Protocol copies reconciled (hash match or canonical header).",
+    "Manifest accepted and used for parity checks.",
+    "Processing report reviewed for pending triggers."
+  ],
+  "deliverables": {
+    "files_created": [
+      "/Users/brianhellemn/Documents/Agents/Agent-Triggers/processing_report_20251219.json",
+      "/Users/brianhellemn/Documents/Agents/Agent-Triggers/scripts_manifest.json"
+    ],
+    "files_modified": [
+      "agents/agent-triggers/scripts_manifest.json"
+    ],
+    "artifacts": []
+  },
+  "archive_rule": "move_to_02_processed"
+}

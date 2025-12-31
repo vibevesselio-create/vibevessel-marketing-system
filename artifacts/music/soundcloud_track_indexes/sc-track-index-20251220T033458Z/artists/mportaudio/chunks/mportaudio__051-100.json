@@ -1,0 +1,246 @@
+{
+  "artist": "mportaudio",
+  "artist_url": "https://soundcloud.com/mportaudio",
+  "generated_at": "2025-12-20",
+  "rules": {
+    "exclude_title_patterns": [
+      "\\bfull\\s*set\\b",
+      "\\bheadline\\s*set\\b",
+      "\\b(dj\\s*)?set\\b",
+      "\\bmix\\b",
+      "\\bminimix\\b",
+      "\\bradio\\s*mix\\b",
+      "\\blive\\b",
+      "\\blive\\s*tool\\b",
+      "\\bsessions?\\b",
+      "\\bshowcase\\b",
+      "\\bperformance\\b",
+      "\\b(b2b|back\\s*to\\s*back)\\b",
+      "\\bhour\\s*(mix|set)\\b",
+      "\\brecorded\\s*live\\b",
+      "\\bedc\\b.*\\bset\\b",
+      "\\bcoachella\\b.*\\bset\\b",
+      "\\bfestival\\b.*\\bset\\b",
+      "\\bwip\\b",
+      "\\bwork\\s*in\\s*progress\\b",
+      "\\bunfinished\\b",
+      "\\bdemo\\b",
+      "\\bsketch\\b",
+      "\\brough\\s*cut\\b"
+    ],
+    "duration_threshold_seconds": 1800,
+    "exclude_wip": true,
+    "source_tracks_url": "https://soundcloud.com/mportaudio/tracks",
+    "pipeline": "soundcloud_track_index_exporter.py",
+    "run_id": "sc-track-index-20251220T033458Z"
+  },
+  "section": {
+    "index": 2,
+    "range": "051-100",
+    "chunk_size": 50
+  },
+  "total_tracks": 109,
+  "tracks_in_section": 50,
+  "tracks": [
+    {
+      "title": "Lil Wayne -3PEAT (Mport Edit)",
+      "url": "https://soundcloud.com/mportaudio/lil-wayne-3peatmport-edit-merry-xmas-vade"
+    },
+    {
+      "title": "LYKDIS",
+      "url": "https://soundcloud.com/mportaudio/lykdis"
+    },
+    {
+      "title": "LYKDIS [DnB Edit]",
+      "url": "https://soundcloud.com/mportaudio/lykdis-dnb-edit"
+    },
+    {
+      "title": "Manamiz - Goodnight (Mport Remix) (2019 never released)",
+      "url": "https://soundcloud.com/mportaudio/manamiz-goodnight-mport-remix"
+    },
+    {
+      "title": "Manifestation (ft AudioOpera)",
+      "url": "https://soundcloud.com/mportaudio/manifestation-ft-audioopera"
+    },
+    {
+      "title": "Milk Review (ft Big Chocolate)",
+      "url": "https://soundcloud.com/mportaudio/milk-review-ft-big-chocolate"
+    },
+    {
+      "title": "More Wonkier (ft William Montgomery)",
+      "url": "https://soundcloud.com/mportaudio/more-wonkier-ft-william"
+    },
+    {
+      "title": "Morning Wook",
+      "url": "https://soundcloud.com/mportaudio/morning-wook-1"
+    },
+    {
+      "title": "Mortlach (2 Shots)",
+      "url": "https://soundcloud.com/mportaudio/mortlach"
+    },
+    {
+      "title": "Move The Beat",
+      "url": "https://soundcloud.com/mportaudio/move-the-beat"
+    },
+    {
+      "title": "Mozzarella Stix",
+      "url": "https://soundcloud.com/mportaudio/mport-mozzarella-stix"
+    },
+    {
+      "title": "Mport - Darker Beat",
+      "url": "https://soundcloud.com/mportaudio/mport-darker-beat"
+    },
+    {
+      "title": "Mport - Snap Out of It",
+      "url": "https://soundcloud.com/mportaudio/mportsnapped"
+    },
+    {
+      "title": "MPORT LOW REMIX (🍎🍑👖)",
+      "url": "https://soundcloud.com/mportaudio/mport-low-remix-short"
+    },
+    {
+      "title": "Mport x Trip Drop - TRIP BOP",
+      "url": "https://soundcloud.com/mportaudio/tripboped"
+    },
+    {
+      "title": "Mport- Aggressive Compression Triplets Beat",
+      "url": "https://soundcloud.com/mportaudio/mport-aggressive-compression-triplets-beat"
+    },
+    {
+      "title": "Mport- Playful Beat",
+      "url": "https://soundcloud.com/mportaudio/mport-playful-beat"
+    },
+    {
+      "title": "OH BOY!",
+      "url": "https://soundcloud.com/mportaudio/oh-boy"
+    },
+    {
+      "title": "One Of My Favs 2nd Section Is A Huge Vibe",
+      "url": "https://soundcloud.com/mportaudio/one-of-my-favs-2nd-section-is"
+    },
+    {
+      "title": "Owen Wilson",
+      "url": "https://soundcloud.com/mportaudio/mport-owen-wilson-final-master"
+    },
+    {
+      "title": "PAWSPORT w/ PAWSTHEMUSIC",
+      "url": "https://soundcloud.com/mportaudio/pawsport-w-pawsthemusic"
+    },
+    {
+      "title": "Pixar Party",
+      "url": "https://soundcloud.com/mportaudio/pixar-party"
+    },
+    {
+      "title": "R U READY?!",
+      "url": "https://soundcloud.com/mportaudio/readyforthis"
+    },
+    {
+      "title": "Ray Volpe - Laserbeam (Mport Flip)",
+      "url": "https://soundcloud.com/mportaudio/ray-volpe-laserbeam-mport-flip"
+    },
+    {
+      "title": "Ray Volpe - Song Request (Mport Flip)",
+      "url": "https://soundcloud.com/mportaudio/rayvoplesongrequestmport"
+    },
+    {
+      "title": "Relax Your Body [Bonus Track]",
+      "url": "https://soundcloud.com/mportaudio/relax-your-body-bonus-track"
+    },
+    {
+      "title": "Rivibes - Where Do I Start (ft. Mport)",
+      "url": "https://soundcloud.com/mportaudio/dark-drill-rivibes-w-end-idea"
+    },
+    {
+      "title": "Rivibes - Where Do I Start (Mport Edit)",
+      "url": "https://soundcloud.com/mportaudio/dark-drill-w-rivibes-2-alt-version-turnt-idea"
+    },
+    {
+      "title": "Shade",
+      "url": "https://soundcloud.com/mportaudio/shade-free-download"
+    },
+    {
+      "title": "sik as frik 🍄",
+      "url": "https://soundcloud.com/mportaudio/sik-as-frik"
+    },
+    {
+      "title": "Skream & Benga - Good Things Come To Those Who Wait (Mport Edit)",
+      "url": "https://soundcloud.com/mportaudio/skream-benga-good-things-come-to-those-who-wait-mport-edit"
+    },
+    {
+      "title": "Slushii - Candy Flip (Mport Remix) [Free DL]",
+      "url": "https://soundcloud.com/mportaudio/slushii-candy-flip-mport-remix-free-dl"
+    },
+    {
+      "title": "So Likable!",
+      "url": "https://soundcloud.com/mportaudio/so-likeable"
+    },
+    {
+      "title": "So Loud, It's Quiet [Hearditherefirst.blog Premiere]",
+      "url": "https://soundcloud.com/mportaudio/so-loud-its-quiet-hihf-premiere"
+    },
+    {
+      "title": "sTar sTruck",
+      "url": "https://soundcloud.com/mportaudio/star-struck"
+    },
+    {
+      "title": "Stealth Mode Ft. Rivibes",
+      "url": "https://soundcloud.com/mportaudio/stealth-mode-ft-rivibes"
+    },
+    {
+      "title": "Subtronics x HOL!  - MIND PLUCK (Mport Edit)",
+      "url": "https://soundcloud.com/mportaudio/subtronics-x-hol-mind-pluck-mport-edit"
+    },
+    {
+      "title": "Tate Kobang- \"Oh My\" (Parks N' Wreck ReWork)",
+      "url": "https://soundcloud.com/mportaudio/tate-kobang-oh-my-parks-n-wreck-remix"
+    },
+    {
+      "title": "Tension",
+      "url": "https://soundcloud.com/mportaudio/tension"
+    },
+    {
+      "title": "The Beatles - Day Tripper (Mport Remix)",
+      "url": "https://soundcloud.com/mportaudio/the-beatles-day-tripper-mport-flip-master"
+    },
+    {
+      "title": "The Five D's",
+      "url": "https://soundcloud.com/mportaudio/the-five-ds"
+    },
+    {
+      "title": "The Jiggler",
+      "url": "https://soundcloud.com/mportaudio/the-jiggler"
+    },
+    {
+      "title": "The Loosest Beat Ever",
+      "url": "https://soundcloud.com/mportaudio/the-loosest-beat-ever"
+    },
+    {
+      "title": "The Surfaris - Wipeout (Mport Flip)",
+      "url": "https://soundcloud.com/mportaudio/wipeoutport"
+    },
+    {
+      "title": "This is not Ookay (Custom intro for when I opened for Ookay in Denver)",
+      "url": "https://soundcloud.com/mportaudio/this-is-not-ookay-custom-intro-for-when-i-opened-for-ookay"
+    },
+    {
+      "title": "Train Beat (sampled Reddit) super lazy beat feel 106bpm",
+      "url": "https://soundcloud.com/mportaudio/train-beat-sampled-reddit-super-lazy-beat-feel-104"
+    },
+    {
+      "title": "Trippy Turtle- Solo (Mport Flip) [Free DL]",
+      "url": "https://soundcloud.com/mportaudio/trippy-turtle-solo-mport-flipfree-dl"
+    },
+    {
+      "title": "TroyBoi - Flamez (Mport Flip)",
+      "url": "https://soundcloud.com/mportaudio/troyboi-flamez-mport-flip"
+    },
+    {
+      "title": "Universe Island",
+      "url": "https://soundcloud.com/mportaudio/universeisland"
+    },
+    {
+      "title": "Vibration Gun",
+      "url": "https://soundcloud.com/mportaudio/vibration-gun"
+    }
+  ]
+}

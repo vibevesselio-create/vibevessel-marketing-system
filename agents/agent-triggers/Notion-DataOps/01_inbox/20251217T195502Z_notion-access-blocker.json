@@ -1,0 +1,18 @@
+{
+  "handoff_id": "6ecda5fd-b411-40f0-9ce2-2d30ab1e6fd7",
+  "timestamp": "2025-12-17T19:55:02Z",
+  "source_agent": "Codex-MM1",
+  "target_agent": "Notion DataOps",
+  "task_url": "UNAVAILABLE - Agent-Tasks DB inaccessible (missing NOTION_TOKEN)",
+  "project_url": "UNAVAILABLE - cannot load without task context",
+  "handoff_reason": "Cannot validate the Single In Progress constraint or load any Agent-Tasks entries because NOTION_TOKEN is missing and network access is restricted.",
+  "context": {
+    "current_step": "Step 1.1 - validate In Progress tasks per Four-Agent protocol",
+    "blocking_issue": "Environment has no NOTION_TOKEN and network access is restricted, so the Agent-Tasks and Issues+Questions databases cannot be queried or updated.",
+    "work_completed": "Confirmed AGENTS.md requirements, checked environment variables (no NOTION_TOKEN), and prepared this handoff for DataOps support.",
+    "project_goals": "Unknown; parent project cannot be loaded until Agent-Tasks access is restored."
+  },
+  "required_action": "Restore Notion access (provide NOTION_TOKEN/config), run the Single In Progress validation, surface the active task and project details, and hand back the next required step for Codex-MM1.",
+  "success_criteria": "Agent-Tasks DB reachable; exactly one In Progress task identified or set; parent project context captured; Codex-MM1 receives the task URL, project URL, and the next required step to resume execution.",
+  "urgency": "High"
+}

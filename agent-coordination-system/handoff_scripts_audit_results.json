@@ -1,0 +1,471 @@
+{
+  "scripts_found": [],
+  "scripts_missing": [
+    {
+      "name": "hybrid_orchestrator.py",
+      "path": "agent-coordination-system/hybrid_orchestrator.py",
+      "description": "Hybrid orchestrator that combines multiple data sources and trigger mechanisms for reliable workflow execution",
+      "workflow_type": "task_distribution",
+      "functions": [
+        "retrieve_task_with_fallback",
+        "generate_optimized_prompt",
+        "execute_task",
+        "time_based_execution_loop"
+      ]
+    },
+    {
+      "name": "sequential_handoff_scheduler.py",
+      "path": "agent-coordination-system/sequential_handoff_scheduler.py",
+      "description": "Sequential handoff scheduler ensuring handoff tasks are created one at a time with agent-gated and time-based scheduling",
+      "workflow_type": "task_distribution",
+      "functions": [
+        "register_workflow",
+        "start_workflow",
+        "_schedule_next_step",
+        "_can_schedule_step"
+      ]
+    },
+    {
+      "name": "hybrid_agent_handoff_manager.py",
+      "path": "agent-coordination-system/hybrid_agent_handoff_manager.py",
+      "description": "Hybrid webhook + polling architecture for agent handoff workflows",
+      "workflow_type": "task_distribution",
+      "functions": [
+        "receive_webhook_handoff",
+        "_poll_for_handoffs",
+        "_process_handoff",
+        "start",
+        "stop"
+      ]
+    },
+    {
+      "name": "handoff_task_creator.py",
+      "path": "agent-coordination-system/handoff_task_creator.py",
+      "description": "Ensures handoff tasks are created in Notion with retry logic and validation",
+      "workflow_type": "task_creation",
+      "functions": [
+        "create_handoff_task",
+        "_validate_task_creation",
+        "_get_agent_page_id"
+      ]
+    },
+    {
+      "name": "handoff_task_validator.py",
+      "path": "agent-coordination-system/handoff_task_validator.py",
+      "description": "Validates that recently completed handoffs have corresponding tasks created in Notion",
+      "workflow_type": "task_validation",
+      "functions": [
+        "validate_recent_handoffs",
+        "check_missing_tasks"
+      ]
+    },
+    {
+      "name": "stalled_handoff_detector.py",
+      "path": "agent-coordination-system/stalled_handoff_detector.py",
+      "description": "Detects and remediates stalled handoff tasks",
+      "workflow_type": "task_monitoring",
+      "functions": [
+        "detect_stalled_handoffs",
+        "remediate_stalled_handoff"
+      ]
+    },
+    {
+      "name": "agent_lock_manager.py",
+      "path": "agent-coordination-system/agent_lock_manager.py",
+      "description": "Manages agent locks to ensure only one agent operates at a time",
+      "workflow_type": "task_coordination",
+      "functions": [
+        "acquire_lock",
+        "release_lock",
+        "can_acquire_lock",
+        "get_current_lock"
+      ]
+    },
+    {
+      "name": "notion_task_handler.py",
+      "path": "agent-coordination-system/notion_task_handler.py",
+      "description": "Handles Notion API interactions for task management",
+      "workflow_type": "task_management",
+      "functions": [
+        "retrieve_task",
+        "update_task",
+        "handoff_task",
+        "assign_task_to_agent"
+      ]
+    },
+    {
+      "name": "task_timeout_manager.py",
+      "path": "agent-coordination-system/task_timeout_manager.py",
+      "description": "Detects incomplete task execution and switches agents after timeout",
+      "workflow_type": "task_monitoring",
+      "functions": [
+        "check_timeout",
+        "switch_agent",
+        "get_timeout_tasks"
+      ]
+    },
+    {
+      "name": "universal_prompt_enhancer.py",
+      "path": "agent-coordination-system/universal_prompt_enhancer.py",
+      "description": "Ensures every prompt includes review and execution handoff instructions with contextual refinement",
+      "workflow_type": "prompt_enhancement",
+      "functions": [
+        "enhance_prompt",
+        "detect_task_category",
+        "_build_review_instruction",
+        "_build_execution_instruction"
+      ]
+    },
+    {
+      "name": "agent_orchestrator.py",
+      "path": "agent-coordination-system/agent_orchestrator.py",
+      "description": "Main coordination system for agent handoff and workflow management",
+      "workflow_type": "task_coordination",
+      "functions": [
+        "coordinate_agents",
+        "manage_handoffs",
+        "execute_workflow"
+      ]
+    }
+  ],
+  "workflows_found": [],
+  "workflows_missing": [
+    {
+      "name": "hybrid_orchestrator.py",
+      "path": "agent-coordination-system/hybrid_orchestrator.py",
+      "description": "Hybrid orchestrator that combines multiple data sources and trigger mechanisms for reliable workflow execution",
+      "workflow_type": "task_distribution",
+      "functions": [
+        "retrieve_task_with_fallback",
+        "generate_optimized_prompt",
+        "execute_task",
+        "time_based_execution_loop"
+      ]
+    },
+    {
+      "name": "sequential_handoff_scheduler.py",
+      "path": "agent-coordination-system/sequential_handoff_scheduler.py",
+      "description": "Sequential handoff scheduler ensuring handoff tasks are created one at a time with agent-gated and time-based scheduling",
+      "workflow_type": "task_distribution",
+      "functions": [
+        "register_workflow",
+        "start_workflow",
+        "_schedule_next_step",
+        "_can_schedule_step"
+      ]
+    },
+    {
+      "name": "hybrid_agent_handoff_manager.py",
+      "path": "agent-coordination-system/hybrid_agent_handoff_manager.py",
+      "description": "Hybrid webhook + polling architecture for agent handoff workflows",
+      "workflow_type": "task_distribution",
+      "functions": [
+        "receive_webhook_handoff",
+        "_poll_for_handoffs",
+        "_process_handoff",
+        "start",
+        "stop"
+      ]
+    },
+    {
+      "name": "handoff_task_creator.py",
+      "path": "agent-coordination-system/handoff_task_creator.py",
+      "description": "Ensures handoff tasks are created in Notion with retry logic and validation",
+      "workflow_type": "task_creation",
+      "functions": [
+        "create_handoff_task",
+        "_validate_task_creation",
+        "_get_agent_page_id"
+      ]
+    },
+    {
+      "name": "handoff_task_validator.py",
+      "path": "agent-coordination-system/handoff_task_validator.py",
+      "description": "Validates that recently completed handoffs have corresponding tasks created in Notion",
+      "workflow_type": "task_validation",
+      "functions": [
+        "validate_recent_handoffs",
+        "check_missing_tasks"
+      ]
+    },
+    {
+      "name": "stalled_handoff_detector.py",
+      "path": "agent-coordination-system/stalled_handoff_detector.py",
+      "description": "Detects and remediates stalled handoff tasks",
+      "workflow_type": "task_monitoring",
+      "functions": [
+        "detect_stalled_handoffs",
+        "remediate_stalled_handoff"
+      ]
+    },
+    {
+      "name": "agent_lock_manager.py",
+      "path": "agent-coordination-system/agent_lock_manager.py",
+      "description": "Manages agent locks to ensure only one agent operates at a time",
+      "workflow_type": "task_coordination",
+      "functions": [
+        "acquire_lock",
+        "release_lock",
+        "can_acquire_lock",
+        "get_current_lock"
+      ]
+    },
+    {
+      "name": "notion_task_handler.py",
+      "path": "agent-coordination-system/notion_task_handler.py",
+      "description": "Handles Notion API interactions for task management",
+      "workflow_type": "task_management",
+      "functions": [
+        "retrieve_task",
+        "update_task",
+        "handoff_task",
+        "assign_task_to_agent"
+      ]
+    },
+    {
+      "name": "task_timeout_manager.py",
+      "path": "agent-coordination-system/task_timeout_manager.py",
+      "description": "Detects incomplete task execution and switches agents after timeout",
+      "workflow_type": "task_monitoring",
+      "functions": [
+        "check_timeout",
+        "switch_agent",
+        "get_timeout_tasks"
+      ]
+    },
+    {
+      "name": "universal_prompt_enhancer.py",
+      "path": "agent-coordination-system/universal_prompt_enhancer.py",
+      "description": "Ensures every prompt includes review and execution handoff instructions with contextual refinement",
+      "workflow_type": "prompt_enhancement",
+      "functions": [
+        "enhance_prompt",
+        "detect_task_category",
+        "_build_review_instruction",
+        "_build_execution_instruction"
+      ]
+    },
+    {
+      "name": "agent_orchestrator.py",
+      "path": "agent-coordination-system/agent_orchestrator.py",
+      "description": "Main coordination system for agent handoff and workflow management",
+      "workflow_type": "task_coordination",
+      "functions": [
+        "coordinate_agents",
+        "manage_handoffs",
+        "execute_workflow"
+      ]
+    }
+  ],
+  "functions_found": [],
+  "functions_missing": [
+    {
+      "script": {
+        "name": "hybrid_orchestrator.py",
+        "path": "agent-coordination-system/hybrid_orchestrator.py",
+        "description": "Hybrid orchestrator that combines multiple data sources and trigger mechanisms for reliable workflow execution",
+        "workflow_type": "task_distribution",
+        "functions": [
+          "retrieve_task_with_fallback",
+          "generate_optimized_prompt",
+          "execute_task",
+          "time_based_execution_loop"
+        ]
+      },
+      "missing_functions": [
+        "retrieve_task_with_fallback",
+        "generate_optimized_prompt",
+        "execute_task",
+        "time_based_execution_loop"
+      ]
+    },
+    {
+      "script": {
+        "name": "sequential_handoff_scheduler.py",
+        "path": "agent-coordination-system/sequential_handoff_scheduler.py",
+        "description": "Sequential handoff scheduler ensuring handoff tasks are created one at a time with agent-gated and time-based scheduling",
+        "workflow_type": "task_distribution",
+        "functions": [
+          "register_workflow",
+          "start_workflow",
+          "_schedule_next_step",
+          "_can_schedule_step"
+        ]
+      },
+      "missing_functions": [
+        "register_workflow",
+        "start_workflow",
+        "_schedule_next_step",
+        "_can_schedule_step"
+      ]
+    },
+    {
+      "script": {
+        "name": "hybrid_agent_handoff_manager.py",
+        "path": "agent-coordination-system/hybrid_agent_handoff_manager.py",
+        "description": "Hybrid webhook + polling architecture for agent handoff workflows",
+        "workflow_type": "task_distribution",
+        "functions": [
+          "receive_webhook_handoff",
+          "_poll_for_handoffs",
+          "_process_handoff",
+          "start",
+          "stop"
+        ]
+      },
+      "missing_functions": [
+        "receive_webhook_handoff",
+        "_poll_for_handoffs",
+        "_process_handoff",
+        "start",
+        "stop"
+      ]
+    },
+    {
+      "script": {
+        "name": "handoff_task_creator.py",
+        "path": "agent-coordination-system/handoff_task_creator.py",
+        "description": "Ensures handoff tasks are created in Notion with retry logic and validation",
+        "workflow_type": "task_creation",
+        "functions": [
+          "create_handoff_task",
+          "_validate_task_creation",
+          "_get_agent_page_id"
+        ]
+      },
+      "missing_functions": [
+        "create_handoff_task",
+        "_validate_task_creation",
+        "_get_agent_page_id"
+      ]
+    },
+    {
+      "script": {
+        "name": "handoff_task_validator.py",
+        "path": "agent-coordination-system/handoff_task_validator.py",
+        "description": "Validates that recently completed handoffs have corresponding tasks created in Notion",
+        "workflow_type": "task_validation",
+        "functions": [
+          "validate_recent_handoffs",
+          "check_missing_tasks"
+        ]
+      },
+      "missing_functions": [
+        "validate_recent_handoffs",
+        "check_missing_tasks"
+      ]
+    },
+    {
+      "script": {
+        "name": "stalled_handoff_detector.py",
+        "path": "agent-coordination-system/stalled_handoff_detector.py",
+        "description": "Detects and remediates stalled handoff tasks",
+        "workflow_type": "task_monitoring",
+        "functions": [
+          "detect_stalled_handoffs",
+          "remediate_stalled_handoff"
+        ]
+      },
+      "missing_functions": [
+        "detect_stalled_handoffs",
+        "remediate_stalled_handoff"
+      ]
+    },
+    {
+      "script": {
+        "name": "agent_lock_manager.py",
+        "path": "agent-coordination-system/agent_lock_manager.py",
+        "description": "Manages agent locks to ensure only one agent operates at a time",
+        "workflow_type": "task_coordination",
+        "functions": [
+          "acquire_lock",
+          "release_lock",
+          "can_acquire_lock",
+          "get_current_lock"
+        ]
+      },
+      "missing_functions": [
+        "acquire_lock",
+        "release_lock",
+        "can_acquire_lock",
+        "get_current_lock"
+      ]
+    },
+    {
+      "script": {
+        "name": "notion_task_handler.py",
+        "path": "agent-coordination-system/notion_task_handler.py",
+        "description": "Handles Notion API interactions for task management",
+        "workflow_type": "task_management",
+        "functions": [
+          "retrieve_task",
+          "update_task",
+          "handoff_task",
+          "assign_task_to_agent"
+        ]
+      },
+      "missing_functions": [
+        "retrieve_task",
+        "update_task",
+        "handoff_task",
+        "assign_task_to_agent"
+      ]
+    },
+    {
+      "script": {
+        "name": "task_timeout_manager.py",
+        "path": "agent-coordination-system/task_timeout_manager.py",
+        "description": "Detects incomplete task execution and switches agents after timeout",
+        "workflow_type": "task_monitoring",
+        "functions": [
+          "check_timeout",
+          "switch_agent",
+          "get_timeout_tasks"
+        ]
+      },
+      "missing_functions": [
+        "check_timeout",
+        "switch_agent",
+        "get_timeout_tasks"
+      ]
+    },
+    {
+      "script": {
+        "name": "universal_prompt_enhancer.py",
+        "path": "agent-coordination-system/universal_prompt_enhancer.py",
+        "description": "Ensures every prompt includes review and execution handoff instructions with contextual refinement",
+        "workflow_type": "prompt_enhancement",
+        "functions": [
+          "enhance_prompt",
+          "detect_task_category",
+          "_build_review_instruction",
+          "_build_execution_instruction"
+        ]
+      },
+      "missing_functions": [
+        "enhance_prompt",
+        "detect_task_category",
+        "_build_review_instruction",
+        "_build_execution_instruction"
+      ]
+    },
+    {
+      "script": {
+        "name": "agent_orchestrator.py",
+        "path": "agent-coordination-system/agent_orchestrator.py",
+        "description": "Main coordination system for agent handoff and workflow management",
+        "workflow_type": "task_coordination",
+        "functions": [
+          "coordinate_agents",
+          "manage_handoffs",
+          "execute_workflow"
+        ]
+      },
+      "missing_functions": [
+        "coordinate_agents",
+        "manage_handoffs",
+        "execute_workflow"
+      ]
+    }
+  ]
+}

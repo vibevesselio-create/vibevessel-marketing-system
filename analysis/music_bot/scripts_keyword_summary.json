@@ -1,0 +1,351 @@
+[
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/REMOVE_DUPLICATES-1016.py",
+    "line_count": 2083,
+    "top_keywords": [
+      "match",
+      "notion",
+      "spotify",
+      "batch",
+      "state"
+    ]
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/auto_repair_system.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/comprehensive_metadata_and_tags_fix.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/comprehensive_workflow_orchestrator_fixed.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/comprehensive_workflow_orchestrator_optimized.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/database_workflow_manager.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/enhanced_client 2.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/enhanced_client.py",
+    "line_count": 2382,
+    "top_keywords": [
+      "sync",
+      "spotify",
+      "notion",
+      "metadata",
+      "soundcloud"
+    ]
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/enhanced_orchestrator.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/enhanced_playlist_processor.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/enhanced_playlist_processor_automated.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/enhanced_playlist_processor_with_state_tracking.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/enhanced_production_builder.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/enhanced_state_tracker.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/enhanced_sync_system_v2.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/json_spotify_processor.py",
+    "line_count": 1145,
+    "top_keywords": [
+      "spotify",
+      "notion",
+      "soundcloud",
+      "sync",
+      "download"
+    ]
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/matching_engine.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/music_metadata_population.py",
+    "line_count": 652,
+    "top_keywords": [
+      "match",
+      "spotify",
+      "soundcloud",
+      "metadata",
+      "notion"
+    ]
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/music_metadata_updater.py",
+    "line_count": 562,
+    "top_keywords": [
+      "spotify",
+      "soundcloud",
+      "match",
+      "notion",
+      "metadata"
+    ]
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/music_workflow_automation.py",
+    "line_count": 610,
+    "top_keywords": [
+      "spotify",
+      "metadata",
+      "soundcloud",
+      "notion",
+      "match"
+    ]
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/notion_integration.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/notion_integration_fixed.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/notion_relation_populator.py",
+    "line_count": 1152,
+    "top_keywords": [
+      "match",
+      "batch",
+      "state",
+      "notion",
+      "workflow"
+    ]
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/pipeline.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/production_music_sync_demo.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/seren_autonomous_scripting_system_v7.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/single_track_orchestrator.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/single_track_workflow.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/soundcloud_download_aligned.py",
+    "line_count": 3786,
+    "top_keywords": [
+      "eagle",
+      "tag",
+      "notion",
+      "metadata",
+      "soundcloud"
+    ]
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/soundcloud_download_prod_merge-2.py",
+    "line_count": 8190,
+    "top_keywords": [
+      "eagle",
+      "notion",
+      "tag",
+      "batch",
+      "metadata"
+    ]
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/soundcloud_notion_integration.py",
+    "line_count": 1401,
+    "top_keywords": [
+      "match",
+      "soundcloud",
+      "spotify",
+      "notion",
+      "youtube"
+    ]
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/soundcloud_notion_integration_backup.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/spotify-download-dual-output.py",
+    "line_count": 1717,
+    "top_keywords": [
+      "notion",
+      "spotify",
+      "eagle",
+      "tag",
+      "state"
+    ]
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/spotify_incremental_sync_backup.py",
+    "line_count": 530,
+    "top_keywords": [
+      "state",
+      "spotify",
+      "notion",
+      "match",
+      "sync"
+    ]
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/spotify_playlists_to_notion.py",
+    "line_count": 534,
+    "top_keywords": [
+      "notion",
+      "spotify",
+      "batch",
+      "metadata",
+      "oauth"
+    ]
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/spotify_to_notion_artists_only_full_fixed.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/spotify_to_notion_enhanced_with_logging.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/test_core_workflow_clean.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/test_spotify_tracks_with_verification.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/ultimate_music_workflow_fixed.py",
+    "line_count": 1265,
+    "top_keywords": [
+      "soundcloud",
+      "spotify",
+      "notion",
+      "state",
+      "workflow"
+    ]
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/unified_music_sync_orchestrator.py",
+    "line_count": 0,
+    "top_keywords": []
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/unified_music_workflow copy.py",
+    "line_count": 670,
+    "top_keywords": [
+      "sync",
+      "spotify",
+      "notion",
+      "soundcloud",
+      "state"
+    ]
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/unified_music_workflow.py",
+    "line_count": 2917,
+    "top_keywords": [
+      "sync",
+      "notion",
+      "spotify",
+      "soundcloud",
+      "batch"
+    ]
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/unified_music_workflow_enhanced.py",
+    "line_count": 2321,
+    "top_keywords": [
+      "spotify",
+      "soundcloud",
+      "sync",
+      "notion",
+      "match"
+    ]
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/unified_music_workflow_fixed.py",
+    "line_count": 908,
+    "top_keywords": [
+      "sync",
+      "spotify",
+      "notion",
+      "soundcloud",
+      "state"
+    ]
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/unified_music_workflow_working.py",
+    "line_count": 525,
+    "top_keywords": [
+      "sync",
+      "spotify",
+      "soundcloud",
+      "notion",
+      "state"
+    ]
+  },
+  {
+    "path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/OLD-SCRIPTS-ARCHIVE/MUSIC-BOT/unified_playlist_workflow_real.py",
+    "line_count": 0,
+    "top_keywords": []
+  }
+]

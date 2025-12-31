@@ -1,0 +1,37 @@
+{
+  "counts": {
+    "covered": 58,
+    "missing": 338,
+    "total": 396
+  },
+  "dedupe_group_count": 0,
+  "generated_at": "2025-12-13T04:27:03Z",
+  "missing_by_category": {
+    "connection": 49,
+    "diff": 5,
+    "extraction_clips": 55,
+    "extraction_media_pool": 1,
+    "extraction_projects": 115,
+    "extraction_timelines": 6,
+    "other": 8,
+    "plan": 14,
+    "process": 57,
+    "state": 9,
+    "testing": 1,
+    "workflow": 18
+  },
+  "missing_by_module": {
+    "core.davinci_resolve": 8,
+    "core.davinci_resolve.connection": 49,
+    "core.davinci_resolve.diff": 5,
+    "core.davinci_resolve.extraction.clips": 55,
+    "core.davinci_resolve.extraction.media_pool": 1,
+    "core.davinci_resolve.extraction.projects": 115,
+    "core.davinci_resolve.extraction.timelines": 6,
+    "core.davinci_resolve.plan": 14,
+    "core.davinci_resolve.process": 57,
+    "core.davinci_resolve.state.sqlite_store": 9,
+    "core.davinci_resolve.workflows.sync": 18,
+    "tests": 1
+  }
+}

@@ -1,0 +1,160 @@
+[
+  {
+    "track": {
+      "url": "https://open.spotify.com/track/2TKKjU7ebpwRytVfDxeWq1",
+      "title": "Dread's Riddim",
+      "artist": "Fabian Mazur",
+      "id": "2TKKjU7ebpwRytVfDxeWq1",
+      "duration_ms": 136500
+    },
+    "notion_page_id": "2d8e7361-6c27-811d-a7bd-d05233dfe82a",
+    "youtube_url": "https://www.youtube.com/watch?v=0PKLqb-Wfis",
+    "soundcloud_url": "https://soundcloud.com/fabianmazur/dreads-riddim",
+    "status": "partial",
+    "errors": [
+      "Download failed with code 1"
+    ]
+  },
+  {
+    "track": {
+      "url": "https://open.spotify.com/track/6YqZbOIj8HKw7l1bIjtNME",
+      "title": "Nasty",
+      "artist": "Fabian Mazur",
+      "id": "6YqZbOIj8HKw7l1bIjtNME",
+      "duration_ms": 129229
+    },
+    "notion_page_id": "2d8e7361-6c27-8198-967e-e25ea7b4e11c",
+    "youtube_url": "https://www.youtube.com/watch?v=3epu4thUo2E",
+    "soundcloud_url": "https://soundcloud.com/fabianmazur/nasty",
+    "status": "partial",
+    "errors": [
+      "Download failed with code 1"
+    ]
+  },
+  {
+    "track": {
+      "url": "https://open.spotify.com/track/3073uaNV3wZ5FivmxcOdCS",
+      "title": "Rain",
+      "artist": "Fabian Mazur",
+      "id": "3073uaNV3wZ5FivmxcOdCS",
+      "duration_ms": 144315
+    },
+    "notion_page_id": "2d8e7361-6c27-8179-9dbc-c12fd9bf9017",
+    "youtube_url": "https://www.youtube.com/watch?v=5H2Hx1GnXK0",
+    "soundcloud_url": "https://soundcloud.com/fabianmazur/rain",
+    "status": "partial",
+    "errors": [
+      "Download failed with code 1"
+    ]
+  },
+  {
+    "track": {
+      "url": "https://open.spotify.com/track/3DweUSuXTxBaWwkynMvTC6",
+      "title": "GTFU",
+      "artist": "Fabian Mazur",
+      "id": "3DweUSuXTxBaWwkynMvTC6",
+      "duration_ms": 121250
+    },
+    "notion_page_id": "2d8e7361-6c27-811a-a032-db03d00efc56",
+    "youtube_url": null,
+    "soundcloud_url": null,
+    "status": "already_complete",
+    "errors": []
+  },
+  {
+    "track": {
+      "url": "https://open.spotify.com/track/3mS892OVPgwDSDX8bVrE7K",
+      "title": "Calling For A Sign (feat. Kelli-Leigh)",
+      "artist": "Sub Focus",
+      "id": "3mS892OVPgwDSDX8bVrE7K",
+      "duration_ms": 231720
+    },
+    "notion_page_id": "2d8e7361-6c27-8146-b552-d9346cc77cb4",
+    "youtube_url": "https://www.youtube.com/watch?v=qgCDi9lKH0c",
+    "soundcloud_url": "https://soundcloud.com/subfocus/calling-for-a-sign-feat-kelli",
+    "status": "partial",
+    "errors": [
+      "Download failed with code 1"
+    ]
+  },
+  {
+    "track": {
+      "url": "https://open.spotify.com/track/0RZWxStYiXI72PFVYys4kp",
+      "title": "So Many Colours (feat. Poppy Baskcomb)",
+      "artist": "Sub Focus",
+      "id": "0RZWxStYiXI72PFVYys4kp",
+      "duration_ms": 227586
+    },
+    "notion_page_id": "2d8e7361-6c27-8120-84cf-c83985b1a153",
+    "youtube_url": "https://www.youtube.com/watch?v=StxUpTfrzHM",
+    "soundcloud_url": "https://soundcloud.com/kessleric/sub-focus-so-many-colours-ft-1",
+    "status": "partial",
+    "errors": [
+      "Download failed with code 1"
+    ]
+  },
+  {
+    "track": {
+      "url": "https://open.spotify.com/track/75xoQG7rwVC2xNGZOfg2mh",
+      "title": "Vibration (feat. AR/CO)",
+      "artist": "Sub Focus",
+      "id": "75xoQG7rwVC2xNGZOfg2mh",
+      "duration_ms": 242760
+    },
+    "notion_page_id": "2d8e7361-6c27-81ef-9524-f1e97e3d72ae",
+    "youtube_url": "https://www.youtube.com/watch?v=Wy6cdLDW7wY",
+    "soundcloud_url": "https://soundcloud.com/subfocus/vibration-one-more-time-feat",
+    "status": "partial",
+    "errors": [
+      "Download failed with code 1"
+    ]
+  },
+  {
+    "track": {
+      "url": "https://open.spotify.com/track/36CNs7ICeyb1D8m6qlm4nf",
+      "title": "IRONIC",
+      "artist": "ero808",
+      "id": "36CNs7ICeyb1D8m6qlm4nf",
+      "duration_ms": 165000
+    },
+    "notion_page_id": "2d8e7361-6c27-8166-b17c-c64ce86431bd",
+    "youtube_url": "https://www.youtube.com/watch?v=d96xr3ywWvI",
+    "soundcloud_url": "https://soundcloud.com/ero808/ironic-1",
+    "status": "partial",
+    "errors": [
+      "Download failed with code 1"
+    ]
+  },
+  {
+    "track": {
+      "url": "https://open.spotify.com/track/3MbCPBMZzFMPa1vMCIcgwS",
+      "title": "Off The Ground",
+      "artist": "Sub Focus",
+      "id": "3MbCPBMZzFMPa1vMCIcgwS",
+      "duration_ms": 242760
+    },
+    "notion_page_id": "2d8e7361-6c27-8196-9b7f-dd3de76f3aa7",
+    "youtube_url": "https://www.youtube.com/watch?v=yDvrNjZiafs",
+    "soundcloud_url": "https://soundcloud.com/subfocus/off-the-ground",
+    "status": "partial",
+    "errors": [
+      "Download failed with code 1"
+    ]
+  },
+  {
+    "track": {
+      "url": "https://open.spotify.com/track/3VkA16jPKWOs7BIU5AWjyb",
+      "title": "No Comment",
+      "artist": "KNEECAP",
+      "id": "3VkA16jPKWOs7BIU5AWjyb",
+      "duration_ms": 124137
+    },
+    "notion_page_id": "2d8e7361-6c27-8179-88e5-fa06ac9cfdb6",
+    "youtube_url": "https://www.youtube.com/watch?v=eDru6Ih-rsA",
+    "soundcloud_url": "https://soundcloud.com/user-89644332/no-comment",
+    "status": "partial",
+    "errors": [
+      "Download failed with code 1"
+    ]
+  }
+]
