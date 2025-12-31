@@ -83,7 +83,8 @@ class Config:
         if self.allowed_script_dirs is None:
             self.allowed_script_dirs = [
                 Path.home() / "Projects" / "github",
-                Path.home() / "Projects" / "github-production",
+                Path.home() / "Projects" / "github-production",  # Legacy path (now vibevessel-marketing-system)
+                Path.home() / "Projects" / "vibevessel-marketing-system",  # New repository path
                 Path.home() / "Scripts",
             ]
         
