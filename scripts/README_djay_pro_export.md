@@ -48,6 +48,15 @@ python scripts/djay_pro_library_export.py --csv-only
 
 # Enable debug logging
 python scripts/djay_pro_library_export.py --debug
+
+# Synchronize to Notion Music Tracks database
+python scripts/djay_pro_library_export.py --sync-notion
+
+# Dry run Notion sync (test without creating/updating pages)
+python scripts/djay_pro_library_export.py --sync-notion --notion-dry-run
+
+# Sync only first 10 items to Notion (for testing)
+python scripts/djay_pro_library_export.py --sync-notion --notion-limit 10
 ```
 
 ## Output Files
@@ -107,11 +116,48 @@ The script extracts and standardizes the following fields:
 - MIDI mappings
 - And more...
 
+## Notion Synchronization
+
+The script can automatically synchronize extracted media items to your Notion Music Tracks database:
+
+### Configuration
+
+Set the following environment variables or configure in `unified_config`:
+
+- `NOTION_TOKEN` - Your Notion API token
+- `TRACKS_DB_ID` - The database ID of your Music Tracks database
+
+### Features
+
+- **Automatic Deduplication**: Checks for existing tracks by title and artist before creating new pages
+- **Update Existing**: Updates existing Notion pages with latest data from djay Pro
+- **Property Mapping**: Automatically maps djay Pro fields to Notion database properties:
+  - Title, Artist, Album
+  - BPM, Key, Duration
+  - File Path, Genre, Year
+  - And more...
+- **Sync Statistics**: Reports created, updated, and error counts
+- **Dry Run Mode**: Test synchronization without making changes
+- **Limit Support**: Sync a subset of items for testing
+
+### Usage
+
+```bash
+# Basic sync
+python scripts/djay_pro_library_export.py --sync-notion
+
+# Test sync (dry run)
+python scripts/djay_pro_library_export.py --sync-notion --notion-dry-run
+
+# Sync first 10 items only
+python scripts/djay_pro_library_export.py --sync-notion --notion-limit 10
+```
+
 ## Integration with Music Sync Workflow
 
 This script is designed to integrate with the **Music Library Unified Sync Orchestrator**:
 
-1. **Ingest Phase**: Extract djay Pro library data → Notion
+1. **Ingest Phase**: Extract djay Pro library data → Notion (via `--sync-notion`)
 2. **Sync Phase**: Use CSV exports for auto-import folder integration
 3. **Validation**: Compare exported data with Notion Music Tracks database
 
