@@ -55,6 +55,13 @@ except (TimeoutError, OSError, ModuleNotFoundError) as unified_err:
     )
 
 try:
+    from notion_client import Client
+    NOTION_CLIENT_AVAILABLE = True
+except ImportError:
+    NOTION_CLIENT_AVAILABLE = False
+    Client = None
+
+try:
     from shared_core.logging import setup_logging
 except (TimeoutError, OSError, ModuleNotFoundError) as logging_err:
     import sys as _sys_logging
@@ -133,6 +140,21 @@ workspace_logger = setup_logging(
 DEFAULT_DB_PATH = Path("/Users/brianhellemn/Music/djay/djay Media Library.djayMediaLibrary/MediaLibrary.db")
 DB_PATH = Path(unified_config.get("djay_db_path") or os.getenv("DJAY_DB_PATH", str(DEFAULT_DB_PATH)))
 OUTPUT_DIR = Path(unified_config.get("djay_export_dir") or os.getenv("DJAY_EXPORT_DIR", "./djay_pro_export"))
+
+# Notion Configuration
+NOTION_TOKEN = (
+    unified_config.get("notion_token") or 
+    os.getenv("NOTION_TOKEN") or 
+    os.getenv("NOTION_API_TOKEN") or 
+    os.getenv("VV_AUTOMATIONS_WS_TOKEN") or
+    ""
+).strip()
+TRACKS_DB_ID = (
+    unified_config.get("tracks_db_id") or 
+    os.getenv("TRACKS_DB_ID") or 
+    os.getenv("DATABASE_ID") or
+    ""
+).strip()
 
 # Ensure output directory exists
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -504,6 +526,221 @@ class DjayProLibraryExporter:
             self.logger.info("🔒 Database connection closed")
 
 
+class NotionSyncManager:
+    """Manage synchronization of djay Pro library data to Notion."""
+    
+    def __init__(self, tracks_db_id: str, token: str, logger):
+        self.tracks_db_id = tracks_db_id
+        self.token = token
+        self.logger = logger
+        self.client = None
+        self.sync_stats = {
+            "created": 0,
+            "updated": 0,
+            "skipped": 0,
+            "errors": 0
+        }
+        
+        if not NOTION_CLIENT_AVAILABLE:
+            self.logger.warning("⚠️  notion-client library not available. Notion sync disabled.")
+            return
+            
+        if not token:
+            self.logger.warning("⚠️  Notion token not configured. Notion sync disabled.")
+            return
+            
+        if not tracks_db_id:
+            self.logger.warning("⚠️  Tracks database ID not configured. Notion sync disabled.")
+            return
+        
+        try:
+            self.client = Client(auth=token)
+            self.logger.info("✅ Notion client initialized")
+        except Exception as e:
+            self.logger.error(f"❌ Failed to initialize Notion client: {e}")
+            self.client = None
+    
+    def is_available(self) -> bool:
+        """Check if Notion sync is available."""
+        return self.client is not None and self.tracks_db_id and self.token
+    
+    def _normalize_property_name(self, prop_name: str) -> str:
+        """Normalize property name to match Notion database schema."""
+        # Common mappings
+        mappings = {
+            "title": "Title",
+            "artist": "Artist",
+            "album": "Album",
+            "bpm": "AverageBpm",
+            "key": "Key",
+            "duration": "Duration (ms)",
+            "file_path": "File Path",
+            "genre": "Genre",
+            "year": "Year",
+            "bitrate": "Bitrate",
+            "sample_rate": "Sample Rate",
+            "play_count": "Play Count",
+            "rating": "Rating",
+            "date_added": "Date Added",
+            "last_played": "Last Played",
+        }
+        return mappings.get(prop_name.lower(), prop_name)
+    
+    def _build_notion_properties(self, media_item: Dict[str, Any]) -> Dict[str, Any]:
+        """Build Notion properties from media item data."""
+        properties = {}
+        
+        # Title (required)
+        title = media_item.get("title") or media_item.get("name") or "Unknown Track"
+        properties["Title"] = {"title": [{"text": {"content": title}}]}
+        
+        # Artist
+        artist = media_item.get("artist") or media_item.get("artist_name")
+        if artist:
+            properties["Artist"] = {"rich_text": [{"text": {"content": str(artist)}}]}
+        
+        # Album
+        album = media_item.get("album") or media_item.get("album_name")
+        if album:
+            properties["Album"] = {"rich_text": [{"text": {"content": str(album)}}]}
+        
+        # BPM (number)
+        bpm = media_item.get("bpm") or media_item.get("BPM")
+        if bpm is not None:
+            try:
+                properties["AverageBpm"] = {"number": float(bpm)}
+            except (ValueError, TypeError):
+                pass
+        
+        # Key (rich_text)
+        key = media_item.get("key") or media_item.get("Key")
+        if key:
+            properties["Key"] = {"rich_text": [{"text": {"content": str(key)}}]}
+        
+        # Duration (convert to milliseconds if in seconds)
+        duration = media_item.get("duration") or media_item.get("Duration")
+        if duration is not None:
+            try:
+                duration_ms = float(duration)
+                # If duration is less than 1000, assume it's in seconds
+                if duration_ms < 1000:
+                    duration_ms = duration_ms * 1000
+                properties["Duration (ms)"] = {"number": duration_ms}
+            except (ValueError, TypeError):
+                pass
+        
+        # File Path (rich_text or url)
+        file_path = media_item.get("file_path") or media_item.get("path") or media_item.get("filePath")
+        if file_path:
+            properties["File Path"] = {"rich_text": [{"text": {"content": str(file_path)}}]}
+        
+        # Genre
+        genre = media_item.get("genre") or media_item.get("Genre")
+        if genre:
+            properties["Genre"] = {"rich_text": [{"text": {"content": str(genre)}}]}
+        
+        # Year (number)
+        year = media_item.get("year") or media_item.get("Year") or media_item.get("release_year")
+        if year is not None:
+            try:
+                properties["Year"] = {"number": int(year)}
+            except (ValueError, TypeError):
+                pass
+        
+        # Source indicator
+        properties["Source"] = {"rich_text": [{"text": {"content": "djay Pro Library"}}]}
+        
+        return properties
+    
+    def sync_media_item(self, media_item: Dict[str, Any], dry_run: bool = False) -> Optional[str]:
+        """Sync a single media item to Notion."""
+        if not self.is_available():
+            return None
+        
+        try:
+            properties = self._build_notion_properties(media_item)
+            
+            if dry_run:
+                self.logger.debug(f"[DRY RUN] Would sync: {properties.get('Title', {}).get('title', [{}])[0].get('text', {}).get('content', 'Unknown')}")
+                return None
+            
+            # Try to find existing page by title and artist
+            title = properties.get("Title", {}).get("title", [{}])[0].get("text", {}).get("content", "")
+            artist = media_item.get("artist") or media_item.get("artist_name") or ""
+            
+            # Query for existing page
+            query_filter = {
+                "and": [
+                    {"property": "Title", "title": {"equals": title}}
+                ]
+            }
+            if artist:
+                query_filter["and"].append({"property": "Artist", "rich_text": {"equals": artist}})
+            
+            try:
+                response = self.client.databases.query(
+                    database_id=self.tracks_db_id,
+                    filter=query_filter,
+                    page_size=1
+                )
+                results = response.get("results", [])
+                
+                if results:
+                    # Update existing page
+                    page_id = results[0]["id"]
+                    self.client.pages.update(page_id=page_id, properties=properties)
+                    self.sync_stats["updated"] += 1
+                    self.logger.debug(f"🔄 Updated Notion page: {title}")
+                    return page_id
+                else:
+                    # Create new page
+                    response = self.client.pages.create(
+                        parent={"database_id": self.tracks_db_id},
+                        properties=properties
+                    )
+                    page_id = response.get("id")
+                    self.sync_stats["created"] += 1
+                    self.logger.debug(f"🆕 Created Notion page: {title}")
+                    return page_id
+            except Exception as e:
+                self.logger.warning(f"⚠️  Error syncing {title}: {e}")
+                self.sync_stats["errors"] += 1
+                return None
+                
+        except Exception as e:
+            self.logger.error(f"❌ Failed to sync media item: {e}")
+            self.sync_stats["errors"] += 1
+            return None
+    
+    def sync_media_items(self, media_items: List[Dict[str, Any]], dry_run: bool = False, limit: Optional[int] = None) -> Dict[str, int]:
+        """Sync multiple media items to Notion."""
+        if not self.is_available():
+            self.logger.warning("⚠️  Notion sync not available. Skipping.")
+            return self.sync_stats
+        
+        items_to_sync = media_items[:limit] if limit else media_items
+        total = len(items_to_sync)
+        
+        self.logger.info(f"📤 Syncing {total} media items to Notion...")
+        
+        for i, item in enumerate(items_to_sync, 1):
+            if i % 100 == 0:
+                self.logger.info(f"   Progress: {i}/{total} items processed...")
+            
+            self.sync_media_item(item, dry_run=dry_run)
+        
+        self.logger.info("")
+        self.logger.info("=" * 80)
+        self.logger.info("NOTION SYNC COMPLETE")
+        self.logger.info("=" * 80)
+        self.logger.info(f"Created: {self.sync_stats['created']}")
+        self.logger.info(f"Updated: {self.sync_stats['updated']}")
+        self.logger.info(f"Errors: {self.sync_stats['errors']}")
+        self.logger.info("=" * 80)
+        
+        return self.sync_stats
+
+
 def main():
     """Main execution function."""
     parser = argparse.ArgumentParser(
@@ -535,6 +772,22 @@ def main():
         "--debug",
         action="store_true",
         help="Enable debug logging"
+    )
+    parser.add_argument(
+        "--sync-notion",
+        action="store_true",
+        help="Synchronize extracted media items to Notion Music Tracks database"
+    )
+    parser.add_argument(
+        "--notion-dry-run",
+        action="store_true",
+        help="Dry run mode for Notion sync (don't actually create/update pages)"
+    )
+    parser.add_argument(
+        "--notion-limit",
+        type=int,
+        default=None,
+        help="Limit number of items to sync to Notion (for testing)"
     )
     
     args = parser.parse_args()
@@ -580,6 +833,35 @@ def main():
             media_csv = exporter.export_media_items_csv(media_items)
             if media_csv:
                 workspace_logger.info(f"🎵 Media items CSV: {media_csv}")
+        
+        # Synchronize to Notion if requested
+        if args.sync_notion:
+            workspace_logger.info("")
+            workspace_logger.info("=" * 80)
+            workspace_logger.info("NOTION SYNCHRONIZATION")
+            workspace_logger.info("=" * 80)
+            
+            notion_sync = NotionSyncManager(
+                tracks_db_id=TRACKS_DB_ID,
+                token=NOTION_TOKEN,
+                logger=workspace_logger
+            )
+            
+            if notion_sync.is_available():
+                if not media_items:
+                    media_items = exporter.extract_media_items()
+                
+                sync_stats = notion_sync.sync_media_items(
+                    media_items=media_items,
+                    dry_run=args.notion_dry_run,
+                    limit=args.notion_limit
+                )
+                
+                # Add sync stats to summary
+                summary["notion_sync"] = sync_stats
+            else:
+                workspace_logger.warning("⚠️  Notion sync not available. Check configuration.")
+                workspace_logger.warning("   Required: NOTION_TOKEN and TRACKS_DB_ID")
         
         # Generate summary
         summary = exporter.generate_summary_report()
