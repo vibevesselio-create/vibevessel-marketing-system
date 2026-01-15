@@ -424,6 +424,8 @@ import logging
 from pathlib import Path
 from send2trash import send2trash
 import hashlib
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 # Add workspace scripts to path for imports
 sys.path.append(str(Path(__file__).parent))
@@ -493,6 +495,30 @@ def get_meter(sample_rate: int):
     if sample_rate not in _meter_cache:
         _meter_cache[sample_rate] = pyln.Meter(sample_rate)
     return _meter_cache[sample_rate]
+
+def _build_http_session() -> requests.Session:
+    """Build a shared HTTP session with connection pooling and retries."""
+    session = requests.Session()
+    try:
+        retry = Retry(
+            total=3,
+            backoff_factor=0.5,
+            status_forcelist=[429, 500, 502, 503, 504],
+            allowed_methods=frozenset(["HEAD", "GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]),
+        )
+    except TypeError:
+        retry = Retry(
+            total=3,
+            backoff_factor=0.5,
+            status_forcelist=[429, 500, 502, 503, 504],
+            method_whitelist=["HEAD", "GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
+        )
+    adapter = HTTPAdapter(max_retries=retry, pool_connections=10, pool_maxsize=20)
+    session.mount("http://", adapter)
+    session.mount("https://", adapter)
+    return session
+
+_HTTP_SESSION = _build_http_session()
 
 # ───────────────────────────────────────────────────────────────
 # Audio Normalizer - Platinum Notes Style Implementation
@@ -1031,7 +1057,11 @@ WAV_BACKUP_DIR = Path(unified_config.get("wav_backup_dir") or os.getenv("WAV_BAC
 
 # Eagle API configuration
 EAGLE_API_BASE = unified_config.get("eagle_api_url") or os.getenv("EAGLE_API_BASE", "http://localhost:41595")
-EAGLE_LIBRARY_PATH = unified_config.get("eagle_library_path") or os.getenv("EAGLE_LIBRARY_PATH", "/Volumes/VIBES/Music-Library-2.library")
+# NOTE: Empty default means "use currently active Eagle library" (no forced switch)
+# Set EAGLE_LIBRARY_PATH env var to override with a specific library path
+EAGLE_LIBRARY_PATH = unified_config.get("eagle_library_path") or os.getenv("EAGLE_LIBRARY_PATH", "")
+# Limit for Eagle cache indexing (Eagle default list limit is low; raise for better dedupe accuracy)
+EAGLE_CACHE_LIMIT = int(os.getenv("EAGLE_CACHE_LIMIT", "50000"))
 EAGLE_TOKEN = unified_config.get("eagle_token") or os.getenv("EAGLE_TOKEN", "")
 EAGLE_APP_PATH = unified_config.get("eagle_app_path") or os.getenv("EAGLE_APP_PATH", "/Applications/Eagle.app")
 EAGLE_APP_NAME = unified_config.get("eagle_app_name") or os.getenv("EAGLE_APP_NAME", "Eagle")
@@ -1052,7 +1082,7 @@ workspace_logger.info(f"📁 Using OUT_DIR: {OUT_DIR}")
 workspace_logger.info(f"📁 Using BACKUP_DIR: {BACKUP_DIR}")
 workspace_logger.info(f"📁 Using WAV_BACKUP_DIR: {WAV_BACKUP_DIR}")
 workspace_logger.info(f"🦅 Eagle API: {EAGLE_API_BASE}")
-workspace_logger.info(f"🦅 Eagle Library: {EAGLE_LIBRARY_PATH}")
+workspace_logger.info(f"🦅 Eagle Library: {EAGLE_LIBRARY_PATH or '(use currently active library)'}")
 
 # Compression mode
 COMPRESSION_MODE = os.getenv("SC_COMP_MODE", "LOSSLESS").upper()
@@ -1193,12 +1223,37 @@ def complete_track_notion_update(
             raise RuntimeError("Notion update failed - track will be reprocessed")
     """
     properties = {}
-    
-    # CRITICAL: Set DL checkbox to TRUE to prevent reprocessing
+
+    # Get property types for the tracks database
+    prop_types = _get_tracks_db_prop_types()
+
+    # Helper function to set URL or text properties
+    def set_url_or_text(props_dict: dict, key: str, value: str):
+        if not value:
+            return
+        name = _resolve_prop_name(key) or key
+        prop_type = prop_types.get(name)
+        if prop_type == "url":
+            props_dict[name] = {"url": value}
+        elif prop_type == "rich_text":
+            props_dict[name] = {"rich_text": [{"text": {"content": value}}]}
+        else:
+            # Default to rich_text if type unknown
+            props_dict[name] = {"rich_text": [{"text": {"content": value}}]}
+
+    # Count file paths first to determine if we should mark as downloaded
+    path_count = sum(1 for k in ["m4a", "aiff", "wav"] if file_paths.get(k))
+
+    # CRITICAL FIX: Only set Downloaded=TRUE if we have actual files OR an Eagle ID
+    # Spotify-only tracks without files should NOT be marked as downloaded
     dl_prop = _resolve_prop_name("DL") or "Downloaded"
-    properties[dl_prop] = {"checkbox": True}
-    workspace_logger.info(f"📌 Setting {dl_prop} = TRUE for {page_id}")
-    
+    if path_count > 0 or eagle_id:
+        properties[dl_prop] = {"checkbox": True}
+        workspace_logger.info(f"📌 Setting {dl_prop} = TRUE for {page_id} ({path_count} files, Eagle: {'Yes' if eagle_id else 'No'})")
+    else:
+        # Don't mark as downloaded if no files and no Eagle ID
+        workspace_logger.warning(f"⚠️  NOT setting {dl_prop}=TRUE for {page_id} - no files downloaded and no Eagle ID")
+
     # CRITICAL: Populate file paths if they exist
     path_count = 0
     if file_paths.get("m4a"):
@@ -1224,13 +1279,16 @@ def complete_track_notion_update(
         }
         workspace_logger.info(f"🦅 Setting Eagle ID: {eagle_id}")
     
+    # Track whether we set DL for accurate logging
+    dl_was_set = dl_prop in properties
+
     # Attempt update with retry
     for attempt in range(1, 4):
         try:
             notion_manager.update_page(page_id, properties)
             workspace_logger.info(
                 f"✅ Notion updated successfully (attempt {attempt}/3): "
-                f"DL=True, {path_count} file paths, Eagle ID={'Yes' if eagle_id else 'No'}"
+                f"DL={'True' if dl_was_set else 'NOT SET'}, {path_count} file paths, Eagle ID={'Yes' if eagle_id else 'No'}"
             )
             return True
         except Exception as e:
@@ -1603,6 +1661,7 @@ class NotionManager:
     
     def __init__(self, token: str = NOTION_TOKEN):
         self.client = Client(auth=token)
+        self.session = _build_http_session()
         self.headers = {
             "Authorization": f"Bearer {token}",
             "Notion-Version": NOTION_VERSION,  # Use the validated version
@@ -1615,7 +1674,7 @@ class NotionManager:
         timeout = max(5, min(120, NOTION_TIMEOUT))
         for attempt in range(1, retry + 1):
             try:
-                resp = requests.request(method, url, headers=self.headers, json=body, timeout=timeout)
+                resp = self.session.request(method, url, headers=self.headers, json=body, timeout=timeout)
                 if 200 <= resp.status_code < 300:
                     return resp.json()
                 if resp.status_code == 429:
@@ -1634,7 +1693,17 @@ class NotionManager:
     def query_database(self, database_id: str, query: dict) -> dict:
         """Query database with workspace-standard error handling"""
         try:
-            return self._req("post", f"/databases/{database_id}/query", query)
+            if _notion_query_cache_ttl > 0:
+                cache_key = f"{database_id}:{json.dumps(query, sort_keys=True, default=str)}"
+                cached = _notion_query_cache.get(cache_key)
+                if cached and (time.time() - cached.get("ts", 0)) < _notion_query_cache_ttl:
+                    return cached.get("data", {})
+            result = self._req("post", f"/databases/{database_id}/query", query)
+            if _notion_query_cache_ttl > 0:
+                if len(_notion_query_cache) >= _notion_query_cache_max:
+                    _notion_query_cache.clear()
+                _notion_query_cache[cache_key] = {"ts": time.time(), "data": result}
+            return result
         except Exception as exc:
             workspace_logger.error(f"Failed to query database {database_id}: {exc}")
             try:
@@ -1685,6 +1754,11 @@ for _name in list(getattr(logging.root.manager, "loggerDict", {}).keys()):
 
 # Global Notion manager
 notion_manager = NotionManager()
+
+# Lightweight Notion query cache to reduce redundant database queries
+_notion_query_cache: dict[str, dict] = {}
+_notion_query_cache_ttl = int(os.getenv("NOTION_QUERY_CACHE_TTL", "30"))
+_notion_query_cache_max = int(os.getenv("NOTION_QUERY_CACHE_MAX", "256"))
 
 # ───────────────────────────────────────────────────────────────
 # Unified State Registry Integration (Phase 1)
@@ -2251,7 +2325,17 @@ ALT_PROP_NAMES = {
     "AIFF File Path": ["AIFF File Path", "AIFF", "AIFF Path"],
     "SoundCloud URL": ["SoundCloud URL", "Soundcloud URL", "SoundCloud"],
     "Spotify ID": ["Spotify ID", "SpotifyID"],
-    "Spotify URL": ["Spotify URL", "Spotify Link"]
+    "Spotify URL": ["Spotify URL", "Spotify Link"],
+    # Critical mappings for audio metadata (2026-01-15 fix)
+    "BPM": ["BPM", "Tempo", "AverageBpm"],
+    "Key": ["Key", "Key "],  # Note: "Key " has trailing space in some Notion schemas
+    "Duration (s)": ["Duration (s)", "Audio Duration (seconds)", "TotalTime", "Duration (ms)"],
+    "Eagle File ID": ["Eagle File ID", "Eagle ID", "EagleID", "eagle_id"],
+    "Artist Name": ["Artist Name", "Artist", "Artists"],
+    "Album": ["Album", "Album Name"],
+    "Genre": ["Genre", "Genres"],
+    # Playlist relation mappings (2026-01-15 fix)
+    "Playlists": ["Playlists", "Playlist", "Playlist Relation", "Related Playlists"],
 }
 
 _SPOTIFY_CLIENT: Optional[SpotifyAPI] = None
@@ -2424,13 +2508,18 @@ def should_reprocess_page(page: Dict[str, Any]) -> bool:
     # If files exist on disk, check Eagle library for metadata completeness
     if existing_files > 0:
         workspace_logger.info(f"Found {existing_files} existing files for page {page['id']}, checking Eagle metadata...")
-        
+
+        files_in_eagle = False
+        files_need_metadata_update = False
+        files_need_eagle_import = []  # Track files that exist locally but not in Eagle
+
         # Check if files are in Eagle library with complete metadata
         for file_path in existing_file_paths:
             try:
                 # Search Eagle by file path
                 eagle_items = eagle_find_items_by_path(file_path)
                 if eagle_items:
+                    files_in_eagle = True
                     # Check if metadata is complete
                     for item in eagle_items:
                         tags = item.get("tags", [])
@@ -2439,19 +2528,33 @@ def should_reprocess_page(page: Dict[str, Any]) -> bool:
                         has_key = any("key" in tag.lower() for tag in tags)
                         has_genre = any("genre" in tag.lower() for tag in tags)
                         has_processed = any("processed" in tag.lower() for tag in tags)
-                        
-                        if has_bpm and has_key and has_genre and has_processed:
+                        has_fingerprint = any("fingerprint:" in tag.lower() for tag in tags)
+
+                        if has_bpm and has_key and has_genre and has_processed and has_fingerprint:
                             workspace_logger.info(f"Skipping page {page['id']} — files exist with complete metadata in Eagle")
                             return False
                         else:
-                            workspace_logger.info(f"Files exist but missing metadata in Eagle (BPM:{has_bpm}, Key:{has_key}, Genre:{has_genre}, Processed:{has_processed})")
-                            # Continue to check - might need metadata update only
+                            workspace_logger.info(f"Files exist but missing metadata in Eagle (BPM:{has_bpm}, Key:{has_key}, Genre:{has_genre}, Processed:{has_processed}, Fingerprint:{has_fingerprint})")
+                            files_need_metadata_update = True
+                else:
+                    # File exists locally but NOT in Eagle - needs import
+                    workspace_logger.info(f"🔄 File exists locally but NOT in Eagle: {file_path}")
+                    files_need_eagle_import.append(file_path)
             except Exception as e:
                 workspace_logger.warning(f"Error checking Eagle for file {file_path}: {e}")
-        
-        # If we reach here, files exist but metadata is incomplete
-        workspace_logger.info(f"Page {page['id']} needs metadata update for existing files")
-        return False  # Don't re-download, just update metadata
+
+        # If files exist locally but not in Eagle, they need processing (Eagle import + fingerprinting)
+        if files_need_eagle_import:
+            workspace_logger.info(f"🦅 Page {page['id']} has {len(files_need_eagle_import)} files that need Eagle import + fingerprinting")
+            return True  # Needs reprocessing to import to Eagle and apply fingerprint
+
+        # If we reach here, files exist in Eagle but metadata is incomplete
+        if files_need_metadata_update:
+            workspace_logger.info(f"Page {page['id']} needs metadata update for existing Eagle items")
+            return True  # Needs reprocessing to update metadata
+
+        workspace_logger.info(f"Page {page['id']} has files in Eagle, no action needed")
+        return False
 
     completion_markers = {"Format Conversion Complete", "Files Imported to Eagle"}
     if completion_markers.issubset(status_names) and (existing_files or not file_paths):
@@ -3096,10 +3199,175 @@ def find_tracks_with_eagle_items_but_no_id() -> List[Dict[str, Any]]:
                     break
         
         return tracks_with_eagle_items
-        
+
     except Exception as exc:
         workspace_logger.error(f"Failed to find tracks with Eagle items: {exc}")
         return []
+
+# ───────────────────────────────────────────────────────────────
+# Artist Relation Functions (2026-01-15 fix for missing relations)
+# ───────────────────────────────────────────────────────────────
+_ARTISTS_DB_ID = os.getenv("ARTISTS_DB_ID", "")
+_ARTIST_CACHE: Dict[str, Optional[str]] = {}  # Cache artist name -> page_id
+
+def _get_artists_db_prop_types() -> Dict[str, str]:
+    """Get property types for Artists database."""
+    if not _ARTISTS_DB_ID:
+        return {}
+    try:
+        db_info = notion_manager._req("get", f"/databases/{_ARTISTS_DB_ID}")
+        return {name: prop.get("type", "") for name, prop in db_info.get("properties", {}).items()}
+    except Exception:
+        return {}
+
+def find_or_create_artist_page(artist_name: str) -> Optional[str]:
+    """
+    Find or create an artist page by name and return its page ID.
+
+    Args:
+        artist_name: The artist name to search for or create
+
+    Returns:
+        The artist page ID if found/created, None otherwise
+    """
+    if not artist_name or not _ARTISTS_DB_ID:
+        return None
+
+    # Normalize artist name
+    artist_name = artist_name.strip()
+    if not artist_name:
+        return None
+
+    # Check cache first
+    cache_key = artist_name.lower()
+    if cache_key in _ARTIST_CACHE:
+        return _ARTIST_CACHE[cache_key]
+
+    try:
+        # Search for existing artist by name
+        query = {
+            "filter": {
+                "property": "Name",
+                "title": {"equals": artist_name}
+            },
+            "page_size": 1
+        }
+
+        result = notion_manager.query_database(_ARTISTS_DB_ID, query)
+        if result and result.get("results"):
+            artist_page_id = result["results"][0]["id"]
+            _ARTIST_CACHE[cache_key] = artist_page_id
+            workspace_logger.debug(f"🎤 Found existing artist: {artist_name} -> {artist_page_id}")
+            return artist_page_id
+
+        # Create new artist page if not found
+        artist_properties = {
+            "Name": {"title": [{"text": {"content": artist_name}}]},
+        }
+
+        # Add optional properties if they exist in the database
+        prop_types = _get_artists_db_prop_types()
+        if "Source" in prop_types and prop_types["Source"] == "select":
+            artist_properties["Source"] = {"select": {"name": "SoundCloud"}}
+
+        payload = {"parent": {"database_id": _ARTISTS_DB_ID}, "properties": artist_properties}
+        new_page = notion_manager._req("post", "/pages", payload)
+
+        if new_page and new_page.get("id"):
+            artist_page_id = new_page["id"]
+            _ARTIST_CACHE[cache_key] = artist_page_id
+            workspace_logger.info(f"🎤 Created new artist page: {artist_name} -> {artist_page_id}")
+            return artist_page_id
+
+    except Exception as exc:
+        workspace_logger.warning(f"⚠️ Failed to find/create artist '{artist_name}': {exc}")
+
+    _ARTIST_CACHE[cache_key] = None
+    return None
+
+def link_track_to_artist(track_page_id: str, artist_page_id: str) -> bool:
+    """
+    Link a track to an artist using the Artist relation property.
+
+    Args:
+        track_page_id: The track page ID
+        artist_page_id: The artist page ID to link
+
+    Returns:
+        True if successful, False otherwise
+    """
+    if not track_page_id or not artist_page_id:
+        return False
+
+    try:
+        # Get current page to check existing relations
+        page = notion_manager._req("get", f"/pages/{track_page_id}")
+        if not page:
+            return False
+
+        # Check for Artist relation property (may be named "Artist" or "Artists")
+        props = page.get("properties", {})
+        artist_prop_name = None
+        for name in ["Artist", "Artists", "Artist Relation"]:
+            if name in props and props[name].get("type") == "relation":
+                artist_prop_name = name
+                break
+
+        if not artist_prop_name:
+            workspace_logger.debug("No Artist relation property found on track page")
+            return False
+
+        # Get existing relations
+        relation_data = props.get(artist_prop_name, {})
+        existing_relations = relation_data.get("relation", []) or []
+        existing_ids = [rel.get("id") for rel in existing_relations if rel.get("id")]
+
+        # Skip if already linked
+        if artist_page_id in existing_ids:
+            return True
+
+        # Build updated relations list
+        updated_relations = [{"id": rid} for rid in existing_ids]
+        updated_relations.append({"id": artist_page_id})
+
+        # Update the track page
+        payload = {
+            "properties": {
+                artist_prop_name: {
+                    "relation": updated_relations
+                }
+            }
+        }
+
+        result = notion_manager._req("patch", f"/pages/{track_page_id}", payload)
+        if result:
+            workspace_logger.info(f"🔗 Linked track to artist: {track_page_id} -> {artist_page_id}")
+            return True
+
+    except Exception as exc:
+        workspace_logger.warning(f"⚠️ Failed to link track to artist: {exc}")
+
+    return False
+
+def link_track_artist_relation(track_page_id: str, artist_name: str) -> bool:
+    """
+    High-level function to find/create artist and link to track.
+
+    Args:
+        track_page_id: The track page ID
+        artist_name: The artist name
+
+    Returns:
+        True if successful, False otherwise
+    """
+    if not track_page_id or not artist_name or not _ARTISTS_DB_ID:
+        return False
+
+    artist_page_id = find_or_create_artist_page(artist_name)
+    if not artist_page_id:
+        return False
+
+    return link_track_to_artist(track_page_id, artist_page_id)
 
 def find_tracks_with_playlist_relations() -> List[Dict[str, Any]]:
     """Find tracks with playlist relations using dynamic property filters."""
@@ -3115,9 +3383,15 @@ def find_tracks_with_playlist_relations() -> List[Dict[str, Any]]:
         if f:
             dynamic_filters.append(f)
         # Playlist relation (only if exists as relation)
+        # CRITICAL FIX 2026-01-15: Check for both "Playlist" and "Playlists" property names
         prop_types = _get_tracks_db_prop_types()
-        if "Playlist" in prop_types and prop_types["Playlist"] == "relation":
-            dynamic_filters.append({"property": "Playlist", "relation": {"is_not_empty": True}})
+        playlist_prop_name = None
+        for pname in ["Playlists", "Playlist", "Playlist Relation", "Related Playlists"]:
+            if pname in prop_types and prop_types[pname] == "relation":
+                playlist_prop_name = pname
+                break
+        if playlist_prop_name:
+            dynamic_filters.append({"property": playlist_prop_name, "relation": {"is_not_empty": True}})
 
         query = {
             "filter": {"and": dynamic_filters} if dynamic_filters else None,
@@ -3139,7 +3413,9 @@ def extract_track_data(page: Dict[str, Any]) -> Dict[str, Any]:
     props = page.get("properties", {})
 
     def get_text(prop_name: str) -> str:
-        prop = props.get(prop_name, {})
+        # Resolve property name using ALT_PROP_NAMES mapping
+        resolved_name = _resolve_prop_name(prop_name) or prop_name
+        prop = props.get(resolved_name, {})
         if prop.get("type") == "title" and prop.get("title"):
             return prop["title"][0]["plain_text"]
         elif prop.get("type") == "rich_text" and prop.get("rich_text"):
@@ -3147,19 +3423,22 @@ def extract_track_data(page: Dict[str, Any]) -> Dict[str, Any]:
         return ""
 
     def get_url(prop_name: str) -> str:
-        prop = props.get(prop_name, {})
+        resolved_name = _resolve_prop_name(prop_name) or prop_name
+        prop = props.get(resolved_name, {})
         if prop.get("type") == "url" and prop.get("url"):
             return prop["url"]
         return ""
 
     def get_number(prop_name: str) -> Optional[float]:
-        prop = props.get(prop_name, {})
+        resolved_name = _resolve_prop_name(prop_name) or prop_name
+        prop = props.get(resolved_name, {})
         if prop.get("type") == "number":
             return prop.get("number")
         return None
 
     def get_select(prop_name: str) -> str:
-        prop = props.get(prop_name, {})
+        resolved_name = _resolve_prop_name(prop_name) or prop_name
+        prop = props.get(resolved_name, {})
         if prop.get("type") == "select" and prop.get("select"):
             return prop["select"]["name"]
         return ""
@@ -3173,9 +3452,9 @@ def extract_track_data(page: Dict[str, Any]) -> Dict[str, Any]:
         "soundcloud_url": get_url("SoundCloud URL"),
         "spotify_id": get_text("Spotify ID"),  # Add Spotify ID extraction
         "spotify_url": get_url("Spotify URL"),
-        "bpm": get_number("AverageBpm"),
-        "key": get_text("Key"),
-        "duration_seconds": get_number("Duration (ms)") / 1000 if get_number("Duration (ms)") else None,
+        "bpm": get_number("BPM"),  # Uses ALT_PROP_NAMES to resolve to "Tempo"
+        "key": get_text("Key"),  # Uses ALT_PROP_NAMES to resolve to "Key " if needed
+        "duration_seconds": get_number("Duration (s)"),  # Uses ALT_PROP_NAMES - value is already in seconds
         "eagle_file_id": get_text("Eagle File ID")
     }
 
@@ -3286,7 +3565,7 @@ def _update_spotify_properties(page_id: str, spotify_track: Dict[str, Any], trac
     if not track_data.get("album"):
         _set("Album", spotify_track.get("album", {}).get("name"))
     if track_data.get("duration_seconds") is None and spotify_track.get("duration_ms"):
-        _set("Duration (ms)", spotify_track.get("duration_ms"))
+        _set("Duration (s)", spotify_track.get("duration_ms") / 1000)  # Convert ms to seconds
     popularity = spotify_track.get("popularity")
     if popularity is not None:
         _set("Popularity", popularity)
@@ -3441,8 +3720,8 @@ def upsert_track_page(meta: dict, eagle_item_id: Optional[str] = None) -> str:
     set_rich_or_title(props, "Artist Name", meta["artist"])
     set_rich_or_title(props, "Album", meta["album"])
     set_select(props, "Genre", meta["genre"])
-    set_number(props, "AverageBpm", meta.get("bpm"))
-    set_rich_or_title(props, "Key", meta.get("key", ''))
+    set_number(props, "BPM", meta.get("bpm"))  # Uses ALT_PROP_NAMES to resolve to "Tempo"
+    set_rich_or_title(props, "Key", meta.get("key", ''))  # Uses ALT_PROP_NAMES to resolve to "Key " if needed
     set_url_or_text(props, "SoundCloud URL", meta["source_url"])
     set_date(props, "Processed At", now_iso)
     set_date(props, "Last Used", now_iso)
@@ -3466,6 +3745,24 @@ def upsert_track_page(meta: dict, eagle_item_id: Optional[str] = None) -> str:
     # Eagle item ID if present
     if eagle_item_id:
         set_rich_or_title(props, "Eagle File ID", eagle_item_id)
+
+    # Fingerprint: Route to per-format property based on file path (2026-01-15 fix)
+    fingerprint_value = meta.get("fingerprint")
+    if fingerprint_value:
+        # Determine format from file paths
+        file_path = meta.get("aiff_file_path") or meta.get("wav_file_path") or meta.get("m4a_file_path") or ""
+        try:
+            from shared_core.fingerprint_schema import build_fingerprint_update_properties
+            fp_props = build_fingerprint_update_properties(fingerprint_value, file_path, db_props)
+            if fp_props:
+                props.update(fp_props)
+                workspace_logger.info(f"📝 Adding fingerprint to Notion properties: {list(fp_props.keys())}")
+        except ImportError:
+            # Legacy fallback - set the old Fingerprint property if it exists
+            fp_prop_name = _resolve_prop_name("Fingerprint")
+            if fp_prop_name and prop_types.get(fp_prop_name) == "rich_text":
+                props[fp_prop_name] = {"rich_text": [{"text": {"content": fingerprint_value[:2000]}}]}
+                workspace_logger.warning("Using DEPRECATED legacy Fingerprint property")
 
     # Filter to include only existing DB properties
     props = {k: v for k, v in props.items() if v is not None and k in db_props}
@@ -3511,6 +3808,9 @@ def upsert_track_page(meta: dict, eagle_item_id: Optional[str] = None) -> str:
     # For single track processing, we expect the page to already exist
     if "page_id" in meta:
         safe_update(meta["page_id"])
+        # Link artist relation (2026-01-15 fix)
+        if meta.get("artist"):
+            link_track_artist_relation(meta["page_id"], meta["artist"])
         return meta["page_id"]
 
     # If no page_id provided, query by SoundCloud URL
@@ -3531,6 +3831,9 @@ def upsert_track_page(meta: dict, eagle_item_id: Optional[str] = None) -> str:
     if results:
         page_id = results[0]["id"]
         safe_update(page_id)
+        # Link artist relation (2026-01-15 fix)
+        if meta.get("artist"):
+            link_track_artist_relation(page_id, meta["artist"])
         return page_id
     else:
         # Create new page (shouldn't happen in single-track mode)
@@ -3538,7 +3841,11 @@ def upsert_track_page(meta: dict, eagle_item_id: Optional[str] = None) -> str:
         try:
             page = notion_manager._req("post", "/pages", body)
             workspace_logger.info(f"🆕 Created track page in Notion: {meta['title']}")
-            return page.get("id", "")
+            new_page_id = page.get("id", "")
+            # Link artist relation (2026-01-15 fix)
+            if new_page_id and meta.get("artist"):
+                link_track_artist_relation(new_page_id, meta["artist"])
+            return new_page_id
         except RuntimeError as exc:
             workspace_logger.warning(f"Could not create Notion page: {exc}")
             return ""
@@ -3547,15 +3854,41 @@ def upsert_track_page(meta: dict, eagle_item_id: Optional[str] = None) -> str:
 # Utility Functions (adapted from original)
 # ───────────────────────────────────────────────────────────────
 def parse_soundcloud_url(url: str):
-    """Parse artist and track from SoundCloud URL."""
+    """
+    Parse artist and track from SoundCloud URL.
+
+    Valid URL format: https://soundcloud.com/artist-name/track-name
+    Invalid (API) URL: https://api.soundcloud.com/tracks/soundcloud%3Atracks%3A12345
+
+    Returns (None, None) for malformed URLs to prevent incorrect metadata.
+    """
     workspace_logger.info(f"🔍 PARSING URL: {url}")
 
     try:
-        parts = urlparse(url).path.strip('/').split('/')
-        artist, track = (unquote(parts[0]), unquote(parts[1])) if len(parts) >= 2 else (
-            None,
-            None,
-        )
+        parsed = urlparse(url)
+
+        # FIX: Detect and reject malformed API URLs
+        # API URLs contain 'api.soundcloud.com' or have paths like '/tracks/ID'
+        if 'api.soundcloud.com' in parsed.netloc:
+            workspace_logger.warning(f"   ⚠️  Skipping malformed API URL (cannot extract artist): {url}")
+            return None, None
+
+        path = unquote(parsed.path).strip('/')
+        parts = path.split('/')
+
+        # FIX: Also reject URLs that start with 'tracks/' (API-style paths)
+        if parts and parts[0] == 'tracks':
+            workspace_logger.warning(f"   ⚠️  Skipping API-style URL path (cannot extract artist): {url}")
+            return None, None
+
+        # FIX: Validate that parsed artist doesn't look like a reserved path segment
+        RESERVED_PATHS = {'tracks', 'playlists', 'sets', 'albums', 'users', 'discover', 'search', 'stream'}
+        artist, track = (parts[0], parts[1]) if len(parts) >= 2 else (None, None)
+
+        if artist and artist.lower() in RESERVED_PATHS:
+            workspace_logger.warning(f"   ⚠️  Parsed artist '{artist}' is a reserved path - likely malformed URL")
+            return None, None
+
         workspace_logger.info(f"   → Parsed artist from URL: '{artist}'")
         workspace_logger.info(f"   → Parsed track from URL: '{track}'")
         return artist, track
@@ -3563,7 +3896,7 @@ def parse_soundcloud_url(url: str):
         workspace_logger.error(f"   ❌ Failed to parse URL: {e}")
         return None, None
 
-def detect_key(wav_path: str) -> str:
+def detect_key(wav_path: str, y: Optional[np.ndarray] = None, sr: Optional[int] = None) -> str:
     """
     Very lightweight key estimation using librosa chroma profile correlation.
     Returns e.g. "G Major", "A Minor", or "Unknown".
@@ -3571,14 +3904,14 @@ def detect_key(wav_path: str) -> str:
     workspace_logger.debug(f"Detecting key for: {wav_path}")
 
     try:
-        # Verify file exists
-        if not Path(wav_path).exists():
-            workspace_logger.error(f"❌ Key detection failed: File not found - {wav_path}")
-            return "Unknown"
-        
-        # Load audio with error checking
-        workspace_logger.debug(f"🔄 Loading audio for key detection: {wav_path}")
-        y, sr = librosa.load(wav_path, sr=None)
+        # Verify file exists when audio is not preloaded
+        if y is None or sr is None:
+            if not Path(wav_path).exists():
+                workspace_logger.error(f"❌ Key detection failed: File not found - {wav_path}")
+                return "Unknown"
+            # Load audio with error checking
+            workspace_logger.debug(f"🔄 Loading audio for key detection: {wav_path}")
+            y, sr = librosa.load(wav_path, sr=None)
         
         if len(y) == 0:
             workspace_logger.error(f"❌ Key detection failed: Empty audio file - {wav_path}")
@@ -3837,9 +4170,16 @@ def generate_comprehensive_tags(track_info: dict, processing_data: dict, file_ty
     # 8. Quality indicator
     tags.append("HighQuality")
     
-    # 9. Processing status (only if processed)
+    # 9. Processing status and fingerprint tag (critical for deduplication)
     if processing_data.get("fingerprint"):
         tags.append("Processed")
+        # Add fingerprint as tag for Eagle deduplication validation
+        fingerprint_value = processing_data["fingerprint"]
+        if fingerprint_value:
+            # Truncate fingerprint to reasonable length for tag (first 32 chars)
+            fingerprint_tag = f"fingerprint:{fingerprint_value[:32].lower()}"
+            tags.append(fingerprint_tag)
+            workspace_logger.debug(f"Added fingerprint tag: {fingerprint_tag}")
     
     # 10. Duration category (only if significant)
     if processing_data.get("duration") and processing_data["duration"] > 0:
@@ -3852,20 +4192,28 @@ def generate_comprehensive_tags(track_info: dict, processing_data: dict, file_ty
     # Remove duplicates and empty tags
     tags = list(set([tag for tag in tags if tag and tag.strip()]))
     
-    # Limit to 10 tags maximum
-    if len(tags) > 10:
-        # Keep the most important tags (playlists, genre, BPM, key, artist first)
+    # Limit to 12 tags maximum (increased to accommodate fingerprint)
+    if len(tags) > 12:
+        # Keep the most important tags: fingerprint (critical), playlists, genre, BPM, key, artist
         priority_tags = []
+
+        # CRITICAL: Always keep fingerprint tag first (required for deduplication)
         for tag in tags:
-            if any(playlist in tag for playlist in playlist_names):
+            if tag.startswith("fingerprint:"):
                 priority_tags.append(tag)
-        
+                break
+
+        # Add playlist tags
+        for tag in tags:
+            if tag not in priority_tags and any(playlist in tag for playlist in playlist_names):
+                priority_tags.append(tag)
+
         # Add other high-value tags
         for tag in tags:
-            if tag not in priority_tags and len(priority_tags) < 10:
+            if tag not in priority_tags and len(priority_tags) < 12:
                 priority_tags.append(tag)
-        
-        tags = priority_tags[:10]
+
+        tags = priority_tags[:12]
     
     workspace_logger.info(f"Generated {len(tags)} focused tags for {file_type}: {tags}")
     return tags
@@ -3877,6 +4225,149 @@ def generate_comprehensive_tags(track_info: dict, processing_data: dict, file_ty
 # ───────────────────────────────────────────────────────────────
 # Configuration flag for Eagle delete operations
 EAGLE_DELETE_ENABLED = True  # Now enabled with moveToTrash implementation
+
+# ═══════════════════════════════════════════════════════════════
+# PERFORMANCE: Eagle Items Cache with TTL
+# ═══════════════════════════════════════════════════════════════
+# Cache for Eagle items to avoid repeated API calls (major performance improvement)
+_eagle_items_cache: Optional[list[dict]] = None
+_eagle_items_cache_time: float = 0.0
+_eagle_items_cache_ttl: float = 300.0  # 5 minutes TTL
+_eagle_items_name_index: Optional[dict[str, list[dict]]] = None  # Pre-indexed by lowercase name
+_eagle_items_path_index: Optional[dict[str, dict]] = None  # Pre-indexed by path
+_eagle_items_fingerprint_index: Optional[dict[str, list[dict]]] = None  # fingerprint -> items
+
+
+def get_cached_eagle_items(force_refresh: bool = False) -> list[dict]:
+    """
+    Get Eagle items with caching. Significantly reduces API calls.
+
+    Performance impact: Reduces 100+ API calls to 1 per 5-minute window.
+    """
+    global _eagle_items_cache, _eagle_items_cache_time, _eagle_items_name_index, _eagle_items_path_index, _eagle_items_fingerprint_index
+
+    current_time = time.time()
+    cache_expired = (current_time - _eagle_items_cache_time) > _eagle_items_cache_ttl
+
+    if force_refresh or _eagle_items_cache is None or cache_expired:
+        workspace_logger.info("🔄 Refreshing Eagle items cache...")
+        try:
+            endpoint = "/api/item/list"
+            if EAGLE_CACHE_LIMIT > 0:
+                endpoint = f"{endpoint}?limit={EAGLE_CACHE_LIMIT}"
+            data = eagle_request("get", endpoint)
+            _eagle_items_cache = data.get("data", [])
+            _eagle_items_cache_time = current_time
+
+            # Build pre-indexed lookups for O(1) access
+            _eagle_items_name_index = {}
+            _eagle_items_path_index = {}
+            _eagle_items_fingerprint_index = {}
+            for item in _eagle_items_cache:
+                # Index by lowercase name for fast fuzzy matching
+                name_lower = item.get("name", "").lower()
+                if name_lower:
+                    if name_lower not in _eagle_items_name_index:
+                        _eagle_items_name_index[name_lower] = []
+                    _eagle_items_name_index[name_lower].append(item)
+
+                # Index by path for O(1) path lookups
+                path = item.get("path", "")
+                if path:
+                    _eagle_items_path_index[path] = item
+
+                # Index by fingerprint tag for O(1) fingerprint lookups
+                for tag in item.get("tags", []):
+                    if not isinstance(tag, str):
+                        continue
+                    tag_lower = tag.lower()
+                    if tag_lower.startswith("fingerprint:"):
+                        fingerprint_value = tag_lower.split(":", 1)[1].strip()
+                        if fingerprint_value:
+                            _eagle_items_fingerprint_index.setdefault(fingerprint_value, []).append(item)
+
+            workspace_logger.info(f"✅ Eagle cache refreshed: {len(_eagle_items_cache)} items indexed")
+        except Exception as e:
+            workspace_logger.warning(f"⚠️ Failed to refresh Eagle cache: {e}")
+            if _eagle_items_cache is None:
+                _eagle_items_cache = []
+
+    return _eagle_items_cache
+
+
+def get_eagle_item_by_path(file_path: str) -> Optional[dict]:
+    """O(1) lookup of Eagle item by path using pre-built index."""
+    global _eagle_items_path_index
+    if _eagle_items_path_index is None:
+        get_cached_eagle_items()  # Initialize cache if needed
+    return _eagle_items_path_index.get(file_path) if _eagle_items_path_index else None
+
+
+def get_eagle_items_by_name(name: str) -> list[dict]:
+    """O(1) lookup of Eagle items by name using pre-built index."""
+    global _eagle_items_name_index
+    if _eagle_items_name_index is None:
+        get_cached_eagle_items()  # Initialize cache if needed
+    return _eagle_items_name_index.get(name.lower(), []) if _eagle_items_name_index else []
+
+def get_eagle_items_by_fingerprint(fingerprint: str) -> list[dict]:
+    """O(1) lookup of Eagle items by fingerprint tag using pre-built index."""
+    global _eagle_items_fingerprint_index
+    if _eagle_items_fingerprint_index is None:
+        get_cached_eagle_items()  # Initialize cache if needed
+    if not fingerprint:
+        return []
+    return _eagle_items_fingerprint_index.get(fingerprint.lower(), []) if _eagle_items_fingerprint_index else []
+
+
+def invalidate_eagle_cache():
+    """Invalidate the Eagle items cache (call after adding/removing items)."""
+    global _eagle_items_cache, _eagle_items_cache_time, _eagle_items_name_index, _eagle_items_path_index, _eagle_items_fingerprint_index
+    _eagle_items_cache = None
+    _eagle_items_cache_time = 0.0
+    _eagle_items_name_index = None
+    _eagle_items_path_index = None
+    _eagle_items_fingerprint_index = None
+    workspace_logger.debug("🔄 Eagle cache invalidated")
+
+
+# ═══════════════════════════════════════════════════════════════
+# PERFORMANCE: Path Existence Cache
+# ═══════════════════════════════════════════════════════════════
+# Caches filesystem existence checks to avoid repeated syscalls
+_path_exists_cache: dict[str, bool] = {}
+_path_exists_cache_max_size: int = 10000  # Limit cache size
+
+
+def cached_path_exists(path: str) -> bool:
+    """
+    Check if a path exists with caching.
+
+    PERFORMANCE: Reduces filesystem syscalls by caching results.
+    Cache is session-scoped (cleared when script restarts).
+    """
+    global _path_exists_cache
+
+    if path in _path_exists_cache:
+        return _path_exists_cache[path]
+
+    # Limit cache size to prevent memory issues
+    if len(_path_exists_cache) >= _path_exists_cache_max_size:
+        # Clear oldest half of cache (simple LRU approximation)
+        keys_to_remove = list(_path_exists_cache.keys())[:_path_exists_cache_max_size // 2]
+        for key in keys_to_remove:
+            del _path_exists_cache[key]
+
+    exists = Path(path).exists()
+    _path_exists_cache[path] = exists
+    return exists
+
+
+def clear_path_cache():
+    """Clear the path existence cache (call if files are created/deleted)."""
+    global _path_exists_cache
+    _path_exists_cache = {}
+
 
 def eagle_request(
     method: str,
@@ -3901,7 +4392,7 @@ def eagle_request(
 
     for attempt in range(1, retry + 1):
         try:
-            resp = requests.request(
+            resp = _HTTP_SESSION.request(
                 method,
                 url,
                 json=payload_to_send,
@@ -3998,6 +4489,44 @@ def eagle_switch_library(library_path: str = EAGLE_LIBRARY_PATH):
     except Exception as e:
         workspace_logger.warning("Could not switch Eagle library: %s", e)
 
+
+def eagle_get_active_library_info() -> Optional[Dict[str, Any]]:
+    """
+    Get information about the currently active Eagle library.
+
+    Works with ANY Eagle library - does not force opening a specific library.
+    Returns information about whatever library is currently open in Eagle.
+
+    Returns:
+        Dictionary with library info (name, path, itemCount) or None if unavailable
+    """
+    try:
+        response = eagle_request("get", "/library/info")
+        if response and response.get("status") == "success":
+            lib_data = response.get("data", {})
+            return {
+                "name": lib_data.get("library", {}).get("name", "Unknown"),
+                "path": lib_data.get("library", {}).get("path", "Unknown"),
+                "itemCount": lib_data.get("library", {}).get("itemCount", 0),
+                "folders": lib_data.get("folders", []),
+            }
+        return None
+    except Exception as e:
+        workspace_logger.debug(f"Could not get Eagle library info: {e}")
+        return None
+
+
+def log_active_eagle_library() -> None:
+    """Log information about the currently active Eagle library."""
+    lib_info = eagle_get_active_library_info()
+    if lib_info:
+        workspace_logger.info(f"🦅 Active Eagle Library: {lib_info.get('name', 'Unknown')}")
+        workspace_logger.info(f"🦅 Library Path: {lib_info.get('path', 'Unknown')}")
+        workspace_logger.info(f"🦅 Item Count: {lib_info.get('itemCount', 0):,}")
+    else:
+        workspace_logger.warning("🦅 Could not retrieve active Eagle library info (Eagle may not be running)")
+
+
 def eagle_get_or_create_folder(folder_name: str) -> str:
     """Return the Eagle folderId for folder_name, creating it if absent."""
     data = eagle_request("get", "/folder/list")
@@ -4049,6 +4578,8 @@ def eagle_add_item(path: str, name: str, website: str, tags: list[str], folder_i
                 if isinstance(eagle_id, dict):
                     eagle_id = eagle_id.get("id")
                 workspace_logger.info(f"✅ Eagle API added item, got ID: {eagle_id}")
+                # Invalidate cache after adding new item
+                invalidate_eagle_cache()
                 return eagle_id
             else:
                 workspace_logger.warning(f"Eagle API error: {data}")
@@ -4091,13 +4622,16 @@ def eagle_import_with_duplicate_management(
         workspace_logger.error(f"❌ Consider using a stable backup directory instead of Apple Music auto-import")
         return None
     
-    # Step 1: Find all matching items by filename
-    artist_for_match = (expected_metadata or {}).get("artist") if expected_metadata else None
+    # Step 1: Find all matching items using available metadata
+    meta = expected_metadata or {}
     best_item, all_matching_items = eagle_find_best_matching_item(
         filename,
         fingerprint=audio_fingerprint,
         title=title,
-        artist=artist_for_match,
+        artist=meta.get("artist"),
+        duration=float(meta.get("duration")) if meta.get("duration") else None,
+        bpm=int(meta.get("bpm")) if meta.get("bpm") else None,
+        key=meta.get("key"),
     )
     
     if not best_item:
@@ -4168,7 +4702,7 @@ def eagle_move_to_trash(item_ids: list[str]) -> bool:
     
     try:
         payload = {"itemIds": item_ids}
-        result = eagle_request("post", "/item/moveToTrash", payload)
+        result = eagle_request("post", "/api/item/moveToTrash", payload)
         
         if result and isinstance(result, dict) and result.get("status") == "success":
             workspace_logger.info(f"🗑️  Moved {len(item_ids)} Eagle item(s) to trash")
@@ -4192,87 +4726,410 @@ def eagle_delete_item(item_id: str) -> bool:
     
     return eagle_move_to_trash([item_id])
 
-def eagle_find_items_by_path(file_path: str) -> list[str]:
-    """Find Eagle item IDs by file path. Returns list of item IDs."""
+def eagle_find_items_by_path(file_path: str) -> list[dict]:
+    """
+    Find Eagle items by file path using cached index.
+
+    PERFORMANCE: O(1) lookup using pre-built path index.
+    Returns list of item dictionaries (not just IDs) for consistency.
+    """
     try:
-        data = eagle_request("get", "/item/list")
-        item_ids = []
-        for item in data.get("data", []):
-            if item.get("path") == file_path:
-                item_ids.append(item["id"])
-        return item_ids
+        # Use cached index for O(1) lookup instead of O(n) scan
+        item = get_eagle_item_by_path(file_path)
+        if item:
+            return [item]
+
+        # Fallback: check for partial path matches in cache
+        items = get_cached_eagle_items()
+        matching_items = []
+        file_name = Path(file_path).name
+        for item in items:
+            item_path = item.get("path", "")
+            if item_path and Path(item_path).name == file_name:
+                matching_items.append(item)
+        return matching_items
     except Exception as exc:
         workspace_logger.warning(f"Failed to search Eagle items: {exc}")
         return []
 
 def eagle_fetch_all_items() -> list[dict]:
-    """Fetch the full item list from Eagle, handling errors gracefully."""
-    try:
-        data = eagle_request("get", "/api/item/list")
-        return data.get("data", [])
-    except Exception as exc:
-        workspace_logger.warning(f"Failed to fetch Eagle item list: {exc}")
+    """
+    Fetch the full item list from Eagle with caching.
+
+    PERFORMANCE: Now uses cached data with 5-minute TTL.
+    Reduces 100+ API calls to 1 per processing batch.
+    """
+    return get_cached_eagle_items()
+
+def _extract_fingerprint_tag(item: dict) -> Optional[str]:
+    """Extract fingerprint tag value from an Eagle item."""
+    for tag in item.get("tags", []):
+        if not isinstance(tag, str):
+            continue
+        tag_lower = tag.lower()
+        if tag_lower.startswith("fingerprint:"):
+            value = tag_lower.split(":", 1)[1].strip()
+            if value:
+                return value
+    return None
+
+def _normalize_name_for_dedup(name: str) -> str:
+    return _sanitize_match_string(name or "")
+
+def _token_prefix_key(normalized: str, token_count: int = 3) -> str:
+    tokens = normalized.split()
+    if not tokens:
+        return ""
+    return " ".join(tokens[:token_count])
+
+def _token_suffix_key(normalized: str, token_count: int = 3) -> str:
+    tokens = normalized.split()
+    if not tokens:
+        return ""
+    return " ".join(tokens[-token_count:])
+
+def _cluster_by_similarity(items: list[dict], min_similarity: float) -> list[list[dict]]:
+    """Cluster items by name similarity using a simple union-find."""
+    if len(items) < 2:
         return []
 
+    norms = [_normalize_name_for_dedup(item.get("name", "")) for item in items]
+    parent = list(range(len(items)))
+
+    def find(idx: int) -> int:
+        while parent[idx] != idx:
+            parent[idx] = parent[parent[idx]]
+            idx = parent[idx]
+        return idx
+
+    def union(a: int, b: int) -> None:
+        ra = find(a)
+        rb = find(b)
+        if ra != rb:
+            parent[rb] = ra
+
+    for i in range(len(items)):
+        name_i = norms[i]
+        if not name_i:
+            continue
+        for j in range(i + 1, len(items)):
+            name_j = norms[j]
+            if not name_j:
+                continue
+            # Skip obvious mismatches by length difference
+            if abs(len(name_i) - len(name_j)) > max(len(name_i), len(name_j)) * 0.5:
+                continue
+            similarity = difflib.SequenceMatcher(None, name_i, name_j).ratio()
+            if similarity >= min_similarity:
+                union(i, j)
+
+    clusters: dict[int, list[dict]] = {}
+    for idx, item in enumerate(items):
+        root = find(idx)
+        clusters.setdefault(root, []).append(item)
+
+    return [group for group in clusters.values() if len(group) > 1]
+
+def _select_best_item(items: list[dict]) -> dict:
+    best_item = None
+    best_score = (-1, -1)
+    for item in items:
+        quality = eagle_analyze_item_quality(item)
+        score = (quality.get("overall_score", 0), quality.get("size", 0))
+        if score > best_score:
+            best_score = score
+            best_item = item
+    return best_item or items[0]
+
+def eagle_library_deduplication(
+    dry_run: bool = True,
+    min_similarity: float = 0.75,
+    output_report: bool = True,
+    cleanup_duplicates: bool = False,
+    require_fingerprints: bool = True,
+    min_fingerprint_coverage: float = 0.80,
+) -> dict:
+    """
+    Library-wide deduplication scan for Eagle.
+    Uses fingerprint groups first, then fuzzy name matching, then suffix-token matching.
+    """
+    start_time = time.time()
+    items = eagle_fetch_all_items()
+    total_items = len(items)
+
+    if total_items == 0:
+        return {"error": "No Eagle items found", "total_items": 0, "duplicate_groups": []}
+
+    # Fingerprint coverage check
+    fingerprint_groups: dict[str, list[dict]] = {}
+    items_with_fp = 0
+    fingerprint_by_id: dict[str, str] = {}
+    for item in items:
+        fp = _extract_fingerprint_tag(item)
+        if fp:
+            items_with_fp += 1
+            fingerprint_by_id[item.get("id", "")] = fp
+            fingerprint_groups.setdefault(fp, []).append(item)
+
+    coverage = items_with_fp / total_items if total_items else 0.0
+    if require_fingerprints and coverage < min_fingerprint_coverage:
+        return {
+            "error": f"Fingerprint coverage {coverage:.1%} below required {min_fingerprint_coverage:.1%}",
+            "total_items": total_items,
+            "items_with_fingerprints": items_with_fp,
+            "coverage": coverage,
+            "duplicate_groups": [],
+        }
+
+    duplicate_groups: list[dict] = []
+    used_ids: set[str] = set()
+
+    # Strategy 1: Fingerprint matching
+    for fp, group in fingerprint_groups.items():
+        if len(group) < 2:
+            continue
+        keeper = _select_best_item(group)
+        duplicates = [item for item in group if item.get("id") != keeper.get("id")]
+        if not duplicates:
+            continue
+        used_ids.update(item.get("id") for item in group if item.get("id"))
+        duplicate_groups.append({
+            "match_type": "fingerprint",
+            "similarity": 1.0,
+            "keeper": keeper,
+            "duplicates": duplicates,
+        })
+
+    # Strategy 2: Fuzzy name matching (prefix token buckets)
+    fuzzy_candidates = [
+        item for item in items
+        if item.get("id") not in used_ids and (not require_fingerprints or not _extract_fingerprint_tag(item))
+    ]
+    buckets: dict[str, list[dict]] = {}
+    for item in fuzzy_candidates:
+        norm_name = _normalize_name_for_dedup(item.get("name", ""))
+        if not norm_name:
+            continue
+        buckets.setdefault(_token_prefix_key(norm_name), []).append(item)
+
+    for bucket_items in buckets.values():
+        if len(bucket_items) < 2:
+            continue
+        for group in _cluster_by_similarity(bucket_items, min_similarity=min_similarity):
+            group = [item for item in group if item.get("id") not in used_ids]
+            if len(group) < 2:
+                continue
+            keeper = _select_best_item(group)
+            duplicates = [item for item in group if item.get("id") != keeper.get("id")]
+            if not duplicates:
+                continue
+            used_ids.update(item.get("id") for item in group if item.get("id"))
+            duplicate_groups.append({
+                "match_type": "fuzzy",
+                "similarity": min_similarity,
+                "keeper": keeper,
+                "duplicates": duplicates,
+            })
+
+    # Strategy 3: Suffix-token matching (lightweight n-gram-style fallback)
+    ngram_candidates = [item for item in items if item.get("id") not in used_ids]
+    suffix_buckets: dict[str, list[dict]] = {}
+    for item in ngram_candidates:
+        norm_name = _normalize_name_for_dedup(item.get("name", ""))
+        if not norm_name:
+            continue
+        suffix_buckets.setdefault(_token_suffix_key(norm_name), []).append(item)
+
+    for bucket_items in suffix_buckets.values():
+        if len(bucket_items) < 2:
+            continue
+        for group in _cluster_by_similarity(bucket_items, min_similarity=min_similarity):
+            group = [item for item in group if item.get("id") not in used_ids]
+            if len(group) < 2:
+                continue
+            keeper = _select_best_item(group)
+            duplicates = [item for item in group if item.get("id") != keeper.get("id")]
+            if not duplicates:
+                continue
+            used_ids.update(item.get("id") for item in group if item.get("id"))
+            duplicate_groups.append({
+                "match_type": "ngram",
+                "similarity": min_similarity,
+                "keeper": keeper,
+                "duplicates": duplicates,
+            })
+
+    # Optional cleanup
+    if cleanup_duplicates and not dry_run:
+        for group in duplicate_groups:
+            keeper = group.get("keeper")
+            all_items = [keeper] + group.get("duplicates", [])
+            try:
+                eagle_cleanup_duplicate_items(keeper, all_items)
+            except Exception as exc:
+                workspace_logger.warning(f"Cleanup failed for group {keeper.get('id') if keeper else 'unknown'}: {exc}")
+
+    total_duplicates = sum(len(g.get("duplicates", [])) for g in duplicate_groups)
+    duration = time.time() - start_time
+
+    # Report generation
+    report_path = None
+    if output_report:
+        logs_dir = Path(__file__).resolve().parent.parent / "logs" / "deduplication"
+        logs_dir.mkdir(parents=True, exist_ok=True)
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        report_path = logs_dir / f"eagle_dedup_report_{timestamp}.md"
+
+        match_breakdown = {"fingerprint": [], "fuzzy": [], "ngram": []}
+        for group in duplicate_groups:
+            match_breakdown[group.get("match_type", "fuzzy")].append(group)
+
+        def _size_mb(item: dict) -> float:
+            return float(item.get("size", 0)) / (1024 * 1024)
+
+        total_space_mb = sum(_size_mb(item) for g in duplicate_groups for item in g.get("duplicates", []))
+        report_lines = [
+            "# Eagle Library Deduplication Report",
+            "",
+            f"**Generated:** {datetime.utcnow().isoformat()}",
+            f"**Mode:** {'DRY RUN (no changes made)' if dry_run else 'LIVE'}",
+            "",
+            "## Summary",
+            "",
+            "| Metric | Value |",
+            "|--------|-------|",
+            f"| Total Items Scanned | {total_items:,} |",
+            f"| Duplicate Groups Found | {len(duplicate_groups):,} |",
+            f"| Total Duplicate Items | {total_duplicates:,} |",
+            f"| Space Recoverable | {total_space_mb:.2f} MB |",
+            f"| Scan Duration | {duration:.1f} seconds |",
+            "",
+            "## Match Type Breakdown",
+            "",
+        ]
+        for match_type in ["fingerprint", "fuzzy", "ngram"]:
+            groups = match_breakdown.get(match_type, [])
+            dupes = sum(len(g.get("duplicates", [])) for g in groups)
+            space_mb = sum(_size_mb(item) for g in groups for item in g.get("duplicates", []))
+            label = match_type.capitalize()
+            report_lines.append(f"- **{label}**: {len(groups)} groups, {dupes} duplicates, {space_mb:.2f} MB")
+
+        report_lines.append("")
+        report_lines.append("## Duplicate Groups Detail")
+        report_lines.append("")
+
+        for idx, group in enumerate(duplicate_groups, 1):
+            keeper = group.get("keeper", {})
+            duplicates = group.get("duplicates", [])
+            similarity = group.get("similarity", min_similarity)
+            group_space_mb = sum(_size_mb(item) for item in duplicates)
+            report_lines.extend([
+                f"### Group {idx}: {keeper.get('name', 'Unknown')}",
+                "",
+                f"- **Match Type:** {group.get('match_type')}",
+                f"- **Similarity:** {int(similarity * 100)}%",
+                f"- **Space Recoverable:** {group_space_mb:.2f} MB",
+                "",
+                "**Keep (Best Quality):**",
+                f"- ID: `{keeper.get('id', 'Unknown')}`",
+                f"- Name: {keeper.get('name', 'Unknown')}",
+                f"- Size: {_size_mb(keeper):.2f} MB",
+                f"- Tags: {', '.join(keeper.get('tags', [])[:8])}{'...' if len(keeper.get('tags', [])) > 8 else ''}",
+                "",
+                "**Duplicates to Remove:**",
+            ])
+            for dup in duplicates:
+                report_lines.append(f"- `{dup.get('id', 'Unknown')}` - {dup.get('name', 'Unknown')} ({_size_mb(dup):.2f} MB)")
+            report_lines.append("")
+
+        report_path.write_text("\n".join(report_lines))
+        workspace_logger.info(f"📄 Report generated: {report_path}")
+
+    return {
+        "total_items": total_items,
+        "duplicate_groups": duplicate_groups,
+        "total_duplicates": total_duplicates,
+        "coverage": coverage,
+        "items_with_fingerprints": items_with_fp,
+        "report_path": str(report_path) if report_path else None,
+    }
+
 def eagle_find_items_by_filename(filename: str, items: Optional[List[dict]] = None) -> List[dict]:
-    """Find Eagle items by filename (without extension). Returns list of item dictionaries with full details."""
-    items = items if items is not None else eagle_fetch_all_items()
+    """
+    Find Eagle items by filename (without extension).
+
+    PERFORMANCE: Uses pre-built name index for O(1) lookups on exact matches,
+    falls back to filtered linear search only for partial matches.
+    """
+    # Use cached items if not provided
+    if items is None:
+        items = get_cached_eagle_items()
+
     matching_items: list[dict] = []
-    
+    seen_ids: set[str] = set()  # Deduplicate results
+
     # Extract filename stem (without extension)
     filename_stem = Path(filename).stem
-    
+
     # Remove "_processed" suffix for WAV files to match base track name
     base_track_name = filename_stem.replace("_processed", "")
-    
-    # Enhanced candidate matching with more variations
+
+    # Build candidate names for exact matching
     candidates = {
-        filename_stem,
-        base_track_name,
-        f"{base_track_name} (WAV)",
-        f"{base_track_name} (M4A)",
-        f"{base_track_name} (AIFF)",
-        f"{base_track_name} (MP3)",
-        # Add variations with different separators
-        base_track_name.replace(" - ", " "),
-        base_track_name.replace(" ", "-"),
-        base_track_name.replace("_", " "),
-        base_track_name.replace(" ", "_"),
+        filename_stem.lower(),
+        base_track_name.lower(),
+        f"{base_track_name} (wav)".lower(),
+        f"{base_track_name} (m4a)".lower(),
+        f"{base_track_name} (aiff)".lower(),
+        f"{base_track_name} (mp3)".lower(),
+        base_track_name.replace(" - ", " ").lower(),
+        base_track_name.replace(" ", "-").lower(),
+        base_track_name.replace("_", " ").lower(),
+        base_track_name.replace(" ", "_").lower(),
     }
-    
+
     workspace_logger.debug(f"🔍 Searching for filename: '{filename_stem}' (base: '{base_track_name}')")
-    workspace_logger.debug(f"🔍 Candidate names: {candidates}")
-    
-    for item in items:
-        item_name = item.get("name", "")
-        item_path = item.get("path", "")
-        
-        # Check exact name match
-        if item_name in candidates:
-            matching_items.append(item)
-            workspace_logger.debug(f"   ✅ Exact name match: '{item_name}'")
-            continue
-        
-        # Check if filename appears in the item name (partial match)
-        if filename_stem.lower() in item_name.lower():
-            matching_items.append(item)
-            workspace_logger.debug(f"   ✅ Partial name match: '{item_name}' contains '{filename_stem}'")
-            continue
-        
-        # Check if the file path matches (for items with same file)
-        if item_path and Path(item_path).name == Path(filename).name:
-            matching_items.append(item)
-            workspace_logger.debug(f"   ✅ File path match: '{item_path}'")
-            continue
-    
+
+    # PERFORMANCE: Use pre-built index for O(1) exact name lookups
+    for candidate in candidates:
+        indexed_items = get_eagle_items_by_name(candidate)
+        for item in indexed_items:
+            item_id = item.get("id")
+            if item_id and item_id not in seen_ids:
+                matching_items.append(item)
+                seen_ids.add(item_id)
+                workspace_logger.debug(f"   ✅ Index exact match: '{item.get('name')}'")
+
+    # Only do linear search for partial matches if no exact matches found
+    if not matching_items:
+        filename_lower = filename_stem.lower()
+        target_filename = Path(filename).name
+
+        for item in items:
+            item_id = item.get("id")
+            if item_id in seen_ids:
+                continue
+
+            item_name = item.get("name", "")
+            item_path = item.get("path", "")
+
+            # Check partial name match
+            if filename_lower in item_name.lower():
+                matching_items.append(item)
+                seen_ids.add(item_id)
+                workspace_logger.debug(f"   ✅ Partial match: '{item_name}'")
+                continue
+
+            # Check file path match
+            if item_path and Path(item_path).name == target_filename:
+                matching_items.append(item)
+                seen_ids.add(item_id)
+                workspace_logger.debug(f"   ✅ Path match: '{item_path}'")
+
     workspace_logger.info(
-        f"🔍 Found {len(matching_items)} Eagle items for filename '{filename_stem}' (base: '{base_track_name}')"
+        f"🔍 Found {len(matching_items)} Eagle items for '{filename_stem}'"
     )
-    
-    # Log all matches for debugging
-    for i, item in enumerate(matching_items):
-        workspace_logger.debug(f"   Match {i+1}: '{item.get('name', 'Unknown')}' (ID: {item.get('id', 'Unknown')})")
-    
+
     return matching_items
 
 def _sanitize_match_string(*parts: str) -> str:
@@ -4282,126 +5139,300 @@ def _sanitize_match_string(*parts: str) -> str:
     combined = re.sub(r"[^a-z0-9]+", " ", combined)
     return combined.strip()
 
+_NON_ARTIST_TAG_PREFIXES = (
+    "bpm",
+    "key",
+    "camelot",
+    "fingerprint",
+    "wav",
+    "aiff",
+    "m4a",
+    "mp3",
+    "processed",
+    "highquality",
+    "soundcloud",
+    "spotify",
+    "playlist",
+    "genre",
+    "duration",
+    "compression",
+    "source",
+)
+
+def _is_non_artist_tag(tag_norm: str) -> bool:
+    if not tag_norm:
+        return True
+    if tag_norm.startswith(_NON_ARTIST_TAG_PREFIXES):
+        return True
+    if tag_norm.endswith("major") or tag_norm.endswith("minor"):
+        return True
+    return False
+
+def _artist_tag_match_score(artist_norm: str, tag: str) -> float:
+    tag_norm = _sanitize_match_string(tag or "")
+    if _is_non_artist_tag(tag_norm):
+        return 0.0
+    if artist_norm == tag_norm:
+        return 1.0
+    if artist_norm in tag_norm or tag_norm in artist_norm:
+        return 0.9
+    return difflib.SequenceMatcher(None, artist_norm, tag_norm).ratio()
+
+def _item_has_artist_tag(item: dict, artist: str, threshold: float = 0.85) -> bool:
+    artist_norm = _sanitize_match_string(artist or "")
+    if not artist_norm:
+        return False
+    for tag in item.get("tags", []):
+        if _artist_tag_match_score(artist_norm, tag) >= threshold:
+            return True
+    return False
+
 def eagle_find_best_matching_item(
     filename: str,
     fingerprint: Optional[str] = None,
     title: Optional[str] = None,
     artist: Optional[str] = None,
+    duration: Optional[float] = None,
+    bpm: Optional[int] = None,
+    key: Optional[str] = None,
 ) -> tuple[dict, list[dict]]:
     """
-    Find the best matching Eagle item using multiple matching strategies.
-    Enhanced de-duplication logic with improved matching algorithms.
-    
-    Matching Strategy (in order of priority):
-    1. Fingerprint matching (most reliable)
-    2. File path matching (exact file match)
-    3. Fuzzy title/artist matching
-    4. Filename matching (fallback)
-    
+    Find the best matching Eagle item using multi-signal scoring.
+
+    MATCHING SIGNALS (weighted scoring system):
+    1. Fingerprint: 100 pts (definitive - same audio content)
+    2. Title:       35 pts max (core identifier)
+    3. Artist:      25 pts max (must match for non-fingerprint)
+    4. Duration:    15 pts max (within 3 seconds = full points)
+    5. BPM:         10 pts max (within 2 BPM = full points)
+    6. Key:         10 pts max (exact match or relative key)
+    7. Filename:     5 pts max (weak signal, tiebreaker only)
+
+    MATCH REQUIREMENTS:
+    - Fingerprint match: Always accepted (100 pts)
+    - Without fingerprint: Need 70+ pts AND (title >= 30 AND artist >= 20)
+
     Returns (best_item, all_matching_items) or (None, []) if no matches.
     """
     workspace_logger.info(f"🔍 EAGLE DE-DUPLICATION: Finding matches for '{filename}'")
     workspace_logger.info(f"   Title: {title}")
     workspace_logger.info(f"   Artist: {artist}")
+    workspace_logger.info(f"   Duration: {duration:.1f}s" if duration else "   Duration: N/A")
+    workspace_logger.info(f"   BPM: {bpm}" if bpm else "   BPM: N/A")
+    workspace_logger.info(f"   Key: {key}" if key else "   Key: N/A")
     workspace_logger.info(f"   Fingerprint: {'Yes' if fingerprint else 'No'}")
-    
+
     items_catalog = eagle_fetch_all_items()
-    candidate_items: list[dict] = []
-    match_reasons = []
 
-    # Strategy 1: Fingerprint matching (most reliable)
-    if fingerprint:
-        token = f"fingerprint:{fingerprint.lower()}"
-        fingerprint_matches = []
-        for item in items_catalog:
-            tags = [tag.lower() for tag in item.get("tags", [])]
-            if any(token in tag for tag in tags):
-                fingerprint_matches.append(item)
-        
-        if fingerprint_matches:
-            candidate_items.extend(fingerprint_matches)
-            match_reasons.append(f"fingerprint ({len(fingerprint_matches)} matches)")
-            workspace_logger.info(f"🔍 Found {len(fingerprint_matches)} Eagle items via fingerprint match")
+    # Normalize inputs
+    title_normalized = _sanitize_match_string(title or "")
+    artist_normalized = _sanitize_match_string(artist or "")
+    filename_normalized = _sanitize_match_string(Path(filename).stem)
+    key_normalized = (key or "").lower().strip()
 
-    # Strategy 2: File path matching (exact file match)
-    if not candidate_items:
-        file_path_matches = []
-        target_filename = Path(filename).name
-        for item in items_catalog:
-            item_path = item.get("path", "")
-            if item_path and Path(item_path).name == target_filename:
-                file_path_matches.append(item)
-        
-        if file_path_matches:
-            candidate_items.extend(file_path_matches)
-            match_reasons.append(f"file path ({len(file_path_matches)} matches)")
-            workspace_logger.info(f"🔍 Found {len(file_path_matches)} Eagle items via file path match")
+    # Score all items
+    scored_items: list[tuple[float, dict, dict]] = []
 
-    # Strategy 3: Fuzzy title/artist matching
-    if not candidate_items and (title or artist):
-        target = _sanitize_match_string(title or "", artist or "")
-        if target:
-            fuzzy_candidates: list[tuple[float, dict]] = []
-            for item in items_catalog:
-                candidate_text = _sanitize_match_string(item.get("name", ""))
-                if not candidate_text:
+    MATCH_THRESHOLD = 70
+
+    for item in items_catalog:
+        score = 0.0
+        breakdown = {
+            "fingerprint": 0,
+            "title": 0,
+            "artist": 0,
+            "duration": 0,
+            "bpm": 0,
+            "key": 0,
+            "filename": 0,
+        }
+
+        item_name = item.get("name", "")
+        item_name_normalized = _sanitize_match_string(item_name)
+        item_tags = item.get("tags", [])
+        item_tags_lower = [t.lower() for t in item_tags]
+
+        # === Signal 1: Fingerprint (100 pts - definitive) ===
+        if fingerprint:
+            item_fp = _extract_fingerprint_tag(item)
+            if item_fp and item_fp == fingerprint:
+                breakdown["fingerprint"] = 100
+                score += 100
+
+        # === Signal 2: Title similarity (0-35 pts) ===
+        if title_normalized and item_name_normalized:
+            title_sim = difflib.SequenceMatcher(None, title_normalized, item_name_normalized).ratio()
+            breakdown["title"] = round(title_sim * 35, 1)
+            score += breakdown["title"]
+
+        # === Signal 3: Artist match (0-25 pts) ===
+        if artist_normalized:
+            artist_score = 0.0
+
+            # Check artist in item name
+            if artist_normalized in item_name_normalized:
+                artist_score = max(artist_score, 0.85)
+
+            # Check artist tags (skip metadata tags)
+            skip_prefixes = ("bpm", "key", "fingerprint", "duration", "processed",
+                           "highquality", "soundcloud", "short", "long", "medium")
+            for tag in item_tags:
+                tag_norm = _sanitize_match_string(tag)
+                if not tag_norm or any(tag_norm.startswith(p) for p in skip_prefixes):
                     continue
-                similarity = difflib.SequenceMatcher(None, target, candidate_text).ratio()
-                if similarity >= 0.6:  # Lowered threshold for better matching
-                    fuzzy_candidates.append((similarity, item))
-            
-            if fuzzy_candidates:
-                fuzzy_candidates.sort(key=lambda x: x[0], reverse=True)
-                fuzzy_items = [item for _, item in fuzzy_candidates]
-                candidate_items.extend(fuzzy_items)
-                match_reasons.append(f"fuzzy match ({len(fuzzy_items)} matches, best: {fuzzy_candidates[0][0]:.2f})")
-                workspace_logger.info(f"🔍 Found {len(fuzzy_items)} Eagle items via fuzzy title match")
+                tag_sim = difflib.SequenceMatcher(None, artist_normalized, tag_norm).ratio()
+                if tag_sim > 0.8:
+                    artist_score = max(artist_score, tag_sim)
 
-    # Strategy 4: Filename matching (fallback)
-    if not candidate_items:
-        filename_matches = eagle_find_items_by_filename(filename, items_catalog)
-        if filename_matches:
-            candidate_items.extend(filename_matches)
-            match_reasons.append(f"filename ({len(filename_matches)} matches)")
-            workspace_logger.info(f"🔍 Found {len(filename_matches)} Eagle items via filename match")
+            breakdown["artist"] = round(artist_score * 25, 1)
+            score += breakdown["artist"]
 
-    if not candidate_items:
-        workspace_logger.info(f"🔍 No Eagle items found for: {Path(filename).stem}")
+        # === Signal 4: Duration match (0-15 pts) ===
+        if duration and duration > 0:
+            item_duration = None
+            for tag in item_tags_lower:
+                if tag.startswith("duration:"):
+                    try:
+                        item_duration = float(tag.split(":")[1].rstrip("s"))
+                    except (ValueError, IndexError):
+                        pass
+                elif tag.endswith("s") and tag[:-1].replace(".", "").isdigit():
+                    try:
+                        item_duration = float(tag[:-1])
+                    except ValueError:
+                        pass
+
+            if item_duration and item_duration > 0:
+                duration_diff = abs(duration - item_duration)
+                if duration_diff <= 1:
+                    breakdown["duration"] = 15
+                elif duration_diff <= 3:
+                    breakdown["duration"] = round(15 * (1 - (duration_diff - 1) / 2), 1)
+                elif duration_diff <= 5:
+                    breakdown["duration"] = round(15 * 0.3 * (1 - (duration_diff - 3) / 2), 1)
+                score += breakdown["duration"]
+
+        # === Signal 5: BPM match (0-10 pts) ===
+        if bpm and bpm > 0:
+            item_bpm = None
+            for tag in item_tags_lower:
+                if tag.startswith("bpm"):
+                    try:
+                        item_bpm = int(tag.replace("bpm", "").strip())
+                    except ValueError:
+                        pass
+
+            if item_bpm and item_bpm > 0:
+                bpm_diff = abs(bpm - item_bpm)
+                if bpm_diff == 0:
+                    breakdown["bpm"] = 10
+                elif bpm_diff <= 1:
+                    breakdown["bpm"] = 8
+                elif bpm_diff <= 2:
+                    breakdown["bpm"] = 5
+                score += breakdown["bpm"]
+
+        # === Signal 6: Key match (0-10 pts) ===
+        if key_normalized:
+            item_key = None
+            for tag in item_tags_lower:
+                if "major" in tag or "minor" in tag:
+                    item_key = tag
+                    break
+                if len(tag) == 2 and tag[0].isdigit() and tag[1] in "ab":
+                    item_key = tag
+                    break
+                if len(tag) == 3 and tag[:2].isdigit() and tag[2] in "ab":
+                    item_key = tag
+                    break
+
+            if item_key:
+                if key_normalized == item_key:
+                    breakdown["key"] = 10
+                elif _keys_are_relative(key_normalized, item_key):
+                    breakdown["key"] = 7
+                score += breakdown["key"]
+
+        # === Signal 7: Filename similarity (0-5 pts - tiebreaker) ===
+        item_path = item.get("path", "")
+        if item_path and filename_normalized:
+            item_filename = _sanitize_match_string(Path(item_path).stem)
+            if item_filename:
+                filename_sim = difflib.SequenceMatcher(None, filename_normalized, item_filename).ratio()
+                breakdown["filename"] = round(filename_sim * 5, 1)
+                score += breakdown["filename"]
+
+        # Only keep items above threshold
+        if score >= MATCH_THRESHOLD:
+            scored_items.append((score, item, breakdown))
+
+    if not scored_items:
+        workspace_logger.info(f"🔍 No matches found above threshold ({MATCH_THRESHOLD} points)")
         return None, []
 
-    # Remove duplicates while preserving order
-    seen_ids = set()
-    unique_candidates = []
-    for item in candidate_items:
-        item_id = item.get("id")
-        if item_id and item_id not in seen_ids:
-            unique_candidates.append(item)
-            seen_ids.add(item_id)
-    
-    candidate_items = unique_candidates
-    workspace_logger.info(f"🔍 Total unique candidates: {len(candidate_items)}")
-    workspace_logger.info(f"🔍 Match reasons: {', '.join(match_reasons)}")
+    # Sort by score
+    scored_items.sort(key=lambda x: x[0], reverse=True)
 
-    # Analyze quality of all matching items
-    quality_assessments = []
-    for item in candidate_items:
-        quality = eagle_analyze_item_quality(item)
-        quality_assessments.append(quality)
-        workspace_logger.debug(
-            f"   Item {item['id']}: Score={quality['overall_score']}, "
-            f"Metadata={quality['metadata_score']:.1f}%, "
-            f"Recent={quality['is_recent']}, Size={quality['size']}"
+    # Log candidates
+    workspace_logger.info(f"🔍 Found {len(scored_items)} candidate(s) above threshold:")
+    for sc, it, bd in scored_items[:5]:
+        workspace_logger.info(f"   {it['id']}: {sc:.1f} pts - '{it.get('name', 'Unknown')[:50]}'")
+        workspace_logger.info(
+            f"      FP:{bd['fingerprint']} T:{bd['title']} A:{bd['artist']} "
+            f"D:{bd['duration']} BPM:{bd['bpm']} K:{bd['key']} F:{bd['filename']}"
         )
 
-    # Sort by quality score
-    quality_assessments.sort(key=lambda x: x["overall_score"], reverse=True)
-    best_quality = quality_assessments[0]
-    best_item = next(item for item in candidate_items if item["id"] == best_quality["item_id"])
+    best_score, best_item, best_breakdown = scored_items[0]
 
-    workspace_logger.info(f"🏆 Best item: {best_item['id']} (Score: {best_quality['overall_score']})")
-    workspace_logger.info(f"🏆 Best item name: '{best_item.get('name', 'Unknown')}'")
-    
-    return best_item, candidate_items
+    # Final validation for non-fingerprint matches
+    if best_breakdown["fingerprint"] == 0:
+        title_ok = best_breakdown["title"] >= 30  # ~86% title match
+        artist_ok = best_breakdown["artist"] >= 20  # ~80% artist match
+
+        if not (title_ok and artist_ok):
+            workspace_logger.info(
+                f"⚠️  Rejecting - need both title>=30 AND artist>=20 without fingerprint: "
+                f"T:{best_breakdown['title']}/35, A:{best_breakdown['artist']}/25"
+            )
+            return None, []
+
+    workspace_logger.info(f"🏆 Best match: {best_item['id']} (Score: {best_score:.1f})")
+    workspace_logger.info(f"🏆 Item: '{best_item.get('name', 'Unknown')}'")
+
+    return best_item, [it for _, it, _ in scored_items]
+
+
+def _keys_are_relative(key1: str, key2: str) -> bool:
+    """Check if two keys are relative (harmonically compatible)."""
+    camelot_relatives = {
+        "1a": "1b", "1b": "1a", "2a": "2b", "2b": "2a",
+        "3a": "3b", "3b": "3a", "4a": "4b", "4b": "4a",
+        "5a": "5b", "5b": "5a", "6a": "6b", "6b": "6a",
+        "7a": "7b", "7b": "7a", "8a": "8b", "8b": "8a",
+        "9a": "9b", "9b": "9a", "10a": "10b", "10b": "10a",
+        "11a": "11b", "11b": "11a", "12a": "12b", "12b": "12a",
+    }
+    key_relatives = {
+        "c major": "a minor", "a minor": "c major",
+        "g major": "e minor", "e minor": "g major",
+        "d major": "b minor", "b minor": "d major",
+        "a major": "f# minor", "f# minor": "a major",
+        "e major": "c# minor", "c# minor": "e major",
+        "b major": "g# minor", "g# minor": "b major",
+        "f# major": "d# minor", "d# minor": "f# major",
+        "f major": "d minor", "d minor": "f major",
+        "bb major": "g minor", "g minor": "bb major",
+        "eb major": "c minor", "c minor": "eb major",
+        "ab major": "f minor", "f minor": "ab major",
+        "db major": "bb minor", "bb minor": "db major",
+    }
+
+    k1, k2 = key1.lower().strip(), key2.lower().strip()
+    if k1 in camelot_relatives and camelot_relatives.get(k1) == k2:
+        return True
+    if k1 in key_relatives and key_relatives.get(k1) == k2:
+        return True
+    return False
 
 def eagle_analyze_item_quality(item: dict) -> dict:
     """Analyze the quality and metadata of an Eagle item. Returns quality assessment dict."""
@@ -4608,12 +5639,16 @@ def eagle_import_with_duplicate_management(
         workspace_logger.info(f"   Tags: {tags}")
         workspace_logger.info(f"   Fingerprint: {'Yes' if audio_fingerprint else 'No'}")
         
-        # Step 1: Find existing items using enhanced de-duplication logic
+        # Step 1: Find existing items using all available metadata
+        meta = expected_metadata or {}
         best_item, all_matches = eagle_find_best_matching_item(
             filename=Path(file_path).name,
             fingerprint=audio_fingerprint,
             title=title,
-            artist=expected_metadata.get("artist") if expected_metadata else None
+            artist=meta.get("artist"),
+            duration=float(meta.get("duration")) if meta.get("duration") else None,
+            bpm=int(meta.get("bpm")) if meta.get("bpm") else None,
+            key=meta.get("key"),
         )
         
         if not best_item:
@@ -4805,14 +5840,16 @@ def reset_track_for_reprocessing(page_id: str) -> bool:
             if prop_types.get(name) == "rich_text":
                 properties[name] = {"rich_text": []}
 
-        # Reset numeric metadata if present
-        if prop_types.get("AverageBpm") == "number":
-            properties["AverageBpm"] = {"number": None}
+        # Reset numeric metadata if present (uses ALT_PROP_NAMES to resolve)
+        bpm_prop = _resolve_prop_name("BPM") or "Tempo"
+        if prop_types.get(bpm_prop) == "number":
+            properties[bpm_prop] = {"number": None}
         key_prop = _resolve_prop_name("Key") or "Key "
         if prop_types.get(key_prop) == "rich_text":
             properties[key_prop] = {"rich_text": []}
-        if prop_types.get("Duration (ms)") == "number":
-            properties["Duration (ms)"] = {"number": None}
+        duration_prop = _resolve_prop_name("Duration (s)") or "Audio Duration (seconds)"
+        if prop_types.get(duration_prop) == "number":
+            properties[duration_prop] = {"number": None}
 
         audio_processing_prop = _resolve_prop_name("Audio Processing") or "Audio Processing"
         if prop_types.get(audio_processing_prop) == "multi_select":
@@ -5655,18 +6692,26 @@ def update_audio_processing_properties(page_id: str, processing_data: dict, file
         }
 
         fingerprint_value = processing_data.get('fingerprint') or track_info.get('fingerprint')
-        fingerprint_prop_name = _resolve_prop_name("Fingerprint") or "Fingerprint"
-        if fingerprint_value and prop_types.get(fingerprint_prop_name) == "rich_text":
-            properties[fingerprint_prop_name] = {
-                "rich_text": [
-                    {
-                        "type": "text",
-                        "text": {
-                            "content": fingerprint_value
-                        }
+        if fingerprint_value:
+            # NEW SCHEMA (2026-01-14): Route fingerprint to per-format property
+            file_path = processing_data.get('file_path') or track_info.get('file_path', '')
+            try:
+                from shared_core.fingerprint_schema import build_fingerprint_update_properties
+                fp_props = build_fingerprint_update_properties(fingerprint_value, file_path, prop_types)
+                if fp_props:
+                    properties.update(fp_props)
+                    workspace_logger.debug("Using per-format fingerprint schema")
+            except ImportError:
+                pass
+
+            # LEGACY FALLBACK (DEPRECATED)
+            if not any(k.endswith("Fingerprint") for k in properties):
+                fingerprint_prop_name = _resolve_prop_name("Fingerprint") or "Fingerprint"
+                if prop_types.get(fingerprint_prop_name) == "rich_text":
+                    workspace_logger.warning("Using DEPRECATED legacy Fingerprint property")
+                    properties[fingerprint_prop_name] = {
+                        "rich_text": [{"type": "text", "text": {"content": fingerprint_value}}]
                     }
-                ]
-            }
         
         # Update the page properties
         notion_manager._req("patch", f"/pages/{page_id}", {"properties": properties})
@@ -5733,9 +6778,10 @@ def cleanup_files_for_reprocessing(track_info: dict) -> bool:
         eagle_items_deleted = 0
         for file_path in [wav_path, aiff_path, m4a_path]:
             if file_path:
-                item_ids = eagle_find_items_by_path(file_path)
-                for item_id in item_ids:
-                    if eagle_delete_item(item_id):
+                eagle_items = eagle_find_items_by_path(file_path)
+                for item in eagle_items:
+                    item_id = item.get("id") if isinstance(item, dict) else item
+                    if item_id and eagle_delete_item(item_id):
                         eagle_items_deleted += 1
         
         workspace_logger.info(f"🧹 Cleanup complete: {files_deleted} files, {eagle_items_deleted} Eagle items deleted")
@@ -6003,6 +7049,29 @@ def efficient_batch_process_tracks(filter_criteria: str = "unprocessed", max_tra
     consecutive_empty_batches = 0
     max_empty_batches = 3  # Stop after 3 consecutive empty batches
     
+    def _process_batch_track_page(track_page: dict) -> tuple[str, bool, str, str, Optional[str]]:
+        """Process a single track page for batch mode."""
+        try:
+            track_data = extract_track_data(track_page)
+            title = track_data.get("title", "Unknown")
+            artist = track_data.get("artist", "Unknown")
+
+            playlist_names = get_playlist_names_from_track(track_data)
+            playlist_name = playlist_names[0] if playlist_names else "Unassigned"
+            playlist_dir = OUT_DIR / playlist_name
+
+            result = download_track(
+                track_data.get("soundcloud_url"),
+                playlist_dir,
+                track_data,
+                playlist_name
+            )
+            return track_page.get("id", "unknown"), bool(result), title, artist, None
+        except Exception as exc:
+            return track_page.get("id", "unknown"), False, "Unknown", "Unknown", str(exc)
+
+    enable_parallel = os.getenv("SC_ENABLE_PARALLEL_BATCH", "1").strip().lower() in ("1", "true", "yes")
+
     while True:
         workspace_logger.info(f"\n{'='*80}")
         workspace_logger.info(f"⚡ EFFICIENT BATCH #{batch_number} - Querying for {batch_size} tracks...")
@@ -6053,50 +7122,69 @@ def efficient_batch_process_tracks(filter_criteria: str = "unprocessed", max_tra
         batch_processed = 0
         batch_failed = 0
         batch_skipped = 0
-        
-        for i, track_page in enumerate(tracks_to_process, 1):
-            try:
-                track_data = extract_track_data(track_page)
-                title = track_data.get("title", "Unknown")
-                artist = track_data.get("artist", "Unknown")
-                
-                workspace_logger.info(f"\n{'='*80}")
-                workspace_logger.info(f"🎵 EFFICIENT BATCH #{batch_number} [{i}/{len(tracks_to_process)}] - Total: [{total_processed + i}]: {title} by {artist}")
-                workspace_logger.info(f"{'='*80}")
-                
-                # Process the track
-                # Get playlist names from track relations
-                playlist_names = get_playlist_names_from_track(track_data)
-                if playlist_names:
-                    playlist_name = playlist_names[0]  # Use first playlist
-                else:
-                    playlist_name = "Unassigned"  # Default for tracks without playlists
-                playlist_dir = OUT_DIR / playlist_name
-                
-                result = download_track(
-                    track_data["soundcloud_url"],
-                    playlist_dir,
-                    track_data,
-                    playlist_name
-                )
-                
-                if result:
-                    batch_processed += 1
-                    total_processed += 1
-                    workspace_logger.record_processed()
-                    workspace_logger.info(f"✅ Successfully processed: {title} by {artist}")
-                else:
+
+        if enable_parallel and MAX_CONCURRENT_JOBS > 1:
+            workspace_logger.info(f"🚀 Parallel batch processing enabled: {MAX_CONCURRENT_JOBS} workers")
+            with ThreadPoolExecutor(max_workers=MAX_CONCURRENT_JOBS) as executor:
+                futures = [executor.submit(_process_batch_track_page, page) for page in tracks_to_process]
+                for future in as_completed(futures):
+                    track_id, success, title, artist, error = future.result()
+                    if success:
+                        batch_processed += 1
+                        total_processed += 1
+                        workspace_logger.record_processed()
+                        workspace_logger.info(f"✅ Successfully processed: {title} by {artist} ({track_id})")
+                    else:
+                        batch_failed += 1
+                        total_failed += 1
+                        workspace_logger.record_failed()
+                        if error:
+                            workspace_logger.error(f"❌ Failed to process {track_id}: {error}")
+                        else:
+                            workspace_logger.error(f"❌ Failed to process: {title} by {artist} ({track_id})")
+        else:
+            for i, track_page in enumerate(tracks_to_process, 1):
+                try:
+                    track_data = extract_track_data(track_page)
+                    title = track_data.get("title", "Unknown")
+                    artist = track_data.get("artist", "Unknown")
+                    
+                    workspace_logger.info(f"\n{'='*80}")
+                    workspace_logger.info(f"🎵 EFFICIENT BATCH #{batch_number} [{i}/{len(tracks_to_process)}] - Total: [{total_processed + i}]: {title} by {artist}")
+                    workspace_logger.info(f"{'='*80}")
+                    
+                    # Process the track
+                    playlist_names = get_playlist_names_from_track(track_data)
+                    if playlist_names:
+                        playlist_name = playlist_names[0]  # Use first playlist
+                    else:
+                        playlist_name = "Unassigned"  # Default for tracks without playlists
+                    playlist_dir = OUT_DIR / playlist_name
+                    
+                    result = download_track(
+                        track_data["soundcloud_url"],
+                        playlist_dir,
+                        track_data,
+                        playlist_name
+                    )
+                    
+                    if result:
+                        batch_processed += 1
+                        total_processed += 1
+                        workspace_logger.record_processed()
+                        workspace_logger.info(f"✅ Successfully processed: {title} by {artist}")
+                    else:
+                        batch_failed += 1
+                        total_failed += 1
+                        workspace_logger.record_failed()
+                        workspace_logger.error(f"❌ Failed to process: {title} by {artist}")
+                        
+                except Exception as exc:
                     batch_failed += 1
                     total_failed += 1
+                    workspace_logger.error(f"❌ Error processing track [{i}/{len(tracks_to_process)}]: {exc}")
                     workspace_logger.record_failed()
-                    workspace_logger.error(f"❌ Failed to process: {title} by {artist}")
-                    
-            except Exception as exc:
-                batch_failed += 1
-                total_failed += 1
-                workspace_logger.error(f"❌ Error processing track [{i}/{len(tracks_to_process)}]: {exc}")
-                workspace_logger.record_failed()
-                continue
+                    continue
         
         # Batch summary
         workspace_logger.info(f"\n{'='*80}")
@@ -6121,6 +7209,168 @@ def efficient_batch_process_tracks(filter_criteria: str = "unprocessed", max_tra
     
     return total_processed
 
+
+def import_existing_local_file_to_eagle(
+    file_path: str,
+    track_data: dict,
+    playlist_name: str
+) -> Optional[dict]:
+    """
+    Import an existing local file to Eagle with fingerprinting.
+
+    This handles the case where a file exists locally but is not in Eagle.
+    The file will be:
+    1. Fingerprinted
+    2. Imported to Eagle with comprehensive tags (including fingerprint)
+    3. Notion updated with Eagle File ID
+
+    Args:
+        file_path: Path to the existing local file
+        track_data: Track metadata from Notion
+        playlist_name: Playlist name for tagging
+
+    Returns:
+        Dictionary with import results or None on failure
+    """
+    workspace_logger.info(f"\n{'='*80}")
+    workspace_logger.info(f"🦅 IMPORTING EXISTING LOCAL FILE TO EAGLE")
+    workspace_logger.info(f"{'='*80}")
+    workspace_logger.info(f"File: {file_path}")
+    workspace_logger.info(f"Track: {track_data.get('title', 'Unknown')} by {track_data.get('artist', 'Unknown')}")
+
+    file_path_obj = Path(file_path)
+    if not file_path_obj.exists():
+        workspace_logger.error(f"❌ File does not exist: {file_path}")
+        return None
+
+    try:
+        # Step 1: Compute fingerprint
+        workspace_logger.info("🔍 Computing audio fingerprint...")
+        fingerprint = compute_file_fingerprint(file_path_obj)
+        if fingerprint:
+            workspace_logger.info(f"✅ Fingerprint computed: {fingerprint[:32]}...")
+        else:
+            workspace_logger.warning("⚠️  Could not compute fingerprint")
+            fingerprint = None
+
+        # Step 2: Build processing_data for tag generation
+        processing_data = {
+            "fingerprint": fingerprint,
+            "bpm": track_data.get("bpm"),
+            "key": track_data.get("key"),
+            "duration": track_data.get("duration_seconds"),
+        }
+
+        # Step 3: Generate comprehensive tags (now includes fingerprint)
+        file_type = file_path_obj.suffix.upper().lstrip('.')
+        tag_list = generate_comprehensive_tags(track_data, processing_data, file_type)
+        workspace_logger.info(f"📋 Generated tags: {tag_list}")
+
+        # Step 4: Import to Eagle with de-duplication
+        workspace_logger.info("🦅 Importing to Eagle with de-duplication check...")
+        eagle_id = eagle_import_with_duplicate_management(
+            file_path=file_path,
+            title=track_data.get("title", "Unknown"),
+            url=track_data.get("soundcloud_url") or track_data.get("spotify_url") or "",
+            tags=tag_list,
+            folder_id=None,
+            expected_metadata=processing_data,
+            audio_fingerprint=fingerprint
+        )
+
+        if eagle_id:
+            workspace_logger.info(f"✅ Eagle import successful: {eagle_id}")
+            workspace_logger.info(f"   Applied tags: {tag_list}")
+
+            # Step 5: Update Notion with fingerprint and Eagle ID
+            if track_data.get("page_id"):
+                try:
+                    # Update fingerprint in Notion using NEW per-format schema (2026-01-14)
+                    if fingerprint:
+                        update_props = {}
+                        db_props = _get_tracks_db_props()
+
+                        # NEW SCHEMA: Route fingerprint to per-format property based on file extension
+                        try:
+                            from shared_core.fingerprint_schema import (
+                                build_fingerprint_update_properties,
+                                get_format_from_extension,
+                            )
+                            update_props = build_fingerprint_update_properties(fingerprint, file_path, db_props)
+                            if update_props:
+                                fmt = get_format_from_extension(file_path) or "unknown"
+                                workspace_logger.debug(f"Using per-format fingerprint schema: {fmt.upper()}")
+                        except ImportError:
+                            workspace_logger.debug("Per-format fingerprint schema not available, using legacy")
+
+                        # LEGACY FALLBACK (DEPRECATED): Use old Fingerprint property
+                        if not update_props and "Fingerprint" in db_props:
+                            workspace_logger.warning("Using DEPRECATED legacy Fingerprint property")
+                            if len(fingerprint) > 2000:
+                                update_props["Fingerprint"] = {"rich_text": [{"text": {"content": fingerprint[:2000]}}]}
+                                if "Fingerprint Part 2" in db_props:
+                                    update_props["Fingerprint Part 2"] = {"rich_text": [{"text": {"content": fingerprint[2000:4000]}}]}
+                            else:
+                                update_props["Fingerprint"] = {"rich_text": [{"text": {"content": fingerprint}}]}
+
+                        if update_props:
+                            notion_manager.update_page(track_data["page_id"], update_props)
+                            workspace_logger.info(f"✅ Updated Notion with fingerprint")
+
+                    # Update Eagle File ID
+                    update_notion_with_eagle_id(track_data["page_id"], eagle_id)
+                    workspace_logger.info(f"✅ Updated Notion with Eagle File ID: {eagle_id}")
+
+                    # Update audio processing status
+                    update_audio_processing_status(track_data["page_id"], ["Files Imported to Eagle"])
+
+                except Exception as e:
+                    workspace_logger.warning(f"⚠️  Failed to update Notion: {e}")
+
+            return {
+                "file": file_path,
+                "eagle_item_id": eagle_id,
+                "fingerprint": fingerprint,
+                "tags_applied": tag_list,
+                "local_import": True
+            }
+        else:
+            workspace_logger.error(f"❌ Eagle import failed for: {file_path}")
+            return None
+
+    except Exception as e:
+        workspace_logger.error(f"❌ Error importing local file to Eagle: {e}")
+        traceback.print_exc()
+        return None
+
+
+def check_existing_local_files_for_eagle_import(track_data: dict) -> Optional[str]:
+    """
+    Check if track has existing local files that need Eagle import.
+
+    Returns the best file path to import if found, None otherwise.
+    """
+    # Priority order: WAV > AIFF > M4A
+    file_paths_to_check = [
+        track_data.get("wav_file_path"),
+        track_data.get("aiff_file_path"),
+        track_data.get("m4a_file_path"),
+    ]
+
+    for file_path in file_paths_to_check:
+        if file_path and Path(file_path).exists():
+            # Check if this file is NOT already in Eagle
+            try:
+                eagle_items = eagle_find_items_by_path(file_path)
+                if not eagle_items:
+                    workspace_logger.info(f"🔄 Found local file not in Eagle: {file_path}")
+                    return file_path
+            except Exception as e:
+                workspace_logger.warning(f"⚠️  Error checking Eagle for {file_path}: {e}")
+
+    return None
+
+
 def process_track(track_page: Dict[str, Any]) -> bool:
     """
     Process a single track through the complete pipeline:
@@ -6140,47 +7390,188 @@ def process_track(track_page: Dict[str, Any]) -> bool:
         artist = track_data.get("artist", "Unknown")
         
         workspace_logger.info(f"🔄 Processing track: {title} by {artist}")
-        
-        # Check if this is a Spotify track (has Spotify ID but no SoundCloud URL)
-        is_spotify_track = track_data.get("spotify_id") and not track_data.get("soundcloud_url")
-        
-        if is_spotify_track:
-            workspace_logger.info(f"🎵 Processing Spotify track: {title} by {artist}")
-            # For Spotify tracks, we need to find the audio file from other sources
-            # This could be from YouTube, local files, or other sources
-            # For now, we'll skip the download step and focus on metadata enrichment
-            workspace_logger.info(f"🎵 Spotify track detected - skipping download, focusing on metadata enrichment")
-            
+
+        # Get URLs - treat empty strings as None
+        soundcloud_url = track_data.get("soundcloud_url") or None
+        spotify_id = track_data.get("spotify_id") or None
+        youtube_url = track_data.get("youtube_url") or None
+
+        # If track has NO audio source identifiers, attempt to find one by searching
+        # based on artist name and track title across all platforms
+        if not soundcloud_url and not spotify_id and not youtube_url:
+            workspace_logger.warning(f"⚠️  Track has NO audio source identifiers: {title} by {artist}")
+            workspace_logger.info(f"🔍 Attempting to find audio source by searching all platforms...")
+
+            # Get playlist info for download
+            playlist_names = get_playlist_names_from_track(track_data)
+            if playlist_names:
+                playlist_name = playlist_names[0]
+            else:
+                playlist_name = "Unassigned"
+            playlist_dir = OUT_DIR / playlist_name
+
+            # Use the centralized multi-platform search function
+            download_url, download_source = find_audio_source_for_track(
+                artist=artist,
+                title=title,
+                track_data=track_data
+            )
+
+            # Update Notion with the found URL
+            if download_url and track_data.get('page_id'):
+                try:
+                    if 'soundcloud.com' in download_url:
+                        sc_prop = _resolve_prop_name("SoundCloud URL") or "SoundCloud URL"
+                        notion_manager.update_page(track_data['page_id'], {sc_prop: {"url": download_url}})
+                        workspace_logger.info(f"📝 Updated Notion with SoundCloud URL")
+                    elif 'youtube.com' in download_url or 'youtu.be' in download_url:
+                        update_notion_download_source(track_data['page_id'], download_source, download_url)
+                except Exception as e:
+                    workspace_logger.warning(f"⚠️  Failed to update Notion with found URL: {e}")
+
+            # If we found a download URL, process it
+            if download_url:
+                workspace_logger.info(f"🔄 Running FULL download workflow via {download_source}...")
+                workspace_logger.info(f"   URL: {download_url}")
+
+                result = download_track(
+                    url=download_url,
+                    playlist_dir=playlist_dir,
+                    track_info=track_data,
+                    playlist_name=playlist_name
+                )
+
+                if result:
+                    workspace_logger.info(f"✅ Track fully processed via {download_source}!")
+
+                    # CRITICAL FIX: Update track_data page_id if de-dupe changed it
+                    if result.get("page_id") and result["page_id"] != track_data.get("page_id"):
+                        old_pid = track_data.get("page_id")
+                        track_data["page_id"] = result["page_id"]
+                        workspace_logger.info(f"🔄 De-dupe: Updated track_data page_id from {old_pid} to {track_data['page_id']}")
+
+                    file_paths = {
+                        "m4a": result.get("m4a_path") or result.get("file"),
+                        "aiff": result.get("aiff_path"),
+                        "wav": result.get("wav_path"),
+                    }
+                    eagle_id = result.get("eagle_item_id")
+
+                    if track_data.get("page_id"):
+                        complete_track_notion_update(
+                            track_data["page_id"],
+                            track_data,
+                            file_paths,
+                            eagle_id
+                        )
+
+                    workspace_logger.record_processed()
+                    return True
+                else:
+                    workspace_logger.warning(f"⚠️  Download workflow failed for track via {download_source}: {title}")
+                    workspace_logger.record_failed()
+                    return False
+            else:
+                # No audio source found anywhere
+                workspace_logger.warning(f"⚠️  Could not find audio source on any platform for: {title} by {artist}")
+                workspace_logger.info(f"📋 Track will remain in queue for manual resolution")
+                workspace_logger.record_failed()
+                return False
+
+        # Check if this is a Spotify-only track (has Spotify ID but no SoundCloud URL)
+        is_spotify_only = spotify_id and not soundcloud_url
+
+        if is_spotify_only:
+            workspace_logger.info(f"🎵 Processing Spotify-only track: {title} by {artist}")
+            workspace_logger.info(f"🔄 No SoundCloud URL - searching for audio source...")
+
             # Get playlist names from track relations
             playlist_names = get_playlist_names_from_track(track_data)
             if playlist_names:
                 playlist_name = playlist_names[0]  # Use first playlist
             else:
                 playlist_name = "Unassigned"  # Default for tracks without playlists
-            
-            # For Spotify tracks, we'll just update the metadata and mark as processed
-            # without actually downloading the audio file
-            try:
-                # Update the track with enriched metadata
-                update_track_metadata(track_data)
-                
-                # Mark as processed in Notion
-                if track_data.get("page_id"):
-                    complete_track_notion_update(
-                        track_data["page_id"], 
-                        track_data, 
-                        {},  # No file paths for Spotify tracks
-                        None  # No Eagle ID
-                    )
-                
-                workspace_logger.record_processed()
-                workspace_logger.info(f"✅ Successfully processed Spotify track: {title}")
-                return True
-                
-            except Exception as e:
-                workspace_logger.error(f"❌ Failed to process Spotify track: {e}")
-                workspace_logger.record_failed()
-                return False
+            playlist_dir = OUT_DIR / playlist_name
+
+            # Use the centralized multi-platform search function
+            # Priority: 1. SoundCloud (search) -> 2. YouTube (from Notion) -> 3. YouTube (search) -> 4. Spotify enrichment
+            download_url, download_source = find_audio_source_for_track(
+                artist=artist,
+                title=title,
+                track_data=track_data
+            )
+
+            # Update Notion with the found URL
+            if download_url and track_data.get('page_id'):
+                try:
+                    if 'soundcloud.com' in download_url:
+                        sc_prop = _resolve_prop_name("SoundCloud URL") or "SoundCloud URL"
+                        notion_manager.update_page(track_data['page_id'], {sc_prop: {"url": download_url}})
+                        workspace_logger.info(f"📝 Updated Notion with SoundCloud URL")
+                    elif 'youtube.com' in download_url or 'youtu.be' in download_url:
+                        update_notion_download_source(track_data['page_id'], download_source, download_url)
+                except Exception as e:
+                    workspace_logger.warning(f"⚠️  Failed to update Notion with found URL: {e}")
+
+            # If we found a download URL, use the FULL download_track workflow
+            if download_url:
+                workspace_logger.info(f"🔄 Running FULL download workflow via {download_source}...")
+                workspace_logger.info(f"   URL: {download_url}")
+
+                # Use the full download_track function with the found URL (SoundCloud or YouTube)
+                # This includes all processing: download, conversion, fingerprinting, Eagle import, etc.
+                result = download_track(
+                    url=download_url,
+                    playlist_dir=playlist_dir,
+                    track_info=track_data,
+                    playlist_name=playlist_name
+                )
+
+                if result:
+                    workspace_logger.info(f"✅ Spotify track fully processed via {download_source}!")
+
+                    # CRITICAL FIX: Update track_data page_id if de-dupe changed it
+                    if result.get("page_id") and result["page_id"] != track_data.get("page_id"):
+                        old_pid = track_data.get("page_id")
+                        track_data["page_id"] = result["page_id"]
+                        workspace_logger.info(f"🔄 De-dupe: Updated track_data page_id from {old_pid} to {track_data['page_id']}")
+
+                    # Complete Notion update with file paths
+                    file_paths = {
+                        "m4a": result.get("m4a_path") or result.get("file"),
+                        "aiff": result.get("aiff_path"),
+                        "wav": result.get("wav_path"),
+                    }
+                    eagle_id = result.get("eagle_item_id")
+
+                    if track_data.get("page_id"):
+                        complete_track_notion_update(
+                            track_data["page_id"],
+                            track_data,
+                            file_paths,
+                            eagle_id
+                        )
+
+                    workspace_logger.record_processed()
+                    return True
+                else:
+                    workspace_logger.warning(f"⚠️  Download workflow failed for Spotify track via {download_source}: {title}")
+                    workspace_logger.record_failed()
+                    return False
+            else:
+                # No audio source found - update metadata only, do NOT mark as downloaded
+                workspace_logger.warning(f"⚠️  No audio source found (SoundCloud or YouTube) for Spotify track: {title}")
+                workspace_logger.info(f"📋 Updating metadata only - track will remain in download queue")
+                try:
+                    update_track_metadata(track_data)
+                    workspace_logger.info(f"📋 Spotify track metadata enriched - NOT marking as downloaded (no audio source)")
+                    # Return False so track stays in queue for future attempts
+                    workspace_logger.record_failed()
+                    return False
+                except Exception as e:
+                    workspace_logger.error(f"❌ Failed to update Spotify track metadata: {e}")
+                    workspace_logger.record_failed()
+                    return False
         else:
             # Regular SoundCloud track processing
             # Get playlist names from track relations
@@ -6190,14 +7581,34 @@ def process_track(track_page: Dict[str, Any]) -> bool:
             else:
                 playlist_name = "Unassigned"  # Default for tracks without playlists
             playlist_dir = OUT_DIR / playlist_name
-            
-            result = download_track(
-                track_data["soundcloud_url"],
-                playlist_dir,
-                track_data,
-                playlist_name
-            )
+
+            # 🔧 CRITICAL FIX: Check if files exist locally but need Eagle import
+            # This handles the case where files were downloaded but not imported to Eagle
+            local_file_for_eagle = check_existing_local_files_for_eagle_import(track_data)
+            if local_file_for_eagle:
+                workspace_logger.info(f"🔄 LOCAL FILE FOUND - IMPORTING TO EAGLE (skipping download)")
+                result = import_existing_local_file_to_eagle(
+                    file_path=local_file_for_eagle,
+                    track_data=track_data,
+                    playlist_name=playlist_name
+                )
+                if result:
+                    result["local_import"] = True
+            else:
+                # Normal download flow - use validated soundcloud_url variable
+                result = download_track(
+                    soundcloud_url,
+                    playlist_dir,
+                    track_data,
+                    playlist_name
+                )
         
+        # CRITICAL FIX: Update track_data page_id if de-dupe changed it
+        if result and result.get("page_id") and result["page_id"] != track_data.get("page_id"):
+            old_pid = track_data.get("page_id")
+            track_data["page_id"] = result["page_id"]
+            workspace_logger.info(f"🔄 De-dupe: Updated track_data page_id from {old_pid} to {track_data['page_id']}")
+
         if result:
             # 🔧 CRITICAL FIX: Handle duplicate case - still update Notion with Eagle File ID
             if result.get("duplicate_found"):
@@ -6210,9 +7621,17 @@ def process_track(track_page: Dict[str, Any]) -> bool:
                         workspace_logger.info(f"✅ Updated Notion with existing Eagle File ID: {eagle_id}")
                     except Exception as e:
                         workspace_logger.warning(f"⚠️  Failed to update Notion with Eagle File ID: {e}")
-                
+
                 workspace_logger.record_processed()
                 workspace_logger.info(f"✅ Successfully processed (duplicate): {title}")
+                return True
+            elif result.get("local_import"):
+                # Local file was imported to Eagle (no download needed)
+                workspace_logger.info(f"🦅 LOCAL IMPORT COMPLETE: {title}")
+                workspace_logger.info(f"   Eagle ID: {result.get('eagle_item_id')}")
+                workspace_logger.info(f"   Fingerprint: {result.get('fingerprint', 'N/A')[:32] if result.get('fingerprint') else 'N/A'}...")
+                workspace_logger.record_processed()
+                workspace_logger.info(f"✅ Successfully imported local file to Eagle: {title}")
                 return True
             else:
                 # Normal processing completed
@@ -6326,9 +7745,7 @@ def try_youtube_download(
             workspace_logger.error(f"❌ YouTube metadata extraction failed: {exc}")
             if os.path.exists(custom_temp_dir):
                 import shutil
-                import shutil
-                import shutil
-            shutil.rmtree(custom_temp_dir)
+                shutil.rmtree(custom_temp_dir)
             return None
         
         # Download audio
@@ -6388,83 +7805,203 @@ def try_youtube_download(
         return None
 
 
+def search_soundcloud_for_track(artist: str, title: str) -> Optional[str]:
+    """
+    Search SoundCloud for a track by artist and title.
+    Returns the first matching track URL.
+
+    Uses multiple search strategies:
+    1. Artist + Title (exact)
+    2. Title only (if artist+title fails)
+    3. Cleaned title (remove parentheses/brackets)
+
+    Args:
+        artist: Artist name
+        title: Track title
+
+    Returns:
+        SoundCloud URL if found, None otherwise
+    """
+    workspace_logger.info(f"🔍 Searching SoundCloud for: {artist} - {title}")
+
+    ydl_opts = {
+        "quiet": True,
+        "no_warnings": True,
+        "extract_flat": True,
+    }
+
+    # Build list of search queries to try (in order of preference)
+    search_queries = []
+
+    # 1. Artist + Title
+    search_queries.append(f"{artist} {title}")
+
+    # 2. Title only (sometimes artist name causes issues)
+    if artist and artist.lower() not in title.lower():
+        search_queries.append(title)
+
+    # 3. Clean title (remove featuring, remix info in parentheses)
+    clean_title = re.sub(r'\s*[\(\[].*?[\)\]]', '', title).strip()
+    if clean_title != title:
+        search_queries.append(f"{artist} {clean_title}")
+        search_queries.append(clean_title)
+
+    # 4. First artist only (for multi-artist tracks like "Artist1, Artist2, Artist3")
+    if ',' in artist:
+        first_artist = artist.split(',')[0].strip()
+        search_queries.append(f"{first_artist} {title}")
+
+    for query in search_queries:
+        try:
+            # Use scsearch5 for more results
+            search_query = f"scsearch5:{query}"
+            workspace_logger.debug(f"   Trying SoundCloud search: '{query}'")
+
+            with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+                result = ydl.extract_info(search_query, download=False)
+
+                if result and result.get('entries'):
+                    for entry in result['entries']:
+                        # FIX: Prefer webpage_url over url to avoid API URLs
+                        # API URLs look like: api.soundcloud.com/tracks/soundcloud%3Atracks%3A...
+                        # Webpage URLs look like: soundcloud.com/artist/track
+                        url = entry.get('webpage_url') or entry.get('url')
+
+                        # Skip malformed API URLs that don't contain artist/track info
+                        if url and 'api.soundcloud.com' in url:
+                            workspace_logger.debug(f"   Skipping API URL (no artist info): {url}")
+                            continue
+
+                        if url and 'soundcloud.com' in url:
+                            workspace_logger.info(f"✅ Found SoundCloud track: {url}")
+                            workspace_logger.info(f"   Search query used: '{query}'")
+                            return url
+
+        except Exception as exc:
+            workspace_logger.debug(f"   SoundCloud search failed for '{query}': {exc}")
+            continue
+
+    workspace_logger.warning(f"⚠️  No SoundCloud results found after {len(search_queries)} search attempts")
+    return None
+
+
 def search_youtube_for_track(artist: str, title: str) -> Optional[str]:
     """
     Search YouTube for a track by artist and title.
     Returns the first matching video URL.
-    
+
+    Uses multiple search strategies:
+    1. Artist + Title + "official audio"
+    2. Artist + Title (without suffix)
+    3. Title only
+    4. Cleaned title variations
+
     Args:
         artist: Artist name
         title: Track title
-        
+
     Returns:
         YouTube URL if found, None otherwise
-        
+
     Note:
-        Requires YOUTUBE_API_KEY environment variable for Google API.
-        If not available, attempts yt-dlp search as fallback.
+        Uses yt-dlp search. YouTube API is optional but preferred if available.
     """
     workspace_logger.info(f"🔍 Searching YouTube for: {artist} - {title}")
-    
-    # Try YouTube Data API v3 first (more reliable)
+
+    # Build list of search queries to try (in order of preference)
+    search_queries = []
+
+    # 1. Artist + Title + official audio (most specific)
+    search_queries.append(f"{artist} {title} official audio")
+
+    # 2. Artist + Title (without suffix - catches more results)
+    search_queries.append(f"{artist} {title}")
+
+    # 3. Artist + Title + audio (alternative suffix)
+    search_queries.append(f"{artist} {title} audio")
+
+    # 4. Title only (sometimes artist name causes issues)
+    if artist and artist.lower() not in title.lower():
+        search_queries.append(f"{title} official audio")
+        search_queries.append(title)
+
+    # 5. Clean title (remove featuring, remix info in parentheses)
+    clean_title = re.sub(r'\s*[\(\[].*?[\)\]]', '', title).strip()
+    if clean_title != title:
+        search_queries.append(f"{artist} {clean_title}")
+        search_queries.append(clean_title)
+
+    # 6. First artist only (for multi-artist tracks)
+    if ',' in artist:
+        first_artist = artist.split(',')[0].strip()
+        search_queries.append(f"{first_artist} {title}")
+
+    # Try YouTube Data API v3 first (more reliable, if available)
     youtube_api_key = os.getenv('YOUTUBE_API_KEY')
-    
+
     if youtube_api_key:
         try:
             from googleapiclient.discovery import build
-            
+
             youtube = build('youtube', 'v3', developerKey=youtube_api_key)
-            
-            search_query = f"{artist} {title} official audio"
-            request = youtube.search().list(
-                part='snippet',
-                q=search_query,
-                type='video',
-                maxResults=3,
-                videoCategoryId='10'  # Music category
-            )
-            response = request.execute()
-            
-            if response.get('items'):
-                video_id = response['items'][0]['id']['videoId']
-                youtube_url = f"https://www.youtube.com/watch?v={video_id}"
-                workspace_logger.info(f"✅ Found YouTube video: {youtube_url}")
-                return youtube_url
-            else:
-                workspace_logger.warning(f"⚠️  No YouTube results found via API")
-                
+
+            for query in search_queries[:3]:  # Try first 3 queries with API
+                try:
+                    workspace_logger.debug(f"   Trying YouTube API search: '{query}'")
+                    request = youtube.search().list(
+                        part='snippet',
+                        q=query,
+                        type='video',
+                        maxResults=5,
+                        videoCategoryId='10'  # Music category
+                    )
+                    response = request.execute()
+
+                    if response.get('items'):
+                        video_id = response['items'][0]['id']['videoId']
+                        youtube_url = f"https://www.youtube.com/watch?v={video_id}"
+                        workspace_logger.info(f"✅ Found YouTube video via API: {youtube_url}")
+                        workspace_logger.info(f"   Search query used: '{query}'")
+                        return youtube_url
+                except Exception as api_exc:
+                    workspace_logger.debug(f"   YouTube API search failed for '{query}': {api_exc}")
+                    continue
+
         except ImportError:
-            workspace_logger.warning(f"⚠️  google-api-python-client not installed, using fallback search")
+            workspace_logger.debug(f"ℹ️  google-api-python-client not installed, using yt-dlp search")
         except Exception as exc:
-            workspace_logger.warning(f"⚠️  YouTube API search failed: {exc}")
-    else:
-        workspace_logger.debug(f"ℹ️  No YOUTUBE_API_KEY configured, skipping API search")
-    
-    # Fallback: Use yt-dlp search (less reliable but doesn't require API key)
-    try:
-        search_query = f"ytsearch1:{artist} {title} official audio"
-        
-        ydl_opts = {
-            "quiet": True,
-            "no_warnings": True,
-            "extract_flat": True,
-        }
-        
-        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            result = ydl.extract_info(search_query, download=False)
-            
-            if result and result.get('entries'):
-                video_id = result['entries'][0].get('id')
-                if video_id:
-                    youtube_url = f"https://www.youtube.com/watch?v={video_id}"
-                    workspace_logger.info(f"✅ Found YouTube video via yt-dlp: {youtube_url}")
-                    return youtube_url
-        
-        workspace_logger.warning(f"⚠️  No YouTube results found via yt-dlp search")
-        
-    except Exception as exc:
-        workspace_logger.error(f"❌ YouTube search fallback failed: {exc}")
-    
+            workspace_logger.debug(f"ℹ️  YouTube API unavailable: {exc}")
+
+    # Fallback: Use yt-dlp search (works without API key)
+    ydl_opts = {
+        "quiet": True,
+        "no_warnings": True,
+        "extract_flat": True,
+    }
+
+    for query in search_queries:
+        try:
+            # Use ytsearch3 for more results per query
+            search_query = f"ytsearch3:{query}"
+            workspace_logger.debug(f"   Trying yt-dlp search: '{query}'")
+
+            with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+                result = ydl.extract_info(search_query, download=False)
+
+                if result and result.get('entries'):
+                    for entry in result['entries']:
+                        video_id = entry.get('id')
+                        if video_id:
+                            youtube_url = f"https://www.youtube.com/watch?v={video_id}"
+                            workspace_logger.info(f"✅ Found YouTube video via yt-dlp: {youtube_url}")
+                            workspace_logger.info(f"   Search query used: '{query}'")
+                            return youtube_url
+
+        except Exception as exc:
+            workspace_logger.debug(f"   yt-dlp search failed for '{query}': {exc}")
+            continue
+
+    workspace_logger.warning(f"⚠️  No YouTube results found after {len(search_queries)} search attempts")
     return None
 
 
@@ -6506,18 +8043,408 @@ def update_notion_download_source(page_id: str, source: str, youtube_url: Option
             "Download Source": source,
             "Fallback Used": source != "SoundCloud"
         }
-        
+
         if youtube_url:
             updates["YouTube URL"] = youtube_url
-        
+
         workspace_logger.info(f"📝 Updating Notion with download source: {source}")
-        
-        # Note: Actual Notion update would happen here
-        # This would integrate with existing update_notion_page function
-        workspace_logger.debug(f"   Updates: {updates}")
+        prop_types = _get_tracks_db_prop_types()
+        payload = {}
+
+        for key, value in updates.items():
+            prop_name = _resolve_prop_name(key) or key
+            prop_type = prop_types.get(prop_name)
+            if not prop_type:
+                continue
+            if prop_type == "select":
+                payload[prop_name] = {"select": {"name": str(value)}}
+            elif prop_type == "checkbox":
+                payload[prop_name] = {"checkbox": bool(value)}
+            elif prop_type == "rich_text":
+                payload[prop_name] = {"rich_text": [{"text": {"content": str(value)}}]}
+            elif prop_type == "url":
+                payload[prop_name] = {"url": str(value)}
+            elif prop_type == "title":
+                payload[prop_name] = {"title": [{"text": {"content": str(value)}}]}
+
+        if youtube_url:
+            yt_prop = _resolve_prop_name("YouTube URL") or "YouTube URL"
+            yt_type = prop_types.get(yt_prop)
+            if yt_type == "url":
+                payload[yt_prop] = {"url": youtube_url}
+            elif yt_type == "rich_text":
+                payload[yt_prop] = {"rich_text": [{"text": {"content": youtube_url}}]}
+
+        if "soundcloud.com" in (youtube_url or ""):
+            sc_prop = _resolve_prop_name("SoundCloud URL") or "SoundCloud URL"
+            sc_type = prop_types.get(sc_prop)
+            if sc_type == "url":
+                payload[sc_prop] = {"url": youtube_url}
+            elif sc_type == "rich_text":
+                payload[sc_prop] = {"rich_text": [{"text": {"content": youtube_url}}]}
+
+        if payload:
+            notion_manager.update_page(page_id, payload)
+            workspace_logger.debug(f"   Updated properties: {list(payload.keys())}")
+        else:
+            workspace_logger.debug(f"   No matching Notion properties for download source update")
         
     except Exception as exc:
         workspace_logger.error(f"❌ Failed to update Notion download source: {exc}")
+
+
+# ═══════════════════════════════════════════════════════════════
+# REUSABLE MULTI-PLATFORM AUDIO SOURCE SEARCH
+# ═══════════════════════════════════════════════════════════════
+
+# Maximum track duration in seconds before flagging as potential mix/live set
+MAX_TRACK_DURATION_SECONDS = 660  # 11 minutes
+
+
+def find_audio_source_for_track(
+    artist: str,
+    title: str,
+    track_data: Optional[dict] = None,
+    exclude_urls: Optional[List[str]] = None,
+    prefer_short_duration: bool = False
+) -> Tuple[Optional[str], Optional[str]]:
+    """
+    Comprehensive multi-platform search to find audio source for a track.
+
+    Searches across platforms in priority order:
+    1. SoundCloud (preferred for audio quality)
+    2. YouTube from Notion (if available)
+    3. YouTube search
+    4. Spotify metadata enrichment + retry searches
+
+    Args:
+        artist: Artist name
+        title: Track title
+        track_data: Optional track data dict from Notion (for YouTube URL lookup)
+        exclude_urls: Optional list of URLs to skip (e.g., previously failed URLs)
+        prefer_short_duration: If True, prefer results with shorter duration (to avoid mixes)
+
+    Returns:
+        Tuple of (download_url, source_name) or (None, None) if not found
+    """
+    workspace_logger.info(f"🔍 MULTI-PLATFORM SEARCH: {artist} - {title}")
+    exclude_urls = exclude_urls or []
+
+    # Step 1: Search SoundCloud
+    workspace_logger.info(f"   Step 1: Searching SoundCloud...")
+    sc_url = search_soundcloud_for_track(artist, title)
+    if sc_url and sc_url not in exclude_urls:
+        # If prefer_short_duration, validate the track isn't a mix
+        if prefer_short_duration:
+            duration = get_track_duration_from_url(sc_url)
+            if duration and duration > MAX_TRACK_DURATION_SECONDS:
+                workspace_logger.warning(f"   ⚠️  SoundCloud result appears to be a mix ({duration}s), skipping...")
+            else:
+                workspace_logger.info(f"   ✅ Found on SoundCloud: {sc_url}")
+                return sc_url, "SoundCloud (Search)"
+        else:
+            workspace_logger.info(f"   ✅ Found on SoundCloud: {sc_url}")
+            return sc_url, "SoundCloud (Search)"
+
+    # Step 2: Check for YouTube URL in Notion
+    if track_data:
+        workspace_logger.info(f"   Step 2: Checking Notion for YouTube URL...")
+        yt_url = get_youtube_url_from_notion(track_data)
+        if yt_url and yt_url not in exclude_urls:
+            if prefer_short_duration:
+                duration = get_track_duration_from_url(yt_url)
+                if duration and duration > MAX_TRACK_DURATION_SECONDS:
+                    workspace_logger.warning(f"   ⚠️  YouTube URL appears to be a mix ({duration}s), skipping...")
+                else:
+                    workspace_logger.info(f"   ✅ Found YouTube in Notion: {yt_url}")
+                    return yt_url, "YouTube (Notion)"
+            else:
+                workspace_logger.info(f"   ✅ Found YouTube in Notion: {yt_url}")
+                return yt_url, "YouTube (Notion)"
+
+    # Step 3: Search YouTube
+    workspace_logger.info(f"   Step 3: Searching YouTube...")
+    yt_url = search_youtube_for_track(artist, title)
+    if yt_url and yt_url not in exclude_urls:
+        if prefer_short_duration:
+            duration = get_track_duration_from_url(yt_url)
+            if duration and duration > MAX_TRACK_DURATION_SECONDS:
+                workspace_logger.warning(f"   ⚠️  YouTube result appears to be a mix ({duration}s), skipping...")
+            else:
+                workspace_logger.info(f"   ✅ Found on YouTube: {yt_url}")
+                return yt_url, "YouTube (Search)"
+        else:
+            workspace_logger.info(f"   ✅ Found on YouTube: {yt_url}")
+            return yt_url, "YouTube (Search)"
+
+    # Step 4: Try Spotify enrichment and retry
+    if track_data:
+        workspace_logger.info(f"   Step 4: Trying Spotify enrichment...")
+        enriched_data = enrich_spotify_metadata(track_data.copy())
+        if enriched_data.get("spotify_id"):
+            enriched_artist = enriched_data.get("artist", artist)
+            enriched_title = enriched_data.get("title", title)
+
+            if enriched_artist != artist or enriched_title != title:
+                workspace_logger.info(f"   📝 Enriched metadata: {enriched_artist} - {enriched_title}")
+
+                # Retry SoundCloud with enriched metadata
+                sc_url = search_soundcloud_for_track(enriched_artist, enriched_title)
+                if sc_url and sc_url not in exclude_urls:
+                    workspace_logger.info(f"   ✅ Found on SoundCloud (enriched): {sc_url}")
+                    return sc_url, "SoundCloud (Enriched)"
+
+                # Retry YouTube with enriched metadata
+                yt_url = search_youtube_for_track(enriched_artist, enriched_title)
+                if yt_url and yt_url not in exclude_urls:
+                    workspace_logger.info(f"   ✅ Found on YouTube (enriched): {yt_url}")
+                    return yt_url, "YouTube (Enriched)"
+
+    workspace_logger.warning(f"   ❌ No audio source found on any platform")
+    return None, None
+
+
+def get_track_duration_from_url(url: str) -> Optional[int]:
+    """
+    Get track duration from URL using yt-dlp without downloading.
+
+    Args:
+        url: Audio source URL (SoundCloud or YouTube)
+
+    Returns:
+        Duration in seconds, or None if unable to determine
+    """
+    try:
+        ydl_opts = {
+            "quiet": True,
+            "no_warnings": True,
+            "extract_flat": False,
+            "skip_download": True,
+        }
+
+        # Add SoundCloud auth header if it's a SoundCloud URL
+        if 'soundcloud.com' in url:
+            ydl_opts["http_headers"] = {"Authorization": SC_AUTH_HEADER}
+
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            info = ydl.extract_info(url, download=False)
+            duration = info.get('duration')
+            if duration:
+                return int(duration)
+    except Exception as exc:
+        workspace_logger.debug(f"   Could not get duration from URL: {exc}")
+
+    return None
+
+
+def _handle_404_fallback(
+    url: str,
+    track_info: dict,
+    playlist_dir: Path,
+    playlist_name: str,
+    max_retries: int,
+) -> Optional[dict]:
+    """
+    Attempt alternate audio sources after a SoundCloud 404.
+    Returns download result if successful, otherwise None.
+    """
+    if not track_info:
+        return None
+
+    attempted = track_info.setdefault("_fallback_exclude_urls", set())
+    if isinstance(attempted, list):
+        attempted = set(attempted)
+    attempted.add(url)
+    track_info["_fallback_exclude_urls"] = attempted
+
+    attempts = int(track_info.get("_fallback_attempts", 0))
+    if attempts >= 2:
+        return None
+    track_info["_fallback_attempts"] = attempts + 1
+
+    artist = track_info.get("artist") or track_info.get("notion_artist") or ""
+    title = track_info.get("title") or track_info.get("notion_title") or ""
+
+    if not artist or not title:
+        return None
+
+    download_url, download_source = find_audio_source_for_track(
+        artist=artist,
+        title=title,
+        track_data=track_info,
+        exclude_urls=list(attempted),
+        prefer_short_duration=True
+    )
+
+    if not download_url or download_url in attempted:
+        return None
+
+    if track_info.get("page_id"):
+        try:
+            if "soundcloud.com" in download_url:
+                sc_prop = _resolve_prop_name("SoundCloud URL") or "SoundCloud URL"
+                notion_manager.update_page(track_info["page_id"], {sc_prop: {"url": download_url}})
+                workspace_logger.info("📝 Updated Notion with fallback SoundCloud URL")
+            elif "youtube.com" in download_url or "youtu.be" in download_url:
+                update_notion_download_source(track_info["page_id"], download_source, download_url)
+        except Exception as exc:
+            workspace_logger.warning(f"⚠️  Failed to update Notion with fallback URL: {exc}")
+
+    workspace_logger.info(f"🔄 404 fallback: trying {download_source} → {download_url}")
+    attempted.add(download_url)
+    track_info["_fallback_exclude_urls"] = attempted
+
+    return download_track(
+        url=download_url,
+        playlist_dir=playlist_dir,
+        track_info=track_info,
+        playlist_name=playlist_name,
+        retry=0,
+        max_retries=max_retries
+    )
+
+
+def is_likely_mix_or_live_set(duration_seconds: int, title: str = "", artist: str = "") -> bool:
+    """
+    Determine if a track is likely a mix or live set based on duration and metadata.
+
+    Args:
+        duration_seconds: Track duration in seconds
+        title: Track title (for keyword detection)
+        artist: Artist name
+
+    Returns:
+        True if track appears to be a mix/live set, False otherwise
+    """
+    # Duration check: > 11 minutes is suspicious
+    if duration_seconds > MAX_TRACK_DURATION_SECONDS:
+        workspace_logger.info(f"🚨 DURATION CHECK: {duration_seconds}s exceeds {MAX_TRACK_DURATION_SECONDS}s limit")
+        return True
+
+    # Title keyword check for common mix/set indicators
+    title_lower = title.lower()
+    mix_keywords = [
+        'mix', 'set', 'live', 'dj set', 'dj mix', 'compilation',
+        'continuous', 'b2b', 'back to back', 'essential mix',
+        'radio show', 'podcast', 'episode', 'ep.', 'part 1', 'part 2',
+        'full album', 'album mix', 'mini mix', 'megamix'
+    ]
+
+    for keyword in mix_keywords:
+        if keyword in title_lower:
+            workspace_logger.info(f"🚨 TITLE KEYWORD CHECK: Found '{keyword}' in title")
+            return True
+
+    return False
+
+
+def remediate_erroneous_match(
+    track_data: dict,
+    failed_url: str,
+    actual_duration: int,
+    playlist_dir: Path,
+    playlist_name: str
+) -> Optional[dict]:
+    """
+    Remediation process when a downloaded track is detected as a mix/live set.
+
+    This function:
+    1. Logs the erroneous match
+    2. Adds the failed URL to exclusion list
+    3. Searches for the correct track with stricter criteria
+    4. Downloads and validates the new match
+
+    Args:
+        track_data: Original track data from Notion
+        failed_url: URL that returned a mix/live set
+        actual_duration: Duration of the erroneous download (in seconds)
+        playlist_dir: Directory to save files
+        playlist_name: Playlist name
+
+    Returns:
+        Download result dict if remediation successful, None otherwise
+    """
+    title = track_data.get("title", "Unknown")
+    artist = track_data.get("artist", "Unknown")
+    expected_duration = track_data.get("duration")  # From Spotify/Notion if available
+
+    workspace_logger.warning(f"\n{'='*80}")
+    workspace_logger.warning(f"🚨 ERRONEOUS MATCH DETECTED - INITIATING REMEDIATION")
+    workspace_logger.warning(f"{'='*80}")
+    workspace_logger.warning(f"   Track: {title} by {artist}")
+    workspace_logger.warning(f"   Failed URL: {failed_url}")
+    workspace_logger.warning(f"   Downloaded duration: {actual_duration}s ({actual_duration // 60}m {actual_duration % 60}s)")
+    if expected_duration:
+        workspace_logger.warning(f"   Expected duration: {expected_duration}s ({expected_duration // 60}m {expected_duration % 60}s)")
+    workspace_logger.warning(f"   Reason: Duration exceeds {MAX_TRACK_DURATION_SECONDS}s (11 minutes)")
+    workspace_logger.info(f"\n🔄 Searching for correct track with stricter criteria...")
+
+    # Search with the failed URL excluded and prefer_short_duration enabled
+    new_url, new_source = find_audio_source_for_track(
+        artist=artist,
+        title=title,
+        track_data=track_data,
+        exclude_urls=[failed_url],
+        prefer_short_duration=True
+    )
+
+    if not new_url:
+        workspace_logger.error(f"❌ REMEDIATION FAILED: No alternative audio source found")
+        workspace_logger.info(f"📋 Track will be flagged for manual review")
+
+        # Update Notion with remediation failure status
+        if track_data.get("page_id"):
+            try:
+                update_audio_processing_status(track_data["page_id"], ["Mix/Set Detected - Manual Review Required"])
+            except Exception:
+                pass
+
+        return None
+
+    workspace_logger.info(f"✅ Found alternative source via {new_source}: {new_url}")
+    workspace_logger.info(f"🔄 Downloading from alternative source...")
+
+    # Download from the new source (recursive call to download_track)
+    # Note: This will go through the same validation, preventing infinite loops
+    # because we exclude the failed URL
+    result = download_track(
+        url=new_url,
+        playlist_dir=playlist_dir,
+        track_info=track_data,
+        playlist_name=playlist_name,
+        retry=0,
+        max_retries=3  # Limit retries for remediation
+    )
+
+    if result:
+        workspace_logger.info(f"✅ REMEDIATION SUCCESSFUL!")
+        workspace_logger.info(f"   New source: {new_source}")
+        workspace_logger.info(f"   New URL: {new_url}")
+
+        # Update Notion with the corrected source
+        if track_data.get("page_id"):
+            try:
+                update_notion_download_source(track_data["page_id"], f"{new_source} (Remediated)", new_url if 'youtube' in new_url.lower() else None)
+
+                # Update SoundCloud URL if that's the new source
+                if 'soundcloud.com' in new_url:
+                    sc_prop = _resolve_prop_name("SoundCloud URL") or "SoundCloud URL"
+                    notion_manager.update_page(track_data["page_id"], {sc_prop: {"url": new_url}})
+            except Exception as e:
+                workspace_logger.warning(f"⚠️  Failed to update Notion with remediated source: {e}")
+
+        return result
+    else:
+        workspace_logger.error(f"❌ REMEDIATION DOWNLOAD FAILED")
+        workspace_logger.info(f"📋 Track will be flagged for manual review")
+
+        if track_data.get("page_id"):
+            try:
+                update_audio_processing_status(track_data["page_id"], ["Mix/Set Detected - Download Failed"])
+            except Exception:
+                pass
+
+        return None
 
 
 # ═══════════════════════════════════════════════════════════════
@@ -6744,15 +8671,23 @@ def download_track(
     title = track_info.get("title", "Unknown Track")
     artist = track_info.get("artist", "Unknown Artist")
     
+    # Extract all available metadata for accurate matching
+    duration = track_info.get("duration")
+    bpm = track_info.get("bpm")
+    key = track_info.get("key")
+
     workspace_logger.info(f"🔍 PRE-DOWNLOAD DUPLICATE CHECK: {title} by {artist}")
-    
+
     try:
-        # Check if this track already exists in Eagle
+        # Check if this track already exists in Eagle using all available metadata
         best_item, all_matches = eagle_find_best_matching_item(
-            filename=f"{title}.wav",  # Use title as filename for matching
+            filename=f"{title}.wav",
             fingerprint=track_info.get("fingerprint"),
             title=title,
-            artist=artist
+            artist=artist,
+            duration=float(duration) if duration else None,
+            bpm=int(bpm) if bpm else None,
+            key=key,
         )
         
         if best_item:
@@ -6771,7 +8706,8 @@ def download_track(
                     playlist_name = "Unassigned"
                 
                 # Generate tags using the same logic as for new items
-                tags = generate_eagle_tags(track_info, playlist_name)
+                processing_data = {"duration": 0, "bpm": 0, "key": "Unknown"}
+                tags = generate_comprehensive_tags(track_info, processing_data, "wav")
                 workspace_logger.info(f"🔄 Applying tag corrections to existing Eagle item: {best_item['id']}")
                 workspace_logger.info(f"   New tags: {tags}")
                 
@@ -6798,7 +8734,9 @@ def download_track(
                 "eagle_item_id": best_item['id'],
                 "duplicate_found": True,
                 "existing_item": best_item,
-                "tags_applied": True  # Indicate that tags were applied
+                "tags_applied": True,  # Indicate that tags were applied
+                # CRITICAL: Include page_id for caller to update their reference
+                "page_id": track_info.get("page_id"),
             }
         else:
             workspace_logger.info(f"✅ NO DUPLICATES FOUND: Proceeding with download and processing")
@@ -6897,6 +8835,15 @@ def download_track(
         msg = str(exc)
         workspace_logger.warning(f"yt-dlp metadata error ({url}): {msg}")
         if ("HTTP Error 404" in msg) or ("404: Not Found" in msg) or ("HTTPError 404" in msg):
+            fallback_result = _handle_404_fallback(
+                url=url,
+                track_info=track_info,
+                playlist_dir=playlist_dir,
+                playlist_name=playlist_name,
+                max_retries=max_retries,
+            )
+            if fallback_result:
+                return fallback_result
             workspace_logger.info("🔚 Permanent 404. Marking SC_404 and aborting retries for this track.")
             try:
                 update_audio_processing_status(track_info.get('page_id'), ['SC_404'])
@@ -6919,6 +8866,15 @@ def download_track(
             workspace_logger.warning(f"yt-dlp metadata error ({url}): {exc} – will retry.")
             # Check for 404 errors and abort retries
             if 'HTTP Error 404' in str(exc) or '404: Not Found' in str(exc):
+                fallback_result = _handle_404_fallback(
+                    url=url,
+                    track_info=track_info,
+                    playlist_dir=playlist_dir,
+                    playlist_name=playlist_name,
+                    max_retries=max_retries,
+                )
+                if fallback_result:
+                    return fallback_result
                 workspace_logger.info('🔚 Permanent 404. Marking SC_404 and aborting retries for this track.')
                 try:
                     update_audio_processing_status(track_info.get('page_id'), ['SC_404'])
@@ -6944,14 +8900,8 @@ def download_track(
                     profiler.dump_stats('soundcloud_download_profile.prof')
             except Exception:
                 pass
-        # Clean up temp directory before returning
-        try:
-            if os.path.exists(custom_temp_dir):
-                import shutil
-                shutil.rmtree(custom_temp_dir)
-                workspace_logger.debug(f"✅ Cleaned up temp directory: {custom_temp_dir}")
-        except Exception as cleanup_exc:
-            workspace_logger.warning(f"⚠️  Failed to cleanup temp directory {custom_temp_dir}: {cleanup_exc}")
+        # Note: custom_temp_dir is not yet defined at this point (early error path)
+        # No cleanup needed - temp dir was never created
         return None
 
     # Artist resolution with detailed logging
@@ -6975,12 +8925,23 @@ def download_track(
             workspace_logger.info(f"   ✗ {source}: None/Empty")
 
     # Final artist selection
+    # FIX: Skip artist_from_url if it's None (from malformed URL) or a reserved path
+    RESERVED_ARTIST_VALUES = {'tracks', 'playlists', 'sets', 'albums', 'users', 'discover', 'search', 'stream'}
+    valid_artist_from_url = artist_from_url if (artist_from_url and artist_from_url.lower() not in RESERVED_ARTIST_VALUES) else None
+
     artist = (
         track_info.get("artist")
-        or artist_from_url
+        or valid_artist_from_url  # FIX: Use validated URL-parsed artist
         or info.get("uploader")
+        or info.get("artist")  # FIX: Also try yt-dlp artist field
+        or info.get("creator")  # FIX: Also try creator field
         or "Unknown Artist"
     ).strip()
+
+    # FIX: Final safety check - if we still got a reserved word, use Unknown Artist
+    if artist.lower() in RESERVED_ARTIST_VALUES:
+        workspace_logger.warning(f"   ⚠️  Artist '{artist}' is a reserved word - using fallback")
+        artist = info.get("uploader") or info.get("artist") or "Unknown Artist"
 
     workspace_logger.info(f"\n   🎯 FINAL ARTIST SELECTED: '{artist}'")
 
@@ -7200,7 +9161,60 @@ def download_track(
                     # Calculate duration
                     duration = int(librosa.get_duration(y=y, sr=sr))
                     workspace_logger.info(f"⏱️  Duration calculated: {duration} seconds")
-                    
+
+                    # ═══════════════════════════════════════════════════════════════
+                    # MIX/LIVE SET DETECTION - Check if downloaded track is too long
+                    # ═══════════════════════════════════════════════════════════════
+                    if duration > MAX_TRACK_DURATION_SECONDS:
+                        workspace_logger.warning(f"\n{'='*80}")
+                        workspace_logger.warning(f"🚨 MIX/LIVE SET DETECTED!")
+                        workspace_logger.warning(f"{'='*80}")
+                        workspace_logger.warning(f"   Duration: {duration}s ({duration // 60}m {duration % 60}s)")
+                        workspace_logger.warning(f"   Threshold: {MAX_TRACK_DURATION_SECONDS}s (11 minutes)")
+                        workspace_logger.warning(f"   URL: {url}")
+
+                        # Clean up the downloaded WAV file (it's the wrong track)
+                        try:
+                            if wav_path_tmp.exists():
+                                os.remove(wav_path_tmp)
+                                workspace_logger.info(f"🗑️  Deleted erroneous download: {wav_path_tmp}")
+                        except Exception as cleanup_exc:
+                            workspace_logger.warning(f"⚠️  Failed to cleanup erroneous WAV: {cleanup_exc}")
+
+                        # Clean up temp directory
+                        try:
+                            if os.path.exists(custom_temp_dir):
+                                import shutil
+                                shutil.rmtree(custom_temp_dir)
+                                workspace_logger.info(f"🗑️  Cleaned up temp directory: {custom_temp_dir}")
+                        except Exception as cleanup_exc:
+                            workspace_logger.warning(f"⚠️  Failed to cleanup temp dir: {cleanup_exc}")
+
+                        # Disable profiler before remediation
+                        if profiler:
+                            try:
+                                profiler.disable()
+                                profiler.close()
+                            except Exception:
+                                pass
+
+                        # Initiate remediation process to find the correct track
+                        workspace_logger.info(f"🔄 INITIATING REMEDIATION PROCESS...")
+                        remediation_result = remediate_erroneous_match(
+                            track_data=track_info,
+                            failed_url=url,
+                            actual_duration=duration,
+                            playlist_dir=playlist_dir,
+                            playlist_name=playlist_name
+                        )
+
+                        if remediation_result:
+                            workspace_logger.info(f"✅ Remediation successful - returning corrected result")
+                            return remediation_result
+                        else:
+                            workspace_logger.error(f"❌ Remediation failed - track requires manual review")
+                            return None
+
                     # Detect BPM with optimized method for long files
                     workspace_logger.info("🎵 Detecting BPM...")
                     workspace_logger.info("⏳ BPM analysis in progress...")
@@ -7239,7 +9253,7 @@ def download_track(
                     # Detect key
                     workspace_logger.info("🎼 Detecting musical key...")
                     workspace_logger.info("⏳ Key analysis in progress...")
-                    trad_key = detect_key(str(wav_path_tmp))
+                    trad_key = detect_key(str(wav_path_tmp), y=y, sr=sr)
                     workspace_logger.info(f"🎼 Key detected: {trad_key}")
                     
                     workspace_logger.info(f"🎵 ANALYSIS RESULTS: duration={duration}s, bpm={bpm}, key={trad_key}")
@@ -7594,7 +9608,15 @@ def download_track(
             }
             workspace_logger.info(f"📊 UPDATING NOTION WITH: BPM={bpm}, Key={trad_key}, Duration={duration}s")
             upsert_track_page(meta_dict, eagle_item_id)
-            
+
+            # CRITICAL FIX: After upsert_track_page, the page_id may have changed due to de-duplication
+            # The upsert function updates meta_dict["page_id"] to the keeper page if duplicates were found
+            # We must update track_info to use the new page_id for all subsequent operations
+            if meta_dict.get("page_id") and meta_dict["page_id"] != track_info.get("page_id"):
+                old_page_id = track_info.get("page_id")
+                track_info["page_id"] = meta_dict["page_id"]
+                workspace_logger.info(f"🔄 De-dupe detected: Updated track_info page_id from {old_page_id} to {track_info['page_id']}")
+
             # Processing completion is handled by the comprehensive status function
             # No need for additional "Audio Processing Complete" status
             
@@ -7608,9 +9630,11 @@ def download_track(
                 "key": trad_key,
                 "quality_score": 95,  # Default quality score
                 "loudness_level": -14,  # Default loudness level
-                "warmth_level": 2.5  # Default warmth enhancement level
+                "warmth_level": 2.5,  # Default warmth enhancement level
+                "fingerprint": fingerprint,  # CRITICAL FIX 2026-01-15: Include fingerprint for update
+                "file_path": str(aiff_path or wav_backup_path or m4a_path or "")  # File path for format detection
             }
-            
+
             # Restore normalization_metrics if they exist
             if existing_normalization_metrics:
                 processing_data['normalization_metrics'] = existing_normalization_metrics
@@ -7723,6 +9747,8 @@ def download_track(
                 "M4A Backup": Path(m4a_backup_path),
                 "WAV": Path(wav_backup_path),
             },
+            # CRITICAL: Include the potentially updated page_id after de-duplication
+            "page_id": track_info.get("page_id"),
         }
     finally:
         # Clean up custom temp directory with enhanced logging
@@ -7843,15 +9869,23 @@ def update_track_metadata(track_data: Dict[str, Any]) -> bool:
                 "multi_select": [{"name": "Metadata Enriched"}]
             }
         
-        # Update any other metadata fields that might be enriched
+        # Update any other metadata fields that might be enriched (uses ALT_PROP_NAMES)
+        prop_types = _get_tracks_db_prop_types()
+
         if track_data.get("bpm"):
-            properties["AverageBpm"] = {"number": track_data["bpm"]}
-        
+            bpm_prop = _resolve_prop_name("BPM") or "Tempo"
+            if prop_types.get(bpm_prop) == "number":
+                properties[bpm_prop] = {"number": track_data["bpm"]}
+
         if track_data.get("key"):
-            properties["Key"] = {"rich_text": [{"text": {"content": track_data["key"]}}]}
-        
+            key_prop = _resolve_prop_name("Key") or "Key "
+            if prop_types.get(key_prop) == "rich_text":
+                properties[key_prop] = {"rich_text": [{"text": {"content": track_data["key"]}}]}
+
         if track_data.get("duration_seconds"):
-            properties["Duration (ms)"] = {"number": track_data["duration_seconds"] * 1000}
+            duration_prop = _resolve_prop_name("Duration (s)") or "Audio Duration (seconds)"
+            if prop_types.get(duration_prop) == "number":
+                properties[duration_prop] = {"number": track_data["duration_seconds"]}
         
         # Apply the updates
         if properties:
@@ -7954,6 +9988,9 @@ def main():
     args = parse_args()
     if args.debug:
         logging.getLogger().setLevel(logging.DEBUG)
+
+    # Log active Eagle library (works with any library, no forced switch)
+    log_active_eagle_library()
 
     # Determine sorting behavior
     sort_by_created = not args.no_sort
