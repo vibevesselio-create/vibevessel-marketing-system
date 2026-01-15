@@ -3369,6 +3369,175 @@ def link_track_artist_relation(track_page_id: str, artist_name: str) -> bool:
 
     return link_track_to_artist(track_page_id, artist_page_id)
 
+# ───────────────────────────────────────────────────────────────
+# Playlist Relation Functions (2026-01-15 fix for missing relations)
+# ───────────────────────────────────────────────────────────────
+_PLAYLISTS_DB_ID = os.getenv("MUSIC_PLAYLISTS_DB_ID", "") or os.getenv("PLAYLISTS_DB_ID", "")
+_PLAYLIST_CACHE: Dict[str, Optional[str]] = {}  # Cache playlist name -> page_id
+
+def _get_playlists_db_prop_types() -> Dict[str, str]:
+    """Get property types for Playlists database."""
+    if not _PLAYLISTS_DB_ID:
+        return {}
+    try:
+        db_info = notion_manager._req("get", f"/databases/{_PLAYLISTS_DB_ID}")
+        return {name: prop.get("type", "") for name, prop in db_info.get("properties", {}).items()}
+    except Exception:
+        return {}
+
+def find_or_create_playlist_page(playlist_name: str, source: str = "SoundCloud") -> Optional[str]:
+    """
+    Find or create a playlist page by name and return its page ID.
+
+    Args:
+        playlist_name: The playlist name to search for or create
+        source: Source platform (SoundCloud, Spotify, etc.)
+
+    Returns:
+        The playlist page ID if found/created, None otherwise
+    """
+    if not playlist_name or not _PLAYLISTS_DB_ID:
+        return None
+
+    # Normalize playlist name
+    playlist_name = playlist_name.strip()
+    if not playlist_name:
+        return None
+
+    # Check cache first
+    cache_key = playlist_name.lower()
+    if cache_key in _PLAYLIST_CACHE:
+        return _PLAYLIST_CACHE[cache_key]
+
+    try:
+        # Search for existing playlist by name
+        query = {
+            "filter": {
+                "property": "Name",
+                "title": {"equals": playlist_name}
+            },
+            "page_size": 1
+        }
+
+        result = notion_manager.query_database(_PLAYLISTS_DB_ID, query)
+        if result and result.get("results"):
+            playlist_page_id = result["results"][0]["id"]
+            _PLAYLIST_CACHE[cache_key] = playlist_page_id
+            workspace_logger.debug(f"🎵 Found existing playlist: {playlist_name} -> {playlist_page_id}")
+            return playlist_page_id
+
+        # Create new playlist page if not found
+        playlist_properties = {
+            "Name": {"title": [{"text": {"content": playlist_name}}]},
+        }
+
+        # Add optional properties if they exist in the database
+        prop_types = _get_playlists_db_prop_types()
+        if "Source" in prop_types and prop_types["Source"] == "select":
+            playlist_properties["Source"] = {"select": {"name": source}}
+        if "Platform" in prop_types and prop_types["Platform"] == "select":
+            playlist_properties["Platform"] = {"select": {"name": source}}
+
+        payload = {"parent": {"database_id": _PLAYLISTS_DB_ID}, "properties": playlist_properties}
+        new_page = notion_manager._req("post", "/pages", payload)
+
+        if new_page and new_page.get("id"):
+            playlist_page_id = new_page["id"]
+            _PLAYLIST_CACHE[cache_key] = playlist_page_id
+            workspace_logger.info(f"🎵 Created new playlist page: {playlist_name} -> {playlist_page_id}")
+            return playlist_page_id
+
+    except Exception as exc:
+        workspace_logger.warning(f"⚠️ Failed to find/create playlist '{playlist_name}': {exc}")
+
+    _PLAYLIST_CACHE[cache_key] = None
+    return None
+
+def link_track_to_playlist(track_page_id: str, playlist_page_id: str) -> bool:
+    """
+    Link a track to a playlist using the Playlists relation property.
+
+    Args:
+        track_page_id: The track page ID
+        playlist_page_id: The playlist page ID to link
+
+    Returns:
+        True if successful, False otherwise
+    """
+    if not track_page_id or not playlist_page_id:
+        return False
+
+    try:
+        # Get current page to check existing relations
+        page = notion_manager._req("get", f"/pages/{track_page_id}")
+        if not page:
+            return False
+
+        # Check for Playlist relation property (may have different names)
+        props = page.get("properties", {})
+        playlist_prop_name = None
+        for name in ["Playlists", "Playlist", "Playlist Relation", "Related Playlists"]:
+            if name in props and props[name].get("type") == "relation":
+                playlist_prop_name = name
+                break
+
+        if not playlist_prop_name:
+            workspace_logger.debug("No Playlist relation property found on track page")
+            return False
+
+        # Get existing relations
+        relation_data = props.get(playlist_prop_name, {})
+        existing_relations = relation_data.get("relation", []) or []
+        existing_ids = [rel.get("id") for rel in existing_relations if rel.get("id")]
+
+        # Skip if already linked
+        if playlist_page_id in existing_ids:
+            return True
+
+        # Build updated relations list
+        updated_relations = [{"id": rid} for rid in existing_ids]
+        updated_relations.append({"id": playlist_page_id})
+
+        # Update the track page
+        payload = {
+            "properties": {
+                playlist_prop_name: {
+                    "relation": updated_relations
+                }
+            }
+        }
+
+        result = notion_manager._req("patch", f"/pages/{track_page_id}", payload)
+        if result:
+            workspace_logger.info(f"🔗 Linked track to playlist: {track_page_id} -> {playlist_page_id}")
+            return True
+
+    except Exception as exc:
+        workspace_logger.warning(f"⚠️ Failed to link track to playlist: {exc}")
+
+    return False
+
+def link_track_playlist_relation(track_page_id: str, playlist_name: str, source: str = "SoundCloud") -> bool:
+    """
+    High-level function to find/create playlist and link to track.
+
+    Args:
+        track_page_id: The track page ID
+        playlist_name: The playlist name
+        source: Source platform
+
+    Returns:
+        True if successful, False otherwise
+    """
+    if not track_page_id or not playlist_name or not _PLAYLISTS_DB_ID:
+        return False
+
+    playlist_page_id = find_or_create_playlist_page(playlist_name, source)
+    if not playlist_page_id:
+        return False
+
+    return link_track_to_playlist(track_page_id, playlist_page_id)
+
 def find_tracks_with_playlist_relations() -> List[Dict[str, Any]]:
     """Find tracks with playlist relations using dynamic property filters."""
     try:
@@ -3811,6 +3980,10 @@ def upsert_track_page(meta: dict, eagle_item_id: Optional[str] = None) -> str:
         # Link artist relation (2026-01-15 fix)
         if meta.get("artist"):
             link_track_artist_relation(meta["page_id"], meta["artist"])
+        # Link playlist relation (2026-01-15 fix)
+        playlist_name = meta.get("playlist_name") or meta.get("playlist")
+        if playlist_name and playlist_name not in ["No Playlist", "Unassigned", ""]:
+            link_track_playlist_relation(meta["page_id"], playlist_name)
         return meta["page_id"]
 
     # If no page_id provided, query by SoundCloud URL
@@ -3834,6 +4007,10 @@ def upsert_track_page(meta: dict, eagle_item_id: Optional[str] = None) -> str:
         # Link artist relation (2026-01-15 fix)
         if meta.get("artist"):
             link_track_artist_relation(page_id, meta["artist"])
+        # Link playlist relation (2026-01-15 fix)
+        playlist_name = meta.get("playlist_name") or meta.get("playlist")
+        if playlist_name and playlist_name not in ["No Playlist", "Unassigned", ""]:
+            link_track_playlist_relation(page_id, playlist_name)
         return page_id
     else:
         # Create new page (shouldn't happen in single-track mode)
@@ -3845,6 +4022,10 @@ def upsert_track_page(meta: dict, eagle_item_id: Optional[str] = None) -> str:
             # Link artist relation (2026-01-15 fix)
             if new_page_id and meta.get("artist"):
                 link_track_artist_relation(new_page_id, meta["artist"])
+            # Link playlist relation (2026-01-15 fix)
+            playlist_name = meta.get("playlist_name") or meta.get("playlist")
+            if new_page_id and playlist_name and playlist_name not in ["No Playlist", "Unassigned", ""]:
+                link_track_playlist_relation(new_page_id, playlist_name)
             return new_page_id
         except RuntimeError as exc:
             workspace_logger.warning(f"Could not create Notion page: {exc}")
@@ -9605,6 +9786,7 @@ def download_track(
                 "wav_file_path": str(wav_backup_path),
                 "page_id": track_info.get("page_id"),  # Include page_id for update
                 "audio_processing_status": audio_processing_status,  # Include audio processing status
+                "playlist_name": playlist_names[0] if playlist_names else None,  # 2026-01-15 fix: Include playlist for relation linking
             }
             workspace_logger.info(f"📊 UPDATING NOTION WITH: BPM={bpm}, Key={trad_key}, Duration={duration}s")
             upsert_track_page(meta_dict, eagle_item_id)
