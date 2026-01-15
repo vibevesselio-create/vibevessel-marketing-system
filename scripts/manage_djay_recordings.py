@@ -167,12 +167,15 @@ class RecordingManager:
         self.min_duration_for_review = min_duration_for_review
 
         self.recordings: List[RecordingFile] = []
+        self.duplicates: List[RecordingFile] = []  # Duplicate recordings to be cleaned up
         self.stats = {
             "total_scanned": 0,
             "renamed_good": 0,
             "generic_short": 0,
             "generic_long": 0,
             "already_processed": 0,
+            "duplicates_found": 0,
+            "duplicates_removed": 0,
             "imported_to_eagle": 0,
             "synced_to_notion": 0,
             "deleted": 0,
@@ -267,7 +270,97 @@ class RecordingManager:
                     self.stats["errors"] += 1
 
         workspace_logger.info(f"Scan complete: {self.stats['total_scanned']} files found")
+
+        # Detect and handle duplicates
+        self._detect_duplicates()
+
         return self.recordings
+
+    def _detect_duplicates(self):
+        """Detect duplicate recordings across directories, keep most recent copy."""
+        workspace_logger.info("Detecting duplicate recordings...")
+
+        # Group recordings by normalized filename (case-insensitive, ignoring path)
+        # Also group by filename + size for more accurate matching
+        by_name: Dict[str, List[RecordingFile]] = {}
+        by_name_size: Dict[Tuple[str, int], List[RecordingFile]] = {}
+
+        for recording in self.recordings:
+            # Skip generic recordings - they have unique timestamps
+            if recording.status in (RecordingStatus.GENERIC_SHORT, RecordingStatus.GENERIC_LONG):
+                continue
+
+            # Normalize filename for comparison
+            normalized_name = recording.filename.lower().strip()
+
+            # Group by name only
+            if normalized_name not in by_name:
+                by_name[normalized_name] = []
+            by_name[normalized_name].append(recording)
+
+            # Group by name + size for more precise matching
+            key = (normalized_name, recording.size_bytes)
+            if key not in by_name_size:
+                by_name_size[key] = []
+            by_name_size[key].append(recording)
+
+        # Find duplicates - prefer name+size match, fallback to name-only
+        duplicates_to_remove = set()
+
+        for key, recordings in by_name_size.items():
+            if len(recordings) > 1:
+                # Sort by modified time, most recent first
+                sorted_recs = sorted(recordings, key=lambda r: r.modified_time, reverse=True)
+                keeper = sorted_recs[0]
+
+                for dup in sorted_recs[1:]:
+                    if dup.path not in duplicates_to_remove:
+                        duplicates_to_remove.add(dup.path)
+                        self.duplicates.append(dup)
+                        self.stats["duplicates_found"] += 1
+                        if self.verbose:
+                            workspace_logger.info(
+                                f"[DUPLICATE] {dup.filename} in {dup.path.parent.name} "
+                                f"(keeping {keeper.path.parent.name} - more recent)"
+                            )
+
+        # Also check name-only matches with same duration (within 1 second tolerance)
+        for name, recordings in by_name.items():
+            if len(recordings) > 1:
+                # Filter to only those not already marked as duplicates
+                remaining = [r for r in recordings if r.path not in duplicates_to_remove]
+
+                if len(remaining) > 1:
+                    # Group by duration (with tolerance)
+                    duration_groups: Dict[int, List[RecordingFile]] = {}
+                    for rec in remaining:
+                        if rec.duration_seconds is not None:
+                            duration_key = int(rec.duration_seconds)  # Round to nearest second
+                            if duration_key not in duration_groups:
+                                duration_groups[duration_key] = []
+                            duration_groups[duration_key].append(rec)
+
+                    for dur_key, dur_recs in duration_groups.items():
+                        if len(dur_recs) > 1:
+                            # Same name, same duration = likely duplicate
+                            sorted_recs = sorted(dur_recs, key=lambda r: r.modified_time, reverse=True)
+                            keeper = sorted_recs[0]
+
+                            for dup in sorted_recs[1:]:
+                                if dup.path not in duplicates_to_remove:
+                                    duplicates_to_remove.add(dup.path)
+                                    self.duplicates.append(dup)
+                                    self.stats["duplicates_found"] += 1
+                                    if self.verbose:
+                                        workspace_logger.info(
+                                            f"[DUPLICATE] {dup.filename} ({dur_key}s) in {dup.path.parent.name} "
+                                            f"(keeping {keeper.path.parent.name})"
+                                        )
+
+        # Remove duplicates from main recordings list
+        self.recordings = [r for r in self.recordings if r.path not in duplicates_to_remove]
+
+        workspace_logger.info(f"Found {self.stats['duplicates_found']} duplicate recordings")
 
     def _classify_recording(self, recording: RecordingFile):
         """Classify a recording based on filename and duration."""
@@ -418,6 +511,14 @@ class RecordingManager:
         """Process all scanned recordings based on their classification."""
         workspace_logger.info("Processing recordings...")
 
+        # First, delete duplicate recordings
+        if self.duplicates:
+            workspace_logger.info(f"Removing {len(self.duplicates)} duplicate recordings...")
+            for dup in self.duplicates:
+                if self.delete_recording(dup):
+                    self.stats["duplicates_removed"] += 1
+
+        # Then process unique recordings
         for recording in self.recordings:
             if recording.status == RecordingStatus.RENAMED_GOOD:
                 # Import good recordings to Eagle and Notion
@@ -450,23 +551,37 @@ class RecordingManager:
             "SCAN RESULTS:",
             f"  Total files scanned: {self.stats['total_scanned']}",
             f"  Renamed (good) recordings: {self.stats['renamed_good']}",
+            f"  Duplicates detected: {self.stats['duplicates_found']}",
             f"  Generic short (< 1 min): {self.stats['generic_short']}",
             f"  Generic long (>= 1 min): {self.stats['generic_long']}",
             "",
             "ACTIONS TAKEN:",
             f"  Imported to Eagle: {self.stats['imported_to_eagle']}",
             f"  Synced to Notion: {self.stats['synced_to_notion']}",
-            f"  Deleted: {self.stats['deleted']}",
+            f"  Duplicates removed: {self.stats['duplicates_removed']}",
+            f"  Generic deleted: {self.stats['deleted'] - self.stats['duplicates_removed']}",
+            f"  Total deleted: {self.stats['deleted']}",
             f"  Errors: {self.stats['errors']}",
             "",
         ]
+
+        # List duplicates found
+        if self.duplicates:
+            lines.append("DUPLICATES DETECTED (older copies removed):")
+            for r in self.duplicates[:20]:  # Show first 20
+                lines.append(f"  - {r.filename} in {r.path.parent.name}")
+            if len(self.duplicates) > 20:
+                lines.append(f"  ... and {len(self.duplicates) - 20} more")
+            lines.append("")
 
         # List recordings requiring manual review
         review_needed = [r for r in self.recordings if r.status == RecordingStatus.GENERIC_LONG]
         if review_needed:
             lines.append("RECORDINGS REQUIRING MANUAL REVIEW:")
             for r in review_needed:
-                lines.append(f"  - {r.filename} ({r.duration_seconds:.1f}s)")
+                dur = f"({r.duration_seconds:.1f}s)" if r.duration_seconds else ""
+                lines.append(f"  - {r.filename} {dur}")
+            lines.append("")
 
         lines.append("=" * 80)
 
