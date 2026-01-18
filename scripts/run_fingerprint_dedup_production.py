@@ -1780,7 +1780,7 @@ Examples:
     is_dry_run = args.dry_run
     execute_mode = not is_dry_run  # Default is execute unless --dry-run specified
     dedup_dry_run = args.dedup_dry_run or is_dry_run  # dedup dry run if either flag
-    cleanup_enabled = cleanup_enabled and not args.no_cleanup and not is_dry_run
+    cleanup_enabled = args.cleanup and not args.no_cleanup and not is_dry_run
 
     # Handle scan-only mode
     if args.scan_only:
