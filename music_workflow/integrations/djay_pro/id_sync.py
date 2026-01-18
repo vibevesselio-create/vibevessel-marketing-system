@@ -56,13 +56,18 @@ class DjayProIdSync:
     def _sync_single_track(self, track, streaming=None) -> str:
         if not track.track_id:
             return "unmatched"
-        if self._find_by_djay_id(track.track_id):
+        existing = self._find_by_djay_id(track.track_id)
+        if existing:
+            # Track already has djay Pro ID - update metadata only
+            if not self.dry_run:
+                page_id = existing.get("id") if isinstance(existing, dict) else existing
+                self._update_djay_metadata(page_id, track)
             return "already_synced"
         match = self._find_match_without_djay_id(track, streaming)
         if not match:
             return "unmatched"
         if not self.dry_run:
-            self._update_djay_id(match.notion_page_id, track.track_id)
+            self._update_djay_id_and_metadata(match.notion_page_id, track.track_id, track)
         return "matched_and_updated"
 
     def _find_by_djay_id(self, djay_id):
@@ -89,8 +94,52 @@ class DjayProIdSync:
         # Fallback to fuzzy metadata matching
         return self._matcher._match_by_metadata(track)
 
-    def _update_djay_id(self, page_id, djay_id):
-        self.client.update_page(page_id, {"djay Pro ID": {"rich_text": [{"text": {"content": djay_id}}]}})
+    def _build_djay_metadata_properties(self, track) -> dict:
+        """Build Notion properties dict from djay Pro track metadata."""
+        properties = {}
+
+        # BPM - sync to Tempo property (number)
+        if track.bpm is not None:
+            properties["Tempo"] = {"number": track.bpm}
+
+        # Key - sync to Key property (rich_text) - note the trailing space in property name
+        if track.key:
+            properties["Key "] = {"rich_text": [{"text": {"content": track.key}}]}
+
+        # Play count - sync to Play Count (DJ) property (number)
+        if track.play_count is not None:
+            properties["Play Count (DJ)"] = {"number": track.play_count}
+
+        # Last played - sync to Last Played (DJ) property (date)
+        if track.last_played:
+            try:
+                from datetime import datetime
+                # Handle various date formats from djay Pro export
+                for fmt in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%d", "%Y%m%d_%H%M%S", "%Y-%m-%dT%H:%M:%S"):
+                    try:
+                        dt = datetime.strptime(track.last_played, fmt)
+                        properties["Last Played (DJ)"] = {"date": {"start": dt.isoformat()}}
+                        break
+                    except ValueError:
+                        continue
+            except Exception:
+                pass  # Skip if date parsing fails
+
+        return properties
+
+    def _update_djay_metadata(self, page_id, track):
+        """Update only metadata fields (for already-synced tracks)."""
+        properties = self._build_djay_metadata_properties(track)
+        if properties:
+            self.client.update_page(page_id, properties)
+
+    def _update_djay_id_and_metadata(self, page_id, djay_id, track):
+        """Update djay Pro ID and all available metadata."""
+        properties = {
+            "djay Pro ID": {"rich_text": [{"text": {"content": djay_id}}]}
+        }
+        properties.update(self._build_djay_metadata_properties(track))
+        self.client.update_page(page_id, properties)
 
 def sync_djay_pro_ids(export_dir=None, dry_run=False, similarity_threshold=0.85):
     if export_dir is None:
