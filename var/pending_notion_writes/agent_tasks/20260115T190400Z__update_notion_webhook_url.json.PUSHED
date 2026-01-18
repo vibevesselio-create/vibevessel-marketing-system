@@ -1,0 +1,24 @@
+{
+  "title": "Update Notion webhook subscription URL to Cloudflare endpoint",
+  "priority": "High",
+  "status": "Not Started",
+  "dependency_status": "Blocked",
+  "assigned_agents": ["Claude MM1"],
+  "review_handoff_to": ["Codex MM1"],
+  "objective": "Move Notion webhook subscriptions to https://webhook.vibevessel.space/webhook and verify delivery.",
+  "preflight": [
+    "Cloudflare tunnel is connected and health check returns 200",
+    "Webhook server logs visible"
+  ],
+  "steps": [
+    "Update Notion webhook subscription target URL",
+    "Complete verification challenge",
+    "Trigger a test event and confirm processing"
+  ],
+  "success_criteria": [
+    "Notion verification succeeds",
+    "Events appear in webhook server logs",
+    "No delivery errors reported by Notion"
+  ],
+  "created_at": "20260115T190400Z"
+}

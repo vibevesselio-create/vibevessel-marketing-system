@@ -1,0 +1,23 @@
+{
+  "title": "Update webhook server docs for Cloudflare + OAuth",
+  "priority": "Medium",
+  "status": "Not Started",
+  "dependency_status": "Ready",
+  "assigned_agents": ["Codex MM1"],
+  "review_handoff_to": ["Claude MM1"],
+  "objective": "Align Notion documentation and local docs with the Cloudflare endpoint and OAuth redirect URIs.",
+  "preflight": [
+    "Confirm canonical webhook URL",
+    "Confirm OAuth redirect URIs" 
+  ],
+  "steps": [
+    "Update Notion Webhook Server page",
+    "Update local runbooks and TECHNICAL_DOCUMENTATION.md references",
+    "Attach validation evidence"
+  ],
+  "success_criteria": [
+    "Docs reflect Cloudflare URL and OAuth redirects",
+    "Links and instructions are current"
+  ],
+  "created_at": "20260115T190800Z"
+}

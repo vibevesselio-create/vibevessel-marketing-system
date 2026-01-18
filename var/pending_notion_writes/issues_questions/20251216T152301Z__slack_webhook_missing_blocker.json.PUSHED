@@ -1,0 +1,17 @@
+{
+  "title": "BLOCKER: Slack notifications cannot be proven; SLACK_WEBHOOK_URL not set in LaunchAgent env",
+  "type": ["Internal Issue"],
+  "status": "Unreported",
+  "priority": "High",
+  "component": "Webhook Notification System",
+  "blocked": true,
+  "description": "Slack Incoming Webhook URL is not configured for the webhook notifier LaunchAgent. Slack notifier init fails (`Slack webhook URL required. Set SLACK_WEBHOOK_URL environment variable.`). Without the URL, Slack evidence for smoke-run-006 cannot be produced.",
+  "evidence": {
+    "startup_log": "Slack notifier initialization failed: Slack webhook URL required. Set SLACK_WEBHOOK_URL environment variable.",
+    "env_check": "SLACK_WEBHOOK_URL not present in LaunchAgent EnvironmentVariables"
+  },
+  "impact": "Notifier Evidence Gate blocked; Cloudflare verification cannot proceed until Slack proof exists",
+  "next_step": "Obtain/issue a Slack Incoming Webhook URL and set SLACK_WEBHOOK_URL in the LaunchAgent plist env; reload agent and validate HTTP 200 send.",
+  "owner": ["Claude MM1", "ChatGPT Strategic Agent", "Codex MM1"],
+  "created_at": "20251216T152301Z"
+}

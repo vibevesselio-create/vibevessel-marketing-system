@@ -1,0 +1,87 @@
+{
+  "playlist_url": "https://soundcloud.com/vibe-vessel/sets/copy-of-will-bday",
+  "playlist_name": "Copy of Will Bday",
+  "created_at": "2026-01-10T16:59:43.326008Z",
+  "processed": {
+    "https://soundcloud.com/crankdatmusic/candy-shop": {
+      "status": "skipped",
+      "page_id": "7b244ebb-0815-4d7b-986b-9f2fec288a84"
+    },
+    "https://soundcloud.com/kaiwachi/get-low-kai-wachi-flip": {
+      "status": "skipped",
+      "page_id": "6cbb5d66-5e69-410c-b791-e4c1bbb9ded0"
+    },
+    "https://soundcloud.com/crankdatmusic/crankdat-nghtmre-type-sht-feat-duke-deuce": {
+      "status": "skipped",
+      "page_id": "285e7361-6c27-813d-b9b9-c55bf1080c01"
+    },
+    "https://soundcloud.com/carter-webb-888199425/aap-ferg-shabba-ft-aap-rocky-carter-webb-flip": {
+      "status": "skipped",
+      "page_id": "202ca17d-194c-4bd9-872d-e402ccfccaad"
+    },
+    "https://soundcloud.com/user-35624898/get-to-you-mersiv-remix-x": {
+      "status": "skipped",
+      "page_id": "01d607f8-4a9a-4019-8e0e-ad83576943d2"
+    },
+    "https://soundcloud.com/prettysweet2/fuck-it-up-remix": {
+      "status": "skipped",
+      "page_id": "de831480-39b3-4191-ac1c-5a6129dc91cc"
+    },
+    "https://soundcloud.com/gr3dge/gredge-glorilla-1": {
+      "status": "skipped",
+      "page_id": "28df6fb8-3132-42d2-8190-9792e558aeb9"
+    },
+    "https://soundcloud.com/tape-b-official/lollipop-tape-b-flip": {
+      "status": "skipped",
+      "page_id": "1a01a516-094f-4fc8-b514-a23d15e7717a"
+    },
+    "https://soundcloud.com/alleycvt/so-damn-good": {
+      "status": "skipped",
+      "page_id": "dcece332-27e1-49a7-800d-25177a5f6d37"
+    },
+    "https://soundcloud.com/itsydg/dom-dolla-girl-ydg-remix": {
+      "status": "skipped",
+      "page_id": "9742cb37-ade8-47d1-860d-237d7fce5ae5"
+    },
+    "https://soundcloud.com/user-63968721/gas-pedal-costa-x-wolfie-remix": {
+      "status": "added",
+      "page_id": "2e4e7361-6c27-81ec-93bc-cd2ba650cce6"
+    },
+    "https://soundcloud.com/mochamusic11/mocha-music-cherub-doses-and-mimosas-flip-final-7252024-v2": {
+      "status": "skipped",
+      "page_id": "285e7361-6c27-819d-bc19-f32ed09decbe"
+    },
+    "https://soundcloud.com/capochinomusic/levity-flip-it-capochino-flip-lil-wayne-version": {
+      "status": "added",
+      "page_id": "2e4e7361-6c27-813a-a74c-e99cf055588a"
+    },
+    "https://soundcloud.com/levity_music/chanceremix": {
+      "status": "added",
+      "page_id": "2e4e7361-6c27-81df-8044-f3fc6d14a33c"
+    }
+  },
+  "stats": {
+    "tracks_added": 3,
+    "tracks_skipped": 11,
+    "tracks_updated": 0,
+    "errors": 0,
+    "track_ids": [
+      "7b244ebb-0815-4d7b-986b-9f2fec288a84",
+      "6cbb5d66-5e69-410c-b791-e4c1bbb9ded0",
+      "285e7361-6c27-813d-b9b9-c55bf1080c01",
+      "202ca17d-194c-4bd9-872d-e402ccfccaad",
+      "01d607f8-4a9a-4019-8e0e-ad83576943d2",
+      "de831480-39b3-4191-ac1c-5a6129dc91cc",
+      "28df6fb8-3132-42d2-8190-9792e558aeb9",
+      "1a01a516-094f-4fc8-b514-a23d15e7717a",
+      "dcece332-27e1-49a7-800d-25177a5f6d37",
+      "9742cb37-ade8-47d1-860d-237d7fce5ae5",
+      "2e4e7361-6c27-81ec-93bc-cd2ba650cce6",
+      "285e7361-6c27-819d-bc19-f32ed09decbe",
+      "2e4e7361-6c27-813a-a74c-e99cf055588a",
+      "2e4e7361-6c27-81df-8044-f3fc6d14a33c"
+    ],
+    "tracks_processed": 14,
+    "tracks_total": 14
+  }
+}

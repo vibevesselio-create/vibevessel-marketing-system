@@ -1,0 +1,300 @@
+{
+  "total_monitored": 5,
+  "total_compliant": 0,
+  "total_non_compliant": 5,
+  "compliance_rate": 0.0,
+  "agent_summary": {
+    "Unknown": {
+      "total": 5,
+      "compliant": 0
+    }
+  },
+  "records": [
+    {
+      "execution": {
+        "trigger_file": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/Claude-MM1-Agent/02_processed/20260107T065409__20260107T125403Z__HANDOFF__Plan-Resolution-for-Issue:-Project-Manager-Bot-GAS__2e1e7361.json",
+        "trigger_data": {
+          "title": "Plan Resolution for Issue: Project Manager Bot GAS Script — Critical Issues I",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Project Manager Bot GAS Script — Critical Issues Identified — Preflight Tests Not Implemented\n- **Issue ID:** 2e1e7361-6c27-8139-a70f-c0146748b669\n- **Issue URL:** https://www.notion.so/Project-Manager-Bot-GAS-Script-Critical-Issues-Identified-Preflight-Tests-Not-Implemented-2e1e73616c278139a70fc0146748b669\n- **Priority:** Critical\n- **Description:** CRITICAL ISSUES IDENTIFIED BY CLAUDE CODE AGENT (2026-01-07)\n\n**Script:** project-manager-bot (GAS)\n**Script ID:** 1-4dkJT2wYGYN6KqW5Gm5rmoCVmLNV0Q6pQKVYIfu8bPwyOT2FJ09C9oF\n**Version:** v2.4.0\n\n**ISSUE 1: Preflight Test Suite is PLACEHOLDER (CRITICAL)**\n- Location: Code.js lines 2550-2556\n- Function: preflightTestSuite_(cfg, logger)\n- Problem: Returns true without any actual tests\n- Impact: Script claims to run 8 comprehensive tests but none exist\n\n**ISSUE 2: NOTION_VERSION uses future date**\n- Location: Code.js line 62\n- Value: 2025-09-03\n- Expected: Valid API version for current production\n\n**REQUIRED ACTIONS:**\n1. Implement actual preflight tests for database validation\n2. Verify NOTION_VERSION is correct for production\n3. Add test coverage for critical functions\n\n**Handoff Created:** Cursor-MM1-Agent for implementation\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n...",
+          "priority": "Critical",
+          "target_agent": "Claude MM1 Agent",
+          "source_agent": "Auto/Cursor MM1 Agent",
+          "task_url": "https://www.notion.so/Plan-Resolution-for-Issue-Project-Manager-Bot-GAS-Script-Critical-Issues-I-2e1e73616c27810ea269e2905fcd15a1",
+          "task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+          "agent_task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+          "timestamp": "2026-01-07T12:54:03.940479+00:00",
+          "required_action": "Complete this task as specified in the description.",
+          "success_criteria": "Task completed, documented in Notion, and review handoff created back to Auto/Cursor MM1 Agent.",
+          "chain_tracking": {
+            "agent_task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+            "dedupe_key": "handoff_2e1e7361-6c27-810e-a269-e2905fcd15a1",
+            "source": "continuous_handoff_system"
+          },
+          "archive_rule": "move_to_02_processed",
+          "handoff_instructions": "Complete this task as specified. Upon completion, you MUST:\n1. **MOVE TRIGGER FILE (MANUAL)**: Call mark_trigger_file_processed() to move the trigger file from 01_inbox to 02_processed\n2. Update the task status in Notion to 'Complete'\n3. Create a review/validation handoff task back to Auto/Cursor MM1 Agent in the Agent-Tasks database\n4. Document all deliverables and artifacts in Notion\n5. Ensure all workspace requirements are met\n\n**MANDATORY:** Task is NOT complete until trigger file is moved and review handoff is created. The review handoff should be created in the Agent-Tasks database and assigned back to Auto/Cursor MM1 Agent for final validation."
+        },
+        "task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+        "agent_name": "Unknown",
+        "task_title": "Unknown",
+        "processed_time": "2026-01-07T12:54:03.941431+00:00",
+        "agent_folder": "Claude-MM1-Agent"
+      },
+      "original_task": {
+        "task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+        "task_url": "https://www.notion.so/Plan-Resolution-for-Issue-Project-Manager-Bot-GAS-Script-Critical-Issues-I-2e1e73616c27810ea269e2905fcd15a1",
+        "task_title": "Plan Resolution for Issue: Project Manager Bot GAS Script — Critical Issues I",
+        "task_status": "Ready",
+        "assigned_agent": [
+          {
+            "id": "fa54f05c-e184-403a-ac28-87dd8ce9855b"
+          }
+        ],
+        "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Project Manager Bot GAS Script — Critical Issues Identified — Preflight Tests Not Implemented\n- **Issue ID:** 2e1e7361-6c27-8139-a70f-c0146748b669\n- **Issue URL:** https://www.notion.so/Project-Manager-Bot-GAS-Script-Critical-Issues-Identified-Preflight-Tests-Not-Implemented-2e1e73616c278139a70fc0146748b669\n- **Priority:** Critical\n- **Description:** CRITICAL ISSUES IDENTIFIED BY CLAUDE CODE AGENT (2026-01-07)\n\n**Script:** project-manager-bot (GAS)\n**Script ID:** 1-4dkJT2wYGYN6KqW5Gm5rmoCVmLNV0Q6pQKVYIfu8bPwyOT2FJ09C9oF\n**Version:** v2.4.0\n\n**ISSUE 1: Preflight Test Suite is PLACEHOLDER (CRITICAL)**\n- Location: Code.js lines 2550-2556\n- Function: preflightTestSuite_(cfg, logger)\n- Problem: Returns true without any actual tests\n- Impact: Script claims to run 8 comprehensive tests but none exist\n\n**ISSUE 2: NOTION_VERSION uses future date**\n- Location: Code.js line 62\n- Value: 2025-09-03\n- Expected: Valid API version for current production\n\n**REQUIRED ACTIONS:**\n1. Implement actual preflight tests for database validation\n2. Verify NOTION_VERSION is correct for production\n3. Add test coverage for critical functions\n\n**Handoff Created:** Cursor-MM1-Agent for implementation\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n..."
+      },
+      "originating_agent": "Cursor MM1 Agent",
+      "executing_agent": "Unknown",
+      "return_handoff_task": null,
+      "return_trigger_file": null,
+      "chat_response_check": {
+        "chat_response_detected": false,
+        "inference": "Cannot programmatically detect direct chat responses. Check manually if return handoff missing.",
+        "requires_manual_review": true
+      },
+      "compliant": false,
+      "checked_at": "2026-01-07T12:55:09.600914+00:00",
+      "errors": [
+        "Return handoff Agent-Task not found in Notion",
+        "Return trigger file not found"
+      ]
+    },
+    {
+      "execution": {
+        "trigger_file": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/Claude-MM1-Agent/02_processed/20260107T065309__20260107T125251Z__HANDOFF__Plan-Resolution-for-Issue:-Project-Manager-Bot-GAS__2e1e7361.json",
+        "trigger_data": {
+          "title": "Plan Resolution for Issue: Project Manager Bot GAS Script — Critical Issues I",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Project Manager Bot GAS Script — Critical Issues Identified — Preflight Tests Not Implemented\n- **Issue ID:** 2e1e7361-6c27-8139-a70f-c0146748b669\n- **Issue URL:** https://www.notion.so/Project-Manager-Bot-GAS-Script-Critical-Issues-Identified-Preflight-Tests-Not-Implemented-2e1e73616c278139a70fc0146748b669\n- **Priority:** Critical\n- **Description:** CRITICAL ISSUES IDENTIFIED BY CLAUDE CODE AGENT (2026-01-07)\n\n**Script:** project-manager-bot (GAS)\n**Script ID:** 1-4dkJT2wYGYN6KqW5Gm5rmoCVmLNV0Q6pQKVYIfu8bPwyOT2FJ09C9oF\n**Version:** v2.4.0\n\n**ISSUE 1: Preflight Test Suite is PLACEHOLDER (CRITICAL)**\n- Location: Code.js lines 2550-2556\n- Function: preflightTestSuite_(cfg, logger)\n- Problem: Returns true without any actual tests\n- Impact: Script claims to run 8 comprehensive tests but none exist\n\n**ISSUE 2: NOTION_VERSION uses future date**\n- Location: Code.js line 62\n- Value: 2025-09-03\n- Expected: Valid API version for current production\n\n**REQUIRED ACTIONS:**\n1. Implement actual preflight tests for database validation\n2. Verify NOTION_VERSION is correct for production\n3. Add test coverage for critical functions\n\n**Handoff Created:** Cursor-MM1-Agent for implementation\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n...",
+          "priority": "Critical",
+          "target_agent": "Claude MM1 Agent",
+          "source_agent": "Auto/Cursor MM1 Agent",
+          "task_url": "https://www.notion.so/Plan-Resolution-for-Issue-Project-Manager-Bot-GAS-Script-Critical-Issues-I-2e1e73616c27810ea269e2905fcd15a1",
+          "task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+          "agent_task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+          "timestamp": "2026-01-07T12:52:51.567110+00:00",
+          "required_action": "Complete this task as specified in the description.",
+          "success_criteria": "Task completed, documented in Notion, and review handoff created back to Auto/Cursor MM1 Agent.",
+          "chain_tracking": {
+            "agent_task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+            "dedupe_key": "handoff_2e1e7361-6c27-810e-a269-e2905fcd15a1",
+            "source": "continuous_handoff_system"
+          },
+          "archive_rule": "move_to_02_processed",
+          "handoff_instructions": "Complete this task as specified. Upon completion, you MUST:\n1. **MOVE TRIGGER FILE (MANUAL)**: Call mark_trigger_file_processed() to move the trigger file from 01_inbox to 02_processed\n2. Update the task status in Notion to 'Complete'\n3. Create a review/validation handoff task back to Auto/Cursor MM1 Agent in the Agent-Tasks database\n4. Document all deliverables and artifacts in Notion\n5. Ensure all workspace requirements are met\n\n**MANDATORY:** Task is NOT complete until trigger file is moved and review handoff is created. The review handoff should be created in the Agent-Tasks database and assigned back to Auto/Cursor MM1 Agent for final validation."
+        },
+        "task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+        "agent_name": "Unknown",
+        "task_title": "Unknown",
+        "processed_time": "2026-01-07T12:52:51.567735+00:00",
+        "agent_folder": "Claude-MM1-Agent"
+      },
+      "original_task": {
+        "task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+        "task_url": "https://www.notion.so/Plan-Resolution-for-Issue-Project-Manager-Bot-GAS-Script-Critical-Issues-I-2e1e73616c27810ea269e2905fcd15a1",
+        "task_title": "Plan Resolution for Issue: Project Manager Bot GAS Script — Critical Issues I",
+        "task_status": "Ready",
+        "assigned_agent": [
+          {
+            "id": "fa54f05c-e184-403a-ac28-87dd8ce9855b"
+          }
+        ],
+        "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Project Manager Bot GAS Script — Critical Issues Identified — Preflight Tests Not Implemented\n- **Issue ID:** 2e1e7361-6c27-8139-a70f-c0146748b669\n- **Issue URL:** https://www.notion.so/Project-Manager-Bot-GAS-Script-Critical-Issues-Identified-Preflight-Tests-Not-Implemented-2e1e73616c278139a70fc0146748b669\n- **Priority:** Critical\n- **Description:** CRITICAL ISSUES IDENTIFIED BY CLAUDE CODE AGENT (2026-01-07)\n\n**Script:** project-manager-bot (GAS)\n**Script ID:** 1-4dkJT2wYGYN6KqW5Gm5rmoCVmLNV0Q6pQKVYIfu8bPwyOT2FJ09C9oF\n**Version:** v2.4.0\n\n**ISSUE 1: Preflight Test Suite is PLACEHOLDER (CRITICAL)**\n- Location: Code.js lines 2550-2556\n- Function: preflightTestSuite_(cfg, logger)\n- Problem: Returns true without any actual tests\n- Impact: Script claims to run 8 comprehensive tests but none exist\n\n**ISSUE 2: NOTION_VERSION uses future date**\n- Location: Code.js line 62\n- Value: 2025-09-03\n- Expected: Valid API version for current production\n\n**REQUIRED ACTIONS:**\n1. Implement actual preflight tests for database validation\n2. Verify NOTION_VERSION is correct for production\n3. Add test coverage for critical functions\n\n**Handoff Created:** Cursor-MM1-Agent for implementation\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n..."
+      },
+      "originating_agent": "Cursor MM1 Agent",
+      "executing_agent": "Unknown",
+      "return_handoff_task": null,
+      "return_trigger_file": null,
+      "chat_response_check": {
+        "chat_response_detected": false,
+        "inference": "Cannot programmatically detect direct chat responses. Check manually if return handoff missing.",
+        "requires_manual_review": true
+      },
+      "compliant": false,
+      "checked_at": "2026-01-07T12:55:12.232773+00:00",
+      "errors": [
+        "Return handoff Agent-Task not found in Notion",
+        "Return trigger file not found"
+      ]
+    },
+    {
+      "execution": {
+        "trigger_file": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/Claude-MM1-Agent/02_processed/20260107T065209__20260107T125139Z__HANDOFF__Plan-Resolution-for-Issue:-Project-Manager-Bot-GAS__2e1e7361.json",
+        "trigger_data": {
+          "title": "Plan Resolution for Issue: Project Manager Bot GAS Script — Critical Issues I",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Project Manager Bot GAS Script — Critical Issues Identified — Preflight Tests Not Implemented\n- **Issue ID:** 2e1e7361-6c27-8139-a70f-c0146748b669\n- **Issue URL:** https://www.notion.so/Project-Manager-Bot-GAS-Script-Critical-Issues-Identified-Preflight-Tests-Not-Implemented-2e1e73616c278139a70fc0146748b669\n- **Priority:** Critical\n- **Description:** CRITICAL ISSUES IDENTIFIED BY CLAUDE CODE AGENT (2026-01-07)\n\n**Script:** project-manager-bot (GAS)\n**Script ID:** 1-4dkJT2wYGYN6KqW5Gm5rmoCVmLNV0Q6pQKVYIfu8bPwyOT2FJ09C9oF\n**Version:** v2.4.0\n\n**ISSUE 1: Preflight Test Suite is PLACEHOLDER (CRITICAL)**\n- Location: Code.js lines 2550-2556\n- Function: preflightTestSuite_(cfg, logger)\n- Problem: Returns true without any actual tests\n- Impact: Script claims to run 8 comprehensive tests but none exist\n\n**ISSUE 2: NOTION_VERSION uses future date**\n- Location: Code.js line 62\n- Value: 2025-09-03\n- Expected: Valid API version for current production\n\n**REQUIRED ACTIONS:**\n1. Implement actual preflight tests for database validation\n2. Verify NOTION_VERSION is correct for production\n3. Add test coverage for critical functions\n\n**Handoff Created:** Cursor-MM1-Agent for implementation\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n...",
+          "priority": "Critical",
+          "target_agent": "Claude MM1 Agent",
+          "source_agent": "Auto/Cursor MM1 Agent",
+          "task_url": "https://www.notion.so/Plan-Resolution-for-Issue-Project-Manager-Bot-GAS-Script-Critical-Issues-I-2e1e73616c27810ea269e2905fcd15a1",
+          "task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+          "agent_task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+          "timestamp": "2026-01-07T12:51:39.309924+00:00",
+          "required_action": "Complete this task as specified in the description.",
+          "success_criteria": "Task completed, documented in Notion, and review handoff created back to Auto/Cursor MM1 Agent.",
+          "chain_tracking": {
+            "agent_task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+            "dedupe_key": "handoff_2e1e7361-6c27-810e-a269-e2905fcd15a1",
+            "source": "continuous_handoff_system"
+          },
+          "archive_rule": "move_to_02_processed",
+          "handoff_instructions": "Complete this task as specified. Upon completion, you MUST:\n1. **MOVE TRIGGER FILE (MANUAL)**: Call mark_trigger_file_processed() to move the trigger file from 01_inbox to 02_processed\n2. Update the task status in Notion to 'Complete'\n3. Create a review/validation handoff task back to Auto/Cursor MM1 Agent in the Agent-Tasks database\n4. Document all deliverables and artifacts in Notion\n5. Ensure all workspace requirements are met\n\n**MANDATORY:** Task is NOT complete until trigger file is moved and review handoff is created. The review handoff should be created in the Agent-Tasks database and assigned back to Auto/Cursor MM1 Agent for final validation."
+        },
+        "task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+        "agent_name": "Unknown",
+        "task_title": "Unknown",
+        "processed_time": "2026-01-07T12:51:39.310491+00:00",
+        "agent_folder": "Claude-MM1-Agent"
+      },
+      "original_task": {
+        "task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+        "task_url": "https://www.notion.so/Plan-Resolution-for-Issue-Project-Manager-Bot-GAS-Script-Critical-Issues-I-2e1e73616c27810ea269e2905fcd15a1",
+        "task_title": "Plan Resolution for Issue: Project Manager Bot GAS Script — Critical Issues I",
+        "task_status": "Ready",
+        "assigned_agent": [
+          {
+            "id": "fa54f05c-e184-403a-ac28-87dd8ce9855b"
+          }
+        ],
+        "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Project Manager Bot GAS Script — Critical Issues Identified — Preflight Tests Not Implemented\n- **Issue ID:** 2e1e7361-6c27-8139-a70f-c0146748b669\n- **Issue URL:** https://www.notion.so/Project-Manager-Bot-GAS-Script-Critical-Issues-Identified-Preflight-Tests-Not-Implemented-2e1e73616c278139a70fc0146748b669\n- **Priority:** Critical\n- **Description:** CRITICAL ISSUES IDENTIFIED BY CLAUDE CODE AGENT (2026-01-07)\n\n**Script:** project-manager-bot (GAS)\n**Script ID:** 1-4dkJT2wYGYN6KqW5Gm5rmoCVmLNV0Q6pQKVYIfu8bPwyOT2FJ09C9oF\n**Version:** v2.4.0\n\n**ISSUE 1: Preflight Test Suite is PLACEHOLDER (CRITICAL)**\n- Location: Code.js lines 2550-2556\n- Function: preflightTestSuite_(cfg, logger)\n- Problem: Returns true without any actual tests\n- Impact: Script claims to run 8 comprehensive tests but none exist\n\n**ISSUE 2: NOTION_VERSION uses future date**\n- Location: Code.js line 62\n- Value: 2025-09-03\n- Expected: Valid API version for current production\n\n**REQUIRED ACTIONS:**\n1. Implement actual preflight tests for database validation\n2. Verify NOTION_VERSION is correct for production\n3. Add test coverage for critical functions\n\n**Handoff Created:** Cursor-MM1-Agent for implementation\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n..."
+      },
+      "originating_agent": "Cursor MM1 Agent",
+      "executing_agent": "Unknown",
+      "return_handoff_task": null,
+      "return_trigger_file": null,
+      "chat_response_check": {
+        "chat_response_detected": false,
+        "inference": "Cannot programmatically detect direct chat responses. Check manually if return handoff missing.",
+        "requires_manual_review": true
+      },
+      "compliant": false,
+      "checked_at": "2026-01-07T12:55:13.729104+00:00",
+      "errors": [
+        "Return handoff Agent-Task not found in Notion",
+        "Return trigger file not found"
+      ]
+    },
+    {
+      "execution": {
+        "trigger_file": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/Claude-MM1-Agent/02_processed/20260107T065038__20260107T125028Z__HANDOFF__Plan-Resolution-for-Issue:-Project-Manager-Bot-GAS__2e1e7361.json",
+        "trigger_data": {
+          "title": "Plan Resolution for Issue: Project Manager Bot GAS Script — Critical Issues I",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Project Manager Bot GAS Script — Critical Issues Identified — Preflight Tests Not Implemented\n- **Issue ID:** 2e1e7361-6c27-8139-a70f-c0146748b669\n- **Issue URL:** https://www.notion.so/Project-Manager-Bot-GAS-Script-Critical-Issues-Identified-Preflight-Tests-Not-Implemented-2e1e73616c278139a70fc0146748b669\n- **Priority:** Critical\n- **Description:** CRITICAL ISSUES IDENTIFIED BY CLAUDE CODE AGENT (2026-01-07)\n\n**Script:** project-manager-bot (GAS)\n**Script ID:** 1-4dkJT2wYGYN6KqW5Gm5rmoCVmLNV0Q6pQKVYIfu8bPwyOT2FJ09C9oF\n**Version:** v2.4.0\n\n**ISSUE 1: Preflight Test Suite is PLACEHOLDER (CRITICAL)**\n- Location: Code.js lines 2550-2556\n- Function: preflightTestSuite_(cfg, logger)\n- Problem: Returns true without any actual tests\n- Impact: Script claims to run 8 comprehensive tests but none exist\n\n**ISSUE 2: NOTION_VERSION uses future date**\n- Location: Code.js line 62\n- Value: 2025-09-03\n- Expected: Valid API version for current production\n\n**REQUIRED ACTIONS:**\n1. Implement actual preflight tests for database validation\n2. Verify NOTION_VERSION is correct for production\n3. Add test coverage for critical functions\n\n**Handoff Created:** Cursor-MM1-Agent for implementation\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n...",
+          "priority": "Critical",
+          "target_agent": "Claude MM1 Agent",
+          "source_agent": "Auto/Cursor MM1 Agent",
+          "task_url": "https://www.notion.so/Plan-Resolution-for-Issue-Project-Manager-Bot-GAS-Script-Critical-Issues-I-2e1e73616c27810ea269e2905fcd15a1",
+          "task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+          "agent_task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+          "timestamp": "2026-01-07T12:50:28.358390+00:00",
+          "required_action": "Complete this task as specified in the description.",
+          "success_criteria": "Task completed, documented in Notion, and review handoff created back to Auto/Cursor MM1 Agent.",
+          "chain_tracking": {
+            "agent_task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+            "dedupe_key": "handoff_2e1e7361-6c27-810e-a269-e2905fcd15a1",
+            "source": "continuous_handoff_system"
+          },
+          "archive_rule": "move_to_02_processed",
+          "handoff_instructions": "Complete this task as specified. Upon completion, you MUST:\n1. **MOVE TRIGGER FILE (MANUAL)**: Call mark_trigger_file_processed() to move the trigger file from 01_inbox to 02_processed\n2. Update the task status in Notion to 'Complete'\n3. Create a review/validation handoff task back to Auto/Cursor MM1 Agent in the Agent-Tasks database\n4. Document all deliverables and artifacts in Notion\n5. Ensure all workspace requirements are met\n\n**MANDATORY:** Task is NOT complete until trigger file is moved and review handoff is created. The review handoff should be created in the Agent-Tasks database and assigned back to Auto/Cursor MM1 Agent for final validation."
+        },
+        "task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+        "agent_name": "Unknown",
+        "task_title": "Unknown",
+        "processed_time": "2026-01-07T12:50:28.358925+00:00",
+        "agent_folder": "Claude-MM1-Agent"
+      },
+      "original_task": {
+        "task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+        "task_url": "https://www.notion.so/Plan-Resolution-for-Issue-Project-Manager-Bot-GAS-Script-Critical-Issues-I-2e1e73616c27810ea269e2905fcd15a1",
+        "task_title": "Plan Resolution for Issue: Project Manager Bot GAS Script — Critical Issues I",
+        "task_status": "Ready",
+        "assigned_agent": [
+          {
+            "id": "fa54f05c-e184-403a-ac28-87dd8ce9855b"
+          }
+        ],
+        "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Project Manager Bot GAS Script — Critical Issues Identified — Preflight Tests Not Implemented\n- **Issue ID:** 2e1e7361-6c27-8139-a70f-c0146748b669\n- **Issue URL:** https://www.notion.so/Project-Manager-Bot-GAS-Script-Critical-Issues-Identified-Preflight-Tests-Not-Implemented-2e1e73616c278139a70fc0146748b669\n- **Priority:** Critical\n- **Description:** CRITICAL ISSUES IDENTIFIED BY CLAUDE CODE AGENT (2026-01-07)\n\n**Script:** project-manager-bot (GAS)\n**Script ID:** 1-4dkJT2wYGYN6KqW5Gm5rmoCVmLNV0Q6pQKVYIfu8bPwyOT2FJ09C9oF\n**Version:** v2.4.0\n\n**ISSUE 1: Preflight Test Suite is PLACEHOLDER (CRITICAL)**\n- Location: Code.js lines 2550-2556\n- Function: preflightTestSuite_(cfg, logger)\n- Problem: Returns true without any actual tests\n- Impact: Script claims to run 8 comprehensive tests but none exist\n\n**ISSUE 2: NOTION_VERSION uses future date**\n- Location: Code.js line 62\n- Value: 2025-09-03\n- Expected: Valid API version for current production\n\n**REQUIRED ACTIONS:**\n1. Implement actual preflight tests for database validation\n2. Verify NOTION_VERSION is correct for production\n3. Add test coverage for critical functions\n\n**Handoff Created:** Cursor-MM1-Agent for implementation\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n..."
+      },
+      "originating_agent": "Cursor MM1 Agent",
+      "executing_agent": "Unknown",
+      "return_handoff_task": null,
+      "return_trigger_file": null,
+      "chat_response_check": {
+        "chat_response_detected": false,
+        "inference": "Cannot programmatically detect direct chat responses. Check manually if return handoff missing.",
+        "requires_manual_review": true
+      },
+      "compliant": false,
+      "checked_at": "2026-01-07T12:55:15.327248+00:00",
+      "errors": [
+        "Return handoff Agent-Task not found in Notion",
+        "Return trigger file not found"
+      ]
+    },
+    {
+      "execution": {
+        "trigger_file": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/Claude-MM1-Agent/02_processed/20260107T064938__20260107T124920Z__HANDOFF__Plan-Resolution-for-Issue:-Project-Manager-Bot-GAS__2e1e7361.json",
+        "trigger_data": {
+          "title": "Plan Resolution for Issue: Project Manager Bot GAS Script — Critical Issues I",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Project Manager Bot GAS Script — Critical Issues Identified — Preflight Tests Not Implemented\n- **Issue ID:** 2e1e7361-6c27-8139-a70f-c0146748b669\n- **Issue URL:** https://www.notion.so/Project-Manager-Bot-GAS-Script-Critical-Issues-Identified-Preflight-Tests-Not-Implemented-2e1e73616c278139a70fc0146748b669\n- **Priority:** Critical\n- **Description:** CRITICAL ISSUES IDENTIFIED BY CLAUDE CODE AGENT (2026-01-07)\n\n**Script:** project-manager-bot (GAS)\n**Script ID:** 1-4dkJT2wYGYN6KqW5Gm5rmoCVmLNV0Q6pQKVYIfu8bPwyOT2FJ09C9oF\n**Version:** v2.4.0\n\n**ISSUE 1: Preflight Test Suite is PLACEHOLDER (CRITICAL)**\n- Location: Code.js lines 2550-2556\n- Function: preflightTestSuite_(cfg, logger)\n- Problem: Returns true without any actual tests\n- Impact: Script claims to run 8 comprehensive tests but none exist\n\n**ISSUE 2: NOTION_VERSION uses future date**\n- Location: Code.js line 62\n- Value: 2025-09-03\n- Expected: Valid API version for current production\n\n**REQUIRED ACTIONS:**\n1. Implement actual preflight tests for database validation\n2. Verify NOTION_VERSION is correct for production\n3. Add test coverage for critical functions\n\n**Handoff Created:** Cursor-MM1-Agent for implementation\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n...",
+          "priority": "Critical",
+          "target_agent": "Claude MM1 Agent",
+          "source_agent": "Auto/Cursor MM1 Agent",
+          "task_url": "https://www.notion.so/Plan-Resolution-for-Issue-Project-Manager-Bot-GAS-Script-Critical-Issues-I-2e1e73616c27810ea269e2905fcd15a1",
+          "task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+          "agent_task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+          "timestamp": "2026-01-07T12:49:20.000185+00:00",
+          "required_action": "Complete this task as specified in the description.",
+          "success_criteria": "Task completed, documented in Notion, and review handoff created back to Auto/Cursor MM1 Agent.",
+          "chain_tracking": {
+            "agent_task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+            "dedupe_key": "handoff_2e1e7361-6c27-810e-a269-e2905fcd15a1",
+            "source": "continuous_handoff_system"
+          },
+          "archive_rule": "move_to_02_processed",
+          "handoff_instructions": "Complete this task as specified. Upon completion, you MUST:\n1. **MOVE TRIGGER FILE (MANUAL)**: Call mark_trigger_file_processed() to move the trigger file from 01_inbox to 02_processed\n2. Update the task status in Notion to 'Complete'\n3. Create a review/validation handoff task back to Auto/Cursor MM1 Agent in the Agent-Tasks database\n4. Document all deliverables and artifacts in Notion\n5. Ensure all workspace requirements are met\n\n**MANDATORY:** Task is NOT complete until trigger file is moved and review handoff is created. The review handoff should be created in the Agent-Tasks database and assigned back to Auto/Cursor MM1 Agent for final validation."
+        },
+        "task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+        "agent_name": "Unknown",
+        "task_title": "Unknown",
+        "processed_time": "2026-01-07T12:49:20.001358+00:00",
+        "agent_folder": "Claude-MM1-Agent"
+      },
+      "original_task": {
+        "task_id": "2e1e7361-6c27-810e-a269-e2905fcd15a1",
+        "task_url": "https://www.notion.so/Plan-Resolution-for-Issue-Project-Manager-Bot-GAS-Script-Critical-Issues-I-2e1e73616c27810ea269e2905fcd15a1",
+        "task_title": "Plan Resolution for Issue: Project Manager Bot GAS Script — Critical Issues I",
+        "task_status": "Ready",
+        "assigned_agent": [
+          {
+            "id": "fa54f05c-e184-403a-ac28-87dd8ce9855b"
+          }
+        ],
+        "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Project Manager Bot GAS Script — Critical Issues Identified — Preflight Tests Not Implemented\n- **Issue ID:** 2e1e7361-6c27-8139-a70f-c0146748b669\n- **Issue URL:** https://www.notion.so/Project-Manager-Bot-GAS-Script-Critical-Issues-Identified-Preflight-Tests-Not-Implemented-2e1e73616c278139a70fc0146748b669\n- **Priority:** Critical\n- **Description:** CRITICAL ISSUES IDENTIFIED BY CLAUDE CODE AGENT (2026-01-07)\n\n**Script:** project-manager-bot (GAS)\n**Script ID:** 1-4dkJT2wYGYN6KqW5Gm5rmoCVmLNV0Q6pQKVYIfu8bPwyOT2FJ09C9oF\n**Version:** v2.4.0\n\n**ISSUE 1: Preflight Test Suite is PLACEHOLDER (CRITICAL)**\n- Location: Code.js lines 2550-2556\n- Function: preflightTestSuite_(cfg, logger)\n- Problem: Returns true without any actual tests\n- Impact: Script claims to run 8 comprehensive tests but none exist\n\n**ISSUE 2: NOTION_VERSION uses future date**\n- Location: Code.js line 62\n- Value: 2025-09-03\n- Expected: Valid API version for current production\n\n**REQUIRED ACTIONS:**\n1. Implement actual preflight tests for database validation\n2. Verify NOTION_VERSION is correct for production\n3. Add test coverage for critical functions\n\n**Handoff Created:** Cursor-MM1-Agent for implementation\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n..."
+      },
+      "originating_agent": "Cursor MM1 Agent",
+      "executing_agent": "Unknown",
+      "return_handoff_task": null,
+      "return_trigger_file": null,
+      "chat_response_check": {
+        "chat_response_detected": false,
+        "inference": "Cannot programmatically detect direct chat responses. Check manually if return handoff missing.",
+        "requires_manual_review": true
+      },
+      "compliant": false,
+      "checked_at": "2026-01-07T12:55:18.953577+00:00",
+      "errors": [
+        "Return handoff Agent-Task not found in Notion",
+        "Return trigger file not found"
+      ]
+    }
+  ],
+  "report_generated_at": "2026-01-07T12:55:18.953618+00:00"
+}

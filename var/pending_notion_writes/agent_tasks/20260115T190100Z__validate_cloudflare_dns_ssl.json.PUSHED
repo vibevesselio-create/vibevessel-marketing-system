@@ -1,0 +1,27 @@
+{
+  "title": "Validate Cloudflare DNS + SSL for webhook.vibevessel.space",
+  "priority": "High",
+  "status": "Not Started",
+  "dependency_status": "Ready",
+  "assigned_agents": ["Cursor MM1"],
+  "review_handoff_to": ["Codex MM1"],
+  "objective": "Confirm DNS propagation, SSL issuance, and HTTPS reachability for webhook.vibevessel.space.",
+  "preflight": [
+    "Ensure Cloudflare zone is active for vibevessel.space",
+    "Confirm tunnel config exists in ~/.cloudflared/config.yml"
+  ],
+  "steps": [
+    "Run: dig NS vibevessel.space +short",
+    "Run: dig webhook.vibevessel.space +short",
+    "Run: dig webhook.vibevessel.space CNAME +short",
+    "Run: curl -I https://webhook.vibevessel.space/health",
+    "Capture outputs and confirm HTTP 200 (not 530)"
+  ],
+  "success_criteria": [
+    "Nameservers are Cloudflare",
+    "A/AAAA records resolve",
+    "CNAME points to the Cloudflare tunnel hostname",
+    "Health endpoint returns HTTP 200 with valid TLS"
+  ],
+  "created_at": "20260115T190100Z"
+}

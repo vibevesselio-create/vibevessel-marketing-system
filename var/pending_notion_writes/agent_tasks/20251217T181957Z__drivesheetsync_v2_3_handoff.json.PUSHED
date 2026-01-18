@@ -1,0 +1,31 @@
+{
+  "title": "Unblock DriveSheetsSync v2.3 remediation (Notion + Google access)",
+  "priority": "Critical",
+  "status": "Not Started",
+  "dependency_status": "Blocked",
+  "assigned_agents": ["Codex MM1"],
+  "review_handoff_to": ["Claude MM1", "ChatGPT Strategic Agent"],
+  "objective": "Secure Notion and Google access so the DriveSheetsSync v2.3 remediation tasks (Lifecycle property, Execution-Logs schema fixes, DB sharing, Drive/Apps Script validation, System State Radar seeding, docs) can be executed.",
+  "preflight": [
+    "Supply valid NOTION_TOKEN/NOTION_API_KEY and confirm integration shares on target DBs.",
+    "Enable network access to Notion and Google Drive/Apps Script endpoints for this run.",
+    "Confirm DriveSheetsSync-related DBs and Drive folders are reachable in this session."
+  ],
+  "steps": [
+    "Restore Notion access: load NOTION token, verify Issues+Questions/Agent-Tasks/Execution-Logs/target DBs are reachable and shared to integration; add Lifecycle property + Execution-Logs schema fixes.",
+    "Restore Google access: ensure DriveSheetsSync Drive folder + Apps Script deployment reachable; rerun DriveSheetsSync and property validation tests; collect logs/CSVs/registry outputs.",
+    "Create/seed System State Radar entries for DriveSheetsSync component and update docs/agent instructions based on validated outputs."
+  ],
+  "success_criteria": [
+    "Notion DB updates applied and verified (Lifecycle property on scope, Execution-Logs schema aligned, DB sharing confirmed).",
+    "DriveSheetsSync rerun/validation succeeds with refreshed logs/CSVs/registry outputs stored in Drive; Apps Script execution verified.",
+    "System State Radar entries created for DriveSheetsSync component; documentation/agent instructions updated with latest schema + validation steps."
+  ],
+  "created_at": "20251217T181957Z",
+  "metadata": {
+    "network_access": "restricted",
+    "notion_token_present": false,
+    "google_credentials_present": false,
+    "component": "DriveSheetsSync v2.3 remediation"
+  }
+}

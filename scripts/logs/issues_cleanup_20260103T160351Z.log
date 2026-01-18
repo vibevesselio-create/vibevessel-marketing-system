@@ -1,0 +1,7 @@
+2026-01-03 10:03:51,231 - INFO - Issues+Questions cleanup started
+2026-01-03 10:03:51,231 - INFO - Data source ID: 229e7361-6c27-804f-b662-000b6af69781
+2026-01-03 10:03:51,231 - INFO - Mode: APPLY
+2026-01-03 10:03:51,679 - INFO - HTTP Request: GET https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781 "HTTP/1.1 200 OK"
+2026-01-03 10:03:51,680 - INFO - Available status options: ['Resolved', 'Troubleshooting', 'Waiting on Client', 'Reported + Waiting For Response', 'Solution In Progress', 'Unreported']
+2026-01-03 10:03:51,680 - ERROR - Status option 'Archived' missing. Available options: ['Resolved', 'Troubleshooting', 'Waiting on Client', 'Reported + Waiting For Response', 'Solution In Progress', 'Unreported']. Database ID: 229e73616c27808ebf06c202b10b5166
+2026-01-03 10:03:51,680 - ERROR - Unable to ensure 'Archived' status option exists; aborting

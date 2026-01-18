@@ -1,0 +1,25 @@
+[soundcloud_download_prod_merge] unified_config unavailable (No module named 'unified_config'); using fallback module.
+2026-01-07 00:30:47 | INFO | Unified logging initialized via shared_core.logging
+2026-01-07 00:30:47 | INFO | 🧵 Max concurrency for batch mode: 4
+2026-01-07 00:30:47 | INFO | 📑 Order mode: priority_then_created | Priority numeric mode: True | Name-order: ['Critical', 'High', 'Medium', 'Low']
+/Users/brianhellemn/Library/Python/3.13/lib/python/site-packages/librosa/core/intervals.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_filename
+2026-01-07 00:30:48 | WARNING | ⚠️ Smart Eagle API not available, using fallback
+2026-01-07 00:30:48 | INFO | 📁 Using OUT_DIR: /Users/brianhellemn/Projects/github-production/tmp/dedup_out
+2026-01-07 00:30:48 | INFO | 📁 Using BACKUP_DIR: /Users/brianhellemn/Projects/github-production/tmp/dedup_backup
+2026-01-07 00:30:48 | INFO | 📁 Using WAV_BACKUP_DIR: /Users/brianhellemn/Projects/github-production/tmp/dedup_wav
+2026-01-07 00:30:48 | INFO | 🦅 Eagle API: http://localhost:41595
+2026-01-07 00:30:48 | INFO | 🦅 Eagle Library: /Volumes/VIBES/Music-Library-2.library
+2026-01-07 00:30:48 | WARNING | 📚 Volume index enabled but not found: /Users/brianhellemn/Projects/github-production/var/music_volume_index.json
+2026-01-07 00:30:48 | INFO | 📁 Using OUT_DIR: /Users/brianhellemn/Projects/github-production/tmp/dedup_out
+2026-01-07 00:30:48 | INFO | 📁 Using BACKUP_DIR: /Users/brianhellemn/Projects/github-production/tmp/dedup_backup
+2026-01-07 00:30:48 | INFO | 📁 Using WAV_BACKUP_DIR: /Users/brianhellemn/Projects/github-production/tmp/dedup_wav
+2026-01-07 00:30:48 | WARNING | ⚠️  Unified State Registry not available: No module named 'unified_state_registry'
+usage: soundcloud_download_prod_merge-2.py [-h]
+                                           [--mode {single,batch,all,reprocess,url,dedup,fp-sync}]
+                                           [--url URL] [--limit LIMIT]
+                                           [--debug] [--no-sort] [--sort-asc]
+                                           [--dedup-live]
+                                           [--dedup-threshold DEDUP_THRESHOLD]
+                                           [--dedup-cleanup]
+soundcloud_download_prod_merge-2.py: error: unrecognized arguments: --verbose

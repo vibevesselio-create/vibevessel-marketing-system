@@ -1,0 +1,17 @@
+# Cloudflared tunnel config (template)
+# Source of truth currently lives at ~/.cloudflared/config.yml
+# Keep this file in sync when changes are made to the live tunnel.
+
+tunnel: 8f70cf6f-551f-4fb7-b1f9-0349f2f688f3
+credentials-file: /Users/brianhellemn/.cloudflared/8f70cf6f-551f-4fb7-b1f9-0349f2f688f3.json
+
+ingress:
+  - hostname: webhook.serenmedia.co
+    service: http://localhost:5001
+  - hostname: api.vibevessel.space
+    service: http://localhost:5001
+  - hostname: webhook.vibevessel.space
+    service: http://localhost:5001
+  - hostname: campaigns.vibevessel.space
+    service: http://localhost:5001
+  - service: http_status:404

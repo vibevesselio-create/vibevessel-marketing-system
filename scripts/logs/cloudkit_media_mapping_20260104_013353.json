@@ -1,0 +1,188 @@
+{
+  "cloudkit_records": 1000,
+  "media_items": 1000,
+  "sample_mappings": [
+    {
+      "rowid": 5,
+      "recordTable_hash": "LqRinBCshnb7a2dm5DE2a9tz58I="
+    },
+    {
+      "rowid": 175,
+      "recordTable_hash": "IlNe+yeeq8SRxR3nW0p4lAxkN1E="
+    },
+    {
+      "rowid": 176,
+      "recordTable_hash": "FZIwXJQr09x/AkeP/GQ5wDeRu/U="
+    },
+    {
+      "rowid": 177,
+      "recordTable_hash": "TALoPbYyKAZILoPplD8iCKeZStI="
+    },
+    {
+      "rowid": 178,
+      "recordTable_hash": "X19wQNWj5pEjZi6WwWEtiby55Ng="
+    },
+    {
+      "rowid": 179,
+      "recordTable_hash": "lsRpMlbqrIxC2Omoaypo8UMCjqk="
+    },
+    {
+      "rowid": 180,
+      "recordTable_hash": "PpdOmKRAv1+lKjk24nVIG6teJt8="
+    },
+    {
+      "rowid": 181,
+      "recordTable_hash": "v0Ut0QT3zvOfYz+qtRVufAMNygw="
+    },
+    {
+      "rowid": 182,
+      "recordTable_hash": "oHkBhMa3VcOGVaHqD6UCa5HOSzk="
+    },
+    {
+      "rowid": 183,
+      "recordTable_hash": "Ch0sE3fGSVylkbiDoYWkHRx++EA="
+    },
+    {
+      "rowid": 184,
+      "recordTable_hash": "2yX897gBcf7R7oktIwkbzmfqgvo="
+    },
+    {
+      "rowid": 185,
+      "recordTable_hash": "boRJvGIcaK/w1DGuoqQNlWb5JmU="
+    },
+    {
+      "rowid": 186,
+      "recordTable_hash": "pZbmnYJiqFyTN5NOjME5eAOBYgg="
+    },
+    {
+      "rowid": 187,
+      "recordTable_hash": "gbZdStRnnZJYg1jr3e9/usaJIEA="
+    },
+    {
+      "rowid": 188,
+      "recordTable_hash": "r4mwjc22YJXm8JYM7O97IEOVm2A="
+    },
+    {
+      "rowid": 189,
+      "recordTable_hash": "RCW3lOZgeW7tDjKQImjo1iPN4bE="
+    },
+    {
+      "rowid": 190,
+      "recordTable_hash": "Gu6uJaHojSOHuLrb8CjYzoOyS0I="
+    },
+    {
+      "rowid": 191,
+      "recordTable_hash": "BL8GcEhn+S7g3RVeRqDy7rgGyPY="
+    },
+    {
+      "rowid": 192,
+      "recordTable_hash": "4u8UkcGCUl64wCZWpIRo+Z3MiSY="
+    },
+    {
+      "rowid": 193,
+      "recordTable_hash": "mQIpartK4DB7IstPLPBhUSGRXTw="
+    }
+  ],
+  "sample_media_items": [
+    {
+      "rowid": 25436,
+      "key": "000e0a7f899f9cba99bb041d51f24d26",
+      "collection": "mediaItems"
+    },
+    {
+      "rowid": 57382,
+      "key": "000ec0f1bbc8caf8b30c88b3b3e66f0f",
+      "collection": "mediaItems"
+    },
+    {
+      "rowid": 68391,
+      "key": "0013b4b5ab675b9f97fbf103917099fd",
+      "collection": "mediaItems"
+    },
+    {
+      "rowid": 79519,
+      "key": "0019575a60da4b39cc1abb1ca43a5da0",
+      "collection": "mediaItems"
+    },
+    {
+      "rowid": 72993,
+      "key": "001d3666e6a8042b911c3e07e32a680d",
+      "collection": "mediaItems"
+    },
+    {
+      "rowid": 33764,
+      "key": "001ee8ad6a14ceb942321a4ab6be5d91",
+      "collection": "mediaItems"
+    },
+    {
+      "rowid": 62189,
+      "key": "0024fccfff74e51e3633efeb29f54ed0",
+      "collection": "mediaItems"
+    },
+    {
+      "rowid": 30069,
+      "key": "002bf382c65e542397e8e95aec054c9b",
+      "collection": "mediaItems"
+    },
+    {
+      "rowid": 54014,
+      "key": "00301d5859eca687a86a023d8155a8f2",
+      "collection": "mediaItems"
+    },
+    {
+      "rowid": 31470,
+      "key": "0033301c2e154b9d46c200f370b02b5f",
+      "collection": "mediaItems"
+    },
+    {
+      "rowid": 74612,
+      "key": "0036202ac48d48108e2f9a21ca386df7",
+      "collection": "mediaItems"
+    },
+    {
+      "rowid": 15758,
+      "key": "003bc574328fd3c4eeb5779b0c8d4ed9",
+      "collection": "mediaItems"
+    },
+    {
+      "rowid": 88754,
+      "key": "003e8da626442c3359fdf8b951578652",
+      "collection": "mediaItems"
+    },
+    {
+      "rowid": 71315,
+      "key": "0041cad568096e582df629e328f88314",
+      "collection": "mediaItems"
+    },
+    {
+      "rowid": 89478,
+      "key": "0043c3e6f65b12058ded298ab3143db0",
+      "collection": "mediaItems"
+    },
+    {
+      "rowid": 68128,
+      "key": "0045e6ac490fe7e23831052d152065e1",
+      "collection": "mediaItems"
+    },
+    {
+      "rowid": 56718,
+      "key": "004daf96509fde4559b45578ac2024ed",
+      "collection": "mediaItems"
+    },
+    {
+      "rowid": 37310,
+      "key": "004f0109db9a75202c67309116808f36",
+      "collection": "mediaItems"
+    },
+    {
+      "rowid": 18540,
+      "key": "005183ef8f5b40b05b390aa7d5b89649",
+      "collection": "mediaItems"
+    },
+    {
+      "rowid": 81828,
+      "key": "0052b1446b58c2e90b5c02f326889809",
+      "collection": "mediaItems"
+    }
+  ]
+}

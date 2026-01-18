@@ -1,0 +1,125 @@
+{
+  "timestamp": "2026-01-07T07:47:49.967422+00:00",
+  "source_agent": "Codex MM1 Agent",
+  "target_agent": "Cursor MM1 Agent",
+  "source_agent_id": "2b1e7361-6c27-80fb-8ce9-fd3cf78a5cad",
+  "target_agent_id": "249e7361-6c27-8100-8a74-de7eabb9fc8d",
+  "total_tasks": 19,
+  "reassigned": [
+    {
+      "title": "[Codex MM1] Filesystem Testing - Backup Output",
+      "id": "2b0e7361-6c27-818d-8c58-fb8514eafbf7",
+      "url": "https://www.notion.so/Codex-MM1-Filesystem-Testing-Backup-Output-2b0e73616c27818d8c58fb8514eafbf7",
+      "status": "Draft"
+    },
+    {
+      "title": "Unified Audio Processor Execution Task - Codex Agent",
+      "id": "2b6e7361-6c27-8151-9460-f298a7a1fade",
+      "url": "https://www.notion.so/Unified-Audio-Processor-Execution-Task-Codex-Agent-2b6e73616c2781519460f298a7a1fade",
+      "status": "Draft"
+    },
+    {
+      "title": "Implementation: Hybrid Orchestrator Webhook Server Integration (Development Script)",
+      "id": "2b6e7361-6c27-8193-9a73-dce6fda87d66",
+      "url": "https://www.notion.so/Implementation-Hybrid-Orchestrator-Webhook-Server-Integration-Development-Script-2b6e73616c2781939a73dce6fda87d66",
+      "status": "Review"
+    },
+    {
+      "title": "[Claude MM1] — Locate and Document Environment Configuration — 2025-12-22",
+      "id": "2d1e7361-6c27-815b-9d79-f6dddc6d9d9e",
+      "url": "https://www.notion.so/Claude-MM1-Locate-and-Document-Environment-Configuration-2025-12-22-2d1e73616c27815b9d79f6dddc6d9d9e",
+      "status": "Draft"
+    },
+    {
+      "title": "HANDOFF__Claude-Code__Codex-MM1__Unified-Workflow-Validation__2025-12-19T003200Z",
+      "id": "2d5e7361-6c27-81d9-bcf3-ccc43e15d8dd",
+      "url": "https://www.notion.so/HANDOFF__Claude-Code__Codex-MM1__Unified-Workflow-Validation__2025-12-19T003200Z-2d5e73616c2781d9bcf3ccc43e15d8dd",
+      "status": "Ready"
+    },
+    {
+      "title": "HANDOFF__CLAUDE-MM1__CODEX-MM1__Folder-Parity-Manifest__2025-12-18",
+      "id": "2d5e7361-6c27-81f1-a7de-f4e0fd48f66b",
+      "url": "https://www.notion.so/HANDOFF__CLAUDE-MM1__CODEX-MM1__Folder-Parity-Manifest__2025-12-18-2d5e73616c2781f1a7def4e0fd48f66b",
+      "status": "Ready"
+    },
+    {
+      "title": "HANDOFF__Claude-Code__Codex-MM1__Phase1-Foundation-Implementation__2025-12-19T000200Z",
+      "id": "2d5e7361-6c27-81f1-a8ac-f08c8c489987",
+      "url": "https://www.notion.so/HANDOFF__Claude-Code__Codex-MM1__Phase1-Foundation-Implementation__2025-12-19T000200Z-2d5e73616c2781f1a8acf08c8c489987",
+      "status": "Ready"
+    },
+    {
+      "title": "Codex MM1 — Review Documentation for MCP Notion API References — 2025-01-29",
+      "id": "2d9e7361-6c27-8196-a09d-fb8cd004bc06",
+      "url": "https://www.notion.so/Codex-MM1-Review-Documentation-for-MCP-Notion-API-References-2025-01-29-2d9e73616c278196a09dfb8cd004bc06",
+      "status": "Completed"
+    },
+    {
+      "title": "Verify Apps Script API Path and Locate clasp Credentials",
+      "id": "2dae7361-6c27-81e1-8da4-d85b8442e691",
+      "url": "https://www.notion.so/Verify-Apps-Script-API-Path-and-Locate-clasp-Credentials-2dae73616c2781e18da4d85b8442e691",
+      "status": "Ready"
+    },
+    {
+      "title": "20260105T183516Z__HANDOFF__Validate-DB-ID-Consolidation-Completion---Agent-Wo__2dde7361",
+      "id": "2e0e7361-6c27-8120-a346-d32eb395c30f",
+      "url": "https://www.notion.so/20260105T183516Z__HANDOFF__Validate-DB-ID-Consolidation-Completion-Agent-Wo__2dde7361-2e0e73616c278120a346d32eb395c30f",
+      "status": "Completed"
+    },
+    {
+      "title": "Phase 3: Duplicate Detection & Consolidation",
+      "id": "2e0e7361-6c27-812a-93a4-d9d23f9c83f6",
+      "url": "https://www.notion.so/Phase-3-Duplicate-Detection-Consolidation-2e0e73616c27812a93a4d9d23f9c83f6",
+      "status": "Ready"
+    },
+    {
+      "title": "Phase 2: Compliance Auto-Enhancement Implementation",
+      "id": "2e0e7361-6c27-812d-b4d8-e1df758e1961",
+      "url": "https://www.notion.so/Phase-2-Compliance-Auto-Enhancement-Implementation-2e0e73616c27812db4d8e1df758e1961",
+      "status": "Ready"
+    },
+    {
+      "title": "20260106T160831Z__HANDOFF__20260105T183516Z__HANDOFF__Validate-DB-ID-Consolid__2e0e7361",
+      "id": "2e0e7361-6c27-8131-a202-f8b6c332d8d4",
+      "url": "https://www.notion.so/20260106T160831Z__HANDOFF__20260105T183516Z__HANDOFF__Validate-DB-ID-Consolid__2e0e7361-2e0e73616c278131a202f8b6c332d8d4",
+      "status": "Ready"
+    },
+    {
+      "title": "Phase 4: Integration & Pipeline",
+      "id": "2e0e7361-6c27-81ed-a33f-c608ae334d1a",
+      "url": "https://www.notion.so/Phase-4-Integration-Pipeline-2e0e73616c2781eda33fc608ae334d1a",
+      "status": "Ready"
+    },
+    {
+      "title": "Phase 1: Blocker Detection Implementation",
+      "id": "2e0e7361-6c27-81f9-bacf-f67fb61e919f",
+      "url": "https://www.notion.so/Phase-1-Blocker-Detection-Implementation-2e0e73616c2781f9bacff67fb61e919f",
+      "status": "Ready"
+    },
+    {
+      "title": "Eagle App API Scripts - Comprehensive Inventory and Index Creation",
+      "id": "2e1e7361-6c27-810b-89ff-c2d86f9fe0af",
+      "url": "https://www.notion.so/Eagle-App-API-Scripts-Comprehensive-Inventory-and-Index-Creation-2e1e73616c27810b89ffc2d86f9fe0af",
+      "status": "Ready"
+    },
+    {
+      "title": "Agent Handoff: Deduplication Production Testing & Troubleshooting",
+      "id": "2e1e7361-6c27-8124-808a-c7546781a2ad",
+      "url": "https://www.notion.so/Agent-Handoff-Deduplication-Production-Testing-Troubleshooting-2e1e73616c278124808ac7546781a2ad",
+      "status": "Ready"
+    },
+    {
+      "title": "Agent Handoff: Deduplication Production Testing with Notion Issue Reporting",
+      "id": "2e1e7361-6c27-8140-bfa1-fc087ac73421",
+      "url": "https://www.notion.so/Agent-Handoff-Deduplication-Production-Testing-with-Notion-Issue-Reporting-2e1e73616c278140bfa1fc087ac73421",
+      "status": "Ready"
+    },
+    {
+      "title": "Phase 5A: Handoff — Codex MM1 — Remediate Top-Priority Code Fixes",
+      "id": "b8fe05d8-cf27-4a39-9eb4-948de6f52659",
+      "url": "https://www.notion.so/Phase-5A-Handoff-Codex-MM1-Remediate-Top-Priority-Code-Fixes-b8fe05d8cf274a399eb4948de6f52659",
+      "status": "Planning"
+    }
+  ],
+  "failed": []
+}

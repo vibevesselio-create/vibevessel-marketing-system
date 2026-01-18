@@ -1,0 +1,19 @@
+{
+  "target_database": "Issues+Questions",
+  "database_id": "229e73616c27808ebf06c202b10b5166",
+  "created_at": "2025-12-20T05:39:00Z",
+  "source_agent": "Claude Code",
+  "issue_type": "Blocking Configuration Issue",
+  "priority": "Critical",
+  
+  "properties": {
+    "Name": "BLOCKING: All Notion API tokens returning 401 Unauthorized",
+    "Status": "Open",
+    "Priority": "Critical",
+    "Assigned": "User/Admin",
+    "Description": "Claude Code agent cannot access Notion API. All tokens in .env files are returning 401 Unauthorized errors. This blocks all agent operations that require task querying, status updates, or execution logging.\n\nTokens tested:\n- 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\n- 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\n- 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\n\nDatabase attempted: Agent-Tasks (284e73616c278018872aeb14e82e0392)",
+    "Resolution Steps": "1. Generate new Notion internal integration token\n2. Update all .env files\n3. Verify connectivity"
+  },
+  
+  "pending_sync": true
+}

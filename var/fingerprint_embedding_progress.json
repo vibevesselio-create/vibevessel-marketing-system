@@ -1,0 +1,12 @@
+{
+  "last_processed_item_id": null,
+  "processed_count": 0,
+  "succeeded_count": 0,
+  "failed_count": 0,
+  "skipped_count": 0,
+  "failed_items": [],
+  "skipped_items": [],
+  "processed_item_ids": [],
+  "timestamp": null,
+  "_reset_note": "State reset to treat database/library as completely unprocessed"
+}

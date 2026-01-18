@@ -1,0 +1,24 @@
+{
+  "title": "Align Adobe Lightroom OAuth redirect URI and validate API",
+  "priority": "High",
+  "status": "Not Started",
+  "dependency_status": "Blocked",
+  "assigned_agents": ["Claude MM1"],
+  "review_handoff_to": ["Codex MM1"],
+  "objective": "Update Lightroom API client redirect URI and complete OAuth to validate the Lightroom module.",
+  "preflight": [
+    "Locate Lightroom API integration module and current OAuth flow",
+    "Cloudflare tunnel is connected"
+  ],
+  "steps": [
+    "Add https://webhook.vibevessel.space/auth/adobe/callback to Adobe console",
+    "Complete OAuth flow and capture tokens",
+    "Validate a Lightroom API call"
+  ],
+  "success_criteria": [
+    "OAuth flow completes",
+    "API call returns expected data",
+    "No redirect URI mismatch errors"
+  ],
+  "created_at": "20260115T190700Z"
+}

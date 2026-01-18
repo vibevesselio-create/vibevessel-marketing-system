@@ -1,0 +1,42 @@
+{
+  "database_id": "259e7361-6c27-8192-ae2e-e6d54b4198e1",
+  "duplicate_found": true,
+  "properties": [
+    {
+      "name": "sub-workflows",
+      "type": "rich_text",
+      "id": "%3A%3Dkv",
+      "details": {
+        "id": "%3A%3Dkv",
+        "name": "sub-workflows",
+        "description": null,
+        "type": "rich_text",
+        "rich_text": {}
+      }
+    },
+    {
+      "name": "Sub-workflows",
+      "type": "relation",
+      "id": "DRUl",
+      "details": {
+        "id": "DRUl",
+        "name": "Sub-workflows",
+        "description": "Child workflows or variants derived from this workflow. Auto-populated from Parent item relation.",
+        "type": "relation",
+        "relation": {
+          "database_id": "259e7361-6c27-8192-ae2e-e6d54b4198e1",
+          "data_source_id": "259e7361-6c27-812c-bcd6-000bb4ac69b1",
+          "type": "dual_property",
+          "dual_property": {
+            "synced_property_name": "Main workflow",
+            "synced_property_id": "%5DPx%3A"
+          }
+        }
+      }
+    }
+  ],
+  "recommendation": {
+    "keep": "Sub-workflows",
+    "remove": "sub-workflows"
+  }
+}

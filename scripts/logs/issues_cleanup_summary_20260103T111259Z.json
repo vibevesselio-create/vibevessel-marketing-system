@@ -1,0 +1,3536 @@
+{
+  "timestamp": "20260103T111259Z",
+  "dry_run": false,
+  "data_source_id": "229e7361-6c27-804f-b662-000b6af69781",
+  "stats": {
+    "total_items": 570,
+    "duplicate_groups": 99,
+    "duplicates_archived": 139,
+    "duplicates_already_archived": 47,
+    "unreported_total": 449,
+    "unreported_archived": 128,
+    "unknown_priority_total": 277,
+    "priority_updates": 26,
+    "updates_total": 293
+  },
+  "log_path": "/Users/brianhellemn/Projects/github-production/scripts/logs/issues_cleanup_20260103T111259Z.log",
+  "updates": [
+    {
+      "id": "2d8e7361-6c27-8101-b1fc-d84caf24cb71",
+      "url": "https://www.notion.so/2d8e73616c278101b1fcd84caf24cb71",
+      "name": "Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links' (kept 2dae7361-6c27-81f5-ad79-cec93c95fe47)"
+      ]
+    },
+    {
+      "id": "2d8e7361-6c27-8104-9dd9-ffe3d20fe7a2",
+      "url": "https://www.notion.so/2d8e73616c2781049dd9ffe3d20fe7a2",
+      "name": "Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links' (kept 2dae7361-6c27-81f5-ad79-cec93c95fe47)"
+      ]
+    },
+    {
+      "id": "2d8e7361-6c27-8135-a574-f25299beb400",
+      "url": "https://www.notion.so/2d8e73616c278135a574f25299beb400",
+      "name": "Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links' (kept 2dae7361-6c27-81f5-ad79-cec93c95fe47)"
+      ]
+    },
+    {
+      "id": "2d8e7361-6c27-8165-81de-d8ba21700fc6",
+      "url": "https://www.notion.so/2d8e73616c27816581ded8ba21700fc6",
+      "name": "Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links' (kept 2dae7361-6c27-81f5-ad79-cec93c95fe47)"
+      ]
+    },
+    {
+      "id": "2d8e7361-6c27-8184-b5ce-f8b37b9365af",
+      "url": "https://www.notion.so/2d8e73616c278184b5cef8b37b9365af",
+      "name": "Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links' (kept 2dae7361-6c27-81f5-ad79-cec93c95fe47)"
+      ]
+    },
+    {
+      "id": "2d8e7361-6c27-818d-af17-e41e4a41ac10",
+      "url": "https://www.notion.so/2d8e73616c27818daf17e41e4a41ac10",
+      "name": "Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links' (kept 2dae7361-6c27-81f5-ad79-cec93c95fe47)"
+      ]
+    },
+    {
+      "id": "2d8e7361-6c27-81e4-9f7a-f6dc61219d41",
+      "url": "https://www.notion.so/2d8e73616c2781e49f7af6dc61219d41",
+      "name": "Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links' (kept 2dae7361-6c27-81f5-ad79-cec93c95fe47)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-816b-9013-d91607af8ff2",
+      "url": "https://www.notion.so/2d9e73616c27816b9013d91607af8ff2",
+      "name": "Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links' (kept 2dae7361-6c27-81f5-ad79-cec93c95fe47)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81aa-90e2-efe45ad8f6fc",
+      "url": "https://www.notion.so/2d9e73616c2781aa90e2efe45ad8f6fc",
+      "name": "Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links' (kept 2dae7361-6c27-81f5-ad79-cec93c95fe47)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81af-994e-cf81cf5977ce",
+      "url": "https://www.notion.so/2d9e73616c2781af994ecf81cf5977ce",
+      "name": "Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links' (kept 2dae7361-6c27-81f5-ad79-cec93c95fe47)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81c6-bbdd-c0ebd7d35a49",
+      "url": "https://www.notion.so/2d9e73616c2781c6bbddc0ebd7d35a49",
+      "name": "Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links' (kept 2dae7361-6c27-81f5-ad79-cec93c95fe47)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81e3-9862-d3e815ad6a63",
+      "url": "https://www.notion.so/2d9e73616c2781e39862d3e815ad6a63",
+      "name": "Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links' (kept 2dae7361-6c27-81f5-ad79-cec93c95fe47)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-8101-9312-c6e8196ac40b",
+      "url": "https://www.notion.so/2dae73616c2781019312c6e8196ac40b",
+      "name": "Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links' (kept 2dae7361-6c27-81f5-ad79-cec93c95fe47)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-8109-a718-f91772c24d19",
+      "url": "https://www.notion.so/2dae73616c278109a718f91772c24d19",
+      "name": "Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links' (kept 2dae7361-6c27-81f5-ad79-cec93c95fe47)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-813b-ab7a-e03c402d45d5",
+      "url": "https://www.notion.so/2dae73616c27813bab7ae03c402d45d5",
+      "name": "Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links' (kept 2dae7361-6c27-81f5-ad79-cec93c95fe47)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-813d-91dd-ce05d97fe92a",
+      "url": "https://www.notion.so/2dae73616c27813d91ddce05d97fe92a",
+      "name": "Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links' (kept 2dae7361-6c27-81f5-ad79-cec93c95fe47)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-816d-9401-edb83a6788c2",
+      "url": "https://www.notion.so/2dae73616c27816d9401edb83a6788c2",
+      "name": "Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links' (kept 2dae7361-6c27-81f5-ad79-cec93c95fe47)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-8195-b4c9-f9c9e396cb3c",
+      "url": "https://www.notion.so/2dae73616c278195b4c9f9c9e396cb3c",
+      "name": "Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links' (kept 2dae7361-6c27-81f5-ad79-cec93c95fe47)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-81bc-bb1b-f5a3bf421208",
+      "url": "https://www.notion.so/2dae73616c2781bcbb1bf5a3bf421208",
+      "name": "Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links' (kept 2dae7361-6c27-81f5-ad79-cec93c95fe47)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-81de-a794-c67d83a319a3",
+      "url": "https://www.notion.so/2dae73616c2781dea794c67d83a319a3",
+      "name": "Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links' (kept 2dae7361-6c27-81f5-ad79-cec93c95fe47)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-81e6-852c-f084fe999754",
+      "url": "https://www.notion.so/2dae73616c2781e6852cf084fe999754",
+      "name": "Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Tasks Compliance: 99 Tasks Missing Agent-Function Links' (kept 2dae7361-6c27-81f5-ad79-cec93c95fe47)"
+      ]
+    },
+    {
+      "id": "2d8e7361-6c27-815c-83f7-ff59c59e370c",
+      "url": "https://www.notion.so/2d8e73616c27815c83f7ff59c59e370c",
+      "name": "DriveSheetsSync: Scripts Database ID Format or Access Method Incorrect (CRITICAL BLOCKER)",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "Critical",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DriveSheetsSync: Scripts Database ID Format or Access Method Incorrect (CRITICAL BLOCKER)' (kept 2d8e7361-6c27-8138-9227-cf01958621e5)"
+      ]
+    },
+    {
+      "id": "2d8e7361-6c27-8119-b659-dccc0f808a19",
+      "url": "https://www.notion.so/2d8e73616c278119b659dccc0f808a19",
+      "name": "Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments' (kept 2dae7361-6c27-81ef-99c1-dae42f2b533d)"
+      ]
+    },
+    {
+      "id": "2d8e7361-6c27-814d-b536-c7e2dadd3aa5",
+      "url": "https://www.notion.so/2d8e73616c27814db536c7e2dadd3aa5",
+      "name": "Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments' (kept 2dae7361-6c27-81ef-99c1-dae42f2b533d)"
+      ]
+    },
+    {
+      "id": "2d8e7361-6c27-8180-9cd9-e1304d5cb4ed",
+      "url": "https://www.notion.so/2d8e73616c2781809cd9e1304d5cb4ed",
+      "name": "Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments' (kept 2dae7361-6c27-81ef-99c1-dae42f2b533d)"
+      ]
+    },
+    {
+      "id": "2d8e7361-6c27-8196-bf65-ce6454ad2686",
+      "url": "https://www.notion.so/2d8e73616c278196bf65ce6454ad2686",
+      "name": "Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments' (kept 2dae7361-6c27-81ef-99c1-dae42f2b533d)"
+      ]
+    },
+    {
+      "id": "2d8e7361-6c27-81ab-99ee-cb7d3e1d63ce",
+      "url": "https://www.notion.so/2d8e73616c2781ab99eecb7d3e1d63ce",
+      "name": "Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments' (kept 2dae7361-6c27-81ef-99c1-dae42f2b533d)"
+      ]
+    },
+    {
+      "id": "2d8e7361-6c27-81b1-ab4c-e757b08b459b",
+      "url": "https://www.notion.so/2d8e73616c2781b1ab4ce757b08b459b",
+      "name": "Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments' (kept 2dae7361-6c27-81ef-99c1-dae42f2b533d)"
+      ]
+    },
+    {
+      "id": "2d8e7361-6c27-81f5-83c9-d417bcb30091",
+      "url": "https://www.notion.so/2d8e73616c2781f583c9d417bcb30091",
+      "name": "Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments' (kept 2dae7361-6c27-81ef-99c1-dae42f2b533d)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8112-8886-d346f92c988a",
+      "url": "https://www.notion.so/2d9e73616c2781128886d346f92c988a",
+      "name": "Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments' (kept 2dae7361-6c27-81ef-99c1-dae42f2b533d)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-813b-8af4-f31625307a0f",
+      "url": "https://www.notion.so/2d9e73616c27813b8af4f31625307a0f",
+      "name": "Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments' (kept 2dae7361-6c27-81ef-99c1-dae42f2b533d)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81df-8f82-fe34feadc25e",
+      "url": "https://www.notion.so/2d9e73616c2781df8f82fe34feadc25e",
+      "name": "Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments' (kept 2dae7361-6c27-81ef-99c1-dae42f2b533d)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81fb-a7dc-e409f67c5eae",
+      "url": "https://www.notion.so/2d9e73616c2781fba7dce409f67c5eae",
+      "name": "Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments' (kept 2dae7361-6c27-81ef-99c1-dae42f2b533d)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-811f-b290-e4ed51376151",
+      "url": "https://www.notion.so/2dae73616c27811fb290e4ed51376151",
+      "name": "Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments' (kept 2dae7361-6c27-81ef-99c1-dae42f2b533d)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-8142-befc-c1637cc3932e",
+      "url": "https://www.notion.so/2dae73616c278142befcc1637cc3932e",
+      "name": "Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments' (kept 2dae7361-6c27-81ef-99c1-dae42f2b533d)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-8148-9df4-d7a95f65b888",
+      "url": "https://www.notion.so/2dae73616c2781489df4d7a95f65b888",
+      "name": "Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments' (kept 2dae7361-6c27-81ef-99c1-dae42f2b533d)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-814e-aa65-c5ffebda0059",
+      "url": "https://www.notion.so/2dae73616c27814eaa65c5ffebda0059",
+      "name": "Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments' (kept 2dae7361-6c27-81ef-99c1-dae42f2b533d)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-8152-acf4-e6ed36df58d9",
+      "url": "https://www.notion.so/2dae73616c278152acf4e6ed36df58d9",
+      "name": "Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments' (kept 2dae7361-6c27-81ef-99c1-dae42f2b533d)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-816a-bd41-dde4e9d22ac8",
+      "url": "https://www.notion.so/2dae73616c27816abd41dde4e9d22ac8",
+      "name": "Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments' (kept 2dae7361-6c27-81ef-99c1-dae42f2b533d)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-8173-9a36-d3c604586682",
+      "url": "https://www.notion.so/2dae73616c2781739a36d3c604586682",
+      "name": "Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments' (kept 2dae7361-6c27-81ef-99c1-dae42f2b533d)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-8199-9ee0-c0142b8baaa3",
+      "url": "https://www.notion.so/2dae73616c2781999ee0c0142b8baaa3",
+      "name": "Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments' (kept 2dae7361-6c27-81ef-99c1-dae42f2b533d)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-81f6-ace2-eb46ce781a63",
+      "url": "https://www.notion.so/2dae73616c2781f6ace2eb46ce781a63",
+      "name": "Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Functions Compliance: 100 Functions Missing Execution-Agent or Review-Agent Assignments' (kept 2dae7361-6c27-81ef-99c1-dae42f2b533d)"
+      ]
+    },
+    {
+      "id": "2d8e7361-6c27-815f-9b34-e8680f76a567",
+      "url": "https://www.notion.so/2d8e73616c27815f9b34e8680f76a567",
+      "name": "DriveSheetsSync: Google Drive File Visibility Investigation",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DriveSheetsSync: Google Drive File Visibility Investigation' (kept 2d8e7361-6c27-813d-b47d-e51717036e4b)"
+      ]
+    },
+    {
+      "id": "2d8e7361-6c27-81a3-b010-c8229e759e0d",
+      "url": "https://www.notion.so/2d8e73616c2781a3b010c8229e759e0d",
+      "name": "DriveSheetsSync: Google Drive File Visibility Investigation",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DriveSheetsSync: Google Drive File Visibility Investigation' (kept 2d8e7361-6c27-813d-b47d-e51717036e4b)"
+      ]
+    },
+    {
+      "id": "2d8e7361-6c27-8178-98c7-dc223ad7743d",
+      "url": "https://www.notion.so/2d8e73616c27817898c7dc223ad7743d",
+      "name": "DriveSheetsSync: Deprecated Endpoint Fallback Usage",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DriveSheetsSync: Deprecated Endpoint Fallback Usage' (kept 2d8e7361-6c27-81a2-a9a2-d42224e02195)"
+      ]
+    },
+    {
+      "id": "2d8e7361-6c27-81d6-8913-e80c5de8f46d",
+      "url": "https://www.notion.so/2d8e73616c2781d68913e80c5de8f46d",
+      "name": "DriveSheetsSync: Deprecated Endpoint Fallback Usage",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DriveSheetsSync: Deprecated Endpoint Fallback Usage' (kept 2d8e7361-6c27-81a2-a9a2-d42224e02195)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-814f-937a-d9af885d5e93",
+      "url": "https://www.notion.so/2d9e73616c27814f937ad9af885d5e93",
+      "name": "DEMA Video_Final.mov Render 23.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 23.mov Render.mov' (kept 2d9e7361-6c27-8101-905e-c356b117cf7f)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81a3-819d-dbff9972292c",
+      "url": "https://www.notion.so/2d9e73616c2781a3819ddbff9972292c",
+      "name": "DEMA Video_Final.mov Render 12.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 12.mov Render.mov' (kept 2d9e7361-6c27-8101-9bec-e1a6226dd90a)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8167-9164-d3431f17a549",
+      "url": "https://www.notion.so/2d9e73616c2781679164d3431f17a549",
+      "name": "DEMA Video_Final_NoTitles.mov Render 2.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final_NoTitles.mov Render 2.mov Render.mov' (kept 2d9e7361-6c27-8103-92eb-d08e26699ccf)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8104-b04d-c9d5d5d592c0",
+      "url": "https://www.notion.so/2d9e73616c278104b04dc9d5d5d592c0",
+      "name": "a-good-mood by young-rich-pixies Artlist.wav",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'a-good-mood by young-rich-pixies Artlist.wav' (kept 2d9e7361-6c27-81e1-9dbb-d831aa12f452)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8108-8044-c752fc3d98bf",
+      "url": "https://www.notion.so/2d9e73616c2781088044c752fc3d98bf",
+      "name": "END TITLE",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'END TITLE' (kept 2d9e7361-6c27-81c7-ae7a-da20f40c62dd)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8163-bfcd-f560101bee09",
+      "url": "https://www.notion.so/2d9e73616c278163bfcdf560101bee09",
+      "name": "music-for-the-soul---instrumental-version_by_ben-goldstein-_Artlist.wav",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'music-for-the-soul---instrumental-version_by_ben-goldstein-_Artlist.wav' (kept 2d9e7361-6c27-8108-82f7-c7d68fbc0fd4)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-810b-9e22-ec61fbbd7819",
+      "url": "https://www.notion.so/2d9e73616c27810b9e22ec61fbbd7819",
+      "name": "092824_Tarpon Terrace_HC__V1-0013.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of '092824_Tarpon Terrace_HC__V1-0013.mov' (kept 2d9e7361-6c27-8162-a14d-ddd8dd9ff7e7)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-810d-8db0-d6d932f136a9",
+      "url": "https://www.notion.so/2d9e73616c27810d8db0d6d932f136a9",
+      "name": "Horizontal Slide",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Horizontal Slide' (kept 2d9e7361-6c27-81c9-8f4e-fd76317a3a62)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8143-b8b1-c16b948a3619",
+      "url": "https://www.notion.so/2d9e73616c278143b8b1c16b948a3619",
+      "name": "Cayman OF Divers 4K.m4v",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Cayman OF Divers 4K.m4v' (kept 2d9e7361-6c27-810e-9e25-fa7508d295ad)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-810f-8c9f-fcd3ab64222e",
+      "url": "https://www.notion.so/2d9e73616c27810f8c9ffcd3ab64222e",
+      "name": "#1 BEST OVERALL OPERATOR",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of '#1 BEST OVERALL OPERATOR' (kept 2d9e7361-6c27-8117-a6dd-c9d54697e281)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8111-a3c6-ddd251b0d050",
+      "url": "https://www.notion.so/2d9e73616c278111a3c6ddd251b0d050",
+      "name": "DEMA Video_Final.mov Render 21.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 21.mov Render.mov' (kept 2d9e7361-6c27-814f-a86f-ffcf50c026b4)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8111-a5c1-edd1ee2806b8",
+      "url": "https://www.notion.so/2d9e73616c278111a5c1edd1ee2806b8",
+      "name": "DEMA Video_Final.mov Render 17.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 17.mov Render.mov' (kept 2d9e7361-6c27-81f0-99c1-fcf90e266007)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8112-84ac-dec525b5a571",
+      "url": "https://www.notion.so/2d9e73616c27811284acdec525b5a571",
+      "name": "092824_Tarpon Terrace_HC__V1-0034.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of '092824_Tarpon Terrace_HC__V1-0034.mov' (kept 2d9e7361-6c27-81f3-9b85-d558eb895ad3)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8114-8386-d621f201e5cd",
+      "url": "https://www.notion.so/2d9e73616c2781148386d621f201e5cd",
+      "name": "Choosing Ocean Frontiers [Hunter Taylor '24].mp4",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Choosing Ocean Frontiers [Hunter Taylor '24].mp4' (kept 2d9e7361-6c27-8127-a0fe-f138a4934ef1)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8118-812c-d1e527ed9419",
+      "url": "https://www.notion.so/2d9e73616c278118812cd1e527ed9419",
+      "name": "DEMA Video_Final.mov Render 27.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 27.mov' (kept 2d9e7361-6c27-8148-9db3-f0cd22ee4bd6)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8119-815f-c9afbb04fe9b",
+      "url": "https://www.notion.so/2d9e73616c278119815fc9afbb04fe9b",
+      "name": "DEMA Video_Final.mov Render 1.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 1.mov Render.mov' (kept 2d9e7361-6c27-81e4-94b5-db54c72de650)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8122-b864-def6fce2eac7",
+      "url": "https://www.notion.so/2d9e73616c278122b864def6fce2eac7",
+      "name": "DEMA Video_Final_NoTitles.mov Render 1.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final_NoTitles.mov Render 1.mov Render.mov' (kept 2d9e7361-6c27-8119-8e66-cef08b3b0fd0)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81d1-ac57-ff5ff9e2972c",
+      "url": "https://www.notion.so/2d9e73616c2781d1ac57ff5ff9e2972c",
+      "name": "Alex R Kopp - Ocean Pacifica.mp3",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Alex R Kopp - Ocean Pacifica.mp3' (kept 2d9e7361-6c27-811e-b789-c38dfbd964d1)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-811f-81b7-c0efa3959c91",
+      "url": "https://www.notion.so/2d9e73616c27811f81b7c0efa3959c91",
+      "name": "Location and Benefits of East End [Steve Broadbelt '24 Interview].mp4",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Location and Benefits of East End [Steve Broadbelt '24 Interview].mp4' (kept 2d9e7361-6c27-8153-bb38-d602cf2d1ff8)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8121-afb5-f9399b787f0c",
+      "url": "https://www.notion.so/2d9e73616c278121afb5f9399b787f0c",
+      "name": "DEMA Video_Final.mov Render 20.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 20.mov' (kept 2d9e7361-6c27-81f1-922d-e7b8a5f5c619)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8122-9fa5-fe364951dbf5",
+      "url": "https://www.notion.so/2d9e73616c2781229fa5fe364951dbf5",
+      "name": "DEMA Video_Final.mov Render 16.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 16.mov Render.mov' (kept 2d9e7361-6c27-8194-b5a1-edc6237cf11e)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81b4-8ffd-f7a7d81577ee",
+      "url": "https://www.notion.so/2d9e73616c2781b48ffdf7a7d81577ee",
+      "name": "Location and Benefits of East End [Steve Broadbelt '24 Interview].mp4 Render 1.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Location and Benefits of East End [Steve Broadbelt '24 Interview].mp4 Render 1.mov Render.mov' (kept 2d9e7361-6c27-8123-9bf1-f508fdcbe5cc)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8181-85e3-cbd94519e2a9",
+      "url": "https://www.notion.so/2d9e73616c27818185e3cbd94519e2a9",
+      "name": "LightItOn.mp3",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'LightItOn.mp3' (kept 2d9e7361-6c27-8124-afe9-f0119331a48d)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8148-a963-ef14cf5856be",
+      "url": "https://www.notion.so/2d9e73616c278148a963ef14cf5856be",
+      "name": "DEMA Video_Final.mov Render 38.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 38.mov Render.mov' (kept 2d9e7361-6c27-8125-820c-d7196d27ce34)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81fd-a72a-d2934538c7c2",
+      "url": "https://www.notion.so/2d9e73616c2781fda72ad2934538c7c2",
+      "name": "DEMA Video_Final.mov Render 14.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 14.mov' (kept 2d9e7361-6c27-8127-80dd-df602e67a7f6)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8128-a6bb-d4510ac33324",
+      "url": "https://www.notion.so/2d9e73616c278128a6bbd4510ac33324",
+      "name": "Solid Color",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Solid Color' (kept 2d9e7361-6c27-8152-a2d8-ffc2e710c088)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81f0-bdc1-ee5de7216c15",
+      "url": "https://www.notion.so/2d9e73616c2781f0bdc1ee5de7216c15",
+      "name": "tropical-paradise_by_theevs_Artlist.wav",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'tropical-paradise_by_theevs_Artlist.wav' (kept 2d9e7361-6c27-8129-8491-fcc7093b8273)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-812a-b861-ea1737df4686",
+      "url": "https://www.notion.so/2d9e73616c27812ab861ea1737df4686",
+      "name": "DEMA Video_Final.mov Render 15.mov Render 1.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 15.mov Render 1.mov' (kept 2d9e7361-6c27-81b8-8a6f-c3ad48ef040b)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81ea-b583-c947ee34e616",
+      "url": "https://www.notion.so/2d9e73616c2781eab583c947ee34e616",
+      "name": "DEMA Video_Final.mov Render 4.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 4.mov Render.mov' (kept 2d9e7361-6c27-812f-bb6b-d3229a79eb8e)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8163-a383-f55cb21c0752",
+      "url": "https://www.notion.so/2d9e73616c278163a383f55cb21c0752",
+      "name": "Cayman OF Divers 4K.m4v Render.mov Render 1.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Cayman OF Divers 4K.m4v Render.mov Render 1.mov' (kept 2d9e7361-6c27-8134-ab93-cd6648aa47e2)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81c2-a3c4-c3ebffe1026c",
+      "url": "https://www.notion.so/2d9e73616c2781c2a3c4c3ebffe1026c",
+      "name": "DEMA Video_Final_NoTitles.mov Render 20.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final_NoTitles.mov Render 20.mov' (kept 2d9e7361-6c27-8137-8e1a-f963f79058de)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81e3-a3db-c639666307f2",
+      "url": "https://www.notion.so/2d9e73616c2781e3a3dbc639666307f2",
+      "name": "DEMA Video_Final.mov Render 9.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 9.mov Render.mov' (kept 2d9e7361-6c27-813b-9916-c4be846dd584)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-813f-8f1f-e2fd04748567",
+      "url": "https://www.notion.so/2d9e73616c27813f8f1fe2fd04748567",
+      "name": "DEMA Video_Final.mov Render 7.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 7.mov' (kept 2d9e7361-6c27-813d-9e95-d15c0a1093ce)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8174-9d41-e47246c7c501",
+      "url": "https://www.notion.so/2d9e73616c2781749d41e47246c7c501",
+      "name": "DEMA Video_Final_NoTitles.mov Render.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final_NoTitles.mov Render.mov Render.mov' (kept 2d9e7361-6c27-813f-a2e1-f932000f6235)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8140-a394-c1e180a64e1a",
+      "url": "https://www.notion.so/2d9e73616c278140a394c1e180a64e1a",
+      "name": "OF_Toby_Ironshore_150623_Silversides_1.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'OF_Toby_Ironshore_150623_Silversides_1.mov' (kept 2d9e7361-6c27-81ce-9721-cfa40c4da73b)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8145-8ce7-e98ab77df9ff",
+      "url": "https://www.notion.so/2d9e73616c2781458ce7e98ab77df9ff",
+      "name": "What is Ocean Frontiers [Andy Wilson].m4a",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'What is Ocean Frontiers [Andy Wilson].m4a' (kept 2d9e7361-6c27-81a3-875e-e79584fec12a)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8185-a382-c9dfd00473b8",
+      "url": "https://www.notion.so/2d9e73616c278185a382c9dfd00473b8",
+      "name": "DEMA Video_Final.mov Render 25.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 25.mov' (kept 2d9e7361-6c27-8146-a390-faeb9b79eba7)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8147-b475-d1e32c6a22f9",
+      "url": "https://www.notion.so/2d9e73616c278147b475d1e32c6a22f9",
+      "name": "DEMA Video_Final.mov Render 37.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 37.mov Render.mov' (kept 2d9e7361-6c27-81d8-91f6-dff7c575347f)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8148-99e7-c1f9fcc0dc39",
+      "url": "https://www.notion.so/2d9e73616c27814899e7c1f9fcc0dc39",
+      "name": "DEMA Video_Final.mov Render 26.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 26.mov Render.mov' (kept 2d9e7361-6c27-81a5-9919-c4cf84b2851b)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81ce-ada9-ef72a238c5e8",
+      "url": "https://www.notion.so/2d9e73616c2781ceada9ef72a238c5e8",
+      "name": "Jack-Mckenneys-aerial.mp4",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Jack-Mckenneys-aerial.mp4' (kept 2d9e7361-6c27-814c-afff-edfeee6e41c4)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81ce-a449-c7898d563043",
+      "url": "https://www.notion.so/2d9e73616c2781cea449c7898d563043",
+      "name": "Cayman OF Divers 4K.m4v Render 3.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Cayman OF Divers 4K.m4v Render 3.mov' (kept 2d9e7361-6c27-814e-a011-d2d892f24212)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8151-9045-eca0de8c5bbd",
+      "url": "https://www.notion.so/2d9e73616c2781519045eca0de8c5bbd",
+      "name": "DEMA Video_Final.mov Render 18.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 18.mov Render.mov' (kept 2d9e7361-6c27-81e2-b04c-fd6d6e8d7ecd)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8153-95c9-fcd25d3f905d",
+      "url": "https://www.notion.so/2d9e73616c27815395c9fcd25d3f905d",
+      "name": "DEMA Video_Final.mov Render 3.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 3.mov Render.mov' (kept 2d9e7361-6c27-81f5-a917-d3eba1b7b208)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8153-99ef-f14f732afd1f",
+      "url": "https://www.notion.so/2d9e73616c27815399eff14f732afd1f",
+      "name": "Roll out of Bed and Onto the Dive Boat  [Carol Murphy '24].mp4",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Roll out of Bed and Onto the Dive Boat  [Carol Murphy '24].mp4' (kept 2d9e7361-6c27-8179-a691-ea5149698219)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8155-ba6f-dfc9bc33f591",
+      "url": "https://www.notion.so/2d9e73616c278155ba6fdfc9bc33f591",
+      "name": "Scubie Award.png",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Scubie Award.png' (kept 2d9e7361-6c27-818d-b0c8-dfc143df6329)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81e2-af0c-e83e5066df83",
+      "url": "https://www.notion.so/2d9e73616c2781e2af0ce83e5066df83",
+      "name": "DEMA Video_Final.mov Render 34.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 34.mov' (kept 2d9e7361-6c27-8155-bf6d-eb2c0752d683)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8166-94c9-ea91c3c8d85b",
+      "url": "https://www.notion.so/2d9e73616c27816694c9ea91c3c8d85b",
+      "name": "DEMA Video_Final_NoTitles.mov Render 3.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final_NoTitles.mov Render 3.mov Render.mov' (kept 2d9e7361-6c27-81b7-9b2d-efad79a0278e)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81e7-878e-faecc96475eb",
+      "url": "https://www.notion.so/2d9e73616c2781e7878efaecc96475eb",
+      "name": "DEMA Video_Final.mov Render 39.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 39.mov Render.mov' (kept 2d9e7361-6c27-8166-98ee-c660f331e421)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-819d-82cb-cc01eca0a105",
+      "url": "https://www.notion.so/2d9e73616c27819d82cbcc01eca0a105",
+      "name": "DEMA Video_Final.mov Render 36.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 36.mov Render.mov' (kept 2d9e7361-6c27-8166-9d26-d33931d7527f)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8169-91a3-c862f1f6902f",
+      "url": "https://www.notion.so/2d9e73616c27816991a3c862f1f6902f",
+      "name": "Cayman OF Divers 4K.m4v Render 13.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Cayman OF Divers 4K.m4v Render 13.mov' (kept 2d9e7361-6c27-8199-b502-fc81bc1a0a84)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8169-9924-f1ca5d4c3b66",
+      "url": "https://www.notion.so/2d9e73616c2781699924f1ca5d4c3b66",
+      "name": "DEMA Video_Final.mov Render 29.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 29.mov Render.mov' (kept 2d9e7361-6c27-81fb-bc72-d9e582927b24)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-816a-ae8a-f641bef92378",
+      "url": "https://www.notion.so/2d9e73616c27816aae8af641bef92378",
+      "name": "DEMA Video_Final_NoTitles.mov Render 7.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final_NoTitles.mov Render 7.mov Render.mov' (kept 2d9e7361-6c27-8193-bdcc-c1d2baa123f6)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81ae-a7fe-e1a3556f6abf",
+      "url": "https://www.notion.so/2d9e73616c2781aea7fee1a3556f6abf",
+      "name": "020324_LighthouseWall_17.mp4",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of '020324_LighthouseWall_17.mp4' (kept 2d9e7361-6c27-816b-ba0e-d2b12ca38c97)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-816c-a121-c5152c4ae7d7",
+      "url": "https://www.notion.so/2d9e73616c27816ca121c5152c4ae7d7",
+      "name": "Cayman OF Divers 4K.m4v Render 2.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Cayman OF Divers 4K.m4v Render 2.mov' (kept 2d9e7361-6c27-819e-8e0e-d97a815033e4)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81d5-b040-ec227d8d89e7",
+      "url": "https://www.notion.so/2d9e73616c2781d5b040ec227d8d89e7",
+      "name": "Significance and Design of the Boats [Steve Broadbelt '24 Interview].mp4",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Significance and Design of the Boats [Steve Broadbelt '24 Interview].mp4' (kept 2d9e7361-6c27-8170-8679-e4a15368b050)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8177-8850-c8e16ff8c6a4",
+      "url": "https://www.notion.so/2d9e73616c2781778850c8e16ff8c6a4",
+      "name": "Cayman OF Divers 4K.m4v Render 12.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Cayman OF Divers 4K.m4v Render 12.mov' (kept 2d9e7361-6c27-8171-8f61-d733c51e0d44)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8172-aa4d-c190acea64bb",
+      "url": "https://www.notion.so/2d9e73616c278172aa4dc190acea64bb",
+      "name": "Cayman OF Divers 4K.m4v Render 14.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Cayman OF Divers 4K.m4v Render 14.mov' (kept 2d9e7361-6c27-818d-92d1-e9ac0dc7afeb)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81c5-8d1c-ecfce995286c",
+      "url": "https://www.notion.so/2d9e73616c2781c58d1cecfce995286c",
+      "name": "DEMA Video_Final.mov Render 8.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 8.mov Render.mov' (kept 2d9e7361-6c27-8172-b2ad-f8cc89cdd6c1)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8191-826b-e8087c65060b",
+      "url": "https://www.notion.so/2d9e73616c278191826be8087c65060b",
+      "name": "DEMA Video_Final.mov Render 22.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 22.mov Render.mov' (kept 2d9e7361-6c27-8172-ba23-e555e7d7cfca)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81a5-aa99-caadcc9d4942",
+      "url": "https://www.notion.so/2d9e73616c2781a5aa99caadcc9d4942",
+      "name": "DEMA Video_Final.mov Render 5.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 5.mov Render.mov' (kept 2d9e7361-6c27-8175-a8bb-cfacc07a4ca8)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8177-bf9d-fa9bc0f21b02",
+      "url": "https://www.notion.so/2d9e73616c278177bf9dfa9bc0f21b02",
+      "name": "DEMA Video_Final.mov Render 17.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 17.mov' (kept 2d9e7361-6c27-81d2-837c-cc4464d208dd)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-817a-91de-e0ba0f13addf",
+      "url": "https://www.notion.so/2d9e73616c27817a91dee0ba0f13addf",
+      "name": "DEMA Video_Final.mov Render.mov Render 1.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render.mov Render 1.mov' (kept 2d9e7361-6c27-81a7-bbec-f774da972724)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-817b-b72f-e61266922d7b",
+      "url": "https://www.notion.so/2d9e73616c27817bb72fe61266922d7b",
+      "name": "020524_OWCert_Pool_2.mp4",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of '020524_OWCert_Pool_2.mp4' (kept 2d9e7361-6c27-817e-960c-ec1294478144)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-817c-89db-fcbd7cb4f7e3",
+      "url": "https://www.notion.so/2d9e73616c27817c89dbfcbd7cb4f7e3",
+      "name": "DEMA Video_Final.mov Render 35.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 35.mov Render.mov' (kept 2d9e7361-6c27-8193-a30e-eaaa957aeaa1)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8181-838c-c4c1fe5e97f3",
+      "url": "https://www.notion.so/2d9e73616c278181838cc4c1fe5e97f3",
+      "name": "D54A6015_FilmingSharkSloMo.MP4",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'D54A6015_FilmingSharkSloMo.MP4' (kept 2d9e7361-6c27-81a6-abc0-e3cc9965a5e3)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81d2-9f8b-e19c3fb70475",
+      "url": "https://www.notion.so/2d9e73616c2781d29f8be19c3fb70475",
+      "name": "DEMA Video_Final.mov Render 30.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 30.mov Render.mov' (kept 2d9e7361-6c27-8181-b36e-fa09cd31274a)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8188-89c5-d88e48a5a8c9",
+      "url": "https://www.notion.so/2d9e73616c27818889c5d88e48a5a8c9",
+      "name": "DEMA Video_Final.mov Render 28.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 28.mov Render.mov' (kept 2d9e7361-6c27-81aa-aa6a-c58896495c6c)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-818c-a049-fc4b5e485c45",
+      "url": "https://www.notion.so/2d9e73616c27818ca049fc4b5e485c45",
+      "name": "Roll out of Bed and Onto the Dive Boat  [Carol Murphy '24].mp4 Render.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Roll out of Bed and Onto the Dive Boat  [Carol Murphy '24].mp4 Render.mov Render.mov' (kept 2d9e7361-6c27-81d8-84bc-f022a4aa8c54)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81eb-bcc6-e13a20f27e05",
+      "url": "https://www.notion.so/2d9e73616c2781ebbcc6e13a20f27e05",
+      "name": "Location and Benefits of East End [Steve Broadbelt '24 Interview].mp4 Render.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Location and Benefits of East End [Steve Broadbelt '24 Interview].mp4 Render.mov Render.mov' (kept 2d9e7361-6c27-818c-b91d-d80ca0169368)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8191-8dbe-c5331028ec3c",
+      "url": "https://www.notion.so/2d9e73616c2781918dbec5331028ec3c",
+      "name": "DEMA Video_Final.mov Render 11.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 11.mov' (kept 2d9e7361-6c27-8194-b014-edf7208078c1)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81a9-a2df-d0d51bd98afc",
+      "url": "https://www.notion.so/2d9e73616c2781a9a2dfd0d51bd98afc",
+      "name": "DEMA Video_Final.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov' (kept 2d9e7361-6c27-8196-9a10-c3edc9fc2111)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81cd-9a8b-d41184750db5",
+      "url": "https://www.notion.so/2d9e73616c2781cd9a8bd41184750db5",
+      "name": "DEMA Video_Final.mov Render.mov Render.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render.mov Render.mov Render.mov' (kept 2d9e7361-6c27-8198-9b4a-ffd997c2c82b)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81b9-ad80-c203d0ed5429",
+      "url": "https://www.notion.so/2d9e73616c2781b9ad80c203d0ed5429",
+      "name": "Wait for Me.mp3",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Wait for Me.mp3' (kept 2d9e7361-6c27-8199-93c6-f17040cc40b9)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81b6-aeb9-e0b25f0c2256",
+      "url": "https://www.notion.so/2d9e73616c2781b6aeb9e0b25f0c2256",
+      "name": "Opening Title",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Opening Title' (kept 2d9e7361-6c27-8199-b9f1-c94a193b9a21)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-819a-bc04-f3e88408bbc3",
+      "url": "https://www.notion.so/2d9e73616c27819abc04f3e88408bbc3",
+      "name": "Roll out of Bed and Onto the Dive Boat  [Carol Murphy '24].mp4 Render 1.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Roll out of Bed and Onto the Dive Boat  [Carol Murphy '24].mp4 Render 1.mov Render.mov' (kept 2d9e7361-6c27-81a6-9525-f7327acac9c1)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-819c-b7fb-ff3a8b80093a",
+      "url": "https://www.notion.so/2d9e73616c27819cb7fbff3a8b80093a",
+      "name": "QUALITY OF FACILITIES",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'QUALITY OF FACILITIES' (kept 2d9e7361-6c27-81be-97a9-d5067a570ab2)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81b6-9866-c23204baf69d",
+      "url": "https://www.notion.so/2d9e73616c2781b69866c23204baf69d",
+      "name": "Describing the Diving Experience at East End [Steve Broadbelt '24 Interview].mp4",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Describing the Diving Experience at East End [Steve Broadbelt '24 Interview].mp4' (kept 2d9e7361-6c27-81a3-9ce0-d1713e7fa8c8)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81a9-bfd4-ca29206df9a0",
+      "url": "https://www.notion.so/2d9e73616c2781a9bfd4ca29206df9a0",
+      "name": "DEMA Video_Final.mov Render 31.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 31.mov Render.mov' (kept 2d9e7361-6c27-81b9-9417-c14c6add076f)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81aa-95a3-c9635e8cd50e",
+      "url": "https://www.notion.so/2d9e73616c2781aa95a3c9635e8cd50e",
+      "name": "DEMA Video_Final_NoTitles.mov Render 6.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final_NoTitles.mov Render 6.mov Render.mov' (kept 2d9e7361-6c27-81e1-b10c-c2453e86ad74)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81c8-96ea-c14ad246c79d",
+      "url": "https://www.notion.so/2d9e73616c2781c896eac14ad246c79d",
+      "name": "DEMA Video_Final.mov Render 15.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 15.mov Render.mov' (kept 2d9e7361-6c27-81b1-8871-d7d1ff97e905)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81b4-9cfc-eb384525162e",
+      "url": "https://www.notion.so/2d9e73616c2781b49cfceb384525162e",
+      "name": "Cayman swimming pools 4K.m4v",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Cayman swimming pools 4K.m4v' (kept 2d9e7361-6c27-81c9-a60f-e27096149040)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81b6-b82c-f558d515e42c",
+      "url": "https://www.notion.so/2d9e73616c2781b6b82cf558d515e42c",
+      "name": "DEMA Video_Final.mov Render 12.mov Render 1.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 12.mov Render 1.mov' (kept 2d9e7361-6c27-81d2-8b76-cfdccbd0bd52)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81c2-9b42-d225ac646096",
+      "url": "https://www.notion.so/2d9e73616c2781c29b42d225ac646096",
+      "name": "DEMA Video_Final.mov Render 19.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 19.mov Render.mov' (kept 2d9e7361-6c27-81e2-9204-f2fae324def3)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81d2-b150-f6a7c1c15dd5",
+      "url": "https://www.notion.so/2d9e73616c2781d2b150f6a7c1c15dd5",
+      "name": "DEMA Video_Final.mov Render 2.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 2.mov Render.mov' (kept 2d9e7361-6c27-81c2-ab9e-e58d70f5a32d)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81dd-bb4a-fd1dcab37336",
+      "url": "https://www.notion.so/2d9e73616c2781ddbb4afd1dcab37336",
+      "name": "DEMA VIDEO 2026 UPDATE BACKUP copy.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA VIDEO 2026 UPDATE BACKUP copy.mov' (kept 2d9e7361-6c27-81c3-8c14-e9d644a0cbee)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81f6-8dca-e5a92e53af91",
+      "url": "https://www.notion.so/2d9e73616c2781f68dcae5a92e53af91",
+      "name": "012824_OF_ColliersBay_Aerial_2.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of '012824_OF_ColliersBay_Aerial_2.mov' (kept 2d9e7361-6c27-81d8-b061-ed42d70cdf1c)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81e2-bbed-e7c7547be698",
+      "url": "https://www.notion.so/2d9e73616c2781e2bbede7c7547be698",
+      "name": "020624_OF_Kelly'sCaverns_AdvancedOW_Osmo_UW_11.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of '020624_OF_Kelly'sCaverns_AdvancedOW_Osmo_UW_11.mov' (kept 2d9e7361-6c27-81f0-b5a9-d93a2bc66f7e)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81ee-ae76-d43d62d400da",
+      "url": "https://www.notion.so/2d9e73616c2781eeae76d43d62d400da",
+      "name": "DEMA Video_Final.mov Render 32.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 32.mov Render.mov' (kept 2d9e7361-6c27-81e9-bb2e-d449d0458ca3)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81ec-80ed-d56184d7ce29",
+      "url": "https://www.notion.so/2d9e73616c2781ec80edd56184d7ce29",
+      "name": "DEMA Video_Final.mov Render 13.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'DEMA Video_Final.mov Render 13.mov Render.mov' (kept 2d9e7361-6c27-81f9-a9f6-c2f05fe56087)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-8101-aa42-e875bf8e033b",
+      "url": "https://www.notion.so/2dae73616c278101aa42e875bf8e033b",
+      "name": "CRITICAL: Recurring Environment Management Pattern Violations - Needs Permanent Solution",
+      "status_from": "Solution In Progress",
+      "status_to": "Resolved",
+      "priority_from": "Critical",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'CRITICAL: Recurring Environment Management Pattern Violations - Needs Permanent Solution' (kept 2dae7361-6c27-81ed-80e2-e8b760135477)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-81d3-9dc5-ca725fbea3d8",
+      "url": "https://www.notion.so/2dae73616c2781d39dc5ca725fbea3d8",
+      "name": "CRITICAL: Recurring Environment Management Pattern Violations - Needs Permanent Solution",
+      "status_from": "Solution In Progress",
+      "status_to": "Resolved",
+      "priority_from": "Critical",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'CRITICAL: Recurring Environment Management Pattern Violations - Needs Permanent Solution' (kept 2dae7361-6c27-81ed-80e2-e8b760135477)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-8136-ba44-f7379eb6d803",
+      "url": "https://www.notion.so/2dae73616c278136ba44f7379eb6d803",
+      "name": "Agent-Functions Compliance: 49 Functions Missing Execution-Agent or Review-Agent Assignments",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "High",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'Agent-Functions Compliance: 49 Functions Missing Execution-Agent or Review-Agent Assignments' (kept 2dae7361-6c27-8141-8290-d8cc29e284c4)"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-8161-9740-d96a952f2f41",
+      "url": "https://www.notion.so/2dae73616c2781619740d96a952f2f41",
+      "name": "CRITICAL: Task Handoff Instruction Logic Updated - All Agents Must Review & Validate",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": "Critical",
+      "priority_to": null,
+      "reasons": [
+        "Duplicate of 'CRITICAL: Task Handoff Instruction Logic Updated - All Agents Must Review & Validate' (kept 2dae7361-6c27-81d6-8ae5-ed36507a0282)"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8101-905e-c356b117cf7f",
+      "url": "https://www.notion.so/2d9e73616c278101905ec356b117cf7f",
+      "name": "DEMA Video_Final.mov Render 23.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8101-9bec-e1a6226dd90a",
+      "url": "https://www.notion.so/2d9e73616c2781019bece1a6226dd90a",
+      "name": "DEMA Video_Final.mov Render 12.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8103-92eb-d08e26699ccf",
+      "url": "https://www.notion.so/2d9e73616c27810392ebd08e26699ccf",
+      "name": "DEMA Video_Final_NoTitles.mov Render 2.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8108-82f7-c7d68fbc0fd4",
+      "url": "https://www.notion.so/2d9e73616c27810882f7c7d68fbc0fd4",
+      "name": "music-for-the-soul---instrumental-version_by_ben-goldstein-_Artlist.wav",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-810b-a885-f72e6f3b1b88",
+      "url": "https://www.notion.so/2d9e73616c27810ba885f72e6f3b1b88",
+      "name": "DEMA Video_Final_NoTitles.mov Render 13.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-810b-b1b9-f6325623410d",
+      "url": "https://www.notion.so/2d9e73616c27810bb1b9f6325623410d",
+      "name": "DEMA Video_Final_NoTitles.mov Render 5.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-810e-9e25-fa7508d295ad",
+      "url": "https://www.notion.so/2d9e73616c27810e9e25fa7508d295ad",
+      "name": "Cayman OF Divers 4K.m4v",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8114-bf69-d24bf1175575",
+      "url": "https://www.notion.so/2d9e73616c278114bf69d24bf1175575",
+      "name": "012824_OF_ColliersBeach_Aerial_4.mp4",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8119-8e66-cef08b3b0fd0",
+      "url": "https://www.notion.so/2d9e73616c2781198e66cef08b3b0fd0",
+      "name": "DEMA Video_Final_NoTitles.mov Render 1.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-811b-8366-d2552653d507",
+      "url": "https://www.notion.so/2d9e73616c27811b8366d2552653d507",
+      "name": "DEMA Video_Final_NoTitles.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-811b-bfce-c541a9f8b80d",
+      "url": "https://www.notion.so/2d9e73616c27811bbfcec541a9f8b80d",
+      "name": "DEMA Video_Final.mov Render 6.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-811c-87ec-cbd5bcdbd78d",
+      "url": "https://www.notion.so/2d9e73616c27811c87eccbd5bcdbd78d",
+      "name": "DEMA Video_Final_NoTitles.mov Render 29.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-811e-b789-c38dfbd964d1",
+      "url": "https://www.notion.so/2d9e73616c27811eb789c38dfbd964d1",
+      "name": "Alex R Kopp - Ocean Pacifica.mp3",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8123-9bf1-f508fdcbe5cc",
+      "url": "https://www.notion.so/2d9e73616c2781239bf1f508fdcbe5cc",
+      "name": "Location and Benefits of East End [Steve Broadbelt '24 Interview].mp4 Render 1.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8124-afe9-f0119331a48d",
+      "url": "https://www.notion.so/2d9e73616c278124afe9f0119331a48d",
+      "name": "LightItOn.mp3",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8125-820c-d7196d27ce34",
+      "url": "https://www.notion.so/2d9e73616c278125820cd7196d27ce34",
+      "name": "DEMA Video_Final.mov Render 38.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8125-bca1-d4e8fa34852f",
+      "url": "https://www.notion.so/2d9e73616c278125bca1d4e8fa34852f",
+      "name": "DEMA Video_Final_NoTitles.mov Render 27.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8127-80dd-df602e67a7f6",
+      "url": "https://www.notion.so/2d9e73616c27812780dddf602e67a7f6",
+      "name": "DEMA Video_Final.mov Render 14.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8127-a0fe-f138a4934ef1",
+      "url": "https://www.notion.so/2d9e73616c278127a0fef138a4934ef1",
+      "name": "Choosing Ocean Frontiers [Hunter Taylor '24].mp4",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8129-8491-fcc7093b8273",
+      "url": "https://www.notion.so/2d9e73616c2781298491fcc7093b8273",
+      "name": "tropical-paradise_by_theevs_Artlist.wav",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-812a-a176-c100d200047d",
+      "url": "https://www.notion.so/2d9e73616c27812aa176c100d200047d",
+      "name": "DEMA Video_Final_NoTitles.mov Render 10.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-812c-b1f5-e127be16822f",
+      "url": "https://www.notion.so/2d9e73616c27812cb1f5e127be16822f",
+      "name": "DEMA Video_Final_NoTitles.mov Render 18.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-812e-b4e3-c6878ef8623d",
+      "url": "https://www.notion.so/2d9e73616c27812eb4e3c6878ef8623d",
+      "name": "Cayman OF Divers 4K.m4v Render 11.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-812f-bb6b-d3229a79eb8e",
+      "url": "https://www.notion.so/2d9e73616c27812fbb6bd3229a79eb8e",
+      "name": "DEMA Video_Final.mov Render 4.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8134-ab93-cd6648aa47e2",
+      "url": "https://www.notion.so/2d9e73616c278134ab93cd6648aa47e2",
+      "name": "Cayman OF Divers 4K.m4v Render.mov Render 1.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8135-a76a-c906dfb8d7f0",
+      "url": "https://www.notion.so/2d9e73616c278135a76ac906dfb8d7f0",
+      "name": "2019_OF_KittiwakeAerials_95936.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8137-8e1a-f963f79058de",
+      "url": "https://www.notion.so/2d9e73616c2781378e1af963f79058de",
+      "name": "DEMA Video_Final_NoTitles.mov Render 20.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-813b-9916-c4be846dd584",
+      "url": "https://www.notion.so/2d9e73616c27813b9916c4be846dd584",
+      "name": "DEMA Video_Final.mov Render 9.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-813c-ac05-de4f6400d6d0",
+      "url": "https://www.notion.so/2d9e73616c27813cac05de4f6400d6d0",
+      "name": "DEMA Video_Final_NoTitles.mov Render 9.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-813d-9e95-d15c0a1093ce",
+      "url": "https://www.notion.so/2d9e73616c27813d9e95d15c0a1093ce",
+      "name": "DEMA Video_Final.mov Render 7.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-813f-a2e1-f932000f6235",
+      "url": "https://www.notion.so/2d9e73616c27813fa2e1f932000f6235",
+      "name": "DEMA Video_Final_NoTitles.mov Render.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8146-a390-faeb9b79eba7",
+      "url": "https://www.notion.so/2d9e73616c278146a390faeb9b79eba7",
+      "name": "DEMA Video_Final.mov Render 25.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8147-8814-cbfcd1de13d2",
+      "url": "https://www.notion.so/2d9e73616c2781478814cbfcd1de13d2",
+      "name": "DEMA Video_Final_NoTitles.mov Render 15.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8148-9db3-f0cd22ee4bd6",
+      "url": "https://www.notion.so/2d9e73616c2781489db3f0cd22ee4bd6",
+      "name": "DEMA Video_Final.mov Render 27.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8148-a644-ca4ba8941f06",
+      "url": "https://www.notion.so/2d9e73616c278148a644ca4ba8941f06",
+      "name": "DEMA Video_Final_NoTitles.mov Render 4.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8149-be13-e056257028e4",
+      "url": "https://www.notion.so/2d9e73616c278149be13e056257028e4",
+      "name": "DEMA Video_Final_NoTitles.mov Render 22.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-814c-afff-edfeee6e41c4",
+      "url": "https://www.notion.so/2d9e73616c27814cafffedfeee6e41c4",
+      "name": "Jack-Mckenneys-aerial.mp4",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-814e-a011-d2d892f24212",
+      "url": "https://www.notion.so/2d9e73616c27814ea011d2d892f24212",
+      "name": "Cayman OF Divers 4K.m4v Render 3.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-814f-a86f-ffcf50c026b4",
+      "url": "https://www.notion.so/2d9e73616c27814fa86fffcf50c026b4",
+      "name": "DEMA Video_Final.mov Render 21.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8151-992d-e28e377c064c",
+      "url": "https://www.notion.so/2d9e73616c278151992de28e377c064c",
+      "name": "DEMA Video_Final.mov Render 41.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8153-bb38-d602cf2d1ff8",
+      "url": "https://www.notion.so/2d9e73616c278153bb38d602cf2d1ff8",
+      "name": "Location and Benefits of East End [Steve Broadbelt '24 Interview].mp4",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8155-bf6d-eb2c0752d683",
+      "url": "https://www.notion.so/2d9e73616c278155bf6deb2c0752d683",
+      "name": "DEMA Video_Final.mov Render 34.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8156-97b4-c66d89f886db",
+      "url": "https://www.notion.so/2d9e73616c27815697b4c66d89f886db",
+      "name": "DEMA Video_Final_NoTitles.mov Render 12.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8156-b7ff-c054e1e79970",
+      "url": "https://www.notion.so/2d9e73616c278156b7ffc054e1e79970",
+      "name": "DEMA Video_Final_NoTitles.mov Render 31.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8162-a14d-ddd8dd9ff7e7",
+      "url": "https://www.notion.so/2d9e73616c278162a14dddd8dd9ff7e7",
+      "name": "092824_Tarpon Terrace_HC__V1-0013.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8165-8e79-d0f533f34dff",
+      "url": "https://www.notion.so/2d9e73616c2781658e79d0f533f34dff",
+      "name": "DEMA Video_Final_NoTitles.mov Render 11.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8166-98ee-c660f331e421",
+      "url": "https://www.notion.so/2d9e73616c27816698eec660f331e421",
+      "name": "DEMA Video_Final.mov Render 39.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8166-9d26-d33931d7527f",
+      "url": "https://www.notion.so/2d9e73616c2781669d26d33931d7527f",
+      "name": "DEMA Video_Final.mov Render 36.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8167-a564-fcd9739823cf",
+      "url": "https://www.notion.so/2d9e73616c278167a564fcd9739823cf",
+      "name": "Choosing Ocean Frontiers [Hunter Taylor '24].mp4 Render.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-816b-ba0e-d2b12ca38c97",
+      "url": "https://www.notion.so/2d9e73616c27816bba0ed2b12ca38c97",
+      "name": "020324_LighthouseWall_17.mp4",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8170-8679-e4a15368b050",
+      "url": "https://www.notion.so/2d9e73616c2781708679e4a15368b050",
+      "name": "Significance and Design of the Boats [Steve Broadbelt '24 Interview].mp4",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8171-8f61-d733c51e0d44",
+      "url": "https://www.notion.so/2d9e73616c2781718f61d733c51e0d44",
+      "name": "Cayman OF Divers 4K.m4v Render 12.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8172-b2ad-f8cc89cdd6c1",
+      "url": "https://www.notion.so/2d9e73616c278172b2adf8cc89cdd6c1",
+      "name": "DEMA Video_Final.mov Render 8.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8172-ba23-e555e7d7cfca",
+      "url": "https://www.notion.so/2d9e73616c278172ba23e555e7d7cfca",
+      "name": "DEMA Video_Final.mov Render 22.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8175-a8bb-cfacc07a4ca8",
+      "url": "https://www.notion.so/2d9e73616c278175a8bbcfacc07a4ca8",
+      "name": "DEMA Video_Final.mov Render 5.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8178-87b8-f358c895b00f",
+      "url": "https://www.notion.so/2d9e73616c27817887b8f358c895b00f",
+      "name": "Significance and Design of the Boats [Steve Broadbelt '24 Interview].mp4 Render.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8179-a691-ea5149698219",
+      "url": "https://www.notion.so/2d9e73616c278179a691ea5149698219",
+      "name": "Roll out of Bed and Onto the Dive Boat  [Carol Murphy '24].mp4",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-817e-960c-ec1294478144",
+      "url": "https://www.notion.so/2d9e73616c27817e960cec1294478144",
+      "name": "020524_OWCert_Pool_2.mp4",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8181-a237-f27258426e29",
+      "url": "https://www.notion.so/2d9e73616c278181a237f27258426e29",
+      "name": "DEMA Video_Final_NoTitles.mov Render 30.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8181-b36e-fa09cd31274a",
+      "url": "https://www.notion.so/2d9e73616c278181b36efa09cd31274a",
+      "name": "DEMA Video_Final.mov Render 30.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8187-937a-dd00c4e33188",
+      "url": "https://www.notion.so/2d9e73616c278187937add00c4e33188",
+      "name": "DEMA Video_Final_NoTitles.mov Render 32.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-818c-b91d-d80ca0169368",
+      "url": "https://www.notion.so/2d9e73616c27818cb91dd80ca0169368",
+      "name": "Location and Benefits of East End [Steve Broadbelt '24 Interview].mp4 Render.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-818d-92d1-e9ac0dc7afeb",
+      "url": "https://www.notion.so/2d9e73616c27818d92d1e9ac0dc7afeb",
+      "name": "Cayman OF Divers 4K.m4v Render 14.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-818e-a56d-e773078ec3a3",
+      "url": "https://www.notion.so/2d9e73616c27818ea56de773078ec3a3",
+      "name": "DEMA Video_Final_NoTitles.mov Render 8.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-818f-966f-f896fc145874",
+      "url": "https://www.notion.so/2d9e73616c27818f966ff896fc145874",
+      "name": "DEMA Video_Final_NoTitles.mov Render 25.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8190-ab7e-f094f8e71ab7",
+      "url": "https://www.notion.so/2d9e73616c278190ab7ef094f8e71ab7",
+      "name": "DEMA Video_Final_NoTitles.mov Render 17.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8193-a30e-eaaa957aeaa1",
+      "url": "https://www.notion.so/2d9e73616c278193a30eeaaa957aeaa1",
+      "name": "DEMA Video_Final.mov Render 35.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8193-bdcc-c1d2baa123f6",
+      "url": "https://www.notion.so/2d9e73616c278193bdccc1d2baa123f6",
+      "name": "DEMA Video_Final_NoTitles.mov Render 7.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8194-b014-edf7208078c1",
+      "url": "https://www.notion.so/2d9e73616c278194b014edf7208078c1",
+      "name": "DEMA Video_Final.mov Render 11.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8194-b5a1-edc6237cf11e",
+      "url": "https://www.notion.so/2d9e73616c278194b5a1edc6237cf11e",
+      "name": "DEMA Video_Final.mov Render 16.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8196-9a10-c3edc9fc2111",
+      "url": "https://www.notion.so/2d9e73616c2781969a10c3edc9fc2111",
+      "name": "DEMA Video_Final.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8198-9b4a-ffd997c2c82b",
+      "url": "https://www.notion.so/2d9e73616c2781989b4affd997c2c82b",
+      "name": "DEMA Video_Final.mov Render.mov Render.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8199-93c6-f17040cc40b9",
+      "url": "https://www.notion.so/2d9e73616c27819993c6f17040cc40b9",
+      "name": "Wait for Me.mp3",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8199-b502-fc81bc1a0a84",
+      "url": "https://www.notion.so/2d9e73616c278199b502fc81bc1a0a84",
+      "name": "Cayman OF Divers 4K.m4v Render 13.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-819d-8a4f-eaea665f0620",
+      "url": "https://www.notion.so/2d9e73616c27819d8a4feaea665f0620",
+      "name": "DEMA Video_Final_NoTitles.mov Render 19.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-819e-8e0e-d97a815033e4",
+      "url": "https://www.notion.so/2d9e73616c27819e8e0ed97a815033e4",
+      "name": "Cayman OF Divers 4K.m4v Render 2.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81a1-8d01-d28bd9620007",
+      "url": "https://www.notion.so/2d9e73616c2781a18d01d28bd9620007",
+      "name": "020624_TheMaze_28.mp4",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81a3-9ce0-d1713e7fa8c8",
+      "url": "https://www.notion.so/2d9e73616c2781a39ce0d1713e7fa8c8",
+      "name": "Describing the Diving Experience at East End [Steve Broadbelt '24 Interview].mp4",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81a3-9efa-efed8d7038b2",
+      "url": "https://www.notion.so/2d9e73616c2781a39efaefed8d7038b2",
+      "name": "DEMA Video_Final_NoTitles.mov Render 28.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81a5-9919-c4cf84b2851b",
+      "url": "https://www.notion.so/2d9e73616c2781a59919c4cf84b2851b",
+      "name": "DEMA Video_Final.mov Render 26.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81a6-9525-f7327acac9c1",
+      "url": "https://www.notion.so/2d9e73616c2781a69525f7327acac9c1",
+      "name": "Roll out of Bed and Onto the Dive Boat  [Carol Murphy '24].mp4 Render 1.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81a6-abc0-e3cc9965a5e3",
+      "url": "https://www.notion.so/2d9e73616c2781a6abc0e3cc9965a5e3",
+      "name": "D54A6015_FilmingSharkSloMo.MP4",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81a7-bbec-f774da972724",
+      "url": "https://www.notion.so/2d9e73616c2781a7bbecf774da972724",
+      "name": "DEMA Video_Final.mov Render.mov Render 1.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81aa-a1bb-cfe0d0a8e66d",
+      "url": "https://www.notion.so/2d9e73616c2781aaa1bbcfe0d0a8e66d",
+      "name": "Cayman OF Divers 4K.m4v Render 8.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81aa-aa6a-c58896495c6c",
+      "url": "https://www.notion.so/2d9e73616c2781aaaa6ac58896495c6c",
+      "name": "DEMA Video_Final.mov Render 28.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81af-bda5-f15550fa2f59",
+      "url": "https://www.notion.so/2d9e73616c2781afbda5f15550fa2f59",
+      "name": "2019_OF_KittiwakeAerials_95936.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81b1-8871-d7d1ff97e905",
+      "url": "https://www.notion.so/2d9e73616c2781b18871d7d1ff97e905",
+      "name": "DEMA Video_Final.mov Render 15.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81b2-b40a-fb249a712ee6",
+      "url": "https://www.notion.so/2d9e73616c2781b2b40afb249a712ee6",
+      "name": "Cayman OF Divers 4K.m4v Render.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81b7-9b2d-efad79a0278e",
+      "url": "https://www.notion.so/2d9e73616c2781b79b2defad79a0278e",
+      "name": "DEMA Video_Final_NoTitles.mov Render 3.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81b8-8a6f-c3ad48ef040b",
+      "url": "https://www.notion.so/2d9e73616c2781b88a6fc3ad48ef040b",
+      "name": "DEMA Video_Final.mov Render 15.mov Render 1.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81b8-b94f-d1067937304c",
+      "url": "https://www.notion.so/2d9e73616c2781b8b94fd1067937304c",
+      "name": "Choosing Ocean Frontiers [Hunter Taylor '24].mp4 Render 1.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81b9-9417-c14c6add076f",
+      "url": "https://www.notion.so/2d9e73616c2781b99417c14c6add076f",
+      "name": "DEMA Video_Final.mov Render 31.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81bd-b22d-e15c7d949d18",
+      "url": "https://www.notion.so/2d9e73616c2781bdb22de15c7d949d18",
+      "name": "012824_OF_ColliersBeach_Aerial_4.mp4 Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81c1-a588-f7be9e430b3d",
+      "url": "https://www.notion.so/2d9e73616c2781c1a588f7be9e430b3d",
+      "name": "DEMA Video_Final_NoTitles.mov Render 21.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81c2-ab9e-e58d70f5a32d",
+      "url": "https://www.notion.so/2d9e73616c2781c2ab9ee58d70f5a32d",
+      "name": "DEMA Video_Final.mov Render 2.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81c3-8c14-e9d644a0cbee",
+      "url": "https://www.notion.so/2d9e73616c2781c38c14e9d644a0cbee",
+      "name": "DEMA VIDEO 2026 UPDATE BACKUP copy.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81c9-a60f-e27096149040",
+      "url": "https://www.notion.so/2d9e73616c2781c9a60fe27096149040",
+      "name": "Cayman swimming pools 4K.m4v",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81ca-8b08-ee0c90ccde80",
+      "url": "https://www.notion.so/2d9e73616c2781ca8b08ee0c90ccde80",
+      "name": "DEMA Video_Final_NoTitles.mov Render 14.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81cb-8dc5-f338663020d8",
+      "url": "https://www.notion.so/2d9e73616c2781cb8dc5f338663020d8",
+      "name": "DEMA Video_Final.mov Render 24.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81ce-9721-cfa40c4da73b",
+      "url": "https://www.notion.so/2d9e73616c2781ce9721cfa40c4da73b",
+      "name": "OF_Toby_Ironshore_150623_Silversides_1.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81d1-94ae-e0f21af3ec87",
+      "url": "https://www.notion.so/2d9e73616c2781d194aee0f21af3ec87",
+      "name": "Game Changer.mp3",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81d2-837c-cc4464d208dd",
+      "url": "https://www.notion.so/2d9e73616c2781d2837ccc4464d208dd",
+      "name": "DEMA Video_Final.mov Render 17.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81d2-8b76-cfdccbd0bd52",
+      "url": "https://www.notion.so/2d9e73616c2781d28b76cfdccbd0bd52",
+      "name": "DEMA Video_Final.mov Render 12.mov Render 1.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81d8-84bc-f022a4aa8c54",
+      "url": "https://www.notion.so/2d9e73616c2781d884bcf022a4aa8c54",
+      "name": "Roll out of Bed and Onto the Dive Boat  [Carol Murphy '24].mp4 Render.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81d8-91f6-dff7c575347f",
+      "url": "https://www.notion.so/2d9e73616c2781d891f6dff7c575347f",
+      "name": "DEMA Video_Final.mov Render 37.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81d8-b061-ed42d70cdf1c",
+      "url": "https://www.notion.so/2d9e73616c2781d8b061ed42d70cdf1c",
+      "name": "012824_OF_ColliersBay_Aerial_2.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81dc-be13-eac113bc9430",
+      "url": "https://www.notion.so/2d9e73616c2781dcbe13eac113bc9430",
+      "name": "DEMA Video_Final_NoTitles.mov Render.mov Render 1.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81dd-afa2-eb4a78002893",
+      "url": "https://www.notion.so/2d9e73616c2781ddafa2eb4a78002893",
+      "name": "DEMA Video_Final_NoTitles.mov Render 23.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81e1-8135-d2ae627eeb02",
+      "url": "https://www.notion.so/2d9e73616c2781e18135d2ae627eeb02",
+      "name": "DEMA Video_Final_NoTitles.mov Render 16.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81e1-9dbb-d831aa12f452",
+      "url": "https://www.notion.so/2d9e73616c2781e19dbbd831aa12f452",
+      "name": "a-good-mood by young-rich-pixies Artlist.wav",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81e1-b10c-c2453e86ad74",
+      "url": "https://www.notion.so/2d9e73616c2781e1b10cc2453e86ad74",
+      "name": "DEMA Video_Final_NoTitles.mov Render 6.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81e2-9204-f2fae324def3",
+      "url": "https://www.notion.so/2d9e73616c2781e29204f2fae324def3",
+      "name": "DEMA Video_Final.mov Render 19.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81e2-b04c-fd6d6e8d7ecd",
+      "url": "https://www.notion.so/2d9e73616c2781e2b04cfd6d6e8d7ecd",
+      "name": "DEMA Video_Final.mov Render 18.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81e3-931a-c4700378ebe3",
+      "url": "https://www.notion.so/2d9e73616c2781e3931ac4700378ebe3",
+      "name": "DEMA Video_Final.mov Render 40.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81e4-94b5-db54c72de650",
+      "url": "https://www.notion.so/2d9e73616c2781e494b5db54c72de650",
+      "name": "DEMA Video_Final.mov Render 1.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81e5-a10e-c6f7858c61fb",
+      "url": "https://www.notion.so/2d9e73616c2781e5a10ec6f7858c61fb",
+      "name": "Cayman OF Divers 4K.m4v Render 4.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81e9-bb2e-d449d0458ca3",
+      "url": "https://www.notion.so/2d9e73616c2781e9bb2ed449d0458ca3",
+      "name": "DEMA Video_Final.mov Render 32.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81ee-b537-c9cc807dcb04",
+      "url": "https://www.notion.so/2d9e73616c2781eeb537c9cc807dcb04",
+      "name": "Significance and Design of the Boats [Steve Broadbelt '24 Interview].mp4 Render 2.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81f0-99c1-fcf90e266007",
+      "url": "https://www.notion.so/2d9e73616c2781f099c1fcf90e266007",
+      "name": "DEMA Video_Final.mov Render 17.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81f0-b5a9-d93a2bc66f7e",
+      "url": "https://www.notion.so/2d9e73616c2781f0b5a9d93a2bc66f7e",
+      "name": "020624_OF_Kelly'sCaverns_AdvancedOW_Osmo_UW_11.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81f1-922d-e7b8a5f5c619",
+      "url": "https://www.notion.so/2d9e73616c2781f1922de7b8a5f5c619",
+      "name": "DEMA Video_Final.mov Render 20.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81f1-ac95-d4b77df838ee",
+      "url": "https://www.notion.so/2d9e73616c2781f1ac95d4b77df838ee",
+      "name": "Significance and Design of the Boats [Steve Broadbelt '24 Interview].mp4 Render 3.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81f3-9b85-d558eb895ad3",
+      "url": "https://www.notion.so/2d9e73616c2781f39b85d558eb895ad3",
+      "name": "092824_Tarpon Terrace_HC__V1-0034.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81f5-a917-d3eba1b7b208",
+      "url": "https://www.notion.so/2d9e73616c2781f5a917d3eba1b7b208",
+      "name": "DEMA Video_Final.mov Render 3.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81f9-a9f6-c2f05fe56087",
+      "url": "https://www.notion.so/2d9e73616c2781f9a9f6c2f05fe56087",
+      "name": "DEMA Video_Final.mov Render 13.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81fa-9bf8-cb253414f535",
+      "url": "https://www.notion.so/2d9e73616c2781fa9bf8cb253414f535",
+      "name": "Significance and Design of the Boats [Steve Broadbelt '24 Interview].mp4 Render 1.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81fa-a1bf-cb1e72c333b4",
+      "url": "https://www.notion.so/2d9e73616c2781faa1bfcb1e72c333b4",
+      "name": "Cayman OF Divers 4K.m4v Render 10.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81fb-bc72-d9e582927b24",
+      "url": "https://www.notion.so/2d9e73616c2781fbbc72d9e582927b24",
+      "name": "DEMA Video_Final.mov Render 29.mov Render.mov",
+      "status_from": "Unreported",
+      "status_to": "Resolved",
+      "priority_from": null,
+      "priority_to": null,
+      "reasons": [
+        "Auto-generated video asset"
+      ]
+    },
+    {
+      "id": "238e7361-6c27-80dd-a30b-d7242a141cae",
+      "url": "https://www.notion.so/238e73616c2780dda30bd7242a141cae",
+      "name": "Eagle App API steps not working in @soundcloud_downloader_refactored.py",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "High",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "25ce7361-6c27-8176-9589-f3bce8076347",
+      "url": "https://www.notion.so/25ce73616c2781769589f3bce8076347",
+      "name": "Workflows Database - Multiple Redundant Properties Identified",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Low",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "28ee7361-6c27-80f1-9f65-e6680ac5d5d4",
+      "url": "https://www.notion.so/28ee73616c2780f19f65e6680ac5d5d4",
+      "name": "REMOVE_DUPLICATES.PY Not Finding Duplicates Properly",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Low",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2af5f9c4-e300-45eb-8999-3ccff8e1a682",
+      "url": "https://www.notion.so/2af5f9c4e30045eb89993ccff8e1a682",
+      "name": "Image Quality Audit \u2014 Issues from Coral Spawning Week Email",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Medium",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2b1e7361-6c27-8128-95aa-f66fa897f07f",
+      "url": "https://www.notion.so/2b1e73616c27812895aaf66fa897f07f",
+      "name": "[CRITICAL] Filesystem Mount Issue \u2014 Claude MM1 Cannot Access Host macOS Paths \u2014 2025-01-20",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Critical",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2b5e7361-6c27-8147-8cbc-e73a63dbc8f8",
+      "url": "https://www.notion.so/2b5e73616c2781478cbce73a63dbc8f8",
+      "name": "BLOCKER: iPad Library Integration Not Analyzed - Music Sync Incomplete",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Critical",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2b5e7361-6c27-81c2-81aa-c83edc35e977",
+      "url": "https://www.notion.so/2b5e73616c2781c281aac83edc35e977",
+      "name": "[Issue] DriveSheetsSync \u2014 Local File Structure Missing \u2014 2025-11-24",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "High",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2c9e7361-6c27-8190-8dd4-e2b9e74b5166",
+      "url": "https://www.notion.so/2c9e73616c2781908dd4e2b9e74b5166",
+      "name": "[BLOCKER] Services Registry STEP 0/1 \u2014 Notion DNS Resolution Failure \u2014 2025-12-14",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Critical",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2cce7361-6c27-810c-a3d5-f7a10f7a4c3d",
+      "url": "https://www.notion.so/2cce73616c27810ca3d5f7a10f7a4c3d",
+      "name": "[CRITICAL] Empty orchestrator: ultimate_music_workflow.py needs implementation or deprecation",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Critical",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2cce7361-6c27-8117-a9de-cdb5962f39c3",
+      "url": "https://www.notion.so/2cce73616c278117a9decdb5962f39c3",
+      "name": "[CRITICAL] Hardcoded paths: Externalize OUT_DIR, BACKUP_DIR, WAV_BACKUP_DIR, Eagle paths to unified_config",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Critical",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2cce7361-6c27-812f-bb3f-d33eb06c7982",
+      "url": "https://www.notion.so/2cce73616c27812fbb3fd33eb06c7982",
+      "name": "[Schema] Execution-Logs DB missing properties: Run ID, Log Path, Status, Environment",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Medium",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2cce7361-6c27-813c-95f7-f6d276021ba8",
+      "url": "https://www.notion.so/2cce73616c27813c95f7f6d276021ba8",
+      "name": "[GAP] Config Drift \u2014 prod_merge vs aligned scripts use different config patterns \u2014 2025-12-17",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "High",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2cce7361-6c27-8146-a05a-cd49b53435b9",
+      "url": "https://www.notion.so/2cce73616c278146a05acd49b53435b9",
+      "name": "[GAP] Logging Inconsistency \u2014 MGM/unified vs basic logging across music scripts \u2014 2025-12-17",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "High",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2cce7361-6c27-8189-b857-ebe99d39693c",
+      "url": "https://www.notion.so/2cce73616c278189b857ebe99d39693c",
+      "name": "[CRITICAL] Documentation-Script mismatch: Update docs to reference soundcloud_download_prod_merge-2.py",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Critical",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2cce7361-6c27-81d9-9264-eb4418715ea7",
+      "url": "https://www.notion.so/2cce73616c2781d99264eb4418715ea7",
+      "name": "[CRITICAL] Hardcoded Notion Tokens in seren-media-workflows Scripts \u2014 2025-12-17",
+      "status_from": "Solution In Progress",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Critical",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2cce7361-6c27-81ec-a4ab-e283799fc42a",
+      "url": "https://www.notion.so/2cce73616c2781eca4abe283799fc42a",
+      "name": "[Blocker] Codex CLI missing NOTION_TOKEN/NOTION_API_KEY \u2014 2025-12-17",
+      "status_from": "Solution In Progress",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Critical",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2cce7361-6c27-81ee-952c-dfdacbe564f8",
+      "url": "https://www.notion.so/2cce73616c2781ee952cdfdacbe564f8",
+      "name": "[CRITICAL] Music Workflow Prompt \u2014 Empty Orchestrator + Script Naming Discrepancy \u2014 2025-12-17",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Critical",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2cce7361-6c27-81fd-88b7-e66856f5079b",
+      "url": "https://www.notion.so/2cce73616c2781fd88b7e66856f5079b",
+      "name": "[GAP] Spotify New Tracks Processor \u2014 Missing dedupe/post-processing hooks \u2014 2025-12-17",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "High",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2d0e7361-6c27-8153-a344-ca662c39c11a",
+      "url": "https://www.notion.so/2d0e73616c278153a344ca662c39c11a",
+      "name": "Protocol v5.4 PATH POLICY Documentation \u2014 Google Drive Path Alignment",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Low",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2d7e7361-6c27-8118-943d-e5812507bdfe",
+      "url": "https://www.notion.so/2d7e73616c278118943de5812507bdfe",
+      "name": "CRITICAL BUG REPORT: Shell Variable Quoting Caused 8+ Days of False Token Invalid Errors",
+      "status_from": "Troubleshooting",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Critical",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2d8e7361-6c27-8112-b757-fdb55478a91e",
+      "url": "https://www.notion.so/2d8e73616c278112b757fdb55478a91e",
+      "name": "ISSUE: Claude MM1 Did Not Create Validation Agent Handoffs Per Task \u2014 2025-12-29",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Medium",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2d8e7361-6c27-81b1-bc94-c83191a7502d",
+      "url": "https://www.notion.so/2d8e73616c2781b1bc94c83191a7502d",
+      "name": "DriveSheetsSync: Legacy Agent-Tasks Database 404 Error",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "High",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-812e-91f8-d18c29a85552",
+      "url": "https://www.notion.so/2dae73616c27812e91f8d18c29a85552",
+      "name": "Agent-Functions Compliance: 100 Functions Missing Default-Execution-agent Assignments",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Medium",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-8166-8089-d8a43f51c158",
+      "url": "https://www.notion.so/2dae73616c2781668089d8a43f51c158",
+      "name": "Notion MCP API Tool Schema Does Not Support Status Property Updates",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Medium",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2dae7361-6c27-816e-a8b4-d71001760aaa",
+      "url": "https://www.notion.so/2dae73616c27816ea8b4d71001760aaa",
+      "name": "Agent-Tasks Compliance: 100+ Tasks Missing Agent-Function Links",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Medium",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "664384a7-951e-4772-92e7-c3a0cd84d4ba",
+      "url": "https://www.notion.so/664384a7951e477292e7c3a0cd84d4ba",
+      "name": "Missing Notion credentials blocks logging for smoke-run-006",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Low",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    }
+  ],
+  "errors": []
+}

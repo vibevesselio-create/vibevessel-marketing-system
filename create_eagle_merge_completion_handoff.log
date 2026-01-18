@@ -1,0 +1,15 @@
+2026-01-09 20:21:43,796 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/databases/26ce7361-6c27-81bb-81b7-dd43760ee6cc "HTTP/1.1 200 OK"
+2026-01-09 20:21:44,768 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/databases/26ce7361-6c27-81bb-81b7-dd43760ee6cc/query "HTTP/1.1 200 OK"
+2026-01-09 20:21:44,777 - shared_core.notion.folder_resolver - INFO - Retrieved 100 folders from Notion
+2026-01-09 20:21:44,778 - __main__ - INFO - ================================================================================
+2026-01-09 20:21:44,778 - __main__ - INFO - Creating Eagle Library Merge Completion Handoff
+2026-01-09 20:21:44,778 - __main__ - INFO - ================================================================================
+2026-01-09 20:21:45,299 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/pages "HTTP/1.1 200 OK"
+2026-01-09 20:21:45,300 - __main__ - INFO - ✅ Created Notion task: https://www.notion.so/Eagle-Library-Merge-Deduplication-Production-Run-Completion-2e4e73616c27813a9752f89b8d0387de
+2026-01-09 20:21:45,301 - __main__ - INFO - ✅ Created return handoff trigger file: /Users/brianhellemn/Documents/Agents/Agent-Triggers/Claude-MM1-Agent/01_inbox/20260110T022145Z__EAGLE_MERGE_COMPLETION__2e4e7361.json
+2026-01-09 20:21:45,301 - __main__ - INFO - ================================================================================
+2026-01-09 20:21:45,301 - __main__ - INFO - Handoff Creation Complete
+2026-01-09 20:21:45,301 - __main__ - INFO - Status: success
+2026-01-09 20:21:45,301 - __main__ - INFO - Notion Task ID: 2e4e7361-6c27-813a-9752-f89b8d0387de
+2026-01-09 20:21:45,301 - __main__ - INFO - Trigger File: /Users/brianhellemn/Documents/Agents/Agent-Triggers/Claude-MM1-Agent/01_inbox/20260110T022145Z__EAGLE_MERGE_COMPLETION__2e4e7361.json
+2026-01-09 20:21:45,301 - __main__ - INFO - ================================================================================

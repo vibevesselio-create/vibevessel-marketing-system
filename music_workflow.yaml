@@ -1,0 +1,62 @@
+# Music Workflow Configuration
+# This file provides centralized configuration for the music workflow system
+
+workflow:
+  use_modular: false  # Feature flag: set to true to use modular implementation
+  fallback_to_monolithic: true  # Fallback to monolithic if modular fails
+  log_level: INFO  # DEBUG, INFO, WARNING, ERROR
+
+modules:
+  download:
+    enabled: true
+    default_formats:
+      - m4a
+      - aiff
+      - wav
+    max_retries: 3
+    timeout: 300  # seconds
+    youtube_fallback: true  # Use YouTube search for Spotify tracks
+
+  process:
+    enabled: true
+    target_lufs: -14.0  # Target loudness in LUFS
+    analyze_bpm: true
+    analyze_key: true
+    preserve_original: true
+
+  deduplication:
+    enabled: true
+    fingerprint_threshold: 0.95  # Similarity threshold (0-1)
+    check_notion: true
+    check_eagle: true
+    check_file_hash: true
+
+integrations:
+  notion:
+    timeout: 30  # seconds
+    max_retries: 3
+    # Database IDs loaded from environment variables:
+    # TRACKS_DB_ID, PLAYLISTS_DB_ID, EXECUTION_LOGS_DB_ID, ISSUES_DB_ID
+
+  eagle:
+    # library_path: Auto-detected from currently active Eagle library
+    # Set EAGLE_LIBRARY_PATH env var to override, or leave unset to use active library
+    library_path: ""  # Empty = use currently active Eagle library
+    auto_import: true
+    default_tags: []
+
+  spotify:
+    enrich_metadata: true
+    # Credentials loaded from environment variables:
+    # SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET
+
+# Feature flags for gradual rollout
+features:
+  use_modular: false  # Enable modular implementation
+  youtube_fallback: true  # Enable YouTube fallback for Spotify
+  dedup_enabled: true  # Enable deduplication
+
+# Directories
+directories:
+  output_dir: ~/Music/Downloads  # Default output directory
+  temp_dir: /tmp/music_workflow  # Temporary files directory

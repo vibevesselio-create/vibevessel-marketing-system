@@ -1,0 +1,125 @@
+{
+  "timestamp": "2026-01-04T01:31:48.840241",
+  "database_path": "/Users/brianhellemn/Music/djay/djay Media Library.djayMediaLibrary/MediaLibrary.db",
+  "collections": {
+    "mediaItemUserData": 16574,
+    "localMediaItemLocations": 13856,
+    "mediaItems": 13349,
+    "mediaItemPlaylistItems": 10554,
+    "mediaItemTitleIDs": 10090,
+    "mediaItemAnalyzedData": 10087,
+    "mediaArtists": 5398,
+    "mediaAlbums": 5112,
+    "globalMediaItemLocations": 1889,
+    "historySessionItems": 998,
+    "mediaGenres": 706,
+    "contentPacks": 99,
+    "contentPackMediaItems": 64,
+    "historySessions": 58,
+    "mediaLabels": 46,
+    "mediaItemPlaylists": 35,
+    "cloudKit": 4,
+    "databaseInfo": 3,
+    "products": 3,
+    "backfillTitleIDMigratorTask": 1,
+    "dataMigrator": 1,
+    "queues": 1
+  },
+  "cloudkit_sync": {
+    "total_records": 16577,
+    "mapping_records": 16577,
+    "sample_global_locations": [
+      {
+        "key": "00368ea0d4f4e22fa9ac6dd14604cb36",
+        "data_size": 238
+      },
+      {
+        "key": "003e8da626442c3359fdf8b951578652",
+        "data_size": 276
+      },
+      {
+        "key": "0043c3e6f65b12058ded298ab3143db0",
+        "data_size": 288
+      },
+      {
+        "key": "004431c3644663d506d13712d0ff6026",
+        "data_size": 300
+      },
+      {
+        "key": "0056507fa534079cb939c780e4c4e8cd",
+        "data_size": 320
+      },
+      {
+        "key": "00668e70f36889645351fad1da46687e",
+        "data_size": 252
+      },
+      {
+        "key": "0073db2d7387db5791bf27f3e84b10f2",
+        "data_size": 260
+      },
+      {
+        "key": "009597350c6d18100b7518476b5b9081",
+        "data_size": 231
+      },
+      {
+        "key": "00e40eab229faa33a4b7f995ba1311d9",
+        "data_size": 230
+      },
+      {
+        "key": "00ff72ec6283d0316eb865e843c8b6f5",
+        "data_size": 254
+      }
+    ]
+  },
+  "integration_gaps": [
+    {
+      "type": "userdata_without_mediaitem",
+      "count": 3225,
+      "description": "3225 user data records have no corresponding media item",
+      "impact": "User preferences/settings may exist for tracks not in library"
+    },
+    {
+      "type": "mediaitem_without_analysis",
+      "count": 3262,
+      "description": "3262 media items lack BPM/key analysis",
+      "impact": "Tracks may not have BPM/key detection completed"
+    },
+    {
+      "type": "cloudkit_sync_discrepancy",
+      "count": 3,
+      "description": "CloudKit mapping (16577) differs from user data (16574)",
+      "impact": "Sync state may be inconsistent between devices"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "P0",
+      "action": "Map CloudKit records to media items",
+      "details": "Create lookup table joining cloudKit_mapping_cloudKit.rowid to database2 rows"
+    },
+    {
+      "priority": "P0",
+      "action": "Export global locations for iPad path analysis",
+      "details": "Decode globalMediaItemLocations data blobs to extract iPad file paths"
+    },
+    {
+      "priority": "P1",
+      "action": "Run BPM/key analysis on missing tracks",
+      "details": "3262 tracks need analysis completion"
+    },
+    {
+      "priority": "P1",
+      "action": "Cross-reference Notion Tracks DB with djay library",
+      "details": "Identify tracks in djay but not in Notion for sync"
+    }
+  ],
+  "summary": {
+    "total_cloudkit_synced": 16577,
+    "total_media_items": 13349,
+    "total_local_files": 13856,
+    "total_global_ipad_files": 1889,
+    "total_analyzed": 10087,
+    "total_gaps_identified": 3,
+    "ipad_coverage_percent": 14.15
+  }
+}

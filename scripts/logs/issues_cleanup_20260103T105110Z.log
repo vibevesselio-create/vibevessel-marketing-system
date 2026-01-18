@@ -1,0 +1,6 @@
+2026-01-03 04:51:10,044 - INFO - Issues+Questions cleanup started
+2026-01-03 04:51:10,044 - INFO - Data source ID: 229e7361-6c27-804f-b662-000b6af69781
+2026-01-03 04:51:10,044 - INFO - Mode: APPLY
+2026-01-03 04:51:10,598 - INFO - HTTP Request: GET https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781 "HTTP/1.1 200 OK"
+2026-01-03 04:51:10,602 - ERROR - Status option 'Archived' missing. Manual update required before applying cleanup. Database ID: 229e73616c27808ebf06c202b10b5166
+2026-01-03 04:51:10,602 - ERROR - Unable to ensure 'Archived' status option exists; aborting

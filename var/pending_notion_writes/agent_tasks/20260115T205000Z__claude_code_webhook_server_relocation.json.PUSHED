@@ -1,0 +1,28 @@
+{
+  "title": "Handoff: Relocate webhook server to canonical workspace architecture path",
+  "priority": "High",
+  "status": "Not Started",
+  "dependency_status": "Ready",
+  "assigned_agents": ["Claude Code Agent"],
+  "review_handoff_to": ["Codex MM1"],
+  "objective": "Review the webhook server implementation work and relocate the webhook server files to the correct location in the workspace architecture, updating all references and runbooks.",
+  "preflight": [
+    "Read report: /Users/brianhellemn/Projects/reports/WEBHOOK_SERVER_RELOCATION_AND_IMPLEMENTATION_REPORT_20260115.md",
+    "Inspect current location: /Users/brianhellemn/Projects/github-production/webhook-server",
+    "Identify canonical location per architecture (likely services-based); confirm if ambiguous"
+  ],
+  "steps": [
+    "Determine the correct target directory in the workspace architecture (e.g., services/webhook_server) and note the rationale",
+    "Move webhook server files from /Users/brianhellemn/Projects/github-production/webhook-server to the target directory",
+    "Update all path references in launchagents, runbooks, and scripts to the new location",
+    "Verify the webhook server can start from the new location and health endpoint responds locally",
+    "Update docs to declare the new canonical path and deprecate the old path"
+  ],
+  "success_criteria": [
+    "Webhook server files live in the correct canonical location",
+    "All references to the old path are updated",
+    "Local server starts and /health returns 200",
+    "Runbooks and docs reflect the new path"
+  ],
+  "created_at": "20260115T205000Z"
+}

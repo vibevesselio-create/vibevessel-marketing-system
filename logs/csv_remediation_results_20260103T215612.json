@@ -1,0 +1,64 @@
+{
+  "timestamp": "20260103T215612",
+  "dry_run": true,
+  "databases_analyzed": 6,
+  "databases_fixed": 0,
+  "databases_skipped": 0,
+  "errors": [],
+  "actions": [
+    {
+      "database_id": "128e73616c278194bbb2000bb5ba471d",
+      "folder_name": "Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d",
+      "source_file": "Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d (3).csv",
+      "target_file": "Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d.csv",
+      "source_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d/Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d (3).csv",
+      "target_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d/Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d.csv",
+      "status": "dry_run"
+    },
+    {
+      "database_id": "778edd222d8145d290b2f3e3480a8259",
+      "folder_name": "Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259",
+      "source_file": "Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259 (3).csv",
+      "target_file": "Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259.csv",
+      "source_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259/Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259 (3).csv",
+      "target_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259/Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259.csv",
+      "status": "dry_run"
+    },
+    {
+      "database_id": "a5b9c94ac3f54f1da519a174075c76bd",
+      "folder_name": "Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd",
+      "source_file": "Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd (4).csv",
+      "target_file": "Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd.csv",
+      "source_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd/Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd (4).csv",
+      "target_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd/Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd.csv",
+      "status": "dry_run"
+    },
+    {
+      "database_id": "c4bb991e11a94c6bb7f3329f5df594d8",
+      "folder_name": "Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8",
+      "source_file": "Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8 (3).csv",
+      "target_file": "Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8.csv",
+      "source_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8/Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8 (3).csv",
+      "target_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8/Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8.csv",
+      "status": "dry_run"
+    },
+    {
+      "database_id": "124e73616c2781a58a8c000babf84d9c",
+      "folder_name": "Eagle Rays Bar & Grill Content Library_124e7361-6c27-81a5-8a8c-000babf84d9c",
+      "source_file": "Eagle Rays Bar & Grill Content Library_124e7361-6c27-81a5-8a8c-000babf84d9c 2.csv",
+      "target_file": "Eagle Rays Bar & Grill Content Library_124e7361-6c27-81a5-8a8c-000babf84d9c.csv",
+      "source_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Eagle Rays Bar & Grill Content Library_124e7361-6c27-81a5-8a8c-000babf84d9c/Eagle Rays Bar & Grill Content Library_124e7361-6c27-81a5-8a8c-000babf84d9c 2.csv",
+      "target_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Eagle Rays Bar & Grill Content Library_124e7361-6c27-81a5-8a8c-000babf84d9c/Eagle Rays Bar & Grill Content Library_124e7361-6c27-81a5-8a8c-000babf84d9c.csv",
+      "status": "dry_run"
+    },
+    {
+      "database_id": "130e73616c2781a08920000b317408b7",
+      "folder_name": "Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7",
+      "source_file": "Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7 2.csv",
+      "target_file": "Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7.csv",
+      "source_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7/Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7 2.csv",
+      "target_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7/Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7.csv",
+      "status": "dry_run"
+    }
+  ]
+}

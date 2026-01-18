@@ -1,0 +1,68 @@
+{
+  "function_availability": {
+    "total_functions": 4,
+    "functions": {
+      "eagle_library_deduplication": {
+        "exists": true,
+        "callable": true,
+        "line": 5258,
+        "signature": "def eagle_library_deduplication(",
+        "has_docstring": true,
+        "docstring_preview": "    \"\"\"\n    Perform comprehensive library-wide deduplication scan on Eagle library.\n\n    Uses advanced fuzzy matching to identify duplicate tracks across the entire\n    library, grouping them by simil"
+      },
+      "eagle_import_with_duplicate_management": {
+        "exists": true,
+        "callable": true,
+        "line": 5071,
+        "signature": "def eagle_import_with_duplicate_management(",
+        "has_docstring": true,
+        "docstring_preview": "    \"\"\"\n    Enhanced Eagle import with comprehensive de-duplication and tags validation.\n    \n    This function:\n    1. Finds existing Eagle items using multiple matching strategies\n    2. Determines "
+      },
+      "eagle_cleanup_duplicate_items": {
+        "exists": true,
+        "callable": true,
+        "line": 4949,
+        "signature": "def eagle_cleanup_duplicate_items(items_to_keep: dict, all_matching_items: list[dict]) -> bool:",
+        "has_docstring": true,
+        "docstring_preview": "    \"\"\"\n    Clean up duplicate Eagle items, keeping only the best one.\n    Uses moveToTrash (soft delete) as Eagle only supports soft delete via API.\n    Returns True if cleanup was successful.\n    \"\""
+      },
+      "sync_fingerprints_to_eagle_tags": {
+        "exists": true,
+        "callable": true,
+        "line": 4548,
+        "signature": "def sync_fingerprints_to_eagle_tags(dry_run: bool = True) -> dict:",
+        "has_docstring": true,
+        "docstring_preview": "    \"\"\"\n    Scan library and sync fingerprints from file metadata to Eagle tags.\n\n    This ensures files that have embedded fingerprints but missing Eagle\n    fingerprint tags get properly indexed.\n\n "
+      },
+      "standalone_execution": {
+        "has_dedup_mode": true,
+        "command": "python3 monolithic-scripts/soundcloud_download_prod_merge-2.py --mode dedup",
+        "options": {
+          "dedup_live": true,
+          "dedup_threshold": true,
+          "dedup_cleanup": true
+        }
+      }
+    }
+  },
+  "independent_execution": {
+    "supported": true,
+    "test_result": {
+      "success": true,
+      "metrics": {
+        "exit_code": 0,
+        "success": true,
+        "output_length": 0,
+        "error_length": 4768,
+        "duplicates_found": "2026-01-09 11:34:50 | INFO |       N-gram: 99 groups (100 duplicates)",
+        "items_scanned": "2026-01-09 11:34:50 | INFO |    Total items scanned: 2998"
+      },
+      "stdout_preview": "",
+      "stderr_preview": "[soundcloud_download_prod_merge] unified_config unavailable (No module named 'unified_config'); using fallback module.\n2026-01-09 11:34:32 | INFO | Unified logging initialized via shared_core.logging\n2026-01-09 11:34:32 | INFO | \ud83e\uddf5 Max concurrency for batch mode: 4\n2026-01-09 11:34:32 | INFO | \ud83d\udcd1 Order mode: priority_then_created | Priority numeric mode: True | Name-order: ['Critical', 'High', 'Medium', 'Low']\n/Users/brianhellemn/Library/Python/3.13/lib/python/site-packages/librosa/core/intervals."
+    }
+  },
+  "system_compliance": {
+    "uses_documented_paths": true,
+    "compliance_verified": true
+  }
+}

@@ -73,12 +73,17 @@ Required:
   TRACKS_DB_ID          Notion database ID for tracks
 
 Optional:
-  OUT_DIR               Output directory for processed files
-  BACKUP_DIR            Backup directory for M4A files
-  WAV_BACKUP_DIR        Backup directory for WAV files
-  PLAYLIST_TRACKS_DIR   Directory for playlist-organized WAV copies (new 3-file structure)
+  OUT_DIR               Output directory for processed files (legacy - not used in 3-file structure)
+  PLAYLIST_TRACKS_DIR   Directory for playlist-organized WAV copies (/Volumes/SYSTEM_SSD/Dropbox/Music/playlists/playlist-tracks/)
   EAGLE_API_BASE        Eagle API endpoint (default: http://localhost:41595)
   EAGLE_LIBRARY_PATH    Path to Eagle library (blank = use active library)
+
+OUTPUT STRUCTURE (3 files per track):
+  1. WAV  -> Eagle Library (organized into Playlists/{playlist_name}/ folders)
+  2. AIFF -> Eagle Library (organized into Playlists/{playlist_name}/ folders)
+  3. WAV  -> PLAYLIST_TRACKS_DIR/{playlist_name}/{filename}.wav
+
+NOTE: BACKUP_DIR and WAV_BACKUP_DIR are DEPRECATED and no longer used.
 
 Spotify Integration:
   SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET
@@ -1114,9 +1119,11 @@ def update_audio_processing_status(page_id: str, statuses: list[str]) -> bool:
 
 # Use unified config for directories with enhanced logging
 OUT_DIR = Path(unified_config.get("out_dir") or os.getenv("OUT_DIR", "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/EAGLE-AUTO-IMPORT/Music Library-2"))
-BACKUP_DIR = Path(unified_config.get("backup_dir") or os.getenv("BACKUP_DIR", "/Volumes/VIBES/Djay-Pro-Auto-Import"))
-WAV_BACKUP_DIR = Path(unified_config.get("wav_backup_dir") or os.getenv("WAV_BACKUP_DIR", "/Volumes/VIBES/Apple-Music-Auto-Add"))
-# NEW: Playlist tracks directory for WAV files organized by playlist
+# DEPRECATED: BACKUP_DIR and WAV_BACKUP_DIR are no longer used in 3-file output structure
+# Keeping variables for backwards compatibility but they serve no purpose
+BACKUP_DIR = None  # DEPRECATED - was "/Volumes/VIBES/Djay-Pro-Auto-Import"
+WAV_BACKUP_DIR = None  # DEPRECATED - was "/Volumes/VIBES/Apple-Music-Auto-Add"
+# Playlist tracks directory for WAV files organized by playlist (3rd output file)
 PLAYLIST_TRACKS_DIR = Path(unified_config.get("playlist_tracks_dir") or os.getenv("PLAYLIST_TRACKS_DIR", "/Volumes/SYSTEM_SSD/Dropbox/Music/playlists/playlist-tracks"))
 
 # Eagle API configuration
@@ -1143,9 +1150,8 @@ EAGLE_FORCE_DIRECT = _truthy(os.getenv('EAGLE_FORCE_DIRECT', '1'))
 
 # Enhanced logging for configuration
 workspace_logger.info(f"📁 Using OUT_DIR: {OUT_DIR}")
-workspace_logger.info(f"📁 Using BACKUP_DIR: {BACKUP_DIR}")
-workspace_logger.info(f"📁 Using WAV_BACKUP_DIR: {WAV_BACKUP_DIR}")
 workspace_logger.info(f"📁 Using PLAYLIST_TRACKS_DIR: {PLAYLIST_TRACKS_DIR}")
+workspace_logger.info(f"📁 3-FILE OUTPUT: WAV+AIFF → Eagle Library, WAV → PLAYLIST_TRACKS_DIR")
 workspace_logger.info(f"🦅 Eagle API: {EAGLE_API_BASE}")
 workspace_logger.info(f"🦅 Eagle Library: {EAGLE_LIBRARY_PATH or '(use currently active library)'}")
 
@@ -1964,8 +1970,8 @@ def ensure_writable_dir(p: Path, name: str) -> Path:
 
 # Preflight the user-configured directories early so we fail fast with a clear message
 OUT_DIR = ensure_writable_dir(OUT_DIR, "OUT_DIR")
-BACKUP_DIR = ensure_writable_dir(BACKUP_DIR, "BACKUP_DIR")
-WAV_BACKUP_DIR = ensure_writable_dir(WAV_BACKUP_DIR, "WAV_BACKUP_DIR")
+PLAYLIST_TRACKS_DIR = ensure_writable_dir(PLAYLIST_TRACKS_DIR, "PLAYLIST_TRACKS_DIR")
+# NOTE: BACKUP_DIR and WAV_BACKUP_DIR are deprecated (set to None above)
 
 # ---------- Pre-download existence check ----------
 def _sanitize_filename_component(name: str) -> str:
@@ -7797,17 +7803,19 @@ def create_audio_processing_summary(
         else:
             summary_lines.append(f"❌ {file_type}: No path provided")
     
-    # Add WAV backup file status
-    # Use the same safe_base logic as in the main function
+    # Add playlist WAV copy status (3rd output file)
     title = track_info.get('title', 'Unknown')
     safe_base = re.sub(r"[^\w\s-]", "", title).strip()
-    wav_backup_path = WAV_BACKUP_DIR / f"{safe_base}.wav"
-    if wav_backup_path.exists():
-        file_size = wav_backup_path.stat().st_size
+    # Check if playlist WAV copy exists in PLAYLIST_TRACKS_DIR
+    playlist_names = track_info.get('playlist_names', [])
+    playlist_name = playlist_names[0] if playlist_names else "Uncategorized"
+    playlist_wav_path = PLAYLIST_TRACKS_DIR / playlist_name / f"{safe_base}.wav"
+    if playlist_wav_path.exists():
+        file_size = playlist_wav_path.stat().st_size
         file_size_mb = file_size / (1024 * 1024)
-        summary_lines.append(f"✅ WAV Backup: Successfully created in Serato Auto Import ({file_size_mb:.2f} MB)")
+        summary_lines.append(f"✅ Playlist WAV: Created in {playlist_name}/ ({file_size_mb:.2f} MB)")
     else:
-        summary_lines.append(f"❌ WAV Backup: Failed to create in Serato Auto Import")
+        summary_lines.append(f"ℹ️  Playlist WAV: Not yet created (will be saved to {playlist_name}/)")
     
     summary_lines.append("")
     
@@ -8155,7 +8163,7 @@ def update_audio_processing_properties(page_id: str, processing_data: dict, file
             metadata_applied.append("Fingerprint")
         
         # Create system information
-        system_info = f"Script Version: 2025-01-27\nCompression Mode: {COMPRESSION_MODE}\nAudio Normalizer: {'Available' if AUDIO_NORMALIZER_AVAILABLE else 'Not Available'}\nOutput Directory: {OUT_DIR}\nBackup Directory: {BACKUP_DIR}\nWAV Backup Directory: {WAV_BACKUP_DIR}"
+        system_info = f"Script Version: 2026-01-18\nCompression Mode: {COMPRESSION_MODE}\nAudio Normalizer: {'Available' if AUDIO_NORMALIZER_AVAILABLE else 'Not Available'}\nOutput: WAV+AIFF → Eagle, WAV → {PLAYLIST_TRACKS_DIR}"
         
         # Build properties update
         properties = {
@@ -8515,19 +8523,17 @@ def batch_process_tracks(filter_criteria: str = "unprocessed", max_tracks: int =
                 workspace_logger.info(f"{'='*80}")
                 
                 # Check if track already has files (for reprocessing mode)
+                # Skip check uses Eagle Library items - the source of truth for processed tracks
                 if filter_criteria == "reprocessing":
-                    # Check if M4A file exists on disk
                     safe_base = re.sub(r"[^\w\s-]", "", title).strip()
-                    # Get playlist names from track relations for path check
                     playlist_names = get_playlist_names_from_track(track_data)
-                    if playlist_names:
-                        playlist_name = playlist_names[0]
-                    else:
-                        playlist_name = "Unassigned"
-                    aiff_path = (OUT_DIR / playlist_name / f"{safe_base}.aiff")
-                    m4a_backup = BACKUP_DIR / f"{safe_base}.m4a"
-                    if aiff_path.exists() and m4a_backup.exists():
-                        workspace_logger.info(f"⏭️  Skipping [{i}/{len(tracks_to_process)}]: {title} (AIFF/M4A already exist)")
+                    playlist_name = playlist_names[0] if playlist_names else "Uncategorized"
+                    # Check Eagle Library for existing WAV and AIFF items
+                    eagle_wav_exists = eagle_find_item_by_name(f"{safe_base}.wav")
+                    eagle_aiff_exists = eagle_find_item_by_name(f"{safe_base}.aiff")
+                    playlist_wav_path = PLAYLIST_TRACKS_DIR / playlist_name / f"{safe_base}.wav"
+                    if eagle_wav_exists and eagle_aiff_exists and playlist_wav_path.exists():
+                        workspace_logger.info(f"⏭️  Skipping [{i}/{len(tracks_to_process)}]: {title} (all 3 output files exist)")
                         batch_skipped += 1
                         total_skipped += 1
                         workspace_logger.record_skipped()
@@ -10887,14 +10893,17 @@ def download_track(
 
     playlist_dir.mkdir(parents=True, exist_ok=True)
 
-    # Define primary and secondary output paths
-    aiff_path = playlist_dir / f"{safe_base}.aiff"
-    m4a_path = playlist_dir / f"{safe_base}.m4a"
-    m4a_backup_path = BACKUP_DIR / f"{safe_base}.m4a"
-    # wav_path will be defined later as temp file for Eagle import only
+    # 3-FILE OUTPUT STRUCTURE:
+    # 1. WAV  -> Eagle Library (Playlists/{playlist}/)
+    # 2. AIFF -> Eagle Library (Playlists/{playlist}/)
+    # 3. WAV  -> PLAYLIST_TRACKS_DIR/{playlist}/{filename}.wav
+    playlist_wav_path = PLAYLIST_TRACKS_DIR / playlist_names[0] / f"{safe_base}.wav" if playlist_names else PLAYLIST_TRACKS_DIR / "Uncategorized" / f"{safe_base}.wav"
 
-    # Skip if already done (both AIFF and M4A already created)
-    if aiff_path.exists() and m4a_path.exists():
+    # Skip if already done - check Eagle Library for WAV and AIFF, and playlist dir for WAV copy
+    eagle_wav_exists = eagle_find_item_by_name(f"{safe_base}.wav")
+    eagle_aiff_exists = eagle_find_item_by_name(f"{safe_base}.aiff")
+    if eagle_wav_exists and eagle_aiff_exists and playlist_wav_path.exists():
+        # All 3 output files exist - skip processing
         try:
             cmd = [
                 "ffprobe",
@@ -10904,7 +10913,7 @@ def download_track(
                 "format=duration",
                 "-of",
                 "csv=p=0",
-                str(aiff_path),
+                str(playlist_wav_path),
             ]
             result = subprocess.run(cmd, capture_output=True, text=True, check=True)
             dur = int(float(result.stdout.strip()))
@@ -10925,12 +10934,13 @@ def download_track(
             except Exception:
                 pass
 
+        workspace_logger.info(f"⏭️  Skipping: {title} (all 3 output files exist in Eagle + playlist dir)")
         return {
-            "file": aiff_path,
+            "file": playlist_wav_path,
             "duration": dur,
             "artist": track_info.get("artist") or artist_from_url or "",
             "title": title,
-            "eagle_item_id": None,
+            "eagle_item_id": eagle_wav_exists.get("id") if isinstance(eagle_wav_exists, dict) else None,
         }
 
     # Exponential back-off with jitter

@@ -1,0 +1,9 @@
+{
+  "created": "2026-01-12",
+  "version": "1.0",
+  "description": "Music volume index for performance optimization. Tracks metadata index for fast lookups.",
+  "tracks": [],
+  "last_updated": null,
+  "index_path": "/var/music_volume_index.json",
+  "note": "This file should be created at /var/music_volume_index.json for production use. Created in project directory as fallback."
+}

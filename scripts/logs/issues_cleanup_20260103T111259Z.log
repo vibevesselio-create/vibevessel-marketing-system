@@ -1,0 +1,608 @@
+2026-01-03 05:12:59,917 - INFO - Issues+Questions cleanup started
+2026-01-03 05:12:59,917 - INFO - Data source ID: 229e7361-6c27-804f-b662-000b6af69781
+2026-01-03 05:12:59,917 - INFO - Mode: APPLY
+2026-01-03 05:13:00,269 - INFO - HTTP Request: GET https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781 "HTTP/1.1 200 OK"
+2026-01-03 05:13:00,271 - INFO - Available status options: ['Resolved', 'Troubleshooting', 'Waiting on Client', 'Reported + Waiting For Response', 'Solution In Progress', 'Unreported']
+2026-01-03 05:13:00,271 - INFO - Target status 'Resolved' exists in schema
+2026-01-03 05:13:01,028 - INFO - HTTP Request: POST https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781/query "HTTP/1.1 200 OK"
+2026-01-03 05:13:01,613 - INFO - HTTP Request: POST https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781/query "HTTP/1.1 200 OK"
+2026-01-03 05:13:02,364 - INFO - HTTP Request: POST https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781/query "HTTP/1.1 200 OK"
+2026-01-03 05:13:02,964 - INFO - HTTP Request: POST https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781/query "HTTP/1.1 200 OK"
+2026-01-03 05:13:03,560 - INFO - HTTP Request: POST https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781/query "HTTP/1.1 200 OK"
+2026-01-03 05:13:04,323 - INFO - HTTP Request: POST https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781/query "HTTP/1.1 200 OK"
+2026-01-03 05:13:04,337 - INFO - Fetched 570 pages from data source
+2026-01-03 05:13:04,340 - INFO - Planned updates: 293
+2026-01-03 05:13:04,340 - INFO - Duplicate groups: 99
+2026-01-03 05:13:04,340 - INFO - Duplicates to archive: 139
+2026-01-03 05:13:04,340 - INFO - Unreported total: 449
+2026-01-03 05:13:04,340 - INFO - Unreported archived: 128
+2026-01-03 05:13:04,340 - INFO - Unknown priority total: 277
+2026-01-03 05:13:04,340 - INFO - Priority updates: 26
+2026-01-03 05:13:04,841 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d8e7361-6c27-8101-b1fc-d84caf24cb71 "HTTP/1.1 200 OK"
+2026-01-03 05:13:04,842 - INFO - Updated 2d8e7361-6c27-8101-b1fc-d84caf24cb71: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:05,755 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d8e7361-6c27-8104-9dd9-ffe3d20fe7a2 "HTTP/1.1 200 OK"
+2026-01-03 05:13:05,756 - INFO - Updated 2d8e7361-6c27-8104-9dd9-ffe3d20fe7a2: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:06,550 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d8e7361-6c27-8135-a574-f25299beb400 "HTTP/1.1 200 OK"
+2026-01-03 05:13:06,551 - INFO - Updated 2d8e7361-6c27-8135-a574-f25299beb400: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:07,219 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d8e7361-6c27-8165-81de-d8ba21700fc6 "HTTP/1.1 200 OK"
+2026-01-03 05:13:07,219 - INFO - Updated 2d8e7361-6c27-8165-81de-d8ba21700fc6: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:07,820 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d8e7361-6c27-8184-b5ce-f8b37b9365af "HTTP/1.1 200 OK"
+2026-01-03 05:13:07,820 - INFO - Updated 2d8e7361-6c27-8184-b5ce-f8b37b9365af: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:09,370 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d8e7361-6c27-818d-af17-e41e4a41ac10 "HTTP/1.1 200 OK"
+2026-01-03 05:13:09,372 - INFO - Updated 2d8e7361-6c27-818d-af17-e41e4a41ac10: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:10,364 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d8e7361-6c27-81e4-9f7a-f6dc61219d41 "HTTP/1.1 200 OK"
+2026-01-03 05:13:10,365 - INFO - Updated 2d8e7361-6c27-81e4-9f7a-f6dc61219d41: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:11,771 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-816b-9013-d91607af8ff2 "HTTP/1.1 200 OK"
+2026-01-03 05:13:11,773 - INFO - Updated 2d9e7361-6c27-816b-9013-d91607af8ff2: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:12,572 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81aa-90e2-efe45ad8f6fc "HTTP/1.1 200 OK"
+2026-01-03 05:13:12,573 - INFO - Updated 2d9e7361-6c27-81aa-90e2-efe45ad8f6fc: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:14,828 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81af-994e-cf81cf5977ce "HTTP/1.1 200 OK"
+2026-01-03 05:13:14,829 - INFO - Updated 2d9e7361-6c27-81af-994e-cf81cf5977ce: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:15,809 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81c6-bbdd-c0ebd7d35a49 "HTTP/1.1 200 OK"
+2026-01-03 05:13:15,811 - INFO - Updated 2d9e7361-6c27-81c6-bbdd-c0ebd7d35a49: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:16,465 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81e3-9862-d3e815ad6a63 "HTTP/1.1 200 OK"
+2026-01-03 05:13:16,467 - INFO - Updated 2d9e7361-6c27-81e3-9862-d3e815ad6a63: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:16,804 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-8101-9312-c6e8196ac40b "HTTP/1.1 200 OK"
+2026-01-03 05:13:16,806 - INFO - Updated 2dae7361-6c27-8101-9312-c6e8196ac40b: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:17,954 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-8109-a718-f91772c24d19 "HTTP/1.1 200 OK"
+2026-01-03 05:13:17,955 - INFO - Updated 2dae7361-6c27-8109-a718-f91772c24d19: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:23,936 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-813b-ab7a-e03c402d45d5 "HTTP/1.1 200 OK"
+2026-01-03 05:13:23,937 - INFO - Updated 2dae7361-6c27-813b-ab7a-e03c402d45d5: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:25,743 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-813d-91dd-ce05d97fe92a "HTTP/1.1 200 OK"
+2026-01-03 05:13:25,745 - INFO - Updated 2dae7361-6c27-813d-91dd-ce05d97fe92a: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:26,812 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-816d-9401-edb83a6788c2 "HTTP/1.1 200 OK"
+2026-01-03 05:13:26,814 - INFO - Updated 2dae7361-6c27-816d-9401-edb83a6788c2: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:27,783 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-8195-b4c9-f9c9e396cb3c "HTTP/1.1 200 OK"
+2026-01-03 05:13:27,785 - INFO - Updated 2dae7361-6c27-8195-b4c9-f9c9e396cb3c: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:28,150 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-81bc-bb1b-f5a3bf421208 "HTTP/1.1 200 OK"
+2026-01-03 05:13:28,151 - INFO - Updated 2dae7361-6c27-81bc-bb1b-f5a3bf421208: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:28,479 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-81de-a794-c67d83a319a3 "HTTP/1.1 200 OK"
+2026-01-03 05:13:28,480 - INFO - Updated 2dae7361-6c27-81de-a794-c67d83a319a3: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:29,363 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-81e6-852c-f084fe999754 "HTTP/1.1 200 OK"
+2026-01-03 05:13:29,365 - INFO - Updated 2dae7361-6c27-81e6-852c-f084fe999754: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:29,673 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d8e7361-6c27-815c-83f7-ff59c59e370c "HTTP/1.1 200 OK"
+2026-01-03 05:13:29,674 - INFO - Updated 2d8e7361-6c27-815c-83f7-ff59c59e370c: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:33,223 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d8e7361-6c27-8119-b659-dccc0f808a19 "HTTP/1.1 200 OK"
+2026-01-03 05:13:33,229 - INFO - Updated 2d8e7361-6c27-8119-b659-dccc0f808a19: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:34,197 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d8e7361-6c27-814d-b536-c7e2dadd3aa5 "HTTP/1.1 200 OK"
+2026-01-03 05:13:34,199 - INFO - Updated 2d8e7361-6c27-814d-b536-c7e2dadd3aa5: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:34,586 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d8e7361-6c27-8180-9cd9-e1304d5cb4ed "HTTP/1.1 200 OK"
+2026-01-03 05:13:34,588 - INFO - Updated 2d8e7361-6c27-8180-9cd9-e1304d5cb4ed: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:35,572 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d8e7361-6c27-8196-bf65-ce6454ad2686 "HTTP/1.1 200 OK"
+2026-01-03 05:13:35,573 - INFO - Updated 2d8e7361-6c27-8196-bf65-ce6454ad2686: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:36,387 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d8e7361-6c27-81ab-99ee-cb7d3e1d63ce "HTTP/1.1 200 OK"
+2026-01-03 05:13:36,389 - INFO - Updated 2d8e7361-6c27-81ab-99ee-cb7d3e1d63ce: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:36,738 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d8e7361-6c27-81b1-ab4c-e757b08b459b "HTTP/1.1 200 OK"
+2026-01-03 05:13:36,740 - INFO - Updated 2d8e7361-6c27-81b1-ab4c-e757b08b459b: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:37,976 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d8e7361-6c27-81f5-83c9-d417bcb30091 "HTTP/1.1 200 OK"
+2026-01-03 05:13:37,978 - INFO - Updated 2d8e7361-6c27-81f5-83c9-d417bcb30091: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:38,265 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8112-8886-d346f92c988a "HTTP/1.1 200 OK"
+2026-01-03 05:13:38,266 - INFO - Updated 2d9e7361-6c27-8112-8886-d346f92c988a: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:39,588 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-813b-8af4-f31625307a0f "HTTP/1.1 200 OK"
+2026-01-03 05:13:39,589 - INFO - Updated 2d9e7361-6c27-813b-8af4-f31625307a0f: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:41,687 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81df-8f82-fe34feadc25e "HTTP/1.1 200 OK"
+2026-01-03 05:13:41,688 - INFO - Updated 2d9e7361-6c27-81df-8f82-fe34feadc25e: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:42,569 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81fb-a7dc-e409f67c5eae "HTTP/1.1 200 OK"
+2026-01-03 05:13:42,571 - INFO - Updated 2d9e7361-6c27-81fb-a7dc-e409f67c5eae: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:43,921 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-811f-b290-e4ed51376151 "HTTP/1.1 200 OK"
+2026-01-03 05:13:43,922 - INFO - Updated 2dae7361-6c27-811f-b290-e4ed51376151: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:45,180 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-8142-befc-c1637cc3932e "HTTP/1.1 200 OK"
+2026-01-03 05:13:45,181 - INFO - Updated 2dae7361-6c27-8142-befc-c1637cc3932e: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:47,338 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-8148-9df4-d7a95f65b888 "HTTP/1.1 200 OK"
+2026-01-03 05:13:47,339 - INFO - Updated 2dae7361-6c27-8148-9df4-d7a95f65b888: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:48,187 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-814e-aa65-c5ffebda0059 "HTTP/1.1 200 OK"
+2026-01-03 05:13:48,188 - INFO - Updated 2dae7361-6c27-814e-aa65-c5ffebda0059: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:48,680 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-8152-acf4-e6ed36df58d9 "HTTP/1.1 200 OK"
+2026-01-03 05:13:48,682 - INFO - Updated 2dae7361-6c27-8152-acf4-e6ed36df58d9: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:49,698 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-816a-bd41-dde4e9d22ac8 "HTTP/1.1 200 OK"
+2026-01-03 05:13:49,700 - INFO - Updated 2dae7361-6c27-816a-bd41-dde4e9d22ac8: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:49,994 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-8173-9a36-d3c604586682 "HTTP/1.1 200 OK"
+2026-01-03 05:13:49,996 - INFO - Updated 2dae7361-6c27-8173-9a36-d3c604586682: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:51,381 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-8199-9ee0-c0142b8baaa3 "HTTP/1.1 200 OK"
+2026-01-03 05:13:51,383 - INFO - Updated 2dae7361-6c27-8199-9ee0-c0142b8baaa3: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:52,713 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-81f6-ace2-eb46ce781a63 "HTTP/1.1 200 OK"
+2026-01-03 05:13:52,714 - INFO - Updated 2dae7361-6c27-81f6-ace2-eb46ce781a63: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:52,991 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d8e7361-6c27-815f-9b34-e8680f76a567 "HTTP/1.1 200 OK"
+2026-01-03 05:13:52,993 - INFO - Updated 2d8e7361-6c27-815f-9b34-e8680f76a567: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:53,933 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d8e7361-6c27-81a3-b010-c8229e759e0d "HTTP/1.1 200 OK"
+2026-01-03 05:13:53,934 - INFO - Updated 2d8e7361-6c27-81a3-b010-c8229e759e0d: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:54,761 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d8e7361-6c27-8178-98c7-dc223ad7743d "HTTP/1.1 200 OK"
+2026-01-03 05:13:54,763 - INFO - Updated 2d8e7361-6c27-8178-98c7-dc223ad7743d: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:55,140 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d8e7361-6c27-81d6-8913-e80c5de8f46d "HTTP/1.1 200 OK"
+2026-01-03 05:13:55,141 - INFO - Updated 2d8e7361-6c27-81d6-8913-e80c5de8f46d: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:55,580 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-814f-937a-d9af885d5e93 "HTTP/1.1 200 OK"
+2026-01-03 05:13:55,581 - INFO - Updated 2d9e7361-6c27-814f-937a-d9af885d5e93: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:55,893 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81a3-819d-dbff9972292c "HTTP/1.1 200 OK"
+2026-01-03 05:13:55,894 - INFO - Updated 2d9e7361-6c27-81a3-819d-dbff9972292c: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:56,899 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8167-9164-d3431f17a549 "HTTP/1.1 200 OK"
+2026-01-03 05:13:56,900 - INFO - Updated 2d9e7361-6c27-8167-9164-d3431f17a549: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:58,561 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8104-b04d-c9d5d5d592c0 "HTTP/1.1 200 OK"
+2026-01-03 05:13:58,562 - INFO - Updated 2d9e7361-6c27-8104-b04d-c9d5d5d592c0: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:59,197 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8108-8044-c752fc3d98bf "HTTP/1.1 200 OK"
+2026-01-03 05:13:59,199 - INFO - Updated 2d9e7361-6c27-8108-8044-c752fc3d98bf: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:13:59,612 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8163-bfcd-f560101bee09 "HTTP/1.1 200 OK"
+2026-01-03 05:13:59,614 - INFO - Updated 2d9e7361-6c27-8163-bfcd-f560101bee09: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:00,087 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-810b-9e22-ec61fbbd7819 "HTTP/1.1 200 OK"
+2026-01-03 05:14:00,088 - INFO - Updated 2d9e7361-6c27-810b-9e22-ec61fbbd7819: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:00,735 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-810d-8db0-d6d932f136a9 "HTTP/1.1 200 OK"
+2026-01-03 05:14:00,745 - INFO - Updated 2d9e7361-6c27-810d-8db0-d6d932f136a9: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:01,694 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8143-b8b1-c16b948a3619 "HTTP/1.1 200 OK"
+2026-01-03 05:14:01,695 - INFO - Updated 2d9e7361-6c27-8143-b8b1-c16b948a3619: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:02,645 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-810f-8c9f-fcd3ab64222e "HTTP/1.1 200 OK"
+2026-01-03 05:14:02,647 - INFO - Updated 2d9e7361-6c27-810f-8c9f-fcd3ab64222e: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:03,624 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8111-a3c6-ddd251b0d050 "HTTP/1.1 200 OK"
+2026-01-03 05:14:03,627 - INFO - Updated 2d9e7361-6c27-8111-a3c6-ddd251b0d050: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:04,227 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8111-a5c1-edd1ee2806b8 "HTTP/1.1 200 OK"
+2026-01-03 05:14:04,228 - INFO - Updated 2d9e7361-6c27-8111-a5c1-edd1ee2806b8: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:04,591 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8112-84ac-dec525b5a571 "HTTP/1.1 200 OK"
+2026-01-03 05:14:04,593 - INFO - Updated 2d9e7361-6c27-8112-84ac-dec525b5a571: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:05,022 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8114-8386-d621f201e5cd "HTTP/1.1 200 OK"
+2026-01-03 05:14:05,023 - INFO - Updated 2d9e7361-6c27-8114-8386-d621f201e5cd: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:05,922 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8118-812c-d1e527ed9419 "HTTP/1.1 200 OK"
+2026-01-03 05:14:05,923 - INFO - Updated 2d9e7361-6c27-8118-812c-d1e527ed9419: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:07,221 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8119-815f-c9afbb04fe9b "HTTP/1.1 200 OK"
+2026-01-03 05:14:07,221 - INFO - Updated 2d9e7361-6c27-8119-815f-c9afbb04fe9b: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:07,855 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8122-b864-def6fce2eac7 "HTTP/1.1 200 OK"
+2026-01-03 05:14:07,856 - INFO - Updated 2d9e7361-6c27-8122-b864-def6fce2eac7: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:08,789 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81d1-ac57-ff5ff9e2972c "HTTP/1.1 200 OK"
+2026-01-03 05:14:08,792 - INFO - Updated 2d9e7361-6c27-81d1-ac57-ff5ff9e2972c: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:09,085 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-811f-81b7-c0efa3959c91 "HTTP/1.1 200 OK"
+2026-01-03 05:14:09,086 - INFO - Updated 2d9e7361-6c27-811f-81b7-c0efa3959c91: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:10,294 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8121-afb5-f9399b787f0c "HTTP/1.1 200 OK"
+2026-01-03 05:14:10,295 - INFO - Updated 2d9e7361-6c27-8121-afb5-f9399b787f0c: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:11,487 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8122-9fa5-fe364951dbf5 "HTTP/1.1 200 OK"
+2026-01-03 05:14:11,489 - INFO - Updated 2d9e7361-6c27-8122-9fa5-fe364951dbf5: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:11,965 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81b4-8ffd-f7a7d81577ee "HTTP/1.1 200 OK"
+2026-01-03 05:14:11,966 - INFO - Updated 2d9e7361-6c27-81b4-8ffd-f7a7d81577ee: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:12,807 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8181-85e3-cbd94519e2a9 "HTTP/1.1 200 OK"
+2026-01-03 05:14:12,809 - INFO - Updated 2d9e7361-6c27-8181-85e3-cbd94519e2a9: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:14,104 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8148-a963-ef14cf5856be "HTTP/1.1 200 OK"
+2026-01-03 05:14:14,105 - INFO - Updated 2d9e7361-6c27-8148-a963-ef14cf5856be: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:14,667 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81fd-a72a-d2934538c7c2 "HTTP/1.1 200 OK"
+2026-01-03 05:14:14,668 - INFO - Updated 2d9e7361-6c27-81fd-a72a-d2934538c7c2: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:14,984 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8128-a6bb-d4510ac33324 "HTTP/1.1 200 OK"
+2026-01-03 05:14:14,985 - INFO - Updated 2d9e7361-6c27-8128-a6bb-d4510ac33324: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:15,968 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81f0-bdc1-ee5de7216c15 "HTTP/1.1 200 OK"
+2026-01-03 05:14:15,969 - INFO - Updated 2d9e7361-6c27-81f0-bdc1-ee5de7216c15: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:16,674 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-812a-b861-ea1737df4686 "HTTP/1.1 200 OK"
+2026-01-03 05:14:16,676 - INFO - Updated 2d9e7361-6c27-812a-b861-ea1737df4686: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:17,012 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81ea-b583-c947ee34e616 "HTTP/1.1 200 OK"
+2026-01-03 05:14:17,013 - INFO - Updated 2d9e7361-6c27-81ea-b583-c947ee34e616: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:17,339 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8163-a383-f55cb21c0752 "HTTP/1.1 200 OK"
+2026-01-03 05:14:17,340 - INFO - Updated 2d9e7361-6c27-8163-a383-f55cb21c0752: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:19,644 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81c2-a3c4-c3ebffe1026c "HTTP/1.1 200 OK"
+2026-01-03 05:14:19,646 - INFO - Updated 2d9e7361-6c27-81c2-a3c4-c3ebffe1026c: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:20,261 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81e3-a3db-c639666307f2 "HTTP/1.1 200 OK"
+2026-01-03 05:14:20,262 - INFO - Updated 2d9e7361-6c27-81e3-a3db-c639666307f2: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:21,486 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-813f-8f1f-e2fd04748567 "HTTP/1.1 200 OK"
+2026-01-03 05:14:21,487 - INFO - Updated 2d9e7361-6c27-813f-8f1f-e2fd04748567: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:22,144 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8174-9d41-e47246c7c501 "HTTP/1.1 200 OK"
+2026-01-03 05:14:22,145 - INFO - Updated 2d9e7361-6c27-8174-9d41-e47246c7c501: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:22,670 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8140-a394-c1e180a64e1a "HTTP/1.1 200 OK"
+2026-01-03 05:14:22,671 - INFO - Updated 2d9e7361-6c27-8140-a394-c1e180a64e1a: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:23,142 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8145-8ce7-e98ab77df9ff "HTTP/1.1 200 OK"
+2026-01-03 05:14:23,144 - INFO - Updated 2d9e7361-6c27-8145-8ce7-e98ab77df9ff: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:23,460 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8185-a382-c9dfd00473b8 "HTTP/1.1 200 OK"
+2026-01-03 05:14:23,461 - INFO - Updated 2d9e7361-6c27-8185-a382-c9dfd00473b8: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:24,248 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8147-b475-d1e32c6a22f9 "HTTP/1.1 200 OK"
+2026-01-03 05:14:24,249 - INFO - Updated 2d9e7361-6c27-8147-b475-d1e32c6a22f9: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:24,567 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8148-99e7-c1f9fcc0dc39 "HTTP/1.1 200 OK"
+2026-01-03 05:14:24,568 - INFO - Updated 2d9e7361-6c27-8148-99e7-c1f9fcc0dc39: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:25,412 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81ce-ada9-ef72a238c5e8 "HTTP/1.1 200 OK"
+2026-01-03 05:14:25,413 - INFO - Updated 2d9e7361-6c27-81ce-ada9-ef72a238c5e8: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:25,992 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81ce-a449-c7898d563043 "HTTP/1.1 200 OK"
+2026-01-03 05:14:25,994 - INFO - Updated 2d9e7361-6c27-81ce-a449-c7898d563043: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:26,592 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8151-9045-eca0de8c5bbd "HTTP/1.1 200 OK"
+2026-01-03 05:14:26,594 - INFO - Updated 2d9e7361-6c27-8151-9045-eca0de8c5bbd: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:26,902 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8153-95c9-fcd25d3f905d "HTTP/1.1 200 OK"
+2026-01-03 05:14:26,903 - INFO - Updated 2d9e7361-6c27-8153-95c9-fcd25d3f905d: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:27,803 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8153-99ef-f14f732afd1f "HTTP/1.1 200 OK"
+2026-01-03 05:14:27,804 - INFO - Updated 2d9e7361-6c27-8153-99ef-f14f732afd1f: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:28,578 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8155-ba6f-dfc9bc33f591 "HTTP/1.1 200 OK"
+2026-01-03 05:14:28,579 - INFO - Updated 2d9e7361-6c27-8155-ba6f-dfc9bc33f591: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:29,059 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81e2-af0c-e83e5066df83 "HTTP/1.1 200 OK"
+2026-01-03 05:14:29,060 - INFO - Updated 2d9e7361-6c27-81e2-af0c-e83e5066df83: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:32,561 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8166-94c9-ea91c3c8d85b "HTTP/1.1 200 OK"
+2026-01-03 05:14:32,562 - INFO - Updated 2d9e7361-6c27-8166-94c9-ea91c3c8d85b: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:33,084 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81e7-878e-faecc96475eb "HTTP/1.1 200 OK"
+2026-01-03 05:14:33,085 - INFO - Updated 2d9e7361-6c27-81e7-878e-faecc96475eb: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:33,868 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-819d-82cb-cc01eca0a105 "HTTP/1.1 200 OK"
+2026-01-03 05:14:33,868 - INFO - Updated 2d9e7361-6c27-819d-82cb-cc01eca0a105: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:37,493 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8169-91a3-c862f1f6902f "HTTP/1.1 200 OK"
+2026-01-03 05:14:37,494 - INFO - Updated 2d9e7361-6c27-8169-91a3-c862f1f6902f: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:37,972 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8169-9924-f1ca5d4c3b66 "HTTP/1.1 200 OK"
+2026-01-03 05:14:37,974 - INFO - Updated 2d9e7361-6c27-8169-9924-f1ca5d4c3b66: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:39,263 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-816a-ae8a-f641bef92378 "HTTP/1.1 200 OK"
+2026-01-03 05:14:39,264 - INFO - Updated 2d9e7361-6c27-816a-ae8a-f641bef92378: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:39,653 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81ae-a7fe-e1a3556f6abf "HTTP/1.1 200 OK"
+2026-01-03 05:14:39,655 - INFO - Updated 2d9e7361-6c27-81ae-a7fe-e1a3556f6abf: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:40,534 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-816c-a121-c5152c4ae7d7 "HTTP/1.1 200 OK"
+2026-01-03 05:14:40,536 - INFO - Updated 2d9e7361-6c27-816c-a121-c5152c4ae7d7: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:41,276 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81d5-b040-ec227d8d89e7 "HTTP/1.1 200 OK"
+2026-01-03 05:14:41,277 - INFO - Updated 2d9e7361-6c27-81d5-b040-ec227d8d89e7: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:42,069 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8177-8850-c8e16ff8c6a4 "HTTP/1.1 200 OK"
+2026-01-03 05:14:42,072 - INFO - Updated 2d9e7361-6c27-8177-8850-c8e16ff8c6a4: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:43,092 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8172-aa4d-c190acea64bb "HTTP/1.1 200 OK"
+2026-01-03 05:14:43,093 - INFO - Updated 2d9e7361-6c27-8172-aa4d-c190acea64bb: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:43,565 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81c5-8d1c-ecfce995286c "HTTP/1.1 200 OK"
+2026-01-03 05:14:43,566 - INFO - Updated 2d9e7361-6c27-81c5-8d1c-ecfce995286c: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:44,403 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8191-826b-e8087c65060b "HTTP/1.1 200 OK"
+2026-01-03 05:14:44,404 - INFO - Updated 2d9e7361-6c27-8191-826b-e8087c65060b: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:45,361 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81a5-aa99-caadcc9d4942 "HTTP/1.1 200 OK"
+2026-01-03 05:14:45,362 - INFO - Updated 2d9e7361-6c27-81a5-aa99-caadcc9d4942: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:14:46,243 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8177-bf9d-fa9bc0f21b02 "HTTP/1.1 200 OK"
+2026-01-03 05:14:46,244 - INFO - Updated 2d9e7361-6c27-8177-bf9d-fa9bc0f21b02: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:09,490 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-817a-91de-e0ba0f13addf "HTTP/1.1 200 OK"
+2026-01-03 05:15:09,491 - INFO - Updated 2d9e7361-6c27-817a-91de-e0ba0f13addf: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:09,924 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-817b-b72f-e61266922d7b "HTTP/1.1 200 OK"
+2026-01-03 05:15:09,926 - INFO - Updated 2d9e7361-6c27-817b-b72f-e61266922d7b: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:11,228 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-817c-89db-fcbd7cb4f7e3 "HTTP/1.1 200 OK"
+2026-01-03 05:15:11,229 - INFO - Updated 2d9e7361-6c27-817c-89db-fcbd7cb4f7e3: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:12,438 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8181-838c-c4c1fe5e97f3 "HTTP/1.1 200 OK"
+2026-01-03 05:15:12,440 - INFO - Updated 2d9e7361-6c27-8181-838c-c4c1fe5e97f3: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:13,097 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81d2-9f8b-e19c3fb70475 "HTTP/1.1 200 OK"
+2026-01-03 05:15:13,098 - INFO - Updated 2d9e7361-6c27-81d2-9f8b-e19c3fb70475: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:13,401 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8188-89c5-d88e48a5a8c9 "HTTP/1.1 200 OK"
+2026-01-03 05:15:13,403 - INFO - Updated 2d9e7361-6c27-8188-89c5-d88e48a5a8c9: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:14,216 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-818c-a049-fc4b5e485c45 "HTTP/1.1 200 OK"
+2026-01-03 05:15:14,217 - INFO - Updated 2d9e7361-6c27-818c-a049-fc4b5e485c45: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:14,665 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81eb-bcc6-e13a20f27e05 "HTTP/1.1 200 OK"
+2026-01-03 05:15:14,666 - INFO - Updated 2d9e7361-6c27-81eb-bcc6-e13a20f27e05: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:15,461 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8191-8dbe-c5331028ec3c "HTTP/1.1 200 OK"
+2026-01-03 05:15:15,462 - INFO - Updated 2d9e7361-6c27-8191-8dbe-c5331028ec3c: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:24,244 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81a9-a2df-d0d51bd98afc "HTTP/1.1 200 OK"
+2026-01-03 05:15:24,253 - INFO - Updated 2d9e7361-6c27-81a9-a2df-d0d51bd98afc: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:25,393 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81cd-9a8b-d41184750db5 "HTTP/1.1 200 OK"
+2026-01-03 05:15:25,393 - INFO - Updated 2d9e7361-6c27-81cd-9a8b-d41184750db5: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:26,261 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81b9-ad80-c203d0ed5429 "HTTP/1.1 200 OK"
+2026-01-03 05:15:26,261 - INFO - Updated 2d9e7361-6c27-81b9-ad80-c203d0ed5429: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:26,624 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81b6-aeb9-e0b25f0c2256 "HTTP/1.1 200 OK"
+2026-01-03 05:15:26,626 - INFO - Updated 2d9e7361-6c27-81b6-aeb9-e0b25f0c2256: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:28,253 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-819a-bc04-f3e88408bbc3 "HTTP/1.1 200 OK"
+2026-01-03 05:15:28,255 - INFO - Updated 2d9e7361-6c27-819a-bc04-f3e88408bbc3: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:28,853 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-819c-b7fb-ff3a8b80093a "HTTP/1.1 200 OK"
+2026-01-03 05:15:28,854 - INFO - Updated 2d9e7361-6c27-819c-b7fb-ff3a8b80093a: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:29,911 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81b6-9866-c23204baf69d "HTTP/1.1 200 OK"
+2026-01-03 05:15:29,912 - INFO - Updated 2d9e7361-6c27-81b6-9866-c23204baf69d: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:30,438 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81a9-bfd4-ca29206df9a0 "HTTP/1.1 200 OK"
+2026-01-03 05:15:30,439 - INFO - Updated 2d9e7361-6c27-81a9-bfd4-ca29206df9a0: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:31,281 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81aa-95a3-c9635e8cd50e "HTTP/1.1 200 OK"
+2026-01-03 05:15:31,282 - INFO - Updated 2d9e7361-6c27-81aa-95a3-c9635e8cd50e: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:32,441 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81c8-96ea-c14ad246c79d "HTTP/1.1 200 OK"
+2026-01-03 05:15:32,442 - INFO - Updated 2d9e7361-6c27-81c8-96ea-c14ad246c79d: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:33,416 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81b4-9cfc-eb384525162e "HTTP/1.1 200 OK"
+2026-01-03 05:15:33,418 - INFO - Updated 2d9e7361-6c27-81b4-9cfc-eb384525162e: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:34,363 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81b6-b82c-f558d515e42c "HTTP/1.1 200 OK"
+2026-01-03 05:15:34,364 - INFO - Updated 2d9e7361-6c27-81b6-b82c-f558d515e42c: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:41,391 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81c2-9b42-d225ac646096 "HTTP/1.1 200 OK"
+2026-01-03 05:15:41,392 - INFO - Updated 2d9e7361-6c27-81c2-9b42-d225ac646096: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:42,608 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81d2-b150-f6a7c1c15dd5 "HTTP/1.1 200 OK"
+2026-01-03 05:15:42,610 - INFO - Updated 2d9e7361-6c27-81d2-b150-f6a7c1c15dd5: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:45,049 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81dd-bb4a-fd1dcab37336 "HTTP/1.1 200 OK"
+2026-01-03 05:15:45,051 - INFO - Updated 2d9e7361-6c27-81dd-bb4a-fd1dcab37336: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:46,070 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81f6-8dca-e5a92e53af91 "HTTP/1.1 200 OK"
+2026-01-03 05:15:46,071 - INFO - Updated 2d9e7361-6c27-81f6-8dca-e5a92e53af91: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:47,020 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81e2-bbed-e7c7547be698 "HTTP/1.1 200 OK"
+2026-01-03 05:15:47,020 - INFO - Updated 2d9e7361-6c27-81e2-bbed-e7c7547be698: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:48,120 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81ee-ae76-d43d62d400da "HTTP/1.1 200 OK"
+2026-01-03 05:15:48,121 - INFO - Updated 2d9e7361-6c27-81ee-ae76-d43d62d400da: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:48,537 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81ec-80ed-d56184d7ce29 "HTTP/1.1 200 OK"
+2026-01-03 05:15:48,539 - INFO - Updated 2d9e7361-6c27-81ec-80ed-d56184d7ce29: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:49,633 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-8101-aa42-e875bf8e033b "HTTP/1.1 200 OK"
+2026-01-03 05:15:49,634 - INFO - Updated 2dae7361-6c27-8101-aa42-e875bf8e033b: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:50,869 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-81d3-9dc5-ca725fbea3d8 "HTTP/1.1 200 OK"
+2026-01-03 05:15:50,871 - INFO - Updated 2dae7361-6c27-81d3-9dc5-ca725fbea3d8: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:51,656 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-8136-ba44-f7379eb6d803 "HTTP/1.1 200 OK"
+2026-01-03 05:15:51,658 - INFO - Updated 2dae7361-6c27-8136-ba44-f7379eb6d803: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:52,443 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-8161-9740-d96a952f2f41 "HTTP/1.1 200 OK"
+2026-01-03 05:15:52,445 - INFO - Updated 2dae7361-6c27-8161-9740-d96a952f2f41: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:53,522 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8101-905e-c356b117cf7f "HTTP/1.1 200 OK"
+2026-01-03 05:15:53,523 - INFO - Updated 2d9e7361-6c27-8101-905e-c356b117cf7f: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:54,253 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8101-9bec-e1a6226dd90a "HTTP/1.1 200 OK"
+2026-01-03 05:15:54,255 - INFO - Updated 2d9e7361-6c27-8101-9bec-e1a6226dd90a: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:55,193 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8103-92eb-d08e26699ccf "HTTP/1.1 200 OK"
+2026-01-03 05:15:55,194 - INFO - Updated 2d9e7361-6c27-8103-92eb-d08e26699ccf: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:55,799 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8108-82f7-c7d68fbc0fd4 "HTTP/1.1 200 OK"
+2026-01-03 05:15:55,800 - INFO - Updated 2d9e7361-6c27-8108-82f7-c7d68fbc0fd4: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:57,948 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-810b-a885-f72e6f3b1b88 "HTTP/1.1 200 OK"
+2026-01-03 05:15:57,949 - INFO - Updated 2d9e7361-6c27-810b-a885-f72e6f3b1b88: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:15:59,415 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-810b-b1b9-f6325623410d "HTTP/1.1 200 OK"
+2026-01-03 05:15:59,416 - INFO - Updated 2d9e7361-6c27-810b-b1b9-f6325623410d: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:00,306 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-810e-9e25-fa7508d295ad "HTTP/1.1 200 OK"
+2026-01-03 05:16:00,307 - INFO - Updated 2d9e7361-6c27-810e-9e25-fa7508d295ad: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:01,584 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8114-bf69-d24bf1175575 "HTTP/1.1 200 OK"
+2026-01-03 05:16:01,585 - INFO - Updated 2d9e7361-6c27-8114-bf69-d24bf1175575: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:02,965 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8119-8e66-cef08b3b0fd0 "HTTP/1.1 200 OK"
+2026-01-03 05:16:02,966 - INFO - Updated 2d9e7361-6c27-8119-8e66-cef08b3b0fd0: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:03,412 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-811b-8366-d2552653d507 "HTTP/1.1 200 OK"
+2026-01-03 05:16:03,413 - INFO - Updated 2d9e7361-6c27-811b-8366-d2552653d507: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:04,296 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-811b-bfce-c541a9f8b80d "HTTP/1.1 200 OK"
+2026-01-03 05:16:04,298 - INFO - Updated 2d9e7361-6c27-811b-bfce-c541a9f8b80d: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:05,234 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-811c-87ec-cbd5bcdbd78d "HTTP/1.1 200 OK"
+2026-01-03 05:16:05,235 - INFO - Updated 2d9e7361-6c27-811c-87ec-cbd5bcdbd78d: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:06,140 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-811e-b789-c38dfbd964d1 "HTTP/1.1 200 OK"
+2026-01-03 05:16:06,142 - INFO - Updated 2d9e7361-6c27-811e-b789-c38dfbd964d1: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:06,955 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8123-9bf1-f508fdcbe5cc "HTTP/1.1 200 OK"
+2026-01-03 05:16:06,956 - INFO - Updated 2d9e7361-6c27-8123-9bf1-f508fdcbe5cc: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:07,677 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8124-afe9-f0119331a48d "HTTP/1.1 200 OK"
+2026-01-03 05:16:07,678 - INFO - Updated 2d9e7361-6c27-8124-afe9-f0119331a48d: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:08,188 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8125-820c-d7196d27ce34 "HTTP/1.1 200 OK"
+2026-01-03 05:16:08,189 - INFO - Updated 2d9e7361-6c27-8125-820c-d7196d27ce34: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:08,808 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8125-bca1-d4e8fa34852f "HTTP/1.1 200 OK"
+2026-01-03 05:16:08,809 - INFO - Updated 2d9e7361-6c27-8125-bca1-d4e8fa34852f: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:09,211 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8127-80dd-df602e67a7f6 "HTTP/1.1 200 OK"
+2026-01-03 05:16:09,213 - INFO - Updated 2d9e7361-6c27-8127-80dd-df602e67a7f6: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:09,578 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8127-a0fe-f138a4934ef1 "HTTP/1.1 200 OK"
+2026-01-03 05:16:09,580 - INFO - Updated 2d9e7361-6c27-8127-a0fe-f138a4934ef1: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:16,615 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8129-8491-fcc7093b8273 "HTTP/1.1 200 OK"
+2026-01-03 05:16:16,617 - INFO - Updated 2d9e7361-6c27-8129-8491-fcc7093b8273: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:18,424 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-812a-a176-c100d200047d "HTTP/1.1 200 OK"
+2026-01-03 05:16:18,427 - INFO - Updated 2d9e7361-6c27-812a-a176-c100d200047d: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:19,373 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-812c-b1f5-e127be16822f "HTTP/1.1 200 OK"
+2026-01-03 05:16:19,374 - INFO - Updated 2d9e7361-6c27-812c-b1f5-e127be16822f: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:20,851 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-812e-b4e3-c6878ef8623d "HTTP/1.1 200 OK"
+2026-01-03 05:16:20,852 - INFO - Updated 2d9e7361-6c27-812e-b4e3-c6878ef8623d: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:22,031 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-812f-bb6b-d3229a79eb8e "HTTP/1.1 200 OK"
+2026-01-03 05:16:22,032 - INFO - Updated 2d9e7361-6c27-812f-bb6b-d3229a79eb8e: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:22,429 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8134-ab93-cd6648aa47e2 "HTTP/1.1 200 OK"
+2026-01-03 05:16:22,430 - INFO - Updated 2d9e7361-6c27-8134-ab93-cd6648aa47e2: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:22,935 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8135-a76a-c906dfb8d7f0 "HTTP/1.1 200 OK"
+2026-01-03 05:16:22,936 - INFO - Updated 2d9e7361-6c27-8135-a76a-c906dfb8d7f0: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:23,621 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8137-8e1a-f963f79058de "HTTP/1.1 200 OK"
+2026-01-03 05:16:23,623 - INFO - Updated 2d9e7361-6c27-8137-8e1a-f963f79058de: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:24,363 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-813b-9916-c4be846dd584 "HTTP/1.1 200 OK"
+2026-01-03 05:16:24,365 - INFO - Updated 2d9e7361-6c27-813b-9916-c4be846dd584: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:25,324 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-813c-ac05-de4f6400d6d0 "HTTP/1.1 200 OK"
+2026-01-03 05:16:25,324 - INFO - Updated 2d9e7361-6c27-813c-ac05-de4f6400d6d0: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:25,760 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-813d-9e95-d15c0a1093ce "HTTP/1.1 200 OK"
+2026-01-03 05:16:25,760 - INFO - Updated 2d9e7361-6c27-813d-9e95-d15c0a1093ce: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:26,519 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-813f-a2e1-f932000f6235 "HTTP/1.1 200 OK"
+2026-01-03 05:16:26,520 - INFO - Updated 2d9e7361-6c27-813f-a2e1-f932000f6235: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:27,485 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8146-a390-faeb9b79eba7 "HTTP/1.1 200 OK"
+2026-01-03 05:16:27,487 - INFO - Updated 2d9e7361-6c27-8146-a390-faeb9b79eba7: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:28,693 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8147-8814-cbfcd1de13d2 "HTTP/1.1 200 OK"
+2026-01-03 05:16:28,694 - INFO - Updated 2d9e7361-6c27-8147-8814-cbfcd1de13d2: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:28,979 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8148-9db3-f0cd22ee4bd6 "HTTP/1.1 200 OK"
+2026-01-03 05:16:28,980 - INFO - Updated 2d9e7361-6c27-8148-9db3-f0cd22ee4bd6: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:29,464 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8148-a644-ca4ba8941f06 "HTTP/1.1 200 OK"
+2026-01-03 05:16:29,465 - INFO - Updated 2d9e7361-6c27-8148-a644-ca4ba8941f06: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:30,734 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8149-be13-e056257028e4 "HTTP/1.1 200 OK"
+2026-01-03 05:16:30,736 - INFO - Updated 2d9e7361-6c27-8149-be13-e056257028e4: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:32,253 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-814c-afff-edfeee6e41c4 "HTTP/1.1 200 OK"
+2026-01-03 05:16:32,255 - INFO - Updated 2d9e7361-6c27-814c-afff-edfeee6e41c4: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:38,967 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-814e-a011-d2d892f24212 "HTTP/1.1 200 OK"
+2026-01-03 05:16:38,968 - INFO - Updated 2d9e7361-6c27-814e-a011-d2d892f24212: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:39,377 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-814f-a86f-ffcf50c026b4 "HTTP/1.1 200 OK"
+2026-01-03 05:16:39,379 - INFO - Updated 2d9e7361-6c27-814f-a86f-ffcf50c026b4: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:40,228 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8151-992d-e28e377c064c "HTTP/1.1 200 OK"
+2026-01-03 05:16:40,229 - INFO - Updated 2d9e7361-6c27-8151-992d-e28e377c064c: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:40,955 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8153-bb38-d602cf2d1ff8 "HTTP/1.1 200 OK"
+2026-01-03 05:16:40,956 - INFO - Updated 2d9e7361-6c27-8153-bb38-d602cf2d1ff8: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:41,907 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8155-bf6d-eb2c0752d683 "HTTP/1.1 200 OK"
+2026-01-03 05:16:41,909 - INFO - Updated 2d9e7361-6c27-8155-bf6d-eb2c0752d683: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:42,602 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8156-97b4-c66d89f886db "HTTP/1.1 200 OK"
+2026-01-03 05:16:42,603 - INFO - Updated 2d9e7361-6c27-8156-97b4-c66d89f886db: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:43,687 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8156-b7ff-c054e1e79970 "HTTP/1.1 200 OK"
+2026-01-03 05:16:43,688 - INFO - Updated 2d9e7361-6c27-8156-b7ff-c054e1e79970: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:44,385 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8162-a14d-ddd8dd9ff7e7 "HTTP/1.1 200 OK"
+2026-01-03 05:16:44,387 - INFO - Updated 2d9e7361-6c27-8162-a14d-ddd8dd9ff7e7: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:45,268 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8165-8e79-d0f533f34dff "HTTP/1.1 200 OK"
+2026-01-03 05:16:45,270 - INFO - Updated 2d9e7361-6c27-8165-8e79-d0f533f34dff: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:46,282 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8166-98ee-c660f331e421 "HTTP/1.1 200 OK"
+2026-01-03 05:16:46,283 - INFO - Updated 2d9e7361-6c27-8166-98ee-c660f331e421: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:47,238 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8166-9d26-d33931d7527f "HTTP/1.1 200 OK"
+2026-01-03 05:16:47,239 - INFO - Updated 2d9e7361-6c27-8166-9d26-d33931d7527f: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:47,806 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8167-a564-fcd9739823cf "HTTP/1.1 200 OK"
+2026-01-03 05:16:47,808 - INFO - Updated 2d9e7361-6c27-8167-a564-fcd9739823cf: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:51,164 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-816b-ba0e-d2b12ca38c97 "HTTP/1.1 200 OK"
+2026-01-03 05:16:51,166 - INFO - Updated 2d9e7361-6c27-816b-ba0e-d2b12ca38c97: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:51,959 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8170-8679-e4a15368b050 "HTTP/1.1 200 OK"
+2026-01-03 05:16:51,961 - INFO - Updated 2d9e7361-6c27-8170-8679-e4a15368b050: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:52,334 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8171-8f61-d733c51e0d44 "HTTP/1.1 200 OK"
+2026-01-03 05:16:52,335 - INFO - Updated 2d9e7361-6c27-8171-8f61-d733c51e0d44: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:52,977 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8172-b2ad-f8cc89cdd6c1 "HTTP/1.1 200 OK"
+2026-01-03 05:16:52,978 - INFO - Updated 2d9e7361-6c27-8172-b2ad-f8cc89cdd6c1: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:53,592 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8172-ba23-e555e7d7cfca "HTTP/1.1 200 OK"
+2026-01-03 05:16:53,594 - INFO - Updated 2d9e7361-6c27-8172-ba23-e555e7d7cfca: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:54,465 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8175-a8bb-cfacc07a4ca8 "HTTP/1.1 200 OK"
+2026-01-03 05:16:54,466 - INFO - Updated 2d9e7361-6c27-8175-a8bb-cfacc07a4ca8: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:54,759 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8178-87b8-f358c895b00f "HTTP/1.1 200 OK"
+2026-01-03 05:16:54,760 - INFO - Updated 2d9e7361-6c27-8178-87b8-f358c895b00f: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:55,864 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8179-a691-ea5149698219 "HTTP/1.1 200 OK"
+2026-01-03 05:16:55,865 - INFO - Updated 2d9e7361-6c27-8179-a691-ea5149698219: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:56,973 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-817e-960c-ec1294478144 "HTTP/1.1 200 OK"
+2026-01-03 05:16:56,974 - INFO - Updated 2d9e7361-6c27-817e-960c-ec1294478144: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:57,342 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8181-a237-f27258426e29 "HTTP/1.1 200 OK"
+2026-01-03 05:16:57,343 - INFO - Updated 2d9e7361-6c27-8181-a237-f27258426e29: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:58,445 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8181-b36e-fa09cd31274a "HTTP/1.1 200 OK"
+2026-01-03 05:16:58,446 - INFO - Updated 2d9e7361-6c27-8181-b36e-fa09cd31274a: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:16:59,389 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8187-937a-dd00c4e33188 "HTTP/1.1 200 OK"
+2026-01-03 05:16:59,390 - INFO - Updated 2d9e7361-6c27-8187-937a-dd00c4e33188: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:04,319 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-818c-b91d-d80ca0169368 "HTTP/1.1 200 OK"
+2026-01-03 05:17:04,321 - INFO - Updated 2d9e7361-6c27-818c-b91d-d80ca0169368: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:04,712 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-818d-92d1-e9ac0dc7afeb "HTTP/1.1 200 OK"
+2026-01-03 05:17:04,713 - INFO - Updated 2d9e7361-6c27-818d-92d1-e9ac0dc7afeb: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:05,582 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-818e-a56d-e773078ec3a3 "HTTP/1.1 200 OK"
+2026-01-03 05:17:05,584 - INFO - Updated 2d9e7361-6c27-818e-a56d-e773078ec3a3: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:05,849 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-818f-966f-f896fc145874 "HTTP/1.1 200 OK"
+2026-01-03 05:17:05,850 - INFO - Updated 2d9e7361-6c27-818f-966f-f896fc145874: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:07,477 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8190-ab7e-f094f8e71ab7 "HTTP/1.1 200 OK"
+2026-01-03 05:17:07,478 - INFO - Updated 2d9e7361-6c27-8190-ab7e-f094f8e71ab7: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:08,767 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8193-a30e-eaaa957aeaa1 "HTTP/1.1 200 OK"
+2026-01-03 05:17:08,769 - INFO - Updated 2d9e7361-6c27-8193-a30e-eaaa957aeaa1: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:14,065 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8193-bdcc-c1d2baa123f6 "HTTP/1.1 200 OK"
+2026-01-03 05:17:14,066 - INFO - Updated 2d9e7361-6c27-8193-bdcc-c1d2baa123f6: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:15,026 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8194-b014-edf7208078c1 "HTTP/1.1 200 OK"
+2026-01-03 05:17:15,027 - INFO - Updated 2d9e7361-6c27-8194-b014-edf7208078c1: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:15,789 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8194-b5a1-edc6237cf11e "HTTP/1.1 200 OK"
+2026-01-03 05:17:15,790 - INFO - Updated 2d9e7361-6c27-8194-b5a1-edc6237cf11e: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:17,021 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8196-9a10-c3edc9fc2111 "HTTP/1.1 200 OK"
+2026-01-03 05:17:17,022 - INFO - Updated 2d9e7361-6c27-8196-9a10-c3edc9fc2111: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:17,924 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8198-9b4a-ffd997c2c82b "HTTP/1.1 200 OK"
+2026-01-03 05:17:17,925 - INFO - Updated 2d9e7361-6c27-8198-9b4a-ffd997c2c82b: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:18,408 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8199-93c6-f17040cc40b9 "HTTP/1.1 200 OK"
+2026-01-03 05:17:18,410 - INFO - Updated 2d9e7361-6c27-8199-93c6-f17040cc40b9: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:18,742 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8199-b502-fc81bc1a0a84 "HTTP/1.1 200 OK"
+2026-01-03 05:17:18,744 - INFO - Updated 2d9e7361-6c27-8199-b502-fc81bc1a0a84: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:20,551 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-819d-8a4f-eaea665f0620 "HTTP/1.1 200 OK"
+2026-01-03 05:17:20,553 - INFO - Updated 2d9e7361-6c27-819d-8a4f-eaea665f0620: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:21,586 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-819e-8e0e-d97a815033e4 "HTTP/1.1 200 OK"
+2026-01-03 05:17:21,588 - INFO - Updated 2d9e7361-6c27-819e-8e0e-d97a815033e4: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:22,054 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81a1-8d01-d28bd9620007 "HTTP/1.1 200 OK"
+2026-01-03 05:17:22,056 - INFO - Updated 2d9e7361-6c27-81a1-8d01-d28bd9620007: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:22,930 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81a3-9ce0-d1713e7fa8c8 "HTTP/1.1 200 OK"
+2026-01-03 05:17:22,932 - INFO - Updated 2d9e7361-6c27-81a3-9ce0-d1713e7fa8c8: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:23,951 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81a3-9efa-efed8d7038b2 "HTTP/1.1 200 OK"
+2026-01-03 05:17:23,952 - INFO - Updated 2d9e7361-6c27-81a3-9efa-efed8d7038b2: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:25,428 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81a5-9919-c4cf84b2851b "HTTP/1.1 200 OK"
+2026-01-03 05:17:25,429 - INFO - Updated 2d9e7361-6c27-81a5-9919-c4cf84b2851b: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:25,761 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81a6-9525-f7327acac9c1 "HTTP/1.1 200 OK"
+2026-01-03 05:17:25,877 - INFO - Updated 2d9e7361-6c27-81a6-9525-f7327acac9c1: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:27,038 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81a6-abc0-e3cc9965a5e3 "HTTP/1.1 200 OK"
+2026-01-03 05:17:27,039 - INFO - Updated 2d9e7361-6c27-81a6-abc0-e3cc9965a5e3: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:28,204 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81a7-bbec-f774da972724 "HTTP/1.1 200 OK"
+2026-01-03 05:17:28,205 - INFO - Updated 2d9e7361-6c27-81a7-bbec-f774da972724: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:29,623 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81aa-a1bb-cfe0d0a8e66d "HTTP/1.1 200 OK"
+2026-01-03 05:17:29,624 - INFO - Updated 2d9e7361-6c27-81aa-a1bb-cfe0d0a8e66d: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:30,659 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81aa-aa6a-c58896495c6c "HTTP/1.1 200 OK"
+2026-01-03 05:17:30,660 - INFO - Updated 2d9e7361-6c27-81aa-aa6a-c58896495c6c: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:32,775 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81af-bda5-f15550fa2f59 "HTTP/1.1 200 OK"
+2026-01-03 05:17:32,777 - INFO - Updated 2d9e7361-6c27-81af-bda5-f15550fa2f59: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:33,678 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81b1-8871-d7d1ff97e905 "HTTP/1.1 200 OK"
+2026-01-03 05:17:33,679 - INFO - Updated 2d9e7361-6c27-81b1-8871-d7d1ff97e905: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:34,405 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81b2-b40a-fb249a712ee6 "HTTP/1.1 200 OK"
+2026-01-03 05:17:34,406 - INFO - Updated 2d9e7361-6c27-81b2-b40a-fb249a712ee6: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:35,611 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81b7-9b2d-efad79a0278e "HTTP/1.1 200 OK"
+2026-01-03 05:17:35,613 - INFO - Updated 2d9e7361-6c27-81b7-9b2d-efad79a0278e: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:36,528 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81b8-8a6f-c3ad48ef040b "HTTP/1.1 200 OK"
+2026-01-03 05:17:36,529 - INFO - Updated 2d9e7361-6c27-81b8-8a6f-c3ad48ef040b: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:38,099 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81b8-b94f-d1067937304c "HTTP/1.1 200 OK"
+2026-01-03 05:17:38,100 - INFO - Updated 2d9e7361-6c27-81b8-b94f-d1067937304c: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:39,092 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81b9-9417-c14c6add076f "HTTP/1.1 200 OK"
+2026-01-03 05:17:39,094 - INFO - Updated 2d9e7361-6c27-81b9-9417-c14c6add076f: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:45,755 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81bd-b22d-e15c7d949d18 "HTTP/1.1 200 OK"
+2026-01-03 05:17:45,757 - INFO - Updated 2d9e7361-6c27-81bd-b22d-e15c7d949d18: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:46,525 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81c1-a588-f7be9e430b3d "HTTP/1.1 200 OK"
+2026-01-03 05:17:46,527 - INFO - Updated 2d9e7361-6c27-81c1-a588-f7be9e430b3d: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:46,934 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81c2-ab9e-e58d70f5a32d "HTTP/1.1 200 OK"
+2026-01-03 05:17:46,935 - INFO - Updated 2d9e7361-6c27-81c2-ab9e-e58d70f5a32d: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:47,558 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81c3-8c14-e9d644a0cbee "HTTP/1.1 200 OK"
+2026-01-03 05:17:47,559 - INFO - Updated 2d9e7361-6c27-81c3-8c14-e9d644a0cbee: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:48,457 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81c9-a60f-e27096149040 "HTTP/1.1 200 OK"
+2026-01-03 05:17:48,459 - INFO - Updated 2d9e7361-6c27-81c9-a60f-e27096149040: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:49,566 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81ca-8b08-ee0c90ccde80 "HTTP/1.1 200 OK"
+2026-01-03 05:17:49,567 - INFO - Updated 2d9e7361-6c27-81ca-8b08-ee0c90ccde80: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:51,414 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81cb-8dc5-f338663020d8 "HTTP/1.1 200 OK"
+2026-01-03 05:17:51,414 - INFO - Updated 2d9e7361-6c27-81cb-8dc5-f338663020d8: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:52,738 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81ce-9721-cfa40c4da73b "HTTP/1.1 200 OK"
+2026-01-03 05:17:52,739 - INFO - Updated 2d9e7361-6c27-81ce-9721-cfa40c4da73b: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:53,094 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81d1-94ae-e0f21af3ec87 "HTTP/1.1 200 OK"
+2026-01-03 05:17:53,095 - INFO - Updated 2d9e7361-6c27-81d1-94ae-e0f21af3ec87: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:53,982 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81d2-837c-cc4464d208dd "HTTP/1.1 200 OK"
+2026-01-03 05:17:53,984 - INFO - Updated 2d9e7361-6c27-81d2-837c-cc4464d208dd: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:54,734 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81d2-8b76-cfdccbd0bd52 "HTTP/1.1 200 OK"
+2026-01-03 05:17:54,735 - INFO - Updated 2d9e7361-6c27-81d2-8b76-cfdccbd0bd52: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:55,661 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81d8-84bc-f022a4aa8c54 "HTTP/1.1 200 OK"
+2026-01-03 05:17:55,661 - INFO - Updated 2d9e7361-6c27-81d8-84bc-f022a4aa8c54: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:17:56,529 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81d8-91f6-dff7c575347f "HTTP/1.1 200 OK"
+2026-01-03 05:17:56,530 - INFO - Updated 2d9e7361-6c27-81d8-91f6-dff7c575347f: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:08,385 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81d8-b061-ed42d70cdf1c "HTTP/1.1 200 OK"
+2026-01-03 05:18:08,386 - INFO - Updated 2d9e7361-6c27-81d8-b061-ed42d70cdf1c: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:08,815 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81dc-be13-eac113bc9430 "HTTP/1.1 200 OK"
+2026-01-03 05:18:08,816 - INFO - Updated 2d9e7361-6c27-81dc-be13-eac113bc9430: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:09,227 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81dd-afa2-eb4a78002893 "HTTP/1.1 200 OK"
+2026-01-03 05:18:09,227 - INFO - Updated 2d9e7361-6c27-81dd-afa2-eb4a78002893: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:10,096 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81e1-8135-d2ae627eeb02 "HTTP/1.1 200 OK"
+2026-01-03 05:18:10,097 - INFO - Updated 2d9e7361-6c27-81e1-8135-d2ae627eeb02: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:11,377 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81e1-9dbb-d831aa12f452 "HTTP/1.1 200 OK"
+2026-01-03 05:18:11,379 - INFO - Updated 2d9e7361-6c27-81e1-9dbb-d831aa12f452: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:12,297 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81e1-b10c-c2453e86ad74 "HTTP/1.1 200 OK"
+2026-01-03 05:18:12,299 - INFO - Updated 2d9e7361-6c27-81e1-b10c-c2453e86ad74: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:13,213 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81e2-9204-f2fae324def3 "HTTP/1.1 200 OK"
+2026-01-03 05:18:13,215 - INFO - Updated 2d9e7361-6c27-81e2-9204-f2fae324def3: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:17,930 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81e2-b04c-fd6d6e8d7ecd "HTTP/1.1 200 OK"
+2026-01-03 05:18:17,931 - INFO - Updated 2d9e7361-6c27-81e2-b04c-fd6d6e8d7ecd: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:18,750 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81e3-931a-c4700378ebe3 "HTTP/1.1 200 OK"
+2026-01-03 05:18:18,752 - INFO - Updated 2d9e7361-6c27-81e3-931a-c4700378ebe3: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:20,080 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81e4-94b5-db54c72de650 "HTTP/1.1 200 OK"
+2026-01-03 05:18:20,081 - INFO - Updated 2d9e7361-6c27-81e4-94b5-db54c72de650: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:20,798 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81e5-a10e-c6f7858c61fb "HTTP/1.1 200 OK"
+2026-01-03 05:18:20,800 - INFO - Updated 2d9e7361-6c27-81e5-a10e-c6f7858c61fb: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:21,310 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81e9-bb2e-d449d0458ca3 "HTTP/1.1 200 OK"
+2026-01-03 05:18:21,311 - INFO - Updated 2d9e7361-6c27-81e9-bb2e-d449d0458ca3: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:22,129 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81ee-b537-c9cc807dcb04 "HTTP/1.1 200 OK"
+2026-01-03 05:18:22,131 - INFO - Updated 2d9e7361-6c27-81ee-b537-c9cc807dcb04: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:23,254 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81f0-99c1-fcf90e266007 "HTTP/1.1 200 OK"
+2026-01-03 05:18:23,256 - INFO - Updated 2d9e7361-6c27-81f0-99c1-fcf90e266007: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:23,868 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81f0-b5a9-d93a2bc66f7e "HTTP/1.1 200 OK"
+2026-01-03 05:18:23,870 - INFO - Updated 2d9e7361-6c27-81f0-b5a9-d93a2bc66f7e: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:24,279 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81f1-922d-e7b8a5f5c619 "HTTP/1.1 200 OK"
+2026-01-03 05:18:24,280 - INFO - Updated 2d9e7361-6c27-81f1-922d-e7b8a5f5c619: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:25,209 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81f1-ac95-d4b77df838ee "HTTP/1.1 200 OK"
+2026-01-03 05:18:25,212 - INFO - Updated 2d9e7361-6c27-81f1-ac95-d4b77df838ee: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:25,713 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81f3-9b85-d558eb895ad3 "HTTP/1.1 200 OK"
+2026-01-03 05:18:25,715 - INFO - Updated 2d9e7361-6c27-81f3-9b85-d558eb895ad3: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:26,633 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81f5-a917-d3eba1b7b208 "HTTP/1.1 200 OK"
+2026-01-03 05:18:26,635 - INFO - Updated 2d9e7361-6c27-81f5-a917-d3eba1b7b208: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:27,350 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81f9-a9f6-c2f05fe56087 "HTTP/1.1 200 OK"
+2026-01-03 05:18:27,352 - INFO - Updated 2d9e7361-6c27-81f9-a9f6-c2f05fe56087: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:28,683 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81fa-9bf8-cb253414f535 "HTTP/1.1 200 OK"
+2026-01-03 05:18:28,684 - INFO - Updated 2d9e7361-6c27-81fa-9bf8-cb253414f535: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:29,501 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81fa-a1bf-cb1e72c333b4 "HTTP/1.1 200 OK"
+2026-01-03 05:18:29,503 - INFO - Updated 2d9e7361-6c27-81fa-a1bf-cb1e72c333b4: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:32,883 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81fb-bc72-d9e582927b24 "HTTP/1.1 200 OK"
+2026-01-03 05:18:32,885 - INFO - Updated 2d9e7361-6c27-81fb-bc72-d9e582927b24: {'Status': {'status': {'name': 'Resolved'}}}
+2026-01-03 05:18:34,006 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/238e7361-6c27-80dd-a30b-d7242a141cae "HTTP/1.1 200 OK"
+2026-01-03 05:18:34,007 - INFO - Updated 238e7361-6c27-80dd-a30b-d7242a141cae: {'Priority': {'select': {'name': 'High'}}}
+2026-01-03 05:18:34,777 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/25ce7361-6c27-8176-9589-f3bce8076347 "HTTP/1.1 200 OK"
+2026-01-03 05:18:34,779 - INFO - Updated 25ce7361-6c27-8176-9589-f3bce8076347: {'Priority': {'select': {'name': 'Low'}}}
+2026-01-03 05:18:36,269 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/28ee7361-6c27-80f1-9f65-e6680ac5d5d4 "HTTP/1.1 200 OK"
+2026-01-03 05:18:36,271 - INFO - Updated 28ee7361-6c27-80f1-9f65-e6680ac5d5d4: {'Priority': {'select': {'name': 'Low'}}}
+2026-01-03 05:18:38,003 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2af5f9c4-e300-45eb-8999-3ccff8e1a682 "HTTP/1.1 200 OK"
+2026-01-03 05:18:38,005 - INFO - Updated 2af5f9c4-e300-45eb-8999-3ccff8e1a682: {'Priority': {'select': {'name': 'Medium'}}}
+2026-01-03 05:18:38,819 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2b1e7361-6c27-8128-95aa-f66fa897f07f "HTTP/1.1 200 OK"
+2026-01-03 05:18:38,821 - INFO - Updated 2b1e7361-6c27-8128-95aa-f66fa897f07f: {'Priority': {'select': {'name': 'Critical'}}}
+2026-01-03 05:18:40,455 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2b5e7361-6c27-8147-8cbc-e73a63dbc8f8 "HTTP/1.1 200 OK"
+2026-01-03 05:18:40,457 - INFO - Updated 2b5e7361-6c27-8147-8cbc-e73a63dbc8f8: {'Priority': {'select': {'name': 'Critical'}}}
+2026-01-03 05:18:41,379 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2b5e7361-6c27-81c2-81aa-c83edc35e977 "HTTP/1.1 200 OK"
+2026-01-03 05:18:41,380 - INFO - Updated 2b5e7361-6c27-81c2-81aa-c83edc35e977: {'Priority': {'select': {'name': 'High'}}}
+2026-01-03 05:18:42,608 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2c9e7361-6c27-8190-8dd4-e2b9e74b5166 "HTTP/1.1 200 OK"
+2026-01-03 05:18:42,610 - INFO - Updated 2c9e7361-6c27-8190-8dd4-e2b9e74b5166: {'Priority': {'select': {'name': 'Critical'}}}
+2026-01-03 05:18:43,631 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2cce7361-6c27-810c-a3d5-f7a10f7a4c3d "HTTP/1.1 200 OK"
+2026-01-03 05:18:43,632 - INFO - Updated 2cce7361-6c27-810c-a3d5-f7a10f7a4c3d: {'Priority': {'select': {'name': 'Critical'}}}
+2026-01-03 05:18:44,246 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2cce7361-6c27-8117-a9de-cdb5962f39c3 "HTTP/1.1 200 OK"
+2026-01-03 05:18:44,248 - INFO - Updated 2cce7361-6c27-8117-a9de-cdb5962f39c3: {'Priority': {'select': {'name': 'Critical'}}}
+2026-01-03 05:18:45,172 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2cce7361-6c27-812f-bb3f-d33eb06c7982 "HTTP/1.1 200 OK"
+2026-01-03 05:18:45,173 - INFO - Updated 2cce7361-6c27-812f-bb3f-d33eb06c7982: {'Priority': {'select': {'name': 'Medium'}}}
+2026-01-03 05:18:46,294 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2cce7361-6c27-813c-95f7-f6d276021ba8 "HTTP/1.1 200 OK"
+2026-01-03 05:18:46,295 - INFO - Updated 2cce7361-6c27-813c-95f7-f6d276021ba8: {'Priority': {'select': {'name': 'High'}}}
+2026-01-03 05:18:49,366 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2cce7361-6c27-8146-a05a-cd49b53435b9 "HTTP/1.1 200 OK"
+2026-01-03 05:18:49,367 - INFO - Updated 2cce7361-6c27-8146-a05a-cd49b53435b9: {'Priority': {'select': {'name': 'High'}}}
+2026-01-03 05:18:50,084 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2cce7361-6c27-8189-b857-ebe99d39693c "HTTP/1.1 200 OK"
+2026-01-03 05:18:50,086 - INFO - Updated 2cce7361-6c27-8189-b857-ebe99d39693c: {'Priority': {'select': {'name': 'Critical'}}}
+2026-01-03 05:18:51,940 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2cce7361-6c27-81d9-9264-eb4418715ea7 "HTTP/1.1 200 OK"
+2026-01-03 05:18:51,941 - INFO - Updated 2cce7361-6c27-81d9-9264-eb4418715ea7: {'Priority': {'select': {'name': 'Critical'}}}
+2026-01-03 05:18:52,246 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2cce7361-6c27-81ec-a4ab-e283799fc42a "HTTP/1.1 200 OK"
+2026-01-03 05:18:52,248 - INFO - Updated 2cce7361-6c27-81ec-a4ab-e283799fc42a: {'Priority': {'select': {'name': 'Critical'}}}
+2026-01-03 05:18:52,678 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2cce7361-6c27-81ee-952c-dfdacbe564f8 "HTTP/1.1 200 OK"
+2026-01-03 05:18:52,679 - INFO - Updated 2cce7361-6c27-81ee-952c-dfdacbe564f8: {'Priority': {'select': {'name': 'Critical'}}}
+2026-01-03 05:18:53,667 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2cce7361-6c27-81fd-88b7-e66856f5079b "HTTP/1.1 200 OK"
+2026-01-03 05:18:53,669 - INFO - Updated 2cce7361-6c27-81fd-88b7-e66856f5079b: {'Priority': {'select': {'name': 'High'}}}
+2026-01-03 05:18:54,078 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d0e7361-6c27-8153-a344-ca662c39c11a "HTTP/1.1 200 OK"
+2026-01-03 05:18:54,079 - INFO - Updated 2d0e7361-6c27-8153-a344-ca662c39c11a: {'Priority': {'select': {'name': 'Low'}}}
+2026-01-03 05:18:55,203 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d7e7361-6c27-8118-943d-e5812507bdfe "HTTP/1.1 200 OK"
+2026-01-03 05:18:55,204 - INFO - Updated 2d7e7361-6c27-8118-943d-e5812507bdfe: {'Priority': {'select': {'name': 'Critical'}}}
+2026-01-03 05:18:55,613 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d8e7361-6c27-8112-b757-fdb55478a91e "HTTP/1.1 200 OK"
+2026-01-03 05:18:55,614 - INFO - Updated 2d8e7361-6c27-8112-b757-fdb55478a91e: {'Priority': {'select': {'name': 'Medium'}}}
+2026-01-03 05:18:56,022 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d8e7361-6c27-81b1-bc94-c83191a7502d "HTTP/1.1 200 OK"
+2026-01-03 05:18:56,023 - INFO - Updated 2d8e7361-6c27-81b1-bc94-c83191a7502d: {'Priority': {'select': {'name': 'High'}}}
+2026-01-03 05:18:57,035 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-812e-91f8-d18c29a85552 "HTTP/1.1 200 OK"
+2026-01-03 05:18:57,036 - INFO - Updated 2dae7361-6c27-812e-91f8-d18c29a85552: {'Priority': {'select': {'name': 'Medium'}}}
+2026-01-03 05:18:57,460 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-8166-8089-d8a43f51c158 "HTTP/1.1 200 OK"
+2026-01-03 05:18:57,461 - INFO - Updated 2dae7361-6c27-8166-8089-d8a43f51c158: {'Priority': {'select': {'name': 'Medium'}}}
+2026-01-03 05:19:08,725 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-816e-a8b4-d71001760aaa "HTTP/1.1 200 OK"
+2026-01-03 05:19:08,727 - INFO - Updated 2dae7361-6c27-816e-a8b4-d71001760aaa: {'Priority': {'select': {'name': 'Medium'}}}
+2026-01-03 05:19:10,870 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/664384a7-951e-4772-92e7-c3a0cd84d4ba "HTTP/1.1 200 OK"
+2026-01-03 05:19:10,872 - INFO - Updated 664384a7-951e-4772-92e7-c3a0cd84d4ba: {'Priority': {'select': {'name': 'Low'}}}
+2026-01-03 05:19:10,878 - INFO - Summary report written to /Users/brianhellemn/Projects/github-production/scripts/logs/issues_cleanup_summary_20260103T111259Z.json
+2026-01-03 05:19:10,878 - INFO - Cleanup finished

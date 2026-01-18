@@ -1,0 +1,38 @@
+2026-01-03 09:33:56,192 - INFO - Issues+Questions cleanup started
+2026-01-03 09:33:56,192 - INFO - Data source ID: 229e7361-6c27-804f-b662-000b6af69781
+2026-01-03 09:33:56,192 - INFO - Mode: APPLY
+2026-01-03 09:33:56,643 - INFO - HTTP Request: GET https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781 "HTTP/1.1 200 OK"
+2026-01-03 09:33:56,646 - INFO - Available status options: ['Resolved', 'Troubleshooting', 'Waiting on Client', 'Reported + Waiting For Response', 'Solution In Progress', 'Unreported']
+2026-01-03 09:33:56,646 - INFO - Target status 'Resolved' exists in schema
+2026-01-03 09:33:57,740 - INFO - HTTP Request: POST https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781/query "HTTP/1.1 200 OK"
+2026-01-03 09:33:58,291 - INFO - HTTP Request: POST https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781/query "HTTP/1.1 200 OK"
+2026-01-03 09:33:59,051 - INFO - HTTP Request: POST https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781/query "HTTP/1.1 200 OK"
+2026-01-03 09:33:59,694 - INFO - HTTP Request: POST https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781/query "HTTP/1.1 200 OK"
+2026-01-03 09:34:00,298 - INFO - HTTP Request: POST https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781/query "HTTP/1.1 200 OK"
+2026-01-03 09:34:00,740 - INFO - HTTP Request: POST https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781/query "HTTP/1.1 200 OK"
+2026-01-03 09:34:00,751 - INFO - Fetched 520 pages from data source
+2026-01-03 09:34:00,757 - INFO - Planned updates: 8
+2026-01-03 09:34:00,758 - INFO - Duplicate groups: 99
+2026-01-03 09:34:00,758 - INFO - Duplicates to archive: 0
+2026-01-03 09:34:00,758 - INFO - Unreported total: 138
+2026-01-03 09:34:00,758 - INFO - Unreported archived: 0
+2026-01-03 09:34:00,758 - INFO - Unknown priority total: 252
+2026-01-03 09:34:00,758 - INFO - Priority updates: 8
+2026-01-03 09:34:01,434 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-811e-b789-c38dfbd964d1 "HTTP/1.1 200 OK"
+2026-01-03 09:34:01,435 - INFO - Updated 2d9e7361-6c27-811e-b789-c38dfbd964d1: {'Priority': {'select': {'name': 'Low'}}}
+2026-01-03 09:34:03,105 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8124-afe9-f0119331a48d "HTTP/1.1 200 OK"
+2026-01-03 09:34:03,106 - INFO - Updated 2d9e7361-6c27-8124-afe9-f0119331a48d: {'Priority': {'select': {'name': 'Low'}}}
+2026-01-03 09:34:05,100 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8181-85e3-cbd94519e2a9 "HTTP/1.1 200 OK"
+2026-01-03 09:34:05,101 - INFO - Updated 2d9e7361-6c27-8181-85e3-cbd94519e2a9: {'Priority': {'select': {'name': 'Low'}}}
+2026-01-03 09:34:05,945 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8199-93c6-f17040cc40b9 "HTTP/1.1 200 OK"
+2026-01-03 09:34:05,946 - INFO - Updated 2d9e7361-6c27-8199-93c6-f17040cc40b9: {'Priority': {'select': {'name': 'Low'}}}
+2026-01-03 09:34:06,988 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81b9-ad80-c203d0ed5429 "HTTP/1.1 200 OK"
+2026-01-03 09:34:06,990 - INFO - Updated 2d9e7361-6c27-81b9-ad80-c203d0ed5429: {'Priority': {'select': {'name': 'Low'}}}
+2026-01-03 09:34:07,315 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81d1-94ae-e0f21af3ec87 "HTTP/1.1 200 OK"
+2026-01-03 09:34:07,318 - INFO - Updated 2d9e7361-6c27-81d1-94ae-e0f21af3ec87: {'Priority': {'select': {'name': 'Low'}}}
+2026-01-03 09:34:09,637 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-81d1-ac57-ff5ff9e2972c "HTTP/1.1 200 OK"
+2026-01-03 09:34:09,639 - INFO - Updated 2d9e7361-6c27-81d1-ac57-ff5ff9e2972c: {'Priority': {'select': {'name': 'Low'}}}
+2026-01-03 09:34:10,169 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dde7361-6c27-8060-b120-f6d4c2ab9bc7 "HTTP/1.1 200 OK"
+2026-01-03 09:34:10,171 - INFO - Updated 2dde7361-6c27-8060-b120-f6d4c2ab9bc7: {'Priority': {'select': {'name': 'Medium'}}}
+2026-01-03 09:34:10,175 - INFO - Summary report written to /Users/brianhellemn/Projects/github-production/scripts/logs/issues_cleanup_summary_20260103T153356Z.json
+2026-01-03 09:34:10,175 - INFO - Cleanup finished

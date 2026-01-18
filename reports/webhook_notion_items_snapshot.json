@@ -1,0 +1,903 @@
+{
+  "keywords": [
+    "Webhook",
+    "Cloudflare",
+    "Tunnel",
+    "OAuth",
+    "Spotify",
+    "Lightroom",
+    "Redirect"
+  ],
+  "databases": {
+    "issues": {
+      "db_id": "229e7361-6c27-808e-bf06-c202b10b5166",
+      "title_property": "Name",
+      "status_property": "Status",
+      "total_matches": 5,
+      "open_items": []
+    },
+    "projects": {
+      "db_id": "286e7361-6c27-81ff-a450-db2ecad4b0ba",
+      "title_property": "Project Name",
+      "status_property": "Status",
+      "total_matches": 3,
+      "open_items": [
+        {
+          "id": "232cde5d-0ed1-4cd7-82d1-abbf25ac4afe",
+          "url": "https://www.notion.so/Scripting-Systems-Sprint-Webhooks-Mac-Sync-and-Agent-Trigger-Unification-232cde5d0ed14cd782d1abbf25ac4afe",
+          "title": "Scripting Systems Sprint: Webhooks, Mac Sync, and Agent Trigger Unification",
+          "status": "Planning",
+          "priority": "Medium"
+        },
+        {
+          "id": "83113018-ecbe-43b1-9a9f-cf842136481a",
+          "url": "https://www.notion.so/GAS-Slack-Webhook-Server-Open-Source-LLM-Integration-83113018ecbe43b19a9fcf842136481a",
+          "title": "GAS Slack Webhook Server + Open-Source LLM Integration",
+          "status": "Planning",
+          "priority": "5 - Critical"
+        },
+        {
+          "id": "9790b50e-4911-443f-9388-f4af974e0d04",
+          "url": "https://www.notion.so/Webhook-Server-Layer-9790b50e4911443f9388f4af974e0d04",
+          "title": "Webhook Server Layer",
+          "status": "Planning",
+          "priority": "5 - Critical"
+        }
+      ]
+    },
+    "agent_tasks": {
+      "db_id": "284e7361-6c27-8018-872a-eb14e82e0392",
+      "title_property": "Task Name",
+      "status_property": "Status",
+      "total_matches": 100,
+      "open_items": [
+        {
+          "id": "2b1e7361-6c27-8187-9aeb-ed62ae7e2e20",
+          "url": "https://www.notion.so/Cursor-MM1-Review-Phase-3-Task-3-1-Webhook-Server-2025-11-20-2b1e73616c2781879aebed62ae7e2e20",
+          "title": "[Cursor MM1] Review Phase 3 Task 3.1 \u2014 Webhook Server \u2014 2025-11-20",
+          "status": "Review",
+          "priority": "High",
+          "type": "",
+          "description": "Review Codex MM1's completion of Phase 3 Task 3.1 (Database IDs Configuration). Validate implementation, test results, and approve continuation to Task 3.2."
+        },
+        {
+          "id": "2b1e7361-6c27-81af-87aa-e0d9f1f7ea61",
+          "url": "https://www.notion.so/Claude-MM2-Review-Phase-2-Configuration-Consolidation-Webhook-Server-2025-11-20-2b1e73616c2781af87aae0d9f1f7ea61",
+          "title": "[Claude MM2] Review Phase 2 Configuration Consolidation \u2014 Webhook Server \u2014 2025-11-20",
+          "status": "Review",
+          "priority": "High",
+          "type": "",
+          "description": "Review Phase 2 configuration consolidation implementation and approve Phase 3 hardcoding removal strategy. Critical review before proceeding with database ID and path extraction to unified config."
+        },
+        {
+          "id": "2b1e7361-6c27-81f8-8902-c1efd01c56f7",
+          "url": "https://www.notion.so/Codex-MM1-Phase-3-Configuration-Hardcoding-Removal-Webhook-Server-2025-11-20-2b1e73616c2781f88902c1efd01c56f7",
+          "title": "[Codex MM1] Phase 3 Configuration Hardcoding Removal \u2014 Webhook Server \u2014 2025-11-20",
+          "status": "Blocked",
+          "priority": "High",
+          "type": "",
+          "description": "Execute Phase 3 configuration hardcoding removal tasks: database IDs to config, file paths to config, env var documentation, validation enhancement. Return handoffs to Cursor MM1 after each task."
+        },
+        {
+          "id": "2b6e7361-6c27-810d-a4cd-cc673eda9181",
+          "url": "https://www.notion.so/Integrate-Hybrid-Synchronizer-with-Webhook-Server-2b6e73616c27810da4cdcc673eda9181",
+          "title": "Integrate Hybrid Synchronizer with Webhook Server",
+          "status": "Planning",
+          "priority": "High",
+          "type": "",
+          "description": "Integrate hybrid synchronizer with webhook server:\n- Add webhook event forwarding to hybrid synchronizer\n- Implement webhook health monitoring\n- Create webhook event queue management\n- Test webhook-to-sync integration\n- Document integration patterns\n- Monitor webhook event processing latency\n\nReference: hybrid_synchronizer.py, notion_event_subscription_webhook_server_v4_enhanced.py"
+        },
+        {
+          "id": "2b6e7361-6c27-8111-8a32-c7a5e3504f65",
+          "url": "https://www.notion.so/Integrate-Hybrid-Synchronizer-with-Webhook-Server-2b6e73616c2781118a32c7a5e3504f65",
+          "title": "Integrate Hybrid Synchronizer with Webhook Server",
+          "status": "Planning",
+          "priority": "High",
+          "type": "",
+          "description": "Integrate hybrid synchronizer with webhook server:\n- Add webhook event forwarding to hybrid synchronizer\n- Implement webhook health monitoring\n- Create webhook event queue management\n- Test webhook-to-sync integration\n- Document integration patterns\n- Monitor webhook event processing latency\n\nReference: hybrid_synchronizer.py, notion_event_subscription_webhook_server_v4_enhanced.py"
+        },
+        {
+          "id": "2b6e7361-6c27-8122-98a4-cccbe277a88f",
+          "url": "https://www.notion.so/Integrate-Hybrid-Synchronizer-with-Webhook-Server-2b6e73616c27812298a4cccbe277a88f",
+          "title": "Integrate Hybrid Synchronizer with Webhook Server",
+          "status": "Planning",
+          "priority": "High",
+          "type": "",
+          "description": "Integrate hybrid synchronizer with webhook server:\n- Add webhook event forwarding to hybrid synchronizer\n- Implement webhook health monitoring\n- Create webhook event queue management\n- Test webhook-to-sync integration\n- Document integration patterns\n- Monitor webhook event processing latency\n\nReference: hybrid_synchronizer.py, notion_event_subscription_webhook_server_v4_enhanced.py"
+        },
+        {
+          "id": "2b6e7361-6c27-8138-b620-d6d951355888",
+          "url": "https://www.notion.so/Integrate-Hybrid-Synchronizer-with-Webhook-Server-2b6e73616c278138b620d6d951355888",
+          "title": "Integrate Hybrid Synchronizer with Webhook Server",
+          "status": "Planning",
+          "priority": "High",
+          "type": "",
+          "description": "Integrate hybrid synchronizer with webhook server:\n- Add webhook event forwarding to hybrid synchronizer\n- Implement webhook health monitoring\n- Create webhook event queue management\n- Test webhook-to-sync integration\n- Document integration patterns\n- Monitor webhook event processing latency\n\nReference: hybrid_synchronizer.py, notion_event_subscription_webhook_server_v4_enhanced.py"
+        },
+        {
+          "id": "2b6e7361-6c27-813f-96b5-d434ae9e7037",
+          "url": "https://www.notion.so/Integrate-Hybrid-Synchronizer-with-Webhook-Server-2b6e73616c27813f96b5d434ae9e7037",
+          "title": "Integrate Hybrid Synchronizer with Webhook Server",
+          "status": "Planning",
+          "priority": "High",
+          "type": "",
+          "description": "Integrate hybrid synchronizer with webhook server:\n- Add webhook event forwarding to hybrid synchronizer\n- Implement webhook health monitoring\n- Create webhook event queue management\n- Test webhook-to-sync integration\n- Document integration patterns\n- Monitor webhook event processing latency\n\nReference: hybrid_synchronizer.py, notion_event_subscription_webhook_server_v4_enhanced.py"
+        },
+        {
+          "id": "2b6e7361-6c27-8142-9918-ed9c4f152ee2",
+          "url": "https://www.notion.so/Integrate-Hybrid-Synchronizer-with-Webhook-Server-2b6e73616c2781429918ed9c4f152ee2",
+          "title": "Integrate Hybrid Synchronizer with Webhook Server",
+          "status": "Planning",
+          "priority": "High",
+          "type": "",
+          "description": "Integrate hybrid synchronizer with webhook server:\n- Add webhook event forwarding to hybrid synchronizer\n- Implement webhook health monitoring\n- Create webhook event queue management\n- Test webhook-to-sync integration\n- Document integration patterns\n- Monitor webhook event processing latency\n\nReference: hybrid_synchronizer.py, notion_event_subscription_webhook_server_v4_enhanced.py"
+        },
+        {
+          "id": "2b6e7361-6c27-8156-8ba8-d693e3b8d647",
+          "url": "https://www.notion.so/Cursor-MM1-Webhook-System-Codebase-Location-Request-2b6e73616c2781568ba8d693e3b8d647",
+          "title": "Cursor MM1 - Webhook System Codebase Location Request",
+          "status": "Draft",
+          "priority": "Medium",
+          "type": "",
+          "description": "Synced from trigger file: WEBHOOK_CODEBASE_LOCATION_20251005.md\n\nHash: bebd80acbc830a7e\nTrigger Folder: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/Agents/Agent-Triggers-gd/Cursor-MM1-Agent-Trigger-gd\n\n# Cursor MM1 - Webhook System Codebase Location Request\n\n**Task ID**: WEBHOOK-CODEBASE-LOC-20251005\n**Priority**: CRITICAL\n**Created**: 2025-10-05T00:00:00Z\n**Created By**: Claude MM2 Agent\n**Blocking Task**: WEBHOOK-PHASE1-MM2-REVIEW-20251005\n\n## Issue\n\nArchitectural review of Phase 1 security hardening blocked due to missing file paths. The referenced paths are not accessible:\n- `webhook-monitoring-system/node1-cloudflare/worker.js`\n- `webhook-monitoring-system/node1-cloudflare/wrangler.toml`\n- `webhook-monitoring-system/node2-python/webhook_server.py`\n- `webhook-monitoring-system/config/config.yaml`\n\n## Accessible Directories\n```\n/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co\n/Users/brianhellemn/Library/CloudStorage/GoogleDrive-marketing@oceanfrontiers.com\n/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs\n```\n\n## Required Information\n\n1. **Full absolute path** to the webhook-monitoring-system directory\n2. **Git repository location** (if applicable)\n3. **Branch name** containing Phase 1 security fixes (`feature/phase1-security-fixes`)\n4. **Commit hash/range** for the implemented changes\n\n## Files Needed for Review\n\n### Node 1 (Cloudflare Worker)\n- `worker.js` - Rate limiting, replay protection, HMAC signing implementation\n- `wrangler.toml` - KV bindings configuration\n\n### Node 2 (Python Server)\n- `webhook_server.py` - HMAC verification, replay protection implementation\n\n### Configuration\n- `config/config.yaml` - Replay protection settings\n\n### Supporting Files (if available)\n- Test suites (unit/integration/load)\n- Security checklist\n- Performance benchmark scripts\n- Documentation updates\n\n## Context\n\nPhase 1 security implementation includes:\n- **Defense-in-depth**: Per-IP rate l"
+        },
+        {
+          "id": "2b6e7361-6c27-8179-a9f6-d0efcaaccedc",
+          "url": "https://www.notion.so/Integrate-Hybrid-Synchronizer-with-Webhook-Server-2b6e73616c278179a9f6d0efcaaccedc",
+          "title": "Integrate Hybrid Synchronizer with Webhook Server",
+          "status": "Planning",
+          "priority": "High",
+          "type": "",
+          "description": "Integrate hybrid synchronizer with webhook server:\n- Add webhook event forwarding to hybrid synchronizer\n- Implement webhook health monitoring\n- Create webhook event queue management\n- Test webhook-to-sync integration\n- Document integration patterns\n- Monitor webhook event processing latency\n\nReference: hybrid_synchronizer.py, notion_event_subscription_webhook_server_v4_enhanced.py"
+        },
+        {
+          "id": "2b6e7361-6c27-818e-8c58-d4e58be0c402",
+          "url": "https://www.notion.so/Integrate-Hybrid-Synchronizer-with-Webhook-Server-2b6e73616c27818e8c58d4e58be0c402",
+          "title": "Integrate Hybrid Synchronizer with Webhook Server",
+          "status": "Planning",
+          "priority": "High",
+          "type": "",
+          "description": "Integrate hybrid synchronizer with webhook server:\n- Add webhook event forwarding to hybrid synchronizer\n- Implement webhook health monitoring\n- Create webhook event queue management\n- Test webhook-to-sync integration\n- Document integration patterns\n- Monitor webhook event processing latency\n\nReference: hybrid_synchronizer.py, notion_event_subscription_webhook_server_v4_enhanced.py"
+        },
+        {
+          "id": "2b6e7361-6c27-8193-9a73-dce6fda87d66",
+          "url": "https://www.notion.so/Implementation-Hybrid-Orchestrator-Webhook-Server-Integration-Development-Script-2b6e73616c2781939a73dce6fda87d66",
+          "title": "Implementation: Hybrid Orchestrator Webhook Server Integration (Development Script)",
+          "status": "Review",
+          "priority": "High",
+          "type": "",
+          "description": "Implement the Hybrid Orchestrator integration into the webhook server's launch agent implementation using a non-destructive development script approach. Create a development script that implements the integration without modifying existing workflow."
+        },
+        {
+          "id": "2b6e7361-6c27-81b3-8d90-cdbb9b256666",
+          "url": "https://www.notion.so/Integrate-Hybrid-Synchronizer-with-Webhook-Server-2b6e73616c2781b38d90cdbb9b256666",
+          "title": "Integrate Hybrid Synchronizer with Webhook Server",
+          "status": "Planning",
+          "priority": "High",
+          "type": "",
+          "description": "Integrate hybrid synchronizer with webhook server:\n- Add webhook event forwarding to hybrid synchronizer\n- Implement webhook health monitoring\n- Create webhook event queue management\n- Test webhook-to-sync integration\n- Document integration patterns\n- Monitor webhook event processing latency\n\nReference: hybrid_synchronizer.py, notion_event_subscription_webhook_server_v4_enhanced.py"
+        },
+        {
+          "id": "2b6e7361-6c27-81b8-adfe-e5947095ff3e",
+          "url": "https://www.notion.so/Webhook-Server-Integration-Multi-Agent-Analysis-Implementation-Design-2b6e73616c2781b8adfee5947095ff3e",
+          "title": "Webhook Server Integration - Multi-Agent Analysis & Implementation Design",
+          "status": "Ready",
+          "priority": "High",
+          "type": "",
+          "description": "Perform comprehensive, additive analysis of Webhook Server Integration Analysis document and create optimized implementation design/execution plan through multi-agent review process involving Claude MM1 Agent and Notion AI Research Agent."
+        },
+        {
+          "id": "2b6e7361-6c27-81bc-bf2b-eaea60b0b6fa",
+          "url": "https://www.notion.so/Integrate-Hybrid-Synchronizer-with-Webhook-Server-2b6e73616c2781bcbf2beaea60b0b6fa",
+          "title": "Integrate Hybrid Synchronizer with Webhook Server",
+          "status": "Planning",
+          "priority": "High",
+          "type": "",
+          "description": "Integrate hybrid synchronizer with webhook server:\n- Add webhook event forwarding to hybrid synchronizer\n- Implement webhook health monitoring\n- Create webhook event queue management\n- Test webhook-to-sync integration\n- Document integration patterns\n- Monitor webhook event processing latency\n\nReference: hybrid_synchronizer.py, notion_event_subscription_webhook_server_v4_enhanced.py"
+        },
+        {
+          "id": "2b6e7361-6c27-81c4-875a-df0ff8f6ae0f",
+          "url": "https://www.notion.so/Integrate-Hybrid-Synchronizer-with-Webhook-Server-2b6e73616c2781c4875adf0ff8f6ae0f",
+          "title": "Integrate Hybrid Synchronizer with Webhook Server",
+          "status": "Planning",
+          "priority": "High",
+          "type": "",
+          "description": "Integrate hybrid synchronizer with webhook server:\n- Add webhook event forwarding to hybrid synchronizer\n- Implement webhook health monitoring\n- Create webhook event queue management\n- Test webhook-to-sync integration\n- Document integration patterns\n- Monitor webhook event processing latency\n\nReference: hybrid_synchronizer.py, notion_event_subscription_webhook_server_v4_enhanced.py"
+        },
+        {
+          "id": "2b6e7361-6c27-81c6-96ff-d0e2ae212330",
+          "url": "https://www.notion.so/Integrate-Hybrid-Synchronizer-with-Webhook-Server-2b6e73616c2781c696ffd0e2ae212330",
+          "title": "Integrate Hybrid Synchronizer with Webhook Server",
+          "status": "Planning",
+          "priority": "High",
+          "type": "",
+          "description": "Integrate hybrid synchronizer with webhook server:\n- Add webhook event forwarding to hybrid synchronizer\n- Implement webhook health monitoring\n- Create webhook event queue management\n- Test webhook-to-sync integration\n- Document integration patterns\n- Monitor webhook event processing latency\n\nReference: hybrid_synchronizer.py, notion_event_subscription_webhook_server_v4_enhanced.py"
+        },
+        {
+          "id": "2b6e7361-6c27-81ca-b8ac-d569a9a86acf",
+          "url": "https://www.notion.so/Review-Audit-Hybrid-Orchestrator-Webhook-Server-Integration-2b6e73616c2781cab8acd569a9a86acf",
+          "title": "Review & Audit: Hybrid Orchestrator Webhook Server Integration",
+          "status": "Ready",
+          "priority": "High",
+          "type": "",
+          "description": "Comprehensive review and audit of the Hybrid Orchestrator integration into the webhook server's launch agent implementation. Verify technical soundness, reliability, non-destructive implementation, and adherence to workflow requirements."
+        },
+        {
+          "id": "2b6e7361-6c27-81e4-b63e-fd02de53916d",
+          "url": "https://www.notion.so/Integrate-Hybrid-Synchronizer-with-Webhook-Server-2b6e73616c2781e4b63efd02de53916d",
+          "title": "Integrate Hybrid Synchronizer with Webhook Server",
+          "status": "Planning",
+          "priority": "High",
+          "type": "",
+          "description": "Integrate hybrid synchronizer with webhook server:\n- Add webhook event forwarding to hybrid synchronizer\n- Implement webhook health monitoring\n- Create webhook event queue management\n- Test webhook-to-sync integration\n- Document integration patterns\n- Monitor webhook event processing latency\n\nReference: hybrid_synchronizer.py, notion_event_subscription_webhook_server_v4_enhanced.py"
+        },
+        {
+          "id": "2b6e7361-6c27-81e7-b7b9-fe3c722944a9",
+          "url": "https://www.notion.so/Integrate-Hybrid-Synchronizer-with-Webhook-Server-2b6e73616c2781e7b7b9fe3c722944a9",
+          "title": "Integrate Hybrid Synchronizer with Webhook Server",
+          "status": "Planning",
+          "priority": "High",
+          "type": "",
+          "description": "Integrate hybrid synchronizer with webhook server:\n- Add webhook event forwarding to hybrid synchronizer\n- Implement webhook health monitoring\n- Create webhook event queue management\n- Test webhook-to-sync integration\n- Document integration patterns\n- Monitor webhook event processing latency\n\nReference: hybrid_synchronizer.py, notion_event_subscription_webhook_server_v4_enhanced.py"
+        },
+        {
+          "id": "2b6e7361-6c27-81f2-ad3b-fc472fb9594e",
+          "url": "https://www.notion.so/Integrate-Hybrid-Synchronizer-with-Webhook-Server-2b6e73616c2781f2ad3bfc472fb9594e",
+          "title": "Integrate Hybrid Synchronizer with Webhook Server",
+          "status": "Planning",
+          "priority": "High",
+          "type": "",
+          "description": "Integrate hybrid synchronizer with webhook server:\n- Add webhook event forwarding to hybrid synchronizer\n- Implement webhook health monitoring\n- Create webhook event queue management\n- Test webhook-to-sync integration\n- Document integration patterns\n- Monitor webhook event processing latency\n\nReference: hybrid_synchronizer.py, notion_event_subscription_webhook_server_v4_enhanced.py"
+        },
+        {
+          "id": "2b6e7361-6c27-81fc-acab-d877fc5cb801",
+          "url": "https://www.notion.so/Integrate-Hybrid-Synchronizer-with-Webhook-Server-2b6e73616c2781fcacabd877fc5cb801",
+          "title": "Integrate Hybrid Synchronizer with Webhook Server",
+          "status": "Planning",
+          "priority": "High",
+          "type": "",
+          "description": "Integrate hybrid synchronizer with webhook server:\n- Add webhook event forwarding to hybrid synchronizer\n- Implement webhook health monitoring\n- Create webhook event queue management\n- Test webhook-to-sync integration\n- Document integration patterns\n- Monitor webhook event processing latency\n\nReference: hybrid_synchronizer.py, notion_event_subscription_webhook_server_v4_enhanced.py"
+        },
+        {
+          "id": "2c8e7361-6c27-811b-9ed0-d780f9d7d2eb",
+          "url": "https://www.notion.so/Verify-Cloudflare-DNS-Configuration-for-vibevessel-space-2c8e73616c27811b9ed0d780f9d7d2eb",
+          "title": "Verify Cloudflare DNS Configuration for vibevessel.space",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "Verify Cloudflare DNS configuration for vibevessel.space. Check domain is added, DNS records (CNAME for webhook) are correct, nameservers at Hostinger updated. Test DNS resolution. Note 24-hour propagation window. Deliverable: Report confirming setup and propagation status.\n\n**Current Status:**\n- Domain: vibevessel.space (purchased via Hostinger)\n- Tunnel ID: dd090a5d-9978-42b9-8e1f-7254e65faaa6\n- Subdomain: webhook.vibevessel.space\n\n**Verification Steps:**\n\n1. **Check Domain in Cloudflare:**\n   - Log in to Cloudflare Dashboard: https://dash.cloudflare.com\n   - Navigate to: Websites \u2192 vibevessel.space\n   - Verify domain is added and active\n\n2. **Verify DNS Records:**\n   - Navigate to: DNS \u2192 Records\n   - Check for CNAME record:\n     - Type: CNAME\n     - Name: `webhook`\n     - Target: `dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com`\n     - Proxy status: **Proxied** (orange cloud) \u26a0\ufe0f IMPORTANT\n     - TTL: Auto\n\n3. **Verify Nameservers:**\n   - Check Hostinger nameservers are updated to Cloudflare nameservers\n   - Cloudflare nameservers should be displayed in Cloudflare Dashboard\n   - Note: DNS propagation may take up to 24 hours\n\n4. **Test DNS Resolution:**\n   ```bash\n   dig webhook.vibevessel.space\n   # Should show: CNAME \u2192 dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n   ```\n\n**Deliverable:**\n- Report confirming Cloudflare DNS setup\n- Screenshot or confirmation of DNS records\n- Note when DNS propagation should complete (if just updated)\n- Verification of DNS resolution via `dig` command"
+        },
+        {
+          "id": "2c8e7361-6c27-8187-81dd-d29f966064dc",
+          "url": "https://www.notion.so/Configure-Environment-Variables-for-Webhook-Server-2c8e73616c27818781ddd29f966064dc",
+          "title": "Configure Environment Variables for Webhook Server",
+          "status": "Ready",
+          "priority": "High",
+          "type": "",
+          "description": "Set HOST, PORT, PROTOCOL, WEBHOOK_URL (or tool-specific equivalents) so that the server advertises webhook.vibevessel.space over HTTPS and uses the internal port 5001 for listening.\n\n**Current Server:**\n- Webhook server running on localhost:5001\n- Launch agent: `com.serenmedia.webhook-server.plist`\n- Server file: `webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py`\n\n**Required Environment Variables:**\n\n1. **HOST:**\n   ```bash\n   export HOST=webhook.vibevessel.space\n   # Or for n8n: export N8N_HOST=webhook.vibevessel.space\n   ```\n\n2. **PORT:**\n   ```bash\n   export PORT=5001\n   # Or for n8n: export N8N_PORT=5001\n   ```\n\n3. **PROTOCOL:**\n   ```bash\n   export PROTOCOL=https\n   # Or for n8n: export N8N_PROTOCOL=https\n   ```\n\n4. **WEBHOOK_URL:**\n   ```bash\n   export WEBHOOK_URL=https://webhook.vibevessel.space/\n   # Or for n8n: export WEBHOOK_URL=https://webhook.vibevessel.space/\n   ```\n\n**Configuration Methods:**\n\n**Option 1: Launch Agent plist File**\n- Edit: `~/Library/LaunchAgents/com.serenmedia.webhook-server.plist`\n- Add environment variables to `<key>EnvironmentVariables</key>` section\n- Reload launch agent\n\n**Option 2: .env File**\n- Create/update: `webhook-server/.env`\n- Add environment variables\n- Ensure server reads from .env file\n\n**Option 3: Shell Script Wrapper**\n- Create wrapper script that sets environment variables\n- Update launch agent to use wrapper script\n\n**After Configuration:**\n- Restart webhook server\n- Verify server logs show correct host/port/protocol\n- Test that server advertises webhook.vibevessel.space in responses\n\n**Deliverable:**\n- Updated configuration file or environment settings\n- Confirmation that server reads environment variables correctly\n- Server restart completed\n- Verification that server advertises webhook.vibevessel.space"
+        },
+        {
+          "id": "2c8e7361-6c27-81cb-a092-f0e79588bd6e",
+          "url": "https://www.notion.so/Verification-Test-OAuth-Flow-via-Cloudflare-Tunnel-2c8e73616c2781cba092f0e79588bd6e",
+          "title": "Verification: Test OAuth Flow via Cloudflare Tunnel",
+          "status": "Ready",
+          "priority": "High",
+          "type": "",
+          "description": "After tasks 1-5 are marked complete, verify that the OAuth flow works correctly via the Cloudflare tunnel.\n\n**Prerequisites:**\n- Tasks 1-5 must be completed\n- Cloudflare DNS configured and propagated\n- Domain verified in Google Search Console\n- Tunnel running and mapped correctly\n- Server environment variables configured\n- OAuth client updated with correct redirect URIs\n\n**Verification Steps:**\n\n1. **Open Browser Using Local Computer Control:**\n   - Use browser automation or manual navigation\n   - Navigate to: https://webhook.vibevessel.space\n   - Verify that the webhook server responds\n\n2. **Test Health Endpoint:**\n   ```bash\n   curl https://webhook.vibevessel.space/health\n   # Should return: {\"status\":\"healthy\",...}\n   ```\n\n3. **Initiate Google OAuth Flow:**\n   - Navigate to: https://webhook.vibevessel.space/auth/google\n   - Or trigger OAuth flow through webhook server interface\n   - Observe redirect to Google OAuth consent screen\n\n4. **Complete OAuth Authorization:**\n   - Authorize the application in Google\n   - Observe redirect back to callback URI\n   - Verify redirect URI matches exactly: `https://webhook.vibevessel.space/auth/google/callback`\n   - Check for any errors in browser console or server logs\n\n5. **Verify OAuth Success:**\n   - Check that OAuth callback completes successfully\n   - Verify tokens are stored correctly\n   - Test that authenticated requests work\n\n**What to Check:**\n- \u2705 Webhook server responds at https://webhook.vibevessel.space\n- \u2705 OAuth flow initiates correctly\n- \u2705 Google redirects to correct callback URI (no mismatch errors)\n- \u2705 OAuth callback completes successfully\n- \u2705 No errors in browser console or server logs\n- \u2705 Tokens are stored and accessible\n\n**Deliverable:**\n- Screenshots of OAuth flow (if possible)\n- Brief report on success or failure\n- Any errors encountered and their resolution\n- Confirmation that OAuth works via Cloudflare tunnel\n- Verification that redirect URI matches exactly"
+        },
+        {
+          "id": "2c8e7361-6c27-81dc-8b1b-d6aab51dcb33",
+          "url": "https://www.notion.so/Verify-Cloudflare-DNS-Configuration-for-vibevessel-space-2c8e73616c2781dc8b1bd6aab51dcb33",
+          "title": "Verify Cloudflare DNS Configuration for vibevessel.space",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "Verify Cloudflare DNS configuration for vibevessel.space. Check domain is added, DNS records (CNAME for webhook) are correct, nameservers at Hostinger updated. Test DNS resolution. Note 24-hour propagation window. Deliverable: Report confirming setup and propagation status.\n\n**Current Status:**\n- Domain: vibevessel.space (purchased via Hostinger)\n- Tunnel ID: dd090a5d-9978-42b9-8e1f-7254e65faaa6\n- Subdomain: webhook.vibevessel.space\n\n**Verification Steps:**\n\n1. **Check Domain in Cloudflare:**\n   - Log in to Cloudflare Dashboard: https://dash.cloudflare.com\n   - Navigate to: Websites \u2192 vibevessel.space\n   - Verify domain is added and active\n\n2. **Verify DNS Records:**\n   - Navigate to: DNS \u2192 Records\n   - Check for CNAME record:\n     - Type: CNAME\n     - Name: `webhook`\n     - Target: `dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com`\n     - Proxy status: **Proxied** (orange cloud) \u26a0\ufe0f IMPORTANT\n     - TTL: Auto\n\n3. **Verify Nameservers:**\n   - Check Hostinger nameservers are updated to Cloudflare nameservers\n   - Cloudflare nameservers should be displayed in Cloudflare Dashboard\n   - Note: DNS propagation may take up to 24 hours\n\n4. **Test DNS Resolution:**\n   ```bash\n   dig webhook.vibevessel.space\n   # Should show: CNAME \u2192 dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n   ```\n\n**Deliverable:**\n- Report confirming Cloudflare DNS setup\n- Screenshot or confirmation of DNS records\n- Note when DNS propagation should complete (if just updated)\n- Verification of DNS resolution via `dig` command"
+        },
+        {
+          "id": "2c8e7361-6c27-81fa-8314-ffb35e8341a9",
+          "url": "https://www.notion.so/Verification-Test-OAuth-Flow-via-Cloudflare-Tunnel-2c8e73616c2781fa8314ffb35e8341a9",
+          "title": "Verification: Test OAuth Flow via Cloudflare Tunnel",
+          "status": "Ready",
+          "priority": "High",
+          "type": "",
+          "description": "After tasks 1-5 are marked complete, verify that the OAuth flow works correctly via the Cloudflare tunnel.\n\n**Prerequisites:**\n- Tasks 1-5 must be completed\n- Cloudflare DNS configured and propagated\n- Domain verified in Google Search Console\n- Tunnel running and mapped correctly\n- Server environment variables configured\n- OAuth client updated with correct redirect URIs\n\n**Verification Steps:**\n\n1. **Open Browser Using Local Computer Control:**\n   - Use browser automation or manual navigation\n   - Navigate to: https://webhook.vibevessel.space\n   - Verify that the webhook server responds\n\n2. **Test Health Endpoint:**\n   ```bash\n   curl https://webhook.vibevessel.space/health\n   # Should return: {\"status\":\"healthy\",...}\n   ```\n\n3. **Initiate Google OAuth Flow:**\n   - Navigate to: https://webhook.vibevessel.space/auth/google\n   - Or trigger OAuth flow through webhook server interface\n   - Observe redirect to Google OAuth consent screen\n\n4. **Complete OAuth Authorization:**\n   - Authorize the application in Google\n   - Observe redirect back to callback URI\n   - Verify redirect URI matches exactly: `https://webhook.vibevessel.space/auth/google/callback`\n   - Check for any errors in browser console or server logs\n\n5. **Verify OAuth Success:**\n   - Check that OAuth callback completes successfully\n   - Verify tokens are stored correctly\n   - Test that authenticated requests work\n\n**What to Check:**\n- \u2705 Webhook server responds at https://webhook.vibevessel.space\n- \u2705 OAuth flow initiates correctly\n- \u2705 Google redirects to correct callback URI (no mismatch errors)\n- \u2705 OAuth callback completes successfully\n- \u2705 No errors in browser console or server logs\n- \u2705 Tokens are stored and accessible\n\n**Deliverable:**\n- Screenshots of OAuth flow (if possible)\n- Brief report on success or failure\n- Any errors encountered and their resolution\n- Confirmation that OAuth works via Cloudflare tunnel\n- Verification that redirect URI matches exactly"
+        },
+        {
+          "id": "2cae7361-6c27-8108-b8c1-d3c7d96ac050",
+          "url": "https://www.notion.so/Claude-MM1-Integrate-NotificationManager-into-Webhook-Server-2025-12-15-2cae73616c278108b8c1d3c7d96ac050",
+          "title": "[Claude MM1] \u2014 Integrate NotificationManager into Webhook Server \u2014 2025-12-15",
+          "status": "Draft",
+          "priority": "High",
+          "type": "",
+          "description": "Wire the NotificationManager from shared_core into the webhook server. Replace existing MacNotifier calls with the full NotificationManager system that supports macOS, Slack, and Email notifications with rate limiting and deduplication."
+        },
+        {
+          "id": "2cae7361-6c27-810a-a279-f3bbecb99c59",
+          "url": "https://www.notion.so/Claude-MM1-Deploy-Webhook-Dashboard-Service-2025-12-15-2cae73616c27810aa279f3bbecb99c59",
+          "title": "[Claude MM1] \u2014 Deploy Webhook Dashboard Service \u2014 2025-12-15",
+          "status": "Draft",
+          "priority": "High",
+          "type": "",
+          "description": "Create and configure launch agent for webhook_dashboard_service.py to enable auto-start and continuous operation. Configure environment variables and logging paths."
+        },
+        {
+          "id": "2d3e7361-6c27-81a7-a1fb-c983cc890c9f",
+          "url": "https://www.notion.so/Webhook-Cloudflare-Review-Complete-Apply-Corrections-and-Create-ChatGPT-Strategic-Handoff-2d3e73616c2781a7a1fbc983cc890c9f",
+          "title": "Webhook & Cloudflare Review Complete - Apply Corrections and Create ChatGPT Strategic Handoff",
+          "status": "Ready",
+          "priority": "High",
+          "type": "",
+          "description": "Claude MM1 completed secondary review of webhook server and Cloudflare tunnel implementation. Key findings: DNS is the blocker (NXDOMAIN for both hostnames), LaunchAgent paths in report need correction (deployed plist differs from repo version). Apply corrections to report and create final handoff for ChatGPT Strategic Agent."
+        },
+        {
+          "id": "2d5e7361-6c27-8120-8afc-c0508a1e3449",
+          "url": "https://www.notion.so/Webhook-Server-Cloudflare-Tunnel-Secondary-Review-Complete-2d5e73616c2781208afcc0508a1e3449",
+          "title": "Webhook Server & Cloudflare Tunnel - Secondary Review Complete",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "**Status:** Ready for Cursor MM1 to finalize ChatGPT Strategic Agent handoff with corrections applied."
+        },
+        {
+          "id": "2dde7361-6c27-81e3-b3f6-eea23609d7dd",
+          "url": "https://www.notion.so/20260103T051617Z__HANDOFF__Verification-Test-OAuth-Flow-via-Cloudflare-Tunne__2c8e7361-2dde73616c2781e3b3f6eea23609d7dd",
+          "title": "20260103T051617Z__HANDOFF__Verification:-Test-OAuth-Flow-via-Cloudflare-Tunne__2c8e7361",
+          "status": "Ready",
+          "priority": "High",
+          "type": "",
+          "description": "After tasks 1-5 are marked complete, verify that the OAuth flow works correctly via the Cloudflare tunnel.\n\n**Prerequisites:**\n- Tasks 1-5 must be completed\n- Cloudflare DNS configured and propagated\n- Domain verified in Google Search Console\n- Tunnel running and mapped correctly\n- Server environment variables configured\n- OAuth client updated with correct redirect URIs\n\n**Verification Steps:**\n\n1. **Open Browser Using Local Computer Control:**\n   - Use browser automation or manual navigation\n   - Navigate to: https://webhook.vibevessel.space\n   - Verify that the webhook server responds\n\n2. **Test Health Endpoint:**\n   ```bash\n   curl https://webhook.vibevessel.space/health\n   # Should return: {\"status\":\"healthy\",...}\n   ```\n\n3. **Initiate Google OAuth Flow:**\n   - Navigate to: https://webhook.vibevessel.space/auth/google\n   - Or trigger OAuth flow through webhook server interface\n   - Observe redirect to Google OAuth consent screen\n\n4. **Complete OAuth Authorization:**\n   - Authorize the application in Google\n   - Observe redirect back to callback URI\n   - Verify redirect URI matches exactly: `https://webhook.vibevessel.space/auth/google/callback`\n   - Check for any errors in browser console or server logs\n\n5. **Verify OAuth Success:**\n   - Check that OAuth callback completes successfully\n   - Verify tokens are stored correctly\n   - Test that authenticated requests work\n\n**What to Check:**\n- \u2705 Webhook server responds at https://webhook.vibevessel.space\n- \u2705 OAuth flow initiates correctly\n- \u2705 Google redirects to correct callback URI (no mismatch errors)\n- \u2705 OAuth callback completes successfully\n- \u2705 No errors in browser console or server logs\n- \u2705 Tokens are stored and accessible\n\n**Deliverable:**\n- Screenshots of OAuth flow (if possible)\n- Brief report on success or failure\n- Any errors encountered and their resolution\n- Confirmation that OAuth works via Cloudflare tunnel\n- Verification that redirect URI matches exactly"
+        },
+        {
+          "id": "2dde7361-6c27-81e7-95ac-c4f184e38457",
+          "url": "https://www.notion.so/20260103T060928Z__HANDOFF__Webhook-Cloudflare-Review-Complete-Apply-Corre__2d3e7361-2dde73616c2781e795acc4f184e38457",
+          "title": "20260103T060928Z__HANDOFF__Webhook-&-Cloudflare-Review-Complete---Apply-Corre__2d3e7361",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "Claude MM1 completed secondary review of webhook server and Cloudflare tunnel implementation. Key findings: DNS is the blocker (NXDOMAIN for both hostnames), LaunchAgent paths in report need correction (deployed plist differs from repo version). Apply corrections to report and create final handoff for ChatGPT Strategic Agent."
+        },
+        {
+          "id": "2dfe7361-6c27-8109-8f9c-e2a6a9c9376f",
+          "url": "https://www.notion.so/Review-Configure-Environment-Variables-for-Webhook-Server-2dfe73616c2781098f9ce2a6a9c9376f",
+          "title": "Review: Configure Environment Variables for Webhook Server",
+          "status": "Ready",
+          "priority": "High",
+          "type": "",
+          "description": "## Task Completion Review\n\n**Original Task:** Configure Environment Variables for Webhook Server\n**Task URL:** https://www.notion.so/Configure-Environment-Variables-for-Webhook-Server-2c8e73616c2781b2899cec007d2b3e91\n**Task ID:** 2c8e7361-6c27-81b2-899c-ec007d2b3e91\n\n## Review Requirements\n\n1. **Validate Completion**: Verify all task requirements have been met\n2. **Check Documentation**: Ensure all work is properly documented in Notion\n3. **Verify Production**: Confirm successful execution in production environment\n4. **Workspace Requirements**: Validate that all workspace requirements are met\n5. **Next Steps**: Determine if any follow-up work is needed\n\n## Original Task Description\n\nSet HOST, PORT, PROTOCOL, WEBHOOK_URL (or tool-specific equivalents) so that the server advertises webhook.vibevessel.space over HTTPS and uses the internal port 5001 for listening.\n\n**Current Server:**\n- Webhook server running on localhost:5001\n- Launch agent: `com.serenmedia.webhook-server.plist`\n- Server file: `webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py`\n\n**Required Environment Variables:**\n\n1. **HOST:**\n   ```bash\n   export HOST=webhook.vibevessel.space\n   # Or for n8n: export N8N_HOST=webhook.vibevessel.space\n   ```\n\n2. **PORT:**\n   ```bash\n   export PORT=5001\n   # Or for n8n: export N8N_PORT=5001\n   ```\n\n3. **PROTOCOL:**\n   ```bash\n   export PROTOCOL=https\n   # Or for n8n: export N8N_PROTOCOL=https\n   ```\n\n4. **WEBHOOK_URL:**\n   ```bash\n   export WEBHOOK_URL=https://webhook.vibevessel.space/\n   # Or for n8n: export WEBHOOK_URL=https://webhook.vibevessel.space/\n   ```\n\n**Configuration Methods:**\n\n**Option 1: Launch Agent plist File**\n- Edit: `~/Library/\n\n## Review Instructions\n\nPlease review the completed task and:\n- Confirm all deliverables are complete\n- Verify documentation is comprehensive\n- Check that production execution was successful\n- Validate workspace requirements are met\n- Create any necessary follow-up tasks if work remains"
+        },
+        {
+          "id": "2dfe7361-6c27-8116-b60a-d30586245523",
+          "url": "https://www.notion.so/Review-Code-Review-notion_event_subscription_webhook_server_v4_enhanced-py-2dfe73616c278116b60ad30586245523",
+          "title": "Review: Code Review: notion_event_subscription_webhook_server_v4_enhanced.py",
+          "status": "Ready",
+          "priority": "High",
+          "type": "",
+          "description": "## Task Completion Review\n\n**Original Task:** Code Review: notion_event_subscription_webhook_server_v4_enhanced.py\n**Task URL:** https://www.notion.so/Code-Review-notion_event_subscription_webhook_server_v4_enhanced-py-2b0e73616c278115b4c6e8842bfcca14\n**Task ID:** 2b0e7361-6c27-8115-b4c6-e8842bfcca14\n\n## Review Requirements\n\n1. **Validate Completion**: Verify all task requirements have been met\n2. **Check Documentation**: Ensure all work is properly documented in Notion\n3. **Verify Production**: Confirm successful execution in production environment\n4. **Workspace Requirements**: Validate that all workspace requirements are met\n5. **Next Steps**: Determine if any follow-up work is needed\n\n## Original Task Description\n\nPhase 2 complete. Phase 3 handoff created with 4-task structure for Codex MM1 execution. Cursor MM1 coordinating reviews, Claude MM1 orchestrating overall workflow.\n\n## Review Instructions\n\nPlease review the completed task and:\n- Confirm all deliverables are complete\n- Verify documentation is comprehensive\n- Check that production execution was successful\n- Validate workspace requirements are met\n- Create any necessary follow-up tasks if work remains"
+        },
+        {
+          "id": "2dfe7361-6c27-8127-9d64-e2adaaa8b687",
+          "url": "https://www.notion.so/Fix-Cloudflare-DNS-for-webhook-vibevessel-space-2dfe73616c2781279d64e2adaaa8b687",
+          "title": "Fix Cloudflare DNS for webhook.vibevessel.space",
+          "status": "Ready",
+          "priority": "High",
+          "type": "",
+          "description": "## Cloudflare DNS Fix Task\n\n**Issue Reference:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n\n## Required Action\nCreate DNS CNAME record in Cloudflare Dashboard for webhook.vibevessel.space:\n\n1. Log into Cloudflare Dashboard\n2. Navigate to: vibevessel.space \u2192 DNS \u2192 Add Record\n3. Create CNAME:\n   - Type: CNAME\n   - Name: webhook\n   - Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n   - Proxy: ENABLED (orange cloud)\n\n4. Wait for propagation (5-10 min)\n5. Verify: dig webhook.vibevessel.space\n6. Test: curl https://webhook.vibevessel.space/health\n\n## Success Criteria\n- DNS resolves to Cloudflare IPs\n- Health check returns HTTP 200\n\n## Next Handoff\nCreate return handoff to Claude-Code-Agent with results."
+        },
+        {
+          "id": "2dfe7361-6c27-81b0-bb4c-f91c9bfb9aa3",
+          "url": "https://www.notion.so/Review-Notion-AI-Research-Runtime-Health-Cloudflare-Audit-2025-12-08-2dfe73616c2781b0bb4cf91c9bfb9aa3",
+          "title": "Review: [Notion AI Research] \u2014 Runtime Health & Cloudflare Audit \u2014 2025-12-08",
+          "status": "Ready",
+          "priority": "High",
+          "type": "",
+          "description": "## Task Completion Review\n\n**Original Task:** [Notion AI Research] \u2014 Runtime Health & Cloudflare Audit \u2014 2025-12-08\n**Task URL:** https://www.notion.so/Notion-AI-Research-Runtime-Health-Cloudflare-Audit-2025-12-08-2ebe67a8bc024354a941d9f9993216cf\n**Task ID:** 2ebe67a8-bc02-4354-a941-d9f9993216cf\n\n## Review Requirements\n\n1. **Validate Completion**: Verify all task requirements have been met\n2. **Check Documentation**: Ensure all work is properly documented in Notion\n3. **Verify Production**: Confirm successful execution in production environment\n4. **Workspace Requirements**: Validate that all workspace requirements are met\n5. **Next Steps**: Determine if any follow-up work is needed\n\n## Original Task Description\n\n\n\n## Review Instructions\n\nPlease review the completed task and:\n- Confirm all deliverables are complete\n- Verify documentation is comprehensive\n- Check that production execution was successful\n- Validate workspace requirements are met\n- Create any necessary follow-up tasks if work remains"
+        },
+        {
+          "id": "2e0e7361-6c27-810d-b93e-dbfe65e239cb",
+          "url": "https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-HUMAN-ACTION-REQUIRED-2e0e73616c27810db93edbfe65e239cb",
+          "title": "Cloudflare Tunnel DNS Missing - HUMAN ACTION REQUIRED",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "Source: Agent\nClaude MM1 Agent\n\n---\n**Document End**\n**Generated:** 2026-01-06T22:08:09Z\n**Generator:** Claude MM1 Agent (claude.ai)"
+        },
+        {
+          "id": "2e0e7361-6c27-811e-8beb-d6fb404c23a0",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-2e0e73616c27811e8bebd6fb404c23a0",
+          "title": "Plan Resolution for Issue: Cloudflare Tunnel DNS Missing - webhook.vibevessel",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n- **Issue ID:** 2c8e7361-6c27-8184-954f-e1279bbe0e7f\n- **Issue URL:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n- **Priority:** Medium\n- **Description:** **CRITICAL:** Cloudflare tunnel is running but DNS records are missing.\n\n**Status:**\n- \u2705 Tunnel running (PID 569)\n- \u2705 Config: ~/.cloudflared/config.yml\n- \u274c DNS missing: dig webhook.vibevessel.space returns nothing\n- \u274c Public access fails: curl https://webhook.vibevessel.space/health fails\n\n**Fix Required:**\nCreate DNS CNAME record in Cloudflare Dashboard:\n- Type: CNAME\n- Name: webhook\n- Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n- Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n- Domain: vibevessel.space\n\n**Steps:**\n1. Cloudflare Dashboard \u2192 vibevessel.space \u2192 DNS \u2192 Add record\n2. Configure CNAME as above\n3. Wait 5-10 min for propagation\n4. Verify: dig webhook.vibevessel.space\n5. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach server. Currently using ephemeral localtunnel URL.\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n- [ ] Execution agent identified\n- [ ] N..."
+        },
+        {
+          "id": "2e0e7361-6c27-8127-901b-fce597a7a7e6",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-2e0e73616c278127901bfce597a7a7e6",
+          "title": "Plan Resolution for Issue: Cloudflare Tunnel DNS Missing - webhook.vibevessel",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n- **Issue ID:** 2c8e7361-6c27-8184-954f-e1279bbe0e7f\n- **Issue URL:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n- **Priority:** Medium\n- **Description:** **CRITICAL:** Cloudflare tunnel is running but DNS records are missing.\n\n**Status:**\n- \u2705 Tunnel running (PID 569)\n- \u2705 Config: ~/.cloudflared/config.yml\n- \u274c DNS missing: dig webhook.vibevessel.space returns nothing\n- \u274c Public access fails: curl https://webhook.vibevessel.space/health fails\n\n**Fix Required:**\nCreate DNS CNAME record in Cloudflare Dashboard:\n- Type: CNAME\n- Name: webhook\n- Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n- Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n- Domain: vibevessel.space\n\n**Steps:**\n1. Cloudflare Dashboard \u2192 vibevessel.space \u2192 DNS \u2192 Add record\n2. Configure CNAME as above\n3. Wait 5-10 min for propagation\n4. Verify: dig webhook.vibevessel.space\n5. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach server. Currently using ephemeral localtunnel URL.\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n- [ ] Execution agent identified\n- [ ] N..."
+        },
+        {
+          "id": "2e0e7361-6c27-8137-9eff-c4dade3eb5a0",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-2e0e73616c2781379effc4dade3eb5a0",
+          "title": "Plan Resolution for Issue: Cloudflare Tunnel DNS Missing - webhook.vibevessel",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n- **Issue ID:** 2c8e7361-6c27-8184-954f-e1279bbe0e7f\n- **Issue URL:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n- **Priority:** Medium\n- **Description:** **CRITICAL:** Cloudflare tunnel is running but DNS records are missing.\n\n**Status:**\n- \u2705 Tunnel running (PID 569)\n- \u2705 Config: ~/.cloudflared/config.yml\n- \u274c DNS missing: dig webhook.vibevessel.space returns nothing\n- \u274c Public access fails: curl https://webhook.vibevessel.space/health fails\n\n**Fix Required:**\nCreate DNS CNAME record in Cloudflare Dashboard:\n- Type: CNAME\n- Name: webhook\n- Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n- Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n- Domain: vibevessel.space\n\n**Steps:**\n1. Cloudflare Dashboard \u2192 vibevessel.space \u2192 DNS \u2192 Add record\n2. Configure CNAME as above\n3. Wait 5-10 min for propagation\n4. Verify: dig webhook.vibevessel.space\n5. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach server. Currently using ephemeral localtunnel URL.\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n- [ ] Execution agent identified\n- [ ] N..."
+        },
+        {
+          "id": "2e0e7361-6c27-8147-a65e-e45a47565c20",
+          "url": "https://www.notion.so/20260105T195222Z__HANDOFF__Cloudflare-DNS-Fix-Resolution__2c8e7361-2e0e73616c278147a65ee45a47565c20",
+          "title": "20260105T195222Z__HANDOFF__Cloudflare-DNS-Fix-Resolution__2c8e7361",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "Source: Claude Code Agent\n\nCRITICAL INFRASTRUCTURE ISSUE: Cloudflare tunnel is running but DNS records are missing, breaking Notion webhook integration.\n\n## Current Status\n- cloudflared tunnel is RUNNING (PID verified)\n- Config exists at ~/.cloudflared/config.yml\n- DNS lookup for webhook.vibevessel.space returns NOTHING\n- Public access fails completely\n\n## Impact\n- Notion webhooks cannot reach the local server\n- System using ephemeral localtunnel URL as workaround\n\n## Required Action\nCreate DNS CNAME record in Cloudflare Dashboard:\n\n1. Go to: Cloudflare Dashboard > vibevessel.space > DNS > Add Record\n2. Create CNAME record:\n   - Type: CNAME\n   - Name: webhook\n   - Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n   - Proxy: ENABLED (orange cloud) - CRITICAL!\n   - Domain: vibevessel.space\n\n3. Wait 5-10 minutes for DNS propagation\n4. Verify: dig webhook.vibevessel.space (should return Cloudflare IPs)\n5. Test: curl https://webhook.vibevessel.space/health (should return 200 OK)"
+        },
+        {
+          "id": "2e0e7361-6c27-814c-b469-f2b7a2df110c",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-2e0e73616c27814cb469f2b7a2df110c",
+          "title": "Plan Resolution for Issue: Cloudflare Tunnel DNS Missing - webhook.vibevessel",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n- **Issue ID:** 2c8e7361-6c27-8184-954f-e1279bbe0e7f\n- **Issue URL:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n- **Priority:** Medium\n- **Description:** **CRITICAL:** Cloudflare tunnel is running but DNS records are missing.\n\n**Status:**\n- \u2705 Tunnel running (PID 569)\n- \u2705 Config: ~/.cloudflared/config.yml\n- \u274c DNS missing: dig webhook.vibevessel.space returns nothing\n- \u274c Public access fails: curl https://webhook.vibevessel.space/health fails\n\n**Fix Required:**\nCreate DNS CNAME record in Cloudflare Dashboard:\n- Type: CNAME\n- Name: webhook\n- Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n- Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n- Domain: vibevessel.space\n\n**Steps:**\n1. Cloudflare Dashboard \u2192 vibevessel.space \u2192 DNS \u2192 Add record\n2. Configure CNAME as above\n3. Wait 5-10 min for propagation\n4. Verify: dig webhook.vibevessel.space\n5. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach server. Currently using ephemeral localtunnel URL.\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n- [ ] Execution agent identified\n- [ ] N..."
+        },
+        {
+          "id": "2e0e7361-6c27-816e-9958-cbcc28a143ea",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-2e0e73616c27816e9958cbcc28a143ea",
+          "title": "Plan Resolution for Issue: Cloudflare Tunnel DNS Missing - webhook.vibevessel",
+          "status": null,
+          "priority": "Medium",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n- **Issue ID:** 2c8e7361-6c27-8184-954f-e1279bbe0e7f\n- **Issue URL:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n- **Priority:** Medium\n- **Description:** **CRITICAL:** Cloudflare tunnel is running but DNS records are missing.\n\n**Status:**\n- \u2705 Tunnel running (PID 569)\n- \u2705 Config: ~/.cloudflared/config.yml\n- \u274c DNS missing: dig webhook.vibevessel.space returns nothing\n- \u274c Public access fails: curl https://webhook.vibevessel.space/health fails\n\n**Fix Required:**\nCreate DNS CNAME record in Cloudflare Dashboard:\n- Type: CNAME\n- Name: webhook\n- Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n- Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n- Domain: vibevessel.space\n\n**Steps:**\n1. Cloudflare Dashboard \u2192 vibevessel.space \u2192 DNS \u2192 Add record\n2. Configure CNAME as above\n3. Wait 5-10 min for propagation\n4. Verify: dig webhook.vibevessel.space\n5. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach server. Currently using ephemeral localtunnel URL.\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n- [ ] Execution agent identified\n- [ ] N..."
+        },
+        {
+          "id": "2e0e7361-6c27-816e-b0ce-c5fd69451c54",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-2e0e73616c27816eb0cec5fd69451c54",
+          "title": "Plan Resolution for Issue: Cloudflare Tunnel DNS Missing - webhook.vibevessel",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n- **Issue ID:** 2c8e7361-6c27-8184-954f-e1279bbe0e7f\n- **Issue URL:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n- **Priority:** Medium\n- **Description:** **CRITICAL:** Cloudflare tunnel is running but DNS records are missing.\n\n**Status:**\n- \u2705 Tunnel running (PID 569)\n- \u2705 Config: ~/.cloudflared/config.yml\n- \u274c DNS missing: dig webhook.vibevessel.space returns nothing\n- \u274c Public access fails: curl https://webhook.vibevessel.space/health fails\n\n**Fix Required:**\nCreate DNS CNAME record in Cloudflare Dashboard:\n- Type: CNAME\n- Name: webhook\n- Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n- Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n- Domain: vibevessel.space\n\n**Steps:**\n1. Cloudflare Dashboard \u2192 vibevessel.space \u2192 DNS \u2192 Add record\n2. Configure CNAME as above\n3. Wait 5-10 min for propagation\n4. Verify: dig webhook.vibevessel.space\n5. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach server. Currently using ephemeral localtunnel URL.\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n- [ ] Execution agent identified\n- [ ] N..."
+        },
+        {
+          "id": "2e0e7361-6c27-8181-87a9-fbedcc4941e9",
+          "url": "https://www.notion.so/20260105T104600Z__HANDOFF__Cloudflare-DNS-Work-Validation__2c8e7361-2e0e73616c27818187a9fbedcc4941e9",
+          "title": "20260105T104600Z__HANDOFF__Cloudflare-DNS-Work-Validation__2c8e7361",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "Source: Claude Code Agent\n\n## Work Validation Request\n\n### Original Issue: Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n\n### Work Performed by Claude Code Agent:\n\n1. **Issue Identification:**\n   - Reviewed 6 outstanding issues in Notion Issues+Questions database\n   - Identified Cloudflare Tunnel DNS issue as most critical and actionable\n\n2. **Investigation Performed:**\n   - Verified cloudflared tunnel is running (PID 53512)\n   - Confirmed tunnel ID: dd090a5d-9978-42b9-8e1f-7254e65faaa6\n   - Reviewed ~/.cloudflared/config.yml - ingress rules configured\n   - Verified DNS returns NXDOMAIN for webhook.vibevessel.space\n   - Attempted cloudflared tunnel route dns command\n\n3. **Blocking Point Identified:**\n   - cloudflared tunnel route dns command fails with Authentication error\n   - Requires browser-based Cloudflare login for re-authentication\n   - Cannot be automated - requires user intervention\n\n4. **Handoff Created:**\n   - Trigger file created for Cursor-MM1-Agent with detailed resolution steps\n   - Flagged as requiring user action\n\n### Validation Tasks:\n1. Verify the investigation findings are accurate\n2. Confirm the handoff trigger file was properly formatted\n3. Check if Cursor-MM1-Agent has picked up the task\n4. Monitor for resolution progress\n5. Update Notion issue with validation results"
+        },
+        {
+          "id": "2e0e7361-6c27-8183-8a11-d9559228334b",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-2e0e73616c2781838a11d9559228334b",
+          "title": "Plan Resolution for Issue: Cloudflare Tunnel DNS Missing - webhook.vibevessel",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n- **Issue ID:** 2c8e7361-6c27-8184-954f-e1279bbe0e7f\n- **Issue URL:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n- **Priority:** Medium\n- **Description:** **CRITICAL:** Cloudflare tunnel is running but DNS records are missing.\n\n**Status:**\n- \u2705 Tunnel running (PID 569)\n- \u2705 Config: ~/.cloudflared/config.yml\n- \u274c DNS missing: dig webhook.vibevessel.space returns nothing\n- \u274c Public access fails: curl https://webhook.vibevessel.space/health fails\n\n**Fix Required:**\nCreate DNS CNAME record in Cloudflare Dashboard:\n- Type: CNAME\n- Name: webhook\n- Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n- Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n- Domain: vibevessel.space\n\n**Steps:**\n1. Cloudflare Dashboard \u2192 vibevessel.space \u2192 DNS \u2192 Add record\n2. Configure CNAME as above\n3. Wait 5-10 min for propagation\n4. Verify: dig webhook.vibevessel.space\n5. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach server. Currently using ephemeral localtunnel URL.\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n- [ ] Execution agent identified\n- [ ] N..."
+        },
+        {
+          "id": "2e0e7361-6c27-8184-86c7-c37cfa0174fa",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-2e0e73616c27818486c7c37cfa0174fa",
+          "title": "Plan Resolution for Issue: Cloudflare Tunnel DNS Missing - webhook.vibevessel",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n- **Issue ID:** 2c8e7361-6c27-8184-954f-e1279bbe0e7f\n- **Issue URL:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n- **Priority:** Medium\n- **Description:** **CRITICAL:** Cloudflare tunnel is running but DNS records are missing.\n\n**Status:**\n- \u2705 Tunnel running (PID 569)\n- \u2705 Config: ~/.cloudflared/config.yml\n- \u274c DNS missing: dig webhook.vibevessel.space returns nothing\n- \u274c Public access fails: curl https://webhook.vibevessel.space/health fails\n\n**Fix Required:**\nCreate DNS CNAME record in Cloudflare Dashboard:\n- Type: CNAME\n- Name: webhook\n- Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n- Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n- Domain: vibevessel.space\n\n**Steps:**\n1. Cloudflare Dashboard \u2192 vibevessel.space \u2192 DNS \u2192 Add record\n2. Configure CNAME as above\n3. Wait 5-10 min for propagation\n4. Verify: dig webhook.vibevessel.space\n5. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach server. Currently using ephemeral localtunnel URL.\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n- [ ] Execution agent identified\n- [ ] N..."
+        },
+        {
+          "id": "2e0e7361-6c27-8198-95fa-d7648178ee1f",
+          "url": "https://www.notion.so/20260105T195326Z__VALIDATION__Cloudflare-DNS-Resolution-Review__2c8e7361-2e0e73616c27819895fad7648178ee1f",
+          "title": "20260105T195326Z__VALIDATION__Cloudflare-DNS-Resolution-Review__2c8e7361",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "Source: Claude Code Agent\n\n## Validation Task\n\nReview and validate the resolution of Cloudflare DNS issue for webhook.vibevessel.space.\n\n## Context\nClaude Code Agent identified this critical infrastructure issue and created a handoff to Cursor MM1 Agent to perform the Cloudflare Dashboard configuration.\n\n## Validation Steps\n1. Check if DNS CNAME record exists: dig webhook.vibevessel.space\n2. Verify DNS returns Cloudflare proxy IPs\n3. Test endpoint health: curl https://webhook.vibevessel.space/health\n4. Verify Notion issue status is updated to Resolved\n5. Confirm no lingering localtunnel workarounds are in place\n\n## Expected Outcomes\n- DNS resolves to Cloudflare IPs\n- Health endpoint returns HTTP 200\n- Issue marked Resolved in Notion\n\n## If Incomplete\n- Create follow-up handoff with specific blocking issues\n- Update Notion issue with current status and remaining work\n- Escalate if web dashboard access is unavailable"
+        },
+        {
+          "id": "2e0e7361-6c27-81be-8d7f-e3c833d51550",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-2e0e73616c2781be8d7fe3c833d51550",
+          "title": "Plan Resolution for Issue: Cloudflare Tunnel DNS Missing - webhook.vibevessel",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n- **Issue ID:** 2c8e7361-6c27-8184-954f-e1279bbe0e7f\n- **Issue URL:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n- **Priority:** Medium\n- **Description:** **CRITICAL:** Cloudflare tunnel is running but DNS records are missing.\n\n**Status:**\n- \u2705 Tunnel running (PID 569)\n- \u2705 Config: ~/.cloudflared/config.yml\n- \u274c DNS missing: dig webhook.vibevessel.space returns nothing\n- \u274c Public access fails: curl https://webhook.vibevessel.space/health fails\n\n**Fix Required:**\nCreate DNS CNAME record in Cloudflare Dashboard:\n- Type: CNAME\n- Name: webhook\n- Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n- Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n- Domain: vibevessel.space\n\n**Steps:**\n1. Cloudflare Dashboard \u2192 vibevessel.space \u2192 DNS \u2192 Add record\n2. Configure CNAME as above\n3. Wait 5-10 min for propagation\n4. Verify: dig webhook.vibevessel.space\n5. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach server. Currently using ephemeral localtunnel URL.\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n- [ ] Execution agent identified\n- [ ] N..."
+        },
+        {
+          "id": "2e0e7361-6c27-81c2-b59a-d9a50f4f11bf",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-2e0e73616c2781c2b59ad9a50f4f11bf",
+          "title": "Plan Resolution for Issue: Cloudflare Tunnel DNS Missing - webhook.vibevessel",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n- **Issue ID:** 2c8e7361-6c27-8184-954f-e1279bbe0e7f\n- **Issue URL:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n- **Priority:** Medium\n- **Description:** **CRITICAL:** Cloudflare tunnel is running but DNS records are missing.\n\n**Status:**\n- \u2705 Tunnel running (PID 569)\n- \u2705 Config: ~/.cloudflared/config.yml\n- \u274c DNS missing: dig webhook.vibevessel.space returns nothing\n- \u274c Public access fails: curl https://webhook.vibevessel.space/health fails\n\n**Fix Required:**\nCreate DNS CNAME record in Cloudflare Dashboard:\n- Type: CNAME\n- Name: webhook\n- Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n- Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n- Domain: vibevessel.space\n\n**Steps:**\n1. Cloudflare Dashboard \u2192 vibevessel.space \u2192 DNS \u2192 Add record\n2. Configure CNAME as above\n3. Wait 5-10 min for propagation\n4. Verify: dig webhook.vibevessel.space\n5. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach server. Currently using ephemeral localtunnel URL.\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n- [ ] Execution agent identified\n- [ ] N..."
+        },
+        {
+          "id": "2e0e7361-6c27-81c3-bb77-fb994d93b5a9",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-2e0e73616c2781c3bb77fb994d93b5a9",
+          "title": "Plan Resolution for Issue: Cloudflare Tunnel DNS Missing - webhook.vibevessel",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n- **Issue ID:** 2c8e7361-6c27-8184-954f-e1279bbe0e7f\n- **Issue URL:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n- **Priority:** Medium\n- **Description:** **CRITICAL:** Cloudflare tunnel is running but DNS records are missing.\n\n**Status:**\n- \u2705 Tunnel running (PID 569)\n- \u2705 Config: ~/.cloudflared/config.yml\n- \u274c DNS missing: dig webhook.vibevessel.space returns nothing\n- \u274c Public access fails: curl https://webhook.vibevessel.space/health fails\n\n**Fix Required:**\nCreate DNS CNAME record in Cloudflare Dashboard:\n- Type: CNAME\n- Name: webhook\n- Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n- Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n- Domain: vibevessel.space\n\n**Steps:**\n1. Cloudflare Dashboard \u2192 vibevessel.space \u2192 DNS \u2192 Add record\n2. Configure CNAME as above\n3. Wait 5-10 min for propagation\n4. Verify: dig webhook.vibevessel.space\n5. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach server. Currently using ephemeral localtunnel URL.\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n- [ ] Execution agent identified\n- [ ] N..."
+        },
+        {
+          "id": "2e0e7361-6c27-81d4-9a3f-ed6ddcac1c37",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-2e0e73616c2781d49a3fed6ddcac1c37",
+          "title": "Plan Resolution for Issue: Cloudflare Tunnel DNS Missing - webhook.vibevessel",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n- **Issue ID:** 2c8e7361-6c27-8184-954f-e1279bbe0e7f\n- **Issue URL:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n- **Priority:** Medium\n- **Description:** **CRITICAL:** Cloudflare tunnel is running but DNS records are missing.\n\n**Status:**\n- \u2705 Tunnel running (PID 569)\n- \u2705 Config: ~/.cloudflared/config.yml\n- \u274c DNS missing: dig webhook.vibevessel.space returns nothing\n- \u274c Public access fails: curl https://webhook.vibevessel.space/health fails\n\n**Fix Required:**\nCreate DNS CNAME record in Cloudflare Dashboard:\n- Type: CNAME\n- Name: webhook\n- Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n- Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n- Domain: vibevessel.space\n\n**Steps:**\n1. Cloudflare Dashboard \u2192 vibevessel.space \u2192 DNS \u2192 Add record\n2. Configure CNAME as above\n3. Wait 5-10 min for propagation\n4. Verify: dig webhook.vibevessel.space\n5. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach server. Currently using ephemeral localtunnel URL.\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n- [ ] Execution agent identified\n- [ ] N..."
+        },
+        {
+          "id": "2e0e7361-6c27-81d8-a4af-c302ab0ff31a",
+          "url": "https://www.notion.so/CRITICAL-Spotify-OAuth-Token-Expired-Requires-Re-authentication-2025-01-05-2e0e73616c2781d8a4afc302ab0ff31a",
+          "title": "CRITICAL: Spotify OAuth Token Expired - Requires Re-authentication - 2025-01-05",
+          "status": null,
+          "priority": "High",
+          "type": "",
+          "description": "ERROR: Spotify OAuth token expired. The .cache file contains only access_token without refresh_token, preventing automatic token refresh.\n\nPhase: PHASE 0 - Priority 3 (Spotify Liked Tracks fallback)\nError: 401 Unauthorized - The access token expired\nCache Location: /Users/brianhellemn/Projects/github-production/monolithic-scripts/.cache\n\nREQUIRED ACTION:\n1. Re-authenticate with Spotify to obtain new access + refresh tokens\n2. Ensure refresh_token is persisted to .cache file\n3. Update SpotifyOAuthManager to use proper scopes including user-library-read\n\nTimestamp: 2025-01-05T21:39:00Z"
+        },
+        {
+          "id": "2e0e7361-6c27-81fc-8995-f90638650c7c",
+          "url": "https://www.notion.so/20260105T180500Z__HANDOFF__Cloudflare-DNS-User-Action-Required__2c8e7361-2e0e73616c2781fc8995f90638650c7c",
+          "title": "20260105T180500Z__HANDOFF__Cloudflare-DNS-User-Action-Required__2c8e7361",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "## BLOCKING ISSUE - REQUIRES USER INTERVENTION\n\n**Issue:** Cloudflare Tunnel DNS records are missing for webhook.vibevessel.space\n\n**Status:**\n- \u2705 cloudflared tunnel is running (verified 2026-01-05)\n- \u2705 Tunnel has active connections\n- \u274c DNS CNAME records are missing\n\n**USER ACTION REQUIRED:**\n\n1. Log into Cloudflare Dashboard: https://dash.cloudflare.com\n2. Navigate to: vibevessel.space \u2192 DNS \u2192 Records\n3. Add CNAME record:\n   - Type: CNAME\n   - Name: webhook\n   - Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n   - Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n\n4. Wait 5-10 minutes for DNS propagation\n5. Verify: dig webhook.vibevessel.space +short\n6. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach the local server. Currently using ephemeral localtunnel URL."
+        },
+        {
+          "id": "2e1e7361-6c27-8102-81c3-f9c97cfbc5cc",
+          "url": "https://www.notion.so/20260106T181500Z__HANDOFF__Cloudflare-DNS-Route-Setup-Human-Required__2e1e7361-2e1e73616c27810281c3f9c97cfbc5cc",
+          "title": "20260106T181500Z__HANDOFF__Cloudflare-DNS-Route-Setup-Human-Required__2e1e7361",
+          "status": "Ready",
+          "priority": "High",
+          "type": "",
+          "description": "## Summary\nThe Cloudflare tunnel has been started successfully with 4 active connections to edge servers (dfw07, dfw08, dfw09), but DNS route creation requires human intervention due to authentication issues.\n\n## Current State\n- Tunnel running: PID 6984 (notion-webhook-tunnel)\n- Tunnel ID: dd090a5d-9978-42b9-8e1f-7254e65faaa6\n- 4 active QUIC connections to Cloudflare edge\n- DNS route creation fails with: Authentication error (code 10000)\n\n## Root Cause\nThe cert.pem file used for authentication does not have permissions for vibevessel.space zone operations. The cloudflared config indicates the domain may not yet be added to Cloudflare.\n\n## Required Human Actions\n1. Verify vibevessel.space is added to Cloudflare dashboard\n2. Run: `cloudflared login` (opens browser for re-authentication)\n3. Select vibevessel.space zone when prompted\n4. Run: `cloudflared tunnel route dns dd090a5d-9978-42b9-8e1f-7254e65faaa6 webhook.vibevessel.space`\n5. Verify: `dig webhook.vibevessel.space` returns CNAME\n\n## Verification Steps After Fix\n- `curl https://webhook.vibevessel.space/health` should return HTTP 200\n- `dig webhook.vibevessel.space` should return CNAME pointing to cfargotunnel.com\n\n## Config File Location\n~/.cloudflared/config.yml"
+        },
+        {
+          "id": "2e1e7361-6c27-8115-96ef-f0503577f46a",
+          "url": "https://www.notion.so/Agent-Work-Validation-Task-Cloudflare-Issue-Resolution-Review-2e1e73616c27811596eff0503577f46a",
+          "title": "Agent Work Validation Task - Cloudflare Issue Resolution Review",
+          "status": null,
+          "priority": "Medium",
+          "type": "",
+          "description": "## Validation Task\nReview and validate the work performed on the Cloudflare Tunnel DNS issue resolution.\n\n## Tasks to Validate\n1. Claude Code Agent started the cloudflare tunnel successfully\n2. Agent-Task created for human intervention: 2e1e7361-6c27-813a-88cf-de965dcb7510\n3. Handoff trigger file created for ChatGPT Personal Assistant Agent\n4. Issue status tracking in Notion\n\n## Related Items\n- Issue: https://www.notion.so/2c8e73616c278184954fe1279bbe0e7f\n- Agent-Task: https://www.notion.so/2e1e73616c27813a88cfde965dcb7510\n\n## Validation Criteria\n- [ ] Tunnel is running (verify with: ps aux | grep cloudflared)\n- [ ] Agent-Task exists with correct details\n- [ ] Handoff file exists in ChatGPT-Personal-Assistant-Agent/01_inbox/\n- [ ] All documentation is accurate and complete\n\n## Required Actions\n1. Verify all validation criteria\n2. Update Notion status if validation passes\n3. Report any issues found to Issues+Questions database\n4. Create completion handoff back to orchestration system"
+        },
+        {
+          "id": "2e1e7361-6c27-8127-8fbe-f47f1df51dda",
+          "url": "https://www.notion.so/20260107T131250Z__HANDOFF__Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel__2c8e7361-2e1e73616c2781278fbef47f1df51dda",
+          "title": "20260107T131250Z__HANDOFF__Cloudflare-Tunnel-DNS-Missing---webhook.vibevessel__2c8e7361",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": "Source: Claude MM1 Agent\n\nRequires Cloudflare Dashboard access to create DNS CNAME record"
+        },
+        {
+          "id": "2e1e7361-6c27-8128-b4d6-f127ba71d2bc",
+          "url": "https://www.notion.so/20260106T181600Z__VALIDATION__Agent-Work-Review-Cloudflare-Resolution__2e1e7361-2e1e73616c278128b4d6f127ba71d2bc",
+          "title": "20260106T181600Z__VALIDATION__Agent-Work-Review-Cloudflare-Resolution__2e1e7361",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "## Validation Task\nReview and validate the work performed by Claude Code Agent on the Cloudflare Tunnel DNS issue resolution session.\n\n## Work Performed (To Validate)\n1. Identified Cloudflare Tunnel DNS Missing issue as most critical (Medium priority)\n2. Started cloudflared tunnel successfully (PID 6984)\n3. Verified 4 active QUIC connections to Cloudflare edge (dfw07, dfw08, dfw09)\n4. Identified root cause: cert.pem authentication issue for vibevessel.space zone\n5. Created Agent-Task for human intervention\n6. Created handoff trigger file for ChatGPT Personal Assistant Agent\n\n## Validation Criteria\n- [ ] Tunnel is running: `ps aux | grep cloudflared`\n- [ ] Agent-Task exists: 2e1e7361-6c27-813a-88cf-de965dcb7510\n- [ ] Handoff file exists: ChatGPT-Personal-Assistant-Agent/01_inbox/20260106T181500Z__HANDOFF__Cloudflare-DNS-Route-Setup-Human-Required__2e1e7361.json\n- [ ] Documentation is accurate and complete\n- [ ] Issue tracking updated in Notion\n\n## Files to Verify\n- /Users/brianhellemn/Documents/Agents/Agent-Triggers/ChatGPT-Personal-Assistant-Agent/01_inbox/20260106T181500Z__HANDOFF__Cloudflare-DNS-Route-Setup-Human-Required__2e1e7361.json\n- /Users/brianhellemn/.cloudflared/config.yml\n\n## Required Actions After Validation\n1. Update this task status to Complete if all criteria pass\n2. If issues found, create entry in Issues+Questions database\n3. Create completion handoff if needed for orchestration continuity"
+        },
+        {
+          "id": "2e1e7361-6c27-8149-a2bc-e17778b9233d",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-2e1e73616c278149a2bce17778b9233d",
+          "title": "Plan Resolution for Issue: Cloudflare Tunnel DNS Missing - webhook.vibevessel",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n- **Issue ID:** 2c8e7361-6c27-8184-954f-e1279bbe0e7f\n- **Issue URL:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n- **Priority:** Medium\n- **Description:** **CRITICAL:** Cloudflare tunnel is running but DNS records are missing.\n\n**Status:**\n- \u2705 Tunnel running (PID 569)\n- \u2705 Config: ~/.cloudflared/config.yml\n- \u274c DNS missing: dig webhook.vibevessel.space returns nothing\n- \u274c Public access fails: curl https://webhook.vibevessel.space/health fails\n\n**Fix Required:**\nCreate DNS CNAME record in Cloudflare Dashboard:\n- Type: CNAME\n- Name: webhook\n- Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n- Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n- Domain: vibevessel.space\n\n**Steps:**\n1. Cloudflare Dashboard \u2192 vibevessel.space \u2192 DNS \u2192 Add record\n2. Configure CNAME as above\n3. Wait 5-10 min for propagation\n4. Verify: dig webhook.vibevessel.space\n5. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach server. Currently using ephemeral localtunnel URL.\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n- [ ] Execution agent identified\n- [ ] N..."
+        },
+        {
+          "id": "2e1e7361-6c27-814d-84ae-d400170473ff",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-2e1e73616c27814d84aed400170473ff",
+          "title": "Plan Resolution for Issue: Cloudflare Tunnel DNS Missing - webhook.vibevessel",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n- **Issue ID:** 2c8e7361-6c27-8184-954f-e1279bbe0e7f\n- **Issue URL:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n- **Priority:** Medium\n- **Description:** **CRITICAL:** Cloudflare tunnel is running but DNS records are missing.\n\n**Status:**\n- \u2705 Tunnel running (PID 569)\n- \u2705 Config: ~/.cloudflared/config.yml\n- \u274c DNS missing: dig webhook.vibevessel.space returns nothing\n- \u274c Public access fails: curl https://webhook.vibevessel.space/health fails\n\n**Fix Required:**\nCreate DNS CNAME record in Cloudflare Dashboard:\n- Type: CNAME\n- Name: webhook\n- Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n- Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n- Domain: vibevessel.space\n\n**Steps:**\n1. Cloudflare Dashboard \u2192 vibevessel.space \u2192 DNS \u2192 Add record\n2. Configure CNAME as above\n3. Wait 5-10 min for propagation\n4. Verify: dig webhook.vibevessel.space\n5. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach server. Currently using ephemeral localtunnel URL.\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n- [ ] Execution agent identified\n- [ ] N..."
+        },
+        {
+          "id": "2e1e7361-6c27-8159-910d-c12078253cf0",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-2e1e73616c278159910dc12078253cf0",
+          "title": "Plan Resolution for Issue: Cloudflare Tunnel DNS Missing - webhook.vibevessel",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n- **Issue ID:** 2c8e7361-6c27-8184-954f-e1279bbe0e7f\n- **Issue URL:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n- **Priority:** Medium\n- **Description:** **CRITICAL:** Cloudflare tunnel is running but DNS records are missing.\n\n**Status:**\n- \u2705 Tunnel running (PID 569)\n- \u2705 Config: ~/.cloudflared/config.yml\n- \u274c DNS missing: dig webhook.vibevessel.space returns nothing\n- \u274c Public access fails: curl https://webhook.vibevessel.space/health fails\n\n**Fix Required:**\nCreate DNS CNAME record in Cloudflare Dashboard:\n- Type: CNAME\n- Name: webhook\n- Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n- Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n- Domain: vibevessel.space\n\n**Steps:**\n1. Cloudflare Dashboard \u2192 vibevessel.space \u2192 DNS \u2192 Add record\n2. Configure CNAME as above\n3. Wait 5-10 min for propagation\n4. Verify: dig webhook.vibevessel.space\n5. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach server. Currently using ephemeral localtunnel URL.\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n- [ ] Execution agent identified\n- [ ] N..."
+        },
+        {
+          "id": "2e1e7361-6c27-8162-af43-f3331ba16d25",
+          "url": "https://www.notion.so/20260107T141000Z__VALIDATION__Cloudflare-DNS-Fix-Verification__2c8e7361-2e1e73616c278162af43f3331ba16d25",
+          "title": "20260107T141000Z__VALIDATION__Cloudflare-DNS-Fix-Verification__2c8e7361",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": ""
+        },
+        {
+          "id": "2e1e7361-6c27-817b-8732-eaedd8207b98",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-2e1e73616c27817b8732eaedd8207b98",
+          "title": "Plan Resolution for Issue: Cloudflare Tunnel DNS Missing - webhook.vibevessel",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n- **Issue ID:** 2c8e7361-6c27-8184-954f-e1279bbe0e7f\n- **Issue URL:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n- **Priority:** Medium\n- **Description:** **CRITICAL:** Cloudflare tunnel is running but DNS records are missing.\n\n**Status:**\n- \u2705 Tunnel running (PID 569)\n- \u2705 Config: ~/.cloudflared/config.yml\n- \u274c DNS missing: dig webhook.vibevessel.space returns nothing\n- \u274c Public access fails: curl https://webhook.vibevessel.space/health fails\n\n**Fix Required:**\nCreate DNS CNAME record in Cloudflare Dashboard:\n- Type: CNAME\n- Name: webhook\n- Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n- Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n- Domain: vibevessel.space\n\n**Steps:**\n1. Cloudflare Dashboard \u2192 vibevessel.space \u2192 DNS \u2192 Add record\n2. Configure CNAME as above\n3. Wait 5-10 min for propagation\n4. Verify: dig webhook.vibevessel.space\n5. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach server. Currently using ephemeral localtunnel URL.\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n- [ ] Execution agent identified\n- [ ] N..."
+        },
+        {
+          "id": "2e1e7361-6c27-8186-8ea3-d64a7fa19601",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-2e1e73616c2781868ea3d64a7fa19601",
+          "title": "Plan Resolution for Issue: Cloudflare Tunnel DNS Missing - webhook.vibevessel",
+          "status": null,
+          "priority": "Medium",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n- **Issue ID:** 2c8e7361-6c27-8184-954f-e1279bbe0e7f\n- **Issue URL:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n- **Priority:** Medium\n- **Description:** **CRITICAL:** Cloudflare tunnel is running but DNS records are missing.\n\n**Status:**\n- \u2705 Tunnel running (PID 569)\n- \u2705 Config: ~/.cloudflared/config.yml\n- \u274c DNS missing: dig webhook.vibevessel.space returns nothing\n- \u274c Public access fails: curl https://webhook.vibevessel.space/health fails\n\n**Fix Required:**\nCreate DNS CNAME record in Cloudflare Dashboard:\n- Type: CNAME\n- Name: webhook\n- Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n- Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n- Domain: vibevessel.space\n\n**Steps:**\n1. Cloudflare Dashboard \u2192 vibevessel.space \u2192 DNS \u2192 Add record\n2. Configure CNAME as above\n3. Wait 5-10 min for propagation\n4. Verify: dig webhook.vibevessel.space\n5. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach server. Currently using ephemeral localtunnel URL.\n\n---\nDIAGNOSTIC UPDATE: 2026-01-07 14:14:36 UTC\nAgent: Claude Code Agent\n\nVerification Results:\n- DNS Check: NXDOMAIN confirmed (DNS record missing)\n- cloudflared: Running (PID 6984)\n- Config: Valid at ~/.cloudflared/config.yml\n- Tunnel ID: dd090a5d-9978-42b9-8e1f-7254e65faaa6\n- Target: webhook.vibevessel.space \u2192 localhost:5001\n\nACTION REQUIRED:\nHuman action needed - Create CNAME in Cloudflare Dashboard.\nNo Cloudflare API credentials in environment.\n\nHandoff created to ChatGPT Personal Assistant Agent.\n\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execut..."
+        },
+        {
+          "id": "2e1e7361-6c27-81d6-9fe5-d560a9467358",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-2e1e73616c2781d69fe5d560a9467358",
+          "title": "Plan Resolution for Issue: Cloudflare Tunnel DNS Missing - webhook.vibevessel",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n- **Issue ID:** 2c8e7361-6c27-8184-954f-e1279bbe0e7f\n- **Issue URL:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n- **Priority:** Medium\n- **Description:** **CRITICAL:** Cloudflare tunnel is running but DNS records are missing.\n\n**Status:**\n- \u2705 Tunnel running (PID 569)\n- \u2705 Config: ~/.cloudflared/config.yml\n- \u274c DNS missing: dig webhook.vibevessel.space returns nothing\n- \u274c Public access fails: curl https://webhook.vibevessel.space/health fails\n\n**Fix Required:**\nCreate DNS CNAME record in Cloudflare Dashboard:\n- Type: CNAME\n- Name: webhook\n- Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n- Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n- Domain: vibevessel.space\n\n**Steps:**\n1. Cloudflare Dashboard \u2192 vibevessel.space \u2192 DNS \u2192 Add record\n2. Configure CNAME as above\n3. Wait 5-10 min for propagation\n4. Verify: dig webhook.vibevessel.space\n5. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach server. Currently using ephemeral localtunnel URL.\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n- [ ] Execution agent identified\n- [ ] N..."
+        },
+        {
+          "id": "2e1e7361-6c27-81d7-bbf2-ec7b0e39990f",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-2e1e73616c2781d7bbf2ec7b0e39990f",
+          "title": "Plan Resolution for Issue: Cloudflare Tunnel DNS Missing - webhook.vibevessel",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n- **Issue ID:** 2c8e7361-6c27-8184-954f-e1279bbe0e7f\n- **Issue URL:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n- **Priority:** Medium\n- **Description:** **CRITICAL:** Cloudflare tunnel is running but DNS records are missing.\n\n**Status:**\n- \u2705 Tunnel running (PID 569)\n- \u2705 Config: ~/.cloudflared/config.yml\n- \u274c DNS missing: dig webhook.vibevessel.space returns nothing\n- \u274c Public access fails: curl https://webhook.vibevessel.space/health fails\n\n**Fix Required:**\nCreate DNS CNAME record in Cloudflare Dashboard:\n- Type: CNAME\n- Name: webhook\n- Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n- Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n- Domain: vibevessel.space\n\n**Steps:**\n1. Cloudflare Dashboard \u2192 vibevessel.space \u2192 DNS \u2192 Add record\n2. Configure CNAME as above\n3. Wait 5-10 min for propagation\n4. Verify: dig webhook.vibevessel.space\n5. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach server. Currently using ephemeral localtunnel URL.\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n- [ ] Execution agent identified\n- [ ] N..."
+        },
+        {
+          "id": "2e1e7361-6c27-81db-b728-f0da06e4a622",
+          "url": "https://www.notion.so/20260107T001527Z__HANDOFF__Plan-Resolution-for-Issue-Cloudflare-Tunnel-DNS-M__2e1e7361-2e1e73616c2781dbb728f0da06e4a622",
+          "title": "20260107T001527Z__HANDOFF__Plan-Resolution-for-Issue:-Cloudflare-Tunnel-DNS-M__2e1e7361",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n- **Issue ID:** 2c8e7361-6c27-8184-954f-e1279bbe0e7f\n- **Issue URL:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n- **Priority:** Medium\n- **Description:** **CRITICAL:** Cloudflare tunnel is running but DNS records are missing.\n\n**Status:**\n- \u2705 Tunnel running (PID 569)\n- \u2705 Config: ~/.cloudflared/config.yml\n- \u274c DNS missing: dig webhook.vibevessel.space returns nothing\n- \u274c Public access fails: curl https://webhook.vibevessel.space/health fails\n\n**Fix Required:**\nCreate DNS CNAME record in Cloudflare Dashboard:\n- Type: CNAME\n- Name: webhook\n- Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n- Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n- Domain: vibevessel.space\n\n**Steps:**\n1. Cloudflare Dashboard \u2192 vibevessel.space \u2192 DNS \u2192 Add record\n2. Configure CNAME as above\n3. Wait 5-10 min for propagation\n4. Verify: dig webhook.vibevessel.space\n5. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach server. Currently using ephemeral localtunnel URL.\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n- [ ] Execution agent identified\n- [ ] N..."
+        },
+        {
+          "id": "2e1e7361-6c27-81e6-86f5-c1990c1c7c7a",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-2e1e73616c2781e686f5c1990c1c7c7a",
+          "title": "Plan Resolution for Issue: Cloudflare Tunnel DNS Missing - webhook.vibevessel",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** Cloudflare Tunnel DNS Missing - webhook.vibevessel.space Unreachable\n- **Issue ID:** 2c8e7361-6c27-8184-954f-e1279bbe0e7f\n- **Issue URL:** https://www.notion.so/Cloudflare-Tunnel-DNS-Missing-webhook-vibevessel-space-Unreachable-2c8e73616c278184954fe1279bbe0e7f\n- **Priority:** Medium\n- **Description:** **CRITICAL:** Cloudflare tunnel is running but DNS records are missing.\n\n**Status:**\n- \u2705 Tunnel running (PID 569)\n- \u2705 Config: ~/.cloudflared/config.yml\n- \u274c DNS missing: dig webhook.vibevessel.space returns nothing\n- \u274c Public access fails: curl https://webhook.vibevessel.space/health fails\n\n**Fix Required:**\nCreate DNS CNAME record in Cloudflare Dashboard:\n- Type: CNAME\n- Name: webhook\n- Target: dd090a5d-9978-42b9-8e1f-7254e65faaa6.cfargotunnel.com\n- Proxy: Proxied (orange cloud) \u26a0\ufe0f CRITICAL\n- Domain: vibevessel.space\n\n**Steps:**\n1. Cloudflare Dashboard \u2192 vibevessel.space \u2192 DNS \u2192 Add record\n2. Configure CNAME as above\n3. Wait 5-10 min for propagation\n4. Verify: dig webhook.vibevessel.space\n5. Test: curl https://webhook.vibevessel.space/health\n\n**Impact:** Notion webhooks cannot reach server. Currently using ephemeral localtunnel URL.\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n- [ ] Execution agent identified\n- [ ] N..."
+        },
+        {
+          "id": "2e2e7361-6c27-8117-8df6-d7b3a3c0e74b",
+          "url": "https://www.notion.so/Music-Workflow-Webhook-Triggers-Implementation-2e2e73616c2781178df6d7b3a3c0e74b",
+          "title": "Music Workflow: Webhook Triggers Implementation",
+          "status": "Ready",
+          "priority": "High",
+          "type": "",
+          "description": "## Context\nImplement webhook triggers for automatic music workflow execution.\n\n## Current State\n- Music workflow is triggered manually or via continuous handoff orchestrator\n- No automatic triggering on Notion database changes\n- No automatic triggering on Spotify/SoundCloud playlist updates\n\n## Objective\nCreate webhook endpoint for automatic track processing that triggers on:\n- Notion database changes (new tracks added to Music Tracks DB)\n- Spotify/SoundCloud playlist updates\n- Eagle library changes (if needed)\n\n## Implementation Requirements\n- Webhook server endpoint at `/webhook/music-workflow`\n- Notion database change notifications (if available)\n- Spotify Web API webhooks (if available)\n- SoundCloud API webhooks (if available)\n- Queue system for processing multiple tracks\n\n## Acceptance Criteria\n- [ ] Webhook endpoint accepts track URLs or Notion page IDs\n- [ ] Automatic processing of tracks when added to Notion\n- [ ] Automatic processing of tracks when playlists updated\n- [ ] Error handling and retry logic\n- [ ] Logging and monitoring\n\n## Reference\nSee MUSIC_WORKFLOW_AUTOMATION_OPPORTUNITIES.md for full details.\n\n**Priority:** HIGH  \n**Impact:** Reduces manual intervention significantly  \n**Estimated Effort:** Medium"
+        },
+        {
+          "id": "2e2e7361-6c27-8189-8d7a-d965aee375f2",
+          "url": "https://www.notion.so/Implement-Spotify-Playlist-Detection-in-Music-Track-Sync-Workflow-2e2e73616c2781898d7ad965aee375f2",
+          "title": "Implement Spotify Playlist Detection in Music Track Sync Workflow",
+          "status": "Ready",
+          "priority": "High",
+          "type": "",
+          "description": "CRITICAL GAP: Music Track Sync Workflow does NOT check for Spotify playlist relationships when processing tracks from fallback chain.\n\n**Impact:**\n- Track \"Where Are You Now\" by Lost Frequencies was downloaded but NOT linked to its Spotify playlist\n- Files saved to \"Unassigned\" instead of playlist directory\n- Playlist relationships lost during processing\n\n**Analysis Document:** See `SPOTIFY_PLAYLIST_DETECTION_MISSING_ANALYSIS.md` for complete analysis with code examples.\n\n**Required Implementation:**\n\n1. Add `get_spotify_playlists_for_track()` function to `execute_music_track_sync_workflow.py`\n   - Checks user's playlists for the track\n   - Returns list of playlist dictionaries\n\n2. Modify `execute_fallback_chain()` to:\n   - Get playlists when Spotify track found\n   - Store playlist info for later use\n\n3. Add `add_spotify_track_to_notion_with_playlists()` function:\n   - Uses `spotify_integration_module.py` \u2192 `SpotifyNotionSync` class\n   - Creates track with playlist relationships before processing\n\n4. Update workflow execution flow to use playlist relationships\n\n**Files to Modify:**\n- `execute_music_track_sync_workflow.py` (primary)\n- `EXECUTE: Music Track Sync Workflow.md` (documentation, if needed)\n\n**Acceptance Criteria:**\n- Spotify playlist detection works for currently playing tracks\n- Playlist relationships added to Notion before processing\n- Files organized by playlist directory (not \"Unassigned\")\n- Multiple playlists handled correctly\n\n**Priority:** HIGHEST - Core workflow functionality gap."
+        },
+        {
+          "id": "2e2e7361-6c27-819c-9f48-df5fe1312cc9",
+          "url": "https://www.notion.so/Claude-Code-Handoff-Spotify-Track-File-Creation-Fix-Audit-Request-2e2e73616c27819c9f48df5fe1312cc9",
+          "title": "Claude Code Handoff: Spotify Track File Creation Fix - Audit Request",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "**Handoff Created:** 2026-01-08\n**Agent:** Claude Code (claude-opus-4-5-20251101)\n**Session:** Spotify Track File Creation Remediation"
+        },
+        {
+          "id": "2e2e7361-6c27-81a7-8196-e8bba130e1e8",
+          "url": "https://www.notion.so/Agent-Work-Validation-Task-Cloudflare-DNS-Resolution-2e2e73616c2781a78196e8bba130e1e8",
+          "title": "Agent Work Validation Task - Cloudflare DNS Resolution",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "Source: Agent\nClaude MM1 Agent\n\n---\n**Document End**\n**Generated:** 2026-01-06T22:08:09Z\n**Generator:** Claude MM1 Agent (claude.ai)\n**Task Type:** Agent Work Validation Task"
+        },
+        {
+          "id": "2e3e7361-6c27-8121-855c-c10fcb2c828e",
+          "url": "https://www.notion.so/20260109T223218Z__HANDOFF__Spotify-Track-Query-Fix-Validation__spotify-2e3e73616c278121855cc10fcb2c828e",
+          "title": "20260109T223218Z__HANDOFF__Spotify-Track-Query-Fix-Validation__spotify",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "## Context\nCritical issue fixed: Spotify playlist tracks were not being downloaded due to query filters excluding Spotify tracks.\n\n## Fixes Implemented\n1. Fixed find_next_track() to include Spotify tracks\n2. Fixed find_tracks_for_processing_batch() to include Spotify tracks  \n3. Fixed find_tracks_for_reprocessing() to include Spotify tracks\n4. Verified create_track_page() sets DL=False correctly\n\n## Required Actions\n1. Test the production workflow script with Spotify tracks\n2. Verify Spotify tracks appear in query results\n3. Test end-to-end workflow: Sync Spotify playlist \u2192 Verify tracks in Notion \u2192 Run production script \u2192 Verify downloads\n4. Update issue status in Notion based on test results\n5. Create follow-up tasks if additional fixes needed\n\n## Success Criteria\n- [ ] Spotify tracks included in query results\n- [ ] Production workflow processes Spotify tracks\n- [ ] Downloads work for Spotify tracks\n- [ ] Issue updated in Notion with test results\n\n## Files Modified\n- monolithic-scripts/soundcloud_download_prod_merge-2.py\n\n## Related Issue\nIssue ID: 2e3e7361-6c27-818d-9a9b-c5508f52d916\nIssue URL: https://www.notion.so/CRITICAL-Spotify-Playlist-Tracks-Not-Downloading-Query-Filter-YouTube-Matching-Issues-2e3e73616c27818d9a9bc5508f52d916"
+        },
+        {
+          "id": "2e3e7361-6c27-8126-a705-d0b408bbbfd3",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-CRITICAL-Spotify-Playlist-Tracks-Not-Downloading-2e3e73616c278126a705d0b408bbbfd3",
+          "title": "Plan Resolution for Issue: CRITICAL: Spotify Playlist Tracks Not Downloading",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** CRITICAL: Spotify Playlist Tracks Not Downloading - Query Filter & YouTube Matching Issues\n- **Issue ID:** 2e3e7361-6c27-818d-9a9b-c5508f52d916\n- **Issue URL:** https://www.notion.so/CRITICAL-Spotify-Playlist-Tracks-Not-Downloading-Query-Filter-YouTube-Matching-Issues-2e3e73616c27818d9a9bc5508f52d916\n- **Priority:** Critical\n- **Description:** CRITICAL ISSUE: Spotify Playlist Tracks Not Being Downloaded\n\n## Problem Summary\nSpotify tracks synced to Notion from playlists are NOT being downloaded. The production workflow script excludes Spotify tracks from processing, preventing YouTube download and audio file creation.\n\n## User Feedback (2026-01-09)\n\nUser provided two Spotify URLs:\n- Playlist: https://open.spotify.com/playlist/6XIc4VjUi7MIJnp7tshFy0 (phonk - 9 tracks)\n- Album: https://open.spotify.com/album/5QRFnGnBeMGePBKF2xTz5z (d00mscrvll, Vol. 1 - 9 tracks)\n\nUser's explicit feedback:\n\"WHERE ARE THE DOWNLOAD TRACKS FROM THE PLAYLIST??\"\n\"THE SOUNDCLOUD AND YOUTUBE TRACK MATCHING FUNCTIONALITY NEEDS TO BE REVIEWED AND IMPLEMENTED CORRECTLY\"\n\n## Root Causes Identified\n\n### 1. Query Filter Excludes Spotify Tracks\n- Location: monolithic-scripts/soundcloud_download_prod_merge-2.py\n- Functions: _build_unprocessed_tracks_query() (line 2730) and build_eligibility_filter() (line 8944)\n- Problem: Both functions require SoundCloud URL property to be present, completely excluding Spotify tracks\n- Impact: Spotify tracks never match the query filter, so they are never processed for download\n\n### 2. DL Property Not Set for New Spotify Tracks\n- Location: monolithic-scripts/spotify_integration_module.py\n- Function: create_track_page() (line 356)\n- Problem: New Spotify tracks created in Notion do not have DL=False set\n- Impact: Even if query was fixed, tracks wouldn't match because DL property is missing/not False\n\n### 3. Notion API Query..."
+        },
+        {
+          "id": "2e3e7361-6c27-812a-be03-c63a57bc8de5",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-CRITICAL-Spotify-Playlist-Tracks-Not-Downloading-2e3e73616c27812abe03c63a57bc8de5",
+          "title": "Plan Resolution for Issue: CRITICAL: Spotify Playlist Tracks Not Downloading",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** CRITICAL: Spotify Playlist Tracks Not Downloading - Query Filter & YouTube Matching Issues\n- **Issue ID:** 2e3e7361-6c27-818d-9a9b-c5508f52d916\n- **Issue URL:** https://www.notion.so/CRITICAL-Spotify-Playlist-Tracks-Not-Downloading-Query-Filter-YouTube-Matching-Issues-2e3e73616c27818d9a9bc5508f52d916\n- **Priority:** Critical\n- **Description:** CRITICAL ISSUE: Spotify Playlist Tracks Not Being Downloaded\n\n## Problem Summary\nSpotify tracks synced to Notion from playlists are NOT being downloaded. The production workflow script excludes Spotify tracks from processing, preventing YouTube download and audio file creation.\n\n## User Feedback (2026-01-09)\n\nUser provided two Spotify URLs:\n- Playlist: https://open.spotify.com/playlist/6XIc4VjUi7MIJnp7tshFy0 (phonk - 9 tracks)\n- Album: https://open.spotify.com/album/5QRFnGnBeMGePBKF2xTz5z (d00mscrvll, Vol. 1 - 9 tracks)\n\nUser's explicit feedback:\n\"WHERE ARE THE DOWNLOAD TRACKS FROM THE PLAYLIST??\"\n\"THE SOUNDCLOUD AND YOUTUBE TRACK MATCHING FUNCTIONALITY NEEDS TO BE REVIEWED AND IMPLEMENTED CORRECTLY\"\n\n## Root Causes Identified\n\n### 1. Query Filter Excludes Spotify Tracks\n- Location: monolithic-scripts/soundcloud_download_prod_merge-2.py\n- Functions: _build_unprocessed_tracks_query() (line 2730) and build_eligibility_filter() (line 8944)\n- Problem: Both functions require SoundCloud URL property to be present, completely excluding Spotify tracks\n- Impact: Spotify tracks never match the query filter, so they are never processed for download\n\n### 2. DL Property Not Set for New Spotify Tracks\n- Location: monolithic-scripts/spotify_integration_module.py\n- Function: create_track_page() (line 356)\n- Problem: New Spotify tracks created in Notion do not have DL=False set\n- Impact: Even if query was fixed, tracks wouldn't match because DL property is missing/not False\n\n### 3. Notion API Query..."
+        },
+        {
+          "id": "2e3e7361-6c27-812d-a09d-f2677631fe20",
+          "url": "https://www.notion.so/Review-Query-Filter-Implementation-Spotify-Track-Inclusion-2e3e73616c27812da09df2677631fe20",
+          "title": "Review Query Filter Implementation - Spotify Track Inclusion",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "Review and verify the query filter fixes for including Spotify tracks in batch processing.\n\n**Specific Areas:**\n1. Review _build_unprocessed_tracks_query() in soundcloud_download_prod_merge-2.py (line 2730)\n2. Verify query includes Spotify tracks via OR condition: (SoundCloud URL exists) OR (Spotify ID exists)\n3. Test query with Notion API to ensure it returns both SoundCloud and Spotify tracks\n4. Verify Notion API query structure respects API limitations (no complex nested AND/OR)\n5. Confirm application code correctly filters Spotify tracks during processing (line 7029)\n\n**Files to Review:**\n- monolithic-scripts/soundcloud_download_prod_merge-2.py (lines 2730-2755, 8944-8976)\n\n**Acceptance Criteria:**\n- Query successfully returns Spotify tracks from Notion\n- Query structure is valid and doesn't cause 400 errors\n- Both SoundCloud and Spotify tracks are included in results"
+        },
+        {
+          "id": "2e3e7361-6c27-8174-a447-e69a6444c469",
+          "url": "https://www.notion.so/Review-DL-Property-Setting-for-Spotify-Tracks-2e3e73616c278174a447e69a6444c469",
+          "title": "Review DL Property Setting for Spotify Tracks",
+          "status": "Ready",
+          "priority": "High",
+          "type": "",
+          "description": "Review and fix DL property setting when creating new Spotify tracks.\n\n**Specific Areas:**\n1. Review create_track_page() in spotify_integration_module.py (line 356)\n2. Verify DL=False is set when creating new Spotify tracks\n3. Test property name detection (DL vs Downloaded) works correctly\n4. Verify database schema check works properly\n5. Create script to retroactively set DL=False for existing Spotify tracks (if needed)\n\n**Files to Review:**\n- monolithic-scripts/spotify_integration_module.py (lines 356-416)\n\n**Acceptance Criteria:**\n- New Spotify tracks have DL=False set automatically\n- Property name detection works for both 'DL' and 'Downloaded'\n- Existing tracks can be updated retroactively"
+        },
+        {
+          "id": "2e3e7361-6c27-818a-9a52-d6fdaccc24b5",
+          "url": "https://www.notion.so/Review-build_eligibility_filter-Spotify-Track-Support-2e3e73616c27818a9a52d6fdaccc24b5",
+          "title": "Review build_eligibility_filter() - Spotify Track Support",
+          "status": "Ready",
+          "priority": "High",
+          "type": "",
+          "description": "Review and verify build_eligibility_filter() includes Spotify tracks.\n\n**Specific Areas:**\n1. Review build_eligibility_filter() in soundcloud_download_prod_merge-2.py (line 8944)\n2. Ensure filter includes Spotify tracks in OR condition with SoundCloud tracks\n3. Verify property name resolution works for both 'DL' and 'Downloaded' property names\n4. Test with actual Notion database to ensure query works\n\n**Files to Review:**\n- monolithic-scripts/soundcloud_download_prod_merge-2.py (lines 8944-8976)\n\n**Acceptance Criteria:**\n- Filter query includes Spotify tracks\n- Property name resolution works correctly\n- Query executes without errors"
+        },
+        {
+          "id": "2e3e7361-6c27-81c5-9155-e70a4c88779a",
+          "url": "https://www.notion.so/Review-Spotify-Track-Processing-Flow-End-to-End-2e3e73616c2781c59155e70a4c88779a",
+          "title": "Review Spotify Track Processing Flow - End-to-End",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "Review complete Spotify track processing workflow from detection to completion.\n\n**Specific Areas:**\n1. Review process_track() Spotify track handling (lines 7028-7135)\n2. Verify Spotify track detection logic: is_spotify_track = has spotify_id AND no soundcloud_url\n3. Test full workflow: Detection \u2192 YouTube Search \u2192 Download \u2192 Processing \u2192 Eagle Import \u2192 Notion Update\n4. Verify error handling when YouTube search fails (metadata-only processing)\n5. Test with actual playlist tracks (phonk playlist - 9 tracks)\n\n**Files to Review:**\n- monolithic-scripts/soundcloud_download_prod_merge-2.py (lines 7019-7135, 7750-8300)\n\n**Acceptance Criteria:**\n- Complete workflow executes successfully for Spotify tracks\n- Files created in correct locations (/Volumes/VIBES/Playlists/phonk/)\n- Eagle library import works\n- Notion metadata updates correctly\n- Error handling graceful when steps fail"
+        },
+        {
+          "id": "2e3e7361-6c27-81cf-8690-f60cb2d0b890",
+          "url": "https://www.notion.so/20260109T223222Z__HANDOFF__Spotify-Query-Fix-Validation-Review__spotify-2e3e73616c2781cf8690f60cb2d0b890",
+          "title": "20260109T223222Z__HANDOFF__Spotify-Query-Fix-Validation-Review__spotify",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "## Context\nFixes have been implemented for the critical issue: Spotify playlist tracks not downloading due to query filters.\n\n## Work Completed\n1. Fixed find_next_track() to include Spotify tracks (OR condition)\n2. Fixed find_tracks_for_processing_batch() to include Spotify tracks\n3. Fixed find_tracks_for_reprocessing() to include Spotify tracks\n4. Verified create_track_page() sets DL=False correctly\n\n## Required Actions\n1. Review the code changes in monolithic-scripts/soundcloud_download_prod_merge-2.py\n2. Verify the query filter logic is correct\n3. Review test results from Cursor MM1 Agent\n4. Validate that the fixes address all root causes identified in the issue\n5. Confirm issue can be marked as resolved or identify any remaining issues\n6. Update issue status in Notion\n\n## Success Criteria\n- [ ] Code changes reviewed and validated\n- [ ] Query filter logic verified correct\n- [ ] All root causes addressed\n- [ ] Issue status updated in Notion\n- [ ] Documentation updated if needed\n\n## Related Files\n- monolithic-scripts/soundcloud_download_prod_merge-2.py\n- SPOTIFY_TRACK_QUERY_FIX_SUMMARY.md\n- Issue: 2e3e7361-6c27-818d-9a9b-c5508f52d916"
+        },
+        {
+          "id": "2e3e7361-6c27-81d0-8bc6-d0731dc7b1ee",
+          "url": "https://www.notion.so/End-to-End-Testing-Spotify-Playlist-Download-Workflow-2e3e73616c2781d08bc6d0731dc7b1ee",
+          "title": "End-to-End Testing - Spotify Playlist Download Workflow",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "Execute comprehensive end-to-end testing of Spotify playlist download workflow.\n\n**Test Cases:**\n1. Test Case 1: Sync and download phonk playlist (9 tracks)\n   - Sync playlist to Notion \u2705\n   - Verify tracks appear in query results\n   - Run batch processing\n   - Verify all 9 tracks download successfully\n   - Verify files created in /Volumes/VIBES/Playlists/phonk/\n   - Verify Eagle library import\n   - Verify Notion updates\n\n2. Test Case 2: Sync and download d00mscrvll album (9 tracks)\n   - Sync album to Notion \u2705\n   - Verify tracks appear in query results  \n   - Run batch processing\n   - Verify tracks download (or skip if already downloaded from playlist)\n   - Verify deduplication works\n\n**Verification Steps:**\n- Files created in correct directory structure\n- Audio files are correct format (M4A/ALAC, WAV, AIFF)\n- Eagle library import successful\n- Notion database updated with file paths, Eagle File IDs, metadata\n- DL=True set after successful download\n- BPM, key, and other metadata populated\n\n**Expected Results:**\n- All 9 tracks from phonk playlist downloaded and processed\n- Files accessible and playable\n- Metadata complete in Notion\n- No errors in processing logs"
+        },
+        {
+          "id": "2e4e7361-6c27-8110-890e-e8a537d8868b",
+          "url": "https://www.notion.so/20260110T041441Z__HANDOFF__Spotify-Playlist-Tracks-Download-Fix-Implementation__2e4e7361-2e4e73616c278110890ee8a537d8868b",
+          "title": "20260110T041441Z__HANDOFF__Spotify-Playlist-Tracks-Download-Fix-Implementation__2e4e7361",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "Source: Cursor MM1 Agent\n\n## Work Completed\n\nThe critical issue has been partially resolved:\n\n### Fixes Implemented:\n1. **Query Filter Fix**: Modified `_build_unprocessed_tracks_query()` (line 2744) to remove DL filter requirement from query. DL filtering now happens in application code after fetch.\n2. **Eligibility Filter Fix**: Modified `build_eligibility_filter()` (line 9907) to remove DL filter requirement.  \n3. **Application-Level Filtering**: Added DL filtering logic to three functions:\n   - `find_all_tracks_for_processing()` (line 2800) - filters out DL=True tracks after fetch\n   - `find_tracks_for_processing_batch()` (line 9891) - filters out DL=True tracks after fetch  \n   - `select_pages()` (line 10038) - filters out DL=True tracks after fetch (unless reprocessing)\n\n### What Still Needs to Be Done:\n1. **Test the Fix**: Run the workflow with test Spotify tracks to verify they are now included in queries\n2. **Fix Existing Tracks**: Run remediation script `fix_spotify_tracks_dl_property.py --live` to set DL=False for existing Spotify tracks without the property\n3. **Verify Download Process**: Test that Spotify tracks are successfully downloaded via YouTube matching\n4. **Update Issue Status**: Mark issue as resolved or update status based on test results\n\n### Files Modified:\n- `monolithic-scripts/soundcloud_download_prod_merge-2.py` (lines 2744-2794, 9891-9905, 9907-9940, 10038-10062)\n\n### Next Steps:\n1. Test query changes with existing Spotify tracks\n2. Run remediation script: `python3 fix_spotify_tracks_dl_property.py --live`\n3. Monitor workflow execution to verify Spotify tracks are processed\n4. Update issue status in Notion based on results\n\n## MANDATORY HANDOFF REQUIREMENT\n\nUpon completion of testing and validation, you MUST create a handoff trigger file for **Issue Resolution Validation** assigned to **Cursor MM1 Agent** with:\n- Test results and evidence\n- Verification that Spotify tracks are now downloading\n- Updated issue status\n- Documentation of any"
+        },
+        {
+          "id": "2e4e7361-6c27-8141-9df9-f4e384ce4537",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-CRITICAL-Spotify-Playlist-Tracks-Not-Downloading-2e4e73616c2781419df9f4e384ce4537",
+          "title": "Plan Resolution for Issue: CRITICAL: Spotify Playlist Tracks Not Downloading",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** CRITICAL: Spotify Playlist Tracks Not Downloading - Query Filter & YouTube Matching Issues\n- **Issue ID:** 2e3e7361-6c27-818d-9a9b-c5508f52d916\n- **Issue URL:** https://www.notion.so/CRITICAL-Spotify-Playlist-Tracks-Not-Downloading-Query-Filter-YouTube-Matching-Issues-2e3e73616c27818d9a9bc5508f52d916\n- **Priority:** Critical\n- **Description:** CRITICAL ISSUE: Spotify Playlist Tracks Not Being Downloaded\n\n## Problem Summary\nSpotify tracks synced to Notion from playlists are NOT being downloaded. The production workflow script excludes Spotify tracks from processing, preventing YouTube download and audio file creation.\n\n## User Feedback (2026-01-09)\n\nUser provided two Spotify URLs:\n- Playlist: https://open.spotify.com/playlist/6XIc4VjUi7MIJnp7tshFy0 (phonk - 9 tracks)\n- Album: https://open.spotify.com/album/5QRFnGnBeMGePBKF2xTz5z (d00mscrvll, Vol. 1 - 9 tracks)\n\nUser's explicit feedback:\n\"WHERE ARE THE DOWNLOAD TRACKS FROM THE PLAYLIST??\"\n\"THE SOUNDCLOUD AND YOUTUBE TRACK MATCHING FUNCTIONALITY NEEDS TO BE REVIEWED AND IMPLEMENTED CORRECTLY\"\n\n## Root Causes Identified\n\n### 1. Query Filter Excludes Spotify Tracks\n- Location: monolithic-scripts/soundcloud_download_prod_merge-2.py\n- Functions: _build_unprocessed_tracks_query() (line 2730) and build_eligibility_filter() (line 8944)\n- Problem: Both functions require SoundCloud URL property to be present, completely excluding Spotify tracks\n- Impact: Spotify tracks never match the query filter, so they are never processed for download\n\n### 2. DL Property Not Set for New Spotify Tracks\n- Location: monolithic-scripts/spotify_integration_module.py\n- Function: create_track_page() (line 356)\n- Problem: New Spotify tracks created in Notion do not have DL=False set\n- Impact: Even if query was fixed, tracks wouldn't match because DL property is missing/not False\n\n### 3. Notion API Query..."
+        },
+        {
+          "id": "2e4e7361-6c27-8152-9cf4-df7c1f583da1",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-CRITICAL-Spotify-Playlist-Tracks-Not-Downloading-2e4e73616c2781529cf4df7c1f583da1",
+          "title": "Plan Resolution for Issue: CRITICAL: Spotify Playlist Tracks Not Downloading",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** CRITICAL: Spotify Playlist Tracks Not Downloading - Query Filter & YouTube Matching Issues\n- **Issue ID:** 2e3e7361-6c27-818d-9a9b-c5508f52d916\n- **Issue URL:** https://www.notion.so/CRITICAL-Spotify-Playlist-Tracks-Not-Downloading-Query-Filter-YouTube-Matching-Issues-2e3e73616c27818d9a9bc5508f52d916\n- **Priority:** Critical\n- **Description:** CRITICAL ISSUE: Spotify Playlist Tracks Not Being Downloaded\n\n## Problem Summary\nSpotify tracks synced to Notion from playlists are NOT being downloaded. The production workflow script excludes Spotify tracks from processing, preventing YouTube download and audio file creation.\n\n## User Feedback (2026-01-09)\n\nUser provided two Spotify URLs:\n- Playlist: https://open.spotify.com/playlist/6XIc4VjUi7MIJnp7tshFy0 (phonk - 9 tracks)\n- Album: https://open.spotify.com/album/5QRFnGnBeMGePBKF2xTz5z (d00mscrvll, Vol. 1 - 9 tracks)\n\nUser's explicit feedback:\n\"WHERE ARE THE DOWNLOAD TRACKS FROM THE PLAYLIST??\"\n\"THE SOUNDCLOUD AND YOUTUBE TRACK MATCHING FUNCTIONALITY NEEDS TO BE REVIEWED AND IMPLEMENTED CORRECTLY\"\n\n## Root Causes Identified\n\n### 1. Query Filter Excludes Spotify Tracks\n- Location: monolithic-scripts/soundcloud_download_prod_merge-2.py\n- Functions: _build_unprocessed_tracks_query() (line 2730) and build_eligibility_filter() (line 8944)\n- Problem: Both functions require SoundCloud URL property to be present, completely excluding Spotify tracks\n- Impact: Spotify tracks never match the query filter, so they are never processed for download\n\n### 2. DL Property Not Set for New Spotify Tracks\n- Location: monolithic-scripts/spotify_integration_module.py\n- Function: create_track_page() (line 356)\n- Problem: New Spotify tracks created in Notion do not have DL=False set\n- Impact: Even if query was fixed, tracks wouldn't match because DL property is missing/not False\n\n### 3. Notion API Query..."
+        },
+        {
+          "id": "2e4e7361-6c27-8175-80f9-f6a07724cf36",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-CRITICAL-Spotify-Playlist-Tracks-Not-Downloading-2e4e73616c27817580f9f6a07724cf36",
+          "title": "Plan Resolution for Issue: CRITICAL: Spotify Playlist Tracks Not Downloading",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** CRITICAL: Spotify Playlist Tracks Not Downloading - Query Filter & YouTube Matching Issues\n- **Issue ID:** 2e3e7361-6c27-818d-9a9b-c5508f52d916\n- **Issue URL:** https://www.notion.so/CRITICAL-Spotify-Playlist-Tracks-Not-Downloading-Query-Filter-YouTube-Matching-Issues-2e3e73616c27818d9a9bc5508f52d916\n- **Priority:** Critical\n- **Description:** CRITICAL ISSUE: Spotify Playlist Tracks Not Being Downloaded\n\n## Problem Summary\nSpotify tracks synced to Notion from playlists are NOT being downloaded. The production workflow script excludes Spotify tracks from processing, preventing YouTube download and audio file creation.\n\n## User Feedback (2026-01-09)\n\nUser provided two Spotify URLs:\n- Playlist: https://open.spotify.com/playlist/6XIc4VjUi7MIJnp7tshFy0 (phonk - 9 tracks)\n- Album: https://open.spotify.com/album/5QRFnGnBeMGePBKF2xTz5z (d00mscrvll, Vol. 1 - 9 tracks)\n\nUser's explicit feedback:\n\"WHERE ARE THE DOWNLOAD TRACKS FROM THE PLAYLIST??\"\n\"THE SOUNDCLOUD AND YOUTUBE TRACK MATCHING FUNCTIONALITY NEEDS TO BE REVIEWED AND IMPLEMENTED CORRECTLY\"\n\n## Root Causes Identified\n\n### 1. Query Filter Excludes Spotify Tracks\n- Location: monolithic-scripts/soundcloud_download_prod_merge-2.py\n- Functions: _build_unprocessed_tracks_query() (line 2730) and build_eligibility_filter() (line 8944)\n- Problem: Both functions require SoundCloud URL property to be present, completely excluding Spotify tracks\n- Impact: Spotify tracks never match the query filter, so they are never processed for download\n\n### 2. DL Property Not Set for New Spotify Tracks\n- Location: monolithic-scripts/spotify_integration_module.py\n- Function: create_track_page() (line 356)\n- Problem: New Spotify tracks created in Notion do not have DL=False set\n- Impact: Even if query was fixed, tracks wouldn't match because DL property is missing/not False\n\n### 3. Notion API Query..."
+        },
+        {
+          "id": "2e4e7361-6c27-81d5-8f89-d623838b9f74",
+          "url": "https://www.notion.so/Plan-Resolution-for-Issue-CRITICAL-Spotify-Playlist-Tracks-Not-Downloading-2e4e73616c2781d58f89d623838b9f74",
+          "title": "Plan Resolution for Issue: CRITICAL: Spotify Playlist Tracks Not Downloading",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** CRITICAL: Spotify Playlist Tracks Not Downloading - Query Filter & YouTube Matching Issues\n- **Issue ID:** 2e3e7361-6c27-818d-9a9b-c5508f52d916\n- **Issue URL:** https://www.notion.so/CRITICAL-Spotify-Playlist-Tracks-Not-Downloading-Query-Filter-YouTube-Matching-Issues-2e3e73616c27818d9a9bc5508f52d916\n- **Priority:** Critical\n- **Description:** CRITICAL ISSUE: Spotify Playlist Tracks Not Being Downloaded\n\n## Problem Summary\nSpotify tracks synced to Notion from playlists are NOT being downloaded. The production workflow script excludes Spotify tracks from processing, preventing YouTube download and audio file creation.\n\n## User Feedback (2026-01-09)\n\nUser provided two Spotify URLs:\n- Playlist: https://open.spotify.com/playlist/6XIc4VjUi7MIJnp7tshFy0 (phonk - 9 tracks)\n- Album: https://open.spotify.com/album/5QRFnGnBeMGePBKF2xTz5z (d00mscrvll, Vol. 1 - 9 tracks)\n\nUser's explicit feedback:\n\"WHERE ARE THE DOWNLOAD TRACKS FROM THE PLAYLIST??\"\n\"THE SOUNDCLOUD AND YOUTUBE TRACK MATCHING FUNCTIONALITY NEEDS TO BE REVIEWED AND IMPLEMENTED CORRECTLY\"\n\n## Root Causes Identified\n\n### 1. Query Filter Excludes Spotify Tracks\n- Location: monolithic-scripts/soundcloud_download_prod_merge-2.py\n- Functions: _build_unprocessed_tracks_query() (line 2730) and build_eligibility_filter() (line 8944)\n- Problem: Both functions require SoundCloud URL property to be present, completely excluding Spotify tracks\n- Impact: Spotify tracks never match the query filter, so they are never processed for download\n\n### 2. DL Property Not Set for New Spotify Tracks\n- Location: monolithic-scripts/spotify_integration_module.py\n- Function: create_track_page() (line 356)\n- Problem: New Spotify tracks created in Notion do not have DL=False set\n- Impact: Even if query was fixed, tracks wouldn't match because DL property is missing/not False\n\n### 3. Notion API Query..."
+        },
+        {
+          "id": "2e4e7361-6c27-81e4-96da-c6136f0e9e75",
+          "url": "https://www.notion.so/20260110T002517Z__HANDOFF__Plan-Resolution-for-Issue-CRITICAL-Spotify-Playl__2e4e7361-2e4e73616c2781e496dac6136f0e9e75",
+          "title": "20260110T002517Z__HANDOFF__Plan-Resolution-for-Issue:-CRITICAL:-Spotify-Playl__2e4e7361",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** CRITICAL: Spotify Playlist Tracks Not Downloading - Query Filter & YouTube Matching Issues\n- **Issue ID:** 2e3e7361-6c27-818d-9a9b-c5508f52d916\n- **Issue URL:** https://www.notion.so/CRITICAL-Spotify-Playlist-Tracks-Not-Downloading-Query-Filter-YouTube-Matching-Issues-2e3e73616c27818d9a9bc5508f52d916\n- **Priority:** Critical\n- **Description:** CRITICAL ISSUE: Spotify Playlist Tracks Not Being Downloaded\n\n## Problem Summary\nSpotify tracks synced to Notion from playlists are NOT being downloaded. The production workflow script excludes Spotify tracks from processing, preventing YouTube download and audio file creation.\n\n## User Feedback (2026-01-09)\n\nUser provided two Spotify URLs:\n- Playlist: https://open.spotify.com/playlist/6XIc4VjUi7MIJnp7tshFy0 (phonk - 9 tracks)\n- Album: https://open.spotify.com/album/5QRFnGnBeMGePBKF2xTz5z (d00mscrvll, Vol. 1 - 9 tracks)\n\nUser's explicit feedback:\n\"WHERE ARE THE DOWNLOAD TRACKS FROM THE PLAYLIST??\"\n\"THE SOUNDCLOUD AND YOUTUBE TRACK MATCHING FUNCTIONALITY NEEDS TO BE REVIEWED AND IMPLEMENTED CORRECTLY\"\n\n## Root Causes Identified\n\n### 1. Query Filter Excludes Spotify Tracks\n- Location: monolithic-scripts/soundcloud_download_prod_merge-2.py\n- Functions: _build_unprocessed_tracks_query() (line 2730) and build_eligibility_filter() (line 8944)\n- Problem: Both functions require SoundCloud URL property to be present, completely excluding Spotify tracks\n- Impact: Spotify tracks never match the query filter, so they are never processed for download\n\n### 2. DL Property Not Set for New Spotify Tracks\n- Location: monolithic-scripts/spotify_integration_module.py\n- Function: create_track_page() (line 356)\n- Problem: New Spotify tracks created in Notion do not have DL=False set\n- Impact: Even if query was fixed, tracks wouldn't match because DL property is missing/not False\n\n### 3. Notion API Query..."
+        },
+        {
+          "id": "2e4e7361-6c27-81e7-b692-dbe41c1a2f6e",
+          "url": "https://www.notion.so/Music-Workflow-Implement-Webhook-Triggers-for-Auto-Sync-2e4e73616c2781e7b692dbe41c1a2f6e",
+          "title": "Music Workflow: Implement Webhook Triggers for Auto-Sync",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": "Implement webhook triggers for automatic music sync:\n- Spotify webhook for new liked tracks\n- SoundCloud webhook for new likes\n- Automatic processing on webhook trigger\n\nEstimated Effort: 2-3 sessions\nImpact: Medium - Reduces manual execution\nDependencies: Webhook server infrastructure"
+        },
+        {
+          "id": "2e5e7361-6c27-819a-b505-cc783da02351",
+          "url": "https://www.notion.so/Validate-Spotify-Tracks-Fix-Download-Processing-2e5e73616c27819ab505cc783da02351",
+          "title": "Validate Spotify Tracks Fix - Download Processing",
+          "status": "Ready",
+          "priority": "High",
+          "type": "",
+          "description": "## Context\nA critical issue with Spotify Playlist Tracks not downloading has been resolved. This task validates that the fix is working correctly.\n\n## Issue Details\n- **Issue:** CRITICAL: Spotify Playlist Tracks Not Downloading - Query Filter & YouTube Matching Issues\n- **Issue ID:** 2e3e7361-6c27-818d-9a9b-c5508f52d916\n- **Issue URL:** https://www.notion.so/CRITICAL-Spotify-Playlist-Tracks-Not-Downloading-Query-Filter-YouTube-Matching-Issues-2e3e73616c27818d9a9bc5508f52d916\n- **Status:** Resolved\n\n## Fixes Applied\n1. \u2705 Query filters updated to include Spotify tracks\n2. \u2705 New Spotify tracks now set DL=False automatically\n3. \u2705 100 existing Spotify tracks remediated with DL=False\n\n## Validation Objective\nTest that Spotify tracks are now being processed correctly for download.\n\n## Required Actions\n1. Test with user's provided playlists:\n   - Playlist: https://open.spotify.com/playlist/6XIc4VjUi7MIJnp7tshFy0 (phonk - 9 tracks)\n   - Album: https://open.spotify.com/album/5QRFnGnBeMGePBKF2xTz5z (d00mscrvll, Vol. 1 - 9 tracks)\n2. Verify that Spotify tracks are now being queried and processed\n3. Verify that downloads are working correctly\n4. Confirm that DL property is being set correctly for new tracks\n5. Document test results\n\n## Success Criteria\n- [ ] Spotify tracks are being queried by production workflow\n- [ ] Downloads are working correctly\n- [ ] DL property is set correctly for new tracks\n- [ ] Test results documented\n\n## \ud83d\udea8 MANDATORY HANDOFF REQUIREMENT\n\n**CRITICAL:** Upon completion of this validation task, you MUST:\n\n1. **MOVE TRIGGER FILE (MANUAL)**: You MUST manually call mark_trigger_file_processed() from main.py to move the trigger file from 01_inbox to 02_processed. This cannot be automated - you are responsible for moving it.\n\n2. Update the task status in Notion to \"Completed\"\n\n3. Document test results in the task description\n\n4. If validation passes, update the issue to confirm resolution is verified\n\n5. If validation fails, create a new issue with detail..."
+        },
+        {
+          "id": "a25ca3b8-a09d-4632-bbe8-0bac0074db73",
+          "url": "https://www.notion.so/Audit-1-Webhook-Server-Implementation-Inventory-Gap-Analysis-a25ca3b8a09d4632bbe80bac0074db73",
+          "title": "[Audit-1] Webhook Server Implementation Inventory & Gap Analysis",
+          "status": "Ready",
+          "priority": "Critical",
+          "type": "",
+          "description": "Phase 1 of 5 \u2014 Research & Discovery\n\nNotion AI Research Agent conducts comprehensive audit of all webhook server implementations across environments:\n\nScope:\n- Server A (GAS Event Subscriptions)\n- Server B (GAS Database Automations)\n- Server C (Local Python FastAPI)\n- Desktop automation scripts for prompt delivery\n\nDeliverables:\n1. Complete inventory of existing webhook implementations\n2. Gap analysis against Three-Webhook-Server Architecture spec\n3. Desktop automation script status assessment\n4. Handoff packet for Claude MM1 review\n\nHandoff: Creates research doc in Notion-AI-Research-Analysis-Docs, populates Artifacts, and creates downstream handoff task for Claude MM1."
+        },
+        {
+          "id": "c4f3d6e7-5f3b-4a85-8102-db63682af626",
+          "url": "https://www.notion.so/Manual-fallback-Spotify-SoundCloud-to-Notion-Data-Sync-c4f3d6e75f3b4a858102db63682af626",
+          "title": "Manual fallback \u2014 Spotify + SoundCloud to Notion Data Sync",
+          "status": "Planning",
+          "priority": "Routine",
+          "type": "",
+          "description": ""
+        },
+        {
+          "id": "fc08bf69-fb75-4dfc-a560-9bdff2bade1d",
+          "url": "https://www.notion.so/Manual-Spotify-SoundCloud-to-Notion-Data-Sync-fc08bf69fb754dfca5609bdff2bade1d",
+          "title": "Manual \u2014 Spotify + SoundCloud to Notion Data Sync",
+          "status": "Ready",
+          "priority": "Medium",
+          "type": "",
+          "description": "Manual ingestion of Spotify/SoundCloud data into Notion with dedupe checks."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "scan_summary": {
+    "directories_with_music_name": 343,
+    "directories_with_music_files": 7578,
+    "total_music_files": 20148,
+    "total_size_gb": 670.24,
+    "total_size_bytes": 719662080786
+  },
+  "file_breakdown": {
+    ".m4a": 12447,
+    ".mp3": 258,
+    ".wav": 4650,
+    ".aiff": 2790,
+    ".aif": 3
+  },
+  "top_directories": [
+    {
+      "path": "/Volumes/VIBES/Apple-Music-Auto-Add",
+      "size": 153875054424,
+      "file_count": 2396
+    },
+    {
+      "path": "/Volumes/VIBES/Playlists/Unassigned",
+      "size": 72003928408,
+      "file_count": 1380
+    },
+    {
+      "path": "/Volumes/VIBES/Djay-Pro-Auto-Import",
+      "size": 66376321257,
+      "file_count": 2410
+    },
+    {
+      "path": "/Volumes/VIBES/Playlists/Downloads",
+      "size": 30538048088,
+      "file_count": 846
+    },
+    {
+      "path": "/Volumes/VIBES/Playlists/Great Music",
+      "size": 24044020113,
+      "file_count": 508
+    },
+    {
+      "path": "/Volumes/VIBES/Playlists/Good Music",
+      "size": 12532720567,
+      "file_count": 304
+    },
+    {
+      "path": "/Volumes/VIBES/Playlists/4. Progressive",
+      "size": 9628827428,
+      "file_count": 287
+    },
+    {
+      "path": "/Volumes/VIBES/Music-dep/Unknown Artist/Unknown Album",
+      "size": 6965158133,
+      "file_count": 226
+    },
+    {
+      "path": "/Volumes/VIBES/Playlists/Notion-Singles",
+      "size": 6635085857,
+      "file_count": 220
+    },
+    {
+      "path": "/Volumes/VIBES/Playlists/Good_Music",
+      "size": 6178884182,
+      "file_count": 152
+    },
+    {
+      "path": "/Volumes/VIBES/Playlists/Next Up",
+      "size": 5352414853,
+      "file_count": 115
+    },
+    {
+      "path": "/Volumes/VIBES/Playlists/Next_Up",
+      "size": 4716162800,
+      "file_count": 79
+    },
+    {
+      "path": "/Volumes/VIBES/Playlists/Meowsic",
+      "size": 4373468057,
+      "file_count": 54
+    },
+    {
+      "path": "/Volumes/VIBES/Playlists/Liked_Songs",
+      "size": 4181100885,
+      "file_count": 100
+    },
+    {
+      "path": "/Volumes/VIBES/Soundcloud Downloads/Drum to the Bass-2025-04-26T21_00_05",
+      "size": 3650767736,
+      "file_count": 69
+    },
+    {
+      "path": "/Volumes/VIBES/Soundcloud Downloads/Drum to the Bass-2025-04-26T21_00_05 2",
+      "size": 3642833378,
+      "file_count": 69
+    },
+    {
+      "path": "/Volumes/VIBES/Music/Unknown Artist/Unknown Album",
+      "size": 3531665836,
+      "file_count": 74
+    },
+    {
+      "path": "/Volumes/VIBES/Playlists/Music Re-Imagined",
+      "size": 3407977838,
+      "file_count": 79
+    },
+    {
+      "path": "/Volumes/VIBES/Playlists/My Shazam Tracks",
+      "size": 3251399903,
+      "file_count": 80
+    },
+    {
+      "path": "/Volumes/VIBES/DAVINCI PROJECT FOLDERS",
+      "size": 2910938426,
+      "file_count": 187
+    }
+  ],
+  "directory_patterns": {
+    "VIBES/Music": 3866,
+    "VIBES/Soundcloud Downloads": 121,
+    "VIBES/Playlists": 125,
+    "VIBES/Music Library-2.library": 1891,
+    "VIBES/Djay-Pro-Auto-Import": 1,
+    "VIBES/Music-dep": 1566,
+    "VIBES/DAVINCI PROJECT FOLDERS": 5,
+    "VIBES/Apple-Music-Auto-Add": 3
+  }
+}

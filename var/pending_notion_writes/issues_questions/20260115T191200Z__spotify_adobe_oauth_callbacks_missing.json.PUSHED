@@ -1,0 +1,18 @@
+{
+  "title": "Spotify/Adobe OAuth callbacks implemented but not deployed/validated",
+  "type": ["Internal Issue"],
+  "status": "Open",
+  "priority": "High",
+  "component": "OAuth / Webhook Server",
+  "blocked": true,
+  "description": "Webhook server now includes Spotify and Adobe OAuth callback routes in the workspace repo, but the running service must be restarted and the Cloudflare endpoint must be reachable before validation.",
+  "evidence": {
+    "server_routes": "notion_event_subscription_webhook_server_v4_enhanced.py now includes /auth/spotify/* and /auth/adobe/* routes",
+    "redirects": "SPOTIFY_REDIRECT_URI and ADOBE_LIGHTROOM_REDIRECT_URI are set to Cloudflare public URLs",
+    "deployment_gap": "webhook server restart + Cloudflare DNS route required for public callbacks"
+  },
+  "impact": "OAuth flows for Spotify and Adobe Lightroom cannot complete using the Cloudflare endpoint until deployment and validation are done.",
+  "next_step": "Restart webhook server to load new routes, ensure tunnel DNS route is active, then complete OAuth flows and store tokens.",
+  "owner": ["Claude MM1", "Codex MM1"],
+  "created_at": "20260115T191200Z"
+}

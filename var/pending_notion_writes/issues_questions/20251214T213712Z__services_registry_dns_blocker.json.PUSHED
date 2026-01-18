@@ -1,0 +1,17 @@
+{
+  "title": "Blocker: Notion unreachable (DNS) - Services Registry STEP 0",
+  "type": ["Internal Issue"],
+  "status": "Unreported",
+  "priority": "High",
+  "component": "Notion Schema",
+  "blocked": true,
+  "description": "Notion API calls failing with DNS resolution error (gaierror nodename nor servname provided). Cannot create STEP 0 baseline or required Notion entries. Diagnostics captured; pending replay when connectivity returns.",
+  "evidence": {
+    "getaddrinfo": "gaierror(8, 'nodename nor servname provided, or not known')",
+    "curl": "curl: (6) Could not resolve host: api.notion.com",
+    "nslookup": "isc_socket_bind unexpected error (sandbox?)",
+    "dig": "isc_socket_bind unexpected error (sandbox?)"
+  },
+  "source": "Codex-MM1 STEP0 Services Registry",
+  "created_at": "20251214T213712Z"
+}

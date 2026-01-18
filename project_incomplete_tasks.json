@@ -1,0 +1,162 @@
+[
+  {
+    "id": "2e7e7361-6c27-812f-893c-ff976536c200",
+    "url": "https://www.notion.so/20260113T213658Z__HANDOFF__Optimize-Music-Synchronization-Workflow-CSV-Backup-Integration__2e7e7361-2e7e73616c27812f893cff976536c200",
+    "title": "20260113T213658Z__HANDOFF__Optimize-Music-Synchronization-Workflow-CSV-Backup-Integration__2e7e7361",
+    "status": "Ready",
+    "priority": "High",
+    "description": "Implement CSV backup optimizations across the music synchronization workflow.\n\nKey Deliverables:\n1. Rate Limit Fallback - Automatic CSV fallback on 429 errors\n2. Liked Songs CSV Direct Access - Use Liked_Songs.csv directly\n3. Batch Playlist Sync - CSV-first sync mode\n4. Batch Track Metadata - Batch CSV lookups\n5. Performance Testing - Measure and validate improvements\n\nExpected Impact:\n- 70-85% API call reduction\n- 3-10x performance improvement\n- 100% reliability improvement (no workflow stops)\n- Full offline capability\n\nSee reference documents for detailed implementation requirements."
+  },
+  {
+    "id": "2e7e7361-6c27-81f1-9e2f-e0d19adc95a5",
+    "url": "https://www.notion.so/Optimize-Music-Synchronization-Workflow-with-CSV-Backup-Integration-2e7e73616c2781f19e2fe0d19adc95a5",
+    "title": "Optimize Music Synchronization Workflow with CSV Backup Integration",
+    "status": "Ready",
+    "priority": "High",
+    "description": "Implement CSV backup optimizations across the music synchronization workflow.\n\nKey Deliverables:\n1. Rate Limit Fallback - Automatic CSV fallback on 429 errors\n2. Liked Songs CSV Direct Access - Use Liked_Songs.csv directly  \n3. Batch Playlist Sync - CSV-first sync mode\n4. Batch Track Metadata - Batch CSV lookups\n5. Performance Testing - Measure and validate improvements\n\nExpected Impact: 70-85% API call reduction, 3-10x performance improvement, 100% reliability.\n\nSee task page for full details and reference documents."
+  },
+  {
+    "id": "836f988b-1a43-41b0-94a6-e20b26418485",
+    "url": "https://www.notion.so/Handoff-Cursor-Claude-Create-Music-Workflow-Documentation-Examples-836f988b1a4341b094a6e20b26418485",
+    "title": "[Handoff][Cursor/Claude] Create Music Workflow Documentation & Examples",
+    "status": "Ready",
+    "priority": "Medium",
+    "description": "Requires:"
+  },
+  {
+    "id": "c6f42a3f-e6dc-4029-bafa-76ea3b655345",
+    "url": "https://www.notion.so/Validation-Verify-Music-Workflow-Documentation-Completeness-c6f42a3fe6dc4029bafa76ea3b655345",
+    "title": "[Validation] Verify Music Workflow Documentation Completeness",
+    "status": "Ready",
+    "priority": "Medium",
+    "description": "Objective:"
+  },
+  {
+    "id": "69bc9b83-215b-41e1-8de9-08b85b6f2d1d",
+    "url": "https://www.notion.so/Data-Ops-Verify-DRM-Error-Handling-Implementation-Status-69bc9b83215b41e18de908b85b6f2d1d",
+    "title": "[Data Ops] Verify DRM Error Handling Implementation Status",
+    "status": "Ready",
+    "priority": "High",
+    "description": "Data Operations task to verify DRM error handling implementation status in Notion workspace.\n\n"
+  },
+  {
+    "id": "ae313e60-0faa-4333-9efa-64dfc4ddb662",
+    "url": "https://www.notion.so/Validation-Confirm-DRM-Error-Handling-Issue-Resolution-ae313e600faa43339efa64dfc4ddb662",
+    "title": "[Validation] Confirm DRM Error Handling Issue Resolution",
+    "status": "Ready",
+    "priority": "High",
+    "description": "Validation task to confirm DRM error handling issue has been fully resolved.\n\n"
+  },
+  {
+    "id": "c181b427-cead-4de0-adf1-6033cc38d010",
+    "url": "https://www.notion.so/Handoff-Cursor-Claude-Test-and-Document-DRM-Error-Handling-Behavior-c181b427cead4de0adf16033cc38d010",
+    "title": "[Handoff][Cursor/Claude] Test and Document DRM Error Handling Behavior",
+    "status": "Ready",
+    "priority": "High",
+    "description": "\u26a0\ufe0f EXTERNAL EXECUTION REQUIRED - Cannot be completed by Notion AI Data Operations Agent"
+  },
+  {
+    "id": "2e7e7361-6c27-81da-890a-ec13295b85ca",
+    "url": "https://www.notion.so/20260113T185315Z__HANDOFF__Fingerprint-Library-Optimization-Gap-Analysis__c0fbdba3-2e7e73616c2781da890aec13295b85ca",
+    "title": "20260113T185315Z__HANDOFF__Fingerprint-Library-Optimization-Gap-Analysis__c0fbdba3",
+    "status": "Ready",
+    "priority": "Critical",
+    "description": "## Objective\n\nPerform comprehensive gap analysis and optimization review of the fingerprint embedding implementation to enable completion of fingerprint processing for the entire Eagle library (8,433 items). Current sequential implementation processes ~1 item/second, requiring ~2.3 hours. Target: Complete in <30 minutes with optimizations.\n\n## Current State Analysis\n\n### Process Status\n- **Total Eagle Library Items**: 9,606 items\n- **Items with File Paths**: 8,433 items\n- **Current Processing Rate**: ~1 item/second (sequential processing)\n- **Estimated Completion Time**: ~2.3 hours for full library\n- **Current Progress**: ~677 items processed (8% complete) as of last check\n- **Active Process**: Running in background at `/tmp/eagle_fingerprint_analysis.log`\n\n### Current Implementation Files\n- **Main Script**: `scripts/run_eagle_fingerprint_analysis.py`\n- **Core Function**: `scripts/batch_fingerprint_embedding.py::process_eagle_items_fingerprint_embedding()`\n- **Fingerprint Computation**: `scripts/music_library_remediation.py::compute_file_fingerprint()` - SHA-256 hash of entire file (reads in 1MB chunks)\n- **Metadata Embedding**: `scripts/music_library_remediation.py::embed_fingerprint_in_metadata()` - Uses mutagen for M4A/MP3/FLAC/AIFF\n- **Eagle Sync**: `scripts/batch_fingerprint_embedding.py::sync_fingerprint_to_eagle()` - Individual API calls per file\n\n### Identified Issues\n\n1. **Sequential Processing**: One file at a time, no parallelization\n   - Impact: 2.3 hours for full library\n   - Opportunity: 4-8x speedup with parallel processing\n\n2. **Eagle API Connection Errors**: Frequent \"Connection refused\" errors during tag sync\n   - Impact: Failed tag updates, fingerprints embedded but not synced to Eagle\n   - Need: Retry logic with exponential backoff\n\n3. **No Resume Capability**: Process must restart from beginning if interrupted\n   - Impact: Lost progress on interruption\n   - Need: Progress checkpointing system\n\n4. **No Progress Checkpointing**: Cannot track parti"
+  },
+  {
+    "id": "2e7e7361-6c27-81cd-ae1b-ce809ef04533",
+    "url": "https://www.notion.so/Cursor-MM1-Agent-Technical-Code-Review-2e7e73616c2781cdae1bce809ef04533",
+    "title": "Cursor MM1 Agent - Technical Code Review",
+    "status": "Ready",
+    "priority": "High",
+    "description": "Technical code review of all Keyboard Maestro related scripts and sync engine code.\n\n## Scope\n- Review all KM-related Python scripts\n- Analyze plist parsing and modification code\n- Review sync engine implementation\n- Identify code quality issues and refactoring opportunities\n\n## Deliverables\n- Code review report with findings\n- Refactoring recommendations\n- Code quality metrics\n- Security vulnerability assessment"
+  },
+  {
+    "id": "2e7e7361-6c27-810c-abd5-c4cfaedd79f6",
+    "url": "https://www.notion.so/ChatGPT-Research-Agent-External-Best-Practices-Analysis-2e7e73616c27810cabd5c4cfaedd79f6",
+    "title": "ChatGPT Research Agent - External Best Practices Analysis",
+    "status": "Ready",
+    "priority": "High",
+    "description": "External research on Keyboard Maestro and Notion integration best practices.\n\n## Scope\n- Research industry best practices for KM-Notion integration\n- Competitive analysis of similar implementations\n- Identify patterns not yet implemented\n- Review security and compliance considerations\n\n## Deliverables\n- Best practices research compilation\n- Competitive analysis report\n- Missing patterns identification\n- Security/compliance review findings"
+  },
+  {
+    "id": "2e7e7361-6c27-81ac-bfd4-c60ef9df1c21",
+    "url": "https://www.notion.so/Claude-MM1-Research-Agent-Implementation-Architecture-Review-2e7e73616c2781acbfd4c60ef9df1c21",
+    "title": "Claude MM1 Research Agent - Implementation Architecture Review",
+    "status": "Ready",
+    "priority": "High",
+    "description": "Deep analysis of the KM-Notion synchronization implementation guide and architecture.\n\n## Scope\n- Review implementation guide document thoroughly\n- Compare documented architecture vs actual implementation\n- Identify technical debt and optimization opportunities\n- Review error handling and edge cases\n\n## Deliverables\n- Architecture assessment report\n- Technical debt inventory\n- Optimization opportunity analysis\n- Error handling review findings"
+  },
+  {
+    "id": "2e7e7361-6c27-8189-b8b3-d8dee01bc067",
+    "url": "https://www.notion.so/Notion-AI-Research-Agent-KM-Notion-Sync-Workspace-Analysis-2e7e73616c278189b8b3d8dee01bc067",
+    "title": "Notion AI Research Agent - KM-Notion Sync Workspace Analysis",
+    "status": "Ready",
+    "priority": "High",
+    "description": "Perform comprehensive workspace analysis of all Keyboard Maestro and Notion synchronization related items.\n\n## Scope\n- Query all databases for KM-related items\n- Analyze documentation completeness across workspace\n- Review relation integrity between databases\n- Identify gaps in workflow documentation\n\n## Deliverables\n- Complete inventory of KM-related items across all databases\n- Documentation gap analysis report\n- Relation integrity audit results\n- Recommendations for missing documentation"
+  },
+  {
+    "id": "2e7e7361-6c27-8127-b727-e6200b2a3977",
+    "url": "https://www.notion.so/KM-Notion-Sync-Implementation-Data-Operations-Review-Remediation-2e7e73616c278127b727e6200b2a3977",
+    "title": "KM-Notion Sync Implementation - Data Operations Review & Remediation",
+    "status": "Ready",
+    "priority": "Medium",
+    "description": "Review and remediate all Keyboard Maestro and Notion synchronization-related items in the workspace to bring them up to system specifications.\n\n## Scope\n1. Review all KM-related workflow items in Agent-Workflows database\n2. Review all KM-related user workflow items  \n3. Validate folder trigger path configurations\n4. Ensure all items have proper relations and metadata\n5. Update any outdated references to ~/Documents/Agents/Agent-Triggers\n\n## Required Actions\n- Audit linked Agent-Workflows items for completeness\n- Verify User-Workflows items have proper documentation\n- Check that all KM macros in Notion match local configurations\n- Update any items with outdated path references\n- Ensure proper cross-references between Issues, Documents, and Workflows\n\n## Success Criteria\n- All related items have complete metadata\n- No outdated path references remain\n- Cross-references are bidirectional and complete\n- Documentation reflects current system state"
+  },
+  {
+    "id": "2e7e7361-6c27-814f-83ba-e59540c73835",
+    "url": "https://www.notion.so/Plan-Resolution-for-Issue-DaVinci-Resolve-Workflow-2-Way-Synchronization-No-2e7e73616c27814f83bae59540c73835",
+    "title": "Plan Resolution for Issue: DaVinci Resolve Workflow: 2-Way Synchronization No",
+    "status": "Ready",
+    "priority": "High",
+    "description": "## Context\nA critical issue has been identified that requires immediate attention and resolution planning.\n\n## Issue Details\n- **Issue Title:** DaVinci Resolve Workflow: 2-Way Synchronization Not Implemented\n- **Issue ID:** 2e6e7361-6c27-81cb-b931-e7ff76fe0640\n- **Issue URL:** https://www.notion.so/DaVinci-Resolve-Workflow-2-Way-Synchronization-Not-Implemented-2e6e73616c2781cbb931e7ff76fe0640\n- **Priority:** High\n- **Description:** The DaVinci Resolve workflow currently only implements Resolve \u2192 Notion synchronization. \n\nMissing functionality:\n- Notion \u2192 Resolve synchronization for project/timeline/clip properties\n- Detection of changes in Notion database that need to be synced to Resolve\n- Update Resolve objects (projects, timelines, clips) from Notion changes\n- Clip file path updates from Notion for relinking scenarios\n\nCurrent state: Only one-way sync (Resolve \u2192 Notion) is implemented.\n\nImpact: Changes made in Notion are not reflected in Resolve projects.\n\n## Objective\nReview this issue and create a detailed plan for resolution. Identify the responsible agent(s), break down the work into actionable tasks, and prepare the next handoff to the execution agent.\n\n## Required Actions\n1. Analyze the issue thoroughly\n2. Identify root cause(s) and contributing factors\n3. Determine the appropriate agent(s) for resolution\n4. Create a detailed implementation plan\n5. Break down work into discrete, actionable tasks\n6. Identify dependencies and prerequisites\n7. Create the next handoff task for the execution agent\n\n## Success Criteria\n- [ ] Issue analysis completed\n- [ ] Root cause identified\n- [ ] Resolution plan created\n- [ ] Execution agent identified\n- [ ] Next handoff task created with all required context\n\n\n## \ud83d\udea8 MANDATORY HANDOFF REQUIREMENT\n\n**CRITICAL:** Upon completion of this task, you MUST create a handoff trigger file for **Issue Resolution Implementation** assigned to **Cursor MM1 Agent**. \n\n**This handoff creation is a MANDATORY part of task completion. Task is..."
+  },
+  {
+    "id": "2e7e7361-6c27-81ef-aad1-e463174b8a51",
+    "url": "https://www.notion.so/Unified-Env-Token-Pattern-Remediation-2e7e73616c2781efaad1e463174b8a51",
+    "title": "Unified Env Token Pattern Remediation",
+    "status": "Ready",
+    "priority": "Critical",
+    "description": "Remediate 87 non-compliant scripts to use canonical shared_core.notion.token_manager pattern. See trigger file for full details."
+  },
+  {
+    "id": "2e7e7361-6c27-815c-94e1-fadc8b15a7e3",
+    "url": "https://www.notion.so/20260113T180000Z__HANDOFF__Control-Plane-DB-Gaps-Resolution__ISSUE-1-2e7e73616c27815c94e1fadc8b15a7e3",
+    "title": "20260113T180000Z__HANDOFF__Control-Plane-DB-Gaps-Resolution__ISSUE-1",
+    "status": "Ready",
+    "priority": "Critical",
+    "description": "Source: Claude Code Agent\n\n## Context\n\nStrategic review identified missing Control Plane DBs required for framework automation. The System State Radar shows Notion Control Plane at only 60% completion. Framework CANNOT proceed to PROD until these DBs exist.\n\n## Investigation Findings\n\nThe following DBs are identified as placeholders (empty pages with 0 child blocks) that need to be converted to functional databases with proper schema:\n\n1. **Documentation Registry** (Page ID: dd2b0b52-1729-4cfb-bcb0-0cddc9856f42)\n   - URL: https://www.notion.so/Documentation-Registry-dd2b0b5217294cfbbcb00cddc9856f42\n   - Current Status: Empty page with 0 child blocks\n   - Required: Convert to database with proper schema for tracking documentation across the workspace\n\n2. **Doc-Update-Tasks** (Page ID: 91f99ea4-e192-46ab-b462-6af054a7f5a9)\n   - URL: https://www.notion.so/Doc-Update-Tasks-91f99ea4e19246abb4626af054a7f5a9\n   - Current Status: Empty page with 0 child blocks\n   - Required: Convert to database for tracking documentation update tasks\n\n## Required Actions\n\n### 1. Create Documentation Registry Database Schema\nProperties to include:\n- Name (title): Document name\n- Status (status): Active, Archived, Draft, Review\n- Type (select): SOP, Reference, Guide, Template, Script Doc\n- Last Updated (date): Timestamp of last update\n- Owner (relation): Link to Agents database\n- Related Projects (relation): Link to Projects database\n- Documentation URL (url): Link to external documentation\n- Workspace Area (relation): Link to workspace-databases\n- Update Frequency (select): Daily, Weekly, Monthly, As Needed\n- Last Audit Date (date): When last reviewed for accuracy\n\n### 2. Create Doc-Update-Tasks Database Schema\nProperties to include:\n- Task Name (title): Description of update needed\n- Status (status): Not Started, In Progress, Complete, Blocked\n- Priority (select): Critical, High, Medium, Low\n- Documentation (relation): Link to Documentation Registry\n- Assigned-Agent (relation): Link to Agen"
+  },
+  {
+    "id": "2e7e7361-6c27-81ad-b014-f097ea460064",
+    "url": "https://www.notion.so/20260113T180100Z__VALIDATION__Control-Plane-DB-Implementation-Review__ISSUE-1-2e7e73616c2781adb014f097ea460064",
+    "title": "20260113T180100Z__VALIDATION__Control-Plane-DB-Implementation-Review__ISSUE-1",
+    "status": "Ready",
+    "priority": "High",
+    "description": "Source: Claude Code Agent\n\n## Validation Task Overview\n\nThis is an Agent Work Validation Task to verify the completion and correctness of work performed by Notion AI Data Operations Agent for ISSUE-1: Control Plane DB Gaps.\n\n## Prerequisite\n\nThis validation task should be executed AFTER Notion AI Data Operations Agent has completed the database creation task. Wait for the predecessor trigger file to be moved to 02_processed before beginning validation.\n\n## Validation Checklist\n\n### 1. Documentation Registry Database Validation\n- [ ] Verify database exists at Page ID: dd2b0b52-1729-4cfb-bcb0-0cddc9856f42\n- [ ] Confirm database has proper schema with all required properties:\n  - Name (title)\n  - Status (status)\n  - Type (select)\n  - Last Updated (date)\n  - Owner (relation to Agents)\n  - Related Projects (relation)\n  - Documentation URL (url)\n  - Workspace Area (relation)\n  - Update Frequency (select)\n  - Last Audit Date (date)\n- [ ] Verify database is queryable via API\n- [ ] Confirm at least one test item exists\n\n### 2. Doc-Update-Tasks Database Validation\n- [ ] Verify database exists at Page ID: 91f99ea4-e192-46ab-b462-6af054a7f5a9\n- [ ] Confirm database has proper schema with all required properties:\n  - Task Name (title)\n  - Status (status)\n  - Priority (select)\n  - Documentation (relation)\n  - Assigned-Agent (relation)\n  - Due Date (date)\n  - Description (rich_text)\n  - Update Type (select)\n  - Created By (relation)\n  - Completion Date (date)\n- [ ] Verify database is queryable via API\n- [ ] Confirm at least one test item exists\n\n### 3. Cross-Database Validation\n- [ ] Verify relations between Documentation Registry and Doc-Update-Tasks work correctly\n- [ ] Verify relations to Agents database work correctly\n- [ ] Verify relations to Projects database work correctly\n\n### 4. Issue Status Verification\n- [ ] Confirm ISSUE-1 status has been updated to 'Resolved'\n- [ ] Verify evidence/resolution notes have been added\n\n### 5. System State Update\n- [ ] Calculate new Control"
+  },
+  {
+    "id": "2e7e7361-6c27-8156-9be3-c39ed7a65f66",
+    "url": "https://www.notion.so/20260113T180000Z__HANDOFF__Control-Plane-DB-Gaps-Resolution__ISSUE-1-2e7e73616c2781569be3c39ed7a65f66",
+    "title": "20260113T180000Z__HANDOFF__Control-Plane-DB-Gaps-Resolution__ISSUE-1",
+    "status": "Ready",
+    "priority": "Critical",
+    "description": "Source: Claude Code Agent\n\n## Context\n\nStrategic review identified missing Control Plane DBs required for framework automation. The System State Radar shows Notion Control Plane at only 60% completion. Framework CANNOT proceed to PROD until these DBs exist.\n\n## Investigation Findings\n\nThe following DBs are identified as placeholders (empty pages with 0 child blocks) that need to be converted to functional databases with proper schema:\n\n1. **Documentation Registry** (Page ID: dd2b0b52-1729-4cfb-bcb0-0cddc9856f42)\n   - URL: https://www.notion.so/Documentation-Registry-dd2b0b5217294cfbbcb00cddc9856f42\n   - Current Status: Empty page with 0 child blocks\n   - Required: Convert to database with proper schema for tracking documentation across the workspace\n\n2. **Doc-Update-Tasks** (Page ID: 91f99ea4-e192-46ab-b462-6af054a7f5a9)\n   - URL: https://www.notion.so/Doc-Update-Tasks-91f99ea4e19246abb4626af054a7f5a9\n   - Current Status: Empty page with 0 child blocks\n   - Required: Convert to database for tracking documentation update tasks\n\n## Required Actions\n\n### 1. Create Documentation Registry Database Schema\nProperties to include:\n- Name (title): Document name\n- Status (status): Active, Archived, Draft, Review\n- Type (select): SOP, Reference, Guide, Template, Script Doc\n- Last Updated (date): Timestamp of last update\n- Owner (relation): Link to Agents database\n- Related Projects (relation): Link to Projects database\n- Documentation URL (url): Link to external documentation\n- Workspace Area (relation): Link to workspace-databases\n- Update Frequency (select): Daily, Weekly, Monthly, As Needed\n- Last Audit Date (date): When last reviewed for accuracy\n\n### 2. Create Doc-Update-Tasks Database Schema\nProperties to include:\n- Task Name (title): Description of update needed\n- Status (status): Not Started, In Progress, Complete, Blocked\n- Priority (select): Critical, High, Medium, Low\n- Documentation (relation): Link to Documentation Registry\n- Assigned-Agent (relation): Link to Agen"
+  },
+  {
+    "id": "2e7e7361-6c27-81d6-9735-e3af94d62cc1",
+    "url": "https://www.notion.so/20260113T152934Z__HANDOFF__Continue-Fingerprint-Implementation-And-Task-Execution__Claude-Code-Agent-2e7e73616c2781d69735e3af94d62cc1",
+    "title": "20260113T152934Z__HANDOFF__Continue-Fingerprint-Implementation-And-Task-Execution__Claude-Code-Agent",
+    "status": "Ready",
+    "priority": "Medium",
+    "description": ""
+  },
+  {
+    "id": "2e7e7361-6c27-8131-af23-e664c4dc8210",
+    "url": "https://www.notion.so/20260113T152614Z__HANDOFF__Review-and-Enhance-Workflow-Prompts-Local-Resour__WORKFLOW-2e7e73616c278131af23e664c4dc8210",
+    "title": "20260113T152614Z__HANDOFF__Review-and-Enhance-Workflow-Prompts---Local-Resour__WORKFLOW",
+    "status": "Ready",
+    "priority": "High",
+    "description": "## Objective\n\nReview all workflow prompt files and scripts, validate the enhancements made to `main.py`, and apply the same local resource integration pattern to all similar workflow files.\n\n## Context\n\nThe `main.py` workflow has been enhanced to prioritize continuing existing unfinished work by:\n1. Scanning `.cursor/plans/` directory for incomplete plans\n2. Scanning agent inbox folders (`01_inbox`) for pending trigger files\n3. Analyzing unfinished work before querying Notion databases\n4. Using tools for analysis rather than just scripts\n\n## Files to Review and Update\n\n### Primary File (Already Enhanced)\n- **main.py** - Enhanced with local resource scanning functions\n\n### Files Requiring Updates\n1. **execute_issue_and_project_workflow.py**\n   - Currently only queries Notion for issues/projects\n   - Needs: Local resource scanning integration\n   - Location: `/Users/brianhellemn/Projects/github-production/execute_issue_and_project_workflow.py`\n\n2. **execute_issue_resolution_workflow.py**\n   - Currently only queries Notion for issues\n   - Needs: Local resource scanning integration\n   - Location: `/Users/brianhellemn/Projects/github-production/execute_issue_resolution_workflow.py`\n\n3. **query_notion_issues_and_projects.py**\n   - Query script that could benefit from local resource awareness\n   - Location: `/Users/brianhellemn/Projects/github-production/query_notion_issues_and_projects.py`\n\n4. **query_issues.py**\n   - Simple query script\n   - Location: `/Users/brianhellemn/Projects/github-production/query_issues.py`\n\n## Enhancement Pattern to Apply\n\n### New Functions to Add (from main.py)\n1. **scan_cursor_plans_directory()** - Scans `~/.cursor/plans/` for unfinished plans\n2. **scan_agent_inbox_folders()** - Scans agent inbox folders for pending triggers\n3. **analyze_unfinished_work()** - Analyzes unfinished work from multiple sources\n4. **continue_unfinished_work()** - Continues work on unfinished items\n\n### Workflow Priority Update\n**Before:**\n1. Query Notion for issues\n2"
+  }
+]

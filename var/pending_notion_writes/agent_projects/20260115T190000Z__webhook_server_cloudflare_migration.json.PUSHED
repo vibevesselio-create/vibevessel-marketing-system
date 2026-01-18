@@ -1,0 +1,24 @@
+{
+  "title": "Webhook Server Implementation (Cloudflare Migration)",
+  "status": "In Progress",
+  "priority": "High",
+  "owner": ["Codex MM1"],
+  "objective": "Migrate the Notion webhook server from LocalTunnel to Cloudflare Tunnel and validate end-to-end webhooks and OAuth callbacks.",
+  "scope": [
+    "Cloudflare tunnel connectivity",
+    "Webhook server availability",
+    "Notion webhook URL update",
+    "OAuth redirect URI alignment (Google/Spotify/Adobe)"
+  ],
+  "success_criteria": [
+    "https://webhook.vibevessel.space/health returns HTTP 200",
+    "Cloudflared tunnel shows active connections",
+    "Notion webhook verification passes and events are processed",
+    "Google/Spotify/Adobe OAuth flows succeed with public redirect URIs"
+  ],
+  "dependencies": [
+    "Webhook server running on port 5001",
+    "Cloudflare DNS + SSL issued for vibevessel.space"
+  ],
+  "created_at": "20260115T190000Z"
+}

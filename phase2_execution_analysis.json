@@ -1,0 +1,1082 @@
+{
+  "execution_result": {
+    "success": true,
+    "exit_code": 0,
+    "duration_seconds": 17.543718,
+    "stdout": "",
+    "stderr": "[soundcloud_download_prod_merge] unified_config unavailable (No module named 'unified_config'); using fallback module.\n2026-01-09 11:35:01 | INFO | Unified logging initialized via shared_core.logging\n2026-01-09 11:35:01 | INFO | \ud83e\uddf5 Max concurrency for batch mode: 4\n2026-01-09 11:35:01 | INFO | \ud83d\udcd1 Order mode: priority_then_created | Priority numeric mode: True | Name-order: ['Critical', 'High', 'Medium', 'Low']\n/Users/brianhellemn/Library/Python/3.13/lib/python/site-packages/librosa/core/intervals.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.\n  from pkg_resources import resource_filename\n2026-01-09 11:35:02 | WARNING | \u26a0\ufe0f Smart Eagle API not available, using fallback\n2026-01-09 11:35:02 | INFO | \ud83d\udcc1 Using OUT_DIR: /Volumes/VIBES/Playlists\n2026-01-09 11:35:02 | INFO | \ud83d\udcc1 Using BACKUP_DIR: /Volumes/VIBES/Djay-Pro-Auto-Import\n2026-01-09 11:35:02 | INFO | \ud83d\udcc1 Using WAV_BACKUP_DIR: /Volumes/VIBES/Apple-Music-Auto-Add\n2026-01-09 11:35:02 | INFO | \ud83e\udd85 Eagle API: http://localhost:41595\n2026-01-09 11:35:02 | INFO | \ud83e\udd85 Eagle Library: /Volumes/VIBES/Music Library-2.library\n2026-01-09 11:35:02 | INFO | \ud83d\udcda Volume index enabled: /Users/brianhellemn/Projects/github-production/var/music_volume_index.json\n2026-01-09 11:35:02 | INFO | \ud83d\udcc1 Using OUT_DIR: /Volumes/VIBES/Playlists\n2026-01-09 11:35:02 | INFO | \ud83d\udcc1 Using BACKUP_DIR: /Volumes/VIBES/Djay-Pro-Auto-Import\n2026-01-09 11:35:02 | INFO | \ud83d\udcc1 Using WAV_BACKUP_DIR: /Volumes/VIBES/Apple-Music-Auto-Add\n2026-01-09 11:35:03 | WARNING | \u26a0\ufe0f  Unified State Registry not available: No module named 'unified_state_registry'\n2026-01-09 11:35:03 | INFO | Processing mode: dedup, sorting by Created Time (descending)\n2026-01-09 11:35:03 | INFO | ================================================================================\n2026-01-09 11:35:03 | INFO | \ud83d\udd0d EAGLE LIBRARY DEDUPLICATION MODE\n2026-01-09 11:35:03 | INFO | ================================================================================\n2026-01-09 11:35:03 | INFO | Running in DRY RUN mode - no changes will be made\n2026-01-09 11:35:03 | INFO | ================================================================================\n2026-01-09 11:35:03 | INFO | \ud83d\udd0d EAGLE LIBRARY-WIDE DEDUPLICATION SCAN\n2026-01-09 11:35:03 | INFO | ================================================================================\n2026-01-09 11:35:03 | INFO |    Mode: DRY RUN\n2026-01-09 11:35:03 | INFO |    Min Similarity: 75%\n2026-01-09 11:35:03 | INFO |    Cleanup: Disabled\n2026-01-09 11:35:03 | INFO | \n2026-01-09 11:35:03 | INFO | \ud83d\udce5 Fetching all items from Eagle library...\n2026-01-09 11:35:03 | INFO | \ud83d\udcca Fetched 2998 items from Eagle library\n2026-01-09 11:35:03 | INFO | \ud83d\udcca Found 2998 items in library\n2026-01-09 11:35:03 | INFO | \ud83d\udd28 Building similarity index...\n2026-01-09 11:35:03 | INFO |    Name clusters: 2168\n2026-01-09 11:35:03 | INFO |    Fingerprint groups (tags + file metadata): 0\n2026-01-09 11:35:03 | INFO | \ud83d\udd0d Scanning for duplicates...\n2026-01-09 11:35:03 | INFO |    Strategy 1: Fingerprint matching...\n2026-01-09 11:35:03 | INFO |       Found 0 fingerprint duplicate groups\n2026-01-09 11:35:03 | INFO |    Strategy 2: Advanced fuzzy name matching...\n2026-01-09 11:35:03 | INFO |       Found 94 fuzzy duplicate groups\n2026-01-09 11:35:03 | INFO |    Strategy 3: Cross-cluster n-gram matching...\n2026-01-09 11:35:18 | INFO |       Found 99 n-gram duplicate groups\n2026-01-09 11:35:18 | INFO | \n2026-01-09 11:35:18 | INFO | ================================================================================\n2026-01-09 11:35:18 | INFO | \ud83d\udcca DEDUPLICATION SCAN RESULTS\n2026-01-09 11:35:18 | INFO | ================================================================================\n2026-01-09 11:35:18 | INFO |    Total items scanned: 2998\n2026-01-09 11:35:18 | INFO |    Duplicate groups found: 193\n2026-01-09 11:35:18 | INFO |    Total duplicate items: 716\n2026-01-09 11:35:18 | INFO |    Space recoverable: 11798.55 MB\n2026-01-09 11:35:18 | INFO |    Scan duration: 15.8 seconds\n2026-01-09 11:35:18 | INFO | \n2026-01-09 11:35:18 | INFO |    Match type breakdown:\n2026-01-09 11:35:18 | INFO |       Fingerprint: 0 groups (0 duplicates)\n2026-01-09 11:35:18 | INFO |       Fuzzy: 94 groups (616 duplicates)\n2026-01-09 11:35:18 | INFO |       N-gram: 99 groups (100 duplicates)\n2026-01-09 11:35:18 | INFO | \n\ud83d\udcc4 Report generated: /Users/brianhellemn/Projects/github-production/logs/deduplication/eagle_dedup_report_20260109_113518.md\n2026-01-09 11:35:18 | INFO | \n\ud83d\udcc4 Full report saved to: /Users/brianhellemn/Projects/github-production/logs/deduplication/eagle_dedup_report_20260109_113518.md\n",
+    "output_length": 0,
+    "error_length": 4768
+  },
+  "report_data": {
+    "report_path": "/Users/brianhellemn/Projects/github-production/logs/deduplication/eagle_dedup_report_20260109_113518.md",
+    "metrics": {
+      "duplicate_groups": 193,
+      "total_duplicates": 716,
+      "space_recoverable_mb": 11798.55,
+      "scan_duration_seconds": 15.8,
+      "match_types": {
+        "fuzzy": {
+          "groups": 94,
+          "duplicates": 616,
+          "space_mb": 8144.77
+        }
+      }
+    },
+    "duplicate_groups": [
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.9,
+        "best_item_id": "MH6W8TRH35ZLM",
+        "best_item_name": "N i g h t D r i v e \u30b9\u30b1\u30e9\u30fc (PhonkWave)",
+        "duplicates": [
+          {
+            "id": "MH6ED838WLNWI",
+            "name": "N i g h t D r i v e \u30b9\u30b1\u30e9\u30fc PART IV (PhonkWave)",
+            "size_mb": 1075.57
+          },
+          {
+            "id": "MH63H0J8B0PNS",
+            "name": "N i g h t D r i v e \u30b9\u30b1\u30e9\u30fc PART II (PhonkWave)",
+            "size_mb": 602.5
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.76,
+        "best_item_id": "MH61P074JG0MI",
+        "best_item_name": "Daily Bread - Flash Flood II Mixtape - 04 Push It To The Limit ft. Artifakts",
+        "duplicates": [
+          {
+            "id": "MH61P072CIRHJ",
+            "name": "Daily Bread - Flash Flood II Mixtape - 18 Be Steadfast",
+            "size_mb": 51.85
+          },
+          {
+            "id": "MH61P072E343D",
+            "name": "Daily Bread - Flash Flood II Mixtape - 17 Whooping A$$",
+            "size_mb": 19.49
+          },
+          {
+            "id": "MH61P0722O50M",
+            "name": "Daily Bread - Flash Flood II Mixtape - 16 Shadow From The Past",
+            "size_mb": 30.87
+          },
+          {
+            "id": "MH61P0723SIHZ",
+            "name": "Daily Bread - Flash Flood II Mixtape - 12 The Rain Song",
+            "size_mb": 68.13
+          },
+          {
+            "id": "MH61P072F4PCU",
+            "name": "Daily Bread - Flash Flood II Mixtape - 11 Catch The Beat",
+            "size_mb": 52.91
+          },
+          {
+            "id": "MH61P072DEAHJ",
+            "name": "Daily Bread - Flash Flood II Mixtape - 10 Middle Of The Street",
+            "size_mb": 51.73
+          },
+          {
+            "id": "MH61P072GFU16",
+            "name": "Daily Bread - Flash Flood II Mixtape - 09 Rat Race",
+            "size_mb": 57.2
+          },
+          {
+            "id": "MH61P072NLUZN",
+            "name": "Daily Bread - Flash Flood II Mixtape - 02 In The Beginning",
+            "size_mb": 65.58
+          },
+          {
+            "id": "MH61P0720TMW4",
+            "name": "Daily Bread - Flash Flood II Mixtape - 01 Hands Up (Intro)",
+            "size_mb": 50.91
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.79,
+        "best_item_id": "MH61P073HE8AV",
+        "best_item_name": "GRiZ - Chasing The Golden Hour, Pt. 3 - 09 Where Will I Go",
+        "duplicates": [
+          {
+            "id": "MH61P073IETJW",
+            "name": "GRiZ - Chasing The Golden Hour, Pt. 3 - 08 Floating",
+            "size_mb": 51.81
+          },
+          {
+            "id": "MH61P073L21OJ",
+            "name": "GRiZ - Chasing The Golden Hour, Pt. 3 - 07 Sweet",
+            "size_mb": 59.85
+          },
+          {
+            "id": "MH61P0735WGI7",
+            "name": "GRiZ - Chasing The Golden Hour, Pt. 3 - 06 Koh Samui",
+            "size_mb": 42.13
+          },
+          {
+            "id": "MH61P073WA0KF",
+            "name": "GRiZ - Chasing The Golden Hour, Pt. 3 - 05 Nights in Shibuya",
+            "size_mb": 50.57
+          },
+          {
+            "id": "MH61P073ZM4E6",
+            "name": "GRiZ - Chasing The Golden Hour, Pt. 3 - 04 Solo (feat. ProbCause)",
+            "size_mb": 52.69
+          },
+          {
+            "id": "MH61P07390G9N",
+            "name": "GRiZ - Chasing The Golden Hour, Pt. 3 - 03 Won't Be Gone Long",
+            "size_mb": 56.7
+          },
+          {
+            "id": "MH61P073XL2DH",
+            "name": "GRiZ - Chasing The Golden Hour, Pt. 3 - 02 Gettin High, Havin Fun",
+            "size_mb": 54.51
+          },
+          {
+            "id": "MH61P073BVHTS",
+            "name": "GRiZ - Chasing The Golden Hour, Pt. 3 - 01 Know Time Like The Present",
+            "size_mb": 39.37
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.78,
+        "best_item_id": "MH61P0744F987",
+        "best_item_name": "Alison Wonderland_Run (Sinden Remix)",
+        "duplicates": [
+          {
+            "id": "MH61P0744IMEG",
+            "name": "Alison Wonderland_Run (Jayceeoh & B-Sides Remix)",
+            "size_mb": 41.88
+          },
+          {
+            "id": "MH61P0747QHLW",
+            "name": "Alison Wonderland_One More Hit",
+            "size_mb": 37.41
+          },
+          {
+            "id": "MH61P074NJDX5",
+            "name": "Alison Wonderland_Ignore",
+            "size_mb": 42.95
+          },
+          {
+            "id": "MH61P074BH55J",
+            "name": "Alison Wonderland_I Want U",
+            "size_mb": 38.7
+          },
+          {
+            "id": "MH61P074UR9LQ",
+            "name": "Alison Wonderland_Games",
+            "size_mb": 39.54
+          },
+          {
+            "id": "MH61P0746USDW",
+            "name": "Alison Wonderland_Cold",
+            "size_mb": 38.8
+          },
+          {
+            "id": "MH61P073K7KG6",
+            "name": "Alison Wonderland_Thirst",
+            "size_mb": 30.11
+          },
+          {
+            "id": "MH61P073YBGG2",
+            "name": "Alison Wonderland_New Day",
+            "size_mb": 29.02
+          },
+          {
+            "id": "MH61P073BF4YC",
+            "name": "Alison Wonderland_Loner",
+            "size_mb": 34.3
+          },
+          {
+            "id": "MH61P073JLCIJ",
+            "name": "Alison Wonderland_Forever",
+            "size_mb": 35.67
+          },
+          {
+            "id": "MH61P0739N35O",
+            "name": "Alison Wonderland_Cocaine",
+            "size_mb": 27.46
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.81,
+        "best_item_id": "MH61P0733T6WW",
+        "best_item_name": "Daily Bread - Invisible Cinema - 13 Set To The Sky",
+        "duplicates": [
+          {
+            "id": "MH61P073CYN7I",
+            "name": "Daily Bread - Invisible Cinema - 12 Look Up At The Stars",
+            "size_mb": 48.58
+          },
+          {
+            "id": "MH61P073IQP4A",
+            "name": "Daily Bread - Invisible Cinema - 11 Empty Like Sky",
+            "size_mb": 81.74
+          },
+          {
+            "id": "MH61P0735A1O8",
+            "name": "Daily Bread - Invisible Cinema - 10 Snickerz",
+            "size_mb": 73.53
+          },
+          {
+            "id": "MH61P073LDB5A",
+            "name": "Daily Bread - Invisible Cinema - 05 Back To The Moon",
+            "size_mb": 61.73
+          },
+          {
+            "id": "MH61P073N7L35",
+            "name": "Daily Bread - Invisible Cinema - 04 Weary Days",
+            "size_mb": 67.19
+          },
+          {
+            "id": "MH61P073X9XOX",
+            "name": "Daily Bread - Invisible Cinema - 02 Street Treasure",
+            "size_mb": 46.05
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.8,
+        "best_item_id": "MH61P073UXMB5",
+        "best_item_name": "LIL FISH - Fusion (LP) - 08 Lil Fish - Ocean",
+        "duplicates": [
+          {
+            "id": "MH61P0731JJHC",
+            "name": "LIL FISH - Fusion (LP) - 07 LiL Fish & Ovalys (feat Stef) - Magic Cellar",
+            "size_mb": 83.93
+          },
+          {
+            "id": "MH61P07331I2X",
+            "name": "LIL FISH - Fusion (LP) - 05 LiL Fish & Arure (feat Stef) - Livyatan",
+            "size_mb": 93.38
+          },
+          {
+            "id": "MH61P073AZ0Y3",
+            "name": "LIL FISH - Fusion (LP) - 01 Lil Fish - White Cloud",
+            "size_mb": 60.48
+          },
+          {
+            "id": "MH61P072742FF",
+            "name": "LIL FISH - Fusion (LP) - 06 LiL Fish & LTRGK - Bomb Fall",
+            "size_mb": 58.14
+          },
+          {
+            "id": "MH61P072Z2YSM",
+            "name": "LIL FISH - Fusion (LP) - 04 Lil Fish & CloZinger - Ghina",
+            "size_mb": 59.27
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.89,
+        "best_item_id": "MH6EF44U4RGO4",
+        "best_item_name": "H a r d W a v e \u591c\u52e4",
+        "duplicates": [
+          {
+            "id": "MH63JCAWIUXM0",
+            "name": "H a r d W a v e \u591c\u52e4 Part II",
+            "size_mb": 346.14
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.78,
+        "best_item_id": "MH61P072P5I9M",
+        "best_item_name": "Daily Bread - Flash Flood II Mixtape - 24 Gone Tomorrow",
+        "duplicates": [
+          {
+            "id": "MH61P0727QX4S",
+            "name": "Daily Bread - Flash Flood II Mixtape - 23 X My Mind (Daily Bread Remix)",
+            "size_mb": 53.93
+          },
+          {
+            "id": "MH61P072MRPPL",
+            "name": "Daily Bread - Flash Flood II Mixtape - 22 You & Me ft. Derlee",
+            "size_mb": 59.24
+          },
+          {
+            "id": "MH61P072ZZYQ2",
+            "name": "Daily Bread - Flash Flood II Mixtape - 21 Up Above Chicago",
+            "size_mb": 20.8
+          },
+          {
+            "id": "MH61P072C6244",
+            "name": "Daily Bread - Flash Flood II Mixtape - 20 Weary Days Reprise",
+            "size_mb": 50.24
+          },
+          {
+            "id": "MH61P0721GFF2",
+            "name": "Daily Bread - Flash Flood II Mixtape - 19 Two Below Zero",
+            "size_mb": 50.53
+          },
+          {
+            "id": "MH61P072X4OST",
+            "name": "Daily Bread - Flash Flood II Mixtape - 14 Walk It Out (Daily Bread Remix)",
+            "size_mb": 44.66
+          },
+          {
+            "id": "MH61P072XFVQ9",
+            "name": "Daily Bread - Flash Flood II Mixtape - 08 Two Hundred On The Dash",
+            "size_mb": 54.51
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.79,
+        "best_item_id": "MH61P0738E43J",
+        "best_item_name": "Drum&BassArena_Break - Sesame Seeds",
+        "duplicates": [
+          {
+            "id": "MH61P073THQ5G",
+            "name": "Drum&BassArena_Break - Overstayed",
+            "size_mb": 54.61
+          },
+          {
+            "id": "MH61P073GRJA9",
+            "name": "Drum&BassArena_Break - Never Say Never",
+            "size_mb": 45.88
+          },
+          {
+            "id": "MH61P073YQ26H",
+            "name": "Drum&BassArena_Break - Gunpowder",
+            "size_mb": 62.85
+          },
+          {
+            "id": "MH61P0736RS9H",
+            "name": "Drum&BassArena_Break - Grass Is Greener",
+            "size_mb": 49.62
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.78,
+        "best_item_id": "MH61P073TH5I6",
+        "best_item_name": "Drum&BassArena_Total Science & Break - Big Time Winners",
+        "duplicates": [
+          {
+            "id": "MH61P0736KU7D",
+            "name": "Drum&BassArena_DLR & Total Science - Spluurge",
+            "size_mb": 63.83
+          },
+          {
+            "id": "MH61P073MPZV2",
+            "name": "Drum&BassArena_Break & Total Science - Blame You",
+            "size_mb": 62.25
+          },
+          {
+            "id": "MH61P073H1IF7",
+            "name": "Drum&BassArena_Break & Total Science - Aardvark",
+            "size_mb": 54.33
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.77,
+        "best_item_id": "MH61P0731IJTZ",
+        "best_item_name": "Josh Teed - The Journey East - 07 Josh Teed x just john - Alive",
+        "duplicates": [
+          {
+            "id": "MH61P0734WFFA",
+            "name": "Josh Teed - The Journey East - 06 Josh Teed x Lowcation - Circle Of Life",
+            "size_mb": 36.57
+          },
+          {
+            "id": "MH61P073472T8",
+            "name": "Josh Teed - The Journey East - 05 Josh Teed x Bastion - Steady Steppin",
+            "size_mb": 36.49
+          },
+          {
+            "id": "MH61P0737J9G1",
+            "name": "Josh Teed - The Journey East - 04 Josh Teed x Skysia - Introspection",
+            "size_mb": 40.78
+          },
+          {
+            "id": "MH61P073V2R7V",
+            "name": "Josh Teed - The Journey East - 03 Josh Teed x Daggz - Vibration feat. Delgira",
+            "size_mb": 21.7
+          },
+          {
+            "id": "MH61P073AM4R3",
+            "name": "Josh Teed - The Journey East - 01 Josh Teed x Lil Fish - Silk Road feat. Gnawbox",
+            "size_mb": 40.37
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.77,
+        "best_item_id": "MH61P073H6ST5",
+        "best_item_name": "Drum&BassArena_DLR & Break - Hit The Target",
+        "duplicates": [
+          {
+            "id": "MH61P073YI9FV",
+            "name": "Drum&BassArena_Break - Tubes",
+            "size_mb": 49.5
+          },
+          {
+            "id": "MH61P073TVUV2",
+            "name": "Drum&BassArena_Break - Tell Me",
+            "size_mb": 74.43
+          },
+          {
+            "id": "MH61P07315LV6",
+            "name": "Drum&BassArena_Break - Hip Punch",
+            "size_mb": 49.91
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.84,
+        "best_item_id": "MH61P074D0SQM",
+        "best_item_name": "Alison Wonderland_Take It To Reality (feat. SAFIA)",
+        "duplicates": [
+          {
+            "id": "MH61P074VB4N6",
+            "name": "Alison Wonderland_Take It To Reality (R I T U A L Remix) [feat. SAFIA]",
+            "size_mb": 38.23
+          },
+          {
+            "id": "MH61P074BNNBE",
+            "name": "Alison Wonderland_Take It To Reality (Justin Jay Remix) [feat. SAFIA]",
+            "size_mb": 74.8
+          },
+          {
+            "id": "MH61P0738XJP4",
+            "name": "Alison Wonderland_Safe Life",
+            "size_mb": 36.49
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.84,
+        "best_item_id": "MH61P07463OLT",
+        "best_item_name": "Alison Wonderland_U Don\u2019t Know (feat. Wayne Coyne)",
+        "duplicates": [
+          {
+            "id": "MH61P07453PYY",
+            "name": "Alison Wonderland_U Don't Know (Vincent Remix) [feat. Wayne Coyne]",
+            "size_mb": 39.88
+          },
+          {
+            "id": "MH61P074HCGV7",
+            "name": "Alison Wonderland_U Don't Know (Slander Remix) [feat. Wayne Coyne]",
+            "size_mb": 54.26
+          },
+          {
+            "id": "MH61P074NKA3O",
+            "name": "Alison Wonderland_Run",
+            "size_mb": 40.06
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.79,
+        "best_item_id": "MH5L43D16HWAM",
+        "best_item_name": "Through the Night",
+        "duplicates": [
+          {
+            "id": "MH5DBKVGPYX03",
+            "name": "Through the Storm",
+            "size_mb": 127.74
+          }
+        ]
+      },
+      {
+        "match_type": "ngram",
+        "similarity": 0.0,
+        "best_item_id": "MI9V7D0QQBQU7",
+        "best_item_name": "Wandering",
+        "duplicates": [
+          {
+            "id": "MH7E3NKORPP8Z",
+            "name": "Wandering Souls",
+            "size_mb": 29.89
+          },
+          {
+            "id": "MH5C4Z5YYY0TE",
+            "name": "Wander",
+            "size_mb": 84.71
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.84,
+        "best_item_id": "MH61P072RJLKD",
+        "best_item_name": "Daily Bread - Flash Flood II Mixtape - 13 Cell Therapy (Daily Bread Remix)",
+        "duplicates": [
+          {
+            "id": "MH61P072X4MX0",
+            "name": "Daily Bread - Flash Flood II Mixtape - 05 Million Dollar Baby (Daily Bread Remix)",
+            "size_mb": 48.06
+          },
+          {
+            "id": "MH61P072L1FOT",
+            "name": "Daily Bread - Flash Flood II Mixtape - 03 Daily Bread (Daily Bread Remix)",
+            "size_mb": 57.8
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.78,
+        "best_item_id": "MH61P073MALT2",
+        "best_item_name": "Ganja White Night, R.O - Unity - 02 Redemption",
+        "duplicates": [
+          {
+            "id": "MH61P073VZEY3",
+            "name": "Ganja White Night - Unity - 14 Rollo",
+            "size_mb": 46.68
+          },
+          {
+            "id": "MH61P073RZMRN",
+            "name": "Ganja White Night - Unity - 12 Raskal",
+            "size_mb": 53.54
+          }
+        ]
+      },
+      {
+        "match_type": "ngram",
+        "similarity": 0.0,
+        "best_item_id": "MH7M9RFM7PKCM",
+        "best_item_name": "Luna",
+        "duplicates": [
+          {
+            "id": "MH5D1FFX4T88N",
+            "name": "Lunae",
+            "size_mb": 96.68
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.78,
+        "best_item_id": "MH61P0732BQXA",
+        "best_item_name": "Josh Teed - Recurring Dreams - 08 Zones of Reality",
+        "duplicates": [
+          {
+            "id": "MH61P07392J6L",
+            "name": "Josh Teed - Recurring Dreams - 04 Memories of A Past Life",
+            "size_mb": 55.28
+          },
+          {
+            "id": "MH61P0737TLSD",
+            "name": "Josh Teed - Recurring Dreams - 03 Recurring Dreams",
+            "size_mb": 36.25
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.77,
+        "best_item_id": "MH61P073XI6GB",
+        "best_item_name": "GRiZ - Rainbow Brain - 23 The Echo Tree",
+        "duplicates": [
+          {
+            "id": "MH61P0736N98I",
+            "name": "GRiZ - Rainbow Brain - 07 Tie-Dye Sky",
+            "size_mb": 47.64
+          },
+          {
+            "id": "MH61P073B5DFF",
+            "name": "GRiZ - Rainbow Brain - 03 Vibe Check",
+            "size_mb": 42.8
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.78,
+        "best_item_id": "MH88UPRHQPUSK",
+        "best_item_name": "Billie Eilish - Ocean Eyes (HEYZ Flip)",
+        "duplicates": [
+          {
+            "id": "MH61P074XFR5X",
+            "name": "Billie Eilish - Ocean Eyes (Defunk Remix)",
+            "size_mb": 22.13
+          },
+          {
+            "id": "MH61P074OR4RD",
+            "name": "Billie Eilish - Ocean Eyes (Defunk Remix) MASTER",
+            "size_mb": 62.13
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.82,
+        "best_item_id": "MH61P072BUE55",
+        "best_item_name": "Liquid Stranger - Low [OFFICIAL VISUALIZER] (1)",
+        "duplicates": [
+          {
+            "id": "MH61P072XL0WQ",
+            "name": "Liquid Stranger, EVVAN -  Fire [OFFICIAL VISUALIZER] (1)",
+            "size_mb": 39.61
+          },
+          {
+            "id": "MH61P072786BW",
+            "name": "Liquid Stranger, Scrufizzer - Hard [OFFICIAL VISUALIZER] (1)",
+            "size_mb": 39.2
+          }
+        ]
+      },
+      {
+        "match_type": "ngram",
+        "similarity": 0.0,
+        "best_item_id": "MH6UAZE3B7XG1",
+        "best_item_name": "Easy Love",
+        "duplicates": [
+          {
+            "id": "MH5C6NAXMH7XC",
+            "name": "Easy To Love",
+            "size_mb": 76.84
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.78,
+        "best_item_id": "MH61P07419FR9",
+        "best_item_name": "Alison Wonderland_Games (Jimmy Edgar Remix)",
+        "duplicates": [
+          {
+            "id": "MH61P074RNUXR",
+            "name": "Alison Wonderland_Games (Hermitude Remix)",
+            "size_mb": 36.28
+          },
+          {
+            "id": "MH61P074JSQOL",
+            "name": "Alison Wonderland_Games (Dre Skull Remix) [feat. Konshens]",
+            "size_mb": 38.41
+          }
+        ]
+      },
+      {
+        "match_type": "ngram",
+        "similarity": 0.0,
+        "best_item_id": "MH648EZ0UVYTV",
+        "best_item_name": "Ocean",
+        "duplicates": [
+          {
+            "id": "MH5I9KYAVYD2W",
+            "name": "Oceans",
+            "size_mb": 71.43
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.75,
+        "best_item_id": "MH61P073K2ZNK",
+        "best_item_name": "Ganja White Night, SFY - Sprouted - 17 Don\u2019t Let Me Go",
+        "duplicates": [
+          {
+            "id": "MH61P073UP6S7",
+            "name": "Ganja White Night - Sprouted - 15 Orellium",
+            "size_mb": 70.31
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.86,
+        "best_item_id": "MH7GHF3D88OM2",
+        "best_item_name": "Native Son",
+        "duplicates": [
+          {
+            "id": "MH5JKGBH031DU",
+            "name": "Native Son Prequel",
+            "size_mb": 69.7
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.77,
+        "best_item_id": "MH61P07358RZC",
+        "best_item_name": "Ganja White Night, Truth - Sprouted - 11 Bassline Don",
+        "duplicates": [
+          {
+            "id": "MH61P073LIE5A",
+            "name": "Ganja White Night - Sprouted - 13 Ozma",
+            "size_mb": 69.47
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.78,
+        "best_item_id": "MH61P073ZZP35",
+        "best_item_name": "GRiZ - Rainbow Brain - 16 Infinite",
+        "duplicates": [
+          {
+            "id": "MH61P073JYOWY",
+            "name": "GRiZ - Rainbow Brain - 11 Harmony",
+            "size_mb": 67.83
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.76,
+        "best_item_id": "MH61P073O271A",
+        "best_item_name": "GRiZ - Rainbow Brain - 18 Feel It All (feat. Chrishira Perrier)",
+        "duplicates": [
+          {
+            "id": "MH61P073C3208",
+            "name": "GRiZ - Rainbow Brain - 09 Rainbow Brain (feat. ProbCause, Chrishira Perrier)",
+            "size_mb": 65.97
+          }
+        ]
+      },
+      {
+        "match_type": "ngram",
+        "similarity": 0.0,
+        "best_item_id": "MH8AWSRE3MK6A",
+        "best_item_name": "PREMIERE Mikal - Musical Rush (ft. Break)[OUT NOW ON METALHEADZ]",
+        "duplicates": [
+          {
+            "id": "MH61P0737SEF3",
+            "name": "Drum&BassArena_PREMIERE_ Mikal - Musical Rush (ft. Break)[OUT NOW ON METALHEADZ]",
+            "size_mb": 65.67
+          }
+        ]
+      },
+      {
+        "match_type": "ngram",
+        "similarity": 0.0,
+        "best_item_id": "MH88BTJ1DFBSD",
+        "best_item_name": "Future Cut - Horns (Gremlinz & Overlook 2015 Mix)",
+        "duplicates": [
+          {
+            "id": "MH61P073JCG3M",
+            "name": "Drum&BassArena_Future Cut - Horns (Gremlinz & Overlook 2015 Mix)",
+            "size_mb": 65.41
+          }
+        ]
+      },
+      {
+        "match_type": "ngram",
+        "similarity": 0.0,
+        "best_item_id": "MH76EDKDJ7T0T",
+        "best_item_name": "WITH U",
+        "duplicates": [
+          {
+            "id": "MH5NG2KZILBE5",
+            "name": "With Me",
+            "size_mb": 65.36
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.75,
+        "best_item_id": "MH61P073A2S6K",
+        "best_item_name": "Ganja White Night, Boogie T - Unity - 13 Clarity",
+        "duplicates": [
+          {
+            "id": "MH61P073V4AK5",
+            "name": "Ganja White Night, Boogie T - Sprouted - 05 Burnin",
+            "size_mb": 64.51
+          }
+        ]
+      },
+      {
+        "match_type": "ngram",
+        "similarity": 0.0,
+        "best_item_id": "MH5L6RBD4TW2T",
+        "best_item_name": "Pleasure Model",
+        "duplicates": [
+          {
+            "id": "MH5G3T3DFCEHZ",
+            "name": "PLEASURE",
+            "size_mb": 63.73
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.92,
+        "best_item_id": "MH84GLFMPUD1K",
+        "best_item_name": "Rushing Back [Feat. Vera Blue] (rSUN Remix)",
+        "duplicates": [
+          {
+            "id": "MH5ES5DQ56Y50",
+            "name": "Rushing Back (feat. Vera Blue)",
+            "size_mb": 63.64
+          }
+        ]
+      },
+      {
+        "match_type": "ngram",
+        "similarity": 0.0,
+        "best_item_id": "MH7ROQDOPYV0J",
+        "best_item_name": "Burn",
+        "duplicates": [
+          {
+            "id": "MH5OBM47X5ST0",
+            "name": "Burnin'",
+            "size_mb": 63.46
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.75,
+        "best_item_id": "MH61P07304UAZ",
+        "best_item_name": "Daily Bread - Invisible Cinema - 07 Neighbors (feat. Artifakts)",
+        "duplicates": [
+          {
+            "id": "MH61P0731M0GN",
+            "name": "Daily Bread - Invisible Cinema - 06 Moon Slips Away",
+            "size_mb": 62.56
+          }
+        ]
+      },
+      {
+        "match_type": "ngram",
+        "similarity": 0.0,
+        "best_item_id": "MH5KZ20ZHX68O",
+        "best_item_name": "Mage",
+        "duplicates": [
+          {
+            "id": "MH5CU3OQXHT9E",
+            "name": "Homage",
+            "size_mb": 61.28
+          }
+        ]
+      },
+      {
+        "match_type": "ngram",
+        "similarity": 0.0,
+        "best_item_id": "MH8ET10WMLBNG",
+        "best_item_name": "Break & Kyo - The Edge Of Time - (Workforce Remix)",
+        "duplicates": [
+          {
+            "id": "MH61P0730ZKR8",
+            "name": "Drum&BassArena_Break & Kyo - The Edge Of Time - (Workforce Remix)",
+            "size_mb": 58.83
+          }
+        ]
+      },
+      {
+        "match_type": "ngram",
+        "similarity": 0.0,
+        "best_item_id": "MH7YU8XV7IF9A",
+        "best_item_name": "The Little Things (feat. Angela McCluskey)",
+        "duplicates": [
+          {
+            "id": "MH6UVMNT2AX27",
+            "name": "In the Air (feat. Angela McCluskey)",
+            "size_mb": 58.74
+          }
+        ]
+      },
+      {
+        "match_type": "ngram",
+        "similarity": 0.0,
+        "best_item_id": "MH8D2NZEWRNCK",
+        "best_item_name": "Break - Better Be Sure",
+        "duplicates": [
+          {
+            "id": "MH61P07359FL4",
+            "name": "Drum&BassArena_Break - Better Be Sure",
+            "size_mb": 58.39
+          }
+        ]
+      },
+      {
+        "match_type": "ngram",
+        "similarity": 0.0,
+        "best_item_id": "MH88WURQR80JM",
+        "best_item_name": "Jubei & Tyrone - Stabs",
+        "duplicates": [
+          {
+            "id": "MH61P0736EUWU",
+            "name": "Drum&BassArena_Jubei & Tyrone - Stabs",
+            "size_mb": 57.13
+          }
+        ]
+      },
+      {
+        "match_type": "ngram",
+        "similarity": 0.0,
+        "best_item_id": "MH8EAHXKV2A97",
+        "best_item_name": "Break - Midnite Classic (ft. MC Fats & Cleveland Watkiss)",
+        "duplicates": [
+          {
+            "id": "MH61P07374CC4",
+            "name": "Drum&BassArena_Break - Midnite Classic (ft. MC Fats & Cleveland Watkiss)",
+            "size_mb": 56.87
+          }
+        ]
+      },
+      {
+        "match_type": "ngram",
+        "similarity": 0.0,
+        "best_item_id": "MH66ZLDKZ52TF",
+        "best_item_name": "Nightmare",
+        "duplicates": [
+          {
+            "id": "MH5MY6N7T61XU",
+            "name": "nightmares",
+            "size_mb": 56.86
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.82,
+        "best_item_id": "MH6TZS6AOLDUA",
+        "best_item_name": "Turn Up The Speakers",
+        "duplicates": [
+          {
+            "id": "MH5LY2ZOXJ0DX",
+            "name": "Turn Up the Bass",
+            "size_mb": 54.95
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.76,
+        "best_item_id": "MH61P073PHMET",
+        "best_item_name": "Drum&BassArena_Break, DLR & Randall - Song And Dance",
+        "duplicates": [
+          {
+            "id": "MH61P073ELLTQ",
+            "name": "Drum&BassArena_Break - Bury A Sound",
+            "size_mb": 54.92
+          }
+        ]
+      },
+      {
+        "match_type": "fuzzy",
+        "similarity": 0.89,
+        "best_item_id": "MH7JHSVT3C4PF",
+        "best_item_name": "When Am I Gonna Lose You",
+        "duplicates": [
+          {
+            "id": "MH5M0VJO8HY2Q",
+            "name": "When Am I Gonna Lose You - Medasin Remix",
+            "size_mb": 54.8
+          }
+        ]
+      },
+      {
+        "match_type": "ngram",
+        "similarity": 0.0,
+        "best_item_id": "MH8A9RCE0VREO",
+        "best_item_name": "Bladerunner - Don't Break It",
+        "duplicates": [
+          {
+            "id": "MH61P073BOHAP",
+            "name": "Drum&BassArena_Bladerunner - Don't Break It",
+            "size_mb": 54.47
+          }
+        ]
+      }
+    ],
+    "raw_content": "# Eagle Library Deduplication Report\n\n**Generated:** 2026-01-09T11:35:18.808198\n**Mode:** DRY RUN (no changes made)\n\n## Summary\n\n| Metric | Value |\n|--------|-------|\n| Total Items Scanned | 2,998 |\n| Duplicate Groups Found | 193 |\n| Total Duplicate Items | 716 |\n| Space Recoverable | 11798.55 MB |\n| Scan Duration | 15.8 seconds |\n\n## Match Type Breakdown\n\n- **Fuzzy**: 94 groups, 616 duplicates, 8144.77 MB\n- **Ngram**: 99 groups, 100 duplicates, 3653.79 MB\n\n## Duplicate Groups Detail\n\n### Group 1: N i g h t D r i v e \u30b9\u30b1\u30e9\u30fc (PhonkWave)\n\n- **Match Type:** fuzzy\n- **Similarity:** 90%\n- **Space Recoverable:** 1678.07 MB\n\n**Keep (Best Quality):**\n- ID: `MH6W8TRH35ZLM`\n- Name: N i g h t D r i v e \u30b9\u30b1\u30e9\u30fc (PhonkWave)\n- Size: 392.43 MB\n- Tags: M4A, SoundCloud, Processed, skeler., BPM129...\n\n**Duplicates to Remove:**\n- `MH6ED838WLNWI` - N i g h t D r i v e \u30b9\u30b1\u30e9\u30fc PART IV (PhonkWave) (1075.57 MB)\n- `MH63H0J8B0PNS` - N i g h t D r i v e \u30b9\u30b1\u30e9\u30fc PART II (PhonkWave) (602.50 MB)\n\n### Group 2: Daily Bread - Flash Flood II Mixtape - 04 Push It To The Limit ft. Artifakts\n\n- **Match Type:** fuzzy\n- **Similarity:** 76%\n- **Space Recoverable:** 448.69 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P074JG0MI`\n- Name: Daily Bread - Flash Flood II Mixtape - 04 Push It To The Limit ft. Artifakts\n- Size: 42.64 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P072CIRHJ` - Daily Bread - Flash Flood II Mixtape - 18 Be Steadfast (51.85 MB)\n- `MH61P072E343D` - Daily Bread - Flash Flood II Mixtape - 17 Whooping A$$ (19.49 MB)\n- `MH61P0722O50M` - Daily Bread - Flash Flood II Mixtape - 16 Shadow From The Past (30.87 MB)\n- `MH61P0723SIHZ` - Daily Bread - Flash Flood II Mixtape - 12 The Rain Song (68.13 MB)\n- `MH61P072F4PCU` - Daily Bread - Flash Flood II Mixtape - 11 Catch The Beat (52.91 MB)\n- `MH61P072DEAHJ` - Daily Bread - Flash Flood II Mixtape - 10 Middle Of The Street (51.73 MB)\n- `MH61P072GFU16` - Daily Bread - Flash Flood II Mixtape - 09 Rat Race (57.20 MB)\n- `MH61P072NLUZN` - Daily Bread - Flash Flood II Mixtape - 02 In The Beginning (65.58 MB)\n- `MH61P0720TMW4` - Daily Bread - Flash Flood II Mixtape - 01 Hands Up (Intro) (50.91 MB)\n\n### Group 3: GRiZ - Chasing The Golden Hour, Pt. 3 - 09 Where Will I Go\n\n- **Match Type:** fuzzy\n- **Similarity:** 79%\n- **Space Recoverable:** 407.62 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P073HE8AV`\n- Name: GRiZ - Chasing The Golden Hour, Pt. 3 - 09 Where Will I Go\n- Size: 49.62 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P073IETJW` - GRiZ - Chasing The Golden Hour, Pt. 3 - 08 Floating (51.81 MB)\n- `MH61P073L21OJ` - GRiZ - Chasing The Golden Hour, Pt. 3 - 07 Sweet (59.85 MB)\n- `MH61P0735WGI7` - GRiZ - Chasing The Golden Hour, Pt. 3 - 06 Koh Samui (42.13 MB)\n- `MH61P073WA0KF` - GRiZ - Chasing The Golden Hour, Pt. 3 - 05 Nights in Shibuya (50.57 MB)\n- `MH61P073ZM4E6` - GRiZ - Chasing The Golden Hour, Pt. 3 - 04 Solo (feat. ProbCause) (52.69 MB)\n- `MH61P07390G9N` - GRiZ - Chasing The Golden Hour, Pt. 3 - 03 Won't Be Gone Long (56.70 MB)\n- `MH61P073XL2DH` - GRiZ - Chasing The Golden Hour, Pt. 3 - 02 Gettin High, Havin Fun (54.51 MB)\n- `MH61P073BVHTS` - GRiZ - Chasing The Golden Hour, Pt. 3 - 01 Know Time Like The Present (39.37 MB)\n\n### Group 4: Alison Wonderland_Run (Sinden Remix)\n\n- **Match Type:** fuzzy\n- **Similarity:** 78%\n- **Space Recoverable:** 395.85 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P0744F987`\n- Name: Alison Wonderland_Run (Sinden Remix)\n- Size: 67.10 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P0744IMEG` - Alison Wonderland_Run (Jayceeoh & B-Sides Remix) (41.88 MB)\n- `MH61P0747QHLW` - Alison Wonderland_One More Hit (37.41 MB)\n- `MH61P074NJDX5` - Alison Wonderland_Ignore (42.95 MB)\n- `MH61P074BH55J` - Alison Wonderland_I Want U (38.70 MB)\n- `MH61P074UR9LQ` - Alison Wonderland_Games (39.54 MB)\n- `MH61P0746USDW` - Alison Wonderland_Cold (38.80 MB)\n- `MH61P073K7KG6` - Alison Wonderland_Thirst (30.11 MB)\n- `MH61P073YBGG2` - Alison Wonderland_New Day (29.02 MB)\n- `MH61P073BF4YC` - Alison Wonderland_Loner (34.30 MB)\n- `MH61P073JLCIJ` - Alison Wonderland_Forever (35.67 MB)\n- `MH61P0739N35O` - Alison Wonderland_Cocaine (27.46 MB)\n\n### Group 5: Daily Bread - Invisible Cinema - 13 Set To The Sky\n\n- **Match Type:** fuzzy\n- **Similarity:** 81%\n- **Space Recoverable:** 378.83 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P0733T6WW`\n- Name: Daily Bread - Invisible Cinema - 13 Set To The Sky\n- Size: 67.72 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P073CYN7I` - Daily Bread - Invisible Cinema - 12 Look Up At The Stars (48.58 MB)\n- `MH61P073IQP4A` - Daily Bread - Invisible Cinema - 11 Empty Like Sky (81.74 MB)\n- `MH61P0735A1O8` - Daily Bread - Invisible Cinema - 10 Snickerz (73.53 MB)\n- `MH61P073LDB5A` - Daily Bread - Invisible Cinema - 05 Back To The Moon (61.73 MB)\n- `MH61P073N7L35` - Daily Bread - Invisible Cinema - 04 Weary Days (67.19 MB)\n- `MH61P073X9XOX` - Daily Bread - Invisible Cinema - 02 Street Treasure (46.05 MB)\n\n### Group 6: LIL FISH - Fusion (LP) - 08 Lil Fish - Ocean\n\n- **Match Type:** fuzzy\n- **Similarity:** 80%\n- **Space Recoverable:** 355.20 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P073UXMB5`\n- Name: LIL FISH - Fusion (LP) - 08 Lil Fish - Ocean\n- Size: 39.03 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P0731JJHC` - LIL FISH - Fusion (LP) - 07 LiL Fish & Ovalys (feat Stef) - Magic Cellar (83.93 MB)\n- `MH61P07331I2X` - LIL FISH - Fusion (LP) - 05 LiL Fish & Arure (feat Stef) - Livyatan (93.38 MB)\n- `MH61P073AZ0Y3` - LIL FISH - Fusion (LP) - 01 Lil Fish - White Cloud (60.48 MB)\n- `MH61P072742FF` - LIL FISH - Fusion (LP) - 06 LiL Fish & LTRGK - Bomb Fall (58.14 MB)\n- `MH61P072Z2YSM` - LIL FISH - Fusion (LP) - 04 Lil Fish & CloZinger - Ghina (59.27 MB)\n\n### Group 7: H a r d W a v e \u591c\u52e4\n\n- **Match Type:** fuzzy\n- **Similarity:** 89%\n- **Space Recoverable:** 346.14 MB\n\n**Keep (Best Quality):**\n- ID: `MH6EF44U4RGO4`\n- Name: H a r d W a v e \u591c\u52e4\n- Size: 234.85 MB\n- Tags: G Minor, BPM108, Extended, Processed, M4A...\n\n**Duplicates to Remove:**\n- `MH63JCAWIUXM0` - H a r d W a v e \u591c\u52e4 Part II (346.14 MB)\n\n### Group 8: Daily Bread - Flash Flood II Mixtape - 24 Gone Tomorrow\n\n- **Match Type:** fuzzy\n- **Similarity:** 78%\n- **Space Recoverable:** 333.91 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P072P5I9M`\n- Name: Daily Bread - Flash Flood II Mixtape - 24 Gone Tomorrow\n- Size: 60.57 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P0727QX4S` - Daily Bread - Flash Flood II Mixtape - 23 X My Mind (Daily Bread Remix) (53.93 MB)\n- `MH61P072MRPPL` - Daily Bread - Flash Flood II Mixtape - 22 You & Me ft. Derlee (59.24 MB)\n- `MH61P072ZZYQ2` - Daily Bread - Flash Flood II Mixtape - 21 Up Above Chicago (20.80 MB)\n- `MH61P072C6244` - Daily Bread - Flash Flood II Mixtape - 20 Weary Days Reprise (50.24 MB)\n- `MH61P0721GFF2` - Daily Bread - Flash Flood II Mixtape - 19 Two Below Zero (50.53 MB)\n- `MH61P072X4OST` - Daily Bread - Flash Flood II Mixtape - 14 Walk It Out (Daily Bread Remix) (44.66 MB)\n- `MH61P072XFVQ9` - Daily Bread - Flash Flood II Mixtape - 08 Two Hundred On The Dash (54.51 MB)\n\n### Group 9: Drum&BassArena_Break - Sesame Seeds\n\n- **Match Type:** fuzzy\n- **Similarity:** 79%\n- **Space Recoverable:** 212.96 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P0738E43J`\n- Name: Drum&BassArena_Break - Sesame Seeds\n- Size: 58.45 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P073THQ5G` - Drum&BassArena_Break - Overstayed (54.61 MB)\n- `MH61P073GRJA9` - Drum&BassArena_Break - Never Say Never (45.88 MB)\n- `MH61P073YQ26H` - Drum&BassArena_Break - Gunpowder (62.85 MB)\n- `MH61P0736RS9H` - Drum&BassArena_Break - Grass Is Greener (49.62 MB)\n\n### Group 10: Drum&BassArena_Total Science & Break - Big Time Winners\n\n- **Match Type:** fuzzy\n- **Similarity:** 78%\n- **Space Recoverable:** 180.40 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P073TH5I6`\n- Name: Drum&BassArena_Total Science & Break - Big Time Winners\n- Size: 62.40 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P0736KU7D` - Drum&BassArena_DLR & Total Science - Spluurge (63.83 MB)\n- `MH61P073MPZV2` - Drum&BassArena_Break & Total Science - Blame You (62.25 MB)\n- `MH61P073H1IF7` - Drum&BassArena_Break & Total Science - Aardvark (54.33 MB)\n\n### Group 11: Josh Teed - The Journey East - 07 Josh Teed x just john - Alive\n\n- **Match Type:** fuzzy\n- **Similarity:** 77%\n- **Space Recoverable:** 175.92 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P0731IJTZ`\n- Name: Josh Teed - The Journey East - 07 Josh Teed x just john - Alive\n- Size: 29.73 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P0734WFFA` - Josh Teed - The Journey East - 06 Josh Teed x Lowcation - Circle Of Life (36.57 MB)\n- `MH61P073472T8` - Josh Teed - The Journey East - 05 Josh Teed x Bastion - Steady Steppin (36.49 MB)\n- `MH61P0737J9G1` - Josh Teed - The Journey East - 04 Josh Teed x Skysia - Introspection (40.78 MB)\n- `MH61P073V2R7V` - Josh Teed - The Journey East - 03 Josh Teed x Daggz - Vibration feat. Delgira (21.70 MB)\n- `MH61P073AM4R3` - Josh Teed - The Journey East - 01 Josh Teed x Lil Fish - Silk Road feat. Gnawbox (40.37 MB)\n\n### Group 12: Drum&BassArena_DLR & Break - Hit The Target\n\n- **Match Type:** fuzzy\n- **Similarity:** 77%\n- **Space Recoverable:** 173.85 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P073H6ST5`\n- Name: Drum&BassArena_DLR & Break - Hit The Target\n- Size: 61.32 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P073YI9FV` - Drum&BassArena_Break - Tubes (49.50 MB)\n- `MH61P073TVUV2` - Drum&BassArena_Break - Tell Me (74.43 MB)\n- `MH61P07315LV6` - Drum&BassArena_Break - Hip Punch (49.91 MB)\n\n### Group 13: Alison Wonderland_Take It To Reality (feat. SAFIA)\n\n- **Match Type:** fuzzy\n- **Similarity:** 84%\n- **Space Recoverable:** 149.52 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P074D0SQM`\n- Name: Alison Wonderland_Take It To Reality (feat. SAFIA)\n- Size: 42.54 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P074VB4N6` - Alison Wonderland_Take It To Reality (R I T U A L Remix) [feat. SAFIA] (38.23 MB)\n- `MH61P074BNNBE` - Alison Wonderland_Take It To Reality (Justin Jay Remix) [feat. SAFIA] (74.80 MB)\n- `MH61P0738XJP4` - Alison Wonderland_Safe Life (36.49 MB)\n\n### Group 14: Alison Wonderland_U Don\u2019t Know (feat. Wayne Coyne)\n\n- **Match Type:** fuzzy\n- **Similarity:** 84%\n- **Space Recoverable:** 134.20 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P07463OLT`\n- Name: Alison Wonderland_U Don\u2019t Know (feat. Wayne Coyne)\n- Size: 44.61 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P07453PYY` - Alison Wonderland_U Don't Know (Vincent Remix) [feat. Wayne Coyne] (39.88 MB)\n- `MH61P074HCGV7` - Alison Wonderland_U Don't Know (Slander Remix) [feat. Wayne Coyne] (54.26 MB)\n- `MH61P074NKA3O` - Alison Wonderland_Run (40.06 MB)\n\n### Group 15: Through the Night\n\n- **Match Type:** fuzzy\n- **Similarity:** 79%\n- **Space Recoverable:** 127.74 MB\n\n**Keep (Best Quality):**\n- ID: `MH5L43D16HWAM`\n- Name: Through the Night\n- Size: 54.24 MB\n- Tags: Processed, A# Minor, SoundCloud, Toy Box, HighQuality...\n\n**Duplicates to Remove:**\n- `MH5DBKVGPYX03` - Through the Storm (127.74 MB)\n\n### Group 16: Wandering\n\n- **Match Type:** ngram\n- **Similarity:** 0%\n- **Space Recoverable:** 114.60 MB\n\n**Keep (Best Quality):**\n- ID: `MI9V7D0QQBQU7`\n- Name: Wandering\n- Size: 17.37 MB\n- Tags: HighQuality, BPM140, Seth David, SoundCloud, F# Minor...\n\n**Duplicates to Remove:**\n- `MH7E3NKORPP8Z` - Wandering Souls (29.89 MB)\n- `MH5C4Z5YYY0TE` - Wander (84.71 MB)\n\n### Group 17: Daily Bread - Flash Flood II Mixtape - 13 Cell Therapy (Daily Bread Remix)\n\n- **Match Type:** fuzzy\n- **Similarity:** 84%\n- **Space Recoverable:** 105.86 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P072RJLKD`\n- Name: Daily Bread - Flash Flood II Mixtape - 13 Cell Therapy (Daily Bread Remix)\n- Size: 43.74 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P072X4MX0` - Daily Bread - Flash Flood II Mixtape - 05 Million Dollar Baby (Daily Bread Remix) (48.06 MB)\n- `MH61P072L1FOT` - Daily Bread - Flash Flood II Mixtape - 03 Daily Bread (Daily Bread Remix) (57.80 MB)\n\n### Group 18: Ganja White Night, R.O - Unity - 02 Redemption\n\n- **Match Type:** fuzzy\n- **Similarity:** 78%\n- **Space Recoverable:** 100.23 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P073MALT2`\n- Name: Ganja White Night, R.O - Unity - 02 Redemption\n- Size: 59.93 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P073VZEY3` - Ganja White Night - Unity - 14 Rollo (46.68 MB)\n- `MH61P073RZMRN` - Ganja White Night - Unity - 12 Raskal (53.54 MB)\n\n### Group 19: Luna\n\n- **Match Type:** ngram\n- **Similarity:** 0%\n- **Space Recoverable:** 96.68 MB\n\n**Keep (Best Quality):**\n- ID: `MH7M9RFM7PKCM`\n- Name: Luna\n- Size: 24.69 MB\n- Tags: HighQuality, D Major, SoundCloud, BPM157, Processed...\n\n**Duplicates to Remove:**\n- `MH5D1FFX4T88N` - Lunae (96.68 MB)\n\n### Group 20: Josh Teed - Recurring Dreams - 08 Zones of Reality\n\n- **Match Type:** fuzzy\n- **Similarity:** 78%\n- **Space Recoverable:** 91.53 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P0732BQXA`\n- Name: Josh Teed - Recurring Dreams - 08 Zones of Reality\n- Size: 46.57 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P07392J6L` - Josh Teed - Recurring Dreams - 04 Memories of A Past Life (55.28 MB)\n- `MH61P0737TLSD` - Josh Teed - Recurring Dreams - 03 Recurring Dreams (36.25 MB)\n\n### Group 21: GRiZ - Rainbow Brain - 23 The Echo Tree\n\n- **Match Type:** fuzzy\n- **Similarity:** 77%\n- **Space Recoverable:** 90.44 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P073XI6GB`\n- Name: GRiZ - Rainbow Brain - 23 The Echo Tree\n- Size: 26.82 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P0736N98I` - GRiZ - Rainbow Brain - 07 Tie-Dye Sky (47.64 MB)\n- `MH61P073B5DFF` - GRiZ - Rainbow Brain - 03 Vibe Check (42.80 MB)\n\n### Group 22: Billie Eilish - Ocean Eyes (HEYZ Flip)\n\n- **Match Type:** fuzzy\n- **Similarity:** 78%\n- **Space Recoverable:** 84.26 MB\n\n**Keep (Best Quality):**\n- ID: `MH88UPRHQPUSK`\n- Name: Billie Eilish - Ocean Eyes (HEYZ Flip)\n- Size: 28.73 MB\n- Tags: M4A, Processed, BPM148, A Major, HighQuality...\n\n**Duplicates to Remove:**\n- `MH61P074XFR5X` - Billie Eilish - Ocean Eyes (Defunk Remix) (22.13 MB)\n- `MH61P074OR4RD` - Billie Eilish - Ocean Eyes (Defunk Remix) MASTER (62.13 MB)\n\n### Group 23: Liquid Stranger - Low [OFFICIAL VISUALIZER] (1)\n\n- **Match Type:** fuzzy\n- **Similarity:** 82%\n- **Space Recoverable:** 78.81 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P072BUE55`\n- Name: Liquid Stranger - Low [OFFICIAL VISUALIZER] (1)\n- Size: 54.30 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P072XL0WQ` - Liquid Stranger, EVVAN -  Fire [OFFICIAL VISUALIZER] (1) (39.61 MB)\n- `MH61P072786BW` - Liquid Stranger, Scrufizzer - Hard [OFFICIAL VISUALIZER] (1) (39.20 MB)\n\n### Group 24: Easy Love\n\n- **Match Type:** ngram\n- **Similarity:** 0%\n- **Space Recoverable:** 76.84 MB\n\n**Keep (Best Quality):**\n- ID: `MH6UAZE3B7XG1`\n- Name: Easy Love\n- Size: 10.96 MB\n- Tags: Processed, BPM123, 4 Progressive, M4A, Sigala...\n\n**Duplicates to Remove:**\n- `MH5C6NAXMH7XC` - Easy To Love (76.84 MB)\n\n### Group 25: Alison Wonderland_Games (Jimmy Edgar Remix)\n\n- **Match Type:** fuzzy\n- **Similarity:** 78%\n- **Space Recoverable:** 74.69 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P07419FR9`\n- Name: Alison Wonderland_Games (Jimmy Edgar Remix)\n- Size: 53.77 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P074RNUXR` - Alison Wonderland_Games (Hermitude Remix) (36.28 MB)\n- `MH61P074JSQOL` - Alison Wonderland_Games (Dre Skull Remix) [feat. Konshens] (38.41 MB)\n\n### Group 26: Ocean\n\n- **Match Type:** ngram\n- **Similarity:** 0%\n- **Space Recoverable:** 71.43 MB\n\n**Keep (Best Quality):**\n- ID: `MH648EZ0UVYTV`\n- Name: Ocean\n- Size: 16.04 MB\n- Tags: BPM152, Mindex, Qoi, Great Music, Next Up, C Major...\n\n**Duplicates to Remove:**\n- `MH5I9KYAVYD2W` - Oceans (71.43 MB)\n\n### Group 27: Ganja White Night, SFY - Sprouted - 17 Don\u2019t Let Me Go\n\n- **Match Type:** fuzzy\n- **Similarity:** 75%\n- **Space Recoverable:** 70.31 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P073K2ZNK`\n- Name: Ganja White Night, SFY - Sprouted - 17 Don\u2019t Let Me Go\n- Size: 59.79 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P073UP6S7` - Ganja White Night - Sprouted - 15 Orellium (70.31 MB)\n\n### Group 28: Native Son\n\n- **Match Type:** fuzzy\n- **Similarity:** 86%\n- **Space Recoverable:** 69.70 MB\n\n**Keep (Best Quality):**\n- ID: `MH7GHF3D88OM2`\n- Name: Native Son\n- Size: 27.41 MB\n- Tags: HighQuality, BPM112, SoundCloud, Gramatik;Raekwon;Leo Napier, electro swing...\n\n**Duplicates to Remove:**\n- `MH5JKGBH031DU` - Native Son Prequel (69.70 MB)\n\n### Group 29: Ganja White Night, Truth - Sprouted - 11 Bassline Don\n\n- **Match Type:** fuzzy\n- **Similarity:** 77%\n- **Space Recoverable:** 69.47 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P07358RZC`\n- Name: Ganja White Night, Truth - Sprouted - 11 Bassline Don\n- Size: 57.62 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P073LIE5A` - Ganja White Night - Sprouted - 13 Ozma (69.47 MB)\n\n### Group 30: GRiZ - Rainbow Brain - 16 Infinite\n\n- **Match Type:** fuzzy\n- **Similarity:** 78%\n- **Space Recoverable:** 67.83 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P073ZZP35`\n- Name: GRiZ - Rainbow Brain - 16 Infinite\n- Size: 54.91 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P073JYOWY` - GRiZ - Rainbow Brain - 11 Harmony (67.83 MB)\n\n### Group 31: GRiZ - Rainbow Brain - 18 Feel It All (feat. Chrishira Perrier)\n\n- **Match Type:** fuzzy\n- **Similarity:** 76%\n- **Space Recoverable:** 65.97 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P073O271A`\n- Name: GRiZ - Rainbow Brain - 18 Feel It All (feat. Chrishira Perrier)\n- Size: 68.64 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P073C3208` - GRiZ - Rainbow Brain - 09 Rainbow Brain (feat. ProbCause, Chrishira Perrier) (65.97 MB)\n\n### Group 32: PREMIERE Mikal - Musical Rush (ft. Break)[OUT NOW ON METALHEADZ]\n\n- **Match Type:** ngram\n- **Similarity:** 0%\n- **Space Recoverable:** 65.67 MB\n\n**Keep (Best Quality):**\n- ID: `MH8AWSRE3MK6A`\n- Name: PREMIERE Mikal - Musical Rush (ft. Break)[OUT NOW ON METALHEADZ]\n- Size: 44.03 MB\n- Tags: M4A, BPM115, E Minor, Processed, Drum&BassArena...\n\n**Duplicates to Remove:**\n- `MH61P0737SEF3` - Drum&BassArena_PREMIERE_ Mikal - Musical Rush (ft. Break)[OUT NOW ON METALHEADZ] (65.67 MB)\n\n### Group 33: Future Cut - Horns (Gremlinz & Overlook 2015 Mix)\n\n- **Match Type:** ngram\n- **Similarity:** 0%\n- **Space Recoverable:** 65.41 MB\n\n**Keep (Best Quality):**\n- ID: `MH88BTJ1DFBSD`\n- Name: Future Cut - Horns (Gremlinz & Overlook 2015 Mix)\n- Size: 41.32 MB\n- Tags: BPM115, M4A, Processed, Drum&BassArena, Extended...\n\n**Duplicates to Remove:**\n- `MH61P073JCG3M` - Drum&BassArena_Future Cut - Horns (Gremlinz & Overlook 2015 Mix) (65.41 MB)\n\n### Group 34: WITH U\n\n- **Match Type:** ngram\n- **Similarity:** 0%\n- **Space Recoverable:** 65.36 MB\n\n**Keep (Best Quality):**\n- ID: `MH76EDKDJ7T0T`\n- Name: WITH U\n- Size: 23.51 MB\n- Tags: Next Up, Processed, M4A, Next_Up, UK Garage...\n\n**Duplicates to Remove:**\n- `MH5NG2KZILBE5` - With Me (65.36 MB)\n\n### Group 35: Ganja White Night, Boogie T - Unity - 13 Clarity\n\n- **Match Type:** fuzzy\n- **Similarity:** 75%\n- **Space Recoverable:** 64.51 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P073A2S6K`\n- Name: Ganja White Night, Boogie T - Unity - 13 Clarity\n- Size: 46.34 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P073V4AK5` - Ganja White Night, Boogie T - Sprouted - 05 Burnin (64.51 MB)\n\n### Group 36: Pleasure Model\n\n- **Match Type:** ngram\n- **Similarity:** 0%\n- **Space Recoverable:** 63.73 MB\n\n**Keep (Best Quality):**\n- ID: `MH5L6RBD4TW2T`\n- Name: Pleasure Model\n- Size: 68.84 MB\n- Tags: E Minor, Noisia, Former, Processed, Great Music, BPM131...\n\n**Duplicates to Remove:**\n- `MH5G3T3DFCEHZ` - PLEASURE (63.73 MB)\n\n### Group 37: Rushing Back [Feat. Vera Blue] (rSUN Remix)\n\n- **Match Type:** fuzzy\n- **Similarity:** 92%\n- **Space Recoverable:** 63.64 MB\n\n**Keep (Best Quality):**\n- ID: `MH84GLFMPUD1K`\n- Name: Rushing Back [Feat. Vera Blue] (rSUN Remix)\n- Size: 27.28 MB\n- Tags: Processed, Good_Music, Snavs, Future Bass, HighQuality...\n\n**Duplicates to Remove:**\n- `MH5ES5DQ56Y50` - Rushing Back (feat. Vera Blue) (63.64 MB)\n\n### Group 38: Burn\n\n- **Match Type:** ngram\n- **Similarity:** 0%\n- **Space Recoverable:** 63.46 MB\n\n**Keep (Best Quality):**\n- ID: `MH7ROQDOPYV0J`\n- Name: Burn\n- Size: 16.94 MB\n- Tags: HighQuality, Processed, SoundCloud\n\n**Duplicates to Remove:**\n- `MH5OBM47X5ST0` - Burnin' (63.46 MB)\n\n### Group 39: Daily Bread - Invisible Cinema - 07 Neighbors (feat. Artifakts)\n\n- **Match Type:** fuzzy\n- **Similarity:** 75%\n- **Space Recoverable:** 62.56 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P07304UAZ`\n- Name: Daily Bread - Invisible Cinema - 07 Neighbors (feat. Artifakts)\n- Size: 51.29 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P0731M0GN` - Daily Bread - Invisible Cinema - 06 Moon Slips Away (62.56 MB)\n\n### Group 40: Mage\n\n- **Match Type:** ngram\n- **Similarity:** 0%\n- **Space Recoverable:** 61.28 MB\n\n**Keep (Best Quality):**\n- ID: `MH5KZ20ZHX68O`\n- Name: Mage\n- Size: 63.58 MB\n- Tags: Processed, Next Up, HighQuality, ATYYA, SoundCloud...\n\n**Duplicates to Remove:**\n- `MH5CU3OQXHT9E` - Homage (61.28 MB)\n\n### Group 41: Break & Kyo - The Edge Of Time - (Workforce Remix)\n\n- **Match Type:** ngram\n- **Similarity:** 0%\n- **Space Recoverable:** 58.83 MB\n\n**Keep (Best Quality):**\n- ID: `MH8ET10WMLBNG`\n- Name: Break & Kyo - The Edge Of Time - (Workforce Remix)\n- Size: 35.25 MB\n- Tags: Processed, Life is Beautiful, Jungle, HighQuality, SoundCloud\n\n**Duplicates to Remove:**\n- `MH61P0730ZKR8` - Drum&BassArena_Break & Kyo - The Edge Of Time - (Workforce Remix) (58.83 MB)\n\n### Group 42: The Little Things (feat. Angela McCluskey)\n\n- **Match Type:** ngram\n- **Similarity:** 0%\n- **Space Recoverable:** 58.74 MB\n\n**Keep (Best Quality):**\n- ID: `MH7YU8XV7IF9A`\n- Name: The Little Things (feat. Angela McCluskey)\n- Size: 34.87 MB\n- Tags: Funked Ass Up, Good Music, Party 2, Big Gigantic, Angela McCluskey, HighQuality...\n\n**Duplicates to Remove:**\n- `MH6UVMNT2AX27` - In the Air (feat. Angela McCluskey) (58.74 MB)\n\n### Group 43: Break - Better Be Sure\n\n- **Match Type:** ngram\n- **Similarity:** 0%\n- **Space Recoverable:** 58.39 MB\n\n**Keep (Best Quality):**\n- ID: `MH8D2NZEWRNCK`\n- Name: Break - Better Be Sure\n- Size: 41.98 MB\n- Tags: HighQuality, Processed, BPM173.53, Drum & Bass, Break...\n\n**Duplicates to Remove:**\n- `MH61P07359FL4` - Drum&BassArena_Break - Better Be Sure (58.39 MB)\n\n### Group 44: Jubei & Tyrone - Stabs\n\n- **Match Type:** ngram\n- **Similarity:** 0%\n- **Space Recoverable:** 57.13 MB\n\n**Keep (Best Quality):**\n- ID: `MH88WURQR80JM`\n- Name: Jubei & Tyrone - Stabs\n- Size: 37.01 MB\n- Tags: Kanine, Processed, Drum & Bass, HighQuality, SoundCloud\n\n**Duplicates to Remove:**\n- `MH61P0736EUWU` - Drum&BassArena_Jubei & Tyrone - Stabs (57.13 MB)\n\n### Group 45: Break - Midnite Classic (ft. MC Fats & Cleveland Watkiss)\n\n- **Match Type:** ngram\n- **Similarity:** 0%\n- **Space Recoverable:** 56.87 MB\n\n**Keep (Best Quality):**\n- ID: `MH8EAHXKV2A97`\n- Name: Break - Midnite Classic (ft. MC Fats & Cleveland Watkiss)\n- Size: 36.42 MB\n- Tags: M4A, Processed, Drum&BassArena, G Minor, Extended...\n\n**Duplicates to Remove:**\n- `MH61P07374CC4` - Drum&BassArena_Break - Midnite Classic (ft. MC Fats & Cleveland Watkiss) (56.87 MB)\n\n### Group 46: Nightmare\n\n- **Match Type:** ngram\n- **Similarity:** 0%\n- **Space Recoverable:** 56.86 MB\n\n**Keep (Best Quality):**\n- ID: `MH66ZLDKZ52TF`\n- Name: Nightmare\n- Size: 26.11 MB\n- Tags: BPM144, Halsey, Good Music, C Major, Processed...\n\n**Duplicates to Remove:**\n- `MH5MY6N7T61XU` - nightmares (56.86 MB)\n\n### Group 47: Turn Up The Speakers\n\n- **Match Type:** fuzzy\n- **Similarity:** 82%\n- **Space Recoverable:** 54.95 MB\n\n**Keep (Best Quality):**\n- ID: `MH6TZS6AOLDUA`\n- Name: Turn Up The Speakers\n- Size: 38.78 MB\n- Tags: F Minor, Processed, 4 Progressive, M4A, Extended...\n\n**Duplicates to Remove:**\n- `MH5LY2ZOXJ0DX` - Turn Up the Bass (54.95 MB)\n\n### Group 48: Drum&BassArena_Break, DLR & Randall - Song And Dance\n\n- **Match Type:** fuzzy\n- **Similarity:** 76%\n- **Space Recoverable:** 54.92 MB\n\n**Keep (Best Quality):**\n- ID: `MH61P073PHMET`\n- Name: Drum&BassArena_Break, DLR & Randall - Song And Dance\n- Size: 62.27 MB\n- Tags: \n\n**Duplicates to Remove:**\n- `MH61P073ELLTQ` - Drum&BassArena_Break - Bury A Sound (54.92 MB)\n\n### Group 49: When Am I Gonna Lose You\n\n- **Match Type:** fuzzy\n- **Similarity:** 89%\n- **Space Recoverable:** 54.80 MB\n\n**Keep (Best Quality):**\n- ID: `MH7JHSVT3C4PF`\n- Name: When Am I Gonna Lose You\n- Size: 32.85 MB\n- Tags: SoundCloud, HighQuality, STAR SEED, Processed\n\n**Duplicates to Remove:**\n- `MH5M0VJO8HY2Q` - When Am I Gonna Lose You - Medasin Remix (54.80 MB)\n\n### Group 50: Bladerunner - Don't Break It\n\n- **Match Type:** ngram\n- **Similarity:** 0%\n- **Space Recoverable:** 54.47 MB\n\n**Keep (Best Quality):**\n- ID: `MH8A9RCE0VREO`\n- Name: Bladerunner - Don't Break It\n- Size: 37.25 MB\n- Tags: M4A, Processed, A Major, Drum&BassArena, BPM117...\n\n**Duplicates to Remove:**\n- `MH61P073BOHAP` - Drum&BassArena_Bladerunner - Don't Break It (54.47 MB)\n\n*... and 143 more groups*\n\n---\n\n*Report generated by Eagle Library Deduplication System*"
+  },
+  "audit": {
+    "performance_metrics": {
+      "scan_duration_seconds": 17.543718,
+      "items_processed": 0,
+      "items_per_second": 0.0,
+      "efficiency": "Slow"
+    },
+    "detection_accuracy": {
+      "fingerprint_matches": 0,
+      "fuzzy_matches": 94,
+      "ngram_matches": 0,
+      "total_groups": 193,
+      "total_duplicates": 716
+    },
+    "quality_analysis": {
+      "average_similarity": 0.529,
+      "min_similarity": 0.0,
+      "max_similarity": 0.92,
+      "groups_analyzed": 50
+    },
+    "report_analysis": {
+      "report_generated": true,
+      "report_path": "/Users/brianhellemn/Projects/github-production/logs/deduplication/eagle_dedup_report_20260109_113518.md",
+      "groups_documented": 50,
+      "space_calculated": 11798.55
+    },
+    "system_compliance": {
+      "uses_documented_paths": true,
+      "compliance_verified": true,
+      "no_undocumented_directories": true
+    }
+  },
+  "gaps": {
+    "functional_gaps": [
+      "Fingerprint matching found no duplicates (may indicate missing fingerprints)"
+    ],
+    "performance_gaps": [
+      "Slow execution - less than 1 item per second"
+    ],
+    "accuracy_gaps": [
+      "38 groups with similarity < 80% (may be false positives)"
+    ],
+    "documentation_gaps": [],
+    "compliance_gaps": []
+  },
+  "documentation": {
+    "execution_results": {
+      "success": true,
+      "duration": 17.543718,
+      "exit_code": 0
+    },
+    "performance_analysis": {
+      "scan_duration_seconds": 17.543718,
+      "items_processed": 0,
+      "items_per_second": 0.0,
+      "efficiency": "Slow"
+    },
+    "gap_analysis": {
+      "functional_gaps": [
+        "Fingerprint matching found no duplicates (may indicate missing fingerprints)"
+      ],
+      "performance_gaps": [
+        "Slow execution - less than 1 item per second"
+      ],
+      "accuracy_gaps": [
+        "38 groups with similarity < 80% (may be false positives)"
+      ],
+      "documentation_gaps": [],
+      "compliance_gaps": []
+    },
+    "issues_encountered": [
+      "Fingerprint matching found no duplicates (may indicate missing fingerprints)",
+      "Slow execution - less than 1 item per second",
+      "38 groups with similarity < 80% (may be false positives)"
+    ],
+    "recommendations": [
+      "Consider running fingerprint sync to ensure all files have fingerprints",
+      "Performance is acceptable for current library size",
+      "Review low-similarity matches manually before cleanup"
+    ],
+    "compliance_status": "COMPLIANT"
+  }
+}

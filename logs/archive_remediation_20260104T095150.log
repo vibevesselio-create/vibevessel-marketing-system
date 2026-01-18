@@ -1,0 +1,424 @@
+2026-01-04T09:51:50.057679 - === DriveSheetsSync Archive Remediation (DRY RUN) ===
+2026-01-04T09:51:50.057799 - Timestamp: 20260104T095150
+2026-01-04T09:51:50.063433 - Loaded audit data from /Users/brianhellemn/Projects/github-production/DRIVESHEETSSYNC_AUDIT_DATA.json
+2026-01-04T09:51:50.063512 - Audit shows 103 databases with missing .archive folders
+2026-01-04T09:51:50.063560 - 
+--- Processing: Deduplication Test Database_220e7361-6c27-8105-991d-000bea434fea ---
+2026-01-04T09:51:50.063605 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Deduplication Test Database_220e7361-6c27-8105-991d-000bea434fea
+2026-01-04T09:51:50.064506 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.064545 - 
+--- Processing: Photo Library [Team Housing Solutions]_15be7361-6c27-81ca-a5db-000b41449453 ---
+2026-01-04T09:51:50.064582 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Photo Library [Team Housing Solutions]_15be7361-6c27-81ca-a5db-000b41449453
+2026-01-04T09:51:50.064840 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.064877 - 
+--- Processing: Duplicate Detection - Merge Logs_233e7361-6c27-8192-abb0-000b0cd80817 ---
+2026-01-04T09:51:50.064911 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Duplicate Detection - Merge Logs_233e7361-6c27-8192-abb0-000b0cd80817
+2026-01-04T09:51:50.064965 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.064999 - 
+--- Processing: Page Templates_21ee7361-6c27-80f0-aee5-000b2c75d045 ---
+2026-01-04T09:51:50.065032 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Page Templates_21ee7361-6c27-80f0-aee5-000b2c75d045
+2026-01-04T09:51:50.065316 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.065368 - 
+--- Processing: Shoot Session Types_698ed7a4-4843-4654-bca5-b29aa828a46d ---
+2026-01-04T09:51:50.065405 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Shoot Session Types_698ed7a4-4843-4654-bca5-b29aa828a46d
+2026-01-04T09:51:50.065560 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.065595 - 
+--- Processing: Website Pages — Ocean Frontiers_baf61674-4efe-448b-98d5-07e04a49c5dc ---
+2026-01-04T09:51:50.065633 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Website Pages — Ocean Frontiers_baf61674-4efe-448b-98d5-07e04a49c5dc
+2026-01-04T09:51:50.065887 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.065917 - 
+--- Processing: Tag_20fe7361-6c27-81c6-ae2c-000b222c62a6 ---
+2026-01-04T09:51:50.065943 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Tag_20fe7361-6c27-81c6-ae2c-000b222c62a6
+2026-01-04T09:51:50.066080 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.066108 - 
+--- Processing: Execution Logs_f23a5b27-bd5d-4a1e-a4e9-24466d4abd35 ---
+2026-01-04T09:51:50.066135 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Execution Logs_f23a5b27-bd5d-4a1e-a4e9-24466d4abd35
+2026-01-04T09:51:50.066269 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.066293 - 
+--- Processing: Cleanup State_220e7361-6c27-81cc-b2da-000b0725017e ---
+2026-01-04T09:51:50.066322 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Cleanup State_220e7361-6c27-81cc-b2da-000b0725017e
+2026-01-04T09:51:50.066676 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.066706 - 
+--- Processing: Quotes From __________ Interview_293e7361-6c27-812e-b238-000bcdc97962 ---
+2026-01-04T09:51:50.066734 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Quotes From __________ Interview_293e7361-6c27-812e-b238-000bcdc97962
+2026-01-04T09:51:50.067011 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.067037 - 
+--- Processing: Red-Sail-Sports-GC-Facebook-Posts-Data_294e7361-6c27-819f-ade1-000be115b9c1 ---
+2026-01-04T09:51:50.067067 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Red-Sail-Sports-GC-Facebook-Posts-Data_294e7361-6c27-819f-ade1-000be115b9c1
+2026-01-04T09:51:50.067220 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.067249 - 
+--- Processing: Audio_128e7361-6c27-811c-a598-000bb5262dfd ---
+2026-01-04T09:51:50.067282 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Audio_128e7361-6c27-811c-a598-000bb5262dfd
+2026-01-04T09:51:50.067335 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.067366 - 
+--- Processing: My Gmail Data_20ee7361-6c27-817f-a959-000b231ae359 ---
+2026-01-04T09:51:50.067399 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/My Gmail Data_20ee7361-6c27-817f-a959-000b231ae359
+2026-01-04T09:51:50.067547 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.067575 - 
+--- Processing: Music Artists_20ee7361-6c27-814f-9100-000bbd764d31 ---
+2026-01-04T09:51:50.067604 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Music Artists_20ee7361-6c27-814f-9100-000bbd764d31
+2026-01-04T09:51:50.067741 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.067766 - 
+--- Processing: PowerPanel_Pages_Only_1f3e7361-6c27-8108-940b-000b4af96559 ---
+2026-01-04T09:51:50.067801 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/PowerPanel_Pages_Only_1f3e7361-6c27-8108-940b-000b4af96559
+2026-01-04T09:51:50.068039 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.068064 - 
+--- Processing: ListView_Images_224e7361-6c27-8173-91ac-000b125e1972 ---
+2026-01-04T09:51:50.068094 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/ListView_Images_224e7361-6c27-8173-91ac-000b125e1972
+2026-01-04T09:51:50.068203 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.068229 - 
+--- Processing: Quotes From __________ Interview_288e7361-6c27-81b5-b166-000bd3c5a877 ---
+2026-01-04T09:51:50.068262 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Quotes From __________ Interview_288e7361-6c27-81b5-b166-000bd3c5a877
+2026-01-04T09:51:50.068313 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.068342 - 
+--- Processing: Inbox_23ae7361-6c27-802d-b284-000bc63daea1 ---
+2026-01-04T09:51:50.068371 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Inbox_23ae7361-6c27-802d-b284-000bc63daea1
+2026-01-04T09:51:50.068578 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.068603 - 
+--- Processing: Wiki (Seren)_170910fc-52f2-4860-90be-8e1f8b15b881 ---
+2026-01-04T09:51:50.068660 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Wiki (Seren)_170910fc-52f2-4860-90be-8e1f8b15b881
+2026-01-04T09:51:50.068711 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.068736 - 
+--- Processing: Client Files Database Template_196e7361-6c27-80ca-8c17-000b479ac897 ---
+2026-01-04T09:51:50.068763 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Client Files Database Template_196e7361-6c27-80ca-8c17-000b479ac897
+2026-01-04T09:51:50.068957 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.069016 - 
+--- Processing: Properties_20fe7361-6c27-81bc-923d-000b8f07a4d8 ---
+2026-01-04T09:51:50.069056 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Properties_20fe7361-6c27-81bc-923d-000b8f07a4d8
+2026-01-04T09:51:50.069199 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.069226 - 
+--- Processing: Preflight-Test_28de7361-6c27-8192-a8ef-000bc4090b22 ---
+2026-01-04T09:51:50.069253 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Preflight-Test_28de7361-6c27-8192-a8ef-000bc4090b22
+2026-01-04T09:51:50.069492 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.069519 - 
+--- Processing: Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e ---
+2026-01-04T09:51:50.069555 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e
+2026-01-04T09:51:50.069695 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.069720 - 
+--- Processing: Untitled_28fe7361-6c27-81f7-b270-000babd0b557 ---
+2026-01-04T09:51:50.069751 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Untitled_28fe7361-6c27-81f7-b270-000babd0b557
+2026-01-04T09:51:50.069892 -     SKIP: Folder does not exist (may have been deleted)
+2026-01-04T09:51:50.069922 - 
+--- Processing: image-data_278e7361-6c27-8124-8e44-000bcac5d971 ---
+2026-01-04T09:51:50.069954 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/image-data_278e7361-6c27-8124-8e44-000bcac5d971
+2026-01-04T09:51:50.070094 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.070125 - 
+--- Processing: Free Notion Widgets & Tools_1f8e7361-6c27-81ec-80aa-000b48422908 ---
+2026-01-04T09:51:50.070156 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Free Notion Widgets & Tools_1f8e7361-6c27-81ec-80aa-000b48422908
+2026-01-04T09:51:50.070420 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.070448 - 
+--- Processing: Technical Documentation_26ce7361-6c27-81ec-8dfd-000b8a7b1a81 ---
+2026-01-04T09:51:50.070478 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Technical Documentation_26ce7361-6c27-81ec-8dfd-000b8a7b1a81
+2026-01-04T09:51:50.070621 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.070645 - 
+--- Processing: Organizations+People_20fe7361-6c27-81c4-a617-000b5f3f683c ---
+2026-01-04T09:51:50.070674 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Organizations+People_20fe7361-6c27-81c4-a617-000b5f3f683c
+2026-01-04T09:51:50.070934 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.070963 - 
+--- Processing: Emails_20fe7361-6c27-8147-b31d-000b3e5d321c ---
+2026-01-04T09:51:50.070992 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Emails_20fe7361-6c27-8147-b31d-000b3e5d321c
+2026-01-04T09:51:50.071168 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.071200 - 
+--- Processing: Personal — Music Databases (Linked)_5ea1ef19-ff91-40a7-a6e3-1ebe5bd85687 ---
+2026-01-04T09:51:50.071235 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Personal — Music Databases (Linked)_5ea1ef19-ff91-40a7-a6e3-1ebe5bd85687
+2026-01-04T09:51:50.071294 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.071322 - 
+--- Processing: Preflight-Test_28be7361-6c27-817f-9b9f-000bc28df959 ---
+2026-01-04T09:51:50.071353 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Preflight-Test_28be7361-6c27-817f-9b9f-000bc28df959
+2026-01-04T09:51:50.071402 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.071429 - 
+--- Processing: Folders_28be7361-6c27-81fd-b33b-000b9aedae22 ---
+2026-01-04T09:51:50.071459 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Folders_28be7361-6c27-81fd-b33b-000b9aedae22
+2026-01-04T09:51:50.071512 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.071539 - 
+--- Processing: Keyboard Maestro Macros_285e7361-6c27-801d-ad33-000b7da77293 ---
+2026-01-04T09:51:50.071571 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Keyboard Maestro Macros_285e7361-6c27-801d-ad33-000b7da77293
+2026-01-04T09:51:50.071699 -     SKIP: Folder does not exist (may have been deleted)
+2026-01-04T09:51:50.071735 - 
+--- Processing: Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259 ---
+2026-01-04T09:51:50.071769 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259
+2026-01-04T09:51:50.071891 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.071920 - 
+--- Processing: Databases Template_184e7361-6c27-81fa-a7a8-000b15181392 ---
+2026-01-04T09:51:50.071949 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Databases Template_184e7361-6c27-81fa-a7a8-000b15181392
+2026-01-04T09:51:50.072068 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.072095 - 
+--- Processing: workspace-databases_26ce7361-6c27-81d5-8626-000b229d1aad ---
+2026-01-04T09:51:50.072125 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-databases_26ce7361-6c27-81d5-8626-000b229d1aad
+2026-01-04T09:51:50.072270 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.072301 - 
+--- Processing: CRM Lite (Example)_ce6d4903-d07c-4295-91cc-aa2a04b629ec ---
+2026-01-04T09:51:50.072330 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/CRM Lite (Example)_ce6d4903-d07c-4295-91cc-aa2a04b629ec
+2026-01-04T09:51:50.072484 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.072518 - 
+--- Processing: Roles_e1558e8b-3ed4-45ec-9cea-f9b776116cdd ---
+2026-01-04T09:51:50.072551 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Roles_e1558e8b-3ed4-45ec-9cea-f9b776116cdd
+2026-01-04T09:51:50.072647 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.072674 - 
+--- Processing: Merge Logs_816739ed-0a00-4fe2-92de-701e13cd3931 ---
+2026-01-04T09:51:50.072701 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Merge Logs_816739ed-0a00-4fe2-92de-701e13cd3931
+2026-01-04T09:51:50.072843 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.072871 - 
+--- Processing: Locations_28fe7361-6c27-81be-a767-000b91435865 ---
+2026-01-04T09:51:50.072903 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Locations_28fe7361-6c27-81be-a767-000b91435865
+2026-01-04T09:51:50.072946 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.072972 - 
+--- Processing: Interview Transcript Processor_1ece7361-6c27-8082-86e0-000b67b95eb4 ---
+2026-01-04T09:51:50.072997 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interview Transcript Processor_1ece7361-6c27-8082-86e0-000b67b95eb4
+2026-01-04T09:51:50.073214 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.073246 - 
+--- Processing: Hashtag group_128e7361-6c27-8177-981c-000b4738b617 ---
+2026-01-04T09:51:50.073277 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Hashtag group_128e7361-6c27-8177-981c-000b4738b617
+2026-01-04T09:51:50.073321 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.073362 - 
+--- Processing: Folders_28be7361-6c27-81a3-962c-000b674bbbf0 ---
+2026-01-04T09:51:50.073393 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Folders_28be7361-6c27-81a3-962c-000b674bbbf0
+2026-01-04T09:51:50.073534 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.073563 - 
+--- Processing: Chats_288e7361-6c27-8106-8d4b-000b7ec6575a ---
+2026-01-04T09:51:50.073595 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Chats_288e7361-6c27-8106-8d4b-000b7ec6575a
+2026-01-04T09:51:50.073746 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.073772 - 
+--- Processing: Red-Sail-Sports-Instagram-Posts_295e7361-6c27-8150-8a1a-000b027c582f ---
+2026-01-04T09:51:50.073799 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Red-Sail-Sports-Instagram-Posts_295e7361-6c27-8150-8a1a-000b027c582f
+2026-01-04T09:51:50.073938 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.073964 - 
+--- Processing: Quotes From __________ Interview_288e7361-6c27-810a-9031-000bae8131db ---
+2026-01-04T09:51:50.073992 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Quotes From __________ Interview_288e7361-6c27-810a-9031-000bae8131db
+2026-01-04T09:51:50.074128 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.074159 - 
+--- Processing: OKRs_196e7361-6c27-8117-bed0-000bd72acfec ---
+2026-01-04T09:51:50.074192 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/OKRs_196e7361-6c27-8117-bed0-000bd72acfec
+2026-01-04T09:51:50.074328 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.074385 - 
+--- Processing: Events_20fe7361-6c27-8173-b1b6-000be48b54d7 ---
+2026-01-04T09:51:50.074413 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Events_20fe7361-6c27-8173-b1b6-000be48b54d7
+2026-01-04T09:51:50.074711 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.074735 - 
+--- Processing: Technical Documentation_212e7361-6c27-81b4-aea8-000b782b370e ---
+2026-01-04T09:51:50.074760 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Technical Documentation_212e7361-6c27-81b4-aea8-000b782b370e
+2026-01-04T09:51:50.074812 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.074836 - 
+--- Processing: Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d ---
+2026-01-04T09:51:50.074864 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d
+2026-01-04T09:51:50.075102 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.075129 - 
+--- Processing: Technical Documentation_237e7361-6c27-8195-a7b1-000b83d94edc ---
+2026-01-04T09:51:50.075154 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Technical Documentation_237e7361-6c27-8195-a7b1-000b83d94edc
+2026-01-04T09:51:50.075199 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.075223 - 
+--- Processing: DATABASES_20fe7361-6c27-81d8-bfb0-000bff6f1917 ---
+2026-01-04T09:51:50.075260 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/DATABASES_20fe7361-6c27-81d8-bfb0-000bff6f1917
+2026-01-04T09:51:50.075399 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.075426 - 
+--- Processing: Task_128e7361-6c27-8161-a503-000b426587f6 ---
+2026-01-04T09:51:50.075455 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Task_128e7361-6c27-8161-a503-000b426587f6
+2026-01-04T09:51:50.075563 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.075586 - 
+--- Processing: Merge History_220e7361-6c27-811c-8d87-000b4d90a519 ---
+2026-01-04T09:51:50.075618 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Merge History_220e7361-6c27-811c-8d87-000b4d90a519
+2026-01-04T09:51:50.075661 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.075688 - 
+--- Processing: Resource_128e7361-6c27-8165-9ac4-000b05a4fe63 ---
+2026-01-04T09:51:50.075715 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Resource_128e7361-6c27-8165-9ac4-000b05a4fe63
+2026-01-04T09:51:50.075760 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.075783 - 
+--- Processing: Interview Transcript Processor 2_1ece7361-6c27-811b-96c7-000bc3e060d1 ---
+2026-01-04T09:51:50.075812 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interview Transcript Processor 2_1ece7361-6c27-811b-96c7-000bc3e060d1
+2026-01-04T09:51:50.075854 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.075881 - 
+--- Processing: Documents + Meeting Notes (THS)_56ab7db1-ba80-4fea-959b-896c7aca02c0 ---
+2026-01-04T09:51:50.075909 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Documents + Meeting Notes (THS)_56ab7db1-ba80-4fea-959b-896c7aca02c0
+2026-01-04T09:51:50.075976 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.076005 - 
+--- Processing: volumes_26ce7361-6c27-8131-b3c9-000b33f7374e ---
+2026-01-04T09:51:50.076038 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/volumes_26ce7361-6c27-8131-b3c9-000b33f7374e
+2026-01-04T09:51:50.076080 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.076109 - 
+--- Processing: 500+ Competitors_291e7361-6c27-815f-b473-e5dbbcb33947 ---
+2026-01-04T09:51:50.076138 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/500+ Competitors_291e7361-6c27-815f-b473-e5dbbcb33947
+2026-01-04T09:51:50.076280 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.076305 - 
+--- Processing: Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8 ---
+2026-01-04T09:51:50.076335 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8
+2026-01-04T09:51:50.076445 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.076471 - 
+--- Processing: Marketing Channels Database Template_192e7361-6c27-80f4-a290-000bd1238cc6 ---
+2026-01-04T09:51:50.076499 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Marketing Channels Database Template_192e7361-6c27-80f4-a290-000bd1238cc6
+2026-01-04T09:51:50.076545 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.076574 - 
+--- Processing: serenbrianmarketing-system-codebase PRs_26be7361-6c27-804a-9b41-000b39f7b045 ---
+2026-01-04T09:51:50.076603 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/serenbrianmarketing-system-codebase PRs_26be7361-6c27-804a-9b41-000b39f7b045
+2026-01-04T09:51:50.076836 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.076861 - 
+--- Processing: Item-Types_20fe7361-6c27-819b-9dea-000bbd28d570 ---
+2026-01-04T09:51:50.076892 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Item-Types_20fe7361-6c27-819b-9dea-000bbd28d570
+2026-01-04T09:51:50.077029 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.077054 - 
+--- Processing: Platforms_26ce7361-6c27-8161-b482-000b7a3a4158 ---
+2026-01-04T09:51:50.077082 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Platforms_26ce7361-6c27-8161-b482-000b7a3a4158
+2026-01-04T09:51:50.077125 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.077149 - 
+--- Processing: conversations_part-1_1d9e7361-6c27-816d-a986-000b21aaec08 ---
+2026-01-04T09:51:50.077178 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/conversations_part-1_1d9e7361-6c27-816d-a986-000b21aaec08
+2026-01-04T09:51:50.077222 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.077248 - 
+--- Processing: Gmail Data_295e7361-6c27-8150-a24c-000bb5157307 ---
+2026-01-04T09:51:50.077274 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Gmail Data_295e7361-6c27-8150-a24c-000bb5157307
+2026-01-04T09:51:50.077414 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.077439 - 
+--- Processing: Video Library (1)_295e7361-6c27-81ce-b555-000b4b0816f2 ---
+2026-01-04T09:51:50.077488 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Video Library (1)_295e7361-6c27-81ce-b555-000b4b0816f2
+2026-01-04T09:51:50.077533 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.077558 - 
+--- Processing: Red-Sail-Social-Media-Data_293e7361-6c27-8198-95d5-000b6424fbb6 ---
+2026-01-04T09:51:50.077589 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Red-Sail-Social-Media-Data_293e7361-6c27-8198-95d5-000b6424fbb6
+2026-01-04T09:51:50.077629 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.077654 - 
+--- Processing: Agent-Tasks_284e7361-6c27-8018-872a-eb14e82e0392 ---
+2026-01-04T09:51:50.077684 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Agent-Tasks_284e7361-6c27-8018-872a-eb14e82e0392
+2026-01-04T09:51:50.077729 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.077754 - 
+--- Processing: DaVinci-Resolve-Projects_20fe7361-6c27-8116-babd-000bc4a064c0 ---
+2026-01-04T09:51:50.077784 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/DaVinci-Resolve-Projects_20fe7361-6c27-8116-babd-000bc4a064c0
+2026-01-04T09:51:50.077826 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.077851 - 
+--- Processing: OLD Automation Workflows_d6973ea1-881a-4f2b-bfe4-344958d3a7a6 ---
+2026-01-04T09:51:50.077881 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/OLD Automation Workflows_d6973ea1-881a-4f2b-bfe4-344958d3a7a6
+2026-01-04T09:51:50.077957 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.077985 - 
+--- Processing: Workspace-Areas_40b16e06-6dee-4719-94e4-76918809aa0f ---
+2026-01-04T09:51:50.078015 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Workspace-Areas_40b16e06-6dee-4719-94e4-76918809aa0f
+2026-01-04T09:51:50.078056 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.078085 - 
+--- Processing: Content_128e7361-6c27-81a3-bd2c-000b812027f8 ---
+2026-01-04T09:51:50.078111 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Content_128e7361-6c27-81a3-bd2c-000b812027f8
+2026-01-04T09:51:50.078150 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.078177 - 
+--- Processing: Quotes From __________ Interview_288e7361-6c27-81db-ba81-000bdb7b3e5f ---
+2026-01-04T09:51:50.078203 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Quotes From __________ Interview_288e7361-6c27-81db-ba81-000bdb7b3e5f
+2026-01-04T09:51:50.078247 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.078271 - 
+--- Processing: Merge History_6b63c756-f5b1-4c06-a23e-c2ef3706bad2 ---
+2026-01-04T09:51:50.078301 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Merge History_6b63c756-f5b1-4c06-a23e-c2ef3706bad2
+2026-01-04T09:51:50.078340 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.078368 - 
+--- Processing: Calendar_28fe7361-6c27-81a0-b2b0-000bc4ba57fc ---
+2026-01-04T09:51:50.078398 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Calendar_28fe7361-6c27-81a0-b2b0-000bc4ba57fc
+2026-01-04T09:51:50.078462 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.078484 - 
+--- Processing: Duplicate Detection - Merge History_233e7361-6c27-81ff-8dce-000b733bb44c ---
+2026-01-04T09:51:50.078510 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Duplicate Detection - Merge History_233e7361-6c27-81ff-8dce-000b733bb44c
+2026-01-04T09:51:50.078547 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.078573 - 
+--- Processing: Interviews [Team Housing Solutions]_f7ec6257-c7fc-42d0-8093-e899cb91542c ---
+2026-01-04T09:51:50.078599 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interviews [Team Housing Solutions]_f7ec6257-c7fc-42d0-8093-e899cb91542c
+2026-01-04T09:51:50.078829 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.078853 - 
+--- Processing: Preflight-Test_28be7361-6c27-8164-819f-000b7e9dc379 ---
+2026-01-04T09:51:50.078880 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Preflight-Test_28be7361-6c27-8164-819f-000b7e9dc379
+2026-01-04T09:51:50.078917 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.078940 - 
+--- Processing: SocialPostDrafts_20fe7361-6c27-8100-83da-000bf3b60945 ---
+2026-01-04T09:51:50.078963 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/SocialPostDrafts_20fe7361-6c27-8100-83da-000bf3b60945
+2026-01-04T09:51:50.079001 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.079023 - 
+--- Processing: Archive_271e7361-6c27-806b-a56d-000be1580a60 ---
+2026-01-04T09:51:50.079050 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Archive_271e7361-6c27-806b-a56d-000be1580a60
+2026-01-04T09:51:50.079086 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.079108 - 
+--- Processing: serenbrianmarketing-system-codebase Issues_26be7361-6c27-80c3-9b06-000bf6b33198 ---
+2026-01-04T09:51:50.079131 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/serenbrianmarketing-system-codebase Issues_26be7361-6c27-80c3-9b06-000bf6b33198
+2026-01-04T09:51:50.079173 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.079196 - 
+--- Processing: Accounts — People+Orgs (filter in UI to Social Account, Competitor, Influencer)_179e65aa-c699-46f3-a5dd-b1186aaccbb6 ---
+2026-01-04T09:51:50.079230 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Accounts — People+Orgs (filter in UI to Social Account, Competitor, Influencer)_179e65aa-c699-46f3-a5dd-b1186aaccbb6
+2026-01-04T09:51:50.079374 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.079396 - 
+--- Processing: Preflight-Test_28de7361-6c27-81b5-becf-000b6e0f9fe5 ---
+2026-01-04T09:51:50.079420 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Preflight-Test_28de7361-6c27-81b5-becf-000b6e0f9fe5
+2026-01-04T09:51:50.079457 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.079479 - 
+--- Processing: Interactions_25be7361-6c27-810a-a6ed-000bd977940b ---
+2026-01-04T09:51:50.079507 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interactions_25be7361-6c27-810a-a6ed-000bd977940b
+2026-01-04T09:51:50.079568 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.079593 - 
+--- Processing: Duplicate Merge Logs_c08be952-d534-4e3c-a23f-a9b276ddcca9 ---
+2026-01-04T09:51:50.079620 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Duplicate Merge Logs_c08be952-d534-4e3c-a23f-a9b276ddcca9
+2026-01-04T09:51:50.079658 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.079680 - 
+--- Processing: Untitled database_213e7361-6c27-8137-9b96-000b5adc637d ---
+2026-01-04T09:51:50.079703 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Untitled database_213e7361-6c27-8137-9b96-000b5adc637d
+2026-01-04T09:51:50.079744 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.079766 - 
+--- Processing: Client Areas — Optimized (POC)_6fc3b82f-a66a-4486-9f44-74ef1a492fae ---
+2026-01-04T09:51:50.079794 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Client Areas — Optimized (POC)_6fc3b82f-a66a-4486-9f44-74ef1a492fae
+2026-01-04T09:51:50.079838 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.079864 - 
+--- Processing: scripting-documentation_26ce7361-6c27-818a-b57a-000b996ccc03 ---
+2026-01-04T09:51:50.079887 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/scripting-documentation_26ce7361-6c27-818a-b57a-000b996ccc03
+2026-01-04T09:51:50.080116 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.080138 - 
+--- Processing: Chats_26ce7361-6c27-8101-abba-000b7b35dc1c ---
+2026-01-04T09:51:50.080162 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Chats_26ce7361-6c27-8101-abba-000b7b35dc1c
+2026-01-04T09:51:50.080201 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.080223 - 
+--- Processing: Workspace-Levels_299e7361-6c27-8167-ac47-000b7253d218 ---
+2026-01-04T09:51:50.080247 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Workspace-Levels_299e7361-6c27-8167-ac47-000b7253d218
+2026-01-04T09:51:50.080289 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.080312 - 
+--- Processing: Red-Sail-Sports-Facebook-Posts-Data_295e7361-6c27-8111-9f63-000bcd60a956 ---
+2026-01-04T09:51:50.080339 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Red-Sail-Sports-Facebook-Posts-Data_295e7361-6c27-8111-9f63-000bcd60a956
+2026-01-04T09:51:50.080378 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.080401 - 
+--- Processing: Workspace-Levels_254e7361-6c27-80b7-bf03-000b825973d1 ---
+2026-01-04T09:51:50.080428 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Workspace-Levels_254e7361-6c27-80b7-bf03-000b825973d1
+2026-01-04T09:51:50.080469 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.080491 - 
+--- Processing: Proposals Sent_2a7e7361-6c27-8019-8dae-000b9d08aa50 ---
+2026-01-04T09:51:50.080518 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Proposals Sent_2a7e7361-6c27-8019-8dae-000b9d08aa50
+2026-01-04T09:51:50.080557 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.080579 - 
+--- Processing: Preflight-Test_28ce7361-6c27-8152-966f-000b5650aa21 ---
+2026-01-04T09:51:50.080606 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Preflight-Test_28ce7361-6c27-8152-966f-000b5650aa21
+2026-01-04T09:51:50.080664 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.080686 - 
+--- Processing: system-databases_26ce7361-6c27-8198-a515-000b9ca2fbe3 ---
+2026-01-04T09:51:50.080710 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/system-databases_26ce7361-6c27-8198-a515-000b9ca2fbe3
+2026-01-04T09:51:50.080847 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.080874 - 
+--- Processing: Platform_128e7361-6c27-8144-9bf1-000b6a841b1c ---
+2026-01-04T09:51:50.080901 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Platform_128e7361-6c27-8144-9bf1-000b6a841b1c
+2026-01-04T09:51:50.080940 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.080967 - 
+--- Processing: Technical Documentation_237e7361-6c27-8139-9c18-000b3b687c5c ---
+2026-01-04T09:51:50.080991 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Technical Documentation_237e7361-6c27-8139-9c18-000b3b687c5c
+2026-01-04T09:51:50.081029 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.081055 - 
+--- Processing: Validation & Performance Reviews_269ad70a-b608-4a2b-8a5c-3dc478c46af6 ---
+2026-01-04T09:51:50.081082 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Validation & Performance Reviews_269ad70a-b608-4a2b-8a5c-3dc478c46af6
+2026-01-04T09:51:50.081121 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.081143 - 
+--- Processing: Lightroom-Sync-Images_286e7361-6c27-81aa-9f4b-000be6dd081e ---
+2026-01-04T09:51:50.081166 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Lightroom-Sync-Images_286e7361-6c27-81aa-9f4b-000be6dd081e
+2026-01-04T09:51:50.081204 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.081226 - 
+--- Processing: Merge History - Page Backups_2caaf3a7-6b88-4610-a472-c1474b08e9e1 ---
+2026-01-04T09:51:50.081253 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Merge History - Page Backups_2caaf3a7-6b88-4610-a472-c1474b08e9e1
+2026-01-04T09:51:50.081293 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.081316 - 
+--- Processing: Platforms_288e7361-6c27-81b7-bc07-000b3340a202 ---
+2026-01-04T09:51:50.081342 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Platforms_288e7361-6c27-81b7-bc07-000b3340a202
+2026-01-04T09:51:50.081379 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.081401 - 
+--- Processing: Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7 ---
+2026-01-04T09:51:50.081425 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7
+2026-01-04T09:51:50.081554 -     SKIP: .archive folder already exists
+2026-01-04T09:51:50.081575 - 
+=== Summary ===
+2026-01-04T09:51:50.081595 - Databases analyzed: 103
+2026-01-04T09:51:50.081618 - Archives created: 0
+2026-01-04T09:51:50.081638 - Archives skipped: 103
+2026-01-04T09:51:50.081662 - Errors: 0
+2026-01-04T09:51:50.081681 - Log file: /Users/brianhellemn/Projects/github-production/logs/archive_remediation_20260104T095150.log
+2026-01-04T09:51:50.082209 - Results saved to: /Users/brianhellemn/Projects/github-production/logs/archive_remediation_results_20260104T095150.json

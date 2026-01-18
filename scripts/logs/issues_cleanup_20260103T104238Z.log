@@ -1,0 +1,35 @@
+2026-01-03 04:42:38,031 - INFO - Issues+Questions cleanup started
+2026-01-03 04:42:38,031 - INFO - Data source ID: 229e7361-6c27-804f-b662-000b6af69781
+2026-01-03 04:42:38,031 - INFO - Mode: APPLY
+2026-01-03 04:42:39,156 - INFO - HTTP Request: POST https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781/query "HTTP/1.1 200 OK"
+2026-01-03 04:42:40,534 - INFO - HTTP Request: POST https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781/query "HTTP/1.1 200 OK"
+2026-01-03 04:42:41,139 - INFO - HTTP Request: POST https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781/query "HTTP/1.1 200 OK"
+2026-01-03 04:42:41,654 - INFO - HTTP Request: POST https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781/query "HTTP/1.1 200 OK"
+2026-01-03 04:42:42,131 - INFO - HTTP Request: POST https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781/query "HTTP/1.1 200 OK"
+2026-01-03 04:42:42,730 - INFO - HTTP Request: POST https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781/query "HTTP/1.1 200 OK"
+2026-01-03 04:42:42,744 - INFO - Fetched 570 pages from data source
+2026-01-03 04:42:42,747 - INFO - Planned updates: 340
+2026-01-03 04:42:42,748 - INFO - Duplicate groups: 99
+2026-01-03 04:42:42,748 - INFO - Duplicates to archive: 186
+2026-01-03 04:42:42,748 - INFO - Unreported total: 449
+2026-01-03 04:42:42,748 - INFO - Unreported archived: 128
+2026-01-03 04:42:42,748 - INFO - Unknown priority total: 277
+2026-01-03 04:42:42,748 - INFO - Priority updates: 26
+2026-01-03 04:42:46,201 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2c7e7361-6c27-8108-971d-f4bca901deed "HTTP/1.1 400 Bad Request"
+2026-01-03 04:42:46,202 - ERROR - Failed to update 2c7e7361-6c27-8108-971d-f4bca901deed: Invalid status option. Status option "Archived" does not exist".
+2026-01-03 04:42:46,358 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2cae7361-6c27-819f-b1a4-cc67eee9a819 "HTTP/1.1 400 Bad Request"
+2026-01-03 04:42:46,358 - ERROR - Failed to update 2cae7361-6c27-819f-b1a4-cc67eee9a819: Invalid status option. Status option "Archived" does not exist".
+2026-01-03 04:42:46,496 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2cae7361-6c27-81a7-8c80-d2961a03c16b "HTTP/1.1 400 Bad Request"
+2026-01-03 04:42:46,497 - ERROR - Failed to update 2cae7361-6c27-81a7-8c80-d2961a03c16b: Invalid status option. Status option "Archived" does not exist".
+2026-01-03 04:42:46,626 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2cbe7361-6c27-8128-95f0-f28a4ca197d4 "HTTP/1.1 400 Bad Request"
+2026-01-03 04:42:46,626 - ERROR - Failed to update 2cbe7361-6c27-8128-95f0-f28a4ca197d4: Invalid status option. Status option "Archived" does not exist".
+2026-01-03 04:42:46,756 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2cbe7361-6c27-8147-a274-d2e8040abadf "HTTP/1.1 400 Bad Request"
+2026-01-03 04:42:46,756 - ERROR - Failed to update 2cbe7361-6c27-8147-a274-d2e8040abadf: Invalid status option. Status option "Archived" does not exist".
+2026-01-03 04:42:46,880 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2cbe7361-6c27-8168-841f-d37eb81d466c "HTTP/1.1 400 Bad Request"
+2026-01-03 04:42:46,881 - ERROR - Failed to update 2cbe7361-6c27-8168-841f-d37eb81d466c: Invalid status option. Status option "Archived" does not exist".
+2026-01-03 04:42:47,024 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2cbe7361-6c27-8169-9a25-f9b96c021f4a "HTTP/1.1 400 Bad Request"
+2026-01-03 04:42:47,024 - ERROR - Failed to update 2cbe7361-6c27-8169-9a25-f9b96c021f4a: Invalid status option. Status option "Archived" does not exist".
+2026-01-03 04:42:47,147 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2cbe7361-6c27-81d4-b51b-d22e450389e7 "HTTP/1.1 400 Bad Request"
+2026-01-03 04:42:47,147 - ERROR - Failed to update 2cbe7361-6c27-81d4-b51b-d22e450389e7: Invalid status option. Status option "Archived" does not exist".
+2026-01-03 04:42:47,330 - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2cbe7361-6c27-81db-bd5d-f774fc5e87c2 "HTTP/1.1 400 Bad Request"
+2026-01-03 04:42:47,332 - ERROR - Failed to update 2cbe7361-6c27-81db-bd5d-f774fc5e87c2: Invalid status option. Status option "Archived" does not exist".

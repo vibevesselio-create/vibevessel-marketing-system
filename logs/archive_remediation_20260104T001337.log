@@ -1,0 +1,424 @@
+2026-01-04T00:13:37.564754 - === DriveSheetsSync Archive Remediation (LIVE) ===
+2026-01-04T00:13:37.564873 - Timestamp: 20260104T001337
+2026-01-04T00:13:37.569566 - Loaded audit data from /Users/brianhellemn/Projects/github-production/DRIVESHEETSSYNC_AUDIT_DATA.json
+2026-01-04T00:13:37.569688 - Audit shows 103 databases with missing .archive folders
+2026-01-04T00:13:37.569738 - 
+--- Processing: Deduplication Test Database_220e7361-6c27-8105-991d-000bea434fea ---
+2026-01-04T00:13:37.569782 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Deduplication Test Database_220e7361-6c27-8105-991d-000bea434fea
+2026-01-04T00:13:37.569922 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.569969 - 
+--- Processing: Photo Library [Team Housing Solutions]_15be7361-6c27-81ca-a5db-000b41449453 ---
+2026-01-04T00:13:37.570011 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Photo Library [Team Housing Solutions]_15be7361-6c27-81ca-a5db-000b41449453
+2026-01-04T00:13:37.570122 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.570153 - 
+--- Processing: Duplicate Detection - Merge Logs_233e7361-6c27-8192-abb0-000b0cd80817 ---
+2026-01-04T00:13:37.570182 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Duplicate Detection - Merge Logs_233e7361-6c27-8192-abb0-000b0cd80817
+2026-01-04T00:13:37.570261 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.570288 - 
+--- Processing: Page Templates_21ee7361-6c27-80f0-aee5-000b2c75d045 ---
+2026-01-04T00:13:37.570321 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Page Templates_21ee7361-6c27-80f0-aee5-000b2c75d045
+2026-01-04T00:13:37.570409 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.570440 - 
+--- Processing: Shoot Session Types_698ed7a4-4843-4654-bca5-b29aa828a46d ---
+2026-01-04T00:13:37.570468 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Shoot Session Types_698ed7a4-4843-4654-bca5-b29aa828a46d
+2026-01-04T00:13:37.570546 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.570577 - 
+--- Processing: Website Pages — Ocean Frontiers_baf61674-4efe-448b-98d5-07e04a49c5dc ---
+2026-01-04T00:13:37.570611 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Website Pages — Ocean Frontiers_baf61674-4efe-448b-98d5-07e04a49c5dc
+2026-01-04T00:13:37.570699 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.570729 - 
+--- Processing: Tag_20fe7361-6c27-81c6-ae2c-000b222c62a6 ---
+2026-01-04T00:13:37.570759 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Tag_20fe7361-6c27-81c6-ae2c-000b222c62a6
+2026-01-04T00:13:37.570840 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.570879 - 
+--- Processing: Execution Logs_f23a5b27-bd5d-4a1e-a4e9-24466d4abd35 ---
+2026-01-04T00:13:37.570917 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Execution Logs_f23a5b27-bd5d-4a1e-a4e9-24466d4abd35
+2026-01-04T00:13:37.571029 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.571057 - 
+--- Processing: Cleanup State_220e7361-6c27-81cc-b2da-000b0725017e ---
+2026-01-04T00:13:37.571086 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Cleanup State_220e7361-6c27-81cc-b2da-000b0725017e
+2026-01-04T00:13:37.571215 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.571852 - 
+--- Processing: Quotes From __________ Interview_293e7361-6c27-812e-b238-000bcdc97962 ---
+2026-01-04T00:13:37.572118 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Quotes From __________ Interview_293e7361-6c27-812e-b238-000bcdc97962
+2026-01-04T00:13:37.572259 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.572306 - 
+--- Processing: Red-Sail-Sports-GC-Facebook-Posts-Data_294e7361-6c27-819f-ade1-000be115b9c1 ---
+2026-01-04T00:13:37.572352 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Red-Sail-Sports-GC-Facebook-Posts-Data_294e7361-6c27-819f-ade1-000be115b9c1
+2026-01-04T00:13:37.572459 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.572496 - 
+--- Processing: Audio_128e7361-6c27-811c-a598-000bb5262dfd ---
+2026-01-04T00:13:37.572537 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Audio_128e7361-6c27-811c-a598-000bb5262dfd
+2026-01-04T00:13:37.572632 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.572673 - 
+--- Processing: My Gmail Data_20ee7361-6c27-817f-a959-000b231ae359 ---
+2026-01-04T00:13:37.572711 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/My Gmail Data_20ee7361-6c27-817f-a959-000b231ae359
+2026-01-04T00:13:37.572938 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.572982 - 
+--- Processing: Music Artists_20ee7361-6c27-814f-9100-000bbd764d31 ---
+2026-01-04T00:13:37.573126 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Music Artists_20ee7361-6c27-814f-9100-000bbd764d31
+2026-01-04T00:13:37.573243 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.573291 - 
+--- Processing: PowerPanel_Pages_Only_1f3e7361-6c27-8108-940b-000b4af96559 ---
+2026-01-04T00:13:37.573337 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/PowerPanel_Pages_Only_1f3e7361-6c27-8108-940b-000b4af96559
+2026-01-04T00:13:37.573458 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.573500 - 
+--- Processing: ListView_Images_224e7361-6c27-8173-91ac-000b125e1972 ---
+2026-01-04T00:13:37.573540 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/ListView_Images_224e7361-6c27-8173-91ac-000b125e1972
+2026-01-04T00:13:37.573648 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.573688 - 
+--- Processing: Quotes From __________ Interview_288e7361-6c27-81b5-b166-000bd3c5a877 ---
+2026-01-04T00:13:37.573734 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Quotes From __________ Interview_288e7361-6c27-81b5-b166-000bd3c5a877
+2026-01-04T00:13:37.573837 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.573868 - 
+--- Processing: Inbox_23ae7361-6c27-802d-b284-000bc63daea1 ---
+2026-01-04T00:13:37.573897 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Inbox_23ae7361-6c27-802d-b284-000bc63daea1
+2026-01-04T00:13:37.573982 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.574015 - 
+--- Processing: Wiki (Seren)_170910fc-52f2-4860-90be-8e1f8b15b881 ---
+2026-01-04T00:13:37.574060 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Wiki (Seren)_170910fc-52f2-4860-90be-8e1f8b15b881
+2026-01-04T00:13:37.574359 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.574400 - 
+--- Processing: Client Files Database Template_196e7361-6c27-80ca-8c17-000b479ac897 ---
+2026-01-04T00:13:37.574435 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Client Files Database Template_196e7361-6c27-80ca-8c17-000b479ac897
+2026-01-04T00:13:37.574529 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.574568 - 
+--- Processing: Properties_20fe7361-6c27-81bc-923d-000b8f07a4d8 ---
+2026-01-04T00:13:37.574609 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Properties_20fe7361-6c27-81bc-923d-000b8f07a4d8
+2026-01-04T00:13:37.574715 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.574845 - 
+--- Processing: Preflight-Test_28de7361-6c27-8192-a8ef-000bc4090b22 ---
+2026-01-04T00:13:37.574902 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Preflight-Test_28de7361-6c27-8192-a8ef-000bc4090b22
+2026-01-04T00:13:37.575736 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.575789 - 
+--- Processing: Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e ---
+2026-01-04T00:13:37.575837 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e
+2026-01-04T00:13:37.575943 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.575981 - 
+--- Processing: Untitled_28fe7361-6c27-81f7-b270-000babd0b557 ---
+2026-01-04T00:13:37.576017 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Untitled_28fe7361-6c27-81f7-b270-000babd0b557
+2026-01-04T00:13:37.576056 -     SKIP: Folder does not exist (may have been deleted)
+2026-01-04T00:13:37.576090 - 
+--- Processing: image-data_278e7361-6c27-8124-8e44-000bcac5d971 ---
+2026-01-04T00:13:37.576124 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/image-data_278e7361-6c27-8124-8e44-000bcac5d971
+2026-01-04T00:13:37.576214 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.576248 - 
+--- Processing: Free Notion Widgets & Tools_1f8e7361-6c27-81ec-80aa-000b48422908 ---
+2026-01-04T00:13:37.576283 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Free Notion Widgets & Tools_1f8e7361-6c27-81ec-80aa-000b48422908
+2026-01-04T00:13:37.576370 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.576407 - 
+--- Processing: Technical Documentation_26ce7361-6c27-81ec-8dfd-000b8a7b1a81 ---
+2026-01-04T00:13:37.576441 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Technical Documentation_26ce7361-6c27-81ec-8dfd-000b8a7b1a81
+2026-01-04T00:13:37.576575 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.576617 - 
+--- Processing: Organizations+People_20fe7361-6c27-81c4-a617-000b5f3f683c ---
+2026-01-04T00:13:37.576655 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Organizations+People_20fe7361-6c27-81c4-a617-000b5f3f683c
+2026-01-04T00:13:37.576803 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.576883 - 
+--- Processing: Emails_20fe7361-6c27-8147-b31d-000b3e5d321c ---
+2026-01-04T00:13:37.576914 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Emails_20fe7361-6c27-8147-b31d-000b3e5d321c
+2026-01-04T00:13:37.576996 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.577033 - 
+--- Processing: Personal — Music Databases (Linked)_5ea1ef19-ff91-40a7-a6e3-1ebe5bd85687 ---
+2026-01-04T00:13:37.577068 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Personal — Music Databases (Linked)_5ea1ef19-ff91-40a7-a6e3-1ebe5bd85687
+2026-01-04T00:13:37.577151 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.577187 - 
+--- Processing: Preflight-Test_28be7361-6c27-817f-9b9f-000bc28df959 ---
+2026-01-04T00:13:37.577218 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Preflight-Test_28be7361-6c27-817f-9b9f-000bc28df959
+2026-01-04T00:13:37.577304 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.577344 - 
+--- Processing: Folders_28be7361-6c27-81fd-b33b-000b9aedae22 ---
+2026-01-04T00:13:37.577377 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Folders_28be7361-6c27-81fd-b33b-000b9aedae22
+2026-01-04T00:13:37.577479 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.577517 - 
+--- Processing: Keyboard Maestro Macros_285e7361-6c27-801d-ad33-000b7da77293 ---
+2026-01-04T00:13:37.577554 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Keyboard Maestro Macros_285e7361-6c27-801d-ad33-000b7da77293
+2026-01-04T00:13:37.577593 -     SKIP: Folder does not exist (may have been deleted)
+2026-01-04T00:13:37.577637 - 
+--- Processing: Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259 ---
+2026-01-04T00:13:37.577672 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259
+2026-01-04T00:13:37.577777 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.577814 - 
+--- Processing: Databases Template_184e7361-6c27-81fa-a7a8-000b15181392 ---
+2026-01-04T00:13:37.577854 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Databases Template_184e7361-6c27-81fa-a7a8-000b15181392
+2026-01-04T00:13:37.577949 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.578031 - 
+--- Processing: workspace-databases_26ce7361-6c27-81d5-8626-000b229d1aad ---
+2026-01-04T00:13:37.578065 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-databases_26ce7361-6c27-81d5-8626-000b229d1aad
+2026-01-04T00:13:37.578169 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.578201 - 
+--- Processing: CRM Lite (Example)_ce6d4903-d07c-4295-91cc-aa2a04b629ec ---
+2026-01-04T00:13:37.578241 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/CRM Lite (Example)_ce6d4903-d07c-4295-91cc-aa2a04b629ec
+2026-01-04T00:13:37.578338 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.578379 - 
+--- Processing: Roles_e1558e8b-3ed4-45ec-9cea-f9b776116cdd ---
+2026-01-04T00:13:37.578417 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Roles_e1558e8b-3ed4-45ec-9cea-f9b776116cdd
+2026-01-04T00:13:37.578554 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.578585 - 
+--- Processing: Merge Logs_816739ed-0a00-4fe2-92de-701e13cd3931 ---
+2026-01-04T00:13:37.578618 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Merge Logs_816739ed-0a00-4fe2-92de-701e13cd3931
+2026-01-04T00:13:37.578703 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.578734 - 
+--- Processing: Locations_28fe7361-6c27-81be-a767-000b91435865 ---
+2026-01-04T00:13:37.578764 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Locations_28fe7361-6c27-81be-a767-000b91435865
+2026-01-04T00:13:37.578847 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.578879 - 
+--- Processing: Interview Transcript Processor_1ece7361-6c27-8082-86e0-000b67b95eb4 ---
+2026-01-04T00:13:37.578906 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interview Transcript Processor_1ece7361-6c27-8082-86e0-000b67b95eb4
+2026-01-04T00:13:37.579003 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.579040 - 
+--- Processing: Hashtag group_128e7361-6c27-8177-981c-000b4738b617 ---
+2026-01-04T00:13:37.579071 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Hashtag group_128e7361-6c27-8177-981c-000b4738b617
+2026-01-04T00:13:37.579151 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.579182 - 
+--- Processing: Folders_28be7361-6c27-81a3-962c-000b674bbbf0 ---
+2026-01-04T00:13:37.579214 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Folders_28be7361-6c27-81a3-962c-000b674bbbf0
+2026-01-04T00:13:37.579292 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.579323 - 
+--- Processing: Chats_288e7361-6c27-8106-8d4b-000b7ec6575a ---
+2026-01-04T00:13:37.579350 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Chats_288e7361-6c27-8106-8d4b-000b7ec6575a
+2026-01-04T00:13:37.579436 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.579468 - 
+--- Processing: Red-Sail-Sports-Instagram-Posts_295e7361-6c27-8150-8a1a-000b027c582f ---
+2026-01-04T00:13:37.579497 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Red-Sail-Sports-Instagram-Posts_295e7361-6c27-8150-8a1a-000b027c582f
+2026-01-04T00:13:37.579572 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.579607 - 
+--- Processing: Quotes From __________ Interview_288e7361-6c27-810a-9031-000bae8131db ---
+2026-01-04T00:13:37.579638 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Quotes From __________ Interview_288e7361-6c27-810a-9031-000bae8131db
+2026-01-04T00:13:37.579714 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.579752 - 
+--- Processing: OKRs_196e7361-6c27-8117-bed0-000bd72acfec ---
+2026-01-04T00:13:37.579785 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/OKRs_196e7361-6c27-8117-bed0-000bd72acfec
+2026-01-04T00:13:37.579869 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.579905 - 
+--- Processing: Events_20fe7361-6c27-8173-b1b6-000be48b54d7 ---
+2026-01-04T00:13:37.579954 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Events_20fe7361-6c27-8173-b1b6-000be48b54d7
+2026-01-04T00:13:37.580067 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.580106 - 
+--- Processing: Technical Documentation_212e7361-6c27-81b4-aea8-000b782b370e ---
+2026-01-04T00:13:37.580138 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Technical Documentation_212e7361-6c27-81b4-aea8-000b782b370e
+2026-01-04T00:13:37.580219 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.580256 - 
+--- Processing: Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d ---
+2026-01-04T00:13:37.580287 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d
+2026-01-04T00:13:37.580383 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.580432 - 
+--- Processing: Technical Documentation_237e7361-6c27-8195-a7b1-000b83d94edc ---
+2026-01-04T00:13:37.580459 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Technical Documentation_237e7361-6c27-8195-a7b1-000b83d94edc
+2026-01-04T00:13:37.581195 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.581235 - 
+--- Processing: DATABASES_20fe7361-6c27-81d8-bfb0-000bff6f1917 ---
+2026-01-04T00:13:37.581269 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/DATABASES_20fe7361-6c27-81d8-bfb0-000bff6f1917
+2026-01-04T00:13:37.581352 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.581392 - 
+--- Processing: Task_128e7361-6c27-8161-a503-000b426587f6 ---
+2026-01-04T00:13:37.581425 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Task_128e7361-6c27-8161-a503-000b426587f6
+2026-01-04T00:13:37.581505 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.581537 - 
+--- Processing: Merge History_220e7361-6c27-811c-8d87-000b4d90a519 ---
+2026-01-04T00:13:37.581568 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Merge History_220e7361-6c27-811c-8d87-000b4d90a519
+2026-01-04T00:13:37.581645 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.581678 - 
+--- Processing: Resource_128e7361-6c27-8165-9ac4-000b05a4fe63 ---
+2026-01-04T00:13:37.581712 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Resource_128e7361-6c27-8165-9ac4-000b05a4fe63
+2026-01-04T00:13:37.581794 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.581842 - 
+--- Processing: Interview Transcript Processor 2_1ece7361-6c27-811b-96c7-000bc3e060d1 ---
+2026-01-04T00:13:37.581881 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interview Transcript Processor 2_1ece7361-6c27-811b-96c7-000bc3e060d1
+2026-01-04T00:13:37.581958 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.582052 - 
+--- Processing: Documents + Meeting Notes (THS)_56ab7db1-ba80-4fea-959b-896c7aca02c0 ---
+2026-01-04T00:13:37.582081 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Documents + Meeting Notes (THS)_56ab7db1-ba80-4fea-959b-896c7aca02c0
+2026-01-04T00:13:37.582179 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.582218 - 
+--- Processing: volumes_26ce7361-6c27-8131-b3c9-000b33f7374e ---
+2026-01-04T00:13:37.582678 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/volumes_26ce7361-6c27-8131-b3c9-000b33f7374e
+2026-01-04T00:13:37.582776 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.582814 - 
+--- Processing: 500+ Competitors_291e7361-6c27-815f-b473-e5dbbcb33947 ---
+2026-01-04T00:13:37.582846 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/500+ Competitors_291e7361-6c27-815f-b473-e5dbbcb33947
+2026-01-04T00:13:37.582930 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.582966 - 
+--- Processing: Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8 ---
+2026-01-04T00:13:37.582994 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8
+2026-01-04T00:13:37.583103 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.583138 - 
+--- Processing: Marketing Channels Database Template_192e7361-6c27-80f4-a290-000bd1238cc6 ---
+2026-01-04T00:13:37.583167 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Marketing Channels Database Template_192e7361-6c27-80f4-a290-000bd1238cc6
+2026-01-04T00:13:37.583482 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.583517 - 
+--- Processing: serenbrianmarketing-system-codebase PRs_26be7361-6c27-804a-9b41-000b39f7b045 ---
+2026-01-04T00:13:37.583550 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/serenbrianmarketing-system-codebase PRs_26be7361-6c27-804a-9b41-000b39f7b045
+2026-01-04T00:13:37.583625 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.583656 - 
+--- Processing: Item-Types_20fe7361-6c27-819b-9dea-000bbd28d570 ---
+2026-01-04T00:13:37.583685 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Item-Types_20fe7361-6c27-819b-9dea-000bbd28d570
+2026-01-04T00:13:37.583760 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.583790 - 
+--- Processing: Platforms_26ce7361-6c27-8161-b482-000b7a3a4158 ---
+2026-01-04T00:13:37.583835 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Platforms_26ce7361-6c27-8161-b482-000b7a3a4158
+2026-01-04T00:13:37.583951 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.583990 - 
+--- Processing: conversations_part-1_1d9e7361-6c27-816d-a986-000b21aaec08 ---
+2026-01-04T00:13:37.584025 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/conversations_part-1_1d9e7361-6c27-816d-a986-000b21aaec08
+2026-01-04T00:13:37.584106 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.584138 - 
+--- Processing: Gmail Data_295e7361-6c27-8150-a24c-000bb5157307 ---
+2026-01-04T00:13:37.584173 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Gmail Data_295e7361-6c27-8150-a24c-000bb5157307
+2026-01-04T00:13:37.584252 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.584285 - 
+--- Processing: Video Library (1)_295e7361-6c27-81ce-b555-000b4b0816f2 ---
+2026-01-04T00:13:37.584319 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Video Library (1)_295e7361-6c27-81ce-b555-000b4b0816f2
+2026-01-04T00:13:37.584423 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.584458 - 
+--- Processing: Red-Sail-Social-Media-Data_293e7361-6c27-8198-95d5-000b6424fbb6 ---
+2026-01-04T00:13:37.584495 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Red-Sail-Social-Media-Data_293e7361-6c27-8198-95d5-000b6424fbb6
+2026-01-04T00:13:37.584591 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.584629 - 
+--- Processing: Agent-Tasks_284e7361-6c27-8018-872a-eb14e82e0392 ---
+2026-01-04T00:13:37.584666 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Agent-Tasks_284e7361-6c27-8018-872a-eb14e82e0392
+2026-01-04T00:13:37.584761 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.584797 - 
+--- Processing: DaVinci-Resolve-Projects_20fe7361-6c27-8116-babd-000bc4a064c0 ---
+2026-01-04T00:13:37.584834 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/DaVinci-Resolve-Projects_20fe7361-6c27-8116-babd-000bc4a064c0
+2026-01-04T00:13:37.584917 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.584950 - 
+--- Processing: OLD Automation Workflows_d6973ea1-881a-4f2b-bfe4-344958d3a7a6 ---
+2026-01-04T00:13:37.584985 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/OLD Automation Workflows_d6973ea1-881a-4f2b-bfe4-344958d3a7a6
+2026-01-04T00:13:37.585069 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.585104 - 
+--- Processing: Workspace-Areas_40b16e06-6dee-4719-94e4-76918809aa0f ---
+2026-01-04T00:13:37.585140 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Workspace-Areas_40b16e06-6dee-4719-94e4-76918809aa0f
+2026-01-04T00:13:37.585224 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.585269 - 
+--- Processing: Content_128e7361-6c27-81a3-bd2c-000b812027f8 ---
+2026-01-04T00:13:37.585305 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Content_128e7361-6c27-81a3-bd2c-000b812027f8
+2026-01-04T00:13:37.585393 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.585428 - 
+--- Processing: Quotes From __________ Interview_288e7361-6c27-81db-ba81-000bdb7b3e5f ---
+2026-01-04T00:13:37.585462 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Quotes From __________ Interview_288e7361-6c27-81db-ba81-000bdb7b3e5f
+2026-01-04T00:13:37.585542 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.585576 - 
+--- Processing: Merge History_6b63c756-f5b1-4c06-a23e-c2ef3706bad2 ---
+2026-01-04T00:13:37.585611 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Merge History_6b63c756-f5b1-4c06-a23e-c2ef3706bad2
+2026-01-04T00:13:37.585697 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.585730 - 
+--- Processing: Calendar_28fe7361-6c27-81a0-b2b0-000bc4ba57fc ---
+2026-01-04T00:13:37.585765 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Calendar_28fe7361-6c27-81a0-b2b0-000bc4ba57fc
+2026-01-04T00:13:37.585844 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.585878 - 
+--- Processing: Duplicate Detection - Merge History_233e7361-6c27-81ff-8dce-000b733bb44c ---
+2026-01-04T00:13:37.585915 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Duplicate Detection - Merge History_233e7361-6c27-81ff-8dce-000b733bb44c
+2026-01-04T00:13:37.586021 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.586048 - 
+--- Processing: Interviews [Team Housing Solutions]_f7ec6257-c7fc-42d0-8093-e899cb91542c ---
+2026-01-04T00:13:37.586075 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interviews [Team Housing Solutions]_f7ec6257-c7fc-42d0-8093-e899cb91542c
+2026-01-04T00:13:37.586147 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.586172 - 
+--- Processing: Preflight-Test_28be7361-6c27-8164-819f-000b7e9dc379 ---
+2026-01-04T00:13:37.586198 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Preflight-Test_28be7361-6c27-8164-819f-000b7e9dc379
+2026-01-04T00:13:37.586269 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.586294 - 
+--- Processing: SocialPostDrafts_20fe7361-6c27-8100-83da-000bf3b60945 ---
+2026-01-04T00:13:37.586321 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/SocialPostDrafts_20fe7361-6c27-8100-83da-000bf3b60945
+2026-01-04T00:13:37.586392 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.586417 - 
+--- Processing: Archive_271e7361-6c27-806b-a56d-000be1580a60 ---
+2026-01-04T00:13:37.586443 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Archive_271e7361-6c27-806b-a56d-000be1580a60
+2026-01-04T00:13:37.586517 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.586544 - 
+--- Processing: serenbrianmarketing-system-codebase Issues_26be7361-6c27-80c3-9b06-000bf6b33198 ---
+2026-01-04T00:13:37.586570 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/serenbrianmarketing-system-codebase Issues_26be7361-6c27-80c3-9b06-000bf6b33198
+2026-01-04T00:13:37.586649 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.586675 - 
+--- Processing: Accounts — People+Orgs (filter in UI to Social Account, Competitor, Influencer)_179e65aa-c699-46f3-a5dd-b1186aaccbb6 ---
+2026-01-04T00:13:37.586704 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Accounts — People+Orgs (filter in UI to Social Account, Competitor, Influencer)_179e65aa-c699-46f3-a5dd-b1186aaccbb6
+2026-01-04T00:13:37.586780 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.586806 - 
+--- Processing: Preflight-Test_28de7361-6c27-81b5-becf-000b6e0f9fe5 ---
+2026-01-04T00:13:37.586832 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Preflight-Test_28de7361-6c27-81b5-becf-000b6e0f9fe5
+2026-01-04T00:13:37.586904 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.586929 - 
+--- Processing: Interactions_25be7361-6c27-810a-a6ed-000bd977940b ---
+2026-01-04T00:13:37.586955 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interactions_25be7361-6c27-810a-a6ed-000bd977940b
+2026-01-04T00:13:37.587032 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.587057 - 
+--- Processing: Duplicate Merge Logs_c08be952-d534-4e3c-a23f-a9b276ddcca9 ---
+2026-01-04T00:13:37.587084 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Duplicate Merge Logs_c08be952-d534-4e3c-a23f-a9b276ddcca9
+2026-01-04T00:13:37.587181 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.587207 - 
+--- Processing: Untitled database_213e7361-6c27-8137-9b96-000b5adc637d ---
+2026-01-04T00:13:37.587234 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Untitled database_213e7361-6c27-8137-9b96-000b5adc637d
+2026-01-04T00:13:37.587311 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.587337 - 
+--- Processing: Client Areas — Optimized (POC)_6fc3b82f-a66a-4486-9f44-74ef1a492fae ---
+2026-01-04T00:13:37.587366 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Client Areas — Optimized (POC)_6fc3b82f-a66a-4486-9f44-74ef1a492fae
+2026-01-04T00:13:37.587442 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.587467 - 
+--- Processing: scripting-documentation_26ce7361-6c27-818a-b57a-000b996ccc03 ---
+2026-01-04T00:13:37.587494 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/scripting-documentation_26ce7361-6c27-818a-b57a-000b996ccc03
+2026-01-04T00:13:37.587569 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.587594 - 
+--- Processing: Chats_26ce7361-6c27-8101-abba-000b7b35dc1c ---
+2026-01-04T00:13:37.587620 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Chats_26ce7361-6c27-8101-abba-000b7b35dc1c
+2026-01-04T00:13:37.587690 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.587715 - 
+--- Processing: Workspace-Levels_299e7361-6c27-8167-ac47-000b7253d218 ---
+2026-01-04T00:13:37.587742 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Workspace-Levels_299e7361-6c27-8167-ac47-000b7253d218
+2026-01-04T00:13:37.587813 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.587837 - 
+--- Processing: Red-Sail-Sports-Facebook-Posts-Data_295e7361-6c27-8111-9f63-000bcd60a956 ---
+2026-01-04T00:13:37.587863 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Red-Sail-Sports-Facebook-Posts-Data_295e7361-6c27-8111-9f63-000bcd60a956
+2026-01-04T00:13:37.587937 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.587964 - 
+--- Processing: Workspace-Levels_254e7361-6c27-80b7-bf03-000b825973d1 ---
+2026-01-04T00:13:37.587993 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Workspace-Levels_254e7361-6c27-80b7-bf03-000b825973d1
+2026-01-04T00:13:37.588066 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.588092 - 
+--- Processing: Proposals Sent_2a7e7361-6c27-8019-8dae-000b9d08aa50 ---
+2026-01-04T00:13:37.588118 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Proposals Sent_2a7e7361-6c27-8019-8dae-000b9d08aa50
+2026-01-04T00:13:37.588189 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.588213 - 
+--- Processing: Preflight-Test_28ce7361-6c27-8152-966f-000b5650aa21 ---
+2026-01-04T00:13:37.588239 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Preflight-Test_28ce7361-6c27-8152-966f-000b5650aa21
+2026-01-04T00:13:37.588310 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.588336 - 
+--- Processing: system-databases_26ce7361-6c27-8198-a515-000b9ca2fbe3 ---
+2026-01-04T00:13:37.588383 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/system-databases_26ce7361-6c27-8198-a515-000b9ca2fbe3
+2026-01-04T00:13:37.588464 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.588491 - 
+--- Processing: Platform_128e7361-6c27-8144-9bf1-000b6a841b1c ---
+2026-01-04T00:13:37.588519 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Platform_128e7361-6c27-8144-9bf1-000b6a841b1c
+2026-01-04T00:13:37.588591 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.588618 - 
+--- Processing: Technical Documentation_237e7361-6c27-8139-9c18-000b3b687c5c ---
+2026-01-04T00:13:37.588645 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Technical Documentation_237e7361-6c27-8139-9c18-000b3b687c5c
+2026-01-04T00:13:37.588718 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.588744 - 
+--- Processing: Validation & Performance Reviews_269ad70a-b608-4a2b-8a5c-3dc478c46af6 ---
+2026-01-04T00:13:37.588771 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Validation & Performance Reviews_269ad70a-b608-4a2b-8a5c-3dc478c46af6
+2026-01-04T00:13:37.588844 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.588869 - 
+--- Processing: Lightroom-Sync-Images_286e7361-6c27-81aa-9f4b-000be6dd081e ---
+2026-01-04T00:13:37.588895 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Lightroom-Sync-Images_286e7361-6c27-81aa-9f4b-000be6dd081e
+2026-01-04T00:13:37.588967 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.588991 - 
+--- Processing: Merge History - Page Backups_2caaf3a7-6b88-4610-a472-c1474b08e9e1 ---
+2026-01-04T00:13:37.589017 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Merge History - Page Backups_2caaf3a7-6b88-4610-a472-c1474b08e9e1
+2026-01-04T00:13:37.589089 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.589114 - 
+--- Processing: Platforms_288e7361-6c27-81b7-bc07-000b3340a202 ---
+2026-01-04T00:13:37.589140 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Platforms_288e7361-6c27-81b7-bc07-000b3340a202
+2026-01-04T00:13:37.589210 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.589236 - 
+--- Processing: Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7 ---
+2026-01-04T00:13:37.589264 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7
+2026-01-04T00:13:37.589336 -     SUCCESS: Created .archive folder
+2026-01-04T00:13:37.589360 - 
+=== Summary ===
+2026-01-04T00:13:37.589384 - Databases analyzed: 103
+2026-01-04T00:13:37.589408 - Archives created: 101
+2026-01-04T00:13:37.589431 - Archives skipped: 2
+2026-01-04T00:13:37.589453 - Errors: 0
+2026-01-04T00:13:37.589476 - Log file: /Users/brianhellemn/Projects/github-production/logs/archive_remediation_20260104T001337.log
+2026-01-04T00:13:37.589998 - Results saved to: /Users/brianhellemn/Projects/github-production/logs/archive_remediation_results_20260104T001337.json

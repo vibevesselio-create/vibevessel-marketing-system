@@ -1,0 +1,200 @@
+2026-01-14 01:51:54 | INFO | Started workflow: FP-DEDUP-20260114075154
+2026-01-14 01:51:54 | INFO | ================================================================================
+2026-01-14 01:51:54 | INFO | PRODUCTION RUN: FINGERPRINT EMBEDDING + SYNC + DEDUPLICATION
+2026-01-14 01:51:54 | INFO | ================================================================================
+2026-01-14 01:51:54 | INFO | Fingerprint Embedding: DRY RUN
+2026-01-14 01:51:54 | INFO | Fingerprint Sync: DRY RUN
+2026-01-14 01:51:54 | INFO | 
+2026-01-14 01:51:54 | INFO | 
+2026-01-14 01:51:54 | INFO | Querying tracks from Notion database...
+2026-01-14 01:51:54 | INFO | HTTP Request: GET https://api.notion.com/v1/databases/27ce7361-6c27-80fb-b40e-fefdd47d6640 "HTTP/1.1 200 OK"
+2026-01-14 01:52:02 | INFO | HTTP Request: POST https://api.notion.com/v1/databases/27ce7361-6c27-80fb-b40e-fefdd47d6640/query "HTTP/1.1 200 OK"
+2026-01-14 01:52:02 | INFO | Queried 3 tracks from Notion for processing
+2026-01-14 01:52:02 | INFO | ✅ Found 3 tracks from Notion for processing
+2026-01-14 01:52:02 | INFO | ================================================================================
+2026-01-14 01:52:02 | INFO | STEP 1: EMBED FINGERPRINTS IN FILE METADATA
+2026-01-14 01:52:02 | INFO | ================================================================================
+2026-01-14 01:52:02 | INFO | Mode: DRY RUN
+2026-01-14 01:52:02 | INFO | Limit: 2 files
+2026-01-14 01:52:02 | INFO | Processing 3 tracks from Notion
+2026-01-14 01:52:02 | INFO | 
+2026-01-14 01:52:02 | INFO | Processing tracks from Notion (Notion-first workflow)...
+[soundcloud_download_prod_merge] Spotify integration unavailable (No module named 'spotify_integration_module'); Spotify features disabled.
+2026-01-14 01:52:02 | INFO | Unified logging initialized via shared_core.logging
+2026-01-14 01:52:02 | INFO | 🧵 Max concurrency for batch mode: 4
+2026-01-14 01:52:02 | INFO | 📑 Order mode: priority_then_created | Priority numeric mode: True | Name-order: ['Critical', 'High', 'Medium', 'Low']
+/Users/brianhellemn/Library/Python/3.13/lib/python/site-packages/librosa/core/intervals.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_filename
+2026-01-14 01:52:08 | WARNING | ⚠️ Smart Eagle API not available, using fallback
+2026-01-14 01:52:08 | INFO | 📁 Using OUT_DIR: /Volumes/VIBES/Playlists
+2026-01-14 01:52:08 | INFO | 📁 Using BACKUP_DIR: /Volumes/VIBES/Djay-Pro-Auto-Import
+2026-01-14 01:52:08 | INFO | 📁 Using WAV_BACKUP_DIR: /Volumes/VIBES/Apple-Music-Auto-Add
+2026-01-14 01:52:08 | INFO | 🦅 Eagle API: http://localhost:41595
+2026-01-14 01:52:08 | INFO | 🦅 Eagle Library: /Volumes/OF-CP2019-2025/Music Library-2.library
+2026-01-14 01:52:08 | INFO | 📚 Volume index enabled: /Users/brianhellemn/Projects/github-production/var/music_volume_index.json
+2026-01-14 01:52:08 | INFO | 📁 Using OUT_DIR: /Volumes/VIBES/Playlists
+2026-01-14 01:52:08 | INFO | 📁 Using BACKUP_DIR: /Volumes/VIBES/Djay-Pro-Auto-Import
+2026-01-14 01:52:08 | INFO | 📁 Using WAV_BACKUP_DIR: /Volumes/VIBES/Apple-Music-Auto-Add
+2026-01-14 01:52:08 | WARNING | ⚠️  Unified State Registry not available: No module named 'unified_state_registry'
+2026-01-14 01:52:08 | INFO | Processing tracks from Notion (will continue until success or limit reached)...
+2026-01-14 01:52:08 | INFO | Fetching all Eagle items for matching...
+2026-01-14 01:52:08 | INFO | 📊 Fetched 21121 items from Eagle library
+2026-01-14 01:52:08 | INFO | Fetched 21121 Eagle items
+2026-01-14 01:52:08 | INFO | [1/2] Processing track: Inciting Ferdinand
+2026-01-14 01:52:08 | WARNING |   ⚠️  File path missing or file does not exist for track: Inciting Ferdinand
+2026-01-14 01:52:08 | INFO |   📥 Triggering full download workflow for track: Inciting Ferdinand
+2026-01-14 01:52:08 | INFO |   🔄 Running full production workflow (download → process → import → update)...
+2026-01-14 01:52:08 | INFO | 🔄 Processing track: Inciting Ferdinand by Alejo
+2026-01-14 01:52:08 | INFO | 🎵 Processing Spotify track: Inciting Ferdinand by Alejo
+2026-01-14 01:52:08 | INFO | 🔍 Searching for alternative audio source (YouTube)...
+2026-01-14 01:52:10 | INFO | ✅ Updated metadata for Spotify track: Inciting Ferdinand
+2026-01-14 01:52:10 | INFO | ✅ Found YouTube URL in Notion: https://www.youtube.com/watch?v=EbFYwwT6t3c
+2026-01-14 01:52:10 | INFO | 🔄 Downloading Spotify track from YouTube: https://www.youtube.com/watch?v=EbFYwwT6t3c
+2026-01-14 01:52:10 | INFO | 
+================================================================================
+2026-01-14 01:52:10 | INFO | 🎵 PROCESSING TRACK
+2026-01-14 01:52:10 | INFO | ================================================================================
+2026-01-14 01:52:10 | INFO | URL: https://www.youtube.com/watch?v=EbFYwwT6t3c
+2026-01-14 01:52:11 | INFO | Playlist: No Playlist Assigned
+2026-01-14 01:52:11 | INFO | Retry: 0/20
+2026-01-14 01:52:11 | INFO | 
+📊 TRACK_INFO from Notion:
+2026-01-14 01:52:11 | INFO | {
+  "page_id": "2e7e7361-6c27-81e5-891f-fc0af3aaf971",
+  "title": "Inciting Ferdinand",
+  "artist": "Alejo",
+  "title_cleaned": "Inciting Ferdinand",
+  "artist_cleaned": "Alejo",
+  "album": "Transitions",
+  "genre": "",
+  "soundcloud_url": "",
+  "spotify_id": "3A60dd3h5Gpsw0dr2QEbS5",
+  "spotify_url": "https://open.spotify.com/track/3A60dd3h5Gpsw0dr2QEbS5",
+  "youtube_url": "https://www.youtube.com/watch?v=EbFYwwT6t3c",
+  "bpm": null,
+  "key": "",
+  "duration_seconds": 239.56,
+  "eagle_file_id": "",
+  "audio_normalized": false,
+  "wav_file_path": "",
+  "aiff_file_path": "",
+  "m4a_file_path": "",
+  "download_source": "YouTube (Spotify)"
+}
+2026-01-14 01:52:11 | INFO | 🔍 PRE-DOWNLOAD DUPLICATE CHECK: Inciting Ferdinand by Alejo
+2026-01-14 01:52:11 | INFO | 🔍 EAGLE DE-DUPLICATION: Finding matches for 'Inciting Ferdinand.wav'
+2026-01-14 01:52:11 | INFO |    Title: Inciting Ferdinand
+2026-01-14 01:52:11 | INFO |    Artist: Alejo
+2026-01-14 01:52:11 | INFO |    Fingerprint: No
+2026-01-14 01:52:11 | INFO | 📊 Fetched 21121 items from Eagle library
+2026-01-14 01:52:48 | INFO | 🔍 Found 0 Eagle items for filename 'Inciting Ferdinand' (base: 'Inciting Ferdinand')
+2026-01-14 01:52:48 | INFO | 🔍 No Eagle items found for: Inciting Ferdinand
+2026-01-14 01:52:48 | INFO | ✅ NO DUPLICATES FOUND: Proceeding with download and processing
+2026-01-14 01:52:48 | INFO | 🔍 PARSING URL: https://www.youtube.com/watch?v=EbFYwwT6t3c
+2026-01-14 01:52:48 | INFO |    → Parsed artist from URL: 'None'
+2026-01-14 01:52:48 | INFO |    → Parsed track from URL: 'None'
+2026-01-14 01:52:49 | INFO | ✅ Successfully processed Spotify track via YouTube: Inciting Ferdinand
+2026-01-14 01:52:49 | INFO |   ✅ Full workflow completed successfully for: Inciting Ferdinand
+2026-01-14 01:52:49 | INFO | 
+2026-01-14 01:52:49 | INFO | ================================================================================
+2026-01-14 01:52:49 | INFO | ✅ SUCCESS: Track 'Inciting Ferdinand' fully processed via download workflow!
+2026-01-14 01:52:49 | INFO |    - Downloaded and processed: ✅
+2026-01-14 01:52:49 | INFO |    - Fingerprint embedded: ✅
+2026-01-14 01:52:49 | INFO |    - Fingerprint synced to Eagle: ✅
+2026-01-14 01:52:49 | INFO |    - Notion updated: ✅
+2026-01-14 01:52:49 | INFO | ================================================================================
+2026-01-14 01:52:49 | INFO | 
+2026-01-14 01:52:49 | INFO | 
+2026-01-14 01:52:49 | INFO | ================================================================================
+2026-01-14 01:52:49 | INFO | TRACK PROCESSING SUMMARY
+2026-01-14 01:52:49 | INFO | ================================================================================
+2026-01-14 01:52:49 | INFO | Tracks attempted: 1
+2026-01-14 01:52:49 | INFO | Processed: 1
+2026-01-14 01:52:49 | INFO | Succeeded: 1
+2026-01-14 01:52:49 | INFO | Failed: 0
+2026-01-14 01:52:49 | INFO | Skipped: 0
+2026-01-14 01:52:49 | INFO | Eagle items found: 0
+2026-01-14 01:52:49 | INFO | Fingerprints embedded: 1
+2026-01-14 01:52:49 | INFO | Fingerprints synced: 1
+2026-01-14 01:52:49 | INFO | Notion updated: 1
+2026-01-14 01:52:49 | INFO | 
+2026-01-14 01:52:49 | INFO | ✅ Workflow completed successfully!
+2026-01-14 01:52:49 | INFO | ================================================================================
+2026-01-14 01:52:49 | INFO | 
+2026-01-14 01:52:49 | INFO | Completed step: fingerprint_embedding
+2026-01-14 01:52:49 | INFO | 
+2026-01-14 01:52:49 | INFO | ✅ Fingerprint embedding completed
+2026-01-14 01:52:49 | INFO | 
+2026-01-14 01:52:49 | INFO | ================================================================================
+2026-01-14 01:52:49 | INFO | STEP 2: SYNC FINGERPRINTS TO EAGLE TAGS
+2026-01-14 01:52:49 | INFO | ================================================================================
+2026-01-14 01:52:49 | INFO | Sync already handled in per-track workflow for 3 tracks
+2026-01-14 01:52:49 | INFO | 
+2026-01-14 01:52:49 | INFO | ✅ Fingerprint sync completed
+2026-01-14 01:52:49 | INFO | 
+2026-01-14 01:52:49 | INFO | 
+2026-01-14 01:52:49 | INFO | ================================================================================
+2026-01-14 01:52:49 | INFO | STEP 4: EAGLE LIBRARY DEDUPLICATION
+2026-01-14 01:52:49 | INFO | ================================================================================
+2026-01-14 01:52:49 | INFO | Mode: DRY RUN
+2026-01-14 01:52:49 | INFO | Min Similarity: 75%
+2026-01-14 01:52:49 | INFO | Cleanup: Disabled
+2026-01-14 01:52:49 | INFO | Require Fingerprints: True (minimum coverage: 80%)
+2026-01-14 01:52:49 | INFO | 
+2026-01-14 01:52:49 | INFO | Unified logging initialized via shared_core.logging
+2026-01-14 01:52:49 | INFO | 🧵 Max concurrency for batch mode: 4
+2026-01-14 01:52:49 | INFO | 📑 Order mode: priority_then_created | Priority numeric mode: True | Name-order: ['Critical', 'High', 'Medium', 'Low']
+2026-01-14 01:52:49 | WARNING | ⚠️ Smart Eagle API not available, using fallback
+2026-01-14 01:52:49 | INFO | 📁 Using OUT_DIR: /Volumes/VIBES/Playlists
+2026-01-14 01:52:49 | INFO | 📁 Using BACKUP_DIR: /Volumes/VIBES/Djay-Pro-Auto-Import
+2026-01-14 01:52:49 | INFO | 📁 Using WAV_BACKUP_DIR: /Volumes/VIBES/Apple-Music-Auto-Add
+2026-01-14 01:52:49 | INFO | 🦅 Eagle API: http://localhost:41595
+2026-01-14 01:52:49 | INFO | 🦅 Eagle Library: /Volumes/OF-CP2019-2025/Music Library-2.library
+2026-01-14 01:52:49 | INFO | 📚 Volume index enabled: /Users/brianhellemn/Projects/github-production/var/music_volume_index.json
+2026-01-14 01:52:49 | INFO | 📁 Using OUT_DIR: /Volumes/VIBES/Playlists
+2026-01-14 01:52:49 | INFO | 📁 Using BACKUP_DIR: /Volumes/VIBES/Djay-Pro-Auto-Import
+2026-01-14 01:52:49 | INFO | 📁 Using WAV_BACKUP_DIR: /Volumes/VIBES/Apple-Music-Auto-Add
+2026-01-14 01:52:49 | WARNING | ⚠️  Unified State Registry not available: No module named 'unified_state_registry'
+2026-01-14 01:52:49 | INFO | ================================================================================
+2026-01-14 01:52:49 | INFO | 🔍 EAGLE LIBRARY-WIDE DEDUPLICATION SCAN
+2026-01-14 01:52:49 | INFO | ================================================================================
+2026-01-14 01:52:49 | INFO |    Mode: DRY RUN
+2026-01-14 01:52:49 | INFO |    Min Similarity: 75%
+2026-01-14 01:52:49 | INFO |    Cleanup: Disabled
+2026-01-14 01:52:49 | INFO | 
+2026-01-14 01:52:49 | INFO | 📥 Fetching all items from Eagle library...
+2026-01-14 01:52:50 | INFO | 📊 Fetched 21121 items from Eagle library
+2026-01-14 01:52:50 | INFO | 📊 Found 21121 items in library
+2026-01-14 01:52:50 | INFO | 
+2026-01-14 01:52:50 | INFO | 📊 PATH RESOLUTION STATISTICS (sample)
+2026-01-14 01:52:50 | INFO |    Items with API paths: 0/100 (0.0%)
+2026-01-14 01:52:50 | INFO |    Items with resolved paths: 100/100 (100.0%)
+2026-01-14 01:52:50 | INFO |    Items without paths: 0/100 (0.0%)
+2026-01-14 01:52:50 | INFO |    Estimated full library: 21,121 accessible, 0 URL-based
+2026-01-14 01:52:50 | INFO |    Path cache: 21121 entries, 17895 resolved, 84.7% hit rate
+2026-01-14 01:52:50 | INFO | 
+2026-01-14 01:52:50 | INFO | ================================================================================
+2026-01-14 01:52:50 | INFO | 🔍 CHECKING FINGERPRINT COVERAGE
+2026-01-14 01:52:50 | INFO | ================================================================================
+2026-01-14 01:55:39 | INFO |    Total items: 21121
+2026-01-14 01:55:39 | INFO |    Items with fingerprints: 3846
+2026-01-14 01:55:39 | INFO |    Coverage: 18.2%
+2026-01-14 01:55:39 | INFO |    Threshold: 80.0%
+2026-01-14 01:55:39 | WARNING | 
+2026-01-14 01:55:39 | WARNING | ⚠️  WARNING: Fingerprint coverage is below recommended threshold!
+2026-01-14 01:55:39 | WARNING |    Current coverage: 18.2%
+2026-01-14 01:55:39 | WARNING |    Recommended threshold: 80.0%
+2026-01-14 01:55:39 | WARNING |    Deduplication will rely heavily on fuzzy/ngram matching instead of fingerprints.
+2026-01-14 01:55:39 | WARNING | 
+2026-01-14 01:55:39 | WARNING |    RECOMMENDED ACTIONS:
+2026-01-14 01:55:39 | WARNING |    1. Run batch fingerprint embedding: scripts/batch_fingerprint_embedding.py
+2026-01-14 01:55:39 | WARNING |    2. Run fingerprint sync: scripts/sync_fingerprints_to_eagle.py
+2026-01-14 01:55:39 | WARNING |    3. Then re-run deduplication
+2026-01-14 01:55:39 | WARNING | 
+2026-01-14 01:55:39 | ERROR | ❌ BLOCKING: require_fingerprints=True and coverage below threshold
+2026-01-14 01:55:39 | ERROR |    Deduplication aborted. Please embed fingerprints first.
+2026-01-14 01:55:39 | ERROR | 
+2026-01-14 01:55:39 | ERROR |    CRITICAL: Fingerprints MUST be embedded BEFORE deduplication runs.
+2026-01-14 01:55:39 | ERROR |    Workflow order: 1) Embed fingerprints → 2) Sync to Eagle tags → 3) Run deduplication
+2026-01-14 01:55:39 | WARNING | Failed step: deduplication - Fingerprint coverage below required threshold
+2026-01-14 01:55:39 | ERROR | Deduplication failed

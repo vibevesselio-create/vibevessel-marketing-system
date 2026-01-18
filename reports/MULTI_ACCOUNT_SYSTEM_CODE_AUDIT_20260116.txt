@@ -1,0 +1,435 @@
+/Users/brianhellemn/Projects/github-production/sync_config/item_types_manager.py:124:        token = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or os.getenv("NOTION_API_KEY")
+/Users/brianhellemn/Projects/github-production/SCRIPT_SYNC_SUMMARY.md:54:   - `NOTION_TOKEN` (required)
+/Users/brianhellemn/Projects/github-production/scripts_remediation_results.json:188:      "description": "Hash: 1b9bf479888f992b0cf49a74e48d494e9cf893ad271d1fbdde37510aa3014bf8\nGet detailed information about specific tasks.  from notion_client import Client  NOTION_TOKEN = \"ntn_62065306663bfVxRMSczpdIOMnn"
+/Users/brianhellemn/Projects/github-production/gas-scripts/drive-sheets-sync/Code.js.bak:11: *       1. NOTION_TOKEN - Notion integration API token
+/Users/brianhellemn/Projects/github-production/gas-scripts/drive-sheets-sync/Code.js.bak:118://   1. NOTION_TOKEN - The Notion integration API token
+/Users/brianhellemn/Projects/github-production/sync_script_to_notion_direct.py:42:NOTION_TOKEN = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN")
+/Users/brianhellemn/Projects/github-production/sync_script_to_notion_direct.py:43:if not NOTION_TOKEN:
+/Users/brianhellemn/Projects/github-production/sync_script_to_notion_direct.py:44:    logger.error("NOTION_TOKEN or NOTION_API_TOKEN environment variable not set")
+/Users/brianhellemn/Projects/github-production/sync_script_to_notion_direct.py:48:notion = Client(auth=NOTION_TOKEN)
+/Users/brianhellemn/Projects/github-production/gas-scripts/drive-sheets-sync/Code.js:151:          'Authorization': 'Bearer ' + PropertiesService.getScriptProperties().getProperty('NOTION_TOKEN'),
+/Users/brianhellemn/Projects/github-production/music_workflow/integrations/notion/client.py:43:                    token = os.environ.get("NOTION_TOKEN")
+/Users/brianhellemn/Projects/github-production/music_workflow/integrations/notion/client.py:47:                            details={"hint": "Set NOTION_TOKEN environment variable"}
+/Users/brianhellemn/Projects/github-production/analysis/music_workflow_gap_analysis.md:119:- Required: `TRACKS_DB_ID`, `NOTION_TOKEN`
+/Users/brianhellemn/Projects/github-production/update_agent_task_status.py:17:    NOTION_TOKEN = get_notion_token()
+/Users/brianhellemn/Projects/github-production/update_agent_task_status.py:19:    NOTION_TOKEN = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_KEY")
+/Users/brianhellemn/Projects/github-production/update_agent_task_status.py:21:if not NOTION_TOKEN:
+/Users/brianhellemn/Projects/github-production/update_agent_task_status.py:26:    "Authorization": f"Bearer {NOTION_TOKEN}",
+/Users/brianhellemn/Projects/github-production/MUSIC_TRACK_SYNC_WORKFLOW_PRODUCTION_GUIDE.md:114:- `NOTION_TOKEN`: Notion API token
+/Users/brianhellemn/Projects/github-production/MUSIC_TRACK_SYNC_WORKFLOW_PRODUCTION_GUIDE.md:193:   - Verify `NOTION_TOKEN` environment variable is set
+/Users/brianhellemn/Projects/github-production/MUSIC_WORKFLOW_IMPLEMENTATION_STATUS.md:219:  - ✅ Configuration verified (TRACKS_DB_ID, PLAYLISTS_DB_ID, NOTION_TOKEN, SOUNDCLOUD_PROFILE)
+/Users/brianhellemn/Projects/github-production/create_handoff_from_notion_task.py:395:        logger.error("NOTION_TOKEN not found. Cannot proceed.")
+/Users/brianhellemn/Projects/github-production/MUSIC_WORKFLOW_PRE_EXECUTION_INTELLIGENCE.md:116:- **`NOTION_TOKEN`** - Required (must be set)
+/Users/brianhellemn/Projects/github-production/execute_music_track_sync_workflow.py:679:    required_env_vars = ["NOTION_TOKEN"]
+/Users/brianhellemn/Projects/github-production/query_agent_tasks_for_project.py:16:    NOTION_TOKEN = get_notion_token()
+/Users/brianhellemn/Projects/github-production/query_agent_tasks_for_project.py:18:    NOTION_TOKEN = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_KEY")
+/Users/brianhellemn/Projects/github-production/query_agent_tasks_for_project.py:20:if not NOTION_TOKEN:
+/Users/brianhellemn/Projects/github-production/query_agent_tasks_for_project.py:28:    "Authorization": f"Bearer {NOTION_TOKEN}",
+/Users/brianhellemn/Projects/github-production/monolithic-scripts/SPOTIFY_INTEGRATION_TEST_REPORT.md:88:- **Missing Variables**: NOTION_TOKEN, TRACKS_DB_ID
+/Users/brianhellemn/Projects/github-production/monolithic-scripts/SPOTIFY_INTEGRATION_TEST_REPORT.md:122:- **Environment Variables**: NOTION_TOKEN, TRACKS_DB_ID (required)
+/Users/brianhellemn/Projects/github-production/monolithic-scripts/test_spotify_integration_focused.py:169:    required_vars = ["NOTION_TOKEN", "TRACKS_DB_ID"]
+/Users/brianhellemn/Projects/github-production/monolithic-scripts/spotify_integration_module.py:548:            self.notion_token = os.getenv("NOTION_TOKEN")
+/Users/brianhellemn/Projects/github-production/monolithic-scripts/soundcloud_download_prod_merge-2.py:22:• Required env: NOTION_TOKEN, TRACKS_DB_ID. Optional: OUT_DIR, BACKUP_DIR, WAV_BACKUP_DIR, EAGLE_API_BASE, EAGLE_LIBRARY_PATH, EAGLE_TOKEN.
+/Users/brianhellemn/Projects/github-production/monolithic-scripts/soundcloud_download_prod_merge-2.py:154:    "NOTION_TOKEN": "",
+/Users/brianhellemn/Projects/github-production/monolithic-scripts/soundcloud_download_prod_merge-2.py:989:NOTION_TOKEN = (os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_KEY") or "").strip()
+/Users/brianhellemn/Projects/github-production/monolithic-scripts/soundcloud_download_prod_merge-2.py:1004:if NOTION_TOKEN:
+/Users/brianhellemn/Projects/github-production/monolithic-scripts/soundcloud_download_prod_merge-2.py:1005:    os.environ["NOTION_TOKEN"] = NOTION_TOKEN
+/Users/brianhellemn/Projects/github-production/monolithic-scripts/soundcloud_download_prod_merge-2.py:1006:    os.environ["NOTION_API_KEY"] = NOTION_TOKEN  # compat
+/Users/brianhellemn/Projects/github-production/monolithic-scripts/soundcloud_download_prod_merge-2.py:1012:if not NOTION_TOKEN:
+/Users/brianhellemn/Projects/github-production/monolithic-scripts/soundcloud_download_prod_merge-2.py:1014:        "NOTION_TOKEN is not set. Set NOTION_TOKEN/NOTION_API_KEY. "
+/Users/brianhellemn/Projects/github-production/monolithic-scripts/soundcloud_download_prod_merge-2.py:1514:# NOTION_TOKEN validated above - already checked for presence
+/Users/brianhellemn/Projects/github-production/monolithic-scripts/soundcloud_download_prod_merge-2.py:1662:    def __init__(self, token: str = NOTION_TOKEN):
+/Users/brianhellemn/Projects/github-production/monolithic-scripts/soundcloud_download_prod_merge-2.py:1745:        return "NOTION_TOKEN starts with 'ntn_'" not in str(msg)
+/Users/brianhellemn/Projects/github-production/monolithic-scripts/SPOTIFY_INTEGRATION_COMPLETE.md:70:- `NOTION_TOKEN`: Notion API access token
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Cursor-MM1-Agent/02_processed/20260113T172500Z__HANDOFF__Unified-Env-Token-Pattern-Remediation__2e6e7361.json:7:  "description": "## Context\nCritical audit finding: 87 scripts use non-compliant os.getenv() patterns for NOTION token access instead of the canonical shared_core.notion.token_manager.\n\n## Issue Details\n- **Issue Title:** [AUDIT FINDING] Cursor MM1 Unified Env System Failures - Multiple User Escalations\n- **Priority:** Critical\n- **Root Cause:** Inconsistent token access patterns across codebase\n- **Canonical Pattern:** `from shared_core.notion.token_manager import get_notion_token`\n\n## Non-Compliant Scripts to Remediate (Priority Order)\n1. sync_config/item_types_manager.py\n2. seren-media-workflows/python-scripts/monitor_webhook_server.py\n3. seren-media-workflows/libs/seren_utils/notion.py\n4. monolithic-scripts/soundcloud_download_prod_merge-2.py\n5. monolithic-scripts/spotify_integration_module.py\n6. resolve_vibes_reorganization_issue.py\n7. check_playlist_tracks_needing_processing.py\n8. execute_notion_workflow.py\n9. scripts/music_track_sync_auto_detect.py\n10. scripts/clear_eagle_id.py\n\n## Required Actions\n1. Update each non-compliant script to use:\n   ```python\n   from shared_core.notion.token_manager import get_notion_token\n   token = get_notion_token()\n   ```\n2. Remove direct os.getenv('NOTION_TOKEN') calls\n3. Test each updated script to verify functionality\n4. Document changes in git commit\n5. Update Notion issue with resolution status\n\n## Success Criteria\n- [ ] All 87 non-compliant scripts updated\n- [ ] All scripts tested and functional\n- [ ] Git commit with changes documented\n- [ ] Issue marked as Resolved\n\n## MANDATORY NEXT HANDOFF\nUpon completion, create handoff trigger for Claude MM1 Agent to perform:\n- Full codebase audit to verify no remaining non-compliant patterns\n- Update project documentation\n- Close related issue in Notion",
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Cursor-MM1-Agent/02_processed/20260113T172500Z__HANDOFF__Unified-Env-Token-Pattern-Remediation__2e6e7361.json:11:  "handoff_instructions": "Execute the Unified Env Token Pattern Remediation. For each non-compliant script:\n1. Open the file\n2. Add import: from shared_core.notion.token_manager import get_notion_token\n3. Replace os.getenv('NOTION_TOKEN') with get_notion_token()\n4. Test the script\n5. Document the change\n\nWhen complete, create handoff to Claude MM1 Agent for validation.\n\n**MANDATORY:** Move this trigger file to 02_processed after reading. Create validation handoff trigger before marking complete.",
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Notion-DataOps/01_inbox/20251217T193308Z_notion-access-blocker.json:6:  "task_url": "UNAVAILABLE - Agent-Tasks DB inaccessible (missing NOTION_TOKEN)",
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Notion-DataOps/01_inbox/20251217T193308Z_notion-access-blocker.json:8:  "handoff_reason": "Cannot validate Single In Progress constraint or load tasks because NOTION_TOKEN is missing and Notion access is blocked.",
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Notion-DataOps/01_inbox/20251217T193308Z_notion-access-blocker.json:11:    "blocking_issue": "Environment has no NOTION_TOKEN and network access is restricted, so Agent-Tasks and Issues+Questions databases cannot be queried or updated.",
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Notion-DataOps/01_inbox/20251217T193308Z_notion-access-blocker.json:12:    "work_completed": "Confirmed AGENTS.md requirements, checked environment for NOTION_TOKEN (absent), and prepared this handoff for DataOps support.",
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Notion-DataOps/01_inbox/20251217T193308Z_notion-access-blocker.json:15:  "required_action": "Restore Notion access (provide NOTION_TOKEN/config), run the Single In Progress validation, surface the active task and project details, and hand back the next required step for Codex-MM1.",
+/Users/brianhellemn/Projects/github-production/SPOTIFY_CSV_BACKUP_INTEGRATION_PLAN.md:250:notion = Client(auth=os.getenv("NOTION_TOKEN"))
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Notion-DataOps/01_inbox/20251218T214457Z__notion-access-blocker.json:13:    "blocking_issue": "Runtime lacked NOTION_TOKEN/NOTION_API_KEY and network is restricted by default. This attempt loaded .env tokens locally to create entries, but env remains unset for future runs.",
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Notion-DataOps/01_inbox/20251218T214457Z__notion-access-blocker.json:17:  "required_action": "1) Ensure NOTION_TOKEN/NOTION_API_KEY is available in runtime (not just .env) and network access is permitted for Notion API. 2) Confirm Agent-Tasks entry is valid and proceed with task selection/updates. 3) Provide any missing project context so the assigned agent can continue.",
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Notion-DataOps/01_inbox/20251217T195502Z_notion-access-blocker.json:6:  "task_url": "UNAVAILABLE - Agent-Tasks DB inaccessible (missing NOTION_TOKEN)",
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Notion-DataOps/01_inbox/20251217T195502Z_notion-access-blocker.json:8:  "handoff_reason": "Cannot validate the Single In Progress constraint or load any Agent-Tasks entries because NOTION_TOKEN is missing and network access is restricted.",
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Notion-DataOps/01_inbox/20251217T195502Z_notion-access-blocker.json:11:    "blocking_issue": "Environment has no NOTION_TOKEN and network access is restricted, so the Agent-Tasks and Issues+Questions databases cannot be queried or updated.",
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Notion-DataOps/01_inbox/20251217T195502Z_notion-access-blocker.json:12:    "work_completed": "Confirmed AGENTS.md requirements, checked environment variables (no NOTION_TOKEN), and prepared this handoff for DataOps support.",
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Notion-DataOps/01_inbox/20251217T195502Z_notion-access-blocker.json:15:  "required_action": "Restore Notion access (provide NOTION_TOKEN/config), run the Single In Progress validation, surface the active task and project details, and hand back the next required step for Codex-MM1.",
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Claude-MM1/02_processed/20251231T205852Z__HANDOFF__Unified-Env-Management__Claude-MM1-Agent.json:23:  "required_action": "Audit existing environment management implementation:\n\n1. Review `shared_core/notion/execution_logs.py` - `_get_notion_client()` function (lines 58-78)\n2. Compare with documented pattern in `docs/ENVIRONMENT_MANAGEMENT_PATTERN.md`\n3. Identify all gaps and deviations:\n   - Missing `load_dotenv()` call\n   - Missing `VV_AUTOMATIONS_WS_TOKEN` check\n   - Has: `NOTION_API_KEY`, `NOTION_TOKEN`, `NOTION_API_TOKEN` checks\n   - Has: `unified_config` fallback\n4. Review all other implementations across codebase\n5. Document findings in Notion audit report\n6. Make recommendation: Replace or Update existing implementation\n7. List all files using incorrect pattern\n\n**PRIMARY DELIVERABLE:** Determine if existing implementation should be replaced or updated.\n\n**MANDATORY HANDOFF REQUIREMENT:** Upon completion of this task, you MUST create a handoff trigger file for Phase 2 (Technical Review & Shared Utility Design) assigned to Cursor MM1 Agent. The handoff file must be created in `agents/agent-triggers/Cursor-MM1/01_inbox/` with format: `[TIMESTAMP]__HANDOFF__Unified-Env-Management__Cursor-MM1-Agent.json`. Include all audit findings, recommendation, and context needed for Phase 2 to begin.",
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Claude-MM1/01_inbox/20251217T195713Z_notion-access-escalation.json:6:  "task_url": "UNAVAILABLE - Agent-Tasks DB inaccessible (missing NOTION_TOKEN)",
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Claude-MM1/01_inbox/20251217T195713Z_notion-access-escalation.json:8:  "handoff_reason": "Notion DataOps cannot restore access; environment lacks NOTION_TOKEN and network access is restricted, so Agent-Tasks/Issues+Questions cannot be queried or updated.",
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Claude-MM1/01_inbox/20251217T195713Z_notion-access-escalation.json:11:    "blocking_issue": "No NOTION_TOKEN available; network is restricted, preventing Notion API calls. DataOps agent cannot resolve credential provisioning.",
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Claude-MM1/01_inbox/20251217T195713Z_notion-access-escalation.json:12:    "work_completed": "Verified AGENTS.md rules, confirmed NOTION_TOKEN is absent, created a DataOps handoff (20251217T195502Z_notion-access-blocker.json) and now escalating because DataOps cannot proceed.",
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Claude-MM1/01_inbox/20251217T195713Z_notion-access-escalation.json:15:  "required_action": "Coordinate credential recovery: obtain/provide NOTION_TOKEN in this environment, restore Notion access, create required Issues+Questions + Agent-Tasks entries per blocker protocol, run Single In Progress validation, and return active task/project details + next step to Codex-MM1.",
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Claude-MM1/01_inbox/20251217T195713Z_notion-access-escalation.json:16:  "success_criteria": "NOTION_TOKEN configured; Agent-Tasks DB reachable; blocker issues logged; exactly one In Progress task identified or set; parent project context captured; Codex-MM1 receives task URL, project URL, and next required step to resume execution.",
+/Users/brianhellemn/Projects/github-production/resolve_vibes_reorganization_issue.py:30:    token = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or os.getenv("NOTION_API_KEY")
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Claude-MM1-Agent/01_inbox/20260113T172600Z__HANDOFF__Agent-Work-Validation-Unified-Env-Remediation__2e6e7361.json:7:  "description": "## Context\nThis is a VALIDATION task to verify the work performed by Cursor MM1 Agent for Unified Env Token Pattern Remediation.\n\n## Validation Scope\nVerify that:\n1. All 87 non-compliant scripts have been updated to use shared_core.notion.token_manager\n2. No remaining direct os.getenv('NOTION_TOKEN') patterns exist (except in token_manager itself)\n3. All updated scripts are functional\n4. Changes are documented and committed\n\n## Validation Actions\n1. Run: grep -r \"os.getenv.*NOTION_TOKEN\" --include=\"*.py\" | grep -v token_manager.py | grep -v .venv | wc -l\n   - Expected result: 0 (or very low number for legitimate exceptions)\n2. Run: grep -r \"from shared_core.notion.token_manager import\" --include=\"*.py\" | wc -l\n   - Expected result: Higher than previous audit (was 85)\n3. Test a sample of updated scripts to verify functionality\n4. Review git log for remediation commits\n5. Update Notion issue status to 'Resolved' if validation passes\n\n## Success Criteria\n- [ ] Zero (or documented exceptions) non-compliant patterns remain\n- [ ] All scripts using token_manager import are functional\n- [ ] Git history shows remediation commits\n- [ ] Issue status updated to 'Resolved'\n- [ ] Validation report created\n\n## If Validation Fails\n- Document specific failures\n- Create new handoff to Cursor MM1 Agent with specific remediation tasks\n- Keep issue status as 'Solution In Progress'\n\n## MANDATORY DOCUMENTATION\nCreate validation report documenting:\n- Scripts audited\n- Test results\n- Any exceptions or issues found\n- Final status",
+/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Cursor-MM1/01_inbox/20251219T025100Z__HANDOFF__Codex-MM1__Trigger-Automation-Hardening__Cursor-MM1.json:21:    "Notion creation working with NOTION_TOKEN/ConfigManager and retries",
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_AUDIT_REPORT.md:31:| **R3** | Check `NOTION_TOKEN` (primary) |
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_AUDIT_REPORT.md:32:| **R4** | Check `NOTION_API_TOKEN` (alternative) |
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_AUDIT_REPORT.md:33:| **R5** | Check `VV_AUTOMATIONS_WS_TOKEN` (workspace-specific) |
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_AUDIT_REPORT.md:46:    api_key = os.getenv("NOTION_API_KEY") or os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN")
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_AUDIT_REPORT.md:69:| **R3** | **PRESENT** | Checks `NOTION_TOKEN` |
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_AUDIT_REPORT.md:70:| **R4** | **PRESENT** | Checks `NOTION_API_TOKEN` |
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_AUDIT_REPORT.md:71:| **R5** | **MISSING** | Does NOT check `VV_AUTOMATIONS_WS_TOKEN` |
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_AUDIT_REPORT.md:78:- **Check order differs**: Pattern says NOTION_TOKEN first, but implementation checks NOTION_API_KEY first
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_AUDIT_REPORT.md:88:| File | load_dotenv | NOTION_TOKEN | NOTION_API_TOKEN | VV_AUTOMATIONS_WS_TOKEN | unified_config |
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_AUDIT_REPORT.md:103:| `shared_core/notion/execution_logs.py` | Missing load_dotenv, Missing VV_AUTOMATIONS_WS_TOKEN, Extra NOTION_API_KEY | Primary audit target |
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_AUDIT_REPORT.md:118:1. `shared_core/notion/execution_logs.py` - Missing load_dotenv, VV_AUTOMATIONS_WS_TOKEN
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_AUDIT_REPORT.md:135:| Missing VV_AUTOMATIONS_WS_TOKEN | Multiple files | **MEDIUM** | Workspace-specific deployments may fail |
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_AUDIT_REPORT.md:164:2. **Update token retrieval order and add VV_AUTOMATIONS_WS_TOKEN** (line 64):
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_AUDIT_REPORT.md:167:   api_key = os.getenv("NOTION_API_KEY") or os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN")
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_AUDIT_REPORT.md:170:   api_key = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_AUDIT_REPORT.md:195:| 1 | `shared_core/notion/execution_logs.py` | Missing load_dotenv, Missing VV_AUTOMATIONS_WS_TOKEN, Wrong order, Extra NOTION_API_KEY |
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_AUDIT_REPORT.md:258:    token = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/create_vibes_issue_handoff.py:30:    token = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or os.getenv("NOTION_API_KEY")
+/Users/brianhellemn/Projects/github-production/docs/workflows/oauth_redirect_uri_migration_plan.md:25:   - Verify `GOOGLE_OAUTH_REDIRECT_URI` matches the chosen URI.
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_PATTERN.md:34:- Checks NOTION_TOKEN, NOTION_API_TOKEN, VV_AUTOMATIONS_WS_TOKEN, cache files, and config files
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_PATTERN.md:64:    token = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_PATTERN.md:82:    print("❌ NOTION_TOKEN not found in environment or unified_config")
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_PATTERN.md:96:    return os.getenv("NOTION_TOKEN")  # Won't load from .env files
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_PATTERN.md:102:    return os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_KEY")
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_PATTERN.md:103:    # Missing: VV_AUTOMATIONS_WS_TOKEN check
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_PATTERN.md:107:### ❌ WRONG: Missing VV_AUTOMATIONS_WS_TOKEN
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_PATTERN.md:110:    return os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN")
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_PATTERN.md:111:    # Missing: VV_AUTOMATIONS_WS_TOKEN
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_PATTERN.md:125:1. **NOTION_TOKEN** (primary)
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_PATTERN.md:126:2. **NOTION_API_TOKEN** (alternative)
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_PATTERN.md:127:3. **VV_AUTOMATIONS_WS_TOKEN** (workspace-specific)
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_PATTERN.md:150:- [ ] Check all three env vars: NOTION_TOKEN, NOTION_API_TOKEN, VV_AUTOMATIONS_WS_TOKEN
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_PATTERN.md:169:# Test 1: With NOTION_TOKEN set
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_PATTERN.md:170:export NOTION_TOKEN="test_token"
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_PATTERN.md:174:unset NOTION_TOKEN
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_PATTERN.md:175:unset NOTION_API_TOKEN
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_PATTERN.md:176:unset VV_AUTOMATIONS_WS_TOKEN
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_PATTERN.md:180:# Create .env file with NOTION_TOKEN=test_token
+/Users/brianhellemn/Projects/github-production/notion_task_manager.log:4:2025-12-31 15:33:53,761 - __main__ - ERROR - NOTION_TOKEN not found in environment or unified_config
+/Users/brianhellemn/Projects/github-production/notion_task_manager.log:71648:2026-01-06 09:47:56,911 - __main__ - INFO - Primary Source: Environment variable: NOTION_TOKEN
+/Users/brianhellemn/Projects/github-production/fix_notion_database_issues.py:43:NOTION_TOKEN = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN")
+/Users/brianhellemn/Projects/github-production/fix_notion_database_issues.py:44:if not NOTION_TOKEN:
+/Users/brianhellemn/Projects/github-production/fix_notion_database_issues.py:45:    logger.error("NOTION_TOKEN or NOTION_API_TOKEN environment variable not set")
+/Users/brianhellemn/Projects/github-production/fix_notion_database_issues.py:49:notion = Client(auth=NOTION_TOKEN)
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_GAP_ANALYSIS.md:9:| File | load_dotenv | NOTION_TOKEN | NOTION_API_TOKEN | VV_AUTOMATIONS_WS_TOKEN | unified_config | Compliance |
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_GAP_ANALYSIS.md:33:### Category B: Missing VV_AUTOMATIONS_WS_TOKEN (2 files)
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_GAP_ANALYSIS.md:59:| **P1** | shared_core/notion/execution_logs.py | Add load_dotenv, VV_AUTOMATIONS_WS_TOKEN | Library consumers may fail |
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_GAP_ANALYSIS.md:71:api_key = os.getenv("NOTION_API_KEY") or os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN")
+/Users/brianhellemn/Projects/github-production/docs/ENVIRONMENT_MANAGEMENT_GAP_ANALYSIS.md:76:api_key = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/continuous_task_handoff.py:411:        logger.error("NOTION_TOKEN not found. Cannot proceed.")
+/Users/brianhellemn/Projects/github-production/docs/CRITICAL_SYSTEM_REQUIREMENTS.md:66:    token = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/docs/CRITICAL_SYSTEM_REQUIREMENTS.md:82:3. Check all three env vars: NOTION_TOKEN, NOTION_API_TOKEN, VV_AUTOMATIONS_WS_TOKEN
+/Users/brianhellemn/Projects/github-production/ISSUE_RESOLUTION_PROGRESS.md:108:   - Check for scripts using `eval` or string interpolation with `$NOTION_TOKEN`
+/Users/brianhellemn/Projects/github-production/query_issues.py:27:        os.getenv("NOTION_TOKEN") or
+/Users/brianhellemn/Projects/github-production/query_issues.py:28:        os.getenv("NOTION_API_TOKEN") or
+/Users/brianhellemn/Projects/github-production/query_issues.py:29:        os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/PRODUCTION_MUSIC_DOWNLOAD_WORKFLOW_COMPREHENSIVE_REPORT.md:436:- `NOTION_TOKEN` - Notion API token
+/Users/brianhellemn/Projects/github-production/PRODUCTION_MUSIC_DOWNLOAD_WORKFLOW_COMPREHENSIVE_REPORT.md:543:  - ✅ Configuration verified: TRACKS_DB_ID (27ce7361-6c27-80fb-b40e-fefdd47d6640), PLAYLISTS_DB_ID (27ce7361-6c27-803f-b957-eadbd479f39a), NOTION_TOKEN (SET), SOUNDCLOUD_PROFILE (vibe-vessel)
+/Users/brianhellemn/Projects/github-production/continuous_handoff_orchestrator.py:386:        logger.error("NOTION_TOKEN not found. Cannot proceed.")
+/Users/brianhellemn/Projects/github-production/query_notion_issues_tasks.py:29:    token = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or os.getenv("NOTION_API_KEY")
+/Users/brianhellemn/Projects/github-production/COMPREHENSIVE_VERIFICATION_REPORT.md:113:- ✅ Token retrieval follows standard pattern (`NOTION_TOKEN`, `NOTION_API_TOKEN`, `VV_AUTOMATIONS_WS_TOKEN`)
+/Users/brianhellemn/Projects/github-production/scripts/execute_folder_volume_sync.py:25:# Ensure NOTION_TOKEN is set
+/Users/brianhellemn/Projects/github-production/scripts/execute_folder_volume_sync.py:26:if not os.getenv("NOTION_TOKEN") and not os.getenv("NOTION_API_KEY"):
+/Users/brianhellemn/Projects/github-production/scripts/execute_folder_volume_sync.py:27:    print("ERROR: NOTION_TOKEN or NOTION_API_KEY environment variable not set")
+/Users/brianhellemn/Projects/github-production/execute_notion_workflow.py:109:        os.getenv("NOTION_TOKEN") or
+/Users/brianhellemn/Projects/github-production/execute_notion_workflow.py:110:        os.getenv("NOTION_API_TOKEN") or
+/Users/brianhellemn/Projects/github-production/execute_notion_workflow.py:111:        os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/execute_notion_workflow.py:778:        logger.error("NOTION_TOKEN not found in environment or unified_config")
+/Users/brianhellemn/Projects/github-production/execute_notion_workflow.py:789:                "reason": "NOTION_TOKEN not found",
+/Users/brianhellemn/Projects/github-production/sync_framework/adapters/notion_adapter.py:54:                token = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/create_notion_verification_page.py:38:    token = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/FINAL_VERIFICATION_COMPLETE.md:108:- ✅ Token retrieval follows standard pattern (`NOTION_TOKEN`, `NOTION_API_TOKEN`, `VV_AUTOMATIONS_WS_TOKEN`)
+/Users/brianhellemn/Projects/github-production/reports/SYSTEM_INVENTORY_20260114_052425.json:3105:        "file": "BLOCKER__NOTION_TOKEN_INVALID__20251220.md.RESOLVED",
+/Users/brianhellemn/Projects/github-production/reports/SYSTEM_INVENTORY_20260114_052425.json:3106:        "path": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/Claude-MM1-Agent/02_processed/BLOCKER__NOTION_TOKEN_INVALID__20251220.md.RESOLVED"
+/Users/brianhellemn/Projects/github-production/reports/UNIFIED_ENV_RESOLUTION_SUMMARY_20260113.md:13:- 87 scripts use non-compliant direct `os.getenv('NOTION_TOKEN')` patterns
+/Users/brianhellemn/Projects/github-production/scripts/reprocess_track_with_normalization.py:41:        os.getenv("NOTION_TOKEN") or
+/Users/brianhellemn/Projects/github-production/scripts/reprocess_track_with_normalization.py:42:        os.getenv("NOTION_API_TOKEN") or
+/Users/brianhellemn/Projects/github-production/scripts/reprocess_track_with_normalization.py:43:        os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/reprocess_track_with_normalization.py:47:NOTION_TOKEN = get_notion_token()
+/Users/brianhellemn/Projects/github-production/scripts/reprocess_track_with_normalization.py:50:if not NOTION_TOKEN:
+/Users/brianhellemn/Projects/github-production/scripts/reprocess_track_with_normalization.py:51:    print("❌ NOTION_TOKEN not found")
+/Users/brianhellemn/Projects/github-production/scripts/reprocess_track_with_normalization.py:58:        "Authorization": f"Bearer {NOTION_TOKEN}",
+/Users/brianhellemn/Projects/github-production/HANDOFF_REVIEW_TASKS_SUMMARY.md:116:- `NOTION_TOKEN` environment variable set
+/Users/brianhellemn/Projects/github-production/scripts/clear_eagle_id.py:29:    return (os.getenv('NOTION_TOKEN') or os.getenv('NOTION_API_TOKEN') or
+/Users/brianhellemn/Projects/github-production/scripts/clear_eagle_id.py:30:            os.getenv('VV_AUTOMATIONS_WS_TOKEN') or unified_config.get('notion_token'))
+/Users/brianhellemn/Projects/github-production/scripts/create_unified_env_handoffs.py:117:   - Missing `VV_AUTOMATIONS_WS_TOKEN` check
+/Users/brianhellemn/Projects/github-production/scripts/create_unified_env_handoffs.py:118:   - Has: `NOTION_API_KEY`, `NOTION_TOKEN`, `NOTION_API_TOKEN` checks
+/Users/brianhellemn/Projects/github-production/shared_core/logging/__init__.py:703:        notion = Client(auth=os.environ["NOTION_TOKEN"])
+/Users/brianhellemn/Projects/github-production/scripts/music_track_sync_auto_detect.py:48:    notion_token = os.getenv("NOTION_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/music_track_sync_auto_detect.py:50:        print("WARNING: NOTION_TOKEN not set, skipping Notion queries")
+/Users/brianhellemn/Projects/github-production/scripts/music_track_sync_auto_detect.py:66:            token = os.getenv("NOTION_TOKEN")
+/Users/brianhellemn/Projects/github-production/AGENT_FUNCTION_ASSIGNMENTS_GUIDE.md:158:export NOTION_TOKEN="your_notion_token_here"
+/Users/brianhellemn/Projects/github-production/AGENT_FUNCTION_ASSIGNMENTS_GUIDE.md:280:### Issue: NOTION_TOKEN not set
+/Users/brianhellemn/Projects/github-production/AGENT_FUNCTION_ASSIGNMENTS_GUIDE.md:281:**Solution:** Export NOTION_TOKEN or NOTION_API_KEY environment variable
+/Users/brianhellemn/Projects/github-production/scripts/create_codex_mm1_handoff_task.py:25:    NOTION_TOKEN = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_KEY")
+/Users/brianhellemn/Projects/github-production/scripts/create_codex_mm1_handoff_task.py:26:    if NOTION_TOKEN:
+/Users/brianhellemn/Projects/github-production/scripts/create_codex_mm1_handoff_task.py:27:        notion = Client(auth=NOTION_TOKEN)
+/Users/brianhellemn/Projects/github-production/shared_core/workflows/deduplication_fingerprint_workflow.py:796:                os.getenv("NOTION_TOKEN") or
+/Users/brianhellemn/Projects/github-production/shared_core/workflows/deduplication_fingerprint_workflow.py:797:                os.getenv("NOTION_API_TOKEN") or
+/Users/brianhellemn/Projects/github-production/shared_core/workflows/deduplication_fingerprint_workflow.py:798:                os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/shared_core/notion/issues_questions.py:38:    api_key = os.getenv("NOTION_API_KEY") or os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/issues_cleanup.py:28:        token = os.getenv('NOTION_TOKEN')
+/Users/brianhellemn/Projects/github-production/scripts/issues_cleanup.py:30:        print("ERROR: NOTION_TOKEN not set")
+/Users/brianhellemn/Projects/github-production/scripts/create_gas_scripts_production_handoffs.py:44:    return os.getenv("NOTION_API_KEY") or os.getenv("NOTION_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/create_gas_scripts_production_handoffs.py:213:        print("❌ NOTION_API_KEY or NOTION_TOKEN not set")
+/Users/brianhellemn/Projects/github-production/scripts/resolve_workflow_spec_issue.py:83:        print("ERROR: NOTION_TOKEN not found")
+/Users/brianhellemn/Projects/github-production/scripts/unified_config_fallback.py:29:        "NOTION_TOKEN": "notion_token",
+/Users/brianhellemn/Projects/github-production/scripts/unified_config_fallback.py:30:        "NOTION_API_TOKEN": "notion_token",
+/Users/brianhellemn/Projects/github-production/scripts/unified_config_fallback.py:31:        "VV_AUTOMATIONS_WS_TOKEN": "notion_token",
+/Users/brianhellemn/Projects/github-production/scripts/unified_config_fallback.py:55:        os.getenv("NOTION_TOKEN") or
+/Users/brianhellemn/Projects/github-production/scripts/unified_config_fallback.py:56:        os.getenv("NOTION_API_TOKEN") or
+/Users/brianhellemn/Projects/github-production/scripts/unified_config_fallback.py:57:        os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/verify_music_workflow_config.py:62:        ("NOTION_TOKEN", None, True),
+/Users/brianhellemn/Projects/github-production/shared_core/notion/execution_logs.py:91:    api_key = os.getenv("NOTION_API_KEY") or os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/check_notion_properties.py:33:        os.getenv("NOTION_TOKEN") or
+/Users/brianhellemn/Projects/github-production/scripts/check_notion_properties.py:34:        os.getenv("NOTION_API_TOKEN") or
+/Users/brianhellemn/Projects/github-production/scripts/check_notion_properties.py:35:        os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/check_notion_properties.py:38:NOTION_TOKEN = get_notion_token()
+/Users/brianhellemn/Projects/github-production/scripts/check_notion_properties.py:41:if not NOTION_TOKEN:
+/Users/brianhellemn/Projects/github-production/scripts/check_notion_properties.py:42:    print("❌ NOTION_TOKEN not found")
+/Users/brianhellemn/Projects/github-production/scripts/check_notion_properties.py:48:        "Authorization": f"Bearer {NOTION_TOKEN}",
+/Users/brianhellemn/Projects/github-production/scripts/create_fingerprint_implementation_notion_entries.py:66:        os.getenv("NOTION_TOKEN") or
+/Users/brianhellemn/Projects/github-production/scripts/create_fingerprint_implementation_notion_entries.py:67:        os.getenv("NOTION_API_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/create_fingerprint_implementation_notion_entries.py:71:        raise ValueError("NOTION_TOKEN not found in token_manager or environment")
+/Users/brianhellemn/Projects/github-production/create_issue.py:5:NOTION_TOKEN = "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"
+/Users/brianhellemn/Projects/github-production/create_issue.py:9:    "Authorization": f"Bearer {NOTION_TOKEN}",
+/Users/brianhellemn/Projects/github-production/shared_core/notion/token_manager.py:19:1. Environment variable: NOTION_TOKEN
+/Users/brianhellemn/Projects/github-production/shared_core/notion/token_manager.py:20:2. Environment variable: NOTION_API_TOKEN
+/Users/brianhellemn/Projects/github-production/shared_core/notion/token_manager.py:21:3. Environment variable: VV_AUTOMATIONS_WS_TOKEN
+/Users/brianhellemn/Projects/github-production/shared_core/notion/token_manager.py:46:    "NOTION_TOKEN",
+/Users/brianhellemn/Projects/github-production/shared_core/notion/token_manager.py:47:    "NOTION_API_TOKEN",
+/Users/brianhellemn/Projects/github-production/shared_core/notion/token_manager.py:48:    "VV_AUTOMATIONS_WS_TOKEN"
+/Users/brianhellemn/Projects/github-production/shared_core/notion/token_manager.py:71:            # Handle format: NOTION_TOKEN=xxx or just xxx
+/Users/brianhellemn/Projects/github-production/shared_core/notion/token_manager.py:72:            if content.startswith("NOTION_TOKEN="):
+/Users/brianhellemn/Projects/github-production/shared_core/notion/token_manager.py:128:    1. Environment variable: NOTION_TOKEN
+/Users/brianhellemn/Projects/github-production/shared_core/notion/token_manager.py:129:    2. Environment variable: NOTION_API_TOKEN
+/Users/brianhellemn/Projects/github-production/shared_core/notion/token_manager.py:130:    3. Environment variable: VV_AUTOMATIONS_WS_TOKEN
+/Users/brianhellemn/Projects/github-production/shared_core/notion/token_manager.py:169:        "Please set NOTION_TOKEN environment variable or create ~/.notion_token_cache"
+/Users/brianhellemn/Projects/github-production/shared_core/notion/token_manager.py:208:            "Please set NOTION_TOKEN environment variable or create ~/.notion_token_cache"
+/Users/brianhellemn/Projects/github-production/shared_core/notion/token_manager.py:329:                    if line.startswith("NOTION_TOKEN=") or line.startswith("NOTION_API_KEY="):
+/Users/brianhellemn/Projects/github-production/shared_core/notion/token_manager.py:437:            TOKEN_CACHE_FILE.write_text(f"NOTION_TOKEN={token}")
+/Users/brianhellemn/Projects/github-production/shared_core/notion/token_manager.py:538:        print("  1. Set NOTION_TOKEN environment variable")
+/Users/brianhellemn/Projects/github-production/scripts/music_track_sync_workflow_prod.py:105:            token = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or unified_config.get("notion_token")
+/Users/brianhellemn/Projects/github-production/scripts/update_issue_status.py:25:        print("ERROR: NOTION_TOKEN not found")
+/Users/brianhellemn/Projects/github-production/scripts/verify_completion_and_document.py:64:    token = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/create_fingerprint_audit_notion_task.py:37:        token = os.getenv("NOTION_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/create_fingerprint_audit_notion_task.py:40:        print("NOTION_TOKEN not found in token_manager or environment")
+/Users/brianhellemn/Projects/github-production/scripts/create_review_handoff_tasks.py:29:    token = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/create_review_handoff_tasks.py:172:        print("ERROR: NOTION_TOKEN not found in environment", file=sys.stderr)
+/Users/brianhellemn/Projects/github-production/scripts/verify_music_workflow_completion.py:77:            notion_token = os.getenv("NOTION_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/verify_music_workflow_completion.py:80:            print("  ⚠️  NOTION_TOKEN not set, skipping Notion verification")
+/Users/brianhellemn/Projects/github-production/scripts/verify_music_workflow_completion.py:81:            return {"status": "skipped", "reason": "NOTION_TOKEN not set"}
+/Users/brianhellemn/Projects/github-production/scripts/review_agent_functions_compliance.py:47:    return os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/review_agent_functions_compliance.py:53:        print("ERROR: NOTION_TOKEN not set", file=sys.stderr)
+/Users/brianhellemn/Projects/github-production/scripts/check_volumes_db_schema.py:8:notion = Client(auth=os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_KEY"))
+/Users/brianhellemn/Projects/github-production/scripts/update_spotify_tasks_and_create_handoffs.py:93:        print("❌ NOTION_TOKEN not found")
+/Users/brianhellemn/Projects/github-production/scripts/sync_soundcloud_track.py:60:        os.getenv("NOTION_TOKEN") or
+/Users/brianhellemn/Projects/github-production/scripts/sync_soundcloud_track.py:61:        os.getenv("NOTION_API_TOKEN") or
+/Users/brianhellemn/Projects/github-production/scripts/sync_soundcloud_track.py:62:        os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/sync_soundcloud_track.py:87:NOTION_TOKEN = get_notion_token()
+/Users/brianhellemn/Projects/github-production/scripts/sync_soundcloud_track.py:94:if not NOTION_TOKEN:
+/Users/brianhellemn/Projects/github-production/scripts/sync_soundcloud_track.py:95:    print("❌ NOTION_TOKEN not found in environment or unified_config")
+/Users/brianhellemn/Projects/github-production/scripts/sync_soundcloud_track.py:96:    print("   Checked: NOTION_TOKEN, NOTION_API_TOKEN, VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/sync_soundcloud_track.py:115:    NOTION_TOKEN,
+/Users/brianhellemn/Projects/github-production/scripts/validate_env_management_patterns.py:39:        r'os\.getenv\s*\(\s*["\']NOTION_TOKEN["\']\s*\)',
+/Users/brianhellemn/Projects/github-production/scripts/validate_env_management_patterns.py:40:        "Direct os.getenv('NOTION_TOKEN') - should use shared_core.notion.token_manager"
+/Users/brianhellemn/Projects/github-production/scripts/validate_env_management_patterns.py:43:        r'os\.getenv\s*\(\s*["\']NOTION_API_TOKEN["\']\s*\)',
+/Users/brianhellemn/Projects/github-production/scripts/validate_env_management_patterns.py:44:        "Direct os.getenv('NOTION_API_TOKEN') - should use shared_core.notion.token_manager"
+/Users/brianhellemn/Projects/github-production/scripts/validate_env_management_patterns.py:47:        r'os\.getenv\s*\(\s*["\']VV_AUTOMATIONS_WS_TOKEN["\']\s*\)',
+/Users/brianhellemn/Projects/github-production/scripts/validate_env_management_patterns.py:48:        "Direct os.getenv('VV_AUTOMATIONS_WS_TOKEN') - should use shared_core.notion.token_manager"
+/Users/brianhellemn/Projects/github-production/scripts/add_soundcloud_track_to_notion.py:53:        os.getenv("NOTION_TOKEN") or
+/Users/brianhellemn/Projects/github-production/scripts/add_soundcloud_track_to_notion.py:54:        os.getenv("NOTION_API_TOKEN") or
+/Users/brianhellemn/Projects/github-production/scripts/add_soundcloud_track_to_notion.py:55:        os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/add_soundcloud_track_to_notion.py:59:NOTION_TOKEN = get_notion_token()
+/Users/brianhellemn/Projects/github-production/scripts/add_soundcloud_track_to_notion.py:66:if not NOTION_TOKEN:
+/Users/brianhellemn/Projects/github-production/scripts/add_soundcloud_track_to_notion.py:67:    print("❌ NOTION_TOKEN not found in environment or unified_config")
+/Users/brianhellemn/Projects/github-production/scripts/add_soundcloud_track_to_notion.py:68:    print("   Checked: NOTION_TOKEN, NOTION_API_TOKEN, VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/add_soundcloud_track_to_notion.py:87:    NOTION_TOKEN,
+/Users/brianhellemn/Projects/github-production/scripts/create_handoff_files_for_spotify_review_tasks.py:20:        print("❌ NOTION_TOKEN not found. Cannot proceed.")
+/Users/brianhellemn/Projects/github-production/scripts/create_database_refinement_project.py:75:    return os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/create_database_refinement_project.py:267:        print("❌ NOTION_TOKEN not found in environment or unified_config")
+/Users/brianhellemn/Projects/github-production/scripts/check_volumes_database.py:8:notion = Client(auth=os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_KEY"))
+/Users/brianhellemn/Projects/github-production/scripts/update_task_status_for_handoff.py:46:    return os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/update_task_status_for_handoff.py:112:        print("❌ NOTION_TOKEN not found")
+/Users/brianhellemn/Projects/github-production/review_notion_databases.py:46:NOTION_TOKEN = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN")
+/Users/brianhellemn/Projects/github-production/review_notion_databases.py:47:if not NOTION_TOKEN:
+/Users/brianhellemn/Projects/github-production/review_notion_databases.py:48:    logger.error("NOTION_TOKEN or NOTION_API_TOKEN environment variable not set")
+/Users/brianhellemn/Projects/github-production/review_notion_databases.py:52:notion = Client(auth=NOTION_TOKEN)
+/Users/brianhellemn/Projects/github-production/scripts/create_plans_audit_notion_items.py:359:        print("ERROR: NOTION_TOKEN not set", file=sys.stderr)
+/Users/brianhellemn/Projects/github-production/scripts/create_handoff_review_tasks.py:78:    return os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/create_handoff_review_tasks.py:276:        print("❌ NOTION_TOKEN not found")
+/Users/brianhellemn/Projects/github-production/scripts/verify_production_workflow_execution.py:43:            notion_token = os.getenv("NOTION_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/verify_production_workflow_execution.py:46:            return {"error": "NOTION_TOKEN not set"}
+/Users/brianhellemn/Projects/github-production/scripts/notion_script_runner_v1.0_backup_20251023.py:108:        token = os.getenv("NOTION_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/notion_script_runner_review.md:205:export NOTION_TOKEN="your_token_here"
+/Users/brianhellemn/Projects/github-production/FINAL_COMPLETION_VERIFICATION_REPORT.md:111:- ✅ Token retrieval follows standard pattern (`NOTION_TOKEN`, `NOTION_API_TOKEN`, `VV_AUTOMATIONS_WS_TOKEN`)
+/Users/brianhellemn/Projects/github-production/scripts/batch_fingerprint_embedding.py:1944:    elif get_notion_client and (get_notion_token or os.getenv("NOTION_TOKEN")):
+/Users/brianhellemn/Projects/github-production/scripts/report_environment_management_issue.py:63:    return os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/report_environment_management_issue.py:160:        print("❌ NOTION_TOKEN not found in environment or unified_config")
+/Users/brianhellemn/Projects/github-production/scripts/report_environment_management_issue.py:178:3. Missing `VV_AUTOMATIONS_WS_TOKEN` check
+/Users/brianhellemn/Projects/github-production/scripts/report_environment_management_issue.py:250:- Must check: NOTION_TOKEN, NOTION_API_TOKEN, VV_AUTOMATIONS_WS_TOKEN
+/Users/brianhellemn/Projects/github-production/scripts/check_agent_workflows_schema.py:35:        os.getenv("NOTION_TOKEN") or
+/Users/brianhellemn/Projects/github-production/scripts/check_agent_workflows_schema.py:36:        os.getenv("NOTION_API_TOKEN") or
+/Users/brianhellemn/Projects/github-production/scripts/create_csv_optimization_handoff_task.py:56:        return os.getenv("NOTION_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/create_csv_optimization_handoff_task.py:292:        print("❌ NOTION_TOKEN not found in environment or unified_config")
+/Users/brianhellemn/Projects/github-production/CONTINUOUS_TASK_HANDOFF_README.md:103:- Notion API token in environment (`NOTION_TOKEN`)
+/Users/brianhellemn/Projects/github-production/DRIVESHEETSSYNC_PROJECT_STRUCTURE_IMPLEMENTATION.md:58:   export NOTION_TOKEN="your_notion_token_here"
+/Users/brianhellemn/Projects/github-production/DRIVESHEETSSYNC_PROJECT_STRUCTURE_IMPLEMENTATION.md:65:   python3 -c "import os; print('Token set:', bool(os.getenv('NOTION_TOKEN') or os.getenv('NOTION_API_KEY')))"
+/Users/brianhellemn/Projects/github-production/DRIVESHEETSSYNC_PROJECT_STRUCTURE_IMPLEMENTATION.md:350:1. **Set NOTION_TOKEN environment variable**
+/Users/brianhellemn/Projects/github-production/DRIVESHEETSSYNC_PROJECT_STRUCTURE_IMPLEMENTATION.md:377:### Issue: NOTION_TOKEN not set
+/Users/brianhellemn/Projects/github-production/DRIVESHEETSSYNC_PROJECT_STRUCTURE_IMPLEMENTATION.md:378:**Solution:** Export NOTION_TOKEN or NOTION_API_KEY environment variable
+/Users/brianhellemn/Projects/github-production/scripts/README_djay_pro_export.md:127:- `NOTION_TOKEN` - Your Notion API token
+/Users/brianhellemn/Projects/github-production/scripts/create_outstanding_tasks_project.py:150:3. Locate and scrub any launchd plist files with hardcoded NOTION_API_TOKEN
+/Users/brianhellemn/Projects/github-production/scripts/test_spotify_track_query.py:19:        token = os.getenv('NOTION_TOKEN')
+/Users/brianhellemn/Projects/github-production/main.py:244:    1. Environment variable: NOTION_TOKEN
+/Users/brianhellemn/Projects/github-production/main.py:245:    2. Environment variable: NOTION_API_TOKEN
+/Users/brianhellemn/Projects/github-production/main.py:246:    3. Environment variable: VV_AUTOMATIONS_WS_TOKEN
+/Users/brianhellemn/Projects/github-production/main.py:262:        os.getenv("NOTION_TOKEN") or
+/Users/brianhellemn/Projects/github-production/main.py:263:        os.getenv("NOTION_API_TOKEN") or
+/Users/brianhellemn/Projects/github-production/main.py:264:        os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/validate_drivesheetssync_2way.py:292:                fix_action="Ensure NOTION_TOKEN is set and valid"
+/Users/brianhellemn/Projects/github-production/scripts/logs/issues_cleanup_summary_20260103T104104Z.json:3969:      "name": "[Blocker] Codex CLI missing NOTION_TOKEN/NOTION_API_KEY \u2014 2025-12-17",
+/Users/brianhellemn/Projects/github-production/scripts/logs/issues_cleanup_summary_20260103T104154Z.json:3969:      "name": "[Blocker] Codex CLI missing NOTION_TOKEN/NOTION_API_KEY \u2014 2025-12-17",
+/Users/brianhellemn/Projects/github-production/test_results/notion_sync_test_20251024_011702.json:4:    "NOTION_TOKEN": {
+/Users/brianhellemn/Projects/github-production/scripts/check_issues_db_schema.py:8:notion = Client(auth=os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_KEY"))
+/Users/brianhellemn/Projects/github-production/scripts/create_unified_issues_entry.py:26:    NOTION_TOKEN = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_KEY")
+/Users/brianhellemn/Projects/github-production/scripts/create_unified_issues_entry.py:27:    if NOTION_TOKEN:
+/Users/brianhellemn/Projects/github-production/scripts/create_unified_issues_entry.py:28:        notion = Client(auth=NOTION_TOKEN)
+/Users/brianhellemn/Projects/github-production/scripts/logs/issues_cleanup_summary_20260103T111259Z.json:3405:      "name": "[Blocker] Codex CLI missing NOTION_TOKEN/NOTION_API_KEY \u2014 2025-12-17",
+/Users/brianhellemn/Projects/github-production/reassign_codex_mm1_tasks.py:278:        logger.error("NOTION_TOKEN not found. Cannot proceed.")
+/Users/brianhellemn/Projects/github-production/scripts/create_compliance_issues.py:22:    token = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/create_compliance_issues.py:106:        print("ERROR: NOTION_TOKEN not set", file=sys.stderr)
+/Users/brianhellemn/Projects/github-production/scripts/CONTINUOUS_TASK_HANDOFF_README.md:88:- `NOTION_TOKEN` or `NOTION_API_TOKEN`: Required for Notion API access
+/Users/brianhellemn/Projects/github-production/scripts/create_music_workflow_gap_tasks.py:33:            token = os.getenv("NOTION_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/create_music_workflow_gap_tasks.py:35:            print("ERROR: NOTION_TOKEN not set")
+/Users/brianhellemn/Projects/github-production/scripts/remediate_tracks_artist_metadata.py:93:        token = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN")
+/Users/brianhellemn/Projects/github-production/reports/CURSOR_MM1_AGENT_AUDIT_REPORT_20260112.md:130:3. **Multiple env vars exist**: `NOTION_TOKEN`, `NOTION_API_TOKEN`, `VV_AUTOMATIONS_WS_TOKEN`
+/Users/brianhellemn/Projects/github-production/reports/CURSOR_MM1_AGENT_AUDIT_REPORT_20260112.md:172:   - Audit ALL references to NOTION_TOKEN, NOTION_API_TOKEN, VV_AUTOMATIONS_WS_TOKEN
+/Users/brianhellemn/Projects/github-production/scripts/create_unified_env_management_project.py:79:    return os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/create_unified_env_management_project.py:240:        print("❌ NOTION_TOKEN not found in environment or unified_config")
+/Users/brianhellemn/Projects/github-production/scripts/create_unified_env_management_project.py:264:- Missing: `VV_AUTOMATIONS_WS_TOKEN` check
+/Users/brianhellemn/Projects/github-production/scripts/create_unified_env_management_project.py:265:- Has: `NOTION_API_KEY`, `NOTION_TOKEN`, `NOTION_API_TOKEN` checks
+/Users/brianhellemn/Projects/github-production/scripts/create_unified_env_management_project.py:311:- Must check: NOTION_TOKEN, NOTION_API_TOKEN, VV_AUTOMATIONS_WS_TOKEN
+/Users/brianhellemn/Projects/github-production/report_prompt_failure.py:44:        os.getenv("NOTION_TOKEN") or 
+/Users/brianhellemn/Projects/github-production/report_prompt_failure.py:45:        os.getenv("NOTION_API_TOKEN") or 
+/Users/brianhellemn/Projects/github-production/report_prompt_failure.py:46:        os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/report_prompt_failure.py:211:        logger.error("NOTION_TOKEN not found in environment or unified_config")
+/Users/brianhellemn/Projects/github-production/scripts/notion_script_runner.py:109:        token = os.getenv("NOTION_TOKEN")
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_webhook_status_monitor.py:64:        self.notion_token = notion_token or os.getenv("NOTION_API_TOKEN") or os.getenv("NOTION_TOKEN")
+/Users/brianhellemn/Projects/github-production/services/webhook_server/webhook_dashboard_service.py:40:    NOTION_TOKEN = os.getenv("NOTION_TOKEN")
+/Users/brianhellemn/Projects/github-production/services/webhook_server/webhook_dashboard_service.py:41:    EXECUTION_LOGS_AVAILABLE = bool(NOTION_TOKEN)
+/Users/brianhellemn/Projects/github-production/services/webhook_server/webhook_dashboard_service.py:43:        notion_client = Client(auth=NOTION_TOKEN)
+/Users/brianhellemn/Projects/github-production/scripts/music_library_remediation.py:1367:    if get_notion_client and (get_notion_token or os.getenv("NOTION_TOKEN")):
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_webhook_status_monitor.py:64:        self.notion_token = notion_token or os.getenv("NOTION_API_TOKEN") or os.getenv("NOTION_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/manage_djay_recordings.py:89:        return os.getenv("NOTION_TOKEN") or os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/webhook-server/webhook_dashboard_service.py:40:    NOTION_TOKEN = os.getenv("NOTION_TOKEN")
+/Users/brianhellemn/Projects/github-production/webhook-server/webhook_dashboard_service.py:41:    EXECUTION_LOGS_AVAILABLE = bool(NOTION_TOKEN)
+/Users/brianhellemn/Projects/github-production/webhook-server/webhook_dashboard_service.py:43:        notion_client = Client(auth=NOTION_TOKEN)
+/Users/brianhellemn/Projects/github-production/scripts/create_drivesheetsync_project_structure.py:62:    return os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/create_drivesheetsync_project_structure.py:216:        print("❌ NOTION_TOKEN not found in environment or unified_config")
+/Users/brianhellemn/Projects/github-production/scripts/populate_agent_function_assignments.py:106:    return os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN") or os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/populate_agent_function_assignments.py:242:        print("❌ NOTION_TOKEN not found in environment or unified_config")
+/Users/brianhellemn/Projects/github-production/scripts/comprehensive_system_inventory.py:46:    NOTION_TOKEN = os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_KEY")
+/Users/brianhellemn/Projects/github-production/scripts/comprehensive_system_inventory.py:47:    NOTION_AVAILABLE = bool(NOTION_TOKEN)
+/Users/brianhellemn/Projects/github-production/scripts/comprehensive_system_inventory.py:49:        notion = Client(auth=NOTION_TOKEN)
+/Users/brianhellemn/Projects/github-production/scripts/force_reprocess_with_normalization.py:41:        os.getenv("NOTION_TOKEN") or
+/Users/brianhellemn/Projects/github-production/scripts/force_reprocess_with_normalization.py:42:        os.getenv("NOTION_API_TOKEN") or
+/Users/brianhellemn/Projects/github-production/scripts/force_reprocess_with_normalization.py:43:        os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/force_reprocess_with_normalization.py:46:NOTION_TOKEN = get_notion_token()
+/Users/brianhellemn/Projects/github-production/scripts/force_reprocess_with_normalization.py:49:if not NOTION_TOKEN:
+/Users/brianhellemn/Projects/github-production/scripts/force_reprocess_with_normalization.py:50:    print("❌ NOTION_TOKEN not found")
+/Users/brianhellemn/Projects/github-production/scripts/force_reprocess_with_normalization.py:57:        "Authorization": f"Bearer {NOTION_TOKEN}",
+/Users/brianhellemn/Projects/github-production/scripts/force_reprocess_with_normalization.py:121:        "Authorization": f"Bearer {NOTION_TOKEN}",
+/Users/brianhellemn/Projects/github-production/scripts/djay_pro_library_export.py:145:NOTION_TOKEN = (
+/Users/brianhellemn/Projects/github-production/scripts/djay_pro_library_export.py:147:    os.getenv("NOTION_TOKEN") or 
+/Users/brianhellemn/Projects/github-production/scripts/djay_pro_library_export.py:148:    os.getenv("NOTION_API_TOKEN") or 
+/Users/brianhellemn/Projects/github-production/scripts/djay_pro_library_export.py:149:    os.getenv("VV_AUTOMATIONS_WS_TOKEN") or
+/Users/brianhellemn/Projects/github-production/scripts/djay_pro_library_export.py:846:                token=NOTION_TOKEN,
+/Users/brianhellemn/Projects/github-production/scripts/djay_pro_library_export.py:864:                workspace_logger.warning("   Required: NOTION_TOKEN and TRACKS_DB_ID")
+/Users/brianhellemn/Projects/github-production/services/webhook_server/linear_github_orchestrator.py:116:        self.notion_token = notion_token or os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN")
+/Users/brianhellemn/Projects/github-production/services/webhook_server/linear_github_orchestrator.py:118:            raise RuntimeError("NOTION_TOKEN or NOTION_API_TOKEN environment variable required")
+/Users/brianhellemn/Projects/github-production/sync_folders_volumes_to_notion.py:11:- NOTION_TOKEN: Notion API token
+/Users/brianhellemn/Projects/github-production/sync_folders_volumes_to_notion.py:56:NOTION_TOKEN = os.getenv("NOTION_TOKEN")
+/Users/brianhellemn/Projects/github-production/sync_folders_volumes_to_notion.py:60:if not NOTION_TOKEN:
+/Users/brianhellemn/Projects/github-production/sync_folders_volumes_to_notion.py:61:    logger.error("NOTION_TOKEN environment variable not set")
+/Users/brianhellemn/Projects/github-production/sync_folders_volumes_to_notion.py:73:notion = Client(auth=NOTION_TOKEN)
+/Users/brianhellemn/Projects/github-production/webhook-server/google_oauth_handler.py:26:GOOGLE_OAUTH_SCOPES = [
+/Users/brianhellemn/Projects/github-production/webhook-server/google_oauth_handler.py:35:# Use GOOGLE_OAUTH_CLIENT_SECRETS_FILE to specify the client_secret JSON file
+/Users/brianhellemn/Projects/github-production/webhook-server/google_oauth_handler.py:38:    'GOOGLE_OAUTH_CLIENT_SECRETS_FILE',
+/Users/brianhellemn/Projects/github-production/webhook-server/google_oauth_handler.py:40:        'GOOGLE_OAUTH_CREDENTIALS_PATH',  # Legacy env var for backward compatibility
+/Users/brianhellemn/Projects/github-production/webhook-server/google_oauth_handler.py:44:DEFAULT_TOKEN_DIR = os.getenv('GOOGLE_OAUTH_TOKEN_DIR', '/Users/brianhellemn/.credentials')
+/Users/brianhellemn/Projects/github-production/webhook-server/google_oauth_handler.py:47:DEFAULT_REDIRECT_URI = os.getenv('GOOGLE_OAUTH_REDIRECT_URI', 'http://localhost:5001/auth/google/callback')
+/Users/brianhellemn/Projects/github-production/webhook-server/google_oauth_handler.py:69:        self.scopes = scopes or GOOGLE_OAUTH_SCOPES
+/Users/brianhellemn/Projects/github-production/scripts/sync_soundcloud_playlist.py:61:        os.getenv("NOTION_TOKEN") or
+/Users/brianhellemn/Projects/github-production/scripts/sync_soundcloud_playlist.py:62:        os.getenv("NOTION_API_TOKEN") or
+/Users/brianhellemn/Projects/github-production/scripts/sync_soundcloud_playlist.py:63:        os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/sync_soundcloud_playlist.py:88:NOTION_TOKEN = get_notion_token()
+/Users/brianhellemn/Projects/github-production/scripts/sync_soundcloud_playlist.py:101:if not NOTION_TOKEN:
+/Users/brianhellemn/Projects/github-production/scripts/sync_soundcloud_playlist.py:102:    print("❌ NOTION_TOKEN not found in environment or unified_config")
+/Users/brianhellemn/Projects/github-production/scripts/sync_soundcloud_playlist.py:103:    print("   Checked: NOTION_TOKEN, NOTION_API_TOKEN, VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/scripts/sync_soundcloud_playlist.py:123:    NOTION_TOKEN,
+/Users/brianhellemn/Projects/github-production/services/webhook_server/google_oauth_handler.py:26:GOOGLE_OAUTH_SCOPES = [
+/Users/brianhellemn/Projects/github-production/services/webhook_server/google_oauth_handler.py:35:# Use GOOGLE_OAUTH_CLIENT_SECRETS_FILE to specify the client_secret JSON file
+/Users/brianhellemn/Projects/github-production/services/webhook_server/google_oauth_handler.py:38:    'GOOGLE_OAUTH_CLIENT_SECRETS_FILE',
+/Users/brianhellemn/Projects/github-production/services/webhook_server/google_oauth_handler.py:40:        'GOOGLE_OAUTH_CREDENTIALS_PATH',  # Legacy env var for backward compatibility
+/Users/brianhellemn/Projects/github-production/services/webhook_server/google_oauth_handler.py:44:DEFAULT_TOKEN_DIR = os.getenv('GOOGLE_OAUTH_TOKEN_DIR', '/Users/brianhellemn/.credentials')
+/Users/brianhellemn/Projects/github-production/services/webhook_server/google_oauth_handler.py:47:DEFAULT_REDIRECT_URI = os.getenv('GOOGLE_OAUTH_REDIRECT_URI', 'http://localhost:5001/auth/google/callback')
+/Users/brianhellemn/Projects/github-production/services/webhook_server/google_oauth_handler.py:69:        self.scopes = scopes or GOOGLE_OAUTH_SCOPES
+/Users/brianhellemn/Projects/github-production/scripts/check_agent_tasks_schema.py:8:notion = Client(auth=os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_KEY"))
+/Users/brianhellemn/Projects/github-production/create_eagle_merge_completion_handoff.py:67:        return os.getenv("NOTION_TOKEN")
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:31:- Configure via GOOGLE_OAUTH_CLIENT_SECRETS_FILE and GOOGLE_OAUTH_REDIRECT_URI env vars
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:141:    GOOGLE_OAUTH_AVAILABLE = True
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:145:    GOOGLE_OAUTH_AVAILABLE = False
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:946:        "notion_api_token": pick("notion_api_token", "NOTION_API_TOKEN"),
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:975:NOTION_TOKEN = SERVER_CONFIG.get("notion_api_token")
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:1000:if not NOTION_TOKEN:
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:1001:    raise SystemExit("❌  Set NOTION_API_TOKEN in your environment")
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:1003:notion = Client(auth=NOTION_TOKEN)
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:1008:    logging_manager = NotionLoggingManager(NOTION_TOKEN)
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:1048:            notion_token=NOTION_TOKEN,
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:1080:#   - GOOGLE_OAUTH_CLIENT_SECRETS_FILE: Full path to client_secret JSON file
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:1082:#   - GOOGLE_OAUTH_REDIRECT_URI: OAuth redirect URI (default: http://localhost:5001/auth/google/callback)
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:1092:if GOOGLE_OAUTH_AVAILABLE:
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:1095:        redirect_uri = os.getenv('GOOGLE_OAUTH_REDIRECT_URI')
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:1100:        client_secrets_file = os.getenv('GOOGLE_OAUTH_CLIENT_SECRETS_FILE')
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:1173:    if not GOOGLE_OAUTH_AVAILABLE or not google_oauth_handler:
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:1205:    if not GOOGLE_OAUTH_AVAILABLE or not google_oauth_handler:
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:1392:    if not GOOGLE_OAUTH_AVAILABLE or not google_oauth_handler:
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:3190:#   export GOOGLE_OAUTH_CLIENT_SECRETS_FILE="/Users/brianhellemn/Library/CloudStorage/GoogleDrive-vibe.vessel.io@gmail.com/My Drive/VibeVessel-Internal-WS-gd/database-parent-page/scripts/github-dev/credentials/google-oauth/client_secret_797362328200-ki5cbaoauictkugd87mm8u70o75euvqk.apps.googleusercontent.com.json"
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:3192:#   export GOOGLE_OAUTH_REDIRECT_URI="http://localhost:5001/auth/google/callback"
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:3260:#   → Verify GOOGLE_OAUTH_CLIENT_SECRETS_FILE points to the correct JSON file
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:3264:#   → Verify the path in GOOGLE_OAUTH_CLIENT_SECRETS_FILE is correct
+/Users/brianhellemn/Projects/github-production/services/webhook_server/notion_event_subscription_webhook_server_v4_enhanced.py:3385:    print(f"🔑 Notion token: {'✅ Set' if NOTION_TOKEN else '❌ Missing'}")
+/Users/brianhellemn/Projects/github-production/unified_config.py:211:        "notion_token": get_env_value("NOTION_TOKEN") or get_env_value("NOTION_API_TOKEN") or get_env_value("NOTION_API_KEY", ""),
+/Users/brianhellemn/Projects/github-production/unified_config.py:230:        "google_api_key": get_env_value("GOOGLE_API_KEY", ""),
+/Users/brianhellemn/Projects/github-production/unified_config.py:231:        "google_oauth_credentials_path": get_env_value("GOOGLE_OAUTH_CREDENTIALS_PATH", ""),
+/Users/brianhellemn/Projects/github-production/unified_config.py:232:        "google_oauth_token_dir": get_env_value("GOOGLE_OAUTH_TOKEN_DIR", ""),
+/Users/brianhellemn/Projects/github-production/unified_config.py:387:            token = os.getenv("NOTION_API_KEY") or os.getenv("NOTION_TOKEN")
+/Users/brianhellemn/Projects/github-production/webhook-server/linear_github_orchestrator.py:116:        self.notion_token = notion_token or os.getenv("NOTION_TOKEN") or os.getenv("NOTION_API_TOKEN")
+/Users/brianhellemn/Projects/github-production/webhook-server/linear_github_orchestrator.py:118:            raise RuntimeError("NOTION_TOKEN or NOTION_API_TOKEN environment variable required")
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:31:- Configure via GOOGLE_OAUTH_CLIENT_SECRETS_FILE and GOOGLE_OAUTH_REDIRECT_URI env vars
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:140:    GOOGLE_OAUTH_AVAILABLE = True
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:144:    GOOGLE_OAUTH_AVAILABLE = False
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:905:        "notion_api_token": pick("notion_api_token", "NOTION_API_TOKEN"),
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:933:NOTION_TOKEN = SERVER_CONFIG.get("notion_api_token")
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:957:if not NOTION_TOKEN:
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:958:    raise SystemExit("❌  Set NOTION_API_TOKEN in your environment")
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:960:notion = Client(auth=NOTION_TOKEN)
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:965:    logging_manager = NotionLoggingManager(NOTION_TOKEN)
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:1005:            notion_token=NOTION_TOKEN,
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:1037:#   - GOOGLE_OAUTH_CLIENT_SECRETS_FILE: Full path to client_secret JSON file
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:1039:#   - GOOGLE_OAUTH_REDIRECT_URI: OAuth redirect URI (default: http://localhost:5001/auth/google/callback)
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:1049:if GOOGLE_OAUTH_AVAILABLE:
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:1052:        redirect_uri = os.getenv('GOOGLE_OAUTH_REDIRECT_URI')
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:1057:        client_secrets_file = os.getenv('GOOGLE_OAUTH_CLIENT_SECRETS_FILE')
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:1130:    if not GOOGLE_OAUTH_AVAILABLE or not google_oauth_handler:
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:1162:    if not GOOGLE_OAUTH_AVAILABLE or not google_oauth_handler:
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:1349:    if not GOOGLE_OAUTH_AVAILABLE or not google_oauth_handler:
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:3137:#   export GOOGLE_OAUTH_CLIENT_SECRETS_FILE="/Users/brianhellemn/Library/CloudStorage/GoogleDrive-vibe.vessel.io@gmail.com/My Drive/VibeVessel-Internal-WS-gd/database-parent-page/scripts/github-dev/credentials/google-oauth/client_secret_797362328200-ki5cbaoauictkugd87mm8u70o75euvqk.apps.googleusercontent.com.json"
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:3139:#   export GOOGLE_OAUTH_REDIRECT_URI="http://localhost:5001/auth/google/callback"
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:3207:#   → Verify GOOGLE_OAUTH_CLIENT_SECRETS_FILE points to the correct JSON file
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:3211:#   → Verify the path in GOOGLE_OAUTH_CLIENT_SECRETS_FILE is correct
+/Users/brianhellemn/Projects/github-production/webhook-server/notion_event_subscription_webhook_server_v4_enhanced.py:3332:    print(f"🔑 Notion token: {'✅ Set' if NOTION_TOKEN else '❌ Missing'}")
+/Users/brianhellemn/Projects/github-production/analyze_task_completion.py:38:        os.getenv("NOTION_TOKEN") or
+/Users/brianhellemn/Projects/github-production/analyze_task_completion.py:39:        os.getenv("NOTION_API_TOKEN") or
+/Users/brianhellemn/Projects/github-production/analyze_task_completion.py:40:        os.getenv("VV_AUTOMATIONS_WS_TOKEN")
+/Users/brianhellemn/Projects/github-production/analyze_task_completion.py:45:    raise ValueError("NOTION_TOKEN not found in token_manager or environment")

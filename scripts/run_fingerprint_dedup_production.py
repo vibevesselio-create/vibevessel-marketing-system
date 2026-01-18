@@ -1701,6 +1701,8 @@ Examples:
     parser.add_argument("--djay-session-sync-only", action="store_true", help="Only sync DJ sessions to Notion Calendar")
     parser.add_argument("--djay-skip-export", action="store_true", help="Skip djay Pro export (use existing CSV files)")
     parser.add_argument("--djay-similarity", type=float, default=0.85, help="Similarity threshold for djay track matching (0.0-1.0, default: 0.85)")
+    # Rate limiting / throttling
+    parser.add_argument("--track-delay", type=float, default=0, help="Delay in seconds between processing each track (helps avoid SoundCloud rate limits, default: 0)")
     # Workflow management
     parser.add_argument("--resume", action="store_true", help="Resume workflow from last completed step")
     parser.add_argument("--status", action="store_true", help="Show workflow status and exit")

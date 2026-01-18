@@ -1,0 +1,17 @@
+{
+  "title": "Artist and Playlist relation properties not updated by main production workflow",
+  "type": ["Internal Issue"],
+  "status": "Open",
+  "priority": "Critical",
+  "component": "Music Sync / Notion Integration",
+  "blocked": false,
+  "description": "The main production script (soundcloud_download_prod_merge-2.py) does NOT call link_track_to_artist() when processing tracks. Artist and Playlist relation properties remain empty for tracks processed through the standard workflow.\n\nROOT CAUSE:\n- link_track_to_artist() is defined in spotify_integration_module.py:916\n- It is ONLY called when:\n  1. Syncing Spotify playlists (spotify_integration_module.py:1028)\n  2. sync_spotify_track_by_page_id.py:119\n  3. sync_spotify_playlist.py:296\n- The main soundcloud_download_prod_merge-2.py script imports SpotifyNotionSync but NEVER calls link_track_to_artist()\n\nIMPACT:\n- All tracks processed by batch/single/all modes have empty Artist relations\n- Playlist relations also not being populated\n- User screenshot shows Music Tracks database with empty Artist and Playlist columns\n\nAFFECTED FILES:\n- /monolithic-scripts/soundcloud_download_prod_merge-2.py - needs to integrate artist relation linking\n- Function: upsert_track_page() or process_track() should call link_track_to_artist()",
+  "evidence": {
+    "root_cause": "link_track_to_artist not called in soundcloud_download_prod_merge-2.py",
+    "missing_integration": "upsert_track_page() at line 3471 does not link artist relations",
+    "function_location": "spotify_integration_module.py:916-942"
+  },
+  "next_step": "Modify upsert_track_page() or process_track() in soundcloud_download_prod_merge-2.py to call find_or_create_artist_page() and link_track_to_artist() after creating/updating track pages.",
+  "owner": ["Claude Code Agent", "Cursor MM1"],
+  "created_at": "20260115T191500Z"
+}

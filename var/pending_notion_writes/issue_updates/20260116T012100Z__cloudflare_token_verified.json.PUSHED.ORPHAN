@@ -1,0 +1,20 @@
+{
+  "type": "page_update",
+  "page_id": "2e9e7361-6c27-8121-99d0-d999ed019a19",
+  "page_title": "BLOCKER: Cloudflare tunnel has no active connection; webhook endpoint returns HTTP 530",
+  "database": "Issues+Questions",
+  "timestamp": "2026-01-16T01:21:00Z",
+  "created_by": "Codex",
+  "reason": "Cloudflare API token now verifies active; DNS automation can be re-enabled",
+  "properties": {
+    "Description": {
+      "rich_text": [
+        {
+          "text": {
+            "content": "Update 2026-01-16: CLOUDFLARE_API_TOKEN verifies active via /user/tokens/verify. DNS automation can be re-enabled for webhook.vibevessel.space."
+          }
+        }
+      ]
+    }
+  }
+}

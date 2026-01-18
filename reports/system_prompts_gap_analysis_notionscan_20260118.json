@@ -1,0 +1,96 @@
+{
+  "generated_at": "2026-01-18T07:05:36.801793+00:00",
+  "project_id": "2e2e7361-6c27-816b-997a-e1b6f73978ff",
+  "workflows": {
+    "Music Track": [],
+    "Music Playlist": [],
+    "Eagle": [
+      {
+        "id": "22ae7361-6c27-80f5-b99f-e8029d3c2349",
+        "title": "Eagle App - Notion New File Data Sync",
+        "url": "https://www.notion.so/Eagle-App-Notion-New-File-Data-Sync-22ae73616c2780f5b99fe8029d3c2349"
+      },
+      {
+        "id": "264e7361-6c27-8067-adb6-f972a44d690e",
+        "title": "Download AIFF Format Audio Files From SoundCloud (yt-dlp) and YouTube and Import into Eagle Library",
+        "url": "https://www.notion.so/Download-AIFF-Format-Audio-Files-From-SoundCloud-yt-dlp-and-YouTube-and-Import-into-Eagle-Library-264e73616c278067adb6f972a44d690e"
+      }
+    ],
+    "Dedup": [
+      {
+        "id": "10bdc89a-5d02-4e97-8bd9-1279a8c4ed95",
+        "title": "Issues+Questions \u2014 Full Cleanup, Dedup + Reprioritization (Four-Agent Run)",
+        "url": "https://www.notion.so/Issues-Questions-Full-Cleanup-Dedup-Reprioritization-Four-Agent-Run-10bdc89a5d024e978bd91279a8c4ed95"
+      },
+      {
+        "id": "2e1e7361-6c27-8115-8372-c9a79b62c4c1",
+        "title": "Deduplication & Fingerprinting Workflow",
+        "url": "https://www.notion.so/Deduplication-Fingerprinting-Workflow-2e1e73616c2781158372c9a79b62c4c1"
+      },
+      {
+        "id": "c87468d1-2e95-407f-94b6-bbbb3d68dece",
+        "title": "[I+Q Consolidation] Phase 1 \u2014 Discovery & Deduplication",
+        "url": "https://www.notion.so/I-Q-Consolidation-Phase-1-Discovery-Deduplication-c87468d12e95407f94b6bbbb3d68dece"
+      }
+    ],
+    "Workflow Implementation Audit": [],
+    "Plans Directory Audit": [],
+    "Cursor MM1": [],
+    "In-Progress Issue": [],
+    "Notion-First": [],
+    "Fingerprint": [
+      {
+        "id": "2e1e7361-6c27-8115-8372-c9a79b62c4c1",
+        "title": "Deduplication & Fingerprinting Workflow",
+        "url": "https://www.notion.so/Deduplication-Fingerprinting-Workflow-2e1e73616c2781158372c9a79b62c4c1"
+      }
+    ]
+  },
+  "functions": {
+    "Music Track": [],
+    "Music Playlist": [],
+    "Eagle": [
+      {
+        "id": "adc8a471-edc6-4140-abaf-53fda199033a",
+        "title": "eagle.item.getSelected()",
+        "url": "https://www.notion.so/eagle-item-getSelected-adc8a471edc64140abaf53fda199033a"
+      },
+      {
+        "id": "b2abbe5c-114d-4926-9374-f0091c5d6370",
+        "title": "eagle.item.get()",
+        "url": "https://www.notion.so/eagle-item-get-b2abbe5c114d49269374f0091c5d6370"
+      }
+    ],
+    "Dedup": [
+      {
+        "id": "f0635970-cf7e-4d92-b83f-a1c9a40d6230",
+        "title": "AF 11 \u2014 Deduplicate Recent Tasks [PM]",
+        "url": "https://www.notion.so/AF-11-Deduplicate-Recent-Tasks-PM-f0635970cf7e4d92b83fa1c9a40d6230"
+      },
+      {
+        "id": "fc7781ff-757c-4819-a45f-a89325eafb41",
+        "title": "AF \u2014 Pre-flight Validation & Deduplication for Create-or-Update Runs",
+        "url": "https://www.notion.so/AF-Pre-flight-Validation-Deduplication-for-Create-or-Update-Runs-fc7781ff757c4819a45fa89325eafb41"
+      }
+    ],
+    "Workflow Implementation Audit": [],
+    "Plans Directory Audit": [],
+    "Cursor MM1": [
+      {
+        "id": "2dfe7361-6c27-81b0-9f72-cca7e7a9c75d",
+        "title": "Creates a review handoff task back to Cursor MM1 Agent when a task is marked as",
+        "url": "https://www.notion.so/Creates-a-review-handoff-task-back-to-Cursor-MM1-Agent-when-a-task-is-marked-as-2dfe73616c2781b09f72cca7e7a9c75d"
+      }
+    ],
+    "In-Progress Issue": [],
+    "Notion-First": [],
+    "Fingerprint": [
+      {
+        "id": "7676d55c-daeb-480f-9c17-5c59a3bb789e",
+        "title": "fingerprint(entry)",
+        "url": "https://www.notion.so/fingerprint-entry-7676d55cdaeb480f9c175c59a3bb789e"
+      }
+    ]
+  },
+  "project_tasks": []
+}

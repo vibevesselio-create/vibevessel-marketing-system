@@ -1,0 +1,525 @@
+{
+  "timestamp": "20260104T001337",
+  "dry_run": false,
+  "databases_analyzed": 103,
+  "archives_created": 101,
+  "archives_skipped": 2,
+  "errors": [],
+  "actions": [
+    {
+      "folder_name": "Deduplication Test Database_220e7361-6c27-8105-991d-000bea434fea",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Deduplication Test Database_220e7361-6c27-8105-991d-000bea434fea/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Photo Library [Team Housing Solutions]_15be7361-6c27-81ca-a5db-000b41449453",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Photo Library [Team Housing Solutions]_15be7361-6c27-81ca-a5db-000b41449453/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Duplicate Detection - Merge Logs_233e7361-6c27-8192-abb0-000b0cd80817",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Duplicate Detection - Merge Logs_233e7361-6c27-8192-abb0-000b0cd80817/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Page Templates_21ee7361-6c27-80f0-aee5-000b2c75d045",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Page Templates_21ee7361-6c27-80f0-aee5-000b2c75d045/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Shoot Session Types_698ed7a4-4843-4654-bca5-b29aa828a46d",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Shoot Session Types_698ed7a4-4843-4654-bca5-b29aa828a46d/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Website Pages \u2014 Ocean Frontiers_baf61674-4efe-448b-98d5-07e04a49c5dc",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Website Pages \u2014 Ocean Frontiers_baf61674-4efe-448b-98d5-07e04a49c5dc/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Tag_20fe7361-6c27-81c6-ae2c-000b222c62a6",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Tag_20fe7361-6c27-81c6-ae2c-000b222c62a6/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Execution Logs_f23a5b27-bd5d-4a1e-a4e9-24466d4abd35",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Execution Logs_f23a5b27-bd5d-4a1e-a4e9-24466d4abd35/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Cleanup State_220e7361-6c27-81cc-b2da-000b0725017e",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Cleanup State_220e7361-6c27-81cc-b2da-000b0725017e/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Quotes From __________ Interview_293e7361-6c27-812e-b238-000bcdc97962",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Quotes From __________ Interview_293e7361-6c27-812e-b238-000bcdc97962/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Red-Sail-Sports-GC-Facebook-Posts-Data_294e7361-6c27-819f-ade1-000be115b9c1",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Red-Sail-Sports-GC-Facebook-Posts-Data_294e7361-6c27-819f-ade1-000be115b9c1/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Audio_128e7361-6c27-811c-a598-000bb5262dfd",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Audio_128e7361-6c27-811c-a598-000bb5262dfd/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "My Gmail Data_20ee7361-6c27-817f-a959-000b231ae359",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/My Gmail Data_20ee7361-6c27-817f-a959-000b231ae359/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Music Artists_20ee7361-6c27-814f-9100-000bbd764d31",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Music Artists_20ee7361-6c27-814f-9100-000bbd764d31/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "PowerPanel_Pages_Only_1f3e7361-6c27-8108-940b-000b4af96559",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/PowerPanel_Pages_Only_1f3e7361-6c27-8108-940b-000b4af96559/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "ListView_Images_224e7361-6c27-8173-91ac-000b125e1972",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/ListView_Images_224e7361-6c27-8173-91ac-000b125e1972/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Quotes From __________ Interview_288e7361-6c27-81b5-b166-000bd3c5a877",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Quotes From __________ Interview_288e7361-6c27-81b5-b166-000bd3c5a877/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Inbox_23ae7361-6c27-802d-b284-000bc63daea1",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Inbox_23ae7361-6c27-802d-b284-000bc63daea1/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Wiki (Seren)_170910fc-52f2-4860-90be-8e1f8b15b881",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Wiki (Seren)_170910fc-52f2-4860-90be-8e1f8b15b881/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Client Files Database Template_196e7361-6c27-80ca-8c17-000b479ac897",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Client Files Database Template_196e7361-6c27-80ca-8c17-000b479ac897/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Properties_20fe7361-6c27-81bc-923d-000b8f07a4d8",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Properties_20fe7361-6c27-81bc-923d-000b8f07a4d8/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Preflight-Test_28de7361-6c27-8192-a8ef-000bc4090b22",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Preflight-Test_28de7361-6c27-8192-a8ef-000bc4090b22/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Untitled_28fe7361-6c27-81f7-b270-000babd0b557",
+      "status": "skipped",
+      "reason": "folder_not_found"
+    },
+    {
+      "folder_name": "image-data_278e7361-6c27-8124-8e44-000bcac5d971",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/image-data_278e7361-6c27-8124-8e44-000bcac5d971/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Free Notion Widgets & Tools_1f8e7361-6c27-81ec-80aa-000b48422908",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Free Notion Widgets & Tools_1f8e7361-6c27-81ec-80aa-000b48422908/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Technical Documentation_26ce7361-6c27-81ec-8dfd-000b8a7b1a81",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Technical Documentation_26ce7361-6c27-81ec-8dfd-000b8a7b1a81/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Organizations+People_20fe7361-6c27-81c4-a617-000b5f3f683c",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Organizations+People_20fe7361-6c27-81c4-a617-000b5f3f683c/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Emails_20fe7361-6c27-8147-b31d-000b3e5d321c",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Emails_20fe7361-6c27-8147-b31d-000b3e5d321c/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Personal \u2014 Music Databases (Linked)_5ea1ef19-ff91-40a7-a6e3-1ebe5bd85687",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Personal \u2014 Music Databases (Linked)_5ea1ef19-ff91-40a7-a6e3-1ebe5bd85687/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Preflight-Test_28be7361-6c27-817f-9b9f-000bc28df959",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Preflight-Test_28be7361-6c27-817f-9b9f-000bc28df959/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Folders_28be7361-6c27-81fd-b33b-000b9aedae22",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Folders_28be7361-6c27-81fd-b33b-000b9aedae22/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Keyboard Maestro Macros_285e7361-6c27-801d-ad33-000b7da77293",
+      "status": "skipped",
+      "reason": "folder_not_found"
+    },
+    {
+      "folder_name": "Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Databases Template_184e7361-6c27-81fa-a7a8-000b15181392",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Databases Template_184e7361-6c27-81fa-a7a8-000b15181392/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "workspace-databases_26ce7361-6c27-81d5-8626-000b229d1aad",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-databases_26ce7361-6c27-81d5-8626-000b229d1aad/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "CRM Lite (Example)_ce6d4903-d07c-4295-91cc-aa2a04b629ec",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/CRM Lite (Example)_ce6d4903-d07c-4295-91cc-aa2a04b629ec/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Roles_e1558e8b-3ed4-45ec-9cea-f9b776116cdd",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Roles_e1558e8b-3ed4-45ec-9cea-f9b776116cdd/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Merge Logs_816739ed-0a00-4fe2-92de-701e13cd3931",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Merge Logs_816739ed-0a00-4fe2-92de-701e13cd3931/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Locations_28fe7361-6c27-81be-a767-000b91435865",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Locations_28fe7361-6c27-81be-a767-000b91435865/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Interview Transcript Processor_1ece7361-6c27-8082-86e0-000b67b95eb4",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interview Transcript Processor_1ece7361-6c27-8082-86e0-000b67b95eb4/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Hashtag group_128e7361-6c27-8177-981c-000b4738b617",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Hashtag group_128e7361-6c27-8177-981c-000b4738b617/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Folders_28be7361-6c27-81a3-962c-000b674bbbf0",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Folders_28be7361-6c27-81a3-962c-000b674bbbf0/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Chats_288e7361-6c27-8106-8d4b-000b7ec6575a",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Chats_288e7361-6c27-8106-8d4b-000b7ec6575a/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Red-Sail-Sports-Instagram-Posts_295e7361-6c27-8150-8a1a-000b027c582f",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Red-Sail-Sports-Instagram-Posts_295e7361-6c27-8150-8a1a-000b027c582f/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Quotes From __________ Interview_288e7361-6c27-810a-9031-000bae8131db",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Quotes From __________ Interview_288e7361-6c27-810a-9031-000bae8131db/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "OKRs_196e7361-6c27-8117-bed0-000bd72acfec",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/OKRs_196e7361-6c27-8117-bed0-000bd72acfec/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Events_20fe7361-6c27-8173-b1b6-000be48b54d7",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Events_20fe7361-6c27-8173-b1b6-000be48b54d7/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Technical Documentation_212e7361-6c27-81b4-aea8-000b782b370e",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Technical Documentation_212e7361-6c27-81b4-aea8-000b782b370e/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Technical Documentation_237e7361-6c27-8195-a7b1-000b83d94edc",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Technical Documentation_237e7361-6c27-8195-a7b1-000b83d94edc/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "DATABASES_20fe7361-6c27-81d8-bfb0-000bff6f1917",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/DATABASES_20fe7361-6c27-81d8-bfb0-000bff6f1917/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Task_128e7361-6c27-8161-a503-000b426587f6",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Task_128e7361-6c27-8161-a503-000b426587f6/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Merge History_220e7361-6c27-811c-8d87-000b4d90a519",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Merge History_220e7361-6c27-811c-8d87-000b4d90a519/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Resource_128e7361-6c27-8165-9ac4-000b05a4fe63",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Resource_128e7361-6c27-8165-9ac4-000b05a4fe63/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Interview Transcript Processor 2_1ece7361-6c27-811b-96c7-000bc3e060d1",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interview Transcript Processor 2_1ece7361-6c27-811b-96c7-000bc3e060d1/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Documents + Meeting Notes (THS)_56ab7db1-ba80-4fea-959b-896c7aca02c0",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Documents + Meeting Notes (THS)_56ab7db1-ba80-4fea-959b-896c7aca02c0/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "volumes_26ce7361-6c27-8131-b3c9-000b33f7374e",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/volumes_26ce7361-6c27-8131-b3c9-000b33f7374e/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "500+ Competitors_291e7361-6c27-815f-b473-e5dbbcb33947",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/500+ Competitors_291e7361-6c27-815f-b473-e5dbbcb33947/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Marketing Channels Database Template_192e7361-6c27-80f4-a290-000bd1238cc6",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Marketing Channels Database Template_192e7361-6c27-80f4-a290-000bd1238cc6/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "serenbrianmarketing-system-codebase PRs_26be7361-6c27-804a-9b41-000b39f7b045",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/serenbrianmarketing-system-codebase PRs_26be7361-6c27-804a-9b41-000b39f7b045/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Item-Types_20fe7361-6c27-819b-9dea-000bbd28d570",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Item-Types_20fe7361-6c27-819b-9dea-000bbd28d570/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Platforms_26ce7361-6c27-8161-b482-000b7a3a4158",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Platforms_26ce7361-6c27-8161-b482-000b7a3a4158/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "conversations_part-1_1d9e7361-6c27-816d-a986-000b21aaec08",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/conversations_part-1_1d9e7361-6c27-816d-a986-000b21aaec08/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Gmail Data_295e7361-6c27-8150-a24c-000bb5157307",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Gmail Data_295e7361-6c27-8150-a24c-000bb5157307/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Video Library (1)_295e7361-6c27-81ce-b555-000b4b0816f2",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Video Library (1)_295e7361-6c27-81ce-b555-000b4b0816f2/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Red-Sail-Social-Media-Data_293e7361-6c27-8198-95d5-000b6424fbb6",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Red-Sail-Social-Media-Data_293e7361-6c27-8198-95d5-000b6424fbb6/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Agent-Tasks_284e7361-6c27-8018-872a-eb14e82e0392",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Agent-Tasks_284e7361-6c27-8018-872a-eb14e82e0392/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "DaVinci-Resolve-Projects_20fe7361-6c27-8116-babd-000bc4a064c0",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/DaVinci-Resolve-Projects_20fe7361-6c27-8116-babd-000bc4a064c0/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "OLD Automation Workflows_d6973ea1-881a-4f2b-bfe4-344958d3a7a6",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/OLD Automation Workflows_d6973ea1-881a-4f2b-bfe4-344958d3a7a6/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Workspace-Areas_40b16e06-6dee-4719-94e4-76918809aa0f",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Workspace-Areas_40b16e06-6dee-4719-94e4-76918809aa0f/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Content_128e7361-6c27-81a3-bd2c-000b812027f8",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Content_128e7361-6c27-81a3-bd2c-000b812027f8/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Quotes From __________ Interview_288e7361-6c27-81db-ba81-000bdb7b3e5f",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Quotes From __________ Interview_288e7361-6c27-81db-ba81-000bdb7b3e5f/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Merge History_6b63c756-f5b1-4c06-a23e-c2ef3706bad2",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Merge History_6b63c756-f5b1-4c06-a23e-c2ef3706bad2/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Calendar_28fe7361-6c27-81a0-b2b0-000bc4ba57fc",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Calendar_28fe7361-6c27-81a0-b2b0-000bc4ba57fc/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Duplicate Detection - Merge History_233e7361-6c27-81ff-8dce-000b733bb44c",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Duplicate Detection - Merge History_233e7361-6c27-81ff-8dce-000b733bb44c/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Interviews [Team Housing Solutions]_f7ec6257-c7fc-42d0-8093-e899cb91542c",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interviews [Team Housing Solutions]_f7ec6257-c7fc-42d0-8093-e899cb91542c/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Preflight-Test_28be7361-6c27-8164-819f-000b7e9dc379",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Preflight-Test_28be7361-6c27-8164-819f-000b7e9dc379/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "SocialPostDrafts_20fe7361-6c27-8100-83da-000bf3b60945",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/SocialPostDrafts_20fe7361-6c27-8100-83da-000bf3b60945/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Archive_271e7361-6c27-806b-a56d-000be1580a60",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Archive_271e7361-6c27-806b-a56d-000be1580a60/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "serenbrianmarketing-system-codebase Issues_26be7361-6c27-80c3-9b06-000bf6b33198",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/serenbrianmarketing-system-codebase Issues_26be7361-6c27-80c3-9b06-000bf6b33198/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Accounts \u2014 People+Orgs (filter in UI to Social Account, Competitor, Influencer)_179e65aa-c699-46f3-a5dd-b1186aaccbb6",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Accounts \u2014 People+Orgs (filter in UI to Social Account, Competitor, Influencer)_179e65aa-c699-46f3-a5dd-b1186aaccbb6/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Preflight-Test_28de7361-6c27-81b5-becf-000b6e0f9fe5",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Preflight-Test_28de7361-6c27-81b5-becf-000b6e0f9fe5/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Interactions_25be7361-6c27-810a-a6ed-000bd977940b",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interactions_25be7361-6c27-810a-a6ed-000bd977940b/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Duplicate Merge Logs_c08be952-d534-4e3c-a23f-a9b276ddcca9",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Duplicate Merge Logs_c08be952-d534-4e3c-a23f-a9b276ddcca9/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Untitled database_213e7361-6c27-8137-9b96-000b5adc637d",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Untitled database_213e7361-6c27-8137-9b96-000b5adc637d/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Client Areas \u2014 Optimized (POC)_6fc3b82f-a66a-4486-9f44-74ef1a492fae",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Client Areas \u2014 Optimized (POC)_6fc3b82f-a66a-4486-9f44-74ef1a492fae/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "scripting-documentation_26ce7361-6c27-818a-b57a-000b996ccc03",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/scripting-documentation_26ce7361-6c27-818a-b57a-000b996ccc03/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Chats_26ce7361-6c27-8101-abba-000b7b35dc1c",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Chats_26ce7361-6c27-8101-abba-000b7b35dc1c/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Workspace-Levels_299e7361-6c27-8167-ac47-000b7253d218",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Workspace-Levels_299e7361-6c27-8167-ac47-000b7253d218/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Red-Sail-Sports-Facebook-Posts-Data_295e7361-6c27-8111-9f63-000bcd60a956",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Red-Sail-Sports-Facebook-Posts-Data_295e7361-6c27-8111-9f63-000bcd60a956/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Workspace-Levels_254e7361-6c27-80b7-bf03-000b825973d1",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Workspace-Levels_254e7361-6c27-80b7-bf03-000b825973d1/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Proposals Sent_2a7e7361-6c27-8019-8dae-000b9d08aa50",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Proposals Sent_2a7e7361-6c27-8019-8dae-000b9d08aa50/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Preflight-Test_28ce7361-6c27-8152-966f-000b5650aa21",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Preflight-Test_28ce7361-6c27-8152-966f-000b5650aa21/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "system-databases_26ce7361-6c27-8198-a515-000b9ca2fbe3",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/system-databases_26ce7361-6c27-8198-a515-000b9ca2fbe3/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Platform_128e7361-6c27-8144-9bf1-000b6a841b1c",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Platform_128e7361-6c27-8144-9bf1-000b6a841b1c/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Technical Documentation_237e7361-6c27-8139-9c18-000b3b687c5c",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Technical Documentation_237e7361-6c27-8139-9c18-000b3b687c5c/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Validation & Performance Reviews_269ad70a-b608-4a2b-8a5c-3dc478c46af6",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Validation & Performance Reviews_269ad70a-b608-4a2b-8a5c-3dc478c46af6/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Lightroom-Sync-Images_286e7361-6c27-81aa-9f4b-000be6dd081e",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Lightroom-Sync-Images_286e7361-6c27-81aa-9f4b-000be6dd081e/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Merge History - Page Backups_2caaf3a7-6b88-4610-a472-c1474b08e9e1",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Merge History - Page Backups_2caaf3a7-6b88-4610-a472-c1474b08e9e1/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Platforms_288e7361-6c27-81b7-bc07-000b3340a202",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Platforms_288e7361-6c27-81b7-bc07-000b3340a202/.archive",
+      "status": "success"
+    },
+    {
+      "folder_name": "Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7",
+      "archive_path": "/Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7/.archive",
+      "status": "success"
+    }
+  ]
+}

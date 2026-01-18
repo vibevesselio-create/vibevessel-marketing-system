@@ -1,0 +1,122 @@
+2026-01-07 01:44:34,370 - __main__ - INFO - ================================================================================
+2026-01-07 01:44:34,370 - __main__ - INFO - Reassign Codex MM1 Agent Tasks to Cursor MM1 Agent
+2026-01-07 01:44:34,370 - __main__ - INFO - ================================================================================
+2026-01-07 01:44:34,713 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/users/me "HTTP/1.1 200 OK"
+2026-01-07 01:44:34,716 - __main__ - INFO - ✅ Notion API access validated
+2026-01-07 01:44:34,716 - __main__ - INFO - Searching for Codex MM1 Agent...
+2026-01-07 01:44:36,622 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/search "HTTP/1.1 200 OK"
+2026-01-07 01:44:36,634 - __main__ - WARNING - Could not find agent: Codex MM1 Agent
+2026-01-07 01:44:36,634 - __main__ - ERROR - Could not find Codex MM1 Agent. Cannot proceed.
+2026-01-07 01:45:45,109 - __main__ - INFO - ================================================================================
+2026-01-07 01:45:45,109 - __main__ - INFO - Reassign Codex MM1 Agent Tasks to Cursor MM1 Agent
+2026-01-07 01:45:45,109 - __main__ - INFO - ================================================================================
+2026-01-07 01:45:45,467 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/users/me "HTTP/1.1 200 OK"
+2026-01-07 01:45:45,469 - __main__ - INFO - ✅ Notion API access validated
+2026-01-07 01:45:45,469 - __main__ - INFO - Searching for Codex MM1 Agent...
+2026-01-07 01:45:47,121 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/search "HTTP/1.1 200 OK"
+2026-01-07 01:45:48,029 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/search "HTTP/1.1 200 OK"
+2026-01-07 01:45:49,104 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/search "HTTP/1.1 200 OK"
+2026-01-07 01:45:53,317 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/search "HTTP/1.1 200 OK"
+2026-01-07 01:45:53,584 - __main__ - INFO - Found agent 'Codex MM2 Agent': 2d2e7361-6c27-8096-bf37-e621bb57b9ea
+2026-01-07 01:45:53,584 - __main__ - INFO - Querying tasks assigned to Codex MM1 Agent...
+2026-01-07 01:45:55,936 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/databases/284e73616c278018872aeb14e82e0392/query "HTTP/1.1 200 OK"
+2026-01-07 01:45:55,937 - __main__ - INFO - Retrieved 0 tasks (total so far: 0)
+2026-01-07 01:45:55,937 - __main__ - INFO - Found 0 total tasks assigned to agent
+2026-01-07 01:45:55,937 - __main__ - INFO - No tasks found assigned to Codex MM1 Agent.
+2026-01-07 01:46:22,152 - __main__ - INFO - ================================================================================
+2026-01-07 01:46:22,152 - __main__ - INFO - Reassign Codex MM1 Agent Tasks to Cursor MM1 Agent
+2026-01-07 01:46:22,152 - __main__ - INFO - ================================================================================
+2026-01-07 01:46:22,533 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/users/me "HTTP/1.1 200 OK"
+2026-01-07 01:46:22,534 - __main__ - INFO - ✅ Notion API access validated
+2026-01-07 01:46:22,534 - __main__ - INFO - Searching for Codex MM1 Agent...
+2026-01-07 01:46:35,498 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/search "HTTP/1.1 200 OK"
+2026-01-07 01:46:36,357 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/search "HTTP/1.1 200 OK"
+2026-01-07 01:46:38,258 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/search "HTTP/1.1 200 OK"
+2026-01-07 01:46:38,922 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/search "HTTP/1.1 200 OK"
+2026-01-07 01:46:38,997 - __main__ - INFO - Found agent 'Codex MM2 Agent': 2d2e7361-6c27-8096-bf37-e621bb57b9ea
+2026-01-07 01:46:38,997 - __main__ - INFO - Querying tasks assigned to Codex MM1 Agent...
+2026-01-07 01:46:40,524 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/databases/284e73616c278018872aeb14e82e0392/query "HTTP/1.1 200 OK"
+2026-01-07 01:46:40,526 - __main__ - INFO - Retrieved 0 tasks (total so far: 0)
+2026-01-07 01:46:40,526 - __main__ - INFO - Found 0 total tasks assigned to agent
+2026-01-07 01:46:40,526 - __main__ - INFO - No tasks found assigned to Codex MM1 Agent.
+2026-01-07 01:46:59,044 - __main__ - INFO - ================================================================================
+2026-01-07 01:46:59,044 - __main__ - INFO - Reassign Codex MM1 Agent Tasks to Cursor MM1 Agent
+2026-01-07 01:46:59,044 - __main__ - INFO - ================================================================================
+2026-01-07 01:46:59,439 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/users/me "HTTP/1.1 200 OK"
+2026-01-07 01:46:59,441 - __main__ - INFO - ✅ Notion API access validated
+2026-01-07 01:46:59,441 - __main__ - INFO - Searching for Codex MM1 Agent...
+2026-01-07 01:47:00,289 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/search "HTTP/1.1 200 OK"
+2026-01-07 01:47:00,976 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/search "HTTP/1.1 200 OK"
+2026-01-07 01:47:02,018 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/search "HTTP/1.1 200 OK"
+2026-01-07 01:47:03,099 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/search "HTTP/1.1 200 OK"
+2026-01-07 01:47:03,124 - __main__ - INFO - Found agent 'Codex MM1 Agent': 2b1e7361-6c27-80fb-8ce9-fd3cf78a5cad
+2026-01-07 01:47:03,125 - __main__ - INFO - Querying tasks assigned to Codex MM1 Agent...
+2026-01-07 01:47:03,639 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/databases/284e73616c278018872aeb14e82e0392/query "HTTP/1.1 200 OK"
+2026-01-07 01:47:03,654 - __main__ - INFO - Retrieved 19 tasks (total so far: 19)
+2026-01-07 01:47:03,655 - __main__ - INFO - Found 19 total tasks assigned to agent
+2026-01-07 01:47:03,655 - __main__ - INFO - Found 19 tasks assigned to Codex MM1 Agent
+2026-01-07 01:47:03,655 - __main__ - INFO - Reassigning tasks to Cursor MM1 Agent...
+2026-01-07 01:47:03,655 - __main__ - INFO - Processing: [Codex MM1] Filesystem Testing - Backup Output (Status: Draft)
+2026-01-07 01:47:04,997 - httpx - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2b0e7361-6c27-818d-8c58-fb8514eafbf7 "HTTP/1.1 200 OK"
+2026-01-07 01:47:05,000 - __main__ - INFO - ✅ Reassigned task '[Codex MM1] Filesystem Testing - Backup Output' to Cursor MM1 Agent
+2026-01-07 01:47:05,000 - __main__ - INFO - Processing: Unified Audio Processor Execution Task - Codex Agent (Status: Draft)
+2026-01-07 01:47:05,414 - httpx - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2b6e7361-6c27-8151-9460-f298a7a1fade "HTTP/1.1 200 OK"
+2026-01-07 01:47:05,417 - __main__ - INFO - ✅ Reassigned task 'Unified Audio Processor Execution Task - Codex Agent' to Cursor MM1 Agent
+2026-01-07 01:47:05,417 - __main__ - INFO - Processing: Implementation: Hybrid Orchestrator Webhook Server Integration (Development Script) (Status: Review)
+2026-01-07 01:47:07,207 - httpx - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2b6e7361-6c27-8193-9a73-dce6fda87d66 "HTTP/1.1 200 OK"
+2026-01-07 01:47:07,209 - __main__ - INFO - ✅ Reassigned task 'Implementation: Hybrid Orchestrator Webhook Server Integration (Development Script)' to Cursor MM1 Agent
+2026-01-07 01:47:07,210 - __main__ - INFO - Processing: [Claude MM1] — Locate and Document Environment Configuration — 2025-12-22 (Status: Draft)
+2026-01-07 01:47:08,738 - httpx - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d1e7361-6c27-815b-9d79-f6dddc6d9d9e "HTTP/1.1 200 OK"
+2026-01-07 01:47:08,741 - __main__ - INFO - ✅ Reassigned task '[Claude MM1] — Locate and Document Environment Configuration — 2025-12-22' to Cursor MM1 Agent
+2026-01-07 01:47:08,741 - __main__ - INFO - Processing: HANDOFF__Claude-Code__Codex-MM1__Unified-Workflow-Validation__2025-12-19T003200Z (Status: Ready)
+2026-01-07 01:47:09,768 - httpx - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d5e7361-6c27-81d9-bcf3-ccc43e15d8dd "HTTP/1.1 200 OK"
+2026-01-07 01:47:09,770 - __main__ - INFO - ✅ Reassigned task 'HANDOFF__Claude-Code__Codex-MM1__Unified-Workflow-Validation__2025-12-19T003200Z' to Cursor MM1 Agent
+2026-01-07 01:47:09,770 - __main__ - INFO - Processing: HANDOFF__CLAUDE-MM1__CODEX-MM1__Folder-Parity-Manifest__2025-12-18 (Status: Ready)
+2026-01-07 01:47:11,042 - httpx - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d5e7361-6c27-81f1-a7de-f4e0fd48f66b "HTTP/1.1 200 OK"
+2026-01-07 01:47:11,047 - __main__ - INFO - ✅ Reassigned task 'HANDOFF__CLAUDE-MM1__CODEX-MM1__Folder-Parity-Manifest__2025-12-18' to Cursor MM1 Agent
+2026-01-07 01:47:11,048 - __main__ - INFO - Processing: HANDOFF__Claude-Code__Codex-MM1__Phase1-Foundation-Implementation__2025-12-19T000200Z (Status: Ready)
+2026-01-07 01:47:12,338 - httpx - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d5e7361-6c27-81f1-a8ac-f08c8c489987 "HTTP/1.1 200 OK"
+2026-01-07 01:47:12,340 - __main__ - INFO - ✅ Reassigned task 'HANDOFF__Claude-Code__Codex-MM1__Phase1-Foundation-Implementation__2025-12-19T000200Z' to Cursor MM1 Agent
+2026-01-07 01:47:12,340 - __main__ - INFO - Processing: Codex MM1 — Review Documentation for MCP Notion API References — 2025-01-29 (Status: Completed)
+2026-01-07 01:47:13,388 - httpx - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2d9e7361-6c27-8196-a09d-fb8cd004bc06 "HTTP/1.1 200 OK"
+2026-01-07 01:47:13,390 - __main__ - INFO - ✅ Reassigned task 'Codex MM1 — Review Documentation for MCP Notion API References — 2025-01-29' to Cursor MM1 Agent
+2026-01-07 01:47:13,391 - __main__ - INFO - Processing: Verify Apps Script API Path and Locate clasp Credentials (Status: Ready)
+2026-01-07 01:47:14,960 - httpx - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2dae7361-6c27-81e1-8da4-d85b8442e691 "HTTP/1.1 200 OK"
+2026-01-07 01:47:14,961 - __main__ - INFO - ✅ Reassigned task 'Verify Apps Script API Path and Locate clasp Credentials' to Cursor MM1 Agent
+2026-01-07 01:47:14,961 - __main__ - INFO - Processing: 20260105T183516Z__HANDOFF__Validate-DB-ID-Consolidation-Completion---Agent-Wo__2dde7361 (Status: Completed)
+2026-01-07 01:47:16,065 - httpx - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2e0e7361-6c27-8120-a346-d32eb395c30f "HTTP/1.1 200 OK"
+2026-01-07 01:47:16,067 - __main__ - INFO - ✅ Reassigned task '20260105T183516Z__HANDOFF__Validate-DB-ID-Consolidation-Completion---Agent-Wo__2dde7361' to Cursor MM1 Agent
+2026-01-07 01:47:16,067 - __main__ - INFO - Processing: Phase 3: Duplicate Detection & Consolidation (Status: Ready)
+2026-01-07 01:47:16,686 - httpx - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2e0e7361-6c27-812a-93a4-d9d23f9c83f6 "HTTP/1.1 200 OK"
+2026-01-07 01:47:16,689 - __main__ - INFO - ✅ Reassigned task 'Phase 3: Duplicate Detection & Consolidation' to Cursor MM1 Agent
+2026-01-07 01:47:16,689 - __main__ - INFO - Processing: Phase 2: Compliance Auto-Enhancement Implementation (Status: Ready)
+2026-01-07 01:47:18,116 - httpx - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2e0e7361-6c27-812d-b4d8-e1df758e1961 "HTTP/1.1 200 OK"
+2026-01-07 01:47:18,118 - __main__ - INFO - ✅ Reassigned task 'Phase 2: Compliance Auto-Enhancement Implementation' to Cursor MM1 Agent
+2026-01-07 01:47:18,118 - __main__ - INFO - Processing: 20260106T160831Z__HANDOFF__20260105T183516Z__HANDOFF__Validate-DB-ID-Consolid__2e0e7361 (Status: Ready)
+2026-01-07 01:47:24,412 - httpx - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2e0e7361-6c27-8131-a202-f8b6c332d8d4 "HTTP/1.1 200 OK"
+2026-01-07 01:47:24,413 - __main__ - INFO - ✅ Reassigned task '20260106T160831Z__HANDOFF__20260105T183516Z__HANDOFF__Validate-DB-ID-Consolid__2e0e7361' to Cursor MM1 Agent
+2026-01-07 01:47:24,413 - __main__ - INFO - Processing: Phase 4: Integration & Pipeline (Status: Ready)
+2026-01-07 01:47:31,898 - httpx - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2e0e7361-6c27-81ed-a33f-c608ae334d1a "HTTP/1.1 200 OK"
+2026-01-07 01:47:31,910 - __main__ - INFO - ✅ Reassigned task 'Phase 4: Integration & Pipeline' to Cursor MM1 Agent
+2026-01-07 01:47:31,911 - __main__ - INFO - Processing: Phase 1: Blocker Detection Implementation (Status: Ready)
+2026-01-07 01:47:33,547 - httpx - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2e0e7361-6c27-81f9-bacf-f67fb61e919f "HTTP/1.1 200 OK"
+2026-01-07 01:47:33,550 - __main__ - INFO - ✅ Reassigned task 'Phase 1: Blocker Detection Implementation' to Cursor MM1 Agent
+2026-01-07 01:47:33,550 - __main__ - INFO - Processing: Eagle App API Scripts - Comprehensive Inventory and Index Creation (Status: Ready)
+2026-01-07 01:47:34,687 - httpx - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2e1e7361-6c27-810b-89ff-c2d86f9fe0af "HTTP/1.1 200 OK"
+2026-01-07 01:47:34,690 - __main__ - INFO - ✅ Reassigned task 'Eagle App API Scripts - Comprehensive Inventory and Index Creation' to Cursor MM1 Agent
+2026-01-07 01:47:34,690 - __main__ - INFO - Processing: Agent Handoff: Deduplication Production Testing & Troubleshooting (Status: Ready)
+2026-01-07 01:47:35,628 - httpx - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2e1e7361-6c27-8124-808a-c7546781a2ad "HTTP/1.1 200 OK"
+2026-01-07 01:47:35,632 - __main__ - INFO - ✅ Reassigned task 'Agent Handoff: Deduplication Production Testing & Troubleshooting' to Cursor MM1 Agent
+2026-01-07 01:47:35,633 - __main__ - INFO - Processing: Agent Handoff: Deduplication Production Testing with Notion Issue Reporting (Status: Ready)
+2026-01-07 01:47:46,941 - httpx - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2e1e7361-6c27-8140-bfa1-fc087ac73421 "HTTP/1.1 200 OK"
+2026-01-07 01:47:46,943 - __main__ - INFO - ✅ Reassigned task 'Agent Handoff: Deduplication Production Testing with Notion Issue Reporting' to Cursor MM1 Agent
+2026-01-07 01:47:46,943 - __main__ - INFO - Processing: Phase 5A: Handoff — Codex MM1 — Remediate Top-Priority Code Fixes (Status: Planning)
+2026-01-07 01:47:49,965 - httpx - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/b8fe05d8-cf27-4a39-9eb4-948de6f52659 "HTTP/1.1 200 OK"
+2026-01-07 01:47:49,966 - __main__ - INFO - ✅ Reassigned task 'Phase 5A: Handoff — Codex MM1 — Remediate Top-Priority Code Fixes' to Cursor MM1 Agent
+2026-01-07 01:47:49,967 - __main__ - INFO - ================================================================================
+2026-01-07 01:47:49,967 - __main__ - INFO - REASSIGNMENT SUMMARY
+2026-01-07 01:47:49,967 - __main__ - INFO - ================================================================================
+2026-01-07 01:47:49,967 - __main__ - INFO - Total tasks found: 19
+2026-01-07 01:47:49,967 - __main__ - INFO - Successfully reassigned: 19
+2026-01-07 01:47:49,967 - __main__ - INFO - Failed to reassign: 0
+2026-01-07 01:47:49,969 - __main__ - INFO - ✅ Detailed report saved to: codex_mm1_reassignment_report.json

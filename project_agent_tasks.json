@@ -1,0 +1,1355 @@
+{
+  "project_id": "dc55d5da-ba67-41f3-a355-3b52f5b2697d",
+  "tasks": [
+    {
+      "id": "0c28e2be-d5c5-4176-a9c7-38ad146760ec",
+      "title": "[P1] Implement syncWorkspaceDatabasesRow_ Function",
+      "status": "Completed",
+      "description": "Phase 1 Core Function: Implement syncWorkspaceDatabasesRow_(sourceRow, targetDb) function that synchronizes a single row from workspace-databases registry between workspaces. Must handle schema mapping and ID translation.",
+      "url": "https://www.notion.so/P1-Implement-syncWorkspaceDatabasesRow_-Function-0c28e2bed5c54176a9c738ad146760ec",
+      "assigned_agent_id": null,
+      "task_data": {
+        "object": "page",
+        "id": "0c28e2be-d5c5-4176-a9c7-38ad146760ec",
+        "created_time": "2026-01-09T16:53:00.000Z",
+        "last_edited_time": "2026-01-14T11:22:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "51c92eba-7aaf-4f79-936c-18af8e05cbc5"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "ff3b516d-d9ae-4f65-bd75-837579a316aa"
+        },
+        "cover": null,
+        "icon": {
+          "type": "emoji",
+          "emoji": "\ud83d\udd27"
+        },
+        "parent": {
+          "type": "database_id",
+          "database_id": "284e7361-6c27-8018-872a-eb14e82e0392"
+        },
+        "archived": false,
+        "in_trash": false,
+        "is_locked": false,
+        "properties": {
+          "Target Folder": {
+            "id": "%3BEOz",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Dashboard Implementation": {
+            "id": "%3BK%7C%3C",
+            "type": "select",
+            "select": null
+          },
+          "Research Mode Source": {
+            "id": "%3BQMt",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Risk Assessment Summary": {
+            "id": "%3BfHu",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Performance Targets": {
+            "id": "%3Bh%3CG",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Capability Level": {
+            "id": "%3BwH%5B",
+            "type": "select",
+            "select": null
+          },
+          "Dependent Tasks": {
+            "id": "%3BzkT",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Review Outcome": {
+            "id": "%3CRQy",
+            "type": "select",
+            "select": null
+          },
+          "Priority": {
+            "id": "%3C%5BLk",
+            "type": "select",
+            "select": {
+              "id": "c0d5b6d2-3dd9-453e-af30-9731c29f99d2",
+              "name": "Critical",
+              "color": "red"
+            }
+          },
+          "Next Required Step": {
+            "id": "%3C%60FH",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Cursor MM1 Agent: Implement after upsertRegistryPage_ is ready",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Cursor MM1 Agent: Implement after upsertRegistryPage_ is ready",
+                "href": null
+              }
+            ]
+          },
+          "Dependency Status": {
+            "id": "%3Ci%5Bw",
+            "type": "select",
+            "select": {
+              "id": "vfAM",
+              "name": "Blocked",
+              "color": "red"
+            }
+          },
+          "Sync: Notion Code Updated": {
+            "id": "%3ClB%3B",
+            "type": "checkbox",
+            "checkbox": false
+          },
+          "Task Instructions": {
+            "id": "%3Dn%3EV",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Schema Validation Level": {
+            "id": "%3D%7CWF",
+            "type": "select",
+            "select": null
+          },
+          "Source Database": {
+            "id": "%3E%5CO%5C",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "WorkspaceAreas": {
+            "id": "%3E%5ErO",
+            "type": "rollup",
+            "rollup": {
+              "type": "array",
+              "array": [],
+              "function": "show_original"
+            }
+          },
+          "Testing Coverage": {
+            "id": "%3E%7BHa",
+            "type": "multi_select",
+            "multi_select": []
+          },
+          "Required Relations OK": {
+            "id": "%3F%3EFL",
+            "type": "checkbox",
+            "checkbox": false
+          },
+          "Pre-Execution Checklist": {
+            "id": "%3FARI",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Rollup": {
+            "id": "%3F%5DIW",
+            "type": "rollup",
+            "rollup": {
+              "type": "array",
+              "array": [],
+              "function": "show_original"
+            }
+          },
+          "system-documentation": {
+            "id": "%3F%60R%5B",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Approval Mode": {
+            "id": "%3FkTW",
+            "type": "select",
+            "select": null
+          },
+          "Evidence Packet Ready": {
+            "id": "%3FvXR",
+            "type": "checkbox",
+            "checkbox": false
+          },
+          "Deliverable Type": {
+            "id": "%40%3B%60l",
+            "type": "select",
+            "select": null
+          },
+          "Created by": {
+            "id": "%40%3CxS",
+            "type": "created_by",
+            "created_by": {
+              "object": "user",
+              "id": "51c92eba-7aaf-4f79-936c-18af8e05cbc5",
+              "name": "Brian Hellemn",
+              "avatar_url": "https://s3-us-west-2.amazonaws.com/public.notion-static.com/a8d7404d-748b-4eae-926a-e8b58e1806ce/headshot-b-w.png",
+              "type": "person",
+              "person": {
+                "email": "brian@serenmedia.co"
+              }
+            }
+          },
+          "Prerequisite Tasks": {
+            "id": "%40IOC",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Agent-Workflows": {
+            "id": "%40gVT",
+            "type": "rollup",
+            "rollup": {
+              "type": "array",
+              "array": [],
+              "function": "show_original"
+            }
+          },
+          "Run": {
+            "id": "%40xNm",
+            "type": "button",
+            "button": {}
+          },
+          "MCP2": {
+            "id": "AEQM",
+            "type": "checkbox",
+            "checkbox": false
+          },
+          "MCP Progress Percentage": {
+            "id": "AhVG",
+            "type": "number",
+            "number": null
+          },
+          "Is Executable": {
+            "id": "B%3F%3D%5E",
+            "type": "checkbox",
+            "checkbox": false
+          },
+          "Target Date": {
+            "id": "BEFf",
+            "type": "date",
+            "date": null
+          },
+          "Agent Handoff File Links": {
+            "id": "BLQo",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Roles": {
+            "id": "CR%3F%60",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "MCP Send Webhook": {
+            "id": "C%7DvU",
+            "type": "checkbox",
+            "checkbox": false
+          },
+          "Pipeline Validation Level": {
+            "id": "DVpx",
+            "type": "select",
+            "select": null
+          },
+          "Notion-AI-Research-Analysis-Docs": {
+            "id": "D%5DSq",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Rollback Plan": {
+            "id": "D_dj",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Source Volume": {
+            "id": "Dlq%3F",
+            "type": "rollup",
+            "rollup": {
+              "type": "array",
+              "array": [],
+              "function": "show_original"
+            }
+          },
+          "Last Trigger Timestamp": {
+            "id": "E%5BJj",
+            "type": "date",
+            "date": null
+          },
+          "Execution-Result": {
+            "id": "Efrn",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "MCP Payload": {
+            "id": "Eond",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "MCP Step Counter": {
+            "id": "F%60Lu",
+            "type": "number",
+            "number": null
+          },
+          "Trigger Payload JSON": {
+            "id": "Fz%40V",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Task Type": {
+            "id": "F%7Bl%5B",
+            "type": "select",
+            "select": {
+              "id": "80421844-43b2-4e9e-a013-60cbdbc4b6ec",
+              "name": "Code Implementation",
+              "color": "pink"
+            }
+          },
+          "Verification Checklist": {
+            "id": "G%5CYY",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "- [ ] Property mapping validated\n- [ ] Relation ID translation works\n- [ ] Error handling for schema mismatches\n- [ ] Execution-Log entry created\n- [ ] Integration test with real data passes",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "- [ ] Property mapping validated\n- [ ] Relation ID translation works\n- [ ] Error handling for schema mismatches\n- [ ] Execution-Log entry created\n- [ ] Integration test with real data passes",
+                "href": null
+              }
+            ]
+          },
+          "Description": {
+            "id": "Gbfn",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Phase 1 Core Function: Implement syncWorkspaceDatabasesRow_(sourceRow, targetDb) function that synchronizes a single row from workspace-databases registry between workspaces. Must handle schema mapping and ID translation.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Phase 1 Core Function: Implement syncWorkspaceDatabasesRow_(sourceRow, targetDb) function that synchronizes a single row from workspace-databases registry between workspaces. Must handle schema mapping and ID translation.",
+                "href": null
+              }
+            ]
+          },
+          "Prompts": {
+            "id": "Gq%3BG",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Workflows": {
+            "id": "Gv%3E%5D",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Composite_Ready_Status": {
+            "id": "HMuU",
+            "type": "formula",
+            "formula": {
+              "type": "boolean",
+              "boolean": false
+            }
+          },
+          "Infrastructure Integration": {
+            "id": "HVBB",
+            "type": "multi_select",
+            "multi_select": []
+          },
+          "\ud83e\udd16 Agent-Projects": {
+            "id": "H%60%3D%3D",
+            "type": "relation",
+            "relation": [
+              {
+                "id": "dc55d5da-ba67-41f3-a355-3b52f5b2697d"
+              }
+            ],
+            "has_more": false
+          },
+          "Agent Trigger File Links": {
+            "id": "Hcc%3E",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "MCP Error Details": {
+            "id": "HiO%3C",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Lifecycle": {
+            "id": "Hj%5B%60",
+            "type": "select",
+            "select": null
+          },
+          "Module Components": {
+            "id": "HxaJ",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Coordination Points": {
+            "id": "IGAV",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Integration Blueprint Status": {
+            "id": "J%3Dod",
+            "type": "select",
+            "select": null
+          },
+          "Framework Module": {
+            "id": "Jwqi",
+            "type": "select",
+            "select": null
+          },
+          "Correlation ID Implementation": {
+            "id": "MNF%7B",
+            "type": "select",
+            "select": null
+          },
+          "Impact Assessment": {
+            "id": "M%7B%7B%3E",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Assigned-Agent": {
+            "id": "NCGG",
+            "type": "rollup",
+            "rollup": {
+              "type": "array",
+              "array": [],
+              "function": "show_original"
+            }
+          },
+          "Assigned Role": {
+            "id": "NNUb",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "GitHub Pull Requests": {
+            "id": "NcBP",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Orchesration-Prompt-AI": {
+            "id": "Nv%5ES",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "- Identify the objective: Implement the syncWorkspaceDatabasesRow_ function to synchronize a single row from workspace databases.\n- Limit changes to the specified source row dictionary and target database ID.\n- Record all actions in the Execution-Logs, including diffs, counts, and evidence.\n- Do NOT modify any relation that points outside of the approved registry databases.\n- Do NOT proceed without a complete Change Spec.\n\nOrchestration \u2192 Execution:\n1. Create a new Execution Agent-Task for this run.\n2. Assign the task to the appropriate agent and link the governing workflow.\n3. Link all in-scope databases/items.\n4. Copy the frozen Change Spec into the Execution Agent-Task.\n\nExecution \u2192 Review:\n5. Define a Review Agent-Task.\n6. The reviewer must verify:\n- Views and counts of the synchronized row.\n- Evidence of the successful execution.\n- Relation-target integrity.\n- All success criteria are met.\n\nReview \u2192 Outcomes:\n7. If gaps exist, open Issues+Questions and create remediation tasks linked back to this run.\n8. If everything passes, hand back for documentation, status updates, and closure.\n\nConcrete asset identifiers:\n- Target function: syncWorkspaceDatabasesRow_\n- Notion URL: Notion Page\n- Filesystem Path/ID: Code.js at lines 4686-5265.\n\nBefore you consider this orchestration complete, confirm all of the following are true:\n- [ ] The Execution Agent-Task is created and assigned.\n- [ ] The Change Spec is fully copied into the Execution Agent-Task.\n- [ ] The Review Agent-Task is defined and ready for review.\n- [ ] All action logs are recorded in Execution-Logs.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "- Identify the objective: Implement the syncWorkspaceDatabasesRow_ function to synchronize a single row from workspace databases.\n- Limit changes to the specified source row dictionary and target database ID.\n- Record all actions in the Execution-Logs, including diffs, counts, and evidence.\n- Do NOT modify any relation that points outside of the approved registry databases.\n- Do NOT proceed without a complete Change Spec.\n\nOrchestration \u2192 Execution:\n1. Create a new Execution Agent-Task for this run.\n2. Assign the task to the appropriate agent and link the governing workflow.\n3. Link all in-scope databases/items.\n4. Copy the frozen Change Spec into the Execution Agent-Task.\n\nExecution \u2192 Review:\n5. Define a Review Agent-Task.\n6. The reviewer must verify:\n- Views and counts of the synchronized row.\n- Evidence of the successful execution.\n- Relation-target integrity.\n- All success criteria are met.\n\nReview \u2192 Outcomes:\n7. If gaps exist, open Issues+Questions and create remediation tasks linked back to this run.\n8. If everything passes, hand back for documentation, status updates, and closure.\n\nConcrete asset identifiers:\n- Target function: syncWorkspaceDatabasesRow_\n- Notion URL: Notion Page\n- Filesystem Path/ID: Code.js at lines 4686-5265.\n\nBefore you consider this orchestration complete, confirm all of the following are true:\n- [ ] The Execution Agent-Task is created and assigned.\n- [ ] The Change Spec is fully copied into the Execution Agent-Task.\n- [ ] The Review Agent-Task is defined and ready for review.\n- [ ] All action logs are recorded in Execution-Logs.",
+                "href": null
+              }
+            ]
+          },
+          "Script File Path": {
+            "id": "NvyL",
+            "type": "rollup",
+            "rollup": {
+              "type": "array",
+              "array": [],
+              "function": "show_original"
+            }
+          },
+          "Target Volume": {
+            "id": "OEaq",
+            "type": "rollup",
+            "rollup": {
+              "type": "array",
+              "array": [],
+              "function": "show_original"
+            }
+          },
+          "workspace-databases": {
+            "id": "OU_e",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Documentation Gap Audit Last Run": {
+            "id": "OsHO",
+            "type": "date",
+            "date": null
+          },
+          "Created time": {
+            "id": "O%7D%3A%7C",
+            "type": "created_time",
+            "created_time": "2026-01-09T16:53:00.000Z"
+          },
+          "Sync: GitHub Linked": {
+            "id": "PCVz",
+            "type": "checkbox",
+            "checkbox": false
+          },
+          "Clients": {
+            "id": "PRPp",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Agent Handoff Folder Path": {
+            "id": "PivU",
+            "type": "url",
+            "url": null
+          },
+          "Agent-Function": {
+            "id": "PuZt",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "MCP Session ID": {
+            "id": "QTFS",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Approved By": {
+            "id": "Qiz%7D",
+            "type": "people",
+            "people": []
+          },
+          "Approval Notes": {
+            "id": "QuV%7C",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Last Checkpoint Summary": {
+            "id": "QzG%5B",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Human Actions Required": {
+            "id": "RJid",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Trigger Delivery Status": {
+            "id": "RKxA",
+            "type": "select",
+            "select": null
+          },
+          "Risk Level": {
+            "id": "RWM~",
+            "type": "select",
+            "select": null
+          },
+          "Days_Since_Created": {
+            "id": "Rbe%60",
+            "type": "formula",
+            "formula": {
+              "type": "number",
+              "number": 8
+            }
+          },
+          "Script Standardization Status": {
+            "id": "Sa_a",
+            "type": "select",
+            "select": null
+          },
+          "Archive": {
+            "id": "ScjG",
+            "type": "checkbox",
+            "checkbox": false
+          },
+          "Steps": {
+            "id": "Sifc",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Target Database": {
+            "id": "So%60P",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Type": {
+            "id": "TKRB",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Artifacts": {
+            "id": "UwEN",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "IaC Compatibility Level": {
+            "id": "VRV%3D",
+            "type": "select",
+            "select": null
+          },
+          "Validation Reviews": {
+            "id": "VSwS",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "MCP Start Time": {
+            "id": "VUtp",
+            "type": "date",
+            "date": null
+          },
+          "Cursor Pre-flight": {
+            "id": "VX~q",
+            "type": "select",
+            "select": null
+          },
+          "Sync: Code Parity Verified": {
+            "id": "Vg%3Ev",
+            "type": "checkbox",
+            "checkbox": false
+          },
+          "Integration Points": {
+            "id": "Vhd_",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Agent_Status_Cache": {
+            "id": "Vt%7CR",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Function Linked": {
+            "id": "W%60%5Bv",
+            "type": "checkbox",
+            "checkbox": false
+          },
+          "MCP End Time": {
+            "id": "XFEy",
+            "type": "date",
+            "date": null
+          },
+          "scripts": {
+            "id": "XJ%5D~",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "MCP Validation Results": {
+            "id": "X%5Eiy",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Agent-Functions": {
+            "id": "XmxA",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "_last_synced_iso": {
+            "id": "Y%3AkP",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Decision Log (JSONL)": {
+            "id": "YF%40%7B",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "MCP Intermediate Results": {
+            "id": "%5BC%3F%3F",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "MCP Next Actions": {
+            "id": "%5BHdi",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Issues+Questions 1": {
+            "id": "%5B%5Cax",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Agent Trigger Folder Path": {
+            "id": "%5Bqi%3B",
+            "type": "url",
+            "url": null
+          },
+          "Resume From Here": {
+            "id": "%5DLOZ",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "COMPLETED by Claude Code Agent (Opus 4.5) on 2026-01-10T07:06:42.000Z. Function syncWorkspaceDatabasesRow_ implemented in Code.js at lines 4686-5265. Includes full JSDoc documentation, error handling, logging integration, and test examples. Ready for code review and integration testing.",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "COMPLETED by Claude Code Agent (Opus 4.5) on 2026-01-10T07:06:42.000Z. Function syncWorkspaceDatabasesRow_ implemented in Code.js at lines 4686-5265. Includes full JSDoc documentation, error handling, logging integration, and test examples. Ready for code review and integration testing.",
+                "href": null
+              }
+            ]
+          },
+          "Agent_UUID_Cache": {
+            "id": "%5EIJX",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "User Approval Required": {
+            "id": "%5E_TW",
+            "type": "checkbox",
+            "checkbox": false
+          },
+          "Mode Detection Timestamp": {
+            "id": "%5Ev%3Cx",
+            "type": "date",
+            "date": null
+          },
+          "MCP User Interactions": {
+            "id": "_%5BGp",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "MCP Last Checkpoint": {
+            "id": "_p%40c",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Execution Log": {
+            "id": "_%7D%5Dg",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Agent Auto-Assigned": {
+            "id": "%60PzX",
+            "type": "checkbox",
+            "checkbox": false
+          },
+          "Mitigation Strategy": {
+            "id": "%60YYc",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "workspace-documentation": {
+            "id": "%60cBi",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Execution Log (JSONL)": {
+            "id": "%60i%40%5B",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Test Coverage Percentage": {
+            "id": "%60pZP",
+            "type": "number",
+            "number": null
+          },
+          "Multi-Agent Observability": {
+            "id": "a%40%3Cf",
+            "type": "select",
+            "select": null
+          },
+          "Implementation Phase": {
+            "id": "aVGG",
+            "type": "select",
+            "select": null
+          },
+          "Blocking Reason": {
+            "id": "aZND",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Depends on upsertRegistryPage_ function completion",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Depends on upsertRegistryPage_ function completion",
+                "href": null
+              }
+            ]
+          },
+          "Standardization Level": {
+            "id": "apF%3C",
+            "type": "select",
+            "select": null
+          },
+          "item-type": {
+            "id": "aqOQ",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Decision Log": {
+            "id": "arx%7D",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Baseline Assessment Status": {
+            "id": "bB%3DR",
+            "type": "select",
+            "select": null
+          },
+          "Documentation Gap Audit Status": {
+            "id": "bIoC",
+            "type": "select",
+            "select": null
+          },
+          "MCP Total Steps": {
+            "id": "c%3Bv%7D",
+            "type": "number",
+            "number": null
+          },
+          "Module Unification Status": {
+            "id": "cIYl",
+            "type": "select",
+            "select": null
+          },
+          "Log Summary": {
+            "id": "c%5D%3Ao",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "MCP Current Action": {
+            "id": "ccou",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Audit Scope": {
+            "id": "ceuP",
+            "type": "multi_select",
+            "multi_select": []
+          },
+          "Execution Model": {
+            "id": "cwX%7D",
+            "type": "select",
+            "select": null
+          },
+          "Configuration Drift Status": {
+            "id": "dHE%5B",
+            "type": "select",
+            "select": null
+          },
+          "Inbox": {
+            "id": "dNot",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Revision Count": {
+            "id": "d_d%40",
+            "type": "number",
+            "number": null
+          },
+          "Constraints": {
+            "id": "dvz%40",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Source Folder": {
+            "id": "e%40ie",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Approval Date": {
+            "id": "eCkO",
+            "type": "date",
+            "date": null
+          },
+          "MCP Decision Log": {
+            "id": "eHfa",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Execution-Logs": {
+            "id": "eKm%5D",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Template Adoption Rate": {
+            "id": "eSt%7C",
+            "type": "number",
+            "number": null
+          },
+          "Sync: Folders Mapped": {
+            "id": "fPZw",
+            "type": "checkbox",
+            "checkbox": false
+          },
+          "Dependency Override": {
+            "id": "fYdQ",
+            "type": "checkbox",
+            "checkbox": false
+          },
+          "Issues+Questions": {
+            "id": "hM%40g",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "MCP Output Artifacts": {
+            "id": "hUqo",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Sync: Last Script Sync Time": {
+            "id": "hZhd",
+            "type": "rollup",
+            "rollup": {
+              "type": "array",
+              "array": [],
+              "function": "show_original"
+            }
+          },
+          "Dependency Chain Position": {
+            "id": "ht%3BF",
+            "type": "number",
+            "number": null
+          },
+          "Observability Score": {
+            "id": "i%3ASJ",
+            "type": "number",
+            "number": null
+          },
+          "Failure Rate Target": {
+            "id": "i%3AhS",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Functions": {
+            "id": "iX%5C%60",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Last edited by": {
+            "id": "iipb",
+            "type": "last_edited_by",
+            "last_edited_by": {
+              "object": "user",
+              "id": "ff3b516d-d9ae-4f65-bd75-837579a316aa",
+              "name": "DriveSheetsSync",
+              "avatar_url": null,
+              "type": "bot",
+              "bot": {}
+            }
+          },
+          "Last edited time": {
+            "id": "jOY%7C",
+            "type": "last_edited_time",
+            "last_edited_time": "2026-01-14T11:22:00.000Z"
+          },
+          "Projects": {
+            "id": "jYus",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Agent_Priority_Score": {
+            "id": "jb%3BO",
+            "type": "formula",
+            "formula": {
+              "type": "number",
+              "number": 100
+            }
+          },
+          "Research Mode Detected": {
+            "id": "jm%5Cc",
+            "type": "select",
+            "select": null
+          },
+          "Scripts Linked": {
+            "id": "jyrZ",
+            "type": "checkbox",
+            "checkbox": false
+          },
+          "Completion Ready 1": {
+            "id": "kB%5Bj",
+            "type": "checkbox",
+            "checkbox": false
+          },
+          "folders": {
+            "id": "kGhQ",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "MCP Retry Count": {
+            "id": "k~KS",
+            "type": "number",
+            "number": null
+          },
+          "Item-Type": {
+            "id": "l%40Ea",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Resource Requirements": {
+            "id": "lFyK",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Reliability Patterns": {
+            "id": "lwNi",
+            "type": "multi_select",
+            "multi_select": []
+          },
+          "User-Functions": {
+            "id": "m%3EmN",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Documents": {
+            "id": "mNUB",
+            "type": "rollup",
+            "rollup": {
+              "type": "array",
+              "array": [],
+              "function": "show_original"
+            }
+          },
+          "Required-Property-Updates": {
+            "id": "mVPV",
+            "type": "rollup",
+            "rollup": {
+              "type": "array",
+              "array": [],
+              "function": "show_original"
+            }
+          },
+          "Credential Rotation Status": {
+            "id": "ma%3Dr",
+            "type": "select",
+            "select": null
+          },
+          "Docs Status": {
+            "id": "nY%3AE",
+            "type": "select",
+            "select": null
+          },
+          "MCP Execution Log": {
+            "id": "opJR",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Audit Trail Completeness": {
+            "id": "pVL%5C",
+            "type": "select",
+            "select": null
+          },
+          "Recovery Time Objective": {
+            "id": "pr%60F",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Related Chats": {
+            "id": "qKk%7D",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Approval Status": {
+            "id": "qZ%40m",
+            "type": "status",
+            "status": null
+          },
+          "MCP Performance Metrics": {
+            "id": "qnm%3D",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Documentation Gap Audit Run ID": {
+            "id": "qvTG",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Handoff Status": {
+            "id": "ro_%7D",
+            "type": "status",
+            "status": null
+          },
+          "Automation Percentage": {
+            "id": "ruGA",
+            "type": "number",
+            "number": null
+          },
+          "Success Criteria": {
+            "id": "s_%3C%3A",
+            "type": "rich_text",
+            "rich_text": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "- Function accepts sourceRow dict and targetDb ID\n- Maps source properties to target schema\n- Translates relation IDs to target workspace\n- Creates or updates target row\n- Returns sync status and target page URL\n- Handles missing/new properties gracefully",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "- Function accepts sourceRow dict and targetDb ID\n- Maps source properties to target schema\n- Translates relation IDs to target workspace\n- Creates or updates target row\n- Returns sync status and target page URL\n- Handles missing/new properties gracefully",
+                "href": null
+              }
+            ]
+          },
+          "Traceability Implementation": {
+            "id": "uS%3Di",
+            "type": "select",
+            "select": null
+          },
+          "Parent item": {
+            "id": "ubk_",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Success Metrics": {
+            "id": "vY%3C%3B",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Dry Run Plan": {
+            "id": "vyZ%7B",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "MCP Duration": {
+            "id": "wevR",
+            "type": "number",
+            "number": null
+          },
+          "scripting-documentation": {
+            "id": "wr%40B",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Sub-item": {
+            "id": "wsAc",
+            "type": "relation",
+            "relation": [],
+            "has_more": false
+          },
+          "Compliance Requirements": {
+            "id": "xHqn",
+            "type": "multi_select",
+            "multi_select": []
+          },
+          "Agent-Workflows (1)": {
+            "id": "xn%5Bg",
+            "type": "rollup",
+            "rollup": {
+              "type": "array",
+              "array": [],
+              "function": "show_original"
+            }
+          },
+          "Overall Objective": {
+            "id": "yEC%3A",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Execution Authorization": {
+            "id": "ySdv",
+            "type": "select",
+            "select": null
+          },
+          "MCP": {
+            "id": "yZLx",
+            "type": "checkbox",
+            "checkbox": false
+          },
+          "Pre-Flight Passed": {
+            "id": "y%5BO%7C",
+            "type": "checkbox",
+            "checkbox": false
+          },
+          "Blueprint Mapping Status": {
+            "id": "ylde",
+            "type": "select",
+            "select": null
+          },
+          "Objective": {
+            "id": "ytGC",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Target-item-types": {
+            "id": "zYda",
+            "type": "rollup",
+            "rollup": {
+              "type": "array",
+              "array": [],
+              "function": "show_original"
+            }
+          },
+          "Monitoring & Observability": {
+            "id": "zaPw",
+            "type": "multi_select",
+            "multi_select": []
+          },
+          "MCP Context Changes": {
+            "id": "%7BTCT",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "Escalation Policy Status": {
+            "id": "%7CpOZ",
+            "type": "select",
+            "select": null
+          },
+          "Methodology Enforcement": {
+            "id": "%7Dv%5Bg",
+            "type": "select",
+            "select": null
+          },
+          "Environment Consistency": {
+            "id": "~%3COc",
+            "type": "select",
+            "select": null
+          },
+          "AI Actions Available": {
+            "id": "~Hfm",
+            "type": "multi_select",
+            "multi_select": []
+          },
+          "MCP Resource Usage": {
+            "id": "~%5EO%5C",
+            "type": "rich_text",
+            "rich_text": []
+          },
+          "BusinessAreas": {
+            "id": "~aCd",
+            "type": "rollup",
+            "rollup": {
+              "type": "array",
+              "array": [],
+              "function": "show_original"
+            }
+          },
+          "Task Name": {
+            "id": "title",
+            "type": "title",
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "[P1] Implement syncWorkspaceDatabasesRow_ Function",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "[P1] Implement syncWorkspaceDatabasesRow_ Function",
+                "href": null
+              }
+            ]
+          },
+          "Assignee": {
+            "id": "26a0c86b-8949-4edb-b981-54b241ed6cb8",
+            "type": "people",
+            "people": []
+          },
+          "Language": {
+            "id": "82ca8178-f349-4cab-b297-e3e1bdd3e6ae",
+            "type": "select",
+            "select": {
+              "id": "Python",
+              "name": "Python",
+              "color": "pink"
+            }
+          },
+          "Status": {
+            "id": "8e4983da-503f-43b5-87c5-6c3a156175b0",
+            "type": "status",
+            "status": {
+              "id": "][f^",
+              "name": "Completed",
+              "color": "green"
+            }
+          },
+          "Category": {
+            "id": "d35a0300-7a7a-4ec0-b3e9-7db0c5bc00aa",
+            "type": "select",
+            "select": null
+          },
+          "Owner": {
+            "id": "eee63447-9909-42ab-8069-82e9385940eb",
+            "type": "people",
+            "people": []
+          }
+        },
+        "url": "https://www.notion.so/P1-Implement-syncWorkspaceDatabasesRow_-Function-0c28e2bed5c54176a9c738ad146760ec",
+        "public_url": null
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+2026-01-18 05:52:20,846 - INFO - ============================================================
+2026-01-18 05:52:20,846 - INFO - Starting Lightroom to Google Drive SQL Sync
+2026-01-18 05:52:20,846 - INFO - Source catalog: /Volumes/SYSTEM_SSD/master-lightroom-2/Master_Lightroom.lrcat
+2026-01-18 05:52:20,846 - INFO - Output database: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-vibe.vessel.io@gmail.com/My Drive/VibeVessel/Databases/lightroom_library_sync.db
+2026-01-18 05:52:20,846 - INFO - ============================================================
+2026-01-18 05:52:20,846 - INFO - Connecting to Lightroom catalog...
+2026-01-18 05:52:21,249 - INFO - Catalog statistics: {
+  "total_images": 73343,
+  "images_with_exif": 73343,
+  "collections": 117,
+  "folders": 63236,
+  "keywords": 1004
+}
+2026-01-18 05:52:21,249 - INFO - Initializing sync database...
+2026-01-18 05:52:21,277 - INFO - Backed up existing database to /Users/brianhellemn/Projects/github-production/data/lightroom_sync_backups/lightroom_library_sync_20260118_055221.db
+2026-01-18 05:52:21,278 - INFO - Database schema initialized
+2026-01-18 05:52:21,278 - INFO - Fetching images from catalog...
+2026-01-18 05:52:25,255 - INFO - Found 73343 images
+2026-01-18 05:52:32,743 - INFO - Synced 73343 images
+2026-01-18 05:52:32,743 - INFO - Fetching collections...
+2026-01-18 05:52:32,752 - INFO - Found 117 collections
+2026-01-18 05:52:32,767 - INFO - Synced 117 collections
+2026-01-18 05:52:32,767 - INFO - Syncing collection-image relationships...
+2026-01-18 05:52:33,122 - INFO - Fetching keywords...
+2026-01-18 05:52:33,132 - INFO - Found 1004 keywords
+2026-01-18 05:52:33,133 - ERROR - Sync failed: NOT NULL constraint failed: keywords.name
+2026-01-18 05:52:33,134 - ERROR - Traceback (most recent call last):
+  File "/Users/brianhellemn/Projects/github-production/scripts/lightroom_to_google_drive_sql_sync.py", line 710, in run_full_sync
+    sync_db.sync_keywords(keywords, timestamp)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianhellemn/Projects/github-production/scripts/lightroom_to_google_drive_sql_sync.py", line 587, in sync_keywords
+    cursor.execute("""
+    ~~~~~~~~~~~~~~^^^^
+    INSERT INTO keywords (
+    ^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+        kw['lowercase_name'], timestamp
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ))
+    ^^
+sqlite3.IntegrityError: NOT NULL constraint failed: keywords.name
+

@@ -1,0 +1,1612 @@
+{
+  "analysis_date": "2026-01-07T04:13:47.919972",
+  "total_found": 100,
+  "scripts": [
+    {
+      "title": "Notion Cross-Workspace Client Sync (GAS)",
+      "id": "0d6fe884-8e53-48e8-abd2-0ac7822219ea",
+      "url": "https://www.notion.so/0d6fe8848e5348e8abd20ac7822219ea",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script to sync client pages across two Notion workspaces with schema analysis, safe property creation, and robust retry + rate limiting (Notion-Version 2025-09-03).",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "Dropbox Sync Module (Python) \u2014 Notion Media + Docs",
+      "id": "18b03a37-4c34-46c9-90ca-778480cc40c7",
+      "url": "https://www.notion.so/18b03a374c3446c990ca778480cc40c7",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Notion Database Pro\u2026",
+      "id": "225e7361-6c27-8103-b326-dbb153194b4c",
+      "url": "https://www.notion.so/225e73616c278103b326dbb153194b4c",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Notion Database Pro\u2026\nScript ID: 1GisWfYGwGRhubYwdG6HcbN2g1ArAMhJl9kK9n44Ry98u1B5MNRjVPwFF\nLast synced: 2025-07-04 20:42:55\nFunctions: 2",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Slack Webhook Endpo\u2026",
+      "id": "225e7361-6c27-8105-aeeb-e37b75d71887",
+      "url": "https://www.notion.so/225e73616c278105aeebe37b75d71887",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Slack Webhook Endpo\u2026\nScript ID: 1iVdvE1YYqlc0EdNiXVa9mZf8Dw-phvcJWWMCdXJAkrT4HAbey1hIHUrL\nLast synced: 2025-07-04 19:18:31\nFunctions: 2",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Slack Script Writer",
+      "id": "225e7361-6c27-8109-80d0-d8e765a72578",
+      "url": "https://www.notion.so/225e73616c27810980d0d8e765a72578",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Slack Script Writer\nScript ID: 1WPW-QcUK3N9Birstg73djcCWbJhMFGRNz8pNEGg8kxW0g4RDSRayvcxC\nLast synced: 2025-07-04 20:26:20\nFunctions: 47",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Adobe Lightroom API\u2026",
+      "id": "225e7361-6c27-8111-8276-f2d11a0aabae",
+      "url": "https://www.notion.so/225e73616c2781118276f2d11a0aabae",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Adobe Lightroom API\u2026\nScript ID: 1M0Uk63Roqxa4igIVIE9Nz1Q-sPSlvtlBRlS5ztaRVlt2BRc044O8c3c0\nLast synced: 2025-07-04 19:52:28\nFunctions: 19",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - NEW Relations [All\u2026",
+      "id": "225e7361-6c27-8113-a0d0-d5cdec2d67d3",
+      "url": "https://www.notion.so/225e73616c278113a0d0d5cdec2d67d3",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: NEW Relations [All\u2026\nScript ID: 1k_eUlvaFBMxHjfyXA2MZHPJcu3Zii49W6DPPJgPpJBd4yRCKustRYdrU\nLast synced: 2025-07-04 20:27:54\nFunctions: 25",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Data Sync to Notion",
+      "id": "225e7361-6c27-8113-b1c5-cb9ec23cbb86",
+      "url": "https://www.notion.so/225e73616c278113b1c5cb9ec23cbb86",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Data Sync to Notion\nScript ID: 1DWaxvBSJ7Ro8oUutM2UBD7PFwFRMna2NK0b2ZkhWhhz7U51neUN0pX_p\nLast synced: 2025-07-04 20:13:14\nFunctions: 14",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Notion DATABASES\u2026",
+      "id": "225e7361-6c27-8115-9c7d-ea085595a659",
+      "url": "https://www.notion.so/225e73616c2781159c7dea085595a659",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Notion DATABASES\u2026\nScript ID: 1qu1gljw_C0V6Xv1JkBUQUliFLKfUPYVibsJtLfbX3Xk1RIGRXnx84t-K\nLast synced: 2025-07-04 19:19:23\nFunctions: 36",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Toggl",
+      "id": "225e7361-6c27-8117-bc91-ed92104bedc2",
+      "url": "https://www.notion.so/225e73616c278117bc91ed92104bedc2",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Toggl\nScript ID: 1r0aZvx4zNd5C_ywW8YU6VAkxlEVrg6GbLKwtg2pGsHtpxIq-1c6b7RsN\nLast synced: 2025-07-04 20:43:43\nFunctions: 3",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Ocean Frontiers Blo\u2026",
+      "id": "225e7361-6c27-811c-b932-ec8c0f12565e",
+      "url": "https://www.notion.so/225e73616c27811cb932ec8c0f12565e",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Ocean Frontiers Blo\u2026\nScript ID: 1NqzKWvbhYNB68YqrdAEwo4gRR9xwnakRXn806SLIAZnbM8YuU9cSYUl-\nLast synced: 2025-07-04 20:14:30\nFunctions: 32",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Notion Meta-Databas\u2026",
+      "id": "225e7361-6c27-8129-bf46-e3c92e3f3aa0",
+      "url": "https://www.notion.so/225e73616c278129bf46e3c92e3f3aa0",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Notion Meta-Databas\u2026\nScript ID: 1FZ3qKRMAxZfARF6cyft6bWo98i1_XLQhCbuy6I2YA6tIM9bznLhk2IFG\nLast synced: 2025-07-04 19:16:48\nFunctions: 8",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Copy of Notion Imag\u2026",
+      "id": "225e7361-6c27-812a-ab07-e4c58a18a07e",
+      "url": "https://www.notion.so/225e73616c27812aab07e4c58a18a07e",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Copy of Notion Imag\u2026\nScript ID: 1aPLzV7Emp7Ii-lZtG4-hMJURXmPE3XjHFJlTn7EH4l3QdiblguOE4YFv\nLast synced: 2025-07-04 19:55:01\nFunctions: 10",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Local Folders Sync",
+      "id": "225e7361-6c27-812b-b69d-ca63f9ba1350",
+      "url": "https://www.notion.so/225e73616c27812bb69dca63f9ba1350",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Local Folders Sync\nScript ID: 1B9t2_JeeRmSGGrmPU-1fsNjRPrtqHzP5tYZA8wJKO1apgNcZhCJjkEjX\nLast synced: 2025-07-04 20:12:01\nFunctions: 17",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Notion to Adobe Lig\u2026",
+      "id": "225e7361-6c27-8132-a342-f803c4c4a5ee",
+      "url": "https://www.notion.so/225e73616c278132a342f803c4c4a5ee",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Notion to Adobe Lig\u2026\nScript ID: 1Fd9XlSI_-0HLiQwkfug3KPb2WDhhlGSZZDfTRQcBLG65K4TWXtrxa_6I\nLast synced: 2025-07-04 20:45:02\nFunctions: 5",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Sync Lightroom",
+      "id": "225e7361-6c27-8134-84b0-d2369064375a",
+      "url": "https://www.notion.so/225e73616c27813484b0d2369064375a",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Sync Lightroom\nScript ID: 1wGNuiLY48cvf5TGd5t49gtlLieVESrwBxNrBvBBVKNs6RRxUIA3jDF-z\nLast synced: 2025-07-04 20:43:16\nFunctions: 7",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Google Drive Data -\u2026",
+      "id": "225e7361-6c27-8137-bfe3-efdf7dfb09f6",
+      "url": "https://www.notion.so/225e73616c278137bfe3efdf7dfb09f6",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Google Drive Data -\u2026\nScript ID: 1MBXRZgNylPSoq5VCYwhuUc42Hqk2o1YXSOdnjVf30Xhn0ikl9B_Bs0jS\nLast synced: 2025-07-04 20:14:05\nFunctions: 22",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Project + Tasks Sync",
+      "id": "225e7361-6c27-813e-b4db-cc52fbd169ea",
+      "url": "https://www.notion.so/225e73616c27813eb4dbcc52fbd169ea",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Project + Tasks Sync\nScript ID: 1i06qEwfWlbejNWQo1pkTiwPNgQzC7-ev-XsWmaFF6gtGiFw01bAqOS4e\nLast synced: 2025-07-04 19:51:27\nFunctions: 9",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Notion Comments",
+      "id": "225e7361-6c27-8145-9620-f69d17f52323",
+      "url": "https://www.notion.so/225e73616c2781459620f69d17f52323",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Notion Comments\nScript ID: 1Ir-2QmCwJeHTCZor28KV4bF9eokN2uUReNSTSEUl1B62jOyPi_8CqK2L\nLast synced: 2025-07-04 19:51:42\nFunctions: 23",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - TEST Notion DATABAS\u2026",
+      "id": "225e7361-6c27-8148-bcfe-ca1cf80b592e",
+      "url": "https://www.notion.so/225e73616c278148bcfeca1cf80b592e",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: TEST Notion DATABAS\u2026\nScript ID: 1a0kF2QmB5QoG8vEQWtQzoq-NdA_p9To-6VreSE9I86fiRpf1zbjDuECR\nLast synced: 2025-07-04 19:41:45\nFunctions: 35",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Untitled project",
+      "id": "225e7361-6c27-814a-8f40-d45149cbb88c",
+      "url": "https://www.notion.so/225e73616c27814a8f40d45149cbb88c",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Untitled project\nScript ID: 1m9GX5ElzdniB86eAD1GEB4jg7_uU4lL41X0k0MNhgvq--A6Sj_bB5nMc\nLast synced: 2025-07-04 19:55:56\nFunctions: 1",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - SoundCloud",
+      "id": "225e7361-6c27-8152-a4fb-f4ea6049cae1",
+      "url": "https://www.notion.so/225e73616c278152a4fbf4ea6049cae1",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: SoundCloud\nScript ID: 1upXJDMUt1QTGfLZ-MiRoLejflX2V8NTUD-ZJ3ye7x2BAkqW6JpCTA24u\nLast synced: 2025-07-04 20:46:18\nFunctions: 10",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Copy of Slack-ChatG\u2026",
+      "id": "225e7361-6c27-816b-9fdb-fd28957ce950",
+      "url": "https://www.notion.so/225e73616c27816b9fdbfd28957ce950",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Copy of Slack-ChatG\u2026\nScript ID: 1aTfRwlbQ0edf_THJSLTtKXnUBeRwKWltnuRw1bTZh2Uecg-6zX_rKov4\nLast synced: 2025-07-04 19:46:27\nFunctions: 15",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Project Manager Bot",
+      "id": "225e7361-6c27-816e-bcf8-e4eef0eb3071",
+      "url": "https://www.notion.so/225e73616c27816ebcf8e4eef0eb3071",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Project Manager Bot\nScript ID: 1Zabx43kRPLYfOF11r7lcv-km1rajLNzWykOS7obOFtEsg0ifA5q9WTni\nLast synced: 2025-07-04 19:04:27\nFunctions: 22",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": true,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Loom to Notion Inbox",
+      "id": "225e7361-6c27-8172-b793-c9c378c738e4",
+      "url": "https://www.notion.so/225e73616c278172b793c9c378c738e4",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Loom to Notion Inbox\nScript ID: 1Ja28C2hSp21EF6L8DyaxquEIWzRVMrKWoAHeUiMA61BKVjRBQ6jjjOAC\nLast synced: 2025-07-04 20:06:13\nFunctions: 6",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Notion Files API\u2026",
+      "id": "225e7361-6c27-8177-8b2e-d08ad6df9136",
+      "url": "https://www.notion.so/225e73616c2781778b2ed08ad6df9136",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Notion Files API\u2026\nScript ID: 1noh4ZpDDhEiCaCdIdf1Y6W-zOSJDadsuNQ-MOTPaQEGsa3jyaE1K_wDy\nLast synced: 2025-07-04 19:58:43\nFunctions: 5",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Seren DATABASES -\u2026",
+      "id": "225e7361-6c27-817a-89ad-c6447922ba84",
+      "url": "https://www.notion.so/225e73616c27817a89adc6447922ba84",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Seren DATABASES -\u2026\nScript ID: 1Bq7-KnO0BiBEobMrF570saGCrOd_bQnp3XDiL6FAw0lny-iUZqkhTlP3\nLast synced: 2025-07-04 19:10:49\nFunctions: 20",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Music Syncs",
+      "id": "225e7361-6c27-817b-9ad0-ddffedaa0702",
+      "url": "https://www.notion.so/225e73616c27817b9ad0ddffedaa0702",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Music Syncs\nScript ID: 1M7crZBX3cOgc2KURSFmLML5k_czVWUcO8kPyAdKCcQ14JbvV-2BuoEFt\nLast synced: 2025-07-04 20:49:17\nFunctions: 3",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - LLM Chat Bot",
+      "id": "225e7361-6c27-817c-a69b-d9c565953921",
+      "url": "https://www.notion.so/225e73616c27817ca69bd9c565953921",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: LLM Chat Bot\nScript ID: 1lMpPP248ApdXZUaaQU2LekJDL6ftUJ9h_2xMqWnMRuFIQ119vNE_eyyg\nLast synced: 2025-07-04 19:58:19\nFunctions: 49",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Syncing Website Dat\u2026",
+      "id": "225e7361-6c27-8184-98ef-e453b07e5bfd",
+      "url": "https://www.notion.so/225e73616c27818498efe453b07e5bfd",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Syncing Website Dat\u2026\nScript ID: 1m4x-E-hkdN8D62kLzqAFVSAsZAhs82ANJsiLmLsoYX7NDI1IjB8zT7w3\nLast synced: 2025-07-04 20:09:15\nFunctions: 6",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Copy of Google Anal\u2026",
+      "id": "225e7361-6c27-8186-a2fd-edab95854b28",
+      "url": "https://www.notion.so/225e73616c278186a2fdedab95854b28",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Copy of Google Anal\u2026\nScript ID: 1uip2-VKLWDB_hLIa3KSd7wmhpDwZezHaMQQK2tacHP1lPX2H94824tgb\nLast synced: 2025-07-04 19:54:52\nFunctions: 0",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Copy of LLM Chat Bot",
+      "id": "225e7361-6c27-8187-a331-d2eeb42cf52a",
+      "url": "https://www.notion.so/225e73616c278187a331d2eeb42cf52a",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Copy of LLM Chat Bot\nScript ID: 1oZa94VYVVB66W3QGoD01nn1MrvKjnb1NexdMQdg7K3rg8nkidPSF5Y-d\nLast synced: 2025-07-04 19:56:45\nFunctions: 71",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Slack Webhook Recei\u2026",
+      "id": "225e7361-6c27-8189-b6d9-d01d5c34accf",
+      "url": "https://www.notion.so/225e73616c278189b6d9d01d5c34accf",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Slack Webhook Recei\u2026\nScript ID: 1jtONajv6rBuuN7wtsbovOrW5Ud9dK8cVv2o_lkk35L9vOcbf1UJkggxe\nLast synced: 2025-07-04 19:14:18\nFunctions: 15",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Google Apps Script\u2026",
+      "id": "225e7361-6c27-818a-9ac5-e4e0a15c71c6",
+      "url": "https://www.notion.so/225e73616c27818a9ac5e4e0a15c71c6",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Google Apps Script\u2026\nScript ID: 11BDG6TIKfkvR2N6got7PuYidDSudqZ3xiWmObCggYqwewD2VTb3lPkS3\nLast synced: 2025-07-04 20:10:31\nFunctions: 12",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Clip Processor",
+      "id": "225e7361-6c27-818a-adeb-f88c5f9c45a9",
+      "url": "https://www.notion.so/225e73616c27818aadebf88c5f9c45a9",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Clip Processor\nScript ID: 1a6QiI3vWr7_6wU8_LMx-s1p7IY1z47C1y_pbLUL-cQjLW9u3HZYqzJe_\nLast synced: 2025-07-04 19:45:42\nFunctions: 6",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Abacus.ai Sync To\u2026",
+      "id": "225e7361-6c27-818b-9d20-d032ab3e9560",
+      "url": "https://www.notion.so/225e73616c27818b9d20d032ab3e9560",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Abacus.ai Sync To\u2026\nScript ID: 12ngQ6N0xzqHm26gh0yE0oBLoU3uVQOlmz3YAIzK87OJ4EwIh6Js90iMC\nLast synced: 2025-07-04 20:41:31\nFunctions: 8",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Gmail Chats",
+      "id": "225e7361-6c27-8191-9a26-c482027dc648",
+      "url": "https://www.notion.so/225e73616c2781919a26c482027dc648",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Gmail Chats\nScript ID: 1aqSSROaoZFLzs-Py9c2KBpF5mWtDjIKY7Mrhsm8Pc1eeflo3xCTct5In\nLast synced: 2025-07-04 19:50:41\nFunctions: 4",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Data Sync to Sheets",
+      "id": "225e7361-6c27-8193-84f7-e43484a56d94",
+      "url": "https://www.notion.so/225e73616c27819384f7e43484a56d94",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Data Sync to Sheets\nScript ID: 1Xe52jqscGoTGwjEx-EuPBXui92UWUP42Fl174MaJc-sLe9OeYNeHcMQk\nLast synced: 2025-07-04 20:24:49\nFunctions: 21",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Abacus.ai",
+      "id": "225e7361-6c27-8193-ad21-f8610fef3ce9",
+      "url": "https://www.notion.so/225e73616c278193ad21f8610fef3ce9",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Abacus.ai\nScript ID: 1hNg1ODC3z9ZfDjD3JVT0qPCaEZTm7AaS6c30GgMhy8uSQEzG-BmRid12\nLast synced: 2025-07-04 20:33:46\nFunctions: 23",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - GMAIL Sync - Notion",
+      "id": "225e7361-6c27-8195-8434-ffc6accb6d34",
+      "url": "https://www.notion.so/225e73616c2781958434ffc6accb6d34",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: GMAIL Sync - Notion\nScript ID: 13VPhL4Y_O4j_Ht-3lvEmoqYp58ZMZ-SpBTWzFBMMEIzwskbaoRbuaabo\nLast synced: 2025-07-04 19:08:42\nFunctions: 12",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - HTML To PDF",
+      "id": "225e7361-6c27-8198-97d3-cd0fbbe9cccf",
+      "url": "https://www.notion.so/225e73616c27819897d3cd0fbbe9cccf",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: HTML To PDF\nScript ID: 1MO0hodMSfH8vs-cEX-2baSPjmd-beuzyCYCU2aY-QKCIC-V1d8mTizma\nLast synced: 2025-07-04 20:12:42\nFunctions: 2",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Seren Internal Mark\u2026",
+      "id": "225e7361-6c27-81a4-b31f-cc8b7f3276b2",
+      "url": "https://www.notion.so/225e73616c2781a4b31fcc8b7f3276b2",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Seren Internal Mark\u2026\nScript ID: 1zNp369jrfoycK-PE_u8wXK8y-_UkFkv8IBemOZIwqYPtagWw3rFRnfb1\nLast synced: 2025-07-04 20:27:22\nFunctions: 1",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Relations [single\u2026",
+      "id": "225e7361-6c27-81a6-bed8-c2864fc8da4c",
+      "url": "https://www.notion.so/225e73616c2781a6bed8c2864fc8da4c",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Relations [single\u2026\nScript ID: 1ZePn4k60Yg7xieNn1YGIC1XkejPEgUckHFo5TZ01oesy29UdnbdUI64O\nLast synced: 2025-07-04 19:57:03\nFunctions: 22",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - ChatGPT Conversatio\u2026",
+      "id": "225e7361-6c27-81b5-8798-e88a11f5a94a",
+      "url": "https://www.notion.so/225e73616c2781b58798e88a11f5a94a",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: ChatGPT Conversatio\u2026\nScript ID: 1tDa_iz8RUndw-NeODjPf42kUfLAHG54Za91U_ig3Kn7NyEqC7mPd6Z55\nLast synced: 2025-07-04 20:42:31\nFunctions: 12",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Lightroom 2",
+      "id": "225e7361-6c27-81b5-b39f-c1f351c88e24",
+      "url": "https://www.notion.so/225e73616c2781b5b39fc1f351c88e24",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Lightroom 2\nScript ID: 1f67EA_3wrB83rSR0CRYCsCw4n1NgFFMRjccY6YjcUru-Tbg6pZsggCSt\nLast synced: 2025-07-04 20:13:35\nFunctions: 1",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Relations [All Data\u2026",
+      "id": "225e7361-6c27-81b6-ba44-fdf855d81546",
+      "url": "https://www.notion.so/225e73616c2781b6ba44fdf855d81546",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Relations [All Data\u2026\nScript ID: 1AMGNasE1GJtG8X_NEmKEQRPdEbYY0NJ8JMzqZyRahXRRVlyXLlQZktPd\nLast synced: 2025-07-04 19:07:47\nFunctions: 18",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - New ChatGPT Convers\u2026",
+      "id": "225e7361-6c27-81b9-b322-d88cc34af42a",
+      "url": "https://www.notion.so/225e73616c2781b9b322d88cc34af42a",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: New ChatGPT Convers\u2026\nScript ID: 1YU-XLIO31ZFR3sSaX7rw3__vclBOuK7iu0xInG_7Rh05Dkzk-5R1QNFS\nLast synced: 2025-07-04 19:54:37\nFunctions: 9",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Copy of Data Sync\u2026",
+      "id": "225e7361-6c27-81bb-8f9b-f66c788dc230",
+      "url": "https://www.notion.so/225e73616c2781bb8f9bf66c788dc230",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Copy of Data Sync\u2026\nScript ID: 1lR_S2udrLLRyR5kY4FgmKSevhB9PPieOgyb_XzmIU8Ye6gbix4zRa1vW\nLast synced: 2025-07-04 20:12:58\nFunctions: 15",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Slack-ChatGPT-Claud\u2026",
+      "id": "225e7361-6c27-81bb-9e7e-da2286881863",
+      "url": "https://www.notion.so/225e73616c2781bb9e7eda2286881863",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Slack-ChatGPT-Claud\u2026\nScript ID: 1thJnISEiQseYm22xDQQohffe6-08qwQOcyOGUbM-ZGsxB3vdfdzDNM_q\nLast synced: 2025-07-04 20:05:34\nFunctions: 15",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Update Notion Datab\u2026",
+      "id": "225e7361-6c27-81bd-8d11-ed4fba67e451",
+      "url": "https://www.notion.so/225e73616c2781bd8d11ed4fba67e451",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Update Notion Datab\u2026\nScript ID: 1dm_xYd07Aof_iMC8WbrVmLQHbHJJ4XL70Hrhen8PsndVcAg1LsAibabL\nLast synced: 2025-07-04 19:24:35\nFunctions: 3",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Slack Keyboard Maes\u2026",
+      "id": "225e7361-6c27-81bf-a58c-f256bd9e81ee",
+      "url": "https://www.notion.so/225e73616c2781bfa58cf256bd9e81ee",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Slack Keyboard Maes\u2026\nScript ID: 19Telc9m4xTJS6WV13LDq7L8vpVjZqmBlgAx0GTjPZls-vs9Rcm0HAvKL\nLast synced: 2025-07-04 19:47:18\nFunctions: 67",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Copy #2 of Relation\u2026",
+      "id": "225e7361-6c27-81c4-8823-d2ef2d053d4c",
+      "url": "https://www.notion.so/225e73616c2781c48823d2ef2d053d4c",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Copy #2 of Relation\u2026\nScript ID: 1DkTGVaykx24dc5ObYkLsjDpwjr1vkGsuh_BIA6wP3wrA7GizMe5N0GqK\nLast synced: 2025-07-04 20:07:03\nFunctions: 22",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Spotify",
+      "id": "225e7361-6c27-81dd-97bf-e7f4ca7934ff",
+      "url": "https://www.notion.so/225e73616c2781dd97bfe7f4ca7934ff",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Spotify\nScript ID: 10Tq65xpGrfMFyGFJmnMJbDQhC-GFeeMGD94fbVfUi_S9agrB4122K08H\nLast synced: 2025-07-04 19:43:05\nFunctions: 7",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Tony Draft Sync To\u2026",
+      "id": "225e7361-6c27-81e2-a1af-c0c441e66d30",
+      "url": "https://www.notion.so/225e73616c2781e2a1afc0c441e66d30",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Tony Draft Sync To\u2026\nScript ID: 1Ev8ZdMjY6C_JZ424HwRntcg1f42c98sleWmxQCMl_uUBxtSuE5S9fZGC\nLast synced: 2025-07-04 20:45:39\nFunctions: 6",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Copy of Slack Webho\u2026",
+      "id": "225e7361-6c27-81e2-bebc-dfd5bcc3f86a",
+      "url": "https://www.notion.so/225e73616c2781e2bebcdfd5bcc3f86a",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Copy of Slack Webho\u2026\nScript ID: 1c-NIu7pZ7F_po3HldoRk80ZSFwY18Naum1oXAILWr_oDtzD0llS0ThNP\nLast synced: 2025-07-04 19:13:47\nFunctions: 15",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Slack to Drive Sync",
+      "id": "225e7361-6c27-81e3-9ca2-de39a1900d70",
+      "url": "https://www.notion.so/225e73616c2781e39ca2de39a1900d70",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Slack to Drive Sync\nScript ID: 1jDRPVFRsxRCLT35uAEKeyonBjmYS8DBqcnn6_AfY6gLGF6N5OkWK-Ui0\nLast synced: 2025-07-04 19:44:59\nFunctions: 2",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Python Scripts Bot",
+      "id": "225e7361-6c27-81e5-bbde-dfc413de8043",
+      "url": "https://www.notion.so/225e73616c2781e5bbdedfc413de8043",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Python Scripts Bot\nScript ID: 1jFDqi1BgMGhlVIUJLlWKC73c958bONSOR2FSBkmiJaEE7Wv-PueaqPCD\nLast synced: 2025-07-04 20:33:08\nFunctions: 1",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Workspace Database\u2026",
+      "id": "225e7361-6c27-81eb-8a07-c3b25306f5b3",
+      "url": "https://www.notion.so/225e73616c2781eb8a07c3b25306f5b3",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Workspace Database\u2026\nScript ID: 1uQtmh3xPt7smmHDXOudNjPCM52lvQcpifMFEc_2odT1Na2FYfV-nSyKT\nLast synced: 2025-07-04 19:53:16\nFunctions: 7",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Notion Webhook Rece\u2026",
+      "id": "225e7361-6c27-81ec-994e-f9394d9bd08f",
+      "url": "https://www.notion.so/225e73616c2781ec994ef9394d9bd08f",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Notion Webhook Rece\u2026\nScript ID: 1lpEAJ3y62fBneINZP8Ya2eEyKBGy3gocpxF4jrs-QHW-hOtyIRA9nuSy\nLast synced: 2025-07-04 19:42:13\nFunctions: 1",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Notion Image Pages",
+      "id": "225e7361-6c27-81ec-b6de-f53622a6d13d",
+      "url": "https://www.notion.so/225e73616c2781ecb6def53622a6d13d",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Notion Image Pages\nScript ID: 1MshZ9GDY9ktuhUNXhejiwugY__0hzyOi9Osp2OGzxcg_RkC4sxUy4OHh\nLast synced: 2025-07-04 19:20:03\nFunctions: 15",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - MyLibrary",
+      "id": "225e7361-6c27-81f0-afef-d59639b06c64",
+      "url": "https://www.notion.so/225e73616c2781f0afefd59639b06c64",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: MyLibrary\nScript ID: 1v8S8lNqaFjudKhX18Lk0-wRPYpe3N2FPaFU4EYdmk7OSr5MNv3XMbPAx\nLast synced: 2025-07-04 20:42:00\nFunctions: 1",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Copy of Relations\u2026",
+      "id": "225e7361-6c27-81f1-b1f9-ce6aa11a516d",
+      "url": "https://www.notion.so/225e73616c2781f1b1f9ce6aa11a516d",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Copy of Relations\u2026\nScript ID: 1iwxnkWeCcEVvQNyJ8Dy0xEMVOLVgstf39Adv1SYmgmdwYDDlKudfZc4w\nLast synced: 2025-07-04 19:20:58\nFunctions: 20",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Copy of Perplexity\u2026",
+      "id": "225e7361-6c27-81f2-805f-f9610bfec706",
+      "url": "https://www.notion.so/225e73616c2781f2805ff9610bfec706",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Copy of Perplexity\u2026\nScript ID: 1uJIFiQ5xOyI56EA5JYlKSAuB6GKysagHIWqgmluEOxnE7Ohb5DvKeTHY\nLast synced: 2025-07-04 20:03:27\nFunctions: 22",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - META WEBHOOK ENDPOI\u2026",
+      "id": "225e7361-6c27-81f2-917e-eac3c31c5f35",
+      "url": "https://www.notion.so/225e73616c2781f2917eeac3c31c5f35",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: META WEBHOOK ENDPOI\u2026\nScript ID: 1Dgkf3LikviJIkWpxAFRZXv1MZWKTz0rXNlPW74OI5V-ToOXOXhOh1Cup\nLast synced: 2025-07-04 20:25:25\nFunctions: 2",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - SYSTEM-BOT",
+      "id": "225e7361-6c27-81f9-8a61-ed5178135363",
+      "url": "https://www.notion.so/225e73616c2781f98a61ed5178135363",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: SYSTEM-BOT\nScript ID: 1sph1F_4Uc_tP61OT1tRK6C-_2gJ8daLXjIAO-0IilA9XZ8EashiXtD7U\nLast synced: 2025-07-04 19:40:46\nFunctions: 29",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS - Apple Music Library\u2026",
+      "id": "225e7361-6c27-81fb-a6e3-f50d7c99df3a",
+      "url": "https://www.notion.so/225e73616c2781fba6e3f50d7c99df3a",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Google Apps Script project: Apple Music Library\u2026\nScript ID: 1CNP_5GlZMFga_C4-RYoK0dQ91-ji_eGGx52RtffCf3CScTXf_nNUyko-\nLast synced: 2025-07-04 20:10:50\nFunctions: 7",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "Synchronize GAS + Python Scripts",
+      "id": "226e7361-6c27-811c-9dac-da87c49e6224",
+      "url": "https://www.notion.so/226e73616c27811c9dacda87c49e6224",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Synchronizes all Python and Google Apps scripts between the three environments of Notion, the local codebase Local Codebase Directory, and the primary Google Apps Script account for VibeVessel",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "PUSH GAS FROM VARIABLE",
+      "id": "226e7361-6c27-811d-ade9-dd2897f1bc13",
+      "url": "https://www.notion.so/226e73616c27811dade9dd2897f1bc13",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "Open GAS Script (Mode: Random-cursor)",
+      "id": "226e7361-6c27-8181-9828-e32129fbcd5e",
+      "url": "https://www.notion.so/226e73616c2781819828e32129fbcd5e",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "Push Most Recently Edited GAS",
+      "id": "226e7361-6c27-81b2-ad40-fbe5a42be5eb",
+      "url": "https://www.notion.so/226e73616c2781b2ad40fbe5a42be5eb",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "Open GAS Script (Mode: Random-xcode) copy",
+      "id": "226e7361-6c27-81ce-bd5b-e8ad578ec29e",
+      "url": "https://www.notion.so/226e73616c2781cebd5be8ad578ec29e",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "Troubleshoot GAS (Mac Mini M1)",
+      "id": "22be7361-6c27-816d-afd5-d8e86db8bebd",
+      "url": "https://www.notion.so/22be73616c27816dafd5d8e86db8bebd",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "database_icon_management_pro.gs",
+      "id": "241e7361-6c27-800b-838f-d339b85d360a",
+      "url": "https://www.notion.so/241e73616c27800b838fd339b85d360a",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "website_notion_mapping_DEMO-Site-SEREN_updated copy 3.py",
+      "id": "25de7361-6c27-80b4-acee-f6a19aaf4fd4",
+      "url": "https://www.notion.so/25de73616c2780b4aceef6a19aaf4fd4",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "'/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/marketing-system-codebase-OLD-DO-NOT-USE/website_notion_mapping_DEMO-Site-SEREN_updated copy 3.py'",
+      "file_exists": false,
+      "description": "",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GitHub Repository Retriever - serenbrian",
+      "id": "268e7361-6c27-81a9-a363-e63d4861f27f",
+      "url": "https://www.notion.so/268e73616c2781a9a363e63d4861f27f",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Retrieves all GitHub repositories for user serenbrian using multiple methods: GitHub CLI, GitHub API, or web scraping. Outputs repository information including names, descriptions, URLs, languages, an...",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "Database CSV Sync Script (Drive/Sheets)",
+      "id": "26fe7361-6c27-80af-974d-dbc459c3d219",
+      "url": "https://www.notion.so/26fe73616c2780af974ddbc459c3d219",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "Two-way Notion \u2194 Google Drive/Sheets synchronization with dynamic database resolution, resumable CSV exports, and guarded conflict management. Resolves database IDs by exact name within parent page sc...",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "DATABASES.gs",
+      "id": "270e7361-6c27-80eb-9063-e5ed198a2621",
+      "url": "https://www.notion.so/270e73616c2780eb9063e5ed198a2621",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "website_notion_mapping_DEMO-Site-SEREN_updated copy 2.py",
+      "id": "272e7361-6c27-800b-8c88-f6668b454b41",
+      "url": "https://www.notion.so/272e73616c27800b8c88f6668b454b41",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "'/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/github:/website_notion_mapping_DEMO-Site-SEREN_updated copy 2.py'",
+      "file_exists": false,
+      "description": "",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "cursor_desktop_automation_MM1.py",
+      "id": "272e7361-6c27-803a-a2df-c5ea35427c69",
+      "url": "https://www.notion.so/272e73616c27803aa2dfc5ea35427c69",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "GAS Webhook Endpoint (3-Node System)",
+      "id": "272e7361-6c27-805d-8f0b-f506db842520",
+      "url": "https://www.notion.so/272e73616c27805d8f0bf506db842520",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "Website2Notion-single.py",
+      "id": "272e7361-6c27-806c-aed8-dc44fd128c60",
+      "url": "https://www.notion.so/272e73616c27806caed8dc44fd128c60",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "Website2Notion.py (single)",
+      "id": "272e7361-6c27-80ee-82ef-c717e602e52e",
+      "url": "https://www.notion.so/272e73616c2780ee82efc717e602e52e",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "cursor_MM1_Agent_desktop_automation.py",
+      "id": "273e7361-6c27-805d-8bb2-c807e24f8d67",
+      "url": "https://www.notion.so/273e73616c27805d8bb2c807e24f8d67",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/github:/cursor_MM1_Agent_desktop_automation.py",
+      "file_exists": false,
+      "description": "",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "\ud83c\udf1f Ultimate Music Workflow - Complete Integration System",
+      "id": "273e7361-6c27-81e9-afdc-cb95f14b5f53",
+      "url": "https://www.notion.so/273e73616c2781e9afdccb95f14b5f53",
+      "issues": [
+        "No file found",
+        "Consolidation proposal"
+      ],
+      "file_path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/github/music-bot/src/ultimate_music_workflow.py",
+      "file_exists": false,
+      "description": "COMPREHENSIVE INTEGRATION CORRECTIONS COMPLETED: The ultimate music workflow has been corrected to address critical integration issues. Key corrections include: 1) Unified environment configuration co...",
+      "is_consolidation": true,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "database_initializer.py",
+      "id": "274e7361-6c27-817a-8b7a-d300cbdc1335",
+      "url": "https://www.notion.so/274e73616c27817a8b7ad300cbdc1335",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/github:/music-bot/src/database_initializer.py",
+      "file_exists": false,
+      "description": "Ensures all required Notion databases (Music Tracks, Artists, Playlists, Workflow States) and their properties exist. Creates missing databases and properties as needed for the phased music workflow s...",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "phased_music_sync.yml",
+      "id": "274e7361-6c27-81fb-a3c5-f1fec1c15dee",
+      "url": "https://www.notion.so/274e73616c2781fba3c5f1fec1c15dee",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/github:/.github/workflows/phased_music_sync.yml",
+      "file_exists": false,
+      "description": "GitHub Actions workflow that automates Phases 1-2 of the music synchronization process. Runs every 10 minutes for data collection and processing, with manual trigger support for Phase 3 local executio...",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "cursor_MM1_Agent_desktop_automation.py",
+      "id": "275e7361-6c27-8006-8201-f162e58bba01",
+      "url": "https://www.notion.so/275e73616c2780068201f162e58bba01",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/github/github:/cursor_MM1_Agent_desktop_automation.py",
+      "file_exists": false,
+      "description": "Cursor MM1 Desktop Automation \u2014 Implementer Partner. Implements MM1-aligned environment, logging, and desktop automation for Cursor. This version is configured for the Cursor MM1 Agent with MM1-specif...",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "claude_MM2_Agent.py",
+      "id": "275e7361-6c27-8019-bab2-e7649ae27244",
+      "url": "https://www.notion.so/275e73616c278019bab2e7649ae27244",
+      "issues": [
+        "Proposal without implementation"
+      ],
+      "file_path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/github/github:/claude_MM2_Agent.py",
+      "file_exists": false,
+      "description": "Enhanced Claude MM2 Agent with comprehensive debugging, property validation retry logic, and fixed database ID and error handling. This is the primary Claude MM2 Agent script designed to interact with...",
+      "is_consolidation": false,
+      "is_proposal": true,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "claude_MM1_Agent.py",
+      "id": "275e7361-6c27-8085-93bb-e5ede1ed24d8",
+      "url": "https://www.notion.so/275e73616c27808593bbe5ede1ed24d8",
+      "issues": [
+        "Proposal without implementation"
+      ],
+      "file_path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/github/github:/claude_MM1_Agent.py",
+      "file_exists": false,
+      "description": "Enhanced Claude MM1 Agent with comprehensive debugging, property validation retry logic, and fixed database ID and error handling. This is the primary Claude MM1 Agent script designed to interact with...",
+      "is_consolidation": false,
+      "is_proposal": true,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "cursor_MM2_Agent_desktop_automation-2_aligned.py",
+      "id": "275e7361-6c27-80dc-b92c-fd07db22da8f",
+      "url": "https://www.notion.so/275e73616c2780dcb92cfd07db22da8f",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/github/github:/cursor_MM2_Agent_desktop_automation-2_aligned.py",
+      "file_exists": false,
+      "description": "Cursor MM2 Agent Desktop Automation \u2014 Task Processor & Desktop Automation. Implements MM2-aligned environment, logging, Notion integration, and desktop automation for Cursor. This version is configure...",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "desktop_automation_activation_check.py",
+      "id": "275e7361-6c27-80ea-a66b-c5b0c65a71a7",
+      "url": "https://www.notion.so/275e73616c2780eaa66bc5b0c65a71a7",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/github:/desktop_automation_activation_check.py",
+      "file_exists": false,
+      "description": "",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "unified_validation_functions.py",
+      "id": "276e7361-6c27-8107-a9b2-df06fde0307d",
+      "url": "https://www.notion.so/276e73616c278107a9b2df06fde0307d",
+      "issues": [
+        "No file found",
+        "Consolidation proposal"
+      ],
+      "file_path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/github/github:/unified_validation_functions.py",
+      "file_exists": false,
+      "description": "Unified Validation Functions \u2014 Standardized validation framework for all desktop automation scripts. Provides comprehensive validation for environment, VENV, workflow, dependency, and permission check...",
+      "is_consolidation": true,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "claude_MM2_Agent-backup.py",
+      "id": "276e7361-6c27-8113-aec3-cf103c10d299",
+      "url": "https://www.notion.so/276e73616c278113aec3cf103c10d299",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/github/github:/claude_MM2_Agent-backup.py",
+      "file_exists": false,
+      "description": "Enhanced Claude MM2 Agent with comprehensive debugging, property validation retry logic, and fixed database ID and error handling. This is a backup of the primary Claude MM2 Agent script, serving as a...",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "unified_venv_validation.py",
+      "id": "276e7361-6c27-8196-b3dd-ca663cd532ae",
+      "url": "https://www.notion.so/276e73616c278196b3ddca663cd532ae",
+      "issues": [
+        "No file found",
+        "Consolidation proposal"
+      ],
+      "file_path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/github/github:/unified_venv_validation.py",
+      "file_exists": false,
+      "description": "Unified VENV Validation \u2014 Standardized virtual environment validation for all automation scripts. Provides comprehensive VENV validation, path checking, package verification, and permission validation...",
+      "is_consolidation": true,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "unified_workflow_mapping.py",
+      "id": "276e7361-6c27-819d-84fd-e7170d71b19c",
+      "url": "https://www.notion.so/276e73616c27819d84fde7170d71b19c",
+      "issues": [
+        "No file found",
+        "Consolidation proposal"
+      ],
+      "file_path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/github/github:/unified_workflow_mapping.py",
+      "file_exists": false,
+      "description": "Unified Workflow Mapping \u2014 Standardized workflow validation and mapping for automation scripts. Defines WorkflowType enum for MM1, MM2, M2Pro workflows and provides validation capabilities across the ...",
+      "is_consolidation": true,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "execute_available_task.py",
+      "id": "276e7361-6c27-81aa-98de-efc37f509c7d",
+      "url": "https://www.notion.so/276e73616c2781aa98deefc37f509c7d",
+      "issues": [
+        "No file found",
+        "Consolidation proposal"
+      ],
+      "file_path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/github/github:/execute_available_task.py",
+      "file_exists": false,
+      "description": "Execute Available Task \u2014 Task execution script for fixing .env loading conflicts in unified_config.py. Interacts with Notion to update task progress, creates backups, applies fixes, and tests the solu...",
+      "is_consolidation": true,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "claude_MM1_Agent-BACKUP-1.py",
+      "id": "276e7361-6c27-81ad-80c5-c2d6a6288701",
+      "url": "https://www.notion.so/276e73616c2781ad80c5c2d6a6288701",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/github/github:/claude_MM1_Agent-BACKUP-1.py",
+      "file_exists": false,
+      "description": "Claude MM1 Agent Desktop Automation (Backup Copy) \u2014 Enhanced Claude MM1 Agent configured for MM1 workflows. This backup version provides task management with Notion integration, desktop automation for...",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "mcp_protocol_v2_simple",
+      "id": "277e7361-6c27-8125-ab68-f23e6db9c607",
+      "url": "https://www.notion.so/277e73616c278125ab68f23e6db9c607",
+      "issues": [
+        "No file found",
+        "Should be archived"
+      ],
+      "file_path": "file:///Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/github/github:/mcp_protocol_v2_simple.py",
+      "file_exists": false,
+      "description": "MCP Agent Protocol v2.0 - Optimized Implementation MCP Task Execution \u2014 Optimized Universal Prompt (v3)  Core Job \u2022\tWork on tasks in MCP Tasks DB (26de73616c278038b839c5333237000a). \u2022\tExecute directly...",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "eagle_sync_to_GD_and_Notion-fingerprint-cursor-V2.py",
+      "id": "27be7361-6c27-8017-988b-ee48c08086bb",
+      "url": "https://www.notion.so/27be73616c278017988bee48c08086bb",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "None",
+      "file_exists": false,
+      "description": "",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    },
+    {
+      "title": "monitor.py",
+      "id": "27be7361-6c27-80a3-b9bb-db2629835f5a",
+      "url": "https://www.notion.so/27be73616c2780a3b9bbdb2629835f5a",
+      "issues": [
+        "No file found"
+      ],
+      "file_path": "'/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/github/mcp-google-drive-sync/monitor.py'",
+      "file_exists": false,
+      "description": "Monitors the health of the MCP Google Drive sync by reading sync_state.json and sync_tasks.log. Produces a console report or JSON/CSV metrics and supports a watch mode.",
+      "is_consolidation": false,
+      "is_proposal": false,
+      "is_variation": false,
+      "mentions_other_scripts": false,
+      "similar_to_archived": false
+    }
+  ]
+}

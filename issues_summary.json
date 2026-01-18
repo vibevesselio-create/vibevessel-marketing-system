@@ -1,0 +1,162 @@
+[
+  {
+    "id": "2e6e7361-6c27-81f3-a847-f29d0976ddc3",
+    "url": "https://www.notion.so/AUDIT-FINDING-Cursor-MM1-Unified-Env-System-Failures-Multiple-User-Escalations-2e6e73616c2781f3a847f29d0976ddc3",
+    "title": "[AUDIT FINDING] Cursor MM1 Unified Env System Failures - Multiple User Escalations",
+    "status": "Unreported",
+    "priority": "Critical",
+    "description": ""
+  },
+  {
+    "id": "2e6e7361-6c27-81cb-b931-e7ff76fe0640",
+    "url": "https://www.notion.so/DaVinci-Resolve-Workflow-2-Way-Synchronization-Not-Implemented-2e6e73616c2781cbb931e7ff76fe0640",
+    "title": "DaVinci Resolve Workflow: 2-Way Synchronization Not Implemented",
+    "status": "Unreported",
+    "priority": "High",
+    "description": "The DaVinci Resolve workflow currently only implements Resolve \u2192 Notion synchronization. \n\nMissing functionality:\n- Notion \u2192 Resolve synchronization for project/timeline/clip properties\n- Detection of changes in Notion database that need to be synced to Resolve\n- Update Resolve objects (projects, ti"
+  },
+  {
+    "id": "2e6e7361-6c27-8188-ba5d-ec56cd46ed32",
+    "url": "https://www.notion.so/RESOLVED-Missing-Deliverable-Create-music_workflow-core-module-2e6e73616c278188ba5dec56cd46ed32",
+    "title": "[RESOLVED] Missing Deliverable: Create `music_workflow/core/` module",
+    "status": "Unreported",
+    "priority": "Medium",
+    "description": "Deliverable 'Create `music_workflow/core/` module' from plan 'MUSIC_WORKFLOW_BIFURCATION_STRATEGY.md' is missing. Type: unknown. Details: Create `music_workflow/core/` module"
+  },
+  {
+    "id": "2e6e7361-6c27-819b-9d15-f227d55401f7",
+    "url": "https://www.notion.so/Missing-Deliverable-Extract-logging-utilities-2e6e73616c27819b9d15f227d55401f7",
+    "title": "Missing Deliverable: Extract logging utilities",
+    "status": "Unreported",
+    "priority": "Medium",
+    "description": "Deliverable 'Extract logging utilities' from plan 'MUSIC_WORKFLOW_BIFURCATION_STRATEGY.md' is missing. Type: unknown. Details: Extract logging utilities"
+  },
+  {
+    "id": "2e6e7361-6c27-81a4-930f-f36815cfdeeb",
+    "url": "https://www.notion.so/RESOLVED-Missing-Deliverable-Create-music_workflow-deduplication-module-2e6e73616c2781a4930ff36815cfdeeb",
+    "title": "[RESOLVED] Missing Deliverable: Create `music_workflow/deduplication/` module",
+    "status": "Unreported",
+    "priority": "Medium",
+    "description": "Deliverable 'Create `music_workflow/deduplication/` module' from plan 'MUSIC_WORKFLOW_BIFURCATION_STRATEGY.md' is missing. Type: unknown. Details: Create `music_workflow/deduplication/` module"
+  },
+  {
+    "id": "2e6e7361-6c27-81ad-9d1a-fd2825dd5beb",
+    "url": "https://www.notion.so/Missing-Deliverable-Extract-Spotify-API-wrapper-2e6e73616c2781ad9d1afd2825dd5beb",
+    "title": "Missing Deliverable: Extract Spotify API wrapper",
+    "status": "Unreported",
+    "priority": "Medium",
+    "description": "Deliverable 'Extract Spotify API wrapper' from plan 'MUSIC_WORKFLOW_BIFURCATION_STRATEGY.md' is missing. Type: unknown. Details: Extract Spotify API wrapper"
+  },
+  {
+    "id": "2e6e7361-6c27-81c0-a2cc-f98e073e81e7",
+    "url": "https://www.notion.so/Missing-Deliverable-Extract-processing-logic-2e6e73616c2781c0a2ccf98e073e81e7",
+    "title": "Missing Deliverable: Extract processing logic",
+    "status": "Unreported",
+    "priority": "Medium",
+    "description": "Deliverable 'Extract processing logic' from plan 'MUSIC_WORKFLOW_BIFURCATION_STRATEGY.md' is missing. Type: unknown. Details: Extract processing logic"
+  },
+  {
+    "id": "2e6e7361-6c27-81c4-bf44-feb60303133c",
+    "url": "https://www.notion.so/Missing-Deliverable-Extract-download-logic-2e6e73616c2781c4bf44feb60303133c",
+    "title": "Missing Deliverable: Extract download logic",
+    "status": "Unreported",
+    "priority": "Medium",
+    "description": "Deliverable 'Extract download logic' from plan 'MUSIC_WORKFLOW_BIFURCATION_STRATEGY.md' is missing. Type: unknown. Details: Extract download logic"
+  },
+  {
+    "id": "2e6e7361-6c27-81d6-8723-cb8b0802be8f",
+    "url": "https://www.notion.so/Missing-Deliverable-Create-integration-tests-2e6e73616c2781d68723cb8b0802be8f",
+    "title": "Missing Deliverable: Create integration tests",
+    "status": "Unreported",
+    "priority": "Medium",
+    "description": "Deliverable 'Create integration tests' from plan 'MUSIC_WORKFLOW_BIFURCATION_STRATEGY.md' is missing. Type: unknown. Details: Create integration tests"
+  },
+  {
+    "id": "2e6e7361-6c27-81d7-99ed-da13f298692d",
+    "url": "https://www.notion.so/Missing-Deliverable-Extract-organization-logic-2e6e73616c2781d799edda13f298692d",
+    "title": "Missing Deliverable: Extract organization logic",
+    "status": "Unreported",
+    "priority": "Medium",
+    "description": "Deliverable 'Extract organization logic' from plan 'MUSIC_WORKFLOW_BIFURCATION_STRATEGY.md' is missing. Type: unknown. Details: Extract organization logic"
+  },
+  {
+    "id": "2e6e7361-6c27-81d9-a265-feeef8181a20",
+    "url": "https://www.notion.so/Missing-Deliverable-Create-unit-tests-2e6e73616c2781d9a265feeef8181a20",
+    "title": "Missing Deliverable: Create unit tests",
+    "status": "Unreported",
+    "priority": "Medium",
+    "description": "Deliverable 'Create unit tests' from plan 'MUSIC_WORKFLOW_BIFURCATION_STRATEGY.md' is missing. Type: unknown. Details: Create unit tests"
+  },
+  {
+    "id": "2e6e7361-6c27-81e5-9056-eb8c2845d1a1",
+    "url": "https://www.notion.so/Missing-Deliverable-Extract-configuration-handling-2e6e73616c2781e59056eb8c2845d1a1",
+    "title": "Missing Deliverable: Extract configuration handling",
+    "status": "Unreported",
+    "priority": "Medium",
+    "description": "Deliverable 'Extract configuration handling' from plan 'MUSIC_WORKFLOW_BIFURCATION_STRATEGY.md' is missing. Type: config. Details: Extract configuration handling"
+  },
+  {
+    "id": "2e6e7361-6c27-81e9-873c-cbdc199d2d68",
+    "url": "https://www.notion.so/Missing-Deliverable-Create-comprehensive-tests-2e6e73616c2781e9873ccbdc199d2d68",
+    "title": "Missing Deliverable: Create comprehensive tests",
+    "status": "Unreported",
+    "priority": "Medium",
+    "description": "Deliverable 'Create comprehensive tests' from plan 'MUSIC_WORKFLOW_BIFURCATION_STRATEGY.md' is missing. Type: unknown. Details: Create comprehensive tests"
+  },
+  {
+    "id": "2e6e7361-6c27-81ee-a991-ef976c766024",
+    "url": "https://www.notion.so/Missing-Deliverable-Update-all-integrations-2e6e73616c2781eea991ef976c766024",
+    "title": "Missing Deliverable: Update all integrations",
+    "status": "Unreported",
+    "priority": "Medium",
+    "description": "Deliverable 'Update all integrations' from plan 'MUSIC_WORKFLOW_BIFURCATION_STRATEGY.md' is missing. Type: unknown. Details: Update all integrations"
+  },
+  {
+    "id": "2e6e7361-6c27-81ee-b219-eda3e715096c",
+    "url": "https://www.notion.so/Missing-Deliverable-Extract-Notion-client-wrapper-2e6e73616c2781eeb219eda3e715096c",
+    "title": "Missing Deliverable: Extract Notion client wrapper",
+    "status": "Unreported",
+    "priority": "Medium",
+    "description": "Deliverable 'Extract Notion client wrapper' from plan 'MUSIC_WORKFLOW_BIFURCATION_STRATEGY.md' is missing. Type: notion. Details: Extract Notion client wrapper"
+  },
+  {
+    "id": "2e6e7361-6c27-81f3-b7bd-cbd7d93dc617",
+    "url": "https://www.notion.so/Missing-Deliverable-Extract-file-path-utilities-2e6e73616c2781f3b7bdcbd7d93dc617",
+    "title": "Missing Deliverable: Extract file path utilities",
+    "status": "Unreported",
+    "priority": "Medium",
+    "description": "Deliverable 'Extract file path utilities' from plan 'MUSIC_WORKFLOW_BIFURCATION_STRATEGY.md' is missing. Type: unknown. Details: Extract file path utilities"
+  },
+  {
+    "id": "2e7e7361-6c27-815e-9197-f6d37c6df708",
+    "url": "https://www.notion.so/AUDIT-Music-Workflow-Test-Coverage-Unknown-Modularized-Implementation-2e7e73616c27815e9197f6d37c6df708",
+    "title": "[AUDIT] Music Workflow Test Coverage Unknown - Modularized Implementation",
+    "status": "Unreported",
+    "priority": "Medium",
+    "description": "Identified during Plans Directory Audit.\n\nPlan: MODULARIZED_IMPLEMENTATION_DESIGN.md\nExpected Deliverable: Test coverage > 80%\nGap Type: Quality Gap\nImpact: Medium - affects quality assurance\n\nDeliverable Status: Unknown - test files exist (18 files) but coverage percentage unknown\nMissing Component"
+  },
+  {
+    "id": "2e7e7361-6c27-8179-b287-cf15fec6a974",
+    "url": "https://www.notion.so/AUDIT-Music-Workflow-Documentation-Incomplete-Modularized-Implementation-2e7e73616c278179b287cf15fec6a974",
+    "title": "[AUDIT] Music Workflow Documentation Incomplete - Modularized Implementation",
+    "status": "Unreported",
+    "priority": "Medium",
+    "description": "Identified during Plans Directory Audit.\n\nPlan: MODULARIZED_IMPLEMENTATION_DESIGN.md\nExpected Deliverable: Complete API documentation, migration guides\nGap Type: Documentation Gap\nImpact: Medium - affects usability and onboarding\n\nDeliverable Status: Partial - structure exists but content incomplete"
+  },
+  {
+    "id": "2e7e7361-6c27-8129-9159-f05fd1612ef0",
+    "url": "https://www.notion.so/AUDIT-Deprecation-Plan-Missing-Bifurcation-Strategy-2e7e73616c2781299159f05fd1612ef0",
+    "title": "[AUDIT] Deprecation Plan Missing - Bifurcation Strategy",
+    "status": "Unreported",
+    "priority": "Low",
+    "description": "Identified during Plans Directory Audit.\n\nPlan: MUSIC_WORKFLOW_BIFURCATION_STRATEGY.md\nExpected Deliverable: Deprecation timeline for monolithic script\nGap Type: Missing Plan\nImpact: Low - affects long-term strategy\n\nDeliverable Status: Missing\nMissing Components:\n- Deprecation timeline\n- Migration "
+  },
+  {
+    "id": "2e7e7361-6c27-815d-a61d-ce274ca860e0",
+    "url": "https://www.notion.so/AUDIT-Performance-Profiling-Missing-Monolithic-Maintenance-2e7e73616c27815da61dce274ca860e0",
+    "title": "[AUDIT] Performance Profiling Missing - Monolithic Maintenance",
+    "status": "Unreported",
+    "priority": "Low",
+    "description": "Identified during Plans Directory Audit.\n\nPlan: MONOLITHIC_MAINTENANCE_PLAN.md\nExpected Deliverable: Performance profiling and baseline documentation\nGap Type: Missing Deliverable\nImpact: Low - affects optimization opportunities\n\nDeliverable Status: Missing\nMissing Components:\n- Performance profilin"
+  }
+]

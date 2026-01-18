@@ -1,0 +1,6 @@
+2026-01-03 04:46:44,786 - INFO - Issues+Questions cleanup started
+2026-01-03 04:46:44,786 - INFO - Data source ID: 229e7361-6c27-804f-b662-000b6af69781
+2026-01-03 04:46:44,786 - INFO - Mode: APPLY
+2026-01-03 04:46:45,185 - INFO - HTTP Request: GET https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781 "HTTP/1.1 200 OK"
+2026-01-03 04:46:45,187 - INFO - Status option 'Archived' missing; preparing to add it
+2026-01-03 04:46:45,323 - INFO - HTTP Request: PATCH https://api.notion.com/v1/data_sources/229e7361-6c27-804f-b662-000b6af69781 "HTTP/1.1 400 Bad Request"

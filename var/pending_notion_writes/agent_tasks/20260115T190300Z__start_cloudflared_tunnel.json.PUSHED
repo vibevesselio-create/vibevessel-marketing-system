@@ -1,0 +1,27 @@
+{
+  "title": "Start Cloudflared tunnel and verify active connection",
+  "priority": "High",
+  "status": "Not Started",
+  "dependency_status": "Ready",
+  "assigned_agents": ["Cursor MM1"],
+  "review_handoff_to": ["Codex MM1"],
+  "objective": "Bring the Cloudflare tunnel online and confirm the origin is reachable.",
+  "preflight": [
+    "Webhook server is running on port 5001",
+    "cloudflared installed and authenticated",
+    "~/.cloudflared/config.yml matches desired hostnames"
+  ],
+  "steps": [
+    "Run: cloudflared tunnel --config ~/.cloudflared/config.yml run 8f70cf6f-551f-4fb7-b1f9-0349f2f688f3",
+    "Check: cloudflared tunnel info 8f70cf6f-551f-4fb7-b1f9-0349f2f688f3",
+    "Route DNS: cloudflared tunnel route dns --overwrite-dns 8f70cf6f-551f-4fb7-b1f9-0349f2f688f3 webhook.vibevessel.space",
+    "If auth error, run: cloudflared tunnel login, then retry route",
+    "Validate: curl -I https://webhook.vibevessel.space/health"
+  ],
+  "success_criteria": [
+    "Tunnel shows active connections",
+    "Health endpoint returns HTTP 200",
+    "No Cloudflare 530 errors"
+  ],
+  "created_at": "20260115T190300Z"
+}

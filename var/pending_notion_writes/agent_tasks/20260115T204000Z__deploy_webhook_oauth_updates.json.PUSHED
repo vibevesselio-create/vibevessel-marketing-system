@@ -1,0 +1,26 @@
+{
+  "title": "Deploy webhook server OAuth endpoint updates and verify callbacks",
+  "priority": "High",
+  "status": "Not Started",
+  "dependency_status": "Blocked",
+  "assigned_agents": ["Codex MM1"],
+  "review_handoff_to": ["Claude MM1"],
+  "objective": "Restart the webhook server with updated OAuth endpoints and confirm Google/Spotify/Adobe callbacks respond locally and via Cloudflare.",
+  "preflight": [
+    "Cloudflare tunnel DNS route created (public endpoint returns 200)",
+    "Webhook server code updated with /auth/spotify and /auth/adobe endpoints"
+  ],
+  "steps": [
+    "Restart webhook server process to load latest code",
+    "GET http://localhost:5001/auth/spotify (should redirect to Spotify)",
+    "GET http://localhost:5001/auth/adobe (should render setup page)",
+    "GET https://webhook.vibevessel.space/auth/spotify (public redirect)",
+    "GET https://webhook.vibevessel.space/auth/adobe (public setup page)"
+  ],
+  "success_criteria": [
+    "OAuth endpoints respond without 404",
+    "Public callbacks reachable via Cloudflare",
+    "No redirect URI mismatch errors during OAuth tests"
+  ],
+  "created_at": "20260115T204000Z"
+}

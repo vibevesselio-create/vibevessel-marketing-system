@@ -1,0 +1,72 @@
+[
+  {
+    "id": "2e4e7361-6c27-810d-aca0-c103338ba3b2",
+    "title": "Review: Eagle Library Merge Implementation - Code Review & Production Readiness",
+    "status": "Ready",
+    "priority": "High",
+    "description_preview": "Review and validate the Eagle Library Merge implementation for production readiness:\n\n**Implementation Summary:**\n- Function: `eagle_merge_library()` in `monolithic-scripts/soundcloud_download_prod_me...",
+    "created": "2026-01-10",
+    "last_edited": "2026-01-10T05:33:00",
+    "url": "https://www.notion.so/2e4e73616c27810daca0c103338ba3b2"
+  },
+  {
+    "id": "2e4e7361-6c27-811e-a8c6-da20a81c9f71",
+    "title": "Review: Eagle Library Merge Implementation - Code Review & Production Readiness",
+    "status": "Ready",
+    "priority": "High",
+    "description_preview": "Review and validate the Eagle Library Merge implementation for production readiness:\n\n**Implementation Summary:**\n- Function: `eagle_merge_library()` in `monolithic-scripts/soundcloud_download_prod_me...",
+    "created": "2026-01-10",
+    "last_edited": "2026-01-10T03:12:00",
+    "url": "https://www.notion.so/2e4e73616c27811ea8c6da20a81c9f71"
+  },
+  {
+    "id": "2e4e7361-6c27-813a-9752-f89b8d0387de",
+    "title": "Eagle Library Merge & Deduplication - Production Run & Completion",
+    "status": "Ready",
+    "priority": "High",
+    "description_preview": "Complete Eagle Library Merge and Deduplication Workflow - Production Run\n\n**Objective:**\nPerform remaining remediations (if any) and execute a production run of the Eagle library merge and deduplicati...",
+    "created": "2026-01-10",
+    "last_edited": "2026-01-10T02:21:00",
+    "url": "https://www.notion.so/2e4e73616c27813a9752f89b8d0387de"
+  },
+  {
+    "id": "2e4e7361-6c27-8147-bcaa-f704773929a0",
+    "title": "Review: Eagle Library Merge Implementation - Code Review & Production Readiness",
+    "status": "Ready",
+    "priority": "High",
+    "description_preview": "Review and validate the Eagle Library Merge implementation for production readiness:\n\n**Implementation Summary:**\n- Function: `eagle_merge_library()` in `monolithic-scripts/soundcloud_download_prod_me...",
+    "created": "2026-01-10",
+    "last_edited": "2026-01-10T02:01:00",
+    "url": "https://www.notion.so/2e4e73616c278147bcaaf704773929a0"
+  },
+  {
+    "id": "2e4e7361-6c27-814e-a2d4-e2826f1be43f",
+    "title": "Review: Eagle Library Merge Implementation - Code Review & Production Readiness",
+    "status": "Ready",
+    "priority": "High",
+    "description_preview": "Review and validate the Eagle Library Merge implementation for production readiness:\n\n**Implementation Summary:**\n- Function: `eagle_merge_library()` in `monolithic-scripts/soundcloud_download_prod_me...",
+    "created": "2026-01-10",
+    "last_edited": "2026-01-10T02:04:00",
+    "url": "https://www.notion.so/2e4e73616c27814ea2d4e2826f1be43f"
+  },
+  {
+    "id": "2e4e7361-6c27-819c-ad6b-ddbeb8dc7d47",
+    "title": "Eagle Library Merge & Deduplication - Production Run & Completion",
+    "status": "Ready",
+    "priority": "Critical",
+    "description_preview": "Complete Eagle Library Merge and Deduplication Workflow - Production Run\n\n**Objective:**\nPerform remaining remediations (if any) and execute a production run of the Eagle library merge and deduplicati...",
+    "created": "2026-01-10",
+    "last_edited": "2026-01-10T02:22:00",
+    "url": "https://www.notion.so/2e4e73616c27819cad6bddbeb8dc7d47"
+  },
+  {
+    "id": "2e4e7361-6c27-81d0-ba8b-d86bff0850c1",
+    "title": "Eagle Library Deduplication: Phase 3 Complete - Ready for Live Execution",
+    "status": "Unknown",
+    "priority": "Unknown",
+    "description_preview": "Phase 3: Issue Remediation & Handoff - COMPLETE\n\nDry-Run Results:\n- 2,999 items scanned, 193 duplicate groups, 716 duplicates\n- Space recoverable: 11.5 GB\n- Performance: 18.2s (excellent)\n\nIssues Iden...",
+    "created": "2026-01-10",
+    "last_edited": "2026-01-10T01:01:00",
+    "url": "https://www.notion.so/2e4e73616c2781d0ba8bd86bff0850c1"
+  }
+]

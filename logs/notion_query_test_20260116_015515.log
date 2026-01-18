@@ -1,0 +1,31 @@
+Test timestamp: 20260116_015515
+Querying tracks from Notion...
+
+Found 5 tracks
+{
+  "timestamp": "20260116_015515",
+  "count": 5,
+  "tracks": [
+    {
+      "id": "2e9e7361-6c27-80af-937a-da3b8cd27a9d",
+      "has_title": true,
+      "has_artist": true,
+      "has_fingerprint": false,
+      "dl_value": true
+    },
+    {
+      "id": "2e8e7361-6c27-808b-bb87-e930831bd13c",
+      "has_title": true,
+      "has_artist": true,
+      "has_fingerprint": false,
+      "dl_value": true
+    },
+    {
+      "id": "2e8e7361-6c27-8097-ae7d-fb4bbc784571",
+      "has_title": true,
+      "has_artist": true,
+      "has_fingerprint": false,
+      "dl_value": true
+    }
+  ]
+}

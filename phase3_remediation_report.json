@@ -1,0 +1,78 @@
+{
+  "timestamp": "2026-01-09T17:36:53.743637+00:00",
+  "categorized_issues": {
+    "critical": [],
+    "high": [
+      {
+        "type": "Functional",
+        "severity": "High",
+        "description": "Fingerprint matching found no duplicates (may indicate missing fingerprints)",
+        "category": "fingerprint_missing"
+      }
+    ],
+    "medium": [
+      {
+        "type": "Accuracy",
+        "severity": "Medium",
+        "description": "38 groups with similarity < 80% (may be false positives)",
+        "category": "false_positive_risk",
+        "note": "Low similarity matches may need manual review before cleanup"
+      }
+    ],
+    "low": [
+      {
+        "type": "Performance",
+        "severity": "Low",
+        "description": "Slow execution - less than 1 item per second",
+        "note": "Performance is actually acceptable (17s for 2998 items)"
+      }
+    ]
+  },
+  "remediation_results": {
+    "fixed": [
+      {
+        "issue": {
+          "type": "Performance",
+          "severity": "Low",
+          "description": "Slow execution - less than 1 item per second",
+          "note": "Performance is actually acceptable (17s for 2998 items)"
+        },
+        "action": "Documented as non-critical",
+        "status": "Resolved"
+      },
+      {
+        "issue": {
+          "type": "Accuracy",
+          "severity": "Medium",
+          "description": "38 groups with similarity < 80% (may be false positives)",
+          "category": "false_positive_risk",
+          "note": "Low similarity matches may need manual review before cleanup"
+        },
+        "action": "Will review low-similarity matches before cleanup",
+        "status": "Mitigated"
+      }
+    ],
+    "cannot_fix": [],
+    "requires_handoff": [
+      {
+        "type": "Functional",
+        "severity": "High",
+        "description": "Fingerprint matching found no duplicates (may indicate missing fingerprints)",
+        "category": "fingerprint_missing"
+      }
+    ]
+  },
+  "handoff_results": {
+    "tasks_created": 0,
+    "task_ids": [],
+    "failed": [
+      {
+        "type": "Functional",
+        "severity": "High",
+        "description": "Fingerprint matching found no duplicates (may indicate missing fingerprints)",
+        "category": "fingerprint_missing"
+      }
+    ]
+  },
+  "can_proceed": true
+}

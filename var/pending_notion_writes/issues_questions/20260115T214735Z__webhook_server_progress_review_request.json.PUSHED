@@ -1,0 +1,27 @@
+{
+  "title": "Review Request: Webhook Server Cloudflare + OAuth implementation status (cross-agent reconciliation)",
+  "type": ["Question"],
+  "status": "Unreported",
+  "priority": "High",
+  "component": "Webhook Server / Cloudflare / OAuth",
+  "blocked": false,
+  "description": "Request independent reviews and reconciliation of all webhook-server implementation updates, documentation, and related Notion items. Please validate in your environments and report back discrepancies or blockers.\n\nKey changes to verify:\n- Cloudflare tunnel migrated to new tunnel ID and public health endpoint returns HTTP 200.\n- webhook server OAuth endpoints added for Spotify and Adobe; Google OAuth missing client secrets is still blocking.\n- Redirect URIs updated (Spotify local callback now uses port 5001).\n- Webhook server source-of-truth location/relocation pending (Claude Code Agent handoff).\n\nReference report: github-production/reports/WEBHOOK_SERVER_IMPLEMENTATION_REPORT_20260115.md\nRelated reports: /Users/brianhellemn/Projects/reports/WEBHOOK_SERVER_IMPLEMENTATION_STATUS_20260115.md and /Users/brianhellemn/Projects/reports/WEBHOOK_SERVER_RELOCATION_AND_IMPLEMENTATION_REPORT_20260115.md\n\nRequested reviewers: Claude MM1, Claude MM1 Agent, Codex MM1, Cursor MM1, Cursor MM1 Agent, Claude Code Agent, Notion DataOps.\nPlease confirm: (1) Cloudflare tunnel config and DNS status, (2) OAuth redirect URIs and callback behavior, (3) Notion tasks/issues alignment, (4) documentation updates needed in your workspace.",
+  "evidence": {
+    "tunnel": "cloudflared tunnel info shows active connector for new tunnel; webhook health returns 200",
+    "oauth": "Spotify/Adobe callback endpoints implemented; Google OAuth client secrets missing",
+    "docs": "Runbook and OAuth migration plan updated",
+    "notion": "Pending writes synced; remaining JSON errors fixed for re-run"
+  },
+  "impact": "Ensures all agents align on current webhook server state and unblock remaining OAuth + relocation work.",
+  "next_step": "Each agent to review and respond with environment-specific confirmations or blockers; update Notion items if discrepancies found.",
+  "owner": [
+    "Claude MM1",
+    "Claude MM1 Agent",
+    "Codex MM1",
+    "Cursor MM1",
+    "Cursor MM1 Agent",
+    "Claude Code Agent",
+    "Notion DataOps"
+  ],
+  "created_at": "20260115T214735Z"
+}

@@ -1,0 +1,105 @@
+name: workspace-events-cloud
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - "seren-media-workflows/scripts/workspace_events/**"
+  schedule:
+    # Lightweight poll/health cadence (Cloud Run should primarily be Pub/Sub push-driven)
+    - cron: "*/5 * * * *"
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: workspace-events-cloud-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  deploy-cloud-run:
+    if: github.event_name != 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Auth to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+
+      - name: Setup gcloud
+        uses: google-github-actions/setup-gcloud@v2
+        with:
+          project_id: ${{ secrets.GCP_PROJECT_ID }}
+
+      - name: Configure Docker auth
+        run: gcloud auth configure-docker --quiet
+
+      - name: Build image
+        run: >
+          docker build
+          -t "gcr.io/${{ secrets.GCP_PROJECT_ID }}/workspace-events-sync:${{ github.sha }}"
+          "seren-media-workflows/scripts/workspace_events"
+
+      - name: Push image
+        run: docker push "gcr.io/${{ secrets.GCP_PROJECT_ID }}/workspace-events-sync:${{ github.sha }}"
+
+      - name: Deploy Cloud Run service
+        env:
+          GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          NOTION_ENV_INSTANCES_DB: ${{ secrets.NOTION_ENV_INSTANCES_DB }}
+          GOOGLE_DRIVE_ID: ${{ secrets.GOOGLE_DRIVE_ID }}
+          WEBHOOK_DASHBOARD_API_KEY: ${{ secrets.WEBHOOK_DASHBOARD_API_KEY }}
+        run: >
+          gcloud run deploy workspace-events-sync
+          --image "gcr.io/${GCP_PROJECT_ID}/workspace-events-sync:${{ github.sha }}"
+          --region "us-central1"
+          --platform "managed"
+          --no-allow-unauthenticated
+          --cpu "1"
+          --memory "512Mi"
+          --min-instances "0"
+          --max-instances "10"
+          --concurrency "80"
+          --timeout "300"
+          --set-env-vars "NOTION_API_KEY=${NOTION_API_KEY},NOTION_ENV_INSTANCES_DB=${NOTION_ENV_INSTANCES_DB},GOOGLE_DRIVE_ID=${GOOGLE_DRIVE_ID},WEBHOOK_DASHBOARD_API_KEY=${WEBHOOK_DASHBOARD_API_KEY},WORKSPACE_EVENTS_NODE_ID=cloud,WORKSPACE_EVENTS_CSV_ENABLED=true,WORKSPACE_EVENTS_CSV_DIR=/tmp/workspace_events_csv"
+
+  poll-and-process:
+    # This is a safety net; primary mode should be Pub/Sub push → Cloud Run.
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r "seren-media-workflows/scripts/workspace_events/requirements.txt"
+
+      - name: Auth to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+
+      - name: Run poller (best-effort)
+        env:
+          GCP_PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
+          NOTION_API_KEY: ${{ secrets.NOTION_API_KEY }}
+          NOTION_ENV_INSTANCES_DB: ${{ secrets.NOTION_ENV_INSTANCES_DB }}
+          GOOGLE_DRIVE_ID: ${{ secrets.GOOGLE_DRIVE_ID }}
+          WORKSPACE_EVENTS_NODE_ID: cloud
+        run: >
+          python "seren-media-workflows/scripts/workspace_events/cloud_run_poll.py"
+

@@ -1,0 +1,59 @@
+{
+  "eagle_status": {
+    "running": true,
+    "api_accessible": true,
+    "library_path": "/Volumes/VIBES/Music Library-2.library",
+    "library_exists": true
+  },
+  "deduplication_functions": {
+    "eagle_library_deduplication": {
+      "line": 5258,
+      "exists": true,
+      "signature": "def eagle_library_deduplication("
+    },
+    "eagle_import_with_duplicate_management": {
+      "line": 5071,
+      "exists": true,
+      "signature": "def eagle_import_with_duplicate_management("
+    },
+    "eagle_cleanup_duplicate_items": {
+      "line": 4949,
+      "exists": true,
+      "signature": "def eagle_cleanup_duplicate_items(items_to_keep: dict, all_matching_items: list[dict]) -> bool:"
+    },
+    "sync_fingerprints_to_eagle_tags": {
+      "line": 4548,
+      "exists": true,
+      "signature": "def sync_fingerprints_to_eagle_tags(dry_run: bool = True) -> dict:"
+    },
+    "standalone_execution": {
+      "has_dedup_mode": false,
+      "command": "python3 monolithic-scripts/soundcloud_download_prod_merge-2.py --mode dedup"
+    }
+  },
+  "plans_review": {
+    "exists": true,
+    "plans": [
+      {
+        "path": "/Users/brianhellemn/Projects/github-production/plans/MODULARIZED_IMPLEMENTATION_DESIGN.md",
+        "name": "MODULARIZED_IMPLEMENTATION_DESIGN.md",
+        "modified": 1767918196.7277312,
+        "size": 14506
+      },
+      {
+        "path": "/Users/brianhellemn/Projects/github-production/plans/MONOLITHIC_MAINTENANCE_PLAN.md",
+        "name": "MONOLITHIC_MAINTENANCE_PLAN.md",
+        "modified": 1767918196.7254422,
+        "size": 6247
+      },
+      {
+        "path": "/Users/brianhellemn/Projects/github-production/plans/MUSIC_WORKFLOW_BIFURCATION_STRATEGY.md",
+        "name": "MUSIC_WORKFLOW_BIFURCATION_STRATEGY.md",
+        "modified": 1767918196.7225773,
+        "size": 6818
+      }
+    ],
+    "total_count": 3
+  },
+  "compliance_status": "COMPLIANT"
+}

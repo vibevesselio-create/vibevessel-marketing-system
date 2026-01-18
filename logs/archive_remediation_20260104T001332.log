@@ -1,0 +1,286 @@
+2026-01-04T00:13:32.121442 - === DriveSheetsSync Archive Remediation (DRY RUN) ===
+2026-01-04T00:13:32.121540 - Timestamp: 20260104T001332
+2026-01-04T00:13:32.126497 - Loaded audit data from /Users/brianhellemn/Projects/github-production/DRIVESHEETSSYNC_AUDIT_DATA.json
+2026-01-04T00:13:32.126573 - Audit shows 103 databases with missing .archive folders
+2026-01-04T00:13:32.126613 - 
+--- Processing: Deduplication Test Database_220e7361-6c27-8105-991d-000bea434fea ---
+2026-01-04T00:13:32.126656 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Deduplication Test Database_220e7361-6c27-8105-991d-000bea434fea
+2026-01-04T00:13:32.126719 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.126748 - 
+--- Processing: Photo Library [Team Housing Solutions]_15be7361-6c27-81ca-a5db-000b41449453 ---
+2026-01-04T00:13:32.126779 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Photo Library [Team Housing Solutions]_15be7361-6c27-81ca-a5db-000b41449453
+2026-01-04T00:13:32.126822 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.126848 - 
+--- Processing: Duplicate Detection - Merge Logs_233e7361-6c27-8192-abb0-000b0cd80817 ---
+2026-01-04T00:13:32.126878 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Duplicate Detection - Merge Logs_233e7361-6c27-8192-abb0-000b0cd80817
+2026-01-04T00:13:32.126912 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.126937 - 
+--- Processing: Page Templates_21ee7361-6c27-80f0-aee5-000b2c75d045 ---
+2026-01-04T00:13:32.126962 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Page Templates_21ee7361-6c27-80f0-aee5-000b2c75d045
+2026-01-04T00:13:32.126995 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.127019 - 
+--- Processing: Shoot Session Types_698ed7a4-4843-4654-bca5-b29aa828a46d ---
+2026-01-04T00:13:32.127044 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Shoot Session Types_698ed7a4-4843-4654-bca5-b29aa828a46d
+2026-01-04T00:13:32.127076 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.127101 - 
+--- Processing: Website Pages — Ocean Frontiers_baf61674-4efe-448b-98d5-07e04a49c5dc ---
+2026-01-04T00:13:32.127129 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Website Pages — Ocean Frontiers_baf61674-4efe-448b-98d5-07e04a49c5dc
+2026-01-04T00:13:32.127166 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.127189 - 
+--- Processing: Tag_20fe7361-6c27-81c6-ae2c-000b222c62a6 ---
+2026-01-04T00:13:32.127214 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Tag_20fe7361-6c27-81c6-ae2c-000b222c62a6
+2026-01-04T00:13:32.127246 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.127268 - 
+--- Processing: Execution Logs_f23a5b27-bd5d-4a1e-a4e9-24466d4abd35 ---
+2026-01-04T00:13:32.127293 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Execution Logs_f23a5b27-bd5d-4a1e-a4e9-24466d4abd35
+2026-01-04T00:13:32.127332 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.127355 - 
+--- Processing: Cleanup State_220e7361-6c27-81cc-b2da-000b0725017e ---
+2026-01-04T00:13:32.127380 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Cleanup State_220e7361-6c27-81cc-b2da-000b0725017e
+2026-01-04T00:13:32.127457 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.127482 - 
+--- Processing: Quotes From __________ Interview_293e7361-6c27-812e-b238-000bcdc97962 ---
+2026-01-04T00:13:32.127509 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Quotes From __________ Interview_293e7361-6c27-812e-b238-000bcdc97962
+2026-01-04T00:13:32.127544 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.127572 - 
+--- Processing: Red-Sail-Sports-GC-Facebook-Posts-Data_294e7361-6c27-819f-ade1-000be115b9c1 ---
+2026-01-04T00:13:32.127599 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Red-Sail-Sports-GC-Facebook-Posts-Data_294e7361-6c27-819f-ade1-000be115b9c1
+2026-01-04T00:13:32.127633 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.127657 - 
+--- Processing: Audio_128e7361-6c27-811c-a598-000bb5262dfd ---
+2026-01-04T00:13:32.127684 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Audio_128e7361-6c27-811c-a598-000bb5262dfd
+2026-01-04T00:13:32.127717 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.127745 - 
+--- Processing: My Gmail Data_20ee7361-6c27-817f-a959-000b231ae359 ---
+2026-01-04T00:13:32.127772 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/My Gmail Data_20ee7361-6c27-817f-a959-000b231ae359
+2026-01-04T00:13:32.127808 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.127834 - 
+--- Processing: Music Artists_20ee7361-6c27-814f-9100-000bbd764d31 ---
+2026-01-04T00:13:32.127860 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Music Artists_20ee7361-6c27-814f-9100-000bbd764d31
+2026-01-04T00:13:32.127895 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.127920 - 
+--- Processing: PowerPanel_Pages_Only_1f3e7361-6c27-8108-940b-000b4af96559 ---
+2026-01-04T00:13:32.127946 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/PowerPanel_Pages_Only_1f3e7361-6c27-8108-940b-000b4af96559
+2026-01-04T00:13:32.127982 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.128006 - 
+--- Processing: ListView_Images_224e7361-6c27-8173-91ac-000b125e1972 ---
+2026-01-04T00:13:32.128033 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/ListView_Images_224e7361-6c27-8173-91ac-000b125e1972
+2026-01-04T00:13:32.128067 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.128091 - 
+--- Processing: Quotes From __________ Interview_288e7361-6c27-81b5-b166-000bd3c5a877 ---
+2026-01-04T00:13:32.128117 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Quotes From __________ Interview_288e7361-6c27-81b5-b166-000bd3c5a877
+2026-01-04T00:13:32.128150 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.128175 - 
+--- Processing: Inbox_23ae7361-6c27-802d-b284-000bc63daea1 ---
+2026-01-04T00:13:32.128205 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Inbox_23ae7361-6c27-802d-b284-000bc63daea1
+2026-01-04T00:13:32.128243 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.128271 - 
+--- Processing: Wiki (Seren)_170910fc-52f2-4860-90be-8e1f8b15b881 ---
+2026-01-04T00:13:32.128325 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Wiki (Seren)_170910fc-52f2-4860-90be-8e1f8b15b881
+2026-01-04T00:13:32.128362 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.128389 - 
+--- Processing: Client Files Database Template_196e7361-6c27-80ca-8c17-000b479ac897 ---
+2026-01-04T00:13:32.128417 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Client Files Database Template_196e7361-6c27-80ca-8c17-000b479ac897
+2026-01-04T00:13:32.128453 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.128479 - 
+--- Processing: Properties_20fe7361-6c27-81bc-923d-000b8f07a4d8 ---
+2026-01-04T00:13:32.128507 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Properties_20fe7361-6c27-81bc-923d-000b8f07a4d8
+2026-01-04T00:13:32.128542 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.128569 - 
+--- Processing: Preflight-Test_28de7361-6c27-8192-a8ef-000bc4090b22 ---
+2026-01-04T00:13:32.128597 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Preflight-Test_28de7361-6c27-8192-a8ef-000bc4090b22
+2026-01-04T00:13:32.128632 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.128659 - 
+--- Processing: Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e ---
+2026-01-04T00:13:32.128694 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e
+2026-01-04T00:13:32.128730 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.128758 - 
+--- Processing: Untitled_28fe7361-6c27-81f7-b270-000babd0b557 ---
+2026-01-04T00:13:32.128786 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Untitled_28fe7361-6c27-81f7-b270-000babd0b557
+2026-01-04T00:13:32.128819 -     SKIP: Folder does not exist (may have been deleted)
+2026-01-04T00:13:32.128846 - 
+--- Processing: image-data_278e7361-6c27-8124-8e44-000bcac5d971 ---
+2026-01-04T00:13:32.128874 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/image-data_278e7361-6c27-8124-8e44-000bcac5d971
+2026-01-04T00:13:32.128913 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.128939 - 
+--- Processing: Free Notion Widgets & Tools_1f8e7361-6c27-81ec-80aa-000b48422908 ---
+2026-01-04T00:13:32.128968 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Free Notion Widgets & Tools_1f8e7361-6c27-81ec-80aa-000b48422908
+2026-01-04T00:13:32.129004 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.129030 - 
+--- Processing: Technical Documentation_26ce7361-6c27-81ec-8dfd-000b8a7b1a81 ---
+2026-01-04T00:13:32.129059 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Technical Documentation_26ce7361-6c27-81ec-8dfd-000b8a7b1a81
+2026-01-04T00:13:32.129097 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.129124 - 
+--- Processing: Organizations+People_20fe7361-6c27-81c4-a617-000b5f3f683c ---
+2026-01-04T00:13:32.129151 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Organizations+People_20fe7361-6c27-81c4-a617-000b5f3f683c
+2026-01-04T00:13:32.129208 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.129237 - 
+--- Processing: Emails_20fe7361-6c27-8147-b31d-000b3e5d321c ---
+2026-01-04T00:13:32.129269 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Emails_20fe7361-6c27-8147-b31d-000b3e5d321c
+2026-01-04T00:13:32.129309 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.129338 - 
+--- Processing: Personal — Music Databases (Linked)_5ea1ef19-ff91-40a7-a6e3-1ebe5bd85687 ---
+2026-01-04T00:13:32.129369 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Personal — Music Databases (Linked)_5ea1ef19-ff91-40a7-a6e3-1ebe5bd85687
+2026-01-04T00:13:32.129411 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.129439 - 
+--- Processing: Preflight-Test_28be7361-6c27-817f-9b9f-000bc28df959 ---
+2026-01-04T00:13:32.129468 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Preflight-Test_28be7361-6c27-817f-9b9f-000bc28df959
+2026-01-04T00:13:32.129505 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.129534 - 
+--- Processing: Folders_28be7361-6c27-81fd-b33b-000b9aedae22 ---
+2026-01-04T00:13:32.129564 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Folders_28be7361-6c27-81fd-b33b-000b9aedae22
+2026-01-04T00:13:32.129600 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.129629 - 
+--- Processing: Keyboard Maestro Macros_285e7361-6c27-801d-ad33-000b7da77293 ---
+2026-01-04T00:13:32.129659 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Keyboard Maestro Macros_285e7361-6c27-801d-ad33-000b7da77293
+2026-01-04T00:13:32.129690 -     SKIP: Folder does not exist (may have been deleted)
+2026-01-04T00:13:32.129719 - 
+--- Processing: Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259 ---
+2026-01-04T00:13:32.129748 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259
+2026-01-04T00:13:32.129786 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.129814 - 
+--- Processing: Databases Template_184e7361-6c27-81fa-a7a8-000b15181392 ---
+2026-01-04T00:13:32.129843 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Databases Template_184e7361-6c27-81fa-a7a8-000b15181392
+2026-01-04T00:13:32.129882 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.129911 - 
+--- Processing: workspace-databases_26ce7361-6c27-81d5-8626-000b229d1aad ---
+2026-01-04T00:13:32.129942 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-databases_26ce7361-6c27-81d5-8626-000b229d1aad
+2026-01-04T00:13:32.129980 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.130011 - 
+--- Processing: CRM Lite (Example)_ce6d4903-d07c-4295-91cc-aa2a04b629ec ---
+2026-01-04T00:13:32.130040 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/CRM Lite (Example)_ce6d4903-d07c-4295-91cc-aa2a04b629ec
+2026-01-04T00:13:32.130077 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.130105 - 
+--- Processing: Roles_e1558e8b-3ed4-45ec-9cea-f9b776116cdd ---
+2026-01-04T00:13:32.130162 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Roles_e1558e8b-3ed4-45ec-9cea-f9b776116cdd
+2026-01-04T00:13:32.130196 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.130221 - 
+--- Processing: Merge Logs_816739ed-0a00-4fe2-92de-701e13cd3931 ---
+2026-01-04T00:13:32.130253 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Merge Logs_816739ed-0a00-4fe2-92de-701e13cd3931
+2026-01-04T00:13:32.130295 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.130317 - 
+--- Processing: Locations_28fe7361-6c27-81be-a767-000b91435865 ---
+2026-01-04T00:13:32.130341 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Locations_28fe7361-6c27-81be-a767-000b91435865
+2026-01-04T00:13:32.130372 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.130394 - 
+--- Processing: Interview Transcript Processor_1ece7361-6c27-8082-86e0-000b67b95eb4 ---
+2026-01-04T00:13:32.130418 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interview Transcript Processor_1ece7361-6c27-8082-86e0-000b67b95eb4
+2026-01-04T00:13:32.130450 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.130472 - 
+--- Processing: Hashtag group_128e7361-6c27-8177-981c-000b4738b617 ---
+2026-01-04T00:13:32.130495 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Hashtag group_128e7361-6c27-8177-981c-000b4738b617
+2026-01-04T00:13:32.130529 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.130551 - 
+--- Processing: Folders_28be7361-6c27-81a3-962c-000b674bbbf0 ---
+2026-01-04T00:13:32.130575 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Folders_28be7361-6c27-81a3-962c-000b674bbbf0
+2026-01-04T00:13:32.130605 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.130627 - 
+--- Processing: Chats_288e7361-6c27-8106-8d4b-000b7ec6575a ---
+2026-01-04T00:13:32.130650 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Chats_288e7361-6c27-8106-8d4b-000b7ec6575a
+2026-01-04T00:13:32.130682 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.130707 - 
+--- Processing: Red-Sail-Sports-Instagram-Posts_295e7361-6c27-8150-8a1a-000b027c582f ---
+2026-01-04T00:13:32.130737 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Red-Sail-Sports-Instagram-Posts_295e7361-6c27-8150-8a1a-000b027c582f
+2026-01-04T00:13:32.130770 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.130795 - 
+--- Processing: Quotes From __________ Interview_288e7361-6c27-810a-9031-000bae8131db ---
+2026-01-04T00:13:32.130823 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Quotes From __________ Interview_288e7361-6c27-810a-9031-000bae8131db
+2026-01-04T00:13:32.130859 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.130883 - 
+--- Processing: OKRs_196e7361-6c27-8117-bed0-000bd72acfec ---
+2026-01-04T00:13:32.130909 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/OKRs_196e7361-6c27-8117-bed0-000bd72acfec
+2026-01-04T00:13:32.130953 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.131084 - 
+--- Processing: Events_20fe7361-6c27-8173-b1b6-000be48b54d7 ---
+2026-01-04T00:13:32.131159 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Events_20fe7361-6c27-8173-b1b6-000be48b54d7
+2026-01-04T00:13:32.131224 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.131260 - 
+--- Processing: Technical Documentation_212e7361-6c27-81b4-aea8-000b782b370e ---
+2026-01-04T00:13:32.131300 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Technical Documentation_212e7361-6c27-81b4-aea8-000b782b370e
+2026-01-04T00:13:32.131343 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.131373 - 
+--- Processing: Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d ---
+2026-01-04T00:13:32.131406 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d
+2026-01-04T00:13:32.131447 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.131476 - 
+--- Processing: Technical Documentation_237e7361-6c27-8195-a7b1-000b83d94edc ---
+2026-01-04T00:13:32.131507 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Technical Documentation_237e7361-6c27-8195-a7b1-000b83d94edc
+2026-01-04T00:13:32.131551 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.131582 - 
+--- Processing: DATABASES_20fe7361-6c27-81d8-bfb0-000bff6f1917 ---
+2026-01-04T00:13:32.131613 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/DATABASES_20fe7361-6c27-81d8-bfb0-000bff6f1917
+2026-01-04T00:13:32.131651 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.131680 - 
+--- Processing: Task_128e7361-6c27-8161-a503-000b426587f6 ---
+2026-01-04T00:13:32.131711 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Task_128e7361-6c27-8161-a503-000b426587f6
+2026-01-04T00:13:32.131748 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.131777 - 
+--- Processing: Merge History_220e7361-6c27-811c-8d87-000b4d90a519 ---
+2026-01-04T00:13:32.131807 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Merge History_220e7361-6c27-811c-8d87-000b4d90a519
+2026-01-04T00:13:32.131845 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.131873 - 
+--- Processing: Resource_128e7361-6c27-8165-9ac4-000b05a4fe63 ---
+2026-01-04T00:13:32.131903 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Resource_128e7361-6c27-8165-9ac4-000b05a4fe63
+2026-01-04T00:13:32.131940 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.131968 - 
+--- Processing: Interview Transcript Processor 2_1ece7361-6c27-811b-96c7-000bc3e060d1 ---
+2026-01-04T00:13:32.131999 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interview Transcript Processor 2_1ece7361-6c27-811b-96c7-000bc3e060d1
+2026-01-04T00:13:32.132036 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.132064 - 
+--- Processing: Documents + Meeting Notes (THS)_56ab7db1-ba80-4fea-959b-896c7aca02c0 ---
+2026-01-04T00:13:32.132094 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Documents + Meeting Notes (THS)_56ab7db1-ba80-4fea-959b-896c7aca02c0
+2026-01-04T00:13:32.132158 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.132189 - 
+--- Processing: volumes_26ce7361-6c27-8131-b3c9-000b33f7374e ---
+2026-01-04T00:13:32.132222 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/volumes_26ce7361-6c27-8131-b3c9-000b33f7374e
+2026-01-04T00:13:32.132264 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.132295 - 
+--- Processing: 500+ Competitors_291e7361-6c27-815f-b473-e5dbbcb33947 ---
+2026-01-04T00:13:32.132327 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/500+ Competitors_291e7361-6c27-815f-b473-e5dbbcb33947
+2026-01-04T00:13:32.132369 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.132401 - 
+--- Processing: Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8 ---
+2026-01-04T00:13:32.132434 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8
+2026-01-04T00:13:32.132474 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.132504 - 
+--- Processing: Marketing Channels Database Template_192e7361-6c27-80f4-a290-000bd1238cc6 ---
+2026-01-04T00:13:32.132537 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Marketing Channels Database Template_192e7361-6c27-80f4-a290-000bd1238cc6
+2026-01-04T00:13:32.132579 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.132610 - 
+--- Processing: serenbrianmarketing-system-codebase PRs_26be7361-6c27-804a-9b41-000b39f7b045 ---
+2026-01-04T00:13:32.132642 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/serenbrianmarketing-system-codebase PRs_26be7361-6c27-804a-9b41-000b39f7b045
+2026-01-04T00:13:32.132682 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.132714 - 
+--- Processing: Item-Types_20fe7361-6c27-819b-9dea-000bbd28d570 ---
+2026-01-04T00:13:32.132747 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Item-Types_20fe7361-6c27-819b-9dea-000bbd28d570
+2026-01-04T00:13:32.132786 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.132816 - 
+--- Processing: Platforms_26ce7361-6c27-8161-b482-000b7a3a4158 ---
+2026-01-04T00:13:32.132849 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Platforms_26ce7361-6c27-8161-b482-000b7a3a4158
+2026-01-04T00:13:32.132888 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.132918 - 
+--- Processing: conversations_part-1_1d9e7361-6c27-816d-a986-000b21aaec08 ---
+2026-01-04T00:13:32.132950 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/conversations_part-1_1d9e7361-6c27-816d-a986-000b21aaec08
+2026-01-04T00:13:32.132989 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.133020 - 
+--- Processing: Gmail Data_295e7361-6c27-8150-a24c-000bb5157307 ---
+2026-01-04T00:13:32.133052 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Gmail Data_295e7361-6c27-8150-a24c-000bb5157307
+2026-01-04T00:13:32.133090 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.133152 - 
+--- Processing: Video Library (1)_295e7361-6c27-81ce-b555-000b4b0816f2 ---
+2026-01-04T00:13:32.133193 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Video Library (1)_295e7361-6c27-81ce-b555-000b4b0816f2
+2026-01-04T00:13:32.133234 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.133268 - 
+--- Processing: Red-Sail-Social-Media-Data_293e7361-6c27-8198-95d5-000b6424fbb6 ---
+2026-01-04T00:13:32.133308 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Red-Sail-Social-Media-Data_293e7361-6c27-8198-95d5-000b6424fbb6
+2026-01-04T00:13:32.133350 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.133384 - 
+--- Processing: Agent-Tasks_284e7361-6c27-8018-872a-eb14e82e0392 ---
+2026-01-04T00:13:32.133423 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Agent-Tasks_284e7361-6c27-8018-872a-eb14e82e0392
+2026-01-04T00:13:32.133464 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.133498 - 
+--- Processing: DaVinci-Resolve-Projects_20fe7361-6c27-8116-babd-000bc4a064c0 ---
+2026-01-04T00:13:32.133532 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/DaVinci-Resolve-Projects_20fe7361-6c27-8116-babd-000bc4a064c0
+2026-01-04T00:13:32.133574 -     DRY RUN: Would create .archive folder
+2026-01-04T00:13:32.133608 - 
+--- Processing: OLD Automation Workflows_d6973ea1-881a-4f2b-bfe4-344958d3a7a6 ---

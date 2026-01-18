@@ -1,0 +1,17 @@
+{
+  "title": "Webhook server source of truth not versioned in workspace repo",
+  "type": ["Internal Issue"],
+  "status": "Open",
+  "priority": "Medium",
+  "component": "Webhook Server",
+  "blocked": false,
+  "description": "Webhook server code was copied into the workspace repo, but the canonical source remains ambiguous (iCloud vs workspace). This needs formalization to avoid drift.",
+  "evidence": {
+    "workspace": "notion_event_subscription_webhook_server_v4_enhanced.py now present in /Users/brianhellemn/Projects/github-production/webhook-server",
+    "icloud": "original source still present under iCloud path"
+  },
+  "impact": "Changes cannot be reviewed or audited reliably; deployment reproducibility is weakened.",
+  "next_step": "Confirm canonical path, adopt workspace repo as source of truth, and deprecate iCloud-only copies.",
+  "owner": ["Codex MM1"],
+  "created_at": "20260115T191100Z"
+}

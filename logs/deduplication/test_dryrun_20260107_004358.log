@@ -1,0 +1,39 @@
+[soundcloud_download_prod_merge] unified_config unavailable (No module named 'unified_config'); using fallback module.
+2026-01-07 00:43:58 | INFO | Unified logging initialized via shared_core.logging
+2026-01-07 00:43:58 | INFO | 🧵 Max concurrency for batch mode: 4
+2026-01-07 00:43:58 | INFO | 📑 Order mode: priority_then_created | Priority numeric mode: True | Name-order: ['Critical', 'High', 'Medium', 'Low']
+/Users/brianhellemn/Library/Python/3.13/lib/python/site-packages/librosa/core/intervals.py:8: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  from pkg_resources import resource_filename
+2026-01-07 00:43:59 | WARNING | ⚠️ Smart Eagle API not available, using fallback
+2026-01-07 00:43:59 | INFO | 📁 Using OUT_DIR: /Users/brianhellemn/Projects/github-production/tmp/dedup_out
+2026-01-07 00:43:59 | INFO | 📁 Using BACKUP_DIR: /Users/brianhellemn/Projects/github-production/tmp/dedup_backup
+2026-01-07 00:43:59 | INFO | 📁 Using WAV_BACKUP_DIR: /Users/brianhellemn/Projects/github-production/tmp/dedup_wav
+2026-01-07 00:43:59 | INFO | 🦅 Eagle API: http://localhost:41595
+2026-01-07 00:43:59 | INFO | 🦅 Eagle Library: /Volumes/VIBES/Music-Library-2.library
+2026-01-07 00:43:59 | WARNING | 📚 Volume index enabled but not found: /Users/brianhellemn/Projects/github-production/var/music_volume_index.json
+2026-01-07 00:43:59 | INFO | 📁 Using OUT_DIR: /Users/brianhellemn/Projects/github-production/tmp/dedup_out
+2026-01-07 00:43:59 | INFO | 📁 Using BACKUP_DIR: /Users/brianhellemn/Projects/github-production/tmp/dedup_backup
+2026-01-07 00:43:59 | INFO | 📁 Using WAV_BACKUP_DIR: /Users/brianhellemn/Projects/github-production/tmp/dedup_wav
+2026-01-07 00:43:59 | WARNING | ⚠️  Unified State Registry not available: No module named 'unified_state_registry'
+2026-01-07 00:43:59 | INFO | Processing mode: dedup, sorting by Created Time (descending)
+2026-01-07 00:43:59 | INFO | ================================================================================
+2026-01-07 00:43:59 | INFO | 🔍 EAGLE LIBRARY DEDUPLICATION MODE
+2026-01-07 00:43:59 | INFO | ================================================================================
+2026-01-07 00:43:59 | INFO | Running in DRY RUN mode - no changes will be made
+2026-01-07 00:43:59 | INFO | ================================================================================
+2026-01-07 00:43:59 | INFO | 🔍 EAGLE LIBRARY-WIDE DEDUPLICATION SCAN
+2026-01-07 00:43:59 | INFO | ================================================================================
+2026-01-07 00:43:59 | INFO |    Mode: DRY RUN
+2026-01-07 00:43:59 | INFO |    Min Similarity: 75%
+2026-01-07 00:43:59 | INFO |    Cleanup: Disabled
+2026-01-07 00:43:59 | INFO | 
+2026-01-07 00:43:59 | INFO | 📥 Fetching all items from Eagle library...
+2026-01-07 00:43:59 | WARNING | ❌ Eagle API connection failed (attempt 1/3): HTTPConnectionPool(host='localhost', port=41595): Max retries exceeded with url: /api/item/list?token=15f0d3c8-a1f8-4cc6-991a-7d5947d3cb82 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13de05010>: Failed to establish a new connection: [Errno 1] Operation not permitted'))
+2026-01-07 00:43:59 | WARNING | 🔄 Retrying in 2s...
+2026-01-07 00:44:01 | WARNING | ❌ Eagle API connection failed (attempt 2/3): HTTPConnectionPool(host='localhost', port=41595): Max retries exceeded with url: /api/item/list?token=15f0d3c8-a1f8-4cc6-991a-7d5947d3cb82 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13de18910>: Failed to establish a new connection: [Errno 1] Operation not permitted'))
+2026-01-07 00:44:01 | WARNING | 🔄 Retrying in 4s...
+2026-01-07 00:44:05 | WARNING | ❌ Eagle API connection failed (attempt 3/3): HTTPConnectionPool(host='localhost', port=41595): Max retries exceeded with url: /api/item/list?token=15f0d3c8-a1f8-4cc6-991a-7d5947d3cb82 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13de15480>: Failed to establish a new connection: [Errno 1] Operation not permitted'))
+2026-01-07 00:44:05 | ERROR | ❌ Eagle API connection failed after 3 attempts: HTTPConnectionPool(host='localhost', port=41595): Max retries exceeded with url: /api/item/list?token=15f0d3c8-a1f8-4cc6-991a-7d5947d3cb82 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13de15480>: Failed to establish a new connection: [Errno 1] Operation not permitted'))
+2026-01-07 00:44:05 | ERROR | 🦅 Eagle application may not be running or accessible
+2026-01-07 00:44:05 | WARNING | Failed to fetch Eagle item list: HTTPConnectionPool(host='localhost', port=41595): Max retries exceeded with url: /api/item/list?token=15f0d3c8-a1f8-4cc6-991a-7d5947d3cb82 (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x13de15480>: Failed to establish a new connection: [Errno 1] Operation not permitted'))
+2026-01-07 00:44:05 | WARNING | ⚠️  No items found in Eagle library

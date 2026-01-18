@@ -11,7 +11,10 @@
       "suggested_linear_team": "platform",
       "labels": ["drive-sheets", "concurrency", "safety", "control-plane"],
       "github_labels": ["drive-sheets", "bug", "concurrency"],
-      "blocking": true,
+      "blocking": false,
+      "status": "RESOLVED",
+      "resolved_date": "2026-01-18",
+      "resolution": "Concurrency guard implemented in manualRunDriveSheets() with proper LockService.getScriptLock() usage. Lock acquired before work, released in finally block, clean exit when lock unavailable. Commit: a7d8c35",
       "related_capabilities": ["DRIVE_SHEETS_META_DB_SYNC"],
       "suggested_fix_path": "gas-scripts/drive-sheets-sync/Code.gs"
     },

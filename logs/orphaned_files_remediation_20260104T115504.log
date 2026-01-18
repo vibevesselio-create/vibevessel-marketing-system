@@ -1,0 +1,1398 @@
+2026-01-04T11:55:04.962440 - === DriveSheetsSync Orphaned Files Remediation (DRY RUN) ===
+2026-01-04T11:55:04.962542 - Timestamp: 20260104T115504
+2026-01-04T11:55:04.966667 - Loaded audit data from /Users/brianhellemn/Projects/github-production/DRIVESHEETSSYNC_AUDIT_DATA.json
+2026-01-04T11:55:04.966736 - Found 274 orphaned files in audit data
+2026-01-04T11:55:04.966799 - 
+Categories:
+2026-01-04T11:55:04.966846 -   - Duplicate CSVs: 272
+2026-01-04T11:55:04.966904 -   - Non-standard folders: 2
+2026-01-04T11:55:04.966955 -   - Other: 0
+2026-01-04T11:55:04.966993 - 
+============================================================
+2026-01-04T11:55:04.967023 - Processing Duplicate CSV Files
+2026-01-04T11:55:04.967053 - ============================================================
+2026-01-04T11:55:04.967085 - 
+--- Processing: Photo Library [Team Housing Solutions]_15be7361-6c27-81ca-a5db-000b41449453 (2).csv ---
+2026-01-04T11:55:04.967121 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Photo Library [Team Housing Solutions]_15be7361-6c27-81ca-a5db-000b41449453/Photo Library [Team Housing Solutions]_15be7361-6c27-81ca-a5db-000b41449453 (2).csv
+2026-01-04T11:55:04.967146 -     Expected canonical: Photo Library [Team Housing Solutions]_15be7361-6c27-81ca-a5db-000b41449453.csv
+2026-01-04T11:55:04.968430 -     DRY RUN: Would move to .archive/Photo Library [Team Housing Solutions]_15be7361-6c27-81ca-a5db-000b41449453 (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.968474 - 
+--- Processing: Photo Library [Team Housing Solutions]_15be7361-6c27-81ca-a5db-000b41449453 (1).csv ---
+2026-01-04T11:55:04.968534 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Photo Library [Team Housing Solutions]_15be7361-6c27-81ca-a5db-000b41449453/Photo Library [Team Housing Solutions]_15be7361-6c27-81ca-a5db-000b41449453 (1).csv
+2026-01-04T11:55:04.968575 -     Expected canonical: Photo Library [Team Housing Solutions]_15be7361-6c27-81ca-a5db-000b41449453.csv
+2026-01-04T11:55:04.968791 -     DRY RUN: Would move to .archive/Photo Library [Team Housing Solutions]_15be7361-6c27-81ca-a5db-000b41449453 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.968826 - 
+--- Processing: SocialMediaAnalytics (1)_22de7361-6c27-817a-aceb-000b4e49f33e (1).csv ---
+2026-01-04T11:55:04.968856 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/SocialMediaAnalytics (1)_22de7361-6c27-817a-aceb-000b4e49f33e/SocialMediaAnalytics (1)_22de7361-6c27-817a-aceb-000b4e49f33e (1).csv
+2026-01-04T11:55:04.968889 -     Expected canonical: SocialMediaAnalytics (1)_22de7361-6c27-817a-aceb-000b4e49f33e.csv
+2026-01-04T11:55:04.969504 -     DRY RUN: Would move to .archive/SocialMediaAnalytics (1)_22de7361-6c27-817a-aceb-000b4e49f33e (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.969536 - 
+--- Processing: Website Pages — Ocean Frontiers_baf61674-4efe-448b-98d5-07e04a49c5dc (2).csv ---
+2026-01-04T11:55:04.969573 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Website Pages — Ocean Frontiers_baf61674-4efe-448b-98d5-07e04a49c5dc/Website Pages — Ocean Frontiers_baf61674-4efe-448b-98d5-07e04a49c5dc (2).csv
+2026-01-04T11:55:04.969600 -     Expected canonical: Website Pages — Ocean Frontiers_baf61674-4efe-448b-98d5-07e04a49c5dc.csv
+2026-01-04T11:55:04.970212 -     DRY RUN: Would move to .archive/Website Pages — Ocean Frontiers_baf61674-4efe-448b-98d5-07e04a49c5dc (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.970238 - 
+--- Processing: Website Pages — Ocean Frontiers_baf61674-4efe-448b-98d5-07e04a49c5dc (1).csv ---
+2026-01-04T11:55:04.970271 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Website Pages — Ocean Frontiers_baf61674-4efe-448b-98d5-07e04a49c5dc/Website Pages — Ocean Frontiers_baf61674-4efe-448b-98d5-07e04a49c5dc (1).csv
+2026-01-04T11:55:04.970338 -     Expected canonical: Website Pages — Ocean Frontiers_baf61674-4efe-448b-98d5-07e04a49c5dc.csv
+2026-01-04T11:55:04.970394 -     DRY RUN: Would move to .archive/Website Pages — Ocean Frontiers_baf61674-4efe-448b-98d5-07e04a49c5dc (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.970421 - 
+--- Processing: Execution Logs_f23a5b27-bd5d-4a1e-a4e9-24466d4abd35 (1).csv ---
+2026-01-04T11:55:04.970456 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Execution Logs_f23a5b27-bd5d-4a1e-a4e9-24466d4abd35/Execution Logs_f23a5b27-bd5d-4a1e-a4e9-24466d4abd35 (1).csv
+2026-01-04T11:55:04.970481 -     Expected canonical: Execution Logs_f23a5b27-bd5d-4a1e-a4e9-24466d4abd35.csv
+2026-01-04T11:55:04.970993 -     DRY RUN: Would move to .archive/Execution Logs_f23a5b27-bd5d-4a1e-a4e9-24466d4abd35 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.971019 - 
+--- Processing: Quotes From __________ Interview_293e7361-6c27-812e-b238-000bcdc97962 (2).csv ---
+2026-01-04T11:55:04.971046 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Quotes From __________ Interview_293e7361-6c27-812e-b238-000bcdc97962/Quotes From __________ Interview_293e7361-6c27-812e-b238-000bcdc97962 (2).csv
+2026-01-04T11:55:04.971071 -     Expected canonical: Quotes From __________ Interview_293e7361-6c27-812e-b238-000bcdc97962.csv
+2026-01-04T11:55:04.971204 -     DRY RUN: Would move to .archive/Quotes From __________ Interview_293e7361-6c27-812e-b238-000bcdc97962 (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.971229 - 
+--- Processing: Quotes From __________ Interview_293e7361-6c27-812e-b238-000bcdc97962 (1).csv ---
+2026-01-04T11:55:04.971255 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Quotes From __________ Interview_293e7361-6c27-812e-b238-000bcdc97962/Quotes From __________ Interview_293e7361-6c27-812e-b238-000bcdc97962 (1).csv
+2026-01-04T11:55:04.971278 -     Expected canonical: Quotes From __________ Interview_293e7361-6c27-812e-b238-000bcdc97962.csv
+2026-01-04T11:55:04.971398 -     DRY RUN: Would move to .archive/Quotes From __________ Interview_293e7361-6c27-812e-b238-000bcdc97962 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.971423 - 
+--- Processing: Audio_128e7361-6c27-811c-a598-000bb5262dfd (2).csv ---
+2026-01-04T11:55:04.971451 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Audio_128e7361-6c27-811c-a598-000bb5262dfd/Audio_128e7361-6c27-811c-a598-000bb5262dfd (2).csv
+2026-01-04T11:55:04.971474 -     Expected canonical: Audio_128e7361-6c27-811c-a598-000bb5262dfd.csv
+2026-01-04T11:55:04.971628 -     DRY RUN: Would move to .archive/Audio_128e7361-6c27-811c-a598-000bb5262dfd (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.971653 - 
+--- Processing: Audio_128e7361-6c27-811c-a598-000bb5262dfd (1).csv ---
+2026-01-04T11:55:04.971684 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Audio_128e7361-6c27-811c-a598-000bb5262dfd/Audio_128e7361-6c27-811c-a598-000bb5262dfd (1).csv
+2026-01-04T11:55:04.971706 -     Expected canonical: Audio_128e7361-6c27-811c-a598-000bb5262dfd.csv
+2026-01-04T11:55:04.971755 -     DRY RUN: Would move to .archive/Audio_128e7361-6c27-811c-a598-000bb5262dfd (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.971779 - 
+--- Processing: Quotes From __________ Interview_288e7361-6c27-81b5-b166-000bd3c5a877 (1).csv ---
+2026-01-04T11:55:04.971835 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Quotes From __________ Interview_288e7361-6c27-81b5-b166-000bd3c5a877/Quotes From __________ Interview_288e7361-6c27-81b5-b166-000bd3c5a877 (1).csv
+2026-01-04T11:55:04.971862 -     Expected canonical: Quotes From __________ Interview_288e7361-6c27-81b5-b166-000bd3c5a877.csv
+2026-01-04T11:55:04.972221 -     DRY RUN: Would move to .archive/Quotes From __________ Interview_288e7361-6c27-81b5-b166-000bd3c5a877 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.972248 - 
+--- Processing: Quotes From __________ Interview_288e7361-6c27-81b5-b166-000bd3c5a877 (2).csv ---
+2026-01-04T11:55:04.972278 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Quotes From __________ Interview_288e7361-6c27-81b5-b166-000bd3c5a877/Quotes From __________ Interview_288e7361-6c27-81b5-b166-000bd3c5a877 (2).csv
+2026-01-04T11:55:04.972304 -     Expected canonical: Quotes From __________ Interview_288e7361-6c27-81b5-b166-000bd3c5a877.csv
+2026-01-04T11:55:04.972463 -     DRY RUN: Would move to .archive/Quotes From __________ Interview_288e7361-6c27-81b5-b166-000bd3c5a877 (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.972499 - 
+--- Processing: Inbox_23ae7361-6c27-802d-b284-000bc63daea1 (1).csv ---
+2026-01-04T11:55:04.972528 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Inbox_23ae7361-6c27-802d-b284-000bc63daea1/Inbox_23ae7361-6c27-802d-b284-000bc63daea1 (1).csv
+2026-01-04T11:55:04.972554 -     Expected canonical: Inbox_23ae7361-6c27-802d-b284-000bc63daea1.csv
+2026-01-04T11:55:04.972964 -     DRY RUN: Would move to .archive/Inbox_23ae7361-6c27-802d-b284-000bc63daea1 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.972997 - 
+--- Processing: Wiki (Seren)_170910fc-52f2-4860-90be-8e1f8b15b881 (1).csv ---
+2026-01-04T11:55:04.973027 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Wiki (Seren)_170910fc-52f2-4860-90be-8e1f8b15b881/Wiki (Seren)_170910fc-52f2-4860-90be-8e1f8b15b881 (1).csv
+2026-01-04T11:55:04.973055 -     Expected canonical: Wiki (Seren)_170910fc-52f2-4860-90be-8e1f8b15b881.csv
+2026-01-04T11:55:04.973410 -     DRY RUN: Would move to .archive/Wiki (Seren)_170910fc-52f2-4860-90be-8e1f8b15b881 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.973438 - 
+--- Processing: Client Files Database Template_196e7361-6c27-80ca-8c17-000b479ac897 (2).csv ---
+2026-01-04T11:55:04.973471 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Client Files Database Template_196e7361-6c27-80ca-8c17-000b479ac897/Client Files Database Template_196e7361-6c27-80ca-8c17-000b479ac897 (2).csv
+2026-01-04T11:55:04.973498 -     Expected canonical: Client Files Database Template_196e7361-6c27-80ca-8c17-000b479ac897.csv
+2026-01-04T11:55:04.973826 -     DRY RUN: Would move to .archive/Client Files Database Template_196e7361-6c27-80ca-8c17-000b479ac897 (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.973856 - 
+--- Processing: Client Files Database Template_196e7361-6c27-80ca-8c17-000b479ac897 (1).csv ---
+2026-01-04T11:55:04.973887 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Client Files Database Template_196e7361-6c27-80ca-8c17-000b479ac897/Client Files Database Template_196e7361-6c27-80ca-8c17-000b479ac897 (1).csv
+2026-01-04T11:55:04.973912 -     Expected canonical: Client Files Database Template_196e7361-6c27-80ca-8c17-000b479ac897.csv
+2026-01-04T11:55:04.973983 -     DRY RUN: Would move to .archive/Client Files Database Template_196e7361-6c27-80ca-8c17-000b479ac897 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.974012 - 
+--- Processing: Hooks_128e7361-6c27-8169-93c6-000b3268bbea (2).csv ---
+2026-01-04T11:55:04.974045 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Hooks_128e7361-6c27-8169-93c6-000b3268bbea/Hooks_128e7361-6c27-8169-93c6-000b3268bbea (2).csv
+2026-01-04T11:55:04.974071 -     Expected canonical: Hooks_128e7361-6c27-8169-93c6-000b3268bbea.csv
+2026-01-04T11:55:04.974322 -     DRY RUN: Would move to .archive/Hooks_128e7361-6c27-8169-93c6-000b3268bbea (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.974350 - 
+--- Processing: Hooks_128e7361-6c27-8169-93c6-000b3268bbea (3).csv ---
+2026-01-04T11:55:04.974382 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Hooks_128e7361-6c27-8169-93c6-000b3268bbea/Hooks_128e7361-6c27-8169-93c6-000b3268bbea (3).csv
+2026-01-04T11:55:04.974409 -     Expected canonical: Hooks_128e7361-6c27-8169-93c6-000b3268bbea.csv
+2026-01-04T11:55:04.974458 -     DRY RUN: Would move to .archive/Hooks_128e7361-6c27-8169-93c6-000b3268bbea (3)__archived_20260104T115504.csv
+2026-01-04T11:55:04.974487 - 
+--- Processing: Hooks_128e7361-6c27-8169-93c6-000b3268bbea (1).csv ---
+2026-01-04T11:55:04.974518 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Hooks_128e7361-6c27-8169-93c6-000b3268bbea/Hooks_128e7361-6c27-8169-93c6-000b3268bbea (1).csv
+2026-01-04T11:55:04.974546 -     Expected canonical: Hooks_128e7361-6c27-8169-93c6-000b3268bbea.csv
+2026-01-04T11:55:04.974676 -     DRY RUN: Would move to .archive/Hooks_128e7361-6c27-8169-93c6-000b3268bbea (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.974704 - 
+--- Processing: Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d (3).csv ---
+2026-01-04T11:55:04.974738 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d/Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d (3).csv
+2026-01-04T11:55:04.974767 -     Expected canonical: Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d.csv
+2026-01-04T11:55:04.975216 -     DRY RUN: Would move to .archive/Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d (3)__archived_20260104T115504.csv
+2026-01-04T11:55:04.975244 - 
+--- Processing: Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d (2).csv ---
+2026-01-04T11:55:04.975274 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d/Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d (2).csv
+2026-01-04T11:55:04.975301 -     Expected canonical: Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d.csv
+2026-01-04T11:55:04.975448 -     DRY RUN: Would move to .archive/Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.975475 - 
+--- Processing: Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d (1).csv ---
+2026-01-04T11:55:04.975505 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d/Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d (1).csv
+2026-01-04T11:55:04.975531 -     Expected canonical: Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d.csv
+2026-01-04T11:55:04.975677 -     DRY RUN: Would move to .archive/Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.975705 - 
+--- Processing: Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d 2.csv ---
+2026-01-04T11:55:04.975761 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d/Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d 2.csv
+2026-01-04T11:55:04.975783 -     Expected canonical: Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d.csv
+2026-01-04T11:55:04.975829 -     DRY RUN: Would move to .archive/Hashtag_128e7361-6c27-8194-bbb2-000bb5ba471d 2__archived_20260104T115504.csv
+2026-01-04T11:55:04.975851 - 
+--- Processing: Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e (4).csv ---
+2026-01-04T11:55:04.975876 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e/Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e (4).csv
+2026-01-04T11:55:04.975898 -     Expected canonical: Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e.csv
+2026-01-04T11:55:04.976443 -     DRY RUN: Would move to .archive/Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e (4)__archived_20260104T115504.csv
+2026-01-04T11:55:04.976465 - 
+--- Processing: Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e (2).csv ---
+2026-01-04T11:55:04.976490 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e/Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e (2).csv
+2026-01-04T11:55:04.976511 -     Expected canonical: Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e.csv
+2026-01-04T11:55:04.976869 -     DRY RUN: Would move to .archive/Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.976892 - 
+--- Processing: Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e (3).csv ---
+2026-01-04T11:55:04.976916 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e/Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e (3).csv
+2026-01-04T11:55:04.976941 -     Expected canonical: Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e.csv
+2026-01-04T11:55:04.977086 -     DRY RUN: Would move to .archive/Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e (3)__archived_20260104T115504.csv
+2026-01-04T11:55:04.977108 - 
+--- Processing: Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e (1).csv ---
+2026-01-04T11:55:04.977133 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e/Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e (1).csv
+2026-01-04T11:55:04.977154 -     Expected canonical: Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e.csv
+2026-01-04T11:55:04.977562 -     DRY RUN: Would move to .archive/Resources [THS]_43c0722f-f096-4bf0-b781-4a9f0c87c83e (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.977584 - 
+--- Processing: Free Notion Widgets & Tools_1f8e7361-6c27-81ec-80aa-000b48422908 (1).csv ---
+2026-01-04T11:55:04.977610 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Free Notion Widgets & Tools_1f8e7361-6c27-81ec-80aa-000b48422908/Free Notion Widgets & Tools_1f8e7361-6c27-81ec-80aa-000b48422908 (1).csv
+2026-01-04T11:55:04.977631 -     Expected canonical: Free Notion Widgets & Tools_1f8e7361-6c27-81ec-80aa-000b48422908.csv
+2026-01-04T11:55:04.978075 -     DRY RUN: Would move to .archive/Free Notion Widgets & Tools_1f8e7361-6c27-81ec-80aa-000b48422908 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.978098 - 
+--- Processing: Technical Documentation_26ce7361-6c27-81ec-8dfd-000b8a7b1a81 (1).csv ---
+2026-01-04T11:55:04.978143 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Technical Documentation_26ce7361-6c27-81ec-8dfd-000b8a7b1a81/Technical Documentation_26ce7361-6c27-81ec-8dfd-000b8a7b1a81 (1).csv
+2026-01-04T11:55:04.978168 -     Expected canonical: Technical Documentation_26ce7361-6c27-81ec-8dfd-000b8a7b1a81.csv
+2026-01-04T11:55:04.978320 -     DRY RUN: Would move to .archive/Technical Documentation_26ce7361-6c27-81ec-8dfd-000b8a7b1a81 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.978343 - 
+--- Processing: Personal — Music Databases (Linked)_5ea1ef19-ff91-40a7-a6e3-1ebe5bd85687 (1).csv ---
+2026-01-04T11:55:04.978370 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Personal — Music Databases (Linked)_5ea1ef19-ff91-40a7-a6e3-1ebe5bd85687/Personal — Music Databases (Linked)_5ea1ef19-ff91-40a7-a6e3-1ebe5bd85687 (1).csv
+2026-01-04T11:55:04.978393 -     Expected canonical: Personal — Music Databases (Linked)_5ea1ef19-ff91-40a7-a6e3-1ebe5bd85687.csv
+2026-01-04T11:55:04.978919 -     DRY RUN: Would move to .archive/Personal — Music Databases (Linked)_5ea1ef19-ff91-40a7-a6e3-1ebe5bd85687 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.978943 - 
+--- Processing: Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259 (2).csv ---
+2026-01-04T11:55:04.978968 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259/Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259 (2).csv
+2026-01-04T11:55:04.978990 -     Expected canonical: Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259.csv
+2026-01-04T11:55:04.979262 -     DRY RUN: Would move to .archive/Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259 (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.979285 - 
+--- Processing: Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259 (3).csv ---
+2026-01-04T11:55:04.979311 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259/Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259 (3).csv
+2026-01-04T11:55:04.979333 -     Expected canonical: Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259.csv
+2026-01-04T11:55:04.979482 -     DRY RUN: Would move to .archive/Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259 (3)__archived_20260104T115504.csv
+2026-01-04T11:55:04.979505 - 
+--- Processing: Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259 2.csv ---
+2026-01-04T11:55:04.979529 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259/Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259 2.csv
+2026-01-04T11:55:04.979550 -     Expected canonical: Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259.csv
+2026-01-04T11:55:04.979711 -     DRY RUN: Would move to .archive/Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259 2__archived_20260104T115504.csv
+2026-01-04T11:55:04.979736 - 
+--- Processing: Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259 (1).csv ---
+2026-01-04T11:55:04.979761 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259/Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259 (1).csv
+2026-01-04T11:55:04.979781 -     Expected canonical: Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259.csv
+2026-01-04T11:55:04.980108 -     DRY RUN: Would move to .archive/Team Members [THS]_778edd22-2d81-45d2-90b2-f3e3480a8259 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.980150 - 
+--- Processing: SocialMediaAnalytics (1)_22de7361-6c27-8136-806c-000b4b7c9468 (1).csv ---
+2026-01-04T11:55:04.980175 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/SocialMediaAnalytics (1)_22de7361-6c27-8136-806c-000b4b7c9468/SocialMediaAnalytics (1)_22de7361-6c27-8136-806c-000b4b7c9468 (1).csv
+2026-01-04T11:55:04.980196 -     Expected canonical: SocialMediaAnalytics (1)_22de7361-6c27-8136-806c-000b4b7c9468.csv
+2026-01-04T11:55:04.980464 -     DRY RUN: Would move to .archive/SocialMediaAnalytics (1)_22de7361-6c27-8136-806c-000b4b7c9468 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.980487 - 
+--- Processing: Client Databases Database Template_196e7361-6c27-804a-bf20-000b27475b9d (1).csv ---
+2026-01-04T11:55:04.980512 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Client Databases Database Template_196e7361-6c27-804a-bf20-000b27475b9d/Client Databases Database Template_196e7361-6c27-804a-bf20-000b27475b9d (1).csv
+2026-01-04T11:55:04.980534 -     Expected canonical: Client Databases Database Template_196e7361-6c27-804a-bf20-000b27475b9d.csv
+2026-01-04T11:55:04.980793 -     DRY RUN: Would move to .archive/Client Databases Database Template_196e7361-6c27-804a-bf20-000b27475b9d (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.980819 - 
+--- Processing: Databases Template_184e7361-6c27-81fa-a7a8-000b15181392 (2).csv ---
+2026-01-04T11:55:04.980845 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Databases Template_184e7361-6c27-81fa-a7a8-000b15181392/Databases Template_184e7361-6c27-81fa-a7a8-000b15181392 (2).csv
+2026-01-04T11:55:04.980866 -     Expected canonical: Databases Template_184e7361-6c27-81fa-a7a8-000b15181392.csv
+2026-01-04T11:55:04.981128 -     DRY RUN: Would move to .archive/Databases Template_184e7361-6c27-81fa-a7a8-000b15181392 (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.981150 - 
+--- Processing: Databases Template_184e7361-6c27-81fa-a7a8-000b15181392 (1).csv ---
+2026-01-04T11:55:04.981178 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Databases Template_184e7361-6c27-81fa-a7a8-000b15181392/Databases Template_184e7361-6c27-81fa-a7a8-000b15181392 (1).csv
+2026-01-04T11:55:04.981199 -     Expected canonical: Databases Template_184e7361-6c27-81fa-a7a8-000b15181392.csv
+2026-01-04T11:55:04.981248 -     DRY RUN: Would move to .archive/Databases Template_184e7361-6c27-81fa-a7a8-000b15181392 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.981271 - 
+--- Processing: schema.csv ---
+2026-01-04T11:55:04.981296 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-databases_26ce7361-6c27-81d5-8626-000b229d1aad/schema.csv
+2026-01-04T11:55:04.981317 -     Expected canonical: workspace-databases_26ce7361-6c27-81d5-8626-000b229d1aad.csv
+2026-01-04T11:55:04.981576 -     DRY RUN: Would move to .archive/schema__archived_20260104T115504.csv
+2026-01-04T11:55:04.981599 - 
+--- Processing: CRM Lite (Example)_ce6d4903-d07c-4295-91cc-aa2a04b629ec (1).csv ---
+2026-01-04T11:55:04.981623 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/CRM Lite (Example)_ce6d4903-d07c-4295-91cc-aa2a04b629ec/CRM Lite (Example)_ce6d4903-d07c-4295-91cc-aa2a04b629ec (1).csv
+2026-01-04T11:55:04.981644 -     Expected canonical: CRM Lite (Example)_ce6d4903-d07c-4295-91cc-aa2a04b629ec.csv
+2026-01-04T11:55:04.981831 -     DRY RUN: Would move to .archive/CRM Lite (Example)_ce6d4903-d07c-4295-91cc-aa2a04b629ec (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.981853 - 
+--- Processing: Roles_e1558e8b-3ed4-45ec-9cea-f9b776116cdd (1).csv ---
+2026-01-04T11:55:04.981882 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Roles_e1558e8b-3ed4-45ec-9cea-f9b776116cdd/Roles_e1558e8b-3ed4-45ec-9cea-f9b776116cdd (1).csv
+2026-01-04T11:55:04.981903 -     Expected canonical: Roles_e1558e8b-3ed4-45ec-9cea-f9b776116cdd.csv
+2026-01-04T11:55:04.981963 -     DRY RUN: Would move to .archive/Roles_e1558e8b-3ed4-45ec-9cea-f9b776116cdd (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.981985 - 
+--- Processing: Roles_e1558e8b-3ed4-45ec-9cea-f9b776116cdd (2).csv ---
+2026-01-04T11:55:04.982013 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Roles_e1558e8b-3ed4-45ec-9cea-f9b776116cdd/Roles_e1558e8b-3ed4-45ec-9cea-f9b776116cdd (2).csv
+2026-01-04T11:55:04.982034 -     Expected canonical: Roles_e1558e8b-3ed4-45ec-9cea-f9b776116cdd.csv
+2026-01-04T11:55:04.982084 -     DRY RUN: Would move to .archive/Roles_e1558e8b-3ed4-45ec-9cea-f9b776116cdd (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.982106 - 
+--- Processing: Locations_28fe7361-6c27-81be-a767-000b91435865 (2).csv ---
+2026-01-04T11:55:04.982131 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Locations_28fe7361-6c27-81be-a767-000b91435865/Locations_28fe7361-6c27-81be-a767-000b91435865 (2).csv
+2026-01-04T11:55:04.982152 -     Expected canonical: Locations_28fe7361-6c27-81be-a767-000b91435865.csv
+2026-01-04T11:55:04.982380 -     DRY RUN: Would move to .archive/Locations_28fe7361-6c27-81be-a767-000b91435865 (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.982402 - 
+--- Processing: Locations_28fe7361-6c27-81be-a767-000b91435865 (3).csv ---
+2026-01-04T11:55:04.982427 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Locations_28fe7361-6c27-81be-a767-000b91435865/Locations_28fe7361-6c27-81be-a767-000b91435865 (3).csv
+2026-01-04T11:55:04.982451 -     Expected canonical: Locations_28fe7361-6c27-81be-a767-000b91435865.csv
+2026-01-04T11:55:04.982503 -     DRY RUN: Would move to .archive/Locations_28fe7361-6c27-81be-a767-000b91435865 (3)__archived_20260104T115504.csv
+2026-01-04T11:55:04.982525 - 
+--- Processing: Locations_28fe7361-6c27-81be-a767-000b91435865 (4).csv ---
+2026-01-04T11:55:04.982549 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Locations_28fe7361-6c27-81be-a767-000b91435865/Locations_28fe7361-6c27-81be-a767-000b91435865 (4).csv
+2026-01-04T11:55:04.982571 -     Expected canonical: Locations_28fe7361-6c27-81be-a767-000b91435865.csv
+2026-01-04T11:55:04.982620 -     DRY RUN: Would move to .archive/Locations_28fe7361-6c27-81be-a767-000b91435865 (4)__archived_20260104T115504.csv
+2026-01-04T11:55:04.982642 - 
+--- Processing: Locations_28fe7361-6c27-81be-a767-000b91435865 (1).csv ---
+2026-01-04T11:55:04.982666 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Locations_28fe7361-6c27-81be-a767-000b91435865/Locations_28fe7361-6c27-81be-a767-000b91435865 (1).csv
+2026-01-04T11:55:04.982687 -     Expected canonical: Locations_28fe7361-6c27-81be-a767-000b91435865.csv
+2026-01-04T11:55:04.982732 -     DRY RUN: Would move to .archive/Locations_28fe7361-6c27-81be-a767-000b91435865 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.982754 - 
+--- Processing: Interview Transcript Processor_1ece7361-6c27-8082-86e0-000b67b95eb4 (2).csv ---
+2026-01-04T11:55:04.982806 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interview Transcript Processor_1ece7361-6c27-8082-86e0-000b67b95eb4/Interview Transcript Processor_1ece7361-6c27-8082-86e0-000b67b95eb4 (2).csv
+2026-01-04T11:55:04.982826 -     Expected canonical: Interview Transcript Processor_1ece7361-6c27-8082-86e0-000b67b95eb4.csv
+2026-01-04T11:55:04.983157 -     DRY RUN: Would move to .archive/Interview Transcript Processor_1ece7361-6c27-8082-86e0-000b67b95eb4 (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.983182 - 
+--- Processing: Interview Transcript Processor_1ece7361-6c27-8082-86e0-000b67b95eb4 (1).csv ---
+2026-01-04T11:55:04.983207 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interview Transcript Processor_1ece7361-6c27-8082-86e0-000b67b95eb4/Interview Transcript Processor_1ece7361-6c27-8082-86e0-000b67b95eb4 (1).csv
+2026-01-04T11:55:04.983227 -     Expected canonical: Interview Transcript Processor_1ece7361-6c27-8082-86e0-000b67b95eb4.csv
+2026-01-04T11:55:04.983277 -     DRY RUN: Would move to .archive/Interview Transcript Processor_1ece7361-6c27-8082-86e0-000b67b95eb4 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.983300 - 
+--- Processing: Hashtag group_128e7361-6c27-8177-981c-000b4738b617 (1).csv ---
+2026-01-04T11:55:04.983324 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Hashtag group_128e7361-6c27-8177-981c-000b4738b617/Hashtag group_128e7361-6c27-8177-981c-000b4738b617 (1).csv
+2026-01-04T11:55:04.983345 -     Expected canonical: Hashtag group_128e7361-6c27-8177-981c-000b4738b617.csv
+2026-01-04T11:55:04.983576 -     DRY RUN: Would move to .archive/Hashtag group_128e7361-6c27-8177-981c-000b4738b617 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.983615 - 
+--- Processing: Hashtag group_128e7361-6c27-8177-981c-000b4738b617 (2).csv ---
+2026-01-04T11:55:04.983646 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Hashtag group_128e7361-6c27-8177-981c-000b4738b617/Hashtag group_128e7361-6c27-8177-981c-000b4738b617 (2).csv
+2026-01-04T11:55:04.983685 -     Expected canonical: Hashtag group_128e7361-6c27-8177-981c-000b4738b617.csv
+2026-01-04T11:55:04.983746 -     DRY RUN: Would move to .archive/Hashtag group_128e7361-6c27-8177-981c-000b4738b617 (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.983773 - 
+--- Processing: Chats_288e7361-6c27-8106-8d4b-000b7ec6575a (1).csv ---
+2026-01-04T11:55:04.983803 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Chats_288e7361-6c27-8106-8d4b-000b7ec6575a/Chats_288e7361-6c27-8106-8d4b-000b7ec6575a (1).csv
+2026-01-04T11:55:04.983828 -     Expected canonical: Chats_288e7361-6c27-8106-8d4b-000b7ec6575a.csv
+2026-01-04T11:55:04.984052 -     DRY RUN: Would move to .archive/Chats_288e7361-6c27-8106-8d4b-000b7ec6575a (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.984081 - 
+--- Processing: OKRs_196e7361-6c27-8117-bed0-000bd72acfec (1).csv ---
+2026-01-04T11:55:04.984106 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/OKRs_196e7361-6c27-8117-bed0-000bd72acfec/OKRs_196e7361-6c27-8117-bed0-000bd72acfec (1).csv
+2026-01-04T11:55:04.984131 -     Expected canonical: OKRs_196e7361-6c27-8117-bed0-000bd72acfec.csv
+2026-01-04T11:55:04.984526 -     DRY RUN: Would move to .archive/OKRs_196e7361-6c27-8117-bed0-000bd72acfec (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.984587 - 
+--- Processing: OKRs_196e7361-6c27-8117-bed0-000bd72acfec (2).csv ---
+2026-01-04T11:55:04.984619 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/OKRs_196e7361-6c27-8117-bed0-000bd72acfec/OKRs_196e7361-6c27-8117-bed0-000bd72acfec (2).csv
+2026-01-04T11:55:04.984644 -     Expected canonical: OKRs_196e7361-6c27-8117-bed0-000bd72acfec.csv
+2026-01-04T11:55:04.984700 -     DRY RUN: Would move to .archive/OKRs_196e7361-6c27-8117-bed0-000bd72acfec (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.984726 - 
+--- Processing: Events_20fe7361-6c27-8173-b1b6-000be48b54d7 (1).csv ---
+2026-01-04T11:55:04.984754 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Events_20fe7361-6c27-8173-b1b6-000be48b54d7/Events_20fe7361-6c27-8173-b1b6-000be48b54d7 (1).csv
+2026-01-04T11:55:04.984777 -     Expected canonical: Events_20fe7361-6c27-8173-b1b6-000be48b54d7.csv
+2026-01-04T11:55:04.985157 -     DRY RUN: Would move to .archive/Events_20fe7361-6c27-8173-b1b6-000be48b54d7 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.985181 - 
+--- Processing: OKRs_196e7361-6c27-8139-bb70-000b27ec254c (1).csv ---
+2026-01-04T11:55:04.985207 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/OKRs_196e7361-6c27-8139-bb70-000b27ec254c/OKRs_196e7361-6c27-8139-bb70-000b27ec254c (1).csv
+2026-01-04T11:55:04.985229 -     Expected canonical: OKRs_196e7361-6c27-8139-bb70-000b27ec254c.csv
+2026-01-04T11:55:04.985462 -     DRY RUN: Would move to .archive/OKRs_196e7361-6c27-8139-bb70-000b27ec254c (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.985485 - 
+--- Processing: Technical Documentation_212e7361-6c27-81b4-aea8-000b782b370e (2).csv ---
+2026-01-04T11:55:04.985510 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Technical Documentation_212e7361-6c27-81b4-aea8-000b782b370e/Technical Documentation_212e7361-6c27-81b4-aea8-000b782b370e (2).csv
+2026-01-04T11:55:04.985532 -     Expected canonical: Technical Documentation_212e7361-6c27-81b4-aea8-000b782b370e.csv
+2026-01-04T11:55:04.985768 -     DRY RUN: Would move to .archive/Technical Documentation_212e7361-6c27-81b4-aea8-000b782b370e (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.985791 - 
+--- Processing: Technical Documentation_212e7361-6c27-81b4-aea8-000b782b370e (1).csv ---
+2026-01-04T11:55:04.985816 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Technical Documentation_212e7361-6c27-81b4-aea8-000b782b370e/Technical Documentation_212e7361-6c27-81b4-aea8-000b782b370e (1).csv
+2026-01-04T11:55:04.985837 -     Expected canonical: Technical Documentation_212e7361-6c27-81b4-aea8-000b782b370e.csv
+2026-01-04T11:55:04.985884 -     DRY RUN: Would move to .archive/Technical Documentation_212e7361-6c27-81b4-aea8-000b782b370e (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.985906 - 
+--- Processing: Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d (2).csv ---
+2026-01-04T11:55:04.985931 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d/Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d (2).csv
+2026-01-04T11:55:04.985952 -     Expected canonical: Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d.csv
+2026-01-04T11:55:04.986303 -     DRY RUN: Would move to .archive/Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.986346 - 
+--- Processing: Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d (3).csv ---
+2026-01-04T11:55:04.986373 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d/Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d (3).csv
+2026-01-04T11:55:04.986397 -     Expected canonical: Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d.csv
+2026-01-04T11:55:04.986690 -     DRY RUN: Would move to .archive/Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d (3)__archived_20260104T115504.csv
+2026-01-04T11:55:04.986715 - 
+--- Processing: Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d (1).csv ---
+2026-01-04T11:55:04.986743 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d/Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d (1).csv
+2026-01-04T11:55:04.986765 -     Expected canonical: Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d.csv
+2026-01-04T11:55:04.986918 -     DRY RUN: Would move to .archive/Interviews [ ProjectClient Name ]_ff73c88b-88f9-4a9f-acec-9a1ab209fc6d (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.986941 - 
+--- Processing: Technical Documentation_237e7361-6c27-8195-a7b1-000b83d94edc (1).csv ---
+2026-01-04T11:55:04.986968 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Technical Documentation_237e7361-6c27-8195-a7b1-000b83d94edc/Technical Documentation_237e7361-6c27-8195-a7b1-000b83d94edc (1).csv
+2026-01-04T11:55:04.986991 -     Expected canonical: Technical Documentation_237e7361-6c27-8195-a7b1-000b83d94edc.csv
+2026-01-04T11:55:04.987048 -     DRY RUN: Would move to .archive/Technical Documentation_237e7361-6c27-8195-a7b1-000b83d94edc (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.987072 - 
+--- Processing: DATABASES_20fe7361-6c27-81d8-bfb0-000bff6f1917 (1).csv ---
+2026-01-04T11:55:04.987099 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/DATABASES_20fe7361-6c27-81d8-bfb0-000bff6f1917/DATABASES_20fe7361-6c27-81d8-bfb0-000bff6f1917 (1).csv
+2026-01-04T11:55:04.987124 -     Expected canonical: DATABASES_20fe7361-6c27-81d8-bfb0-000bff6f1917.csv
+2026-01-04T11:55:04.987279 -     DRY RUN: Would move to .archive/DATABASES_20fe7361-6c27-81d8-bfb0-000bff6f1917 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.987303 - 
+--- Processing: Task_128e7361-6c27-8161-a503-000b426587f6 (1).csv ---
+2026-01-04T11:55:04.987330 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Task_128e7361-6c27-8161-a503-000b426587f6/Task_128e7361-6c27-8161-a503-000b426587f6 (1).csv
+2026-01-04T11:55:04.987353 -     Expected canonical: Task_128e7361-6c27-8161-a503-000b426587f6.csv
+2026-01-04T11:55:04.987671 -     DRY RUN: Would move to .archive/Task_128e7361-6c27-8161-a503-000b426587f6 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.987703 - 
+--- Processing: Task_128e7361-6c27-8161-a503-000b426587f6 (2).csv ---
+2026-01-04T11:55:04.987729 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Task_128e7361-6c27-8161-a503-000b426587f6/Task_128e7361-6c27-8161-a503-000b426587f6 (2).csv
+2026-01-04T11:55:04.987752 -     Expected canonical: Task_128e7361-6c27-8161-a503-000b426587f6.csv
+2026-01-04T11:55:04.987806 -     DRY RUN: Would move to .archive/Task_128e7361-6c27-8161-a503-000b426587f6 (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.987852 - 
+--- Processing: Resource_128e7361-6c27-8165-9ac4-000b05a4fe63 (1).csv ---
+2026-01-04T11:55:04.987882 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Resource_128e7361-6c27-8165-9ac4-000b05a4fe63/Resource_128e7361-6c27-8165-9ac4-000b05a4fe63 (1).csv
+2026-01-04T11:55:04.987905 -     Expected canonical: Resource_128e7361-6c27-8165-9ac4-000b05a4fe63.csv
+2026-01-04T11:55:04.988155 -     DRY RUN: Would move to .archive/Resource_128e7361-6c27-8165-9ac4-000b05a4fe63 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.988180 - 
+--- Processing: Resource_128e7361-6c27-8165-9ac4-000b05a4fe63 (2).csv ---
+2026-01-04T11:55:04.988208 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Resource_128e7361-6c27-8165-9ac4-000b05a4fe63/Resource_128e7361-6c27-8165-9ac4-000b05a4fe63 (2).csv
+2026-01-04T11:55:04.988232 -     Expected canonical: Resource_128e7361-6c27-8165-9ac4-000b05a4fe63.csv
+2026-01-04T11:55:04.988281 -     DRY RUN: Would move to .archive/Resource_128e7361-6c27-8165-9ac4-000b05a4fe63 (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.988307 - 
+--- Processing: Interview Transcript Processor 2_1ece7361-6c27-811b-96c7-000bc3e060d1 (2).csv ---
+2026-01-04T11:55:04.988336 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interview Transcript Processor 2_1ece7361-6c27-811b-96c7-000bc3e060d1/Interview Transcript Processor 2_1ece7361-6c27-811b-96c7-000bc3e060d1 (2).csv
+2026-01-04T11:55:04.988359 -     Expected canonical: Interview Transcript Processor 2_1ece7361-6c27-811b-96c7-000bc3e060d1.csv
+2026-01-04T11:55:04.988512 -     DRY RUN: Would move to .archive/Interview Transcript Processor 2_1ece7361-6c27-811b-96c7-000bc3e060d1 (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.988536 - 
+--- Processing: Interview Transcript Processor 2_1ece7361-6c27-811b-96c7-000bc3e060d1 (1).csv ---
+2026-01-04T11:55:04.988562 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interview Transcript Processor 2_1ece7361-6c27-811b-96c7-000bc3e060d1/Interview Transcript Processor 2_1ece7361-6c27-811b-96c7-000bc3e060d1 (1).csv
+2026-01-04T11:55:04.988585 -     Expected canonical: Interview Transcript Processor 2_1ece7361-6c27-811b-96c7-000bc3e060d1.csv
+2026-01-04T11:55:04.988708 -     DRY RUN: Would move to .archive/Interview Transcript Processor 2_1ece7361-6c27-811b-96c7-000bc3e060d1 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.988732 - 
+--- Processing: Documents + Meeting Notes (THS)_56ab7db1-ba80-4fea-959b-896c7aca02c0 (2).csv ---
+2026-01-04T11:55:04.988759 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Documents + Meeting Notes (THS)_56ab7db1-ba80-4fea-959b-896c7aca02c0/Documents + Meeting Notes (THS)_56ab7db1-ba80-4fea-959b-896c7aca02c0 (2).csv
+2026-01-04T11:55:04.988781 -     Expected canonical: Documents + Meeting Notes (THS)_56ab7db1-ba80-4fea-959b-896c7aca02c0.csv
+2026-01-04T11:55:04.989059 -     DRY RUN: Would move to .archive/Documents + Meeting Notes (THS)_56ab7db1-ba80-4fea-959b-896c7aca02c0 (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.989084 - 
+--- Processing: Documents + Meeting Notes (THS)_56ab7db1-ba80-4fea-959b-896c7aca02c0 (1).csv ---
+2026-01-04T11:55:04.989111 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Documents + Meeting Notes (THS)_56ab7db1-ba80-4fea-959b-896c7aca02c0/Documents + Meeting Notes (THS)_56ab7db1-ba80-4fea-959b-896c7aca02c0 (1).csv
+2026-01-04T11:55:04.989159 -     Expected canonical: Documents + Meeting Notes (THS)_56ab7db1-ba80-4fea-959b-896c7aca02c0.csv
+2026-01-04T11:55:04.989211 -     DRY RUN: Would move to .archive/Documents + Meeting Notes (THS)_56ab7db1-ba80-4fea-959b-896c7aca02c0 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.989233 - 
+--- Processing: Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd (4).csv ---
+2026-01-04T11:55:04.989258 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd/Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd (4).csv
+2026-01-04T11:55:04.989279 -     Expected canonical: Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd.csv
+2026-01-04T11:55:04.989433 -     DRY RUN: Would move to .archive/Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd (4)__archived_20260104T115504.csv
+2026-01-04T11:55:04.989457 - 
+--- Processing: Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd 2.csv ---
+2026-01-04T11:55:04.989482 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd/Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd 2.csv
+2026-01-04T11:55:04.989503 -     Expected canonical: Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd.csv
+2026-01-04T11:55:04.989744 -     DRY RUN: Would move to .archive/Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd 2__archived_20260104T115504.csv
+2026-01-04T11:55:04.989766 - 
+--- Processing: Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd (3).csv ---
+2026-01-04T11:55:04.989791 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd/Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd (3).csv
+2026-01-04T11:55:04.989812 -     Expected canonical: Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd.csv
+2026-01-04T11:55:04.989937 -     DRY RUN: Would move to .archive/Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd (3)__archived_20260104T115504.csv
+2026-01-04T11:55:04.989959 - 
+--- Processing: Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd (2).csv ---
+2026-01-04T11:55:04.989983 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd/Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd (2).csv
+2026-01-04T11:55:04.990003 -     Expected canonical: Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd.csv
+2026-01-04T11:55:04.990144 -     DRY RUN: Would move to .archive/Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.990166 - 
+--- Processing: Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd (1).csv ---
+2026-01-04T11:55:04.990194 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd/Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd (1).csv
+2026-01-04T11:55:04.990215 -     Expected canonical: Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd.csv
+2026-01-04T11:55:04.990353 -     DRY RUN: Would move to .archive/Video Music [DB]_a5b9c94a-c3f5-4f1d-a519-a174075c76bd (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.990374 - 
+--- Processing: volumes_26ce7361-6c27-8131-b3c9-000b33f7374e (1).csv ---
+2026-01-04T11:55:04.990399 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/volumes_26ce7361-6c27-8131-b3c9-000b33f7374e/volumes_26ce7361-6c27-8131-b3c9-000b33f7374e (1).csv
+2026-01-04T11:55:04.990438 -     Expected canonical: volumes_26ce7361-6c27-8131-b3c9-000b33f7374e.csv
+2026-01-04T11:55:04.990755 -     DRY RUN: Would move to .archive/volumes_26ce7361-6c27-8131-b3c9-000b33f7374e (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.990777 - 
+--- Processing: Areas Template_196e7361-6c27-818d-80c0-000bcad9e044 (1).csv ---
+2026-01-04T11:55:04.990802 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Areas Template_196e7361-6c27-818d-80c0-000bcad9e044/Areas Template_196e7361-6c27-818d-80c0-000bcad9e044 (1).csv
+2026-01-04T11:55:04.990823 -     Expected canonical: Areas Template_196e7361-6c27-818d-80c0-000bcad9e044.csv
+2026-01-04T11:55:04.991192 -     DRY RUN: Would move to .archive/Areas Template_196e7361-6c27-818d-80c0-000bcad9e044 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.991215 - 
+--- Processing: Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8 (1).csv ---
+2026-01-04T11:55:04.991243 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8/Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8 (1).csv
+2026-01-04T11:55:04.991267 -     Expected canonical: Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8.csv
+2026-01-04T11:55:04.991392 -     DRY RUN: Would move to .archive/Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.991413 - 
+--- Processing: Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8 2.csv ---
+2026-01-04T11:55:04.991438 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8/Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8 2.csv
+2026-01-04T11:55:04.991458 -     Expected canonical: Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8.csv
+2026-01-04T11:55:04.991611 -     DRY RUN: Would move to .archive/Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8 2__archived_20260104T115504.csv
+2026-01-04T11:55:04.991634 - 
+--- Processing: Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8 (3).csv ---
+2026-01-04T11:55:04.991659 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8/Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8 (3).csv
+2026-01-04T11:55:04.991680 -     Expected canonical: Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8.csv
+2026-01-04T11:55:04.991820 -     DRY RUN: Would move to .archive/Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8 (3)__archived_20260104T115504.csv
+2026-01-04T11:55:04.991842 - 
+--- Processing: Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8 (2).csv ---
+2026-01-04T11:55:04.991866 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8/Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8 (2).csv
+2026-01-04T11:55:04.991887 -     Expected canonical: Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8.csv
+2026-01-04T11:55:04.992001 -     DRY RUN: Would move to .archive/Marketing Topics [THS]_c4bb991e-11a9-4c6b-b7f3-329f5df594d8 (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.992024 - 
+--- Processing: Marketing Channels Database Template_192e7361-6c27-80f4-a290-000bd1238cc6 (1).csv ---
+2026-01-04T11:55:04.992048 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Marketing Channels Database Template_192e7361-6c27-80f4-a290-000bd1238cc6/Marketing Channels Database Template_192e7361-6c27-80f4-a290-000bd1238cc6 (1).csv
+2026-01-04T11:55:04.992088 -     Expected canonical: Marketing Channels Database Template_192e7361-6c27-80f4-a290-000bd1238cc6.csv
+2026-01-04T11:55:04.992315 -     DRY RUN: Would move to .archive/Marketing Channels Database Template_192e7361-6c27-80f4-a290-000bd1238cc6 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.992337 - 
+--- Processing: Keyboard Maestro Macros_285e7361-6c27-801d-ad33-000b7da77293 (1).csv ---
+2026-01-04T11:55:04.992362 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Keyboard Maestro Macros_285e7361-6c27-801d-ad33-000b7da77293/Keyboard Maestro Macros_285e7361-6c27-801d-ad33-000b7da77293 (1).csv
+2026-01-04T11:55:04.992383 -     Expected canonical: Keyboard Maestro Macros_285e7361-6c27-801d-ad33-000b7da77293.csv
+2026-01-04T11:55:04.992415 -     SKIP: File no longer exists
+2026-01-04T11:55:04.992439 - 
+--- Processing: Platforms_26ce7361-6c27-8161-b482-000b7a3a4158 (1).csv ---
+2026-01-04T11:55:04.992463 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Platforms_26ce7361-6c27-8161-b482-000b7a3a4158/Platforms_26ce7361-6c27-8161-b482-000b7a3a4158 (1).csv
+2026-01-04T11:55:04.992484 -     Expected canonical: Platforms_26ce7361-6c27-8161-b482-000b7a3a4158.csv
+2026-01-04T11:55:04.992745 -     DRY RUN: Would move to .archive/Platforms_26ce7361-6c27-8161-b482-000b7a3a4158 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.992767 - 
+--- Processing: OLD Automation Workflows_d6973ea1-881a-4f2b-bfe4-344958d3a7a6 (1).csv ---
+2026-01-04T11:55:04.992791 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/OLD Automation Workflows_d6973ea1-881a-4f2b-bfe4-344958d3a7a6/OLD Automation Workflows_d6973ea1-881a-4f2b-bfe4-344958d3a7a6 (1).csv
+2026-01-04T11:55:04.992812 -     Expected canonical: OLD Automation Workflows_d6973ea1-881a-4f2b-bfe4-344958d3a7a6.csv
+2026-01-04T11:55:04.993196 -     DRY RUN: Would move to .archive/OLD Automation Workflows_d6973ea1-881a-4f2b-bfe4-344958d3a7a6 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.993218 - 
+--- Processing: Content_128e7361-6c27-81a3-bd2c-000b812027f8 (1).csv ---
+2026-01-04T11:55:04.993247 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Content_128e7361-6c27-81a3-bd2c-000b812027f8/Content_128e7361-6c27-81a3-bd2c-000b812027f8 (1).csv
+2026-01-04T11:55:04.993268 -     Expected canonical: Content_128e7361-6c27-81a3-bd2c-000b812027f8.csv
+2026-01-04T11:55:04.993608 -     DRY RUN: Would move to .archive/Content_128e7361-6c27-81a3-bd2c-000b812027f8 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.993631 - 
+--- Processing: Content_128e7361-6c27-81a3-bd2c-000b812027f8 (2).csv ---
+2026-01-04T11:55:04.993656 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Content_128e7361-6c27-81a3-bd2c-000b812027f8/Content_128e7361-6c27-81a3-bd2c-000b812027f8 (2).csv
+2026-01-04T11:55:04.993678 -     Expected canonical: Content_128e7361-6c27-81a3-bd2c-000b812027f8.csv
+2026-01-04T11:55:04.993723 -     DRY RUN: Would move to .archive/Content_128e7361-6c27-81a3-bd2c-000b812027f8 (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.993746 - 
+--- Processing: Merge History_6b63c756-f5b1-4c06-a23e-c2ef3706bad2 (1).csv ---
+2026-01-04T11:55:04.993771 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Merge History_6b63c756-f5b1-4c06-a23e-c2ef3706bad2/Merge History_6b63c756-f5b1-4c06-a23e-c2ef3706bad2 (1).csv
+2026-01-04T11:55:04.993812 -     Expected canonical: Merge History_6b63c756-f5b1-4c06-a23e-c2ef3706bad2.csv
+2026-01-04T11:55:04.993974 -     DRY RUN: Would move to .archive/Merge History_6b63c756-f5b1-4c06-a23e-c2ef3706bad2 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.993997 - 
+--- Processing: Calendar_28fe7361-6c27-81a0-b2b0-000bc4ba57fc (1).csv ---
+2026-01-04T11:55:04.994022 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Calendar_28fe7361-6c27-81a0-b2b0-000bc4ba57fc/Calendar_28fe7361-6c27-81a0-b2b0-000bc4ba57fc (1).csv
+2026-01-04T11:55:04.994042 -     Expected canonical: Calendar_28fe7361-6c27-81a0-b2b0-000bc4ba57fc.csv
+2026-01-04T11:55:04.994196 -     DRY RUN: Would move to .archive/Calendar_28fe7361-6c27-81a0-b2b0-000bc4ba57fc (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.994218 - 
+--- Processing: Interviews [Team Housing Solutions]_f7ec6257-c7fc-42d0-8093-e899cb91542c (2).csv ---
+2026-01-04T11:55:04.994242 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interviews [Team Housing Solutions]_f7ec6257-c7fc-42d0-8093-e899cb91542c/Interviews [Team Housing Solutions]_f7ec6257-c7fc-42d0-8093-e899cb91542c (2).csv
+2026-01-04T11:55:04.994263 -     Expected canonical: Interviews [Team Housing Solutions]_f7ec6257-c7fc-42d0-8093-e899cb91542c.csv
+2026-01-04T11:55:04.994463 -     DRY RUN: Would move to .archive/Interviews [Team Housing Solutions]_f7ec6257-c7fc-42d0-8093-e899cb91542c (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.994485 - 
+--- Processing: Interviews [Team Housing Solutions]_f7ec6257-c7fc-42d0-8093-e899cb91542c (3).csv ---
+2026-01-04T11:55:04.994510 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interviews [Team Housing Solutions]_f7ec6257-c7fc-42d0-8093-e899cb91542c/Interviews [Team Housing Solutions]_f7ec6257-c7fc-42d0-8093-e899cb91542c (3).csv
+2026-01-04T11:55:04.994535 -     Expected canonical: Interviews [Team Housing Solutions]_f7ec6257-c7fc-42d0-8093-e899cb91542c.csv
+2026-01-04T11:55:04.994660 -     DRY RUN: Would move to .archive/Interviews [Team Housing Solutions]_f7ec6257-c7fc-42d0-8093-e899cb91542c (3)__archived_20260104T115504.csv
+2026-01-04T11:55:04.994682 - 
+--- Processing: Interviews [Team Housing Solutions]_f7ec6257-c7fc-42d0-8093-e899cb91542c (1).csv ---
+2026-01-04T11:55:04.994706 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Interviews [Team Housing Solutions]_f7ec6257-c7fc-42d0-8093-e899cb91542c/Interviews [Team Housing Solutions]_f7ec6257-c7fc-42d0-8093-e899cb91542c (1).csv
+2026-01-04T11:55:04.994727 -     Expected canonical: Interviews [Team Housing Solutions]_f7ec6257-c7fc-42d0-8093-e899cb91542c.csv
+2026-01-04T11:55:04.994872 -     DRY RUN: Would move to .archive/Interviews [Team Housing Solutions]_f7ec6257-c7fc-42d0-8093-e899cb91542c (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.994894 - 
+--- Processing: Archive_271e7361-6c27-806b-a56d-000be1580a60 (1).csv ---
+2026-01-04T11:55:04.994918 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Archive_271e7361-6c27-806b-a56d-000be1580a60/Archive_271e7361-6c27-806b-a56d-000be1580a60 (1).csv
+2026-01-04T11:55:04.994939 -     Expected canonical: Archive_271e7361-6c27-806b-a56d-000be1580a60.csv
+2026-01-04T11:55:04.995370 -     DRY RUN: Would move to .archive/Archive_271e7361-6c27-806b-a56d-000be1580a60 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.995391 - 
+--- Processing: Locations Template_196e7361-6c27-81f3-b4c3-000be2612c1b (1).csv ---
+2026-01-04T11:55:04.995436 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Locations Template_196e7361-6c27-81f3-b4c3-000be2612c1b/Locations Template_196e7361-6c27-81f3-b4c3-000be2612c1b (1).csv
+2026-01-04T11:55:04.995457 -     Expected canonical: Locations Template_196e7361-6c27-81f3-b4c3-000be2612c1b.csv
+2026-01-04T11:55:04.995844 -     DRY RUN: Would move to .archive/Locations Template_196e7361-6c27-81f3-b4c3-000be2612c1b (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.995870 - 
+--- Processing: Recent Decisions_196e7361-6c27-8119-a175-000b86118999 (2).csv ---
+2026-01-04T11:55:04.995894 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Recent Decisions_196e7361-6c27-8119-a175-000b86118999/Recent Decisions_196e7361-6c27-8119-a175-000b86118999 (2).csv
+2026-01-04T11:55:04.995914 -     Expected canonical: Recent Decisions_196e7361-6c27-8119-a175-000b86118999.csv
+2026-01-04T11:55:04.996062 -     DRY RUN: Would move to .archive/Recent Decisions_196e7361-6c27-8119-a175-000b86118999 (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.996084 - 
+--- Processing: Recent Decisions_196e7361-6c27-8119-a175-000b86118999 (3).csv ---
+2026-01-04T11:55:04.996109 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Recent Decisions_196e7361-6c27-8119-a175-000b86118999/Recent Decisions_196e7361-6c27-8119-a175-000b86118999 (3).csv
+2026-01-04T11:55:04.996130 -     Expected canonical: Recent Decisions_196e7361-6c27-8119-a175-000b86118999.csv
+2026-01-04T11:55:04.996272 -     DRY RUN: Would move to .archive/Recent Decisions_196e7361-6c27-8119-a175-000b86118999 (3)__archived_20260104T115504.csv
+2026-01-04T11:55:04.996294 - 
+--- Processing: Recent Decisions_196e7361-6c27-8119-a175-000b86118999 (1).csv ---
+2026-01-04T11:55:04.996318 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Recent Decisions_196e7361-6c27-8119-a175-000b86118999/Recent Decisions_196e7361-6c27-8119-a175-000b86118999 (1).csv
+2026-01-04T11:55:04.996339 -     Expected canonical: Recent Decisions_196e7361-6c27-8119-a175-000b86118999.csv
+2026-01-04T11:55:04.996457 -     DRY RUN: Would move to .archive/Recent Decisions_196e7361-6c27-8119-a175-000b86118999 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.996479 - 
+--- Processing: Duplicate Merge Logs_c08be952-d534-4e3c-a23f-a9b276ddcca9 (1).csv ---
+2026-01-04T11:55:04.996503 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Duplicate Merge Logs_c08be952-d534-4e3c-a23f-a9b276ddcca9/Duplicate Merge Logs_c08be952-d534-4e3c-a23f-a9b276ddcca9 (1).csv
+2026-01-04T11:55:04.996524 -     Expected canonical: Duplicate Merge Logs_c08be952-d534-4e3c-a23f-a9b276ddcca9.csv
+2026-01-04T11:55:04.996751 -     DRY RUN: Would move to .archive/Duplicate Merge Logs_c08be952-d534-4e3c-a23f-a9b276ddcca9 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.996779 - 
+--- Processing: Untitled database_213e7361-6c27-8137-9b96-000b5adc637d (1).csv ---
+2026-01-04T11:55:04.996803 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Untitled database_213e7361-6c27-8137-9b96-000b5adc637d/Untitled database_213e7361-6c27-8137-9b96-000b5adc637d (1).csv
+2026-01-04T11:55:04.996824 -     Expected canonical: Untitled database_213e7361-6c27-8137-9b96-000b5adc637d.csv
+2026-01-04T11:55:04.997056 -     DRY RUN: Would move to .archive/Untitled database_213e7361-6c27-8137-9b96-000b5adc637d (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.997121 - 
+--- Processing: Untitled database_213e7361-6c27-8137-9b96-000b5adc637d (2).csv ---
+2026-01-04T11:55:04.997151 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Untitled database_213e7361-6c27-8137-9b96-000b5adc637d/Untitled database_213e7361-6c27-8137-9b96-000b5adc637d (2).csv
+2026-01-04T11:55:04.997176 -     Expected canonical: Untitled database_213e7361-6c27-8137-9b96-000b5adc637d.csv
+2026-01-04T11:55:04.997229 -     DRY RUN: Would move to .archive/Untitled database_213e7361-6c27-8137-9b96-000b5adc637d (2)__archived_20260104T115504.csv
+2026-01-04T11:55:04.997259 - 
+--- Processing: scripting-documentation_26ce7361-6c27-818a-b57a-000b996ccc03 (1).csv ---
+2026-01-04T11:55:04.997288 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/scripting-documentation_26ce7361-6c27-818a-b57a-000b996ccc03/scripting-documentation_26ce7361-6c27-818a-b57a-000b996ccc03 (1).csv
+2026-01-04T11:55:04.997312 -     Expected canonical: scripting-documentation_26ce7361-6c27-818a-b57a-000b996ccc03.csv
+2026-01-04T11:55:04.997732 -     DRY RUN: Would move to .archive/scripting-documentation_26ce7361-6c27-818a-b57a-000b996ccc03 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.997755 - 
+--- Processing: schema.csv ---
+2026-01-04T11:55:04.997779 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/scripting-documentation_26ce7361-6c27-818a-b57a-000b996ccc03/schema.csv
+2026-01-04T11:55:04.997800 -     Expected canonical: scripting-documentation_26ce7361-6c27-818a-b57a-000b996ccc03.csv
+2026-01-04T11:55:04.997844 -     DRY RUN: Would move to .archive/schema__archived_20260104T115504.csv
+2026-01-04T11:55:04.997866 - 
+--- Processing: Dates Template_196e7361-6c27-812c-bb12-000bd8e76d0c (1).csv ---
+2026-01-04T11:55:04.997893 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Dates Template_196e7361-6c27-812c-bb12-000bd8e76d0c/Dates Template_196e7361-6c27-812c-bb12-000bd8e76d0c (1).csv
+2026-01-04T11:55:04.997914 -     Expected canonical: Dates Template_196e7361-6c27-812c-bb12-000bd8e76d0c.csv
+2026-01-04T11:55:04.998065 -     DRY RUN: Would move to .archive/Dates Template_196e7361-6c27-812c-bb12-000bd8e76d0c (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.998087 - 
+--- Processing: Proposals Sent_2a7e7361-6c27-8019-8dae-000b9d08aa50 (1).csv ---
+2026-01-04T11:55:04.998112 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Proposals Sent_2a7e7361-6c27-8019-8dae-000b9d08aa50/Proposals Sent_2a7e7361-6c27-8019-8dae-000b9d08aa50 (1).csv
+2026-01-04T11:55:04.998132 -     Expected canonical: Proposals Sent_2a7e7361-6c27-8019-8dae-000b9d08aa50.csv
+2026-01-04T11:55:04.998537 -     DRY RUN: Would move to .archive/Proposals Sent_2a7e7361-6c27-8019-8dae-000b9d08aa50 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.998559 - 
+--- Processing: system-databases_26ce7361-6c27-8198-a515-000b9ca2fbe3 (1).csv ---
+2026-01-04T11:55:04.998583 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/system-databases_26ce7361-6c27-8198-a515-000b9ca2fbe3/system-databases_26ce7361-6c27-8198-a515-000b9ca2fbe3 (1).csv
+2026-01-04T11:55:04.998604 -     Expected canonical: system-databases_26ce7361-6c27-8198-a515-000b9ca2fbe3.csv
+2026-01-04T11:55:04.998734 -     DRY RUN: Would move to .archive/system-databases_26ce7361-6c27-8198-a515-000b9ca2fbe3 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.998756 - 
+--- Processing: Platform_128e7361-6c27-8144-9bf1-000b6a841b1c (1).csv ---
+2026-01-04T11:55:04.998799 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Platform_128e7361-6c27-8144-9bf1-000b6a841b1c/Platform_128e7361-6c27-8144-9bf1-000b6a841b1c (1).csv
+2026-01-04T11:55:04.998820 -     Expected canonical: Platform_128e7361-6c27-8144-9bf1-000b6a841b1c.csv
+2026-01-04T11:55:04.998880 -     DRY RUN: Would move to .archive/Platform_128e7361-6c27-8144-9bf1-000b6a841b1c (1)__archived_20260104T115504.csv
+2026-01-04T11:55:04.998902 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (115).csv ---
+2026-01-04T11:55:04.998929 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (115).csv
+2026-01-04T11:55:04.998950 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:04.999500 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (115)__archived_20260104T115504.csv
+2026-01-04T11:55:04.999522 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (57).csv ---
+2026-01-04T11:55:04.999546 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (57).csv
+2026-01-04T11:55:04.999567 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:04.999815 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (57)__archived_20260104T115504.csv
+2026-01-04T11:55:04.999836 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (142).csv ---
+2026-01-04T11:55:04.999860 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (142).csv
+2026-01-04T11:55:04.999881 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.000377 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (142)__archived_20260104T115504.csv
+2026-01-04T11:55:05.000400 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (16).csv ---
+2026-01-04T11:55:05.000426 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (16).csv
+2026-01-04T11:55:05.000448 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.000855 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (16)__archived_20260104T115504.csv
+2026-01-04T11:55:05.000944 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (103).csv ---
+2026-01-04T11:55:05.001054 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (103).csv
+2026-01-04T11:55:05.001097 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.001507 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (103)__archived_20260104T115504.csv
+2026-01-04T11:55:05.001541 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (41).csv ---
+2026-01-04T11:55:05.001576 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (41).csv
+2026-01-04T11:55:05.001601 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.001733 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (41)__archived_20260104T115504.csv
+2026-01-04T11:55:05.001758 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (82).csv ---
+2026-01-04T11:55:05.001791 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (82).csv
+2026-01-04T11:55:05.001816 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.001943 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (82)__archived_20260104T115504.csv
+2026-01-04T11:55:05.001968 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (5).csv ---
+2026-01-04T11:55:05.002000 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (5).csv
+2026-01-04T11:55:05.002023 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.002384 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (5)__archived_20260104T115504.csv
+2026-01-04T11:55:05.002412 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (139).csv ---
+2026-01-04T11:55:05.002440 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (139).csv
+2026-01-04T11:55:05.002464 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.002619 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (139)__archived_20260104T115504.csv
+2026-01-04T11:55:05.002647 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (94).csv ---
+2026-01-04T11:55:05.002676 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (94).csv
+2026-01-04T11:55:05.002703 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.002924 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (94)__archived_20260104T115504.csv
+2026-01-04T11:55:05.002947 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (119).csv ---
+2026-01-04T11:55:05.002973 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (119).csv
+2026-01-04T11:55:05.003026 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.003151 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (119)__archived_20260104T115504.csv
+2026-01-04T11:55:05.003177 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (36).csv ---
+2026-01-04T11:55:05.003208 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (36).csv
+2026-01-04T11:55:05.003235 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.003621 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (36)__archived_20260104T115504.csv
+2026-01-04T11:55:05.003647 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (61).csv ---
+2026-01-04T11:55:05.003671 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (61).csv
+2026-01-04T11:55:05.003695 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.003839 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (61)__archived_20260104T115504.csv
+2026-01-04T11:55:05.003861 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (123).csv ---
+2026-01-04T11:55:05.003887 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (123).csv
+2026-01-04T11:55:05.003907 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.004121 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (123)__archived_20260104T115504.csv
+2026-01-04T11:55:05.004147 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (98).csv ---
+2026-01-04T11:55:05.004172 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (98).csv
+2026-01-04T11:55:05.004193 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.004350 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (98)__archived_20260104T115504.csv
+2026-01-04T11:55:05.004372 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (77).csv ---
+2026-01-04T11:55:05.004396 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (77).csv
+2026-01-04T11:55:05.004417 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.004792 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (77)__archived_20260104T115504.csv
+2026-01-04T11:55:05.004814 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (9).csv ---
+2026-01-04T11:55:05.004857 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (9).csv
+2026-01-04T11:55:05.004878 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.005260 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (9)__archived_20260104T115504.csv
+2026-01-04T11:55:05.005283 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (135).csv ---
+2026-01-04T11:55:05.005311 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (135).csv
+2026-01-04T11:55:05.005336 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.005476 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (135)__archived_20260104T115504.csv
+2026-01-04T11:55:05.005498 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (20).csv ---
+2026-01-04T11:55:05.005525 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (20).csv
+2026-01-04T11:55:05.005549 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.005667 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (20)__archived_20260104T115504.csv
+2026-01-04T11:55:05.005693 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (21).csv ---
+2026-01-04T11:55:05.005717 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (21).csv
+2026-01-04T11:55:05.005738 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.005853 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (21)__archived_20260104T115504.csv
+2026-01-04T11:55:05.005876 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (8).csv ---
+2026-01-04T11:55:05.005900 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (8).csv
+2026-01-04T11:55:05.005921 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.006040 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (8)__archived_20260104T115504.csv
+2026-01-04T11:55:05.006062 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (134).csv ---
+2026-01-04T11:55:05.006089 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (134).csv
+2026-01-04T11:55:05.006110 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.006249 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (134)__archived_20260104T115504.csv
+2026-01-04T11:55:05.006272 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (99).csv ---
+2026-01-04T11:55:05.006296 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (99).csv
+2026-01-04T11:55:05.006316 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.006662 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (99)__archived_20260104T115504.csv
+2026-01-04T11:55:05.006689 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (76).csv ---
+2026-01-04T11:55:05.006713 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (76).csv
+2026-01-04T11:55:05.006734 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.006782 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (76)__archived_20260104T115504.csv
+2026-01-04T11:55:05.006807 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (122).csv ---
+2026-01-04T11:55:05.006833 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (122).csv
+2026-01-04T11:55:05.006858 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.007007 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (122)__archived_20260104T115504.csv
+2026-01-04T11:55:05.007029 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (60).csv ---
+2026-01-04T11:55:05.007053 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (60).csv
+2026-01-04T11:55:05.007074 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.007192 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (60)__archived_20260104T115504.csv
+2026-01-04T11:55:05.007213 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (37).csv ---
+2026-01-04T11:55:05.007240 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (37).csv
+2026-01-04T11:55:05.007261 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.007568 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (37)__archived_20260104T115504.csv
+2026-01-04T11:55:05.007590 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (118).csv ---
+2026-01-04T11:55:05.007615 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (118).csv
+2026-01-04T11:55:05.007659 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.007889 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (118)__archived_20260104T115504.csv
+2026-01-04T11:55:05.007915 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (95).csv ---
+2026-01-04T11:55:05.007939 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (95).csv
+2026-01-04T11:55:05.007960 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.008005 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (95)__archived_20260104T115504.csv
+2026-01-04T11:55:05.008027 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (4).csv ---
+2026-01-04T11:55:05.008052 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (4).csv
+2026-01-04T11:55:05.008073 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.008120 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (4)__archived_20260104T115504.csv
+2026-01-04T11:55:05.008142 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (138).csv ---
+2026-01-04T11:55:05.008166 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (138).csv
+2026-01-04T11:55:05.008187 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.008304 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (138)__archived_20260104T115504.csv
+2026-01-04T11:55:05.008326 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (83).csv ---
+2026-01-04T11:55:05.008351 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (83).csv
+2026-01-04T11:55:05.008372 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.008520 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (83)__archived_20260104T115504.csv
+2026-01-04T11:55:05.008542 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (40).csv ---
+2026-01-04T11:55:05.008566 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (40).csv
+2026-01-04T11:55:05.008587 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.008985 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (40)__archived_20260104T115504.csv
+2026-01-04T11:55:05.009138 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (102).csv ---
+2026-01-04T11:55:05.009165 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (102).csv
+2026-01-04T11:55:05.009187 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.009423 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (102)__archived_20260104T115504.csv
+2026-01-04T11:55:05.009444 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (17).csv ---
+2026-01-04T11:55:05.009467 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (17).csv
+2026-01-04T11:55:05.009487 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.009643 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (17)__archived_20260104T115504.csv
+2026-01-04T11:55:05.009664 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (143).csv ---
+2026-01-04T11:55:05.009691 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (143).csv
+2026-01-04T11:55:05.009711 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.009855 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (143)__archived_20260104T115504.csv
+2026-01-04T11:55:05.009875 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (56).csv ---
+2026-01-04T11:55:05.009902 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (56).csv
+2026-01-04T11:55:05.009921 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.011243 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (56)__archived_20260104T115504.csv
+2026-01-04T11:55:05.011268 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (114).csv ---
+2026-01-04T11:55:05.011293 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (114).csv
+2026-01-04T11:55:05.011314 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.011476 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (114)__archived_20260104T115504.csv
+2026-01-04T11:55:05.011498 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (148).csv ---
+2026-01-04T11:55:05.011522 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (148).csv
+2026-01-04T11:55:05.011562 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.011713 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (148)__archived_20260104T115504.csv
+2026-01-04T11:55:05.011738 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (109).csv ---
+2026-01-04T11:55:05.011766 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (109).csv
+2026-01-04T11:55:05.011786 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.011907 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (109)__archived_20260104T115504.csv
+2026-01-04T11:55:05.011928 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (30).csv ---
+2026-01-04T11:55:05.011951 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (30).csv
+2026-01-04T11:55:05.011971 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.012098 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (30)__archived_20260104T115504.csv
+2026-01-04T11:55:05.012119 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (88).csv ---
+2026-01-04T11:55:05.012143 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (88).csv
+2026-01-04T11:55:05.012163 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.012488 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (88)__archived_20260104T115504.csv
+2026-01-04T11:55:05.012509 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (67).csv ---
+2026-01-04T11:55:05.012533 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (67).csv
+2026-01-04T11:55:05.012553 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.012766 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (67)__archived_20260104T115504.csv
+2026-01-04T11:55:05.012787 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (125).csv ---
+2026-01-04T11:55:05.012811 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (125).csv
+2026-01-04T11:55:05.012830 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.012976 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (125)__archived_20260104T115504.csv
+2026-01-04T11:55:05.013001 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (71).csv ---
+2026-01-04T11:55:05.013031 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (71).csv
+2026-01-04T11:55:05.013069 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.013222 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (71)__archived_20260104T115504.csv
+2026-01-04T11:55:05.013243 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (133).csv ---
+2026-01-04T11:55:05.013266 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (133).csv
+2026-01-04T11:55:05.013286 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.013433 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (133)__archived_20260104T115504.csv
+2026-01-04T11:55:05.013454 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (26).csv ---
+2026-01-04T11:55:05.013477 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (26).csv
+2026-01-04T11:55:05.013497 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.013645 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (26)__archived_20260104T115504.csv
+2026-01-04T11:55:05.013667 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (113).csv ---
+2026-01-04T11:55:05.013691 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (113).csv
+2026-01-04T11:55:05.013712 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.013831 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (113)__archived_20260104T115504.csv
+2026-01-04T11:55:05.013855 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (51).csv ---
+2026-01-04T11:55:05.013882 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (51).csv
+2026-01-04T11:55:05.013902 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.014127 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (51)__archived_20260104T115504.csv
+2026-01-04T11:55:05.014148 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (144).csv ---
+2026-01-04T11:55:05.014171 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (144).csv
+2026-01-04T11:55:05.014191 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.014298 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (144)__archived_20260104T115504.csv
+2026-01-04T11:55:05.014337 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (10).csv ---
+2026-01-04T11:55:05.014362 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (10).csv
+2026-01-04T11:55:05.014382 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.014576 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (10)__archived_20260104T115504.csv
+2026-01-04T11:55:05.014597 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (105).csv ---
+2026-01-04T11:55:05.014621 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (105).csv
+2026-01-04T11:55:05.014641 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.014890 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (105)__archived_20260104T115504.csv
+2026-01-04T11:55:05.014911 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (47).csv ---
+2026-01-04T11:55:05.014934 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (47).csv
+2026-01-04T11:55:05.014953 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.014999 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (47)__archived_20260104T115504.csv
+2026-01-04T11:55:05.015019 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (129).csv ---
+2026-01-04T11:55:05.015046 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (129).csv
+2026-01-04T11:55:05.015065 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.015115 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (129)__archived_20260104T115504.csv
+2026-01-04T11:55:05.015137 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (84).csv ---
+2026-01-04T11:55:05.015160 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (84).csv
+2026-01-04T11:55:05.015180 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.015433 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (84)__archived_20260104T115504.csv
+2026-01-04T11:55:05.015457 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (3).csv ---
+2026-01-04T11:55:05.015484 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (3).csv
+2026-01-04T11:55:05.015525 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.015638 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (3)__archived_20260104T115504.csv
+2026-01-04T11:55:05.015665 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (92).csv ---
+2026-01-04T11:55:05.015688 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (92).csv
+2026-01-04T11:55:05.015709 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.015829 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (92)__archived_20260104T115504.csv
+2026-01-04T11:55:05.015853 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (93).csv ---
+2026-01-04T11:55:05.015877 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (93).csv
+2026-01-04T11:55:05.015903 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.015955 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (93)__archived_20260104T115504.csv
+2026-01-04T11:55:05.015976 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (2).csv ---
+2026-01-04T11:55:05.016000 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (2).csv
+2026-01-04T11:55:05.016021 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.016138 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (2)__archived_20260104T115504.csv
+2026-01-04T11:55:05.016161 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (85).csv ---
+2026-01-04T11:55:05.016185 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (85).csv
+2026-01-04T11:55:05.016206 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.016387 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (85)__archived_20260104T115504.csv
+2026-01-04T11:55:05.016409 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (128).csv ---
+2026-01-04T11:55:05.016436 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (128).csv
+2026-01-04T11:55:05.016456 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.016503 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (128)__archived_20260104T115504.csv
+2026-01-04T11:55:05.016527 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (46).csv ---
+2026-01-04T11:55:05.016572 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (46).csv
+2026-01-04T11:55:05.016593 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.016744 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (46)__archived_20260104T115504.csv
+2026-01-04T11:55:05.016770 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (104).csv ---
+2026-01-04T11:55:05.016798 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (104).csv
+2026-01-04T11:55:05.016819 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.017095 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (104)__archived_20260104T115504.csv
+2026-01-04T11:55:05.017132 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (11).csv ---
+2026-01-04T11:55:05.017161 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (11).csv
+2026-01-04T11:55:05.017185 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.017605 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (11)__archived_20260104T115504.csv
+2026-01-04T11:55:05.017633 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (145).csv ---
+2026-01-04T11:55:05.017660 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (145).csv
+2026-01-04T11:55:05.017682 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.017839 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (145)__archived_20260104T115504.csv
+2026-01-04T11:55:05.017863 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (50).csv ---
+2026-01-04T11:55:05.017889 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (50).csv
+2026-01-04T11:55:05.017915 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.017965 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (50)__archived_20260104T115504.csv
+2026-01-04T11:55:05.017988 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (112).csv ---
+2026-01-04T11:55:05.018015 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (112).csv
+2026-01-04T11:55:05.018037 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.018210 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (112)__archived_20260104T115504.csv
+2026-01-04T11:55:05.018236 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (27).csv ---
+2026-01-04T11:55:05.018263 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (27).csv
+2026-01-04T11:55:05.018288 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.018477 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (27)__archived_20260104T115504.csv
+2026-01-04T11:55:05.018504 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (132).csv ---
+2026-01-04T11:55:05.018532 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (132).csv
+2026-01-04T11:55:05.018569 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.018733 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (132)__archived_20260104T115504.csv
+2026-01-04T11:55:05.018777 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (70).csv ---
+2026-01-04T11:55:05.018844 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (70).csv
+2026-01-04T11:55:05.018895 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.019059 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (70)__archived_20260104T115504.csv
+2026-01-04T11:55:05.019091 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (124).csv ---
+2026-01-04T11:55:05.019120 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (124).csv
+2026-01-04T11:55:05.019145 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.019462 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (124)__archived_20260104T115504.csv
+2026-01-04T11:55:05.019490 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (89).csv ---
+2026-01-04T11:55:05.019518 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (89).csv
+2026-01-04T11:55:05.019542 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.019852 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (89)__archived_20260104T115504.csv
+2026-01-04T11:55:05.019884 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (66).csv ---
+2026-01-04T11:55:05.019914 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (66).csv
+2026-01-04T11:55:05.019968 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.020126 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (66)__archived_20260104T115504.csv
+2026-01-04T11:55:05.020151 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (31).csv ---
+2026-01-04T11:55:05.020178 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (31).csv
+2026-01-04T11:55:05.020205 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.020349 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (31)__archived_20260104T115504.csv
+2026-01-04T11:55:05.020382 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (108).csv ---
+2026-01-04T11:55:05.020409 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (108).csv
+2026-01-04T11:55:05.020433 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.020559 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (108)__archived_20260104T115504.csv
+2026-01-04T11:55:05.020584 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (24).csv ---
+2026-01-04T11:55:05.020612 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (24).csv
+2026-01-04T11:55:05.020635 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.020763 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (24)__archived_20260104T115504.csv
+2026-01-04T11:55:05.020793 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (131).csv ---
+2026-01-04T11:55:05.020823 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (131).csv
+2026-01-04T11:55:05.020849 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.020965 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (131)__archived_20260104T115504.csv
+2026-01-04T11:55:05.020992 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (73).csv ---
+2026-01-04T11:55:05.021018 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (73).csv
+2026-01-04T11:55:05.021041 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.021093 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (73)__archived_20260104T115504.csv
+2026-01-04T11:55:05.021117 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (127).csv ---
+2026-01-04T11:55:05.021171 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (127).csv
+2026-01-04T11:55:05.021192 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.021341 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (127)__archived_20260104T115504.csv
+2026-01-04T11:55:05.021363 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (65).csv ---
+2026-01-04T11:55:05.021387 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (65).csv
+2026-01-04T11:55:05.021407 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.021554 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (65)__archived_20260104T115504.csv
+2026-01-04T11:55:05.021576 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (32).csv ---
+2026-01-04T11:55:05.021600 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (32).csv
+2026-01-04T11:55:05.021621 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.021773 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (32)__archived_20260104T115504.csv
+2026-01-04T11:55:05.021799 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (49).csv ---
+2026-01-04T11:55:05.021823 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (49).csv
+2026-01-04T11:55:05.021843 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.021890 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (49)__archived_20260104T115504.csv
+2026-01-04T11:55:05.021914 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (28).csv ---
+2026-01-04T11:55:05.021938 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (28).csv
+2026-01-04T11:55:05.021958 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.022103 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (28)__archived_20260104T115504.csv
+2026-01-04T11:55:05.022124 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (90).csv ---
+2026-01-04T11:55:05.022148 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (90).csv
+2026-01-04T11:55:05.022169 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.022330 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (90)__archived_20260104T115504.csv
+2026-01-04T11:55:05.022353 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (1).csv ---
+2026-01-04T11:55:05.022377 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (1).csv
+2026-01-04T11:55:05.022397 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.022519 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (1)__archived_20260104T115504.csv
+2026-01-04T11:55:05.022541 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (69).csv ---
+2026-01-04T11:55:05.022566 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (69).csv
+2026-01-04T11:55:05.022588 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.022708 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (69)__archived_20260104T115504.csv
+2026-01-04T11:55:05.022730 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (86).csv ---
+2026-01-04T11:55:05.022754 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (86).csv
+2026-01-04T11:55:05.022774 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.022963 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (86)__archived_20260104T115504.csv
+2026-01-04T11:55:05.022990 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (45).csv ---
+2026-01-04T11:55:05.023023 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (45).csv
+2026-01-04T11:55:05.023047 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.023166 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (45)__archived_20260104T115504.csv
+2026-01-04T11:55:05.023189 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (107).csv ---
+2026-01-04T11:55:05.023213 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (107).csv
+2026-01-04T11:55:05.023233 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.023280 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (107)__archived_20260104T115504.csv
+2026-01-04T11:55:05.023305 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (12).csv ---
+2026-01-04T11:55:05.023330 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (12).csv
+2026-01-04T11:55:05.023369 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.023508 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (12)__archived_20260104T115504.csv
+2026-01-04T11:55:05.023531 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (146).csv ---
+2026-01-04T11:55:05.023555 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (146).csv
+2026-01-04T11:55:05.023576 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.023694 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (146)__archived_20260104T115504.csv
+2026-01-04T11:55:05.023716 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (53).csv ---
+2026-01-04T11:55:05.023745 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (53).csv
+2026-01-04T11:55:05.023766 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.023916 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (53)__archived_20260104T115504.csv
+2026-01-04T11:55:05.023938 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (111).csv ---
+2026-01-04T11:55:05.023964 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (111).csv
+2026-01-04T11:55:05.023984 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.024131 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (111)__archived_20260104T115504.csv
+2026-01-04T11:55:05.024153 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (110).csv ---
+2026-01-04T11:55:05.024177 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (110).csv
+2026-01-04T11:55:05.024198 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.024411 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (110)__archived_20260104T115504.csv
+2026-01-04T11:55:05.024432 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (52).csv ---
+2026-01-04T11:55:05.024457 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (52).csv
+2026-01-04T11:55:05.024477 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.024618 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (52)__archived_20260104T115504.csv
+2026-01-04T11:55:05.024660 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (147).csv ---
+2026-01-04T11:55:05.024685 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (147).csv
+2026-01-04T11:55:05.024705 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.024776 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (147)__archived_20260104T115504.csv
+2026-01-04T11:55:05.024798 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (13).csv ---
+2026-01-04T11:55:05.024824 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (13).csv
+2026-01-04T11:55:05.024844 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.025035 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (13)__archived_20260104T115504.csv
+2026-01-04T11:55:05.025057 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (106).csv ---
+2026-01-04T11:55:05.025085 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (106).csv
+2026-01-04T11:55:05.025106 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.025155 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (106)__archived_20260104T115504.csv
+2026-01-04T11:55:05.025177 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (44).csv ---
+2026-01-04T11:55:05.025204 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (44).csv
+2026-01-04T11:55:05.025225 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.025673 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (44)__archived_20260104T115504.csv
+2026-01-04T11:55:05.025695 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (68).csv ---
+2026-01-04T11:55:05.025719 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (68).csv
+2026-01-04T11:55:05.025740 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.025885 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (68)__archived_20260104T115504.csv
+2026-01-04T11:55:05.025907 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (87).csv ---
+2026-01-04T11:55:05.025931 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (87).csv
+2026-01-04T11:55:05.025977 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.026028 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (87)__archived_20260104T115504.csv
+2026-01-04T11:55:05.026051 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (91).csv ---
+2026-01-04T11:55:05.026076 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (91).csv
+2026-01-04T11:55:05.026096 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.026146 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (91)__archived_20260104T115504.csv
+2026-01-04T11:55:05.026167 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (29).csv ---
+2026-01-04T11:55:05.026190 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (29).csv
+2026-01-04T11:55:05.026210 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.026359 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (29)__archived_20260104T115504.csv
+2026-01-04T11:55:05.026380 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (48).csv ---
+2026-01-04T11:55:05.026403 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (48).csv
+2026-01-04T11:55:05.026423 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.026568 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (48)__archived_20260104T115504.csv
+2026-01-04T11:55:05.026589 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (33).csv ---
+2026-01-04T11:55:05.026612 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (33).csv
+2026-01-04T11:55:05.026632 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.026758 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (33)__archived_20260104T115504.csv
+2026-01-04T11:55:05.026779 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (64).csv ---
+2026-01-04T11:55:05.026802 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (64).csv
+2026-01-04T11:55:05.026821 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.026938 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (64)__archived_20260104T115504.csv
+2026-01-04T11:55:05.026962 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (126).csv ---
+2026-01-04T11:55:05.026987 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (126).csv
+2026-01-04T11:55:05.027025 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.027182 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (126)__archived_20260104T115504.csv
+2026-01-04T11:55:05.027203 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (72).csv ---
+2026-01-04T11:55:05.027227 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (72).csv
+2026-01-04T11:55:05.027246 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.027392 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (72)__archived_20260104T115504.csv
+2026-01-04T11:55:05.027413 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (130).csv ---
+2026-01-04T11:55:05.027439 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (130).csv
+2026-01-04T11:55:05.027462 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.027635 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (130)__archived_20260104T115504.csv
+2026-01-04T11:55:05.027660 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (25).csv ---
+2026-01-04T11:55:05.027684 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (25).csv
+2026-01-04T11:55:05.027704 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.027753 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (25)__archived_20260104T115504.csv
+2026-01-04T11:55:05.027774 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (79).csv ---
+2026-01-04T11:55:05.027801 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (79).csv
+2026-01-04T11:55:05.027822 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.028421 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (79)__archived_20260104T115504.csv
+2026-01-04T11:55:05.028444 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (96).csv ---
+2026-01-04T11:55:05.028471 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (96).csv
+2026-01-04T11:55:05.028492 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.028645 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (96)__archived_20260104T115504.csv
+2026-01-04T11:55:05.028685 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (7).csv ---
+2026-01-04T11:55:05.028709 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (7).csv
+2026-01-04T11:55:05.028729 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.028793 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (7)__archived_20260104T115504.csv
+2026-01-04T11:55:05.028815 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (80).csv ---
+2026-01-04T11:55:05.028842 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (80).csv
+2026-01-04T11:55:05.028870 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.028986 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (80)__archived_20260104T115504.csv
+2026-01-04T11:55:05.029008 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (38).csv ---
+2026-01-04T11:55:05.029036 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (38).csv
+2026-01-04T11:55:05.029056 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.029131 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (38)__archived_20260104T115504.csv
+2026-01-04T11:55:05.029152 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (43).csv ---
+2026-01-04T11:55:05.029178 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (43).csv
+2026-01-04T11:55:05.029202 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.029256 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (43)__archived_20260104T115504.csv
+2026-01-04T11:55:05.029277 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (101).csv ---
+2026-01-04T11:55:05.029302 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (101).csv
+2026-01-04T11:55:05.029322 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.029370 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (101)__archived_20260104T115504.csv
+2026-01-04T11:55:05.029391 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (14).csv ---
+2026-01-04T11:55:05.029414 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (14).csv
+2026-01-04T11:55:05.029452 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.029597 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (14)__archived_20260104T115504.csv
+2026-01-04T11:55:05.029618 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (140).csv ---
+2026-01-04T11:55:05.029642 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (140).csv
+2026-01-04T11:55:05.029662 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.029707 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (140)__archived_20260104T115504.csv
+2026-01-04T11:55:05.029728 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (55).csv ---
+2026-01-04T11:55:05.029751 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (55).csv
+2026-01-04T11:55:05.029771 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.029816 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (55)__archived_20260104T115504.csv
+2026-01-04T11:55:05.029837 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (117).csv ---
+2026-01-04T11:55:05.029860 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (117).csv
+2026-01-04T11:55:05.029880 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.030024 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (117)__archived_20260104T115504.csv
+2026-01-04T11:55:05.030048 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (22).csv ---
+2026-01-04T11:55:05.030071 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (22).csv
+2026-01-04T11:55:05.030091 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.030137 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (22)__archived_20260104T115504.csv
+2026-01-04T11:55:05.030158 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (137).csv ---
+2026-01-04T11:55:05.030181 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (137).csv
+2026-01-04T11:55:05.030201 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.030248 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (137)__archived_20260104T115504.csv
+2026-01-04T11:55:05.030268 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (75).csv ---
+2026-01-04T11:55:05.030314 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (75).csv
+2026-01-04T11:55:05.030335 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.030484 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (75)__archived_20260104T115504.csv
+2026-01-04T11:55:05.030509 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (121).csv ---
+2026-01-04T11:55:05.030533 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (121).csv
+2026-01-04T11:55:05.030554 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.030707 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (121)__archived_20260104T115504.csv
+2026-01-04T11:55:05.030736 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (63).csv ---
+2026-01-04T11:55:05.030760 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (63).csv
+2026-01-04T11:55:05.030780 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.030931 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (63)__archived_20260104T115504.csv
+2026-01-04T11:55:05.030956 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (34).csv ---
+2026-01-04T11:55:05.030980 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (34).csv
+2026-01-04T11:55:05.031000 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.031065 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (34)__archived_20260104T115504.csv
+2026-01-04T11:55:05.031086 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (18).csv ---
+2026-01-04T11:55:05.031110 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (18).csv
+2026-01-04T11:55:05.031131 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.031184 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (18)__archived_20260104T115504.csv
+2026-01-04T11:55:05.031208 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (59).csv ---
+2026-01-04T11:55:05.031232 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (59).csv
+2026-01-04T11:55:05.031252 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.031332 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (59)__archived_20260104T115504.csv
+2026-01-04T11:55:05.031358 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (58).csv ---
+2026-01-04T11:55:05.031384 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (58).csv
+2026-01-04T11:55:05.031404 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.031524 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (58)__archived_20260104T115504.csv
+2026-01-04T11:55:05.031546 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (19).csv ---
+2026-01-04T11:55:05.031570 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (19).csv
+2026-01-04T11:55:05.031591 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.031740 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (19)__archived_20260104T115504.csv
+2026-01-04T11:55:05.031762 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (35).csv ---
+2026-01-04T11:55:05.031786 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (35).csv
+2026-01-04T11:55:05.031807 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.031853 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (35)__archived_20260104T115504.csv
+2026-01-04T11:55:05.031875 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (62).csv ---
+2026-01-04T11:55:05.031899 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (62).csv
+2026-01-04T11:55:05.031920 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.032074 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (62)__archived_20260104T115504.csv
+2026-01-04T11:55:05.032096 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (120).csv ---
+2026-01-04T11:55:05.032120 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (120).csv
+2026-01-04T11:55:05.032142 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.032188 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (120)__archived_20260104T115504.csv
+2026-01-04T11:55:05.032210 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (74).csv ---
+2026-01-04T11:55:05.032235 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (74).csv
+2026-01-04T11:55:05.032275 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.032392 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (74)__archived_20260104T115504.csv
+2026-01-04T11:55:05.032414 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (136).csv ---
+2026-01-04T11:55:05.032439 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (136).csv
+2026-01-04T11:55:05.032460 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.032533 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (136)__archived_20260104T115504.csv
+2026-01-04T11:55:05.032555 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (23).csv ---
+2026-01-04T11:55:05.032579 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (23).csv
+2026-01-04T11:55:05.032600 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.032717 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (23)__archived_20260104T115504.csv
+2026-01-04T11:55:05.032739 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (116).csv ---
+2026-01-04T11:55:05.032763 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (116).csv
+2026-01-04T11:55:05.032784 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.032903 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (116)__archived_20260104T115504.csv
+2026-01-04T11:55:05.032925 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (54).csv ---
+2026-01-04T11:55:05.032953 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (54).csv
+2026-01-04T11:55:05.032974 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.033118 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (54)__archived_20260104T115504.csv
+2026-01-04T11:55:05.033141 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (141).csv ---
+2026-01-04T11:55:05.033168 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (141).csv
+2026-01-04T11:55:05.033190 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.033386 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (141)__archived_20260104T115504.csv
+2026-01-04T11:55:05.033410 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (15).csv ---
+2026-01-04T11:55:05.033458 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (15).csv
+2026-01-04T11:55:05.033480 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.033638 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (15)__archived_20260104T115504.csv
+2026-01-04T11:55:05.033676 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (100).csv ---
+2026-01-04T11:55:05.033716 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (100).csv
+2026-01-04T11:55:05.033743 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.033942 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (100)__archived_20260104T115504.csv
+2026-01-04T11:55:05.033993 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (42).csv ---
+2026-01-04T11:55:05.034031 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (42).csv
+2026-01-04T11:55:05.034056 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.034217 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (42)__archived_20260104T115504.csv
+2026-01-04T11:55:05.034247 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (39).csv ---
+2026-01-04T11:55:05.034274 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (39).csv
+2026-01-04T11:55:05.034298 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.034498 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (39)__archived_20260104T115504.csv
+2026-01-04T11:55:05.034526 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (81).csv ---
+2026-01-04T11:55:05.034552 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (81).csv
+2026-01-04T11:55:05.034576 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.034817 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (81)__archived_20260104T115504.csv
+2026-01-04T11:55:05.034841 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (6).csv ---
+2026-01-04T11:55:05.034868 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (6).csv
+2026-01-04T11:55:05.034889 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.034962 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (6)__archived_20260104T115504.csv
+2026-01-04T11:55:05.034985 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (78).csv ---
+2026-01-04T11:55:05.035010 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (78).csv
+2026-01-04T11:55:05.035031 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.035147 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (78)__archived_20260104T115504.csv
+2026-01-04T11:55:05.035170 - 
+--- Processing: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (97).csv ---
+2026-01-04T11:55:05.035197 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (97).csv
+2026-01-04T11:55:05.035218 -     Expected canonical: workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa.csv
+2026-01-04T11:55:05.035371 -     DRY RUN: Would move to .archive/workspace-documentation_26ce7361-6c27-8191-8e86-000b9d218bfa (97)__archived_20260104T115504.csv
+2026-01-04T11:55:05.035393 - 
+--- Processing: Merge History - Page Backups_2caaf3a7-6b88-4610-a472-c1474b08e9e1 (1).csv ---
+2026-01-04T11:55:05.035419 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Merge History - Page Backups_2caaf3a7-6b88-4610-a472-c1474b08e9e1/Merge History - Page Backups_2caaf3a7-6b88-4610-a472-c1474b08e9e1 (1).csv
+2026-01-04T11:55:05.035444 -     Expected canonical: Merge History - Page Backups_2caaf3a7-6b88-4610-a472-c1474b08e9e1.csv
+2026-01-04T11:55:05.035612 -     DRY RUN: Would move to .archive/Merge History - Page Backups_2caaf3a7-6b88-4610-a472-c1474b08e9e1 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:05.035635 - 
+--- Processing: Eagle Rays Bar & Grill Content Library_124e7361-6c27-81a5-8a8c-000babf84d9c (1).csv ---
+2026-01-04T11:55:05.035660 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Eagle Rays Bar & Grill Content Library_124e7361-6c27-81a5-8a8c-000babf84d9c/Eagle Rays Bar & Grill Content Library_124e7361-6c27-81a5-8a8c-000babf84d9c (1).csv
+2026-01-04T11:55:05.035682 -     Expected canonical: Eagle Rays Bar & Grill Content Library_124e7361-6c27-81a5-8a8c-000babf84d9c.csv
+2026-01-04T11:55:05.036034 -     DRY RUN: Would move to .archive/Eagle Rays Bar & Grill Content Library_124e7361-6c27-81a5-8a8c-000babf84d9c (1)__archived_20260104T115504.csv
+2026-01-04T11:55:05.036057 - 
+--- Processing: Eagle Rays Bar & Grill Content Library_124e7361-6c27-81a5-8a8c-000babf84d9c 2.csv ---
+2026-01-04T11:55:05.036084 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Eagle Rays Bar & Grill Content Library_124e7361-6c27-81a5-8a8c-000babf84d9c/Eagle Rays Bar & Grill Content Library_124e7361-6c27-81a5-8a8c-000babf84d9c 2.csv
+2026-01-04T11:55:05.036105 -     Expected canonical: Eagle Rays Bar & Grill Content Library_124e7361-6c27-81a5-8a8c-000babf84d9c.csv
+2026-01-04T11:55:05.036248 -     DRY RUN: Would move to .archive/Eagle Rays Bar & Grill Content Library_124e7361-6c27-81a5-8a8c-000babf84d9c 2__archived_20260104T115504.csv
+2026-01-04T11:55:05.036271 - 
+--- Processing: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (4).csv ---
+2026-01-04T11:55:05.036314 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (4).csv
+2026-01-04T11:55:05.036340 -     Expected canonical: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9.csv
+2026-01-04T11:55:05.036706 -     DRY RUN: Would move to .archive/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (4)__archived_20260104T115504.csv
+2026-01-04T11:55:05.036729 - 
+--- Processing: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (8).csv ---
+2026-01-04T11:55:05.036755 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (8).csv
+2026-01-04T11:55:05.036776 -     Expected canonical: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9.csv
+2026-01-04T11:55:05.036921 -     DRY RUN: Would move to .archive/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (8)__archived_20260104T115504.csv
+2026-01-04T11:55:05.036944 - 
+--- Processing: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (13).csv ---
+2026-01-04T11:55:05.036969 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (13).csv
+2026-01-04T11:55:05.036991 -     Expected canonical: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9.csv
+2026-01-04T11:55:05.037338 -     DRY RUN: Would move to .archive/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (13)__archived_20260104T115504.csv
+2026-01-04T11:55:05.037360 - 
+--- Processing: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (12).csv ---
+2026-01-04T11:55:05.037385 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (12).csv
+2026-01-04T11:55:05.037409 -     Expected canonical: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9.csv
+2026-01-04T11:55:05.037562 -     DRY RUN: Would move to .archive/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (12)__archived_20260104T115504.csv
+2026-01-04T11:55:05.037585 - 
+--- Processing: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (9).csv ---
+2026-01-04T11:55:05.037610 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (9).csv
+2026-01-04T11:55:05.037631 -     Expected canonical: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9.csv
+2026-01-04T11:55:05.037677 -     DRY RUN: Would move to .archive/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (9)__archived_20260104T115504.csv
+2026-01-04T11:55:05.037699 - 
+--- Processing: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (5).csv ---
+2026-01-04T11:55:05.037724 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (5).csv
+2026-01-04T11:55:05.037766 -     Expected canonical: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9.csv
+2026-01-04T11:55:05.037908 -     DRY RUN: Would move to .archive/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (5)__archived_20260104T115504.csv
+2026-01-04T11:55:05.037930 - 
+--- Processing: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (2).csv ---
+2026-01-04T11:55:05.037956 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (2).csv
+2026-01-04T11:55:05.037977 -     Expected canonical: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9.csv
+2026-01-04T11:55:05.038117 -     DRY RUN: Would move to .archive/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (2)__archived_20260104T115504.csv
+2026-01-04T11:55:05.038139 - 
+--- Processing: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (3).csv ---
+2026-01-04T11:55:05.038163 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (3).csv
+2026-01-04T11:55:05.038184 -     Expected canonical: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9.csv
+2026-01-04T11:55:05.038323 -     DRY RUN: Would move to .archive/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (3)__archived_20260104T115504.csv
+2026-01-04T11:55:05.038345 - 
+--- Processing: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (1).csv ---
+2026-01-04T11:55:05.038370 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (1).csv
+2026-01-04T11:55:05.038391 -     Expected canonical: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9.csv
+2026-01-04T11:55:05.038531 -     DRY RUN: Would move to .archive/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:05.038556 - 
+--- Processing: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (6).csv ---
+2026-01-04T11:55:05.038580 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (6).csv
+2026-01-04T11:55:05.038602 -     Expected canonical: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9.csv
+2026-01-04T11:55:05.038647 -     DRY RUN: Would move to .archive/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (6)__archived_20260104T115504.csv
+2026-01-04T11:55:05.038669 - 
+--- Processing: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (11).csv ---
+2026-01-04T11:55:05.038693 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (11).csv
+2026-01-04T11:55:05.038714 -     Expected canonical: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9.csv
+2026-01-04T11:55:05.038954 -     DRY RUN: Would move to .archive/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (11)__archived_20260104T115504.csv
+2026-01-04T11:55:05.038996 - 
+--- Processing: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (10).csv ---
+2026-01-04T11:55:05.039023 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (10).csv
+2026-01-04T11:55:05.039045 -     Expected canonical: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9.csv
+2026-01-04T11:55:05.039185 -     DRY RUN: Would move to .archive/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (10)__archived_20260104T115504.csv
+2026-01-04T11:55:05.039208 - 
+--- Processing: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (7).csv ---
+2026-01-04T11:55:05.039232 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (7).csv
+2026-01-04T11:55:05.039254 -     Expected canonical: databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9.csv
+2026-01-04T11:55:05.039297 -     DRY RUN: Would move to .archive/databases-outside-parent-page_2ace7361-6c27-8196-8d37-000b211cb0a9 (7)__archived_20260104T115504.csv
+2026-01-04T11:55:05.039323 - 
+--- Processing: Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7 (1).csv ---
+2026-01-04T11:55:05.039348 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7/Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7 (1).csv
+2026-01-04T11:55:05.039368 -     Expected canonical: Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7.csv
+2026-01-04T11:55:05.039620 -     DRY RUN: Would move to .archive/Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7 (1)__archived_20260104T115504.csv
+2026-01-04T11:55:05.039643 - 
+--- Processing: Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7 2.csv ---
+2026-01-04T11:55:05.039668 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7/Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7 2.csv
+2026-01-04T11:55:05.039690 -     Expected canonical: Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7.csv
+2026-01-04T11:55:05.039907 -     DRY RUN: Would move to .archive/Video Library [THS]_130e7361-6c27-81a0-8920-000b317408b7 2__archived_20260104T115504.csv
+2026-01-04T11:55:05.039932 - 
+============================================================
+2026-01-04T11:55:05.039953 - Non-Standard Folders (Manual Review Required)
+2026-01-04T11:55:05.039974 - ============================================================
+2026-01-04T11:55:05.040000 - 
+  - script_runs
+2026-01-04T11:55:05.040021 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/script_runs
+2026-01-04T11:55:05.040045 -     Reason: Folder name doesn't match expected pattern: {sanitizeName(title)}_dataSourceId
+2026-01-04T11:55:05.040071 - 
+  - Workspace-Areas
+2026-01-04T11:55:05.040096 -     Path: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/notion-workspace-gd/Scripting-and- Automations-ws-sync/workspace-databases/Workspace-Areas
+2026-01-04T11:55:05.040117 -     Reason: Folder name doesn't match expected pattern: {sanitizeName(title)}_dataSourceId
+2026-01-04T11:55:05.040139 - 
+============================================================
+2026-01-04T11:55:05.040163 - Summary
+2026-01-04T11:55:05.040184 - ============================================================
+2026-01-04T11:55:05.040231 - Total orphaned files: 274
+2026-01-04T11:55:05.040252 - Duplicate CSVs found: 272
+2026-01-04T11:55:05.040274 - Duplicate CSVs archived: 0
+2026-01-04T11:55:05.040296 - Duplicate CSVs skipped: 1
+2026-01-04T11:55:05.040322 - Non-standard folders (needs review): 2
+2026-01-04T11:55:05.040344 - Other files (needs review): 0
+2026-01-04T11:55:05.040368 - Errors: 0
+2026-01-04T11:55:05.040397 - Log file: /Users/brianhellemn/Projects/github-production/logs/orphaned_files_remediation_20260104T115504.log
+2026-01-04T11:55:05.042082 - Results saved to: /Users/brianhellemn/Projects/github-production/logs/orphaned_files_remediation_results_20260104T115504.json

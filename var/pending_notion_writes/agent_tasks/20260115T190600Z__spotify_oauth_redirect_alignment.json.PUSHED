@@ -1,0 +1,23 @@
+{
+  "title": "Align Spotify OAuth redirect URIs and regenerate refresh token",
+  "priority": "High",
+  "status": "Not Started",
+  "dependency_status": "Blocked",
+  "assigned_agents": ["Claude MM1"],
+  "review_handoff_to": ["Codex MM1"],
+  "objective": "Update Spotify app redirect URI and obtain a new refresh token using the public callback URL.",
+  "preflight": [
+    "Cloudflare tunnel is connected",
+    "Callback endpoint or manual capture path defined"
+  ],
+  "steps": [
+    "Add https://webhook.vibevessel.space/auth/spotify/callback to Spotify app settings",
+    "Run OAuth flow and capture code",
+    "Exchange code for refresh token and update env vars"
+  ],
+  "success_criteria": [
+    "Refresh token updated",
+    "Spotify API calls succeed without redirect errors"
+  ],
+  "created_at": "20260115T190600Z"
+}

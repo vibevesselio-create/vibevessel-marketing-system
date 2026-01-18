@@ -1,0 +1,27 @@
+2026-01-18 05:52:00,077 - INFO - ============================================================
+2026-01-18 05:52:00,077 - INFO - Starting Lightroom to Google Drive SQL Sync
+2026-01-18 05:52:00,077 - INFO - Source catalog: /Volumes/SYSTEM_SSD/master-lightroom-2/Master_Lightroom.lrcat
+2026-01-18 05:52:00,077 - INFO - Output database: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-vibe.vessel.io@gmail.com/My Drive/VibeVessel/Databases/lightroom_library_sync.db
+2026-01-18 05:52:00,077 - INFO - ============================================================
+2026-01-18 05:52:00,077 - INFO - Connecting to Lightroom catalog...
+2026-01-18 05:52:00,682 - INFO - Catalog statistics: {
+  "total_images": 73343,
+  "images_with_exif": 73343,
+  "collections": 117,
+  "folders": 63236,
+  "keywords": 1004
+}
+2026-01-18 05:52:00,682 - INFO - Initializing sync database...
+2026-01-18 05:52:00,723 - INFO - Database schema initialized
+2026-01-18 05:52:00,723 - INFO - Fetching images from catalog...
+2026-01-18 05:52:06,766 - INFO - Found 73343 images
+2026-01-18 05:52:06,864 - ERROR - Sync failed: 'lr_id_global'
+2026-01-18 05:52:06,866 - ERROR - Traceback (most recent call last):
+  File "/Users/brianhellemn/Projects/github-production/scripts/lightroom_to_google_drive_sql_sync.py", line 692, in run_full_sync
+    sync_db.sync_images(images, timestamp)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/Users/brianhellemn/Projects/github-production/scripts/lightroom_to_google_drive_sql_sync.py", line 522, in sync_images
+    checksum_data = f"{img['lr_id_global']}|{img['capture_time']}|{img['rating']}|{img['file_name']}"
+                       ~~~^^^^^^^^^^^^^^^^
+KeyError: 'lr_id_global'
+

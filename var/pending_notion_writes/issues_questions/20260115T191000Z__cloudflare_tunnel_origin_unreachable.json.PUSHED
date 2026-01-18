@@ -1,0 +1,21 @@
+{
+  "title": "BLOCKER: Cloudflare tunnel has no active connection; webhook endpoint returns HTTP 530",
+  "type": ["Internal Issue"],
+  "status": "Resolved",
+  "priority": "High",
+  "component": "Cloudflare Tunnel / Webhook Server",
+  "blocked": false,
+  "description": "DNS route created for the new tunnel and public health now returns HTTP 200.",
+  "evidence": {
+    "dns": "dig webhook.vibevessel.space +short returns Cloudflare IPs",
+    "https": "curl -I https://webhook.vibevessel.space/health returns HTTP 200",
+    "tunnel": "cloudflared tunnel info 8f70cf6f-551f-4fb7-b1f9-0349f2f688f3 -> active connections",
+    "origin": "lsof -iTCP:5001 -sTCP:LISTEN shows Python listening",
+    "dns_route": "cloudflared tunnel route dns --overwrite-dns 8f70... webhook.vibevessel.space -> success",
+    "api_token": "CLOUDFLARE_API_TOKEN verifies active (2026-01-16); API DNS automation should now work"
+  },
+  "impact": "Resolved; public endpoint now reachable.",
+  "next_step": "Replace invalid CLOUDFLARE_API_TOKEN for future DNS automation.",
+  "owner": ["Cursor MM1", "Codex MM1"],
+  "created_at": "20260115T191000Z"
+}

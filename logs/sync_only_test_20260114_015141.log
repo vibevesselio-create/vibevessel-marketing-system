@@ -1,0 +1,51 @@
+2026-01-14 01:51:41 | INFO | Started workflow: FP-DEDUP-20260114075141
+2026-01-14 01:51:41 | INFO | ================================================================================
+2026-01-14 01:51:41 | INFO | PRODUCTION RUN: FINGERPRINT EMBEDDING + SYNC + DEDUPLICATION
+2026-01-14 01:51:41 | INFO | ================================================================================
+2026-01-14 01:51:41 | INFO | Fingerprint Sync: DRY RUN
+2026-01-14 01:51:41 | INFO | 
+2026-01-14 01:51:41 | INFO | 
+2026-01-14 01:51:41 | INFO | Querying tracks from Notion database...
+2026-01-14 01:51:41 | INFO | HTTP Request: GET https://api.notion.com/v1/databases/27ce7361-6c27-80fb-b40e-fefdd47d6640 "HTTP/1.1 200 OK"
+2026-01-14 01:51:49 | INFO | HTTP Request: POST https://api.notion.com/v1/databases/27ce7361-6c27-80fb-b40e-fefdd47d6640/query "HTTP/1.1 200 OK"
+2026-01-14 01:51:49 | INFO | Queried 5 tracks from Notion for processing
+2026-01-14 01:51:49 | INFO | ✅ Found 5 tracks from Notion for processing
+2026-01-14 01:51:49 | INFO | ================================================================================
+2026-01-14 01:51:49 | INFO | STEP 2: SYNC FINGERPRINTS TO EAGLE TAGS
+2026-01-14 01:51:49 | INFO | ================================================================================
+2026-01-14 01:51:49 | INFO | ================================================================================
+2026-01-14 01:51:49 | INFO | SYNC FINGERPRINTS TO EAGLE TAGS
+2026-01-14 01:51:49 | INFO | ================================================================================
+2026-01-14 01:51:49 | INFO | Mode: DRY RUN
+2026-01-14 01:51:49 | INFO | Limit: 3 items
+2026-01-14 01:51:49 | INFO | 
+2026-01-14 01:51:49 | INFO | Fetching Eagle items...
+2026-01-14 01:51:50 | INFO | 📊 Fetched 21121 items from Eagle library
+2026-01-14 01:51:50 | INFO | Found 21121 Eagle items
+2026-01-14 01:51:50 | INFO | 
+2026-01-14 01:51:50 | INFO | Processing items...
+2026-01-14 01:51:50 | INFO | 
+2026-01-14 01:51:50 | INFO | ================================================================================
+2026-01-14 01:51:50 | INFO | SYNC SUMMARY
+2026-01-14 01:51:50 | INFO | ================================================================================
+2026-01-14 01:51:50 | INFO | Total items scanned: 21121
+2026-01-14 01:51:50 | INFO | Items with fingerprint tag: 0
+2026-01-14 01:51:50 | INFO | Items without fingerprint tag: 3
+2026-01-14 01:51:50 | INFO | Items with fingerprint in file: 0
+2026-01-14 01:51:50 | INFO | Items that would be synced: 0
+2026-01-14 01:51:50 | INFO | Items skipped: 3
+2026-01-14 01:51:50 | INFO | 
+2026-01-14 01:51:50 | INFO | Completed step: fingerprint_sync
+2026-01-14 01:51:50 | INFO | 
+2026-01-14 01:51:50 | INFO | ✅ Fingerprint sync completed
+2026-01-14 01:51:50 | INFO | 
+2026-01-14 01:51:50 | INFO | 
+2026-01-14 01:51:50 | INFO | ================================================================================
+2026-01-14 01:51:50 | INFO | PRODUCTION RUN SUMMARY
+2026-01-14 01:51:50 | INFO | ================================================================================
+2026-01-14 01:51:50 | INFO | Fingerprint Sync:
+2026-01-14 01:51:50 | INFO |   Total items: 21121
+2026-01-14 01:51:50 | INFO |   Items synced: 0
+2026-01-14 01:51:50 | INFO |   Items failed: 0
+2026-01-14 01:51:50 | INFO | 
+2026-01-14 01:51:50 | INFO | ================================================================================

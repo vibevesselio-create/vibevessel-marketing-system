@@ -1,0 +1,240 @@
+2026-01-01 13:11:34,060 - __main__ - INFO - ================================================================================
+2026-01-01 13:11:34,060 - __main__ - INFO - Notion Issue Review and Task Execution Workflow
+2026-01-01 13:11:34,060 - __main__ - INFO - ================================================================================
+2026-01-01 13:11:34,060 - __main__ - INFO - Step 1: Performing Notion access preflight...
+2026-01-01 13:11:34,156 - __main__ - INFO - Notion client initialized
+2026-01-01 13:11:34,532 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/users/me "HTTP/1.1 200 OK"
+2026-01-01 13:11:34,532 - __main__ - INFO - Notion API access validated successfully
+2026-01-01 13:11:34,532 - __main__ - INFO - ✅ Notion access validated
+2026-01-01 13:11:34,532 - __main__ - INFO - Step 2: Querying outstanding issues...
+2026-01-01 13:11:34,532 - __main__ - INFO - Querying outstanding issues...
+2026-01-01 13:11:35,474 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/databases/229e73616c27808ebf06c202b10b5166/query "HTTP/1.1 200 OK"
+2026-01-01 13:11:35,493 - __main__ - INFO - Retrieved 100 pages from database 229e73616c27808ebf06c202b10b5166
+2026-01-01 13:11:35,493 - __main__ - INFO - Found 100 outstanding issues
+2026-01-01 13:11:35,493 - __main__ - INFO - Step 3: Identifying most critical issue...
+2026-01-01 13:11:35,493 - __main__ - INFO - Identified critical issue: CRITICAL: Agent-Workflow not up to spec — Export ChatGPT Conversation to Notion Database item (blank spec) (ID: 2a4443d7-bf66-49ca-a78d-efb61267f4de, Priority: Critical)
+2026-01-01 13:11:35,493 - __main__ - INFO - Step 4: Attempting issue resolution...
+2026-01-01 13:11:35,493 - __main__ - INFO - Analyzing issue: CRITICAL: Agent-Workflow not up to spec — Export ChatGPT Conversation to Notion Database item (blank spec)
+2026-01-01 13:11:35,493 - __main__ - INFO - Description: ...
+2026-01-01 13:11:35,493 - __main__ - INFO - Issue analysis complete. Resolved: False
+2026-01-01 13:11:35,493 - __main__ - INFO - Step 5: Creating handoff trigger file...
+2026-01-01 13:11:35,842 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/databases/284e73616c278018872aeb14e82e0392 "HTTP/1.1 200 OK"
+2026-01-01 13:11:36,396 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/pages "HTTP/1.1 200 OK"
+2026-01-01 13:11:36,397 - __main__ - INFO - Created page 2dbe7361-6c27-8154-b010-f6a71a6c058c in database 284e73616c278018872aeb14e82e0392
+2026-01-01 13:11:36,398 - __main__ - INFO - Created handoff task in Agent-Tasks: https://www.notion.so/Plan-Resolution-for-Issue-CRITICAL-Agent-Workflow-not-up-to-spec-Export-C-2dbe73616c278154b010f6a71a6c058c
+2026-01-01 13:11:36,399 - __main__ - INFO - Created trigger file: /Users/brianhellemn/Documents/Agents/Agent-Triggers/Claude-MM1-Agent/01_inbox/20260101T191136Z__HANDOFF__Plan-Resolution-for-Issue:-CRITICAL:-Agent-Workflo__2dbe7361.json
+2026-01-01 13:11:36,400 - __main__ - INFO - ✅ Handoff trigger file created: /Users/brianhellemn/Documents/Agents/Agent-Triggers/Claude-MM1-Agent/01_inbox/20260101T191136Z__HANDOFF__Plan-Resolution-for-Issue:-CRITICAL:-Agent-Workflo__2dbe7361.json
+2026-01-01 13:11:36,400 - __main__ - INFO - Step 10: Executing main.py for task handoff flow...
+2026-01-01 13:12:34,538 - __main__ - INFO - main.py execution completed
+2026-01-01 13:12:34,539 - __main__ - INFO - Return code: 0
+2026-01-01 13:12:34,539 - __main__ - INFO - Output:
+2026-01-01 13:11:36,494 - __main__ - INFO - ================================================================================
+2026-01-01 13:11:36,495 - __main__ - INFO - Notion Task Management and Agent Trigger System
+2026-01-01 13:11:36,495 - __main__ - INFO - ================================================================================
+2026-01-01 13:11:36,558 - __main__ - INFO - Notion client initialized
+2026-01-01 13:11:36,558 - __main__ - INFO - ================================================================================
+2026-01-01 13:11:36,558 - __main__ - INFO - TASK COMPLETION ANALYSIS
+2026-01-01 13:11:36,558 - __main__ - INFO - ================================================================================
+2026-01-01 13:11:38,927 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/databases/284e73616c278018872aeb14e82e0392/query "HTTP/1.1 200 OK"
+2026-01-01 13:11:39,001 - __main__ - INFO - Retrieved 100 pages from database 284e73616c278018872aeb14e82e0392
+2026-01-01 13:11:39,001 - __main__ - INFO - Total tasks found: 100
+2026-01-01 13:11:39,001 - __main__ - INFO - Task Status Distribution:
+2026-01-01 13:11:39,001 - __main__ - INFO -   Planning: 33
+2026-01-01 13:11:39,001 - __main__ - INFO -   Draft: 24
+2026-01-01 13:11:39,001 - __main__ - INFO -   Ready: 18
+2026-01-01 13:11:39,001 - __main__ - INFO -   Completed: 13
+2026-01-01 13:11:39,001 - __main__ - INFO -   Blocked: 6
+2026-01-01 13:11:39,001 - __main__ - INFO -   Review: 4
+2026-01-01 13:11:39,001 - __main__ - INFO -   Archived: 2
+2026-01-01 13:11:39,002 - __main__ - INFO - 
+Planning/Review Tasks: 22
+2026-01-01 13:11:39,002 - __main__ - INFO - Implementation Tasks: 24
+2026-01-01 13:11:39,002 - __main__ - INFO - Ratio: 0.92
+2026-01-01 13:11:39,002 - __main__ - WARNING - 
+⚠️  17 INCOMPLETE PLANNING TASKS:
+2026-01-01 13:11:39,002 - __main__ - WARNING -   - [Ready] Phase 2.1 — Remediation Plan & Change Spec Creation
+2026-01-01 13:11:39,002 - __main__ - WARNING -     https://www.notion.so/Phase-2-1-Remediation-Plan-Change-Spec-Creation-0299aed1662f4d5f9d2c13c3dbc33c32
+2026-01-01 13:11:39,002 - __main__ - WARNING -   - [Planning] Plan: Status Property Standardization Strategy
+2026-01-01 13:11:39,002 - __main__ - WARNING -     https://www.notion.so/Plan-Status-Property-Standardization-Strategy-07fc6f4b30e14d2980bfc4d81e97281e
+2026-01-01 13:11:39,002 - __main__ - WARNING -   - [Draft] [Audit-2] Architecture Review & Implementation Validation
+2026-01-01 13:11:39,003 - __main__ - WARNING -     https://www.notion.so/Audit-2-Architecture-Review-Implementation-Validation-093f62dca5a340a38dd9c51c1a2874c8
+2026-01-01 13:11:39,003 - __main__ - WARNING -   - [Ready] Research: Comprehensive Technical Review — Seren Media Automation System Retrofit Implementation Blueprint
+2026-01-01 13:11:39,003 - __main__ - WARNING -     https://www.notion.so/Research-Comprehensive-Technical-Review-Seren-Media-Automation-System-Retrofit-Implementation-Blu-15de8986aa18460cbf040ad456ba738b
+2026-01-01 13:11:39,003 - __main__ - WARNING -   - [Draft] Phase 2.3 — Remediation Plan Cross-Agent Audit
+2026-01-01 13:11:39,003 - __main__ - WARNING -     https://www.notion.so/Phase-2-3-Remediation-Plan-Cross-Agent-Audit-16fedbffd4f247ab840b3d7ebd9a8840
+2026-01-01 13:11:39,003 - __main__ - WARNING - 
+⚠️  14 POTENTIALLY STUCK TASKS:
+2026-01-01 13:11:39,003 - __main__ - WARNING -   - [Ready] Merge Duplicate Items in Client-Areas Database (Age: 61 days)
+2026-01-01 13:11:39,003 - __main__ - WARNING -     https://www.notion.so/Merge-Duplicate-Items-in-Client-Areas-Database-141d7d3db3d94e47900c12c9728a655b
+2026-01-01 13:11:39,003 - __main__ - WARNING -   - [Ready] Verify Drive-first documentation & KM secret reference updates (Age: 45 days)
+2026-01-01 13:11:39,003 - __main__ - WARNING -     https://www.notion.so/Verify-Drive-first-documentation-KM-secret-reference-updates-2aee73616c2781668314f159f861932a
+2026-01-01 13:11:39,003 - __main__ - WARNING -   - [Ready] Audit & Data Validation — Ocean Frontiers/Compass Point Readers' Choice 2026 Press Package (Age: 44 days)
+2026-01-01 13:11:39,003 - __main__ - WARNING -     https://www.notion.so/Audit-Data-Validation-Ocean-Frontiers-Compass-Point-Readers-Choice-2026-Press-Package-06d716e2a0ea4c8db61f0ba36963dcde
+2026-01-01 13:11:39,003 - __main__ - WARNING -   - [Ready] Edge Case Testing Protocol - File Operations in Trigger Folders (Age: 37 days)
+2026-01-01 13:11:39,003 - __main__ - WARNING -     https://www.notion.so/Edge-Case-Testing-Protocol-File-Operations-in-Trigger-Folders-13e83f122f024cbfab888e1cb4316f2a
+2026-01-01 13:11:39,003 - __main__ - WARNING -   - [Ready] DriveSheetsSync Code Review — Claude MM1 Agent (Age: 37 days)
+2026-01-01 13:11:39,003 - __main__ - WARNING -     https://www.notion.so/DriveSheetsSync-Code-Review-Claude-MM1-Agent-2b5e73616c2781cdbe8af245b57c3746
+2026-01-01 13:11:39,003 - __main__ - INFO - 
+Completion Rate: 13.0%
+2026-01-01 13:11:39,003 - __main__ - WARNING - ⚠️  Low completion rate - tasks may not be getting completed!
+2026-01-01 13:11:39,003 - __main__ - INFO - ================================================================================
+2026-01-01 13:11:39,004 - __main__ - INFO - Checking for outstanding issues...
+2026-01-01 13:11:39,862 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/databases/229e73616c27808ebf06c202b10b5166/query "HTTP/1.1 200 OK"
+2026-01-01 13:11:39,884 - __main__ - INFO - Retrieved 100 pages from database 229e73616c27808ebf06c202b10b5166
+2026-01-01 13:11:39,884 - __main__ - INFO - Found 100 outstanding issues.
+2026-01-01 13:11:39,884 - __main__ - INFO - Addressing critical issue: CRITICAL: Agent-Workflow not up to spec — Export ChatGPT Conversation to Notion Database item (blank spec) (ID: 2a4443d7-bf66-49ca-a78d-efb61267f4de)
+2026-01-01 13:11:40,287 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/databases/284e73616c278018872aeb14e82e0392 "HTTP/1.1 200 OK"
+2026-01-01 13:11:40,724 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/pages "HTTP/1.1 200 OK"
+2026-01-01 13:11:40,726 - __main__ - INFO - Created page 2dbe7361-6c27-81f9-b33b-cabc3d92e4bd in database 284e73616c278018872aeb14e82e0392
+2026-01-01 13:11:40,726 - __main__ - INFO - Created handoff task in Agent-Tasks: https://www.notion.so/Plan-Resolution-for-Issue-CRITICAL-Agent-Workflow-not-up-to-spec-Export-C-2dbe73616c2781f9b33bcabc3d92e4bd
+2026-01-01 13:11:41,033 - httpx - INFO - HTTP Request: PATCH https://api.notion.com/v1/pages/2a4443d7-bf66-49ca-a78d-efb61267f4de "HTTP/1.1 400 Bad Request"
+2026-01-01 13:11:41,034 - __main__ - ERROR - Error updating page 2a4443d7-bf66-49ca-a78d-efb61267f4de: Related Tasks is not a property that exists.
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.13/site-packages/notion_client/client.py", line 118, in _parse_response
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/lib/python3.13/site-packages/httpx/_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '400 Bad Request' for url 'https://api.notion.com/v1/pages/2a4443d7-bf66-49ca-a78d-efb61267f4de'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/brianhellemn/Projects/github-production/main.py", line 254, in update_page
+    self.client.pages.update(page_id=page_id, properties=properties)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.13/site-packages/notion_client/api_endpoints.py", line 251, in update
+    return self.parent.request(
+           ~~~~~~~~~~~~~~~~~~~^
+        path=f"pages/{page_id}",
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+        auth=kwargs.get("auth"),
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/homebrew/lib/python3.13/site-packages/notion_client/client.py", line 194, in request
+    return self._parse_response(response)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.13/site-packages/notion_client/client.py", line 126, in _parse_response
+    raise APIResponseError(response, body["message"], code)
+notion_client.errors.APIResponseError: Related Tasks is not a property that exists.
+2026-01-01 13:11:41,039 - __main__ - INFO - Linked issue to task via Related Tasks
+2026-01-01 13:11:41,039 - __main__ - INFO - Created trigger file: /Users/brianhellemn/Documents/Agents/Agent-Triggers/Claude-MM1-Agent/01_inbox/20260101T191141Z__HANDOFF__Plan-Resolution-for-Issue:-CRITICAL:-Agent-Workflo__2dbe7361.json
+2026-01-01 13:11:41,039 - __main__ - INFO - Created trigger file for planning task: /Users/brianhellemn/Documents/Agents/Agent-Triggers/Claude-MM1-Agent/01_inbox/20260101T191141Z__HANDOFF__Plan-Resolution-for-Issue:-CRITICAL:-Agent-Workflo__2dbe7361.json
+2026-01-01 13:11:41,040 - __main__ - INFO - Checking for ready tasks that need trigger files...
+2026-01-01 13:11:44,178 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/databases/284e73616c278018872aeb14e82e0392/query "HTTP/1.1 200 OK"
+2026-01-01 13:11:44,257 - __main__ - INFO - Retrieved 100 pages from database 284e73616c278018872aeb14e82e0392
+2026-01-01 13:11:44,258 - __main__ - INFO - Found 100 ready task(s) with assigned agents.
+2026-01-01 13:11:44,576 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:11:44,807 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8111-8327-d707f35e2c6a "HTTP/1.1 200 OK"
+2026-01-01 13:11:45,748 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:11:46,123 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:11:47,841 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:11:48,991 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:11:49,314 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:11:49,660 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:11:50,104 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:11:50,461 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:11:51,176 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/2b1e7361-6c27-80d5-b162-d73c6396c31c "HTTP/1.1 200 OK"
+2026-01-01 13:11:51,406 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8111-8327-d707f35e2c6a "HTTP/1.1 200 OK"
+2026-01-01 13:11:53,608 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:11:53,841 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/fa54f05c-e184-403a-ac28-87dd8ce9855b "HTTP/1.1 200 OK"
+2026-01-01 13:11:54,132 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8111-8327-d707f35e2c6a "HTTP/1.1 200 OK"
+2026-01-01 13:11:54,418 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:11:54,691 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8111-8327-d707f35e2c6a "HTTP/1.1 200 OK"
+2026-01-01 13:11:56,752 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/9c4b6040-5e0f-4d31-ae1b-d4a43743b224 "HTTP/1.1 200 OK"
+2026-01-01 13:11:57,970 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/9c4b6040-5e0f-4d31-ae1b-d4a43743b224 "HTTP/1.1 200 OK"
+2026-01-01 13:11:58,174 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/9c4b6040-5e0f-4d31-ae1b-d4a43743b224 "HTTP/1.1 200 OK"
+2026-01-01 13:11:58,435 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:12:01,279 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:12:01,539 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:01,870 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/fa54f05c-e184-403a-ac28-87dd8ce9855b "HTTP/1.1 200 OK"
+2026-01-01 13:12:02,303 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:02,545 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:02,771 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:03,634 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:03,856 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:05,141 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:05,380 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:06,231 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:08,666 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:08,925 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/fa54f05c-e184-403a-ac28-87dd8ce9855b "HTTP/1.1 200 OK"
+2026-01-01 13:12:09,160 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:09,861 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:10,188 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/fa54f05c-e184-403a-ac28-87dd8ce9855b "HTTP/1.1 200 OK"
+2026-01-01 13:12:10,491 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/fa54f05c-e184-403a-ac28-87dd8ce9855b "HTTP/1.1 200 OK"
+2026-01-01 13:12:12,061 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/fa54f05c-e184-403a-ac28-87dd8ce9855b "HTTP/1.1 200 OK"
+2026-01-01 13:12:12,323 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/fa54f05c-e184-403a-ac28-87dd8ce9855b "HTTP/1.1 200 OK"
+2026-01-01 13:12:13,056 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8111-8327-d707f35e2c6a "HTTP/1.1 200 OK"
+2026-01-01 13:12:13,361 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:12:13,593 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/2b1e7361-6c27-80d5-b162-d73c6396c31c "HTTP/1.1 200 OK"
+2026-01-01 13:12:13,822 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:12:14,055 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/2cfe7361-6c27-805f-857c-e90c3db6efb9 "HTTP/1.1 200 OK"
+2026-01-01 13:12:14,386 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/9c4b6040-5e0f-4d31-ae1b-d4a43743b224 "HTTP/1.1 200 OK"
+2026-01-01 13:12:14,634 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8111-8327-d707f35e2c6a "HTTP/1.1 200 OK"
+2026-01-01 13:12:14,808 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/2b1e7361-6c27-80d5-b162-d73c6396c31c "HTTP/1.1 200 OK"
+2026-01-01 13:12:15,104 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:15,312 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/2b1e7361-6c27-80d5-b162-d73c6396c31c "HTTP/1.1 200 OK"
+2026-01-01 13:12:15,627 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/fa54f05c-e184-403a-ac28-87dd8ce9855b "HTTP/1.1 200 OK"
+2026-01-01 13:12:15,879 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/fa54f05c-e184-403a-ac28-87dd8ce9855b "HTTP/1.1 200 OK"
+2026-01-01 13:12:16,152 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:16,434 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:16,804 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:17,037 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/fa54f05c-e184-403a-ac28-87dd8ce9855b "HTTP/1.1 200 OK"
+2026-01-01 13:12:17,219 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/2b1e7361-6c27-80d5-b162-d73c6396c31c "HTTP/1.1 200 OK"
+2026-01-01 13:12:17,610 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/fa54f05c-e184-403a-ac28-87dd8ce9855b "HTTP/1.1 200 OK"
+2026-01-01 13:12:17,883 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:18,137 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:18,370 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/fa54f05c-e184-403a-ac28-87dd8ce9855b "HTTP/1.1 200 OK"
+2026-01-01 13:12:18,663 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/fa54f05c-e184-403a-ac28-87dd8ce9855b "HTTP/1.1 200 OK"
+2026-01-01 13:12:20,941 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:12:21,162 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:21,652 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:12:21,919 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:24,420 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:24,617 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:24,811 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:25,846 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:26,122 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:26,329 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:26,638 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:26,870 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8111-8327-d707f35e2c6a "HTTP/1.1 200 OK"
+2026-01-01 13:12:27,161 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/fa54f05c-e184-403a-ac28-87dd8ce9855b "HTTP/1.1 200 OK"
+2026-01-01 13:12:27,446 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/fa54f05c-e184-403a-ac28-87dd8ce9855b "HTTP/1.1 200 OK"
+2026-01-01 13:12:27,687 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:27,937 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:28,211 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:28,426 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:28,631 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:28,930 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:12:29,257 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8111-8327-d707f35e2c6a "HTTP/1.1 200 OK"
+2026-01-01 13:12:29,646 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:12:29,952 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/fa54f05c-e184-403a-ac28-87dd8ce9855b "HTTP/1.1 200 OK"
+2026-01-01 13:12:30,117 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/2b1e7361-6c27-80d5-b162-d73c6396c31c "HTTP/1.1 200 OK"
+2026-01-01 13:12:30,566 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:12:30,833 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8111-8327-d707f35e2c6a "HTTP/1.1 200 OK"
+2026-01-01 13:12:31,095 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:12:31,356 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:31,691 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8111-8327-d707f35e2c6a "HTTP/1.1 200 OK"
+2026-01-01 13:12:31,932 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:32,129 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:32,404 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:32,704 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:12:32,946 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:33,140 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/2b1e7361-6c27-80fb-8ce9-fd3cf78a5cad "HTTP/1.1 200 OK"
+2026-01-01 13:12:33,536 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/3e6cfe03-c82e-4aee-974a-e2ee6a69c187 "HTTP/1.1 200 OK"
+2026-01-01 13:12:34,178 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/249e7361-6c27-8100-8a74-de7eabb9fc8d "HTTP/1.1 200 OK"
+2026-01-01 13:12:34,502 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/pages/9c4b6040-5e0f-4d31-ae1b-d4a43743b224 "HTTP/1.1 200 OK"
+2026-01-01 13:12:34,504 - __main__ - INFO - All ready tasks already have trigger files.
+2026-01-01 13:12:34,506 - __main__ - INFO - ================================================================================
+2026-01-01 13:12:34,506 - __main__ - INFO - Execution completed successfully
+2026-01-01 13:12:34,506 - __main__ - INFO - ================================================================================
+
+2026-01-01 13:12:34,539 - __main__ - INFO - ================================================================================
+2026-01-01 13:12:34,539 - __main__ - INFO - Workflow execution completed
+2026-01-01 13:12:34,539 - __main__ - INFO - ================================================================================
+2026-01-07 03:45:56,552 - httpx - INFO - HTTP Request: GET https://api.notion.com/v1/databases/26ce7361-6c27-81bb-81b7-dd43760ee6cc "HTTP/1.1 200 OK"
+2026-01-07 03:45:57,390 - httpx - INFO - HTTP Request: POST https://api.notion.com/v1/databases/26ce7361-6c27-81bb-81b7-dd43760ee6cc/query "HTTP/1.1 200 OK"
+2026-01-07 03:45:57,399 - shared_core.notion.folder_resolver - INFO - Retrieved 100 folders from Notion

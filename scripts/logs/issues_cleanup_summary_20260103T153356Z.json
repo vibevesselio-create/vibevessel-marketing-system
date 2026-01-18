@@ -1,0 +1,116 @@
+{
+  "timestamp": "20260103T153356Z",
+  "dry_run": false,
+  "data_source_id": "229e7361-6c27-804f-b662-000b6af69781",
+  "stats": {
+    "total_items": 520,
+    "duplicate_groups": 99,
+    "duplicates_archived": 0,
+    "duplicates_already_archived": 186,
+    "unreported_total": 138,
+    "unreported_archived": 0,
+    "unknown_priority_total": 252,
+    "priority_updates": 8,
+    "updates_total": 8
+  },
+  "log_path": "/Users/brianhellemn/Projects/github-production/scripts/logs/issues_cleanup_20260103T153356Z.log",
+  "updates": [
+    {
+      "id": "2d9e7361-6c27-811e-b789-c38dfbd964d1",
+      "url": "https://www.notion.so/2d9e73616c27811eb789c38dfbd964d1",
+      "name": "Alex R Kopp - Ocean Pacifica.mp3",
+      "status_from": "Resolved",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Low",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8124-afe9-f0119331a48d",
+      "url": "https://www.notion.so/2d9e73616c278124afe9f0119331a48d",
+      "name": "LightItOn.mp3",
+      "status_from": "Resolved",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Low",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8181-85e3-cbd94519e2a9",
+      "url": "https://www.notion.so/2d9e73616c27818185e3cbd94519e2a9",
+      "name": "LightItOn.mp3",
+      "status_from": "Resolved",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Low",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-8199-93c6-f17040cc40b9",
+      "url": "https://www.notion.so/2d9e73616c27819993c6f17040cc40b9",
+      "name": "Wait for Me.mp3",
+      "status_from": "Resolved",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Low",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81b9-ad80-c203d0ed5429",
+      "url": "https://www.notion.so/2d9e73616c2781b9ad80c203d0ed5429",
+      "name": "Wait for Me.mp3",
+      "status_from": "Resolved",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Low",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81d1-94ae-e0f21af3ec87",
+      "url": "https://www.notion.so/2d9e73616c2781d194aee0f21af3ec87",
+      "name": "Game Changer.mp3",
+      "status_from": "Resolved",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Low",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2d9e7361-6c27-81d1-ac57-ff5ff9e2972c",
+      "url": "https://www.notion.so/2d9e73616c2781d1ac57ff5ff9e2972c",
+      "name": "Alex R Kopp - Ocean Pacifica.mp3",
+      "status_from": "Resolved",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Low",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    },
+    {
+      "id": "2dde7361-6c27-8060-b120-f6d4c2ab9bc7",
+      "url": "https://www.notion.so/2dde73616c278060b120f6d4c2ab9bc7",
+      "name": "/Users/brianhellemn/Documents/Agents/Agent-Triggers/Cursor/Agent-Tasks-Audit-Remediation-TRIGGER.json",
+      "status_from": "Unreported",
+      "status_to": null,
+      "priority_from": null,
+      "priority_to": "Medium",
+      "reasons": [
+        "Priority set from keyword heuristics"
+      ]
+    }
+  ],
+  "errors": []
+}

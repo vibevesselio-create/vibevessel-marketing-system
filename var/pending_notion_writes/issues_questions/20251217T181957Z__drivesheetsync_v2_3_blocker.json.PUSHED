@@ -1,0 +1,13 @@
+{
+  "title": "DriveSheetsSync v2.3 remediation blocked (no Notion/Google access)",
+  "description": "Cannot execute DriveSheetsSync v2.3 remediation from current session. Required work needs live Notion DB schema edits and Google Drive/Apps Script access, but network_access=restricted and NOTION/GOOGLE tokens are unavailable. Unable to add Lifecycle property, fix Execution-Logs schema drift, share DBs, run DriveSheetsSync/validation, or seed System State Radar.",
+  "severity": "Critical",
+  "source": "DriveSheetsSync",
+  "metadata": {
+    "network_access": "restricted",
+    "notion_token_present": false,
+    "google_credentials_present": false,
+    "component": "DriveSheetsSync v2.3 remediation"
+  },
+  "next_step": "Provide Notion + Google access or run from allowed environment; then perform schema updates (Lifecycle property, Execution-Logs fix, DB sharing), rerun DriveSheetsSync and validation outputs, seed System State Radar, and update docs/agent instructions."
+}

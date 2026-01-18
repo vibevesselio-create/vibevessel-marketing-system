@@ -1,0 +1,10 @@
+{
+  "task_title": "Fix Artist/Playlist relation updates in soundcloud_download_prod_merge-2.py",
+  "task_type": "Code Implementation",
+  "status": "Ready",
+  "priority": "Critical",
+  "agent_name": "Cursor MM1 Agent",
+  "description": "Integrate Artist and Playlist relation linking into the main production workflow.\n\nCURRENT STATE:\n- upsert_track_page() creates/updates tracks but does NOT link Artist relations\n- link_track_to_artist() exists in spotify_integration_module.py but is NEVER called from soundcloud_download_prod_merge-2.py\n- Tracks processed by batch/single/all modes have empty Artist relations\n\nREQUIRED CHANGES:\n\n1. After upsert_track_page() returns a page_id (around line 3665/3673), add:\n   - Extract artist name from meta['artist']\n   - Call find_or_create_artist_page() to get artist_page_id\n   - Call link_track_to_artist(page_id, artist_page_id)\n\n2. Integration options:\n   A) Import and instantiate SpotifyNotionSync from spotify_integration_module.py\n   B) Create standalone functions for artist relation management\n   C) Refactor artist functions out of spotify_integration_module into shared module\n\n3. Handle gracefully:\n   - Missing ARTISTS_DB_ID (skip if not configured)\n   - Artist not found (create new artist page)\n   - API errors (log warning, continue processing)\n\nFILES TO MODIFY:\n- /monolithic-scripts/soundcloud_download_prod_merge-2.py: upsert_track_page() function\n\nREFERENCE:\n- spotify_integration_module.py:872-942 (find_or_create_artist_page, link_track_to_artist)\n\nSUCCESS CRITERIA:\n- Tracks processed by soundcloud_download_prod_merge-2.py have Artist relations populated\n- No breaking changes to existing workflow\n- Graceful fallback if ARTISTS_DB_ID not configured",
+  "handoff_instructions": "1. Read spotify_integration_module.py:872-942 for reference implementation\n2. Add artist relation linking after upsert_track_page() in soundcloud_download_prod_merge-2.py\n3. Test with --mode single to verify Artist relations are populated\n4. Create handoff to Claude Code Agent for validation",
+  "created_at": "20260115T191600Z"
+}

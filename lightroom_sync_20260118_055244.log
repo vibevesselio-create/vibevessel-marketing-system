@@ -1,0 +1,38 @@
+2026-01-18 05:52:44,459 - INFO - ============================================================
+2026-01-18 05:52:44,459 - INFO - Starting Lightroom to Google Drive SQL Sync
+2026-01-18 05:52:44,459 - INFO - Source catalog: /Volumes/SYSTEM_SSD/master-lightroom-2/Master_Lightroom.lrcat
+2026-01-18 05:52:44,459 - INFO - Output database: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-vibe.vessel.io@gmail.com/My Drive/VibeVessel/Databases/lightroom_library_sync.db
+2026-01-18 05:52:44,459 - INFO - ============================================================
+2026-01-18 05:52:44,459 - INFO - Connecting to Lightroom catalog...
+2026-01-18 05:52:45,103 - INFO - Catalog statistics: {
+  "total_images": 73343,
+  "images_with_exif": 73343,
+  "collections": 117,
+  "folders": 63236,
+  "keywords": 1004
+}
+2026-01-18 05:52:45,103 - INFO - Initializing sync database...
+2026-01-18 05:52:47,032 - INFO - Backed up existing database to /Users/brianhellemn/Projects/github-production/data/lightroom_sync_backups/lightroom_library_sync_20260118_055245.db
+2026-01-18 05:52:47,033 - INFO - Database schema initialized
+2026-01-18 05:52:47,033 - INFO - Fetching images from catalog...
+2026-01-18 05:52:53,270 - INFO - Found 73343 images
+2026-01-18 05:52:59,080 - INFO - Synced 73343 images
+2026-01-18 05:52:59,080 - INFO - Fetching collections...
+2026-01-18 05:52:59,088 - INFO - Found 117 collections
+2026-01-18 05:52:59,536 - INFO - Synced 117 collections
+2026-01-18 05:52:59,536 - INFO - Syncing collection-image relationships...
+2026-01-18 05:52:59,551 - INFO - Fetching keywords...
+2026-01-18 05:52:59,561 - INFO - Found 1004 keywords
+2026-01-18 05:52:59,596 - INFO - Synced 1004 keywords
+2026-01-18 05:52:59,596 - INFO - Fetching folders...
+2026-01-18 05:53:00,075 - INFO - Found 63236 folders
+2026-01-18 05:53:01,083 - INFO - Synced 63236 folders
+2026-01-18 05:53:01,087 - INFO - ============================================================
+2026-01-18 05:53:01,087 - INFO - SYNC COMPLETED SUCCESSFULLY
+2026-01-18 05:53:01,087 - INFO - Duration: 16.62 seconds
+2026-01-18 05:53:01,087 - INFO - Images synced: 73343
+2026-01-18 05:53:01,087 - INFO - Collections synced: 117
+2026-01-18 05:53:01,087 - INFO - Keywords synced: 1004
+2026-01-18 05:53:01,087 - INFO - Folders synced: 63236
+2026-01-18 05:53:01,087 - INFO - Database location: /Users/brianhellemn/Library/CloudStorage/GoogleDrive-vibe.vessel.io@gmail.com/My Drive/VibeVessel/Databases/lightroom_library_sync.db
+2026-01-18 05:53:01,087 - INFO - ============================================================

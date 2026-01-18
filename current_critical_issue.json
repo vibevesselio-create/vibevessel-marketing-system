@@ -1,0 +1,327 @@
+{
+  "issue": {
+    "object": "page",
+    "id": "2e6e7361-6c27-8174-9eb5-f5036e67b90e",
+    "created_time": "2026-01-12T01:37:00.000Z",
+    "last_edited_time": "2026-01-12T05:09:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "c87cf466-8589-48b7-a20a-595b493b6999"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "c87cf466-8589-48b7-a20a-595b493b6999"
+    },
+    "cover": null,
+    "icon": null,
+    "parent": {
+      "type": "database_id",
+      "database_id": "229e7361-6c27-808e-bf06-c202b10b5166"
+    },
+    "archived": false,
+    "in_trash": false,
+    "is_locked": false,
+    "properties": {
+      "URL": {
+        "id": "44lu",
+        "type": "url",
+        "url": null
+      },
+      "Provided-By": {
+        "id": "%3AG%7Cm",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "resolve_sha": {
+        "id": "%3BhST",
+        "type": "rich_text",
+        "rich_text": []
+      },
+      "Agent-Projects": {
+        "id": "%3CiEl",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "bin_name": {
+        "id": "%3CpaB",
+        "type": "rich_text",
+        "rich_text": []
+      },
+      "Related Chats": {
+        "id": "B%3AFx",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Tasks Needed": {
+        "id": "BDND",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Created by": {
+        "id": "BzTK",
+        "type": "created_by",
+        "created_by": {
+          "object": "user",
+          "id": "c87cf466-8589-48b7-a20a-595b493b6999",
+          "name": "Claude MM1 Agent",
+          "avatar_url": "https://s3-us-west-2.amazonaws.com/public.notion-static.com/e59a7f24-9375-459e-b0a2-47f0eceb094f/867bf639-0929-4d87-adbb-10e62e02dc05.png",
+          "type": "bot",
+          "bot": {}
+        }
+      },
+      "Source": {
+        "id": "ET%40q",
+        "type": "select",
+        "select": null
+      },
+      "Description": {
+        "id": "GTp%3C",
+        "type": "rich_text",
+        "rich_text": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Deliverable 'Extract SoundCloud integration' from plan 'MUSIC_WORKFLOW_BIFURCATION_STRATEGY.md' is missing. Type: unknown. Details: Extract SoundCloud integration",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Deliverable 'Extract SoundCloud integration' from plan 'MUSIC_WORKFLOW_BIFURCATION_STRATEGY.md' is missing. Type: unknown. Details: Extract SoundCloud integration",
+            "href": null
+          }
+        ]
+      },
+      "Send-Webhook-1": {
+        "id": "H%7CVh",
+        "type": "checkbox",
+        "checkbox": false
+      },
+      "services": {
+        "id": "P%5Dxn",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Notion-AI-Research-Analysis-Docs": {
+        "id": "S%3DSS",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "scripts": {
+        "id": "Syw%3E",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Item-Type": {
+        "id": "T%5D%7Dj",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Priority": {
+        "id": "WT%3C%7D",
+        "type": "select",
+        "select": {
+          "id": "zOMA",
+          "name": "Medium",
+          "color": "brown"
+        }
+      },
+      "Inbox": {
+        "id": "XZT_",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Created time": {
+        "id": "YuFW",
+        "type": "created_time",
+        "created_time": "2026-01-12T01:37:00.000Z"
+      },
+      "User-Workflows": {
+        "id": "%5COy%3F",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "resolve_id": {
+        "id": "%5CRsF",
+        "type": "rich_text",
+        "rich_text": []
+      },
+      "Project": {
+        "id": "%5E%7B%3Db",
+        "type": "rich_text",
+        "rich_text": []
+      },
+      "Client-Areas": {
+        "id": "%60%3C%3Dp",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Agent-Workflows": {
+        "id": "dGb~",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Agent-Tasks": {
+        "id": "ihi%3D",
+        "type": "relation",
+        "relation": [
+          {
+            "id": "2e6e7361-6c27-8180-9960-f6a4c232bb11"
+          }
+        ],
+        "has_more": false
+      },
+      "Databases": {
+        "id": "j~vS",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "last_synced": {
+        "id": "lheT",
+        "type": "date",
+        "date": null
+      },
+      "Marketing Channels": {
+        "id": "o%3CU%3E",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Last edited by": {
+        "id": "p%7CYF",
+        "type": "last_edited_by",
+        "last_edited_by": {
+          "object": "user",
+          "id": "c87cf466-8589-48b7-a20a-595b493b6999",
+          "name": "Claude MM1 Agent",
+          "avatar_url": "https://s3-us-west-2.amazonaws.com/public.notion-static.com/e59a7f24-9375-459e-b0a2-47f0eceb094f/867bf639-0929-4d87-adbb-10e62e02dc05.png",
+          "type": "bot",
+          "bot": {}
+        }
+      },
+      "Pages With Issue": {
+        "id": "rPGp",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Status": {
+        "id": "st%5DE",
+        "type": "status",
+        "status": {
+          "id": "4a97bedb-cedb-4eec-aa48-3e6463802499",
+          "name": "Unreported",
+          "color": "red"
+        }
+      },
+      "Last edited time": {
+        "id": "t%3Fq%5C",
+        "type": "last_edited_time",
+        "last_edited_time": "2026-01-12T05:09:00.000Z"
+      },
+      "Documents": {
+        "id": "xMCh",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Type": {
+        "id": "%7BzpB",
+        "type": "multi_select",
+        "multi_select": []
+      },
+      "Clients": {
+        "id": "%7CDZY",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Create A Task": {
+        "id": "%7COoX",
+        "type": "button",
+        "button": {}
+      },
+      "Folder": {
+        "id": "%7C%5EXF",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Emails": {
+        "id": "%7DZfn",
+        "type": "relation",
+        "relation": [],
+        "has_more": false
+      },
+      "Name": {
+        "id": "title",
+        "type": "title",
+        "title": [
+          {
+            "type": "text",
+            "text": {
+              "content": "Missing Deliverable: Extract SoundCloud integration",
+              "link": null
+            },
+            "annotations": {
+              "bold": false,
+              "italic": false,
+              "strikethrough": false,
+              "underline": false,
+              "code": false,
+              "color": "default"
+            },
+            "plain_text": "Missing Deliverable: Extract SoundCloud integration",
+            "href": null
+          }
+        ]
+      },
+      "For User": {
+        "id": "556dab9f-bb79-4d8f-a101-5436b5538806",
+        "type": "people",
+        "people": []
+      },
+      "Date Completed": {
+        "id": "5a90e4b3-8260-40c5-b04d-544d240ebff4",
+        "type": "date",
+        "date": null
+      },
+      "Tags": {
+        "id": "cbcdd138-3904-40e7-b7b3-1008daa36b55",
+        "type": "multi_select",
+        "multi_select": []
+      },
+      "From User": {
+        "id": "ee300e90-2861-43b5-bbb0-4469df8aa1cf",
+        "type": "people",
+        "people": []
+      }
+    },
+    "url": "https://www.notion.so/Missing-Deliverable-Extract-SoundCloud-integration-2e6e73616c2781749eb5f5036e67b90e",
+    "public_url": null
+  },
+  "title": "Missing Deliverable: Extract SoundCloud integration",
+  "id": "2e6e7361-6c27-8174-9eb5-f5036e67b90e",
+  "url": "https://www.notion.so/Missing-Deliverable-Extract-SoundCloud-integration-2e6e73616c2781749eb5f5036e67b90e",
+  "priority": "Medium",
+  "status": "Unreported",
+  "description": "Deliverable 'Extract SoundCloud integration' from plan 'MUSIC_WORKFLOW_BIFURCATION_STRATEGY.md' is missing. Type: unknown. Details: Extract SoundCloud integration"
+}

@@ -1,0 +1,50 @@
+{
+  "timestamp": "2026-01-07T16:35:07.874308+00:00",
+  "tests": [
+    {
+      "test_name": "Folder Structure Exists",
+      "status": "failed",
+      "message": "workspace-databases folder not found at /Users/brianhellemn/Library/CloudStorage/GoogleDrive-brian@serenmedia.co/My Drive/workspace-databases",
+      "details": {}
+    },
+    {
+      "test_name": "Archive Folder Creation",
+      "status": "skipped",
+      "message": "workspace-databases folder not found - skipping test",
+      "details": {}
+    },
+    {
+      "test_name": "Agent Folder Access",
+      "status": "passed",
+      "message": "All 1 agent folders are accessible",
+      "details": {
+        "accessible_count": 1
+      }
+    },
+    {
+      "test_name": "Notion Database Sync Validation",
+      "status": "skipped",
+      "message": "Notion database sync validation requires Drive API integration",
+      "details": {
+        "note": "This test requires Google Drive API access to verify folder sync"
+      }
+    },
+    {
+      "test_name": "Performance Folder Operations",
+      "status": "passed",
+      "message": "Performance tests completed",
+      "details": {
+        "folder_creation_ms": 0.11,
+        "file_write_ms": 0.17,
+        "folder_listing_ms": 0.04,
+        "archive_creation_ms": 0.06
+      }
+    }
+  ],
+  "summary": {
+    "total": 5,
+    "passed": 2,
+    "failed": 1,
+    "skipped": 2
+  }
+}

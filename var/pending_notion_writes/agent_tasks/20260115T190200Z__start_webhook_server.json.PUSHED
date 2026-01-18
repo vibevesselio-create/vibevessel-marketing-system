@@ -1,0 +1,25 @@
+{
+  "title": "Start webhook server and confirm localhost:5001 health",
+  "priority": "High",
+  "status": "Not Started",
+  "dependency_status": "Ready",
+  "assigned_agents": ["Cursor MM1"],
+  "review_handoff_to": ["Codex MM1"],
+  "objective": "Bring the Notion webhook server online locally and verify /health.",
+  "preflight": [
+    "Locate the active webhook server script path",
+    "Confirm required env vars are present (.env or api.env)"
+  ],
+  "steps": [
+    "Start the webhook server process (foreground or LaunchAgent)",
+    "Verify listener: lsof -iTCP:5001 -sTCP:LISTEN",
+    "Check local health: curl -I http://localhost:5001/health",
+    "Capture logs for startup errors"
+  ],
+  "success_criteria": [
+    "Port 5001 is listening",
+    "Local /health returns HTTP 200",
+    "No startup errors in logs"
+  ],
+  "created_at": "20260115T190200Z"
+}
