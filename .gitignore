@@ -30,3 +30,6 @@ security_findings.json
 var/state/**/*.json
 var/pending_notion_writes/**/*.json
 
+
+# OAuth credentials (never commit)
+credentials/google-oauth/*.json
