@@ -4978,59 +4978,55 @@ function ensureDbFolder_(parentId, ds) {
     }
   }
 
-  // Phase 1: Initial check for existing folders (without lock for read-only check)
-  let matchingFolders = findMatchingFolders_();
+  // FIX 2026-01-18: Acquire lock BEFORE any folder checks to eliminate race condition window
+  // Previous pattern: check → lock → re-check → create (race in first check)
+  // Fixed pattern: lock → check → create if needed (no race window)
+  const lock = LockService.getScriptLock();
+  const lockWaitMs = CONFIG.SYNC.LOCK_WAIT_MS || 10000;
+  let matchingFolders = [];
 
-  // Phase 2: If no folders found, we need to create one - use lock to prevent race conditions
-  if (matchingFolders.length === 0) {
-    const lock = LockService.getScriptLock();
-    const lockWaitMs = CONFIG.SYNC.LOCK_WAIT_MS || 10000;
+  // Try to acquire lock with exponential backoff retry
+  let lockAcquired = lock.tryLock(lockWaitMs);
+  if (!lockAcquired) {
+    for (const waitMs of [1000, 2000, 4000]) {
+      Utilities.sleep(waitMs);
+      lockAcquired = lock.tryLock(lockWaitMs);
+      if (lockAcquired) break;
+    }
+  }
+
+  if (lockAcquired) {
     try {
-      // Wait to acquire lock before creating folder to avoid duplicates
-      if (lock.tryLock(lockWaitMs)) {
-        try {
-          // RE-CHECK after acquiring lock - another execution may have created the folder
-          matchingFolders = findMatchingFolders_();
-
-          if (matchingFolders.length === 0) {
-            // Still no folder - safe to create
-            const newFolder = parent.createFolder(expectedName);
-            console.log(`[INFO] Created new database folder: ${expectedName}`);
-
-            // Track newly created folder in Notion Folders database
-            // Note: UL is not available in this context, passing null (function handles gracefully)
-            try {
-              getOrCreateFolderInNotion_(newFolder, null);
-            } catch (e) {
-              console.warn(`[WARN] Could not track new folder in Notion: ${e}`);
-            }
-
-            return newFolder;
-          }
-          // Else: folder was created while we waited for lock, fall through to consolidation logic
-        } finally {
-          lock.releaseLock();
-        }
-      } else {
-        // Could not acquire lock - another execution is likely creating the folder
-        // Wait briefly and re-check, but avoid creating without lock to prevent duplicates
-        Utilities.sleep(2000);
-        matchingFolders = findMatchingFolders_();
-        if (matchingFolders.length === 0) {
-          const msg = `Lock timeout creating folder for ${ds.id}; deferring creation to avoid duplicates`;
-          console.warn(`[WARN] ${msg}`);
-          throw new Error(msg);
-        }
-      }
-    } catch (lockErr) {
-      console.warn(`[WARN] Lock error while creating folder for ${ds.id}: ${lockErr}`);
-      // Re-check one more time and defer if still missing
+      // Phase 1: Check for existing folders INSIDE lock (no race condition)
       matchingFolders = findMatchingFolders_();
+
+      // Phase 2: If no folders found, create one (still inside lock)
       if (matchingFolders.length === 0) {
-        const msg = `Lock failure creating folder for ${ds.id}; deferring creation to avoid duplicates`;
-        console.warn(`[WARN] ${msg}`);
-        throw new Error(msg);
+        const newFolder = parent.createFolder(expectedName);
+        console.log(`[INFO] Created new database folder: ${expectedName}`);
+
+        // Track newly created folder in Notion Folders database
+        try {
+          getOrCreateFolderInNotion_(newFolder, null);
+        } catch (e) {
+          console.warn(`[WARN] Could not track new folder in Notion: ${e}`);
+        }
+
+        return newFolder;
       }
+      // Else: folder exists, fall through to consolidation logic
+    } finally {
+      lock.releaseLock();
+    }
+  } else {
+    // Could not acquire lock after retries - check for folder without creating
+    console.warn(`[WARN] Lock timeout for database ${ds.id}; checking for existing folder`);
+    Utilities.sleep(2000);
+    matchingFolders = findMatchingFolders_();
+    if (matchingFolders.length === 0) {
+      const msg = `Lock timeout creating folder for ${ds.id}; deferring creation to avoid duplicates`;
+      console.warn(`[WARN] ${msg}`);
+      throw new Error(msg);
     }
   }
 
