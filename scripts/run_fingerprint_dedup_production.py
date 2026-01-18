@@ -18,9 +18,9 @@ WORKFLOW ORDER:
    - Strategy 1: Fingerprint matching (PRIMARY - most accurate, when available)
    - Strategy 2: Fuzzy matching (FALLBACK - for items without fingerprints)
    - Strategy 3: N-gram matching (FALLBACK - for items without fingerprints)
-5. DJAY PRO SYNC (optional, via --djay-sync):
+5. DJAY PRO SYNC (runs by default, use --no-djay-sync to skip):
    - Step 5a: Export djay Pro library to CSV (living documents)
-   - Step 5b: Sync djay Pro IDs to Notion tracks
+   - Step 5b: Sync djay Pro IDs to Notion tracks (+ BPM, Key, play counts)
    - Step 5c: Sync DJ sessions to Notion Calendar
    - Step 5d: Sync activity/play counts to Notion
 
@@ -29,6 +29,7 @@ IMPORTANT:
 - Items without fingerprints will use fallback strategies
 - DO NOT use run_dedup_bypass.py - it is deprecated and redirects here
 
+Version: 2026-01-18 - djay Pro sync now runs by default; syncs BPM, Key, play counts
 Version: 2026-01-18 - Added modular djay Pro library sync integration
 Version: 2026-01-14 - Removed 80% coverage requirement - dedup proceeds with available fingerprints
 Version: 2026-01-13 - Fixed deduplication to REQUIRE and PRIORITIZE fingerprints
@@ -1647,37 +1648,41 @@ Examples:
   # Full run with volume-by-volume scan reporting
   python run_fingerprint_dedup_production.py --execute --scan-all-volumes
 
-  # djay Pro Library Sync Examples:
-  # Full djay sync (export + ID sync + sessions + activity) - dry run
-  python run_fingerprint_dedup_production.py --djay-sync-only
+  # RECOMMENDED: Full production run (fingerprinting + dedup + djay sync)
+  # This is the DEFAULT mode - all steps run automatically
+  python run_fingerprint_dedup_production.py
 
-  # Full djay sync - execute
-  python run_fingerprint_dedup_production.py --djay-sync-only --execute
+  # Skip djay sync if you only want fingerprinting/dedup
+  python run_fingerprint_dedup_production.py --no-djay-sync
+
+  # djay Pro Library Sync Examples (standalone modes):
+  # Run only djay sync (skip fingerprint/dedup steps)
+  python run_fingerprint_dedup_production.py --djay-sync-only
 
   # Export djay Pro library only (to CSV files)
   python run_fingerprint_dedup_production.py --djay-export-only
 
   # Sync djay Pro IDs to Notion only
-  python run_fingerprint_dedup_production.py --djay-id-sync-only --execute
+  python run_fingerprint_dedup_production.py --djay-id-sync-only
 
   # Sync DJ sessions to Notion Calendar only
   python run_fingerprint_dedup_production.py --djay-session-sync-only
 
-  # Full production run WITH djay sync
-  python run_fingerprint_dedup_production.py --execute --djay-sync
-
   # djay sync using existing CSV exports (skip re-export)
-  python run_fingerprint_dedup_production.py --djay-sync-only --djay-skip-export --execute
+  python run_fingerprint_dedup_production.py --djay-sync-only --djay-skip-export
         """
     )
-    parser.add_argument("--execute", action="store_true", help="Execute fingerprint embedding and sync (default: dry-run)")
+    # Execution modes - all default to EXECUTE (use --dry-run flags to preview)
+    parser.add_argument("--execute", action="store_true", default=True, help="[DEFAULT] Execute fingerprint embedding and sync")
+    parser.add_argument("--dry-run", action="store_true", help="Run in dry-run mode (preview only, no changes)")
     parser.add_argument("--embed-only", action="store_true", help="Only run fingerprint embedding")
     parser.add_argument("--sync-only", action="store_true", help="Only run fingerprint sync")
     parser.add_argument("--dedup-only", action="store_true", help="Only run deduplication")
     parser.add_argument("--eagle-first", action="store_true", help="Process Eagle library items first (newest-first, Notion reconciliation)")
-    parser.add_argument("--dedup-dry-run", action="store_true", default=True, help="Run deduplication in dry-run mode (default)")
-    parser.add_argument("--dedup-execute", action="store_true", help="Execute deduplication (not dry-run)")
-    parser.add_argument("--cleanup", action="store_true", help="Enable cleanup of duplicates (USE WITH CAUTION)")
+    parser.add_argument("--dedup-dry-run", action="store_true", help="Run deduplication in dry-run mode (preview only)")
+    parser.add_argument("--dedup-execute", action="store_true", default=True, help="[DEFAULT] Execute deduplication")
+    parser.add_argument("--cleanup", action="store_true", default=True, help="[DEFAULT] Enable cleanup of duplicates")
+    parser.add_argument("--no-cleanup", action="store_true", help="Disable cleanup of duplicates (keep them)")
     parser.add_argument("--min-similarity", type=float, default=0.75, help="Minimum similarity threshold (0.0-1.0, default: 0.75)")
     parser.add_argument("--limit", type=int, default=None, help="Limit number of items to process (for testing)")
     parser.add_argument("--batch-size", type=int, default=200, help="Batch size for processing (default: 200)")
@@ -1687,8 +1692,9 @@ Examples:
     parser.add_argument("--scan-only", action="store_true", help="Only run music directories scan (skip other steps)")
     parser.add_argument("--scan-volumes", type=str, nargs="*", help="Specific volumes to scan (e.g., /Volumes/VIBES /Volumes/SYSTEM_SSD)")
     parser.add_argument("--scan-all-volumes", action="store_true", help="Scan all configured volumes one-by-one with detailed reporting")
-    # djay Pro sync options (2026-01-18)
-    parser.add_argument("--djay-sync", action="store_true", help="Run djay Pro library sync (export + ID sync + sessions + activity)")
+    # djay Pro sync options (2026-01-18) - djay sync runs by default
+    parser.add_argument("--djay-sync", action="store_true", help="[DEPRECATED - now default] Run djay Pro library sync")
+    parser.add_argument("--no-djay-sync", action="store_true", help="Skip djay Pro sync (it runs by default)")
     parser.add_argument("--djay-sync-only", action="store_true", help="Only run djay Pro sync (skip fingerprint/dedup steps)")
     parser.add_argument("--djay-export-only", action="store_true", help="Only export djay Pro library to CSV")
     parser.add_argument("--djay-id-sync-only", action="store_true", help="Only sync djay Pro IDs to Notion")
@@ -1770,8 +1776,11 @@ Examples:
             # Start new workflow
             state_manager.start_workflow()
     
-    # Determine deduplication mode
-    dedup_dry_run = not args.dedup_execute
+    # Determine execution modes (--dry-run overrides all execute defaults)
+    is_dry_run = args.dry_run
+    execute_mode = not is_dry_run  # Default is execute unless --dry-run specified
+    dedup_dry_run = args.dedup_dry_run or is_dry_run  # dedup dry run if either flag
+    cleanup_enabled = cleanup_enabled and not args.no_cleanup and not is_dry_run
 
     # Handle scan-only mode
     if args.scan_only:
@@ -1779,7 +1788,7 @@ Examples:
         logger.info("MUSIC DIRECTORIES SCAN ONLY MODE")
         logger.info("=" * 80)
         scan_results = run_music_directories_scan(
-            execute=args.execute,
+            execute=execute_mode,
             volumes=args.scan_volumes,
             scan_all_volumes=args.scan_all_volumes,
             state_manager=state_manager
@@ -1802,7 +1811,7 @@ Examples:
         logger.info("DJAY PRO SYNC ONLY MODE")
         logger.info("=" * 80)
         djay_results = run_djay_pro_full_sync(
-            dry_run=not args.execute,
+            dry_run=not execute_mode,
             skip_export=args.djay_skip_export,
             similarity_threshold=args.djay_similarity,
             state_manager=state_manager
@@ -1823,7 +1832,7 @@ Examples:
         logger.info("DJAY PRO ID SYNC ONLY MODE")
         logger.info("=" * 80)
         id_sync_results = run_djay_pro_id_sync(
-            dry_run=not args.execute,
+            dry_run=not execute_mode,
             similarity_threshold=args.djay_similarity,
             state_manager=state_manager
         )
@@ -1843,12 +1852,12 @@ Examples:
     if args.eagle_first:
         logger.info("Mode: EAGLE-FIRST (newest Eagle items → Notion reconciliation)")
     if not args.dedup_only and not args.sync_only:
-        logger.info(f"Fingerprint Embedding: {'EXECUTE' if args.execute else 'DRY RUN'}")
+        logger.info(f"Fingerprint Embedding: {'EXECUTE' if execute_mode else 'DRY RUN'}")
     if not args.dedup_only:
-        logger.info(f"Fingerprint Sync: {'EXECUTE' if args.execute else 'DRY RUN'}")
+        logger.info(f"Fingerprint Sync: {'EXECUTE' if execute_mode else 'DRY RUN'}")
     if not args.sync_only and not args.embed_only:
         logger.info(f"Deduplication: {'DRY RUN' if dedup_dry_run else 'EXECUTE'}")
-        if args.cleanup:
+        if cleanup_enabled:
             logger.warning("⚠️  CLEANUP ENABLED - Duplicates will be moved to trash!")
     if args.scan_directories or args.scan_all_volumes:
         logger.info(f"Music Directories Scan: ENABLED")
@@ -1884,7 +1893,7 @@ Examples:
     if should_run_embed or should_run_sync:
         if args.eagle_first and should_run_embed:
             eagle_first_results = run_eagle_first_processing(
-                execute=args.execute,
+                execute=execute_mode,
                 limit=args.limit,
                 eagle_base=get_unified_config().get("eagle_api_url") or os.getenv("EAGLE_API_BASE", ""),
                 eagle_token=get_unified_config().get("eagle_token") or os.getenv("EAGLE_TOKEN", ""),
@@ -1902,7 +1911,7 @@ Examples:
             logger.info("Eagle-first mode requires embedding; running sync-only fallback")
             if should_run_sync:
                 sync_results = run_fingerprint_sync(
-                    execute=args.execute,
+                    execute=execute_mode,
                     limit=args.limit,
                     tracks=None,
                     state_manager=state_manager,
@@ -2008,7 +2017,7 @@ Examples:
                     # Step 1: Embed Fingerprints for this batch
                     if should_run_embed:
                         batch_embed_results = run_fingerprint_embedding(
-                            execute=args.execute,
+                            execute=execute_mode,
                             limit=None,  # Process all tracks in the batch
                             tracks=unprocessed_tracks,
                             state_manager=None,  # Don't use state manager per-batch
@@ -2034,7 +2043,7 @@ Examples:
                     # Step 2: Sync fingerprints for this batch (if not already done in embed step)
                     if should_run_sync and not should_run_embed:
                         batch_sync_results = run_fingerprint_sync(
-                            execute=args.execute,
+                            execute=execute_mode,
                             limit=None,
                             tracks=unprocessed_tracks,
                             state_manager=None,
@@ -2068,11 +2077,11 @@ Examples:
 
                 # Fallback to Eagle-only processing
                 if should_run_embed:
-                    embed_results = run_fingerprint_embedding(execute=args.execute, limit=args.limit, tracks=None, state_manager=state_manager)
+                    embed_results = run_fingerprint_embedding(execute=execute_mode, limit=args.limit, tracks=None, state_manager=state_manager)
                     results["fingerprint_embedding"] = embed_results
 
                 if should_run_sync:
-                    sync_results = run_fingerprint_sync(execute=args.execute, limit=args.limit, tracks=None, state_manager=state_manager, sync_only=args.sync_only)
+                    sync_results = run_fingerprint_sync(execute=execute_mode, limit=args.limit, tracks=None, state_manager=state_manager, sync_only=args.sync_only)
                     results["fingerprint_sync"] = sync_results
 
                     if "error" in sync_results:
@@ -2098,7 +2107,7 @@ Examples:
     if should_run_dedup:
         dedup_results = run_deduplication(
             dry_run=dedup_dry_run,
-            cleanup=args.cleanup,
+            cleanup=cleanup_enabled,
             min_similarity=args.min_similarity,
             state_manager=state_manager
         )
@@ -2116,7 +2125,7 @@ Examples:
     # Step 5: Music Directories Scan (optional, runs after track processing)
     if should_run_scan:
         scan_results = run_music_directories_scan(
-            execute=args.execute,
+            execute=execute_mode,
             volumes=args.scan_volumes,
             scan_all_volumes=args.scan_all_volumes,
             state_manager=state_manager
@@ -2132,11 +2141,11 @@ Examples:
             logger.info(f"   Duplicate groups: {scan_results.get('duplicate_groups', 0)}")
             logger.info(f"   Cross-volume duplicates: {scan_results.get('cross_volume_duplicate_groups', 0)}")
 
-    # Step 6: djay Pro Library Sync (optional, runs after other processing)
-    should_run_djay_sync = args.djay_sync
+    # Step 6: djay Pro Library Sync (runs by default, use --no-djay-sync to skip)
+    should_run_djay_sync = not getattr(args, 'no_djay_sync', False)
     if should_run_djay_sync:
         djay_sync_results = run_djay_pro_full_sync(
-            dry_run=not args.execute,
+            dry_run=not execute_mode,
             skip_export=args.djay_skip_export,
             similarity_threshold=args.djay_similarity,
             state_manager=state_manager
