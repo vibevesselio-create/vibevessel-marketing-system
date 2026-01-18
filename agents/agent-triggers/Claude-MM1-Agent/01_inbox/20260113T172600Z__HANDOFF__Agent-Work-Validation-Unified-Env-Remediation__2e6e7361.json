@@ -1,0 +1,17 @@
+{
+  "task_id": "2e6e7361-6c27-81f3-validation",
+  "task_title": "Agent Work Validation Task - Unified Env Remediation Verification",
+  "task_url": "https://www.notion.so/AUDIT-FINDING-Cursor-MM1-Unified-Env-System-Failures-Multiple-User-Escalations-2e6e73616c2781f3a847f29d0976ddc3",
+  "project_id": null,
+  "project_title": "Unified Env System Remediation",
+  "description": "## Context\nThis is a VALIDATION task to verify the work performed by Cursor MM1 Agent for Unified Env Token Pattern Remediation.\n\n## Validation Scope\nVerify that:\n1. All 87 non-compliant scripts have been updated to use shared_core.notion.token_manager\n2. No remaining direct os.getenv('NOTION_TOKEN') patterns exist (except in token_manager itself)\n3. All updated scripts are functional\n4. Changes are documented and committed\n\n## Validation Actions\n1. Run: grep -r \"os.getenv.*NOTION_TOKEN\" --include=\"*.py\" | grep -v token_manager.py | grep -v .venv | wc -l\n   - Expected result: 0 (or very low number for legitimate exceptions)\n2. Run: grep -r \"from shared_core.notion.token_manager import\" --include=\"*.py\" | wc -l\n   - Expected result: Higher than previous audit (was 85)\n3. Test a sample of updated scripts to verify functionality\n4. Review git log for remediation commits\n5. Update Notion issue status to 'Resolved' if validation passes\n\n## Success Criteria\n- [ ] Zero (or documented exceptions) non-compliant patterns remain\n- [ ] All scripts using token_manager import are functional\n- [ ] Git history shows remediation commits\n- [ ] Issue status updated to 'Resolved'\n- [ ] Validation report created\n\n## If Validation Fails\n- Document specific failures\n- Create new handoff to Cursor MM1 Agent with specific remediation tasks\n- Keep issue status as 'Solution In Progress'\n\n## MANDATORY DOCUMENTATION\nCreate validation report documenting:\n- Scripts audited\n- Test results\n- Any exceptions or issues found\n- Final status",
+  "status": "Pending",
+  "agent_name": "Claude MM1 Agent",
+  "agent_type": "MM1",
+  "handoff_instructions": "This is a VALIDATION task. Do NOT execute remediation - only VERIFY that remediation was completed correctly.\n\n1. Run audit commands to count compliant vs non-compliant patterns\n2. Test sample scripts\n3. Review git commits\n4. Update Notion issue status based on findings\n5. Create validation report\n\n**MANDATORY:** Move this trigger file to 02_processed after reading. Document all findings in Notion.",
+  "created_at": "2026-01-13T17:26:00Z",
+  "priority": "High",
+  "source_agent": "Claude Code (Cowork Mode)",
+  "depends_on_task": "Unified Env Token Pattern Remediation",
+  "validation_type": "post_remediation_verification"
+}

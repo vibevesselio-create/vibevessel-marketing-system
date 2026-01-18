@@ -1,0 +1,18 @@
+{
+  "task_id": "2e6e7361-6c27-81f3-a847-f29d0976ddc3",
+  "task_title": "Unified Env Token Pattern Remediation",
+  "task_url": "https://www.notion.so/AUDIT-FINDING-Cursor-MM1-Unified-Env-System-Failures-Multiple-User-Escalations-2e6e73616c2781f3a847f29d0976ddc3",
+  "project_id": null,
+  "project_title": "Unified Env System Remediation",
+  "description": "## Context\nCritical audit finding: 87 scripts use non-compliant os.getenv() patterns for NOTION token access instead of the canonical shared_core.notion.token_manager.\n\n## Issue Details\n- **Issue Title:** [AUDIT FINDING] Cursor MM1 Unified Env System Failures - Multiple User Escalations\n- **Priority:** Critical\n- **Root Cause:** Inconsistent token access patterns across codebase\n- **Canonical Pattern:** `from shared_core.notion.token_manager import get_notion_token`\n\n## Non-Compliant Scripts to Remediate (Priority Order)\n1. sync_config/item_types_manager.py\n2. seren-media-workflows/python-scripts/monitor_webhook_server.py\n3. seren-media-workflows/libs/seren_utils/notion.py\n4. monolithic-scripts/soundcloud_download_prod_merge-2.py\n5. monolithic-scripts/spotify_integration_module.py\n6. resolve_vibes_reorganization_issue.py\n7. check_playlist_tracks_needing_processing.py\n8. execute_notion_workflow.py\n9. scripts/music_track_sync_auto_detect.py\n10. scripts/clear_eagle_id.py\n\n## Required Actions\n1. Update each non-compliant script to use:\n   ```python\n   from shared_core.notion.token_manager import get_notion_token\n   token = get_notion_token()\n   ```\n2. Remove direct os.getenv('NOTION_TOKEN') calls\n3. Test each updated script to verify functionality\n4. Document changes in git commit\n5. Update Notion issue with resolution status\n\n## Success Criteria\n- [ ] All 87 non-compliant scripts updated\n- [ ] All scripts tested and functional\n- [ ] Git commit with changes documented\n- [ ] Issue marked as Resolved\n\n## MANDATORY NEXT HANDOFF\nUpon completion, create handoff trigger for Claude MM1 Agent to perform:\n- Full codebase audit to verify no remaining non-compliant patterns\n- Update project documentation\n- Close related issue in Notion",
+  "status": "Ready",
+  "agent_name": "Cursor MM1 Agent",
+  "agent_type": "MM1",
+  "handoff_instructions": "Execute the Unified Env Token Pattern Remediation. For each non-compliant script:\n1. Open the file\n2. Add import: from shared_core.notion.token_manager import get_notion_token\n3. Replace os.getenv('NOTION_TOKEN') with get_notion_token()\n4. Test the script\n5. Document the change\n\nWhen complete, create handoff to Claude MM1 Agent for validation.\n\n**MANDATORY:** Move this trigger file to 02_processed after reading. Create validation handoff trigger before marking complete.",
+  "created_at": "2026-01-13T17:25:00Z",
+  "priority": "Critical",
+  "source_agent": "Claude Code (Cowork Mode)",
+  "downstream_handoff_required": true,
+  "downstream_agent": "Claude MM1 Agent",
+  "downstream_task": "Agent Work Validation Task - Unified Env Remediation Verification"
+}

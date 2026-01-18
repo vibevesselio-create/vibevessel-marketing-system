@@ -1,0 +1,68 @@
+{
+  "handoff_id": "20260113T225500Z__HANDOFF__Folder-Volume-Sync-Remediation__Agent-Work-Auditor",
+  "created_at": "2026-01-13T22:55:00Z",
+  "source_agent": "Agent Work Auditor (Claude Cowork)",
+  "target_agent": "Cursor-MM1-Agent",
+  "priority": "HIGH",
+  "title": "[AUDIT FOLLOW-UP] Complete Folder/Volume Sync to Notion",
+  "description": "Follow-up from Cursor MM1 Work Audit conducted on 2026-01-13.\n\nThe original task to sync folders and volumes to Notion databases was NOT completed. Scripts were created but never executed.",
+  "context": {
+    "original_conversation_date": "2026-01-13",
+    "audit_report_path": "/Users/brianhellemn/Projects/github-production/reports/CURSOR_MM1_AUDIT_REPORT_20260113_224500.md",
+    "deficiencies_identified": [
+      "DEF-001: Primary User Request Not Fulfilled - Folder/volume sync never executed",
+      "DEF-002: Missing Prerequisite - VOLUMES_DATABASE_ID not found/created",
+      "DEF-003: Script sync ran in validate-only mode"
+    ]
+  },
+  "required_actions": [
+    {
+      "order": 1,
+      "action": "Create Volumes Database in Notion",
+      "details": "Create new database named 'Volumes' with properties: Name (title), Device (rich_text), Filesystem Type (rich_text). Add relation to Folders database.",
+      "blocking": true
+    },
+    {
+      "order": 2,
+      "action": "Update .env with database IDs",
+      "details": "Add FOLDERS_DATABASE_ID=26ce7361-6c27-81bb-81b7-dd43760ee6cc and VOLUMES_DATABASE_ID=<new_id> to .env",
+      "blocking": true
+    },
+    {
+      "order": 3,
+      "action": "Execute sync_folders_volumes_to_notion.py",
+      "details": "Run the script and verify folders and volumes appear in Notion databases",
+      "blocking": false
+    },
+    {
+      "order": 4,
+      "action": "Execute sync_all_scripts_to_notion.py without validate-only flag",
+      "details": "Run: python3 sync_all_scripts_to_notion.py (without --validate-only)",
+      "blocking": false
+    },
+    {
+      "order": 5,
+      "action": "Verify completion",
+      "details": "Query Notion databases to confirm data was synced successfully",
+      "blocking": false
+    }
+  ],
+  "acceptance_criteria": [
+    "Volumes database exists in Notion with correct properties",
+    "FOLDERS_DATABASE_ID and VOLUMES_DATABASE_ID are set in .env",
+    "sync_folders_volumes.log exists showing successful execution",
+    "Folders database contains folder entries with Volume relations",
+    "Volumes database contains volume entries"
+  ],
+  "files_created": [
+    "/Users/brianhellemn/Projects/github-production/sync_folders_volumes_to_notion.py",
+    "/Users/brianhellemn/Projects/github-production/sync_all_scripts_to_notion.py",
+    "/Users/brianhellemn/Projects/github-production/sync_script_to_notion_direct.py",
+    "/Users/brianhellemn/Projects/github-production/review_notion_databases.py",
+    "/Users/brianhellemn/Projects/github-production/fix_notion_database_issues.py"
+  ],
+  "discovered_database_ids": {
+    "FOLDERS_DATABASE_ID": "26ce7361-6c27-81bb-81b7-dd43760ee6cc",
+    "Scripts": "26ce7361-6c27-8178-bc77-f43aff00eddf"
+  }
+}

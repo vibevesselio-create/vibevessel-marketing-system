@@ -9,7 +9,7 @@ djay Pro Library Complete Export Script
 • System-aligned with workspace standards
 
 Aligned with Seren Media Workspace Standards
-Version: 2025-01-27
+Version: 2026-01-16
 """
 
 from __future__ import annotations
@@ -60,6 +60,9 @@ try:
 except ImportError:
     NOTION_CLIENT_AVAILABLE = False
     Client = None
+
+# CRITICAL: centralized token access (pre-commit enforced)
+from shared_core.notion.token_manager import get_notion_token
 
 try:
     from shared_core.logging import setup_logging
@@ -142,13 +145,7 @@ DB_PATH = Path(unified_config.get("djay_db_path") or os.getenv("DJAY_DB_PATH", s
 OUTPUT_DIR = Path(unified_config.get("djay_export_dir") or os.getenv("DJAY_EXPORT_DIR", "./djay_pro_export"))
 
 # Notion Configuration
-NOTION_TOKEN = (
-    unified_config.get("notion_token") or 
-    os.getenv("NOTION_TOKEN") or 
-    os.getenv("NOTION_API_TOKEN") or 
-    os.getenv("VV_AUTOMATIONS_WS_TOKEN") or
-    ""
-).strip()
+NOTION_TOKEN = (unified_config.get("notion_token") or get_notion_token() or "").strip()
 TRACKS_DB_ID = (
     unified_config.get("tracks_db_id") or 
     os.getenv("TRACKS_DB_ID") or 
@@ -280,68 +277,129 @@ class DjayProLibraryExporter:
             self.logger.info(f"   ✓ Extracted {len(data)} rows from {table}")
     
     def extract_media_items(self) -> List[Dict[str, Any]]:
-        """Extract media items (tracks) with all metadata."""
+        """Extract media items (tracks) with all metadata.
+
+        Uses direct SQL query with proper JOIN logic to extract track data from
+        YapDatabase structure. The relationship chain is:
+          1. secondaryIndex_mediaItemIndex contains BPM, key, titleID
+          2. database2 maps titleID to localMediaItemLocations collection
+          3. secondaryIndex_mediaItemLocationIndex contains file paths
+          4. secondaryIndex_mediaItemAnalyzedDataIndex contains additional analysis data
+
+        This replaces the broken field-scanning approach that produced empty results.
+        Fixed: 2026-01-16 (aligned with sync_djay_bpm_key_to_notion.py JOIN fix)
+        """
         media_items = []
-        
-        # Look for tables that might contain media items
-        # Common YapDatabase patterns: mediaItem, MediaItem, media_items, etc.
-        potential_tables = [t for t in self.all_data["collections"].keys() 
-                          if "media" in t.lower() or "item" in t.lower()]
-        
-        for table_name in potential_tables:
-            data = self.all_data["collections"][table_name]["data"]
-            for row in data:
-                # Try to extract track information
+
+        # Key signature mapping (musicalKeySignatureIndex to key name)
+        KEY_SIGNATURE_MAP = {
+            0: "C", 1: "C#", 2: "D", 3: "D#", 4: "E", 5: "F",
+            6: "F#", 7: "G", 8: "G#", 9: "A", 10: "A#", 11: "B",
+            # Extended mappings for minor keys (12-23)
+            12: "Cm", 13: "C#m", 14: "Dm", 15: "D#m", 16: "Em", 17: "Fm",
+            18: "F#m", 19: "Gm", 20: "G#m", 21: "Am", 22: "A#m", 23: "Bm"
+        }
+
+        try:
+            conn = sqlite3.connect(f"file:{self.db_path}?mode=ro", uri=True)
+            conn.row_factory = sqlite3.Row
+
+            # Comprehensive query joining all relevant tables for complete track data
+            # Uses the corrected JOIN via database2.localMediaItemLocations collection
+            query = """
+                SELECT
+                    m.rowid as media_rowid,
+                    m.titleID,
+                    m.bpm,
+                    m.musicalKeySignatureIndex,
+                    l.fileName,
+                    a.bpm as analyzed_bpm,
+                    a.keySignatureIndex as analyzed_key,
+                    a.manualBPM
+                FROM secondaryIndex_mediaItemIndex m
+                LEFT JOIN database2 d ON m.titleID = d.key AND d.collection = 'localMediaItemLocations'
+                LEFT JOIN secondaryIndex_mediaItemLocationIndex l ON d.rowid = l.rowid
+                LEFT JOIN secondaryIndex_mediaItemAnalyzedDataIndex a ON m.rowid = a.rowid
+            """
+
+            cursor = conn.execute(query)
+            rows = cursor.fetchall()
+
+            self.logger.info(f"📊 Query returned {len(rows)} rows from joined tables")
+
+            tracks_with_data = 0
+            tracks_with_bpm = 0
+            tracks_with_key = 0
+            tracks_with_path = 0
+
+            for row in rows:
+                title_id = row["titleID"]
+
+                # Get BPM - prefer manual, then analyzed, then index table
+                bpm = row["manualBPM"] or row["analyzed_bpm"] or row["bpm"]
+
+                # Get key - prefer analyzed, then index table
+                key_index = row["analyzed_key"] if row["analyzed_key"] is not None else row["musicalKeySignatureIndex"]
+                key = None
+                if key_index is not None:
+                    key = KEY_SIGNATURE_MAP.get(int(key_index), f"Unknown({key_index})")
+
+                file_name = row["fileName"]
+
+                # Extract title from filename or titleID
+                title = None
+                if file_name:
+                    # Remove extension and use as title
+                    title = Path(file_name).stem
+                    # Clean up common suffixes
+                    for suffix in ["_test_processed", " (1)", " (2)", " (3)"]:
+                        title = title.replace(suffix, "")
+                    title = title.strip()
+                elif title_id:
+                    # Use titleID hash as fallback identifier
+                    title = f"[ID:{title_id[:8]}...]"
+
+                # Track statistics
+                if bpm is not None or key or file_name:
+                    tracks_with_data += 1
+                if bpm is not None:
+                    tracks_with_bpm += 1
+                if key:
+                    tracks_with_key += 1
+                if file_name:
+                    tracks_with_path += 1
+
+                # Build item with all available data
                 item = {
-                    "table_source": table_name,
-                    "raw_data": row
+                    "titleID": title_id,
+                    "title": title,
+                    "bpm": float(bpm) if bpm else None,
+                    "key": key,
+                    "file_path": file_name,
+                    "fileName": file_name,
+                    "manual_bpm": float(row["manualBPM"]) if row["manualBPM"] else None,
+                    "analyzed_bpm": float(row["analyzed_bpm"]) if row["analyzed_bpm"] else None,
+                    "key_index": int(key_index) if key_index is not None else None,
                 }
-                
-                # Common field mappings
-                field_mappings = {
-                    "title": ["title", "name", "track_title", "Title"],
-                    "artist": ["artist", "artist_name", "Artist"],
-                    "album": ["album", "album_name", "Album"],
-                    "bpm": ["bpm", "BPM", "tempo"],
-                    "key": ["key", "Key", "musical_key"],
-                    "duration": ["duration", "Duration", "length", "time"],
-                    "file_path": ["file_path", "path", "filePath", "file_url"],
-                    "genre": ["genre", "Genre"],
-                    "year": ["year", "Year", "release_year"],
-                    "bitrate": ["bitrate", "Bitrate"],
-                    "sample_rate": ["sample_rate", "sampleRate", "SampleRate"],
-                    "play_count": ["play_count", "playCount", "times_played"],
-                    "rating": ["rating", "Rating", "stars"],
-                    "date_added": ["date_added", "dateAdded", "created", "added_date"],
-                    "last_played": ["last_played", "lastPlayed", "last_modified"],
-                }
-                
-                for standard_field, possible_keys in field_mappings.items():
-                    for key in possible_keys:
-                        if key in row and row[key] is not None:
-                            item[standard_field] = row[key]
-                            break
-                
+
                 media_items.append(item)
-        
-        # Also check all tables for any row that looks like a track
-        if not media_items:
-            self.logger.warning("⚠️  No media items found in expected tables, scanning all tables...")
-            for table_name, collection in self.all_data["collections"].items():
-                for row in collection["data"]:
-                    # Check if row has track-like fields
-                    if any(key.lower() in ["title", "artist", "bpm", "duration"] for key in row.keys()):
-                        item = {
-                            "table_source": table_name,
-                            "raw_data": row
-                        }
-                        # Extract all fields
-                        for key, value in row.items():
-                            item[key] = value
-                        media_items.append(item)
-        
-        self.logger.info(f"🎵 Extracted {len(media_items)} media items")
-        return media_items
+
+            conn.close()
+
+            self.logger.info(f"🎵 Extracted {len(media_items)} media items:")
+            self.logger.info(f"   • {tracks_with_data} tracks with any data")
+            self.logger.info(f"   • {tracks_with_bpm} tracks with BPM")
+            self.logger.info(f"   • {tracks_with_key} tracks with key")
+            self.logger.info(f"   • {tracks_with_path} tracks with file path")
+
+            return media_items
+
+        except Exception as e:
+            self.logger.error(f"❌ Error extracting media items via SQL: {e}")
+            import traceback
+            traceback.print_exc()
+            # Return empty list rather than crashing
+            return []
     
     def extract_playlists(self) -> List[Dict[str, Any]]:
         """Extract playlist data."""

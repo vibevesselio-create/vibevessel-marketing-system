@@ -1,0 +1,118 @@
+{
+  "handoff_id": "system-prompts-agent-workflows-integration-gap-analysis-20260108",
+  "timestamp": "2026-01-08T00:00:00.000000+00:00",
+  "source_agent": "Claude MM1 Agent",
+  "target_agent": "Claude Code Agent",
+  "priority": "High",
+  "urgency": "High",
+  "task_url": null,
+  "project_url": "https://www.notion.so/System-Prompts-Agent-Workflows-Functions-Integration-2e2e73616c27816b997ae1b6f73978ff",
+  "related_issue_url": null,
+  "handoff_reason": "Comprehensive gap analysis and audit of current state for System Prompts → Agent Workflows & Functions Integration project. Review all prompts in system prompts directory, identify existing workflows/functions, perform gap analysis, create all necessary agent tasks, and deliver handoff back to Claude MM1 Agent for execution work.",
+  "context": {
+    "current_step": "Project created, gap analysis and audit required",
+    "work_completed": [
+      "Created Agent Project: System Prompts → Agent Workflows & Functions Integration",
+      "Identified system prompts directory location",
+      "Identified required databases: Agent-Projects, Agent-Workflows, Agent-Functions, Agent-Tasks"
+    ],
+    "blocking_issue": null,
+    "project_goals": "Perform comprehensive gap analysis and audit of current state. Identify all prompts in system prompts directory, review existing agent workflows and functions, identify gaps, create all necessary agent tasks linked to project, and deliver handoff back to Claude MM1 Agent for execution."
+  },
+  "required_action": "**COMPREHENSIVE GAP ANALYSIS AND AUDIT**\n\n## PHASE 1: INVENTORY AND DISCOVERY\n\n### 1.1 System Prompts Inventory\n- **Location:** `/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/MM1-MM2-Sync/system-prompts/`\n- **Action:** List all prompt files in directory\n- **Document:** For each prompt file:\n  * File name and path\n  * Prompt purpose/scope\n  * Key processes/workflows described\n  * Required agent assignments\n  * Dependencies and integrations\n  * Expected deliverables\n\n### 1.2 Existing Agent Workflows Review\n- **Database:** Agent-Workflows (259e7361-6c27-8192-ae2e-e6d54b4198e1)\n- **Action:** Query all workflows related to system prompts\n- **Search for:** Workflows with names/titles matching prompt purposes\n- **Document:** For each existing workflow:\n  * Workflow ID and name\n  * Current status\n  * Linked prompts (if any)\n  * Linked functions\n  * Agent assignments\n  * Configuration completeness\n  * Gaps or missing elements\n\n### 1.3 Existing Agent Functions Review\n- **Database:** Agent-Functions (256e7361-6c27-80c7-83fa-cd029ff49d2d)\n- **Action:** Query all functions that might relate to prompt processes\n- **Search for:** Functions matching prompt-described operations\n- **Document:** For each existing function:\n  * Function ID and name\n  * Current status\n  * Linked workflows (if any)\n  * Linked prompts (if any)\n  * Implementation status\n  * Documentation completeness\n\n### 1.4 Prompt-to-Workflow Mapping Analysis\n- **Action:** For each prompt, identify:\n  * Does a corresponding workflow exist?\n  * Is the workflow properly linked to the prompt?\n  * Does the workflow fully represent the prompt's processes?\n  * Are all required functions linked?\n  * Are agent assignments correct?\n  * Is configuration complete?\n  * Are all assets properly linked?\n\n## PHASE 2: GAP ANALYSIS\n\n### 2.1 Missing Workflows\n- **Identify:** Prompts without corresponding workflows\n- **Document:** For each missing workflow:\n  * Required workflow name\n  * Required workflow type\n  * Required phases/steps\n  * Required agent assignments\n  * Required functions\n  * Required configuration\n  * Required assets\n\n### 2.2 Incomplete Workflows\n- **Identify:** Workflows that exist but are incomplete\n- **Document:** For each incomplete workflow:\n  * Missing elements (phases, steps, functions, etc.)\n  * Incorrect configurations\n  * Missing agent assignments\n  * Missing asset links\n  * Documentation gaps\n\n### 2.3 Missing Functions\n- **Identify:** Processes described in prompts without corresponding functions\n- **Document:** For each missing function:\n  * Required function name\n  * Required function type\n  * Required parameters\n  * Required return values\n  * Required implementation details\n  * Required agent assignment\n\n### 2.4 Linking and Documentation Gaps\n- **Identify:** Missing or incorrect:\n  * Prompt-to-workflow links\n  * Workflow-to-function links\n  * Function-to-prompt links\n  * Agent assignments\n  * Configuration details\n  * Asset links\n  * Documentation\n\n### 2.5 Environment Consistency Gaps\n- **Identify:** Inconsistencies across:\n  * Notion databases\n  * Codebase implementations\n  * Documentation\n  * Configuration files\n  * Environment variables\n\n## PHASE 3: SYSTEM METHODOLOGY COMPLIANCE AUDIT\n\n### 3.1 Workflow Structure Compliance\n- **Review:** Each workflow against system methodologies\n- **Check:**\n  * Proper phase structure (Preflight, Plan, Remediation)\n  * Proper step definitions\n  * Proper JSON formatting for workflow steps\n  * Proper agent assignment patterns\n  * Proper function linking\n  * Proper configuration management\n\n### 3.2 Function Structure Compliance\n- **Review:** Each function against system methodologies\n- **Check:**\n  * Proper function naming conventions\n  * Proper parameter definitions\n  * Proper return type definitions\n  * Proper documentation format\n  * Proper agent assignment\n  * Proper workflow linking\n\n### 3.3 Documentation Compliance\n- **Review:** Documentation completeness and format\n- **Check:**\n  * Workflow documentation\n  * Function documentation\n  * Prompt documentation\n  * Integration documentation\n  * Configuration documentation\n\n### 3.4 Asset Linking Compliance\n- **Review:** All required assets are properly linked\n- **Check:**\n  * Script links\n  * Documentation links\n  * Configuration links\n  * Database links\n  * Service links\n\n## PHASE 4: TASK CREATION\n\n### 4.1 Create Agent Tasks for Missing Workflows\n- **For each missing workflow:**\n  * Create Agent-Task in Agent-Tasks database\n  * Link to Agent Project\n  * Set appropriate priority\n  * Set appropriate status\n  * Assign appropriate agent\n  * Include detailed requirements\n  * Link to prompt file\n\n### 4.2 Create Agent Tasks for Incomplete Workflows\n- **For each incomplete workflow:**\n  * Create Agent-Task for completion work\n  * Link to Agent Project\n  * Link to existing workflow\n  * Set appropriate priority\n  * Set appropriate status\n  * Assign appropriate agent\n  * Include gap details\n  * Include completion requirements\n\n### 4.3 Create Agent Tasks for Missing Functions\n- **For each missing function:**\n  * Create Agent-Task for function creation\n  * Link to Agent Project\n  * Link to related workflow (if applicable)\  * Set appropriate priority\n  * Set appropriate status\n  * Assign appropriate agent\n  * Include function specifications\n  * Include implementation requirements\n\n### 4.4 Create Agent Tasks for Linking and Documentation\n- **For each linking/documentation gap:**\n  * Create Agent-Task for remediation\n  * Link to Agent Project\n  * Link to affected workflows/functions\n  * Set appropriate priority\n  * Set appropriate status\n  * Assign appropriate agent\n  * Include specific gap details\n  * Include remediation requirements\n\n## PHASE 5: COMPREHENSIVE REPORT AND HANDOFF\n\n### 5.1 Create Gap Analysis Report\n- **Document:**\n  * Complete inventory of prompts\n  * Complete inventory of existing workflows\n  * Complete inventory of existing functions\n  * Detailed gap analysis\n  * Compliance audit results\n  * Task creation summary\n  * Recommendations\n\n### 5.2 Update Agent Project\n- **Update:** Agent Project page with:\n  * Gap analysis results\n  * Task summary\n  * Next steps\n  * Status update\n\n### 5.3 Create Handoff to Claude MM1 Agent\n- **Create:** Handoff file for Claude MM1 Agent\n- **Include:**\n  * Gap analysis results\n  * Created tasks list\n  * Execution priorities\n  * Next steps\n  * Required actions\n\n## CRITICAL REQUIREMENTS\n\n1. **Comprehensive Coverage:**\n   - All prompts in system prompts directory must be reviewed\n   - All existing workflows must be audited\n   - All existing functions must be reviewed\n   - All gaps must be identified\n   - All tasks must be created\n\n2. **System Compliance:**\n   - All workflows must comply with system methodologies\n   - All functions must comply with system methodologies\n   - All documentation must be complete\n   - All links must be properly established\n\n3. **Task Creation:**\n   - All missing workflows need tasks\n   - All incomplete workflows need tasks\n   - All missing functions need tasks\n   - All linking/documentation gaps need tasks\n   - All tasks must be linked to Agent Project\n\n4. **Documentation:**\n   - Complete gap analysis report\n   - Complete task inventory\n   - Complete recommendations\n   - Complete handoff documentation\n\n## DELIVERABLES\n\n1. **Gap Analysis Report** (SYSTEM_PROMPTS_AGENT_WORKFLOWS_GAP_ANALYSIS.md)\n2. **Task Inventory** (List of all created Agent-Tasks)\n3. **Updated Agent Project** (With gap analysis and task summary)\n4. **Handoff File** (For Claude MM1 Agent)\n5. **Compliance Audit Report** (SYSTEM_METHODOLOGY_COMPLIANCE_AUDIT.md)\n\n## MANDATORY HANDOFF REQUIREMENT\n\nUpon completion, create handoff file for Claude MM1 Agent with:\n- Complete gap analysis results\n- List of all created Agent-Tasks\n- Execution priorities\n- Next steps for execution work\n- Any blocking issues or dependencies",
+  "success_criteria": [
+    "All prompts in system prompts directory inventoried",
+    "All existing workflows reviewed and audited",
+    "All existing functions reviewed and audited",
+    "Complete gap analysis performed",
+    "System methodology compliance audit completed",
+    "All necessary Agent-Tasks created and linked to project",
+    "Gap analysis report created",
+    "Compliance audit report created",
+    "Agent Project updated with results",
+    "Handoff file created for Claude MM1 Agent"
+  ],
+  "deliverables": {
+    "files_to_review": [
+      "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/MM1-MM2-Sync/system-prompts/Music Track Synchronization Prompt.rtf",
+      "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/MM1-MM2-Sync/system-prompts/Music Playlist Synchronization Prompt.rtf",
+      "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/MM1-MM2-Sync/system-prompts/Eagle Library Deduplication Prompt.rtf",
+      "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/MM1-MM2-Sync/system-prompts/Eagle Library Deduplication - System Compliant Prompt.rtf",
+      "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/MM1-MM2-Sync/system-prompts/Workflow Implementation Audit.rtf",
+      "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/MM1-MM2-Sync/system-prompts/In-Progress Issue + Project Continuation Prompt.rtf",
+      "/Users/brianhellemn/Library/Mobile Documents/com~apple~CloudDocs/MM1-MM2-Sync/system-prompts/In-Progress Issue + Project Continuation Prompt-notion-ai-data-operations.txt"
+    ],
+    "databases_to_query": [
+      "Agent-Workflows (259e7361-6c27-8192-ae2e-e6d54b4198e1)",
+      "Agent-Functions (256e7361-6c27-80c7-83fa-cd029ff49d2d)",
+      "Agent-Tasks (284e7361-6c27-8018-872a-eb14e82e0392)",
+      "Agent-Projects (286e7361-6c27-81ff-a450-db2ecad4b0ba)"
+    ],
+    "artifacts": [
+      "Gap analysis report",
+      "Compliance audit report",
+      "Task inventory",
+      "Updated Agent Project",
+      "Handoff file for Claude MM1 Agent"
+    ],
+    "next_handoff": {
+      "target_agent": "Claude MM1 Agent",
+      "task_id": null,
+      "task_name": "System Prompts → Agent Workflows & Functions Integration - Execution Work",
+      "inbox_path": "/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Claude-MM1/01_inbox/",
+      "required": true,
+      "instructions": "Create handoff file for Claude MM1 Agent with gap analysis results, created tasks list, execution priorities, and next steps for execution work."
+    }
+  },
+  "archive_rule": "move_to_02_processed",
+  "search_queries": [
+    "What agent workflows exist for music track synchronization?",
+    "What agent workflows exist for music playlist synchronization?",
+    "What agent workflows exist for Eagle library deduplication?",
+    "What agent functions exist for music workflow processes?",
+    "What agent functions exist for deduplication processes?",
+    "How are prompts linked to agent workflows in Notion?",
+    "What is the structure of agent workflows in the system?",
+    "What is the structure of agent functions in the system?",
+    "What system methodologies govern agent workflow creation?",
+    "What system methodologies govern agent function creation?"
+  ],
+  "coordination_requirements": {
+    "prompt_inventory": {
+      "priority": "Critical",
+      "requirements": [
+        "Complete inventory of all prompts",
+        "Detailed analysis of each prompt's processes",
+        "Identification of required workflows",
+        "Identification of required functions"
+      ]
+    },
+    "workflow_audit": {
+      "priority": "Critical",
+      "requirements": [
+        "Complete audit of existing workflows",
+        "Identification of gaps",
+        "Compliance verification",
+        "Documentation completeness check"
+      ]
+    },
+    "function_audit": {
+      "priority": "High",
+      "requirements": [
+        "Complete audit of existing functions",
+        "Identification of missing functions",
+        "Compliance verification",
+        "Documentation completeness check"
+      ]
+    },
+    "task_creation": {
+      "priority": "Critical",
+      "requirements": [
+        "All gaps must have corresponding tasks",
+        "All tasks must be linked to project",
+        "All tasks must have proper assignments",
+        "All tasks must have detailed requirements"
+      ]
+    }
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "handoff_id": "spotify-track-fix-issue2-resolution-20260108",
+  "timestamp": "2026-01-08T10:00:00.000000+00:00",
+  "source_agent": "Cursor-MM1 Agent",
+  "target_agent": "Claude Code Agent",
+  "priority": "High",
+  "urgency": "Medium",
+  "task_url": null,
+  "project_url": null,
+  "related_issue_url": null,
+  "handoff_reason": "Issue 2 from Spotify Track Fix audit has been resolved. Requesting Claude Code Agent to verify the fix, perform testing, and confirm production readiness.",
+  "context": {
+    "current_step": "Issue 2 fix completed, awaiting verification and testing",
+    "work_completed": [
+      "Fixed duplicate detection logic in Spotify track processing (lines 7074-7095)",
+      "Updated code to check both explicit duplicate_found flag and implicit indicators",
+      "Verified code compiles without errors",
+      "Created fix documentation"
+    ],
+    "blocking_issue": null,
+    "project_goals": "Verify Issue 2 fix is correct, perform testing, confirm production readiness"
+  },
+  "required_action": "**ISSUE 2 FIX VERIFICATION AND TESTING**\n\n## PHASE 1: CODE REVIEW\n\n### 1.1 Verify Fix Implementation\n- **Location:** `monolithic-scripts/soundcloud_download_prod_merge-2.py` (Lines 7074-7095)\n- **Action:** Review the updated duplicate detection logic\n- **Check:**\n  * Logic correctly identifies duplicates using both explicit and implicit indicators\n  * Error handling is preserved\n  * Code follows existing patterns\n  * No breaking changes introduced\n\n### 1.2 Verify Integration\n- **Check:** `download_track()` return value structure\n- **Verify:** Duplicate case returns `duplicate_found: True` and `file: None`\n- **Verify:** Normal success case returns `file: Path` and `eagle_item_id: <id>`\n- **Confirm:** Fix handles both cases correctly\n\n## PHASE 2: TESTING\n\n### 2.1 Test Case: Spotify Track with Duplicate\n**Steps:**\n1. Identify a Spotify track that matches an existing Eagle item\n2. Process the track through the workflow\n3. Verify:\n   * `download_track()` detects duplicate\n   * Returns dict with `duplicate_found: True` or `file: None`\n   * Spotify track processing code executes duplicate handling\n   * `update_notion_with_eagle_id()` is called\n   * Notion is updated with existing Eagle File ID\n   * No duplicate files created\n\n**Expected Result:** ✅ Duplicate detected, Notion updated, no duplicates created\n\n### 2.2 Test Case: Spotify Track with New Download\n**Steps:**\n1. Process a Spotify track with no existing Eagle match\n2. Verify:\n   * YouTube URL is discovered\n   * `download_track()` processes normally\n   * Returns dict with `file: Path` and `eagle_item_id: <new_id>`\n   * Spotify track processing code handles normal success\n   * All files created (M4A, AIFF, WAV)\n   * Notion updated with file paths and Eagle ID\n\n**Expected Result:** ✅ New track processed, files created, Notion updated\n\n### 2.3 Test Case: Edge Cases\n**Steps:**\n1. Test with `eagle_item_id` present but `file` is `None` (duplicate case)\n2. Test with `eagle_item_id` present and `file` is `Path` (normal case)\n3. Test with `eagle_item_id` is `None` (failure case)\n4. Verify all code paths execute correctly\n\n**Expected Result:** ✅ All edge cases handled correctly\n\n## PHASE 3: VERIFICATION\n\n### 3.1 Code Quality Check\n- [ ] No syntax errors\n- [ ] No logic errors\n- [ ] Proper error handling\n- [ ] Appropriate logging\n- [ ] Code follows existing patterns\n\n### 3.2 Integration Check\n- [ ] Works with existing `download_track()` function\n- [ ] Compatible with current workflow\n- [ ] No breaking changes\n- [ ] All referenced functions accessible\n\n### 3.3 Testing Check\n- [ ] All test cases pass\n- [ ] Duplicate detection works correctly\n- [ ] Normal processing works correctly\n- [ ] Edge cases handled\n\n## PHASE 4: DOCUMENTATION\n\n### 4.1 Update Audit Report\n- **File:** `SPOTIFY_TRACK_FIX_AUDIT_REPORT.md`\n- **Action:** Update Issue 2 status to \"RESOLVED\"\n- **Add:** Test results and verification confirmation\n\n### 4.2 Create Test Results Document\n- **File:** `SPOTIFY_TRACK_FIX_TEST_RESULTS.md`\n- **Content:**\n  * Test cases executed\n  * Results for each test\n  * Any issues found\n  * Production readiness confirmation\n\n## CRITICAL REQUIREMENTS\n\n1. **Thorough Testing:** Execute all test cases before confirming production readiness\n2. **Code Review:** Verify fix is correct and doesn't introduce new issues\n3. **Documentation:** Update all relevant documentation with test results\n4. **Production Readiness:** Confirm fix is ready for production deployment\n\n## DELIVERABLES\n\n1. **Code Review Summary** - Confirmation that fix is correct\n2. **Test Results** - Results from all test cases\n3. **Updated Audit Report** - Issue 2 marked as resolved\n4. **Production Readiness Confirmation** - Yes/No with reasoning\n\n## MANDATORY HANDOFF REQUIREMENT\n\nUpon completion, create handoff file for Cursor-MM1 Agent with:\n- Test results summary\n- Production readiness confirmation\n- Any additional issues found\n- Recommendations for next steps",
+  "success_criteria": [
+    "Issue 2 fix verified as correct",
+    "All test cases executed and passed",
+    "Code review completed",
+    "Documentation updated",
+    "Production readiness confirmed"
+  ],
+  "deliverables": {
+    "files_to_review": [
+      "/Users/brianhellemn/Projects/github-production/monolithic-scripts/soundcloud_download_prod_merge-2.py"
+    ],
+    "files_to_update": [
+      "/Users/brianhellemn/Projects/github-production/SPOTIFY_TRACK_FIX_AUDIT_REPORT.md"
+    ],
+    "files_to_create": [
+      "/Users/brianhellemn/Projects/github-production/SPOTIFY_TRACK_FIX_TEST_RESULTS.md"
+    ],
+    "artifacts": [
+      "Code review summary",
+      "Test results document",
+      "Updated audit report",
+      "Production readiness confirmation"
+    ],
+    "next_handoff": {
+      "target_agent": "Cursor-MM1 Agent",
+      "task_id": null,
+      "task_name": "Spotify Track Fix - Issue 2 Verification Complete",
+      "inbox_path": "/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Cursor-MM1-Agent/01_inbox/",
+      "required": true,
+      "instructions": "Create handoff file with test results, production readiness confirmation, and any additional findings."
+    }
+  },
+  "archive_rule": "move_to_02_processed",
+  "search_queries": [
+    "How does download_track function return duplicate detection results?",
+    "What are the return value keys from download_track function?",
+    "How are duplicates handled in the Spotify track processing workflow?"
+  ],
+  "coordination_requirements": {
+    "code_review": {
+      "priority": "Critical",
+      "requirements": [
+        "Verify fix logic is correct",
+        "Check integration with download_track()",
+        "Verify no breaking changes",
+        "Confirm error handling is preserved"
+      ]
+    },
+    "testing": {
+      "priority": "Critical",
+      "requirements": [
+        "Test duplicate detection case",
+        "Test normal download case",
+        "Test edge cases",
+        "Verify Notion updates work correctly"
+      ]
+    },
+    "documentation": {
+      "priority": "High",
+      "requirements": [
+        "Update audit report",
+        "Create test results document",
+        "Document any issues found",
+        "Confirm production readiness"
+      ]
+    }
+  }
+}

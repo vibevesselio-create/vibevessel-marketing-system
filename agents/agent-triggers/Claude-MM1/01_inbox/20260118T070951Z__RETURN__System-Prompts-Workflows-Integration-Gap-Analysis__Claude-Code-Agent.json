@@ -1,0 +1,95 @@
+{
+  "type": "RETURN_HANDOFF",
+  "timestamp": "2026-01-18T07:09:51.586543+00:00",
+  "executing_agent": "Claude Code Agent",
+  "originating_agent": "Claude MM1 Agent",
+  "original_handoff": {
+    "handoff_file": "/Users/brianhellemn/Projects/github-production/agents/agent-triggers/Claude-Code-Agent/01_inbox/20260108T000000Z__HANDOFF__System-Prompts-Agent-Workflows-Integration-Gap-Analysis__Claude-Code-Agent.json",
+    "handoff_id": "system-prompts-agent-workflows-integration-gap-analysis-20260108",
+    "project_id": "2e2e7361-6c27-816b-997a-e1b6f73978ff",
+    "project_url": "https://www.notion.so/System-Prompts-Agent-Workflows-Functions-Integration-2e2e73616c27816b997ae1b6f73978ff"
+  },
+  "status_update": "Completed gap analysis + task creation",
+  "execution_summary": {
+    "work_completed": [
+      "Inventoried 11 system prompt files in the system-prompts directory",
+      "Performed Notion keyword scans against Agent-Workflows and Agent-Functions to detect obvious coverage",
+      "Created 11 Agent-Tasks in Agent-Tasks DB linked to the System Prompts integration project (Status=Ready) with mandatory next-handoff instructions",
+      "Authored gap analysis + compliance audit reports in repo reports/ directory"
+    ],
+    "deliverables": [
+      {
+        "type": "file",
+        "path": "/Users/brianhellemn/Projects/github-production/reports/SYSTEM_PROMPTS_AGENT_WORKFLOWS_GAP_ANALYSIS.md",
+        "description": "Prompt inventory + Notion task list + recommended execution order"
+      },
+      {
+        "type": "file",
+        "path": "/Users/brianhellemn/Projects/github-production/reports/SYSTEM_METHODOLOGY_COMPLIANCE_AUDIT.md",
+        "description": "Compliance findings and remaining remediation steps"
+      },
+      {
+        "type": "file",
+        "path": "/Users/brianhellemn/Projects/github-production/reports/system_prompts_gap_analysis_notionscan_20260118.json",
+        "description": "Notion keyword scan results used for coverage assessment"
+      }
+    ],
+    "key_findings": [
+      "System prompts directory contains 11 prompt files (repo project docs previously listed 7).",
+      "Plans Directory Audit - P2 prompt file appears corrupted/non-parseable; created a remediation task for it.",
+      "No obvious prompt-named Agent-Workflow/Agent-Function items found for most prompts via keyword scan; tasks created to build canonical items."
+    ],
+    "notion_tasks_created": [
+      {
+        "title": "[System Prompts] Create Agent-Workflow + Functions: Music Track Sync Workflow (Production)",
+        "id": "2ece7361-6c27-8174-ab70-e203e1a7e868"
+      },
+      {
+        "title": "[System Prompts] Create Agent-Workflow + Functions: Music Playlist Sync Workflow (Production)",
+        "id": "2ece7361-6c27-81e6-86fa-f3302ccc759b"
+      },
+      {
+        "title": "[System Prompts] Create Agent-Workflow + Functions: Eagle Library Deduplication Workflow (Production)",
+        "id": "2ece7361-6c27-81a9-b4a3-c2869030cbbc"
+      },
+      {
+        "title": "[System Prompts] Create Agent-Workflow + Functions: Eagle Deduplication Workflow (System Compliant)",
+        "id": "2ece7361-6c27-8160-8e67-fb6d9792d2b6"
+      },
+      {
+        "title": "[System Prompts] Create Agent-Workflow: Workflow Implementation Audit / Notion-First Runtime Health Orchestrator",
+        "id": "2ece7361-6c27-8111-8c11-ce4f2e0b100b"
+      },
+      {
+        "title": "[System Prompts] Create Agent-Workflow: Plans Directory Audit and Completion Review",
+        "id": "2ece7361-6c27-8184-a8c8-e974c0bd4b23"
+      },
+      {
+        "title": "[System Prompts] Repair/Replace Prompt: Plans Directory Audit - P2 Prompt (corrupt RTF) + map to workflow",
+        "id": "2ece7361-6c27-81e6-abf8-f86951ba0da8"
+      },
+      {
+        "title": "[System Prompts] Create Agent-Workflow: Cursor MM1 Agent Work Audit and Validation",
+        "id": "2ece7361-6c27-81c8-864a-efa6c0bee82d"
+      },
+      {
+        "title": "[System Prompts] Create Agent-Workflow: In-Progress Issue + Project Continuation",
+        "id": "2ece7361-6c27-8141-bcaf-dbc924208b41"
+      },
+      {
+        "title": "[System Prompts] Create Agent-Workflow: In-Progress Issue + Project Continuation (Notion AI DataOps)",
+        "id": "2ece7361-6c27-81ed-b62b-c38ca18a8882"
+      },
+      {
+        "title": "[System Prompts] Convert Run Log Prompt to Canonical Workflow: run_fingerprint_dedup_production (Production Run)",
+        "id": "2ece7361-6c27-81a4-ae34-efe566136c91"
+      }
+    ]
+  },
+  "next_steps": [
+    "Execute the 11 newly created Agent-Tasks to create/update Agent-Workflows + Agent-Functions for each system prompt.",
+    "Prioritize Plans Directory Audit workflow + corrupted P2 prompt remediation first, then Workflow Implementation Audit/Notion-first orchestrator, then Music/Eagle workflows.",
+    "Update the Notion project page with prompt inventory (11) and task inventory (11) if desired."
+  ],
+  "archive_rule": "move_to_02_processed"
+}
