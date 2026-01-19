@@ -36,7 +36,7 @@ This execution log documents the current status of the Cross-Workspace Database 
 
 ### GAP-001: DriveSheetsSync v2.5 not deployed to Apps Script
 
-**Status:** CODE READY — Awaiting Deployment
+**Status:** RESOLVED (2026-01-19 14:35Z)
 
 **Evidence:**
 - `gas-scripts/drive-sheets-sync/Code.js` contains all required functions:
@@ -47,11 +47,16 @@ This execution log documents the current status of the Cross-Workspace Database 
 - Version: 2.5 with inter-workspace sync support
 - Git status: 16 commits ahead of origin/main
 
-**Remediation Required:**
-```bash
-cd gas-scripts/drive-sheets-sync
-npx clasp push
+**Deployment Completed:**
 ```
+Method: Apps Script API (after bug fix)
+Commit: 629c1b1 - fix(gas): Fix API deployment manifest name
+Files: Code.js, appsscript.json, DIAGNOSTIC_FUNCTIONS.js, MONITORING_HELPER.js, 
+       PRODUCTION_TEST_EXECUTION.js, VERIFICATION_HELPERS.js
+```
+
+**Bug Fixed:** `shared_core/gas/gas_deployment.py` was sending manifest as `appsscript.json` 
+but API requires `appsscript` (no extension). This caused silent fallback to clasp.
 
 ---
 
