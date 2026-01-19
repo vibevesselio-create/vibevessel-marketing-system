@@ -444,6 +444,92 @@ const CLIENT_TO_NAME = {
 };
 
 /**
+ * Maps client identifiers to their Notion workspace token property names.
+ * MGM 2026-01-19: Added for inter-workspace database synchronization.
+ *
+ * Each client may have databases in different Notion workspaces, requiring
+ * different API tokens. This mapping allows DriveSheetsSync to route API
+ * calls to the correct workspace.
+ *
+ * Token values are stored in script properties (not hardcoded):
+ * - NOTION_TOKEN (default) - Primary workspace token
+ * - ARCHIVE_WORKSPACE_TOKEN - Archive/secondary workspace token
+ * - VIBEVESSEL_WORKSPACE_TOKEN - VibeVessel client workspace token
+ *
+ * @const {Object}
+ */
+const CLIENT_TO_WORKSPACE_TOKEN_PROP = {
+  'seren-media-internal': 'NOTION_TOKEN',           // Primary workspace
+  'vibe-vessel': 'VIBEVESSEL_WORKSPACE_TOKEN',      // VibeVessel workspace
+  'ocean-frontiers': 'NOTION_TOKEN'                 // Uses primary workspace
+};
+
+/**
+ * Maps database ID prefixes to workspace token property names.
+ * MGM 2026-01-19: For databases that need cross-workspace access.
+ *
+ * Some databases (like Archive databases) live in different workspaces.
+ * This mapping allows routing by database ID prefix when client context
+ * is not sufficient.
+ *
+ * @const {Object}
+ */
+const DATABASE_PREFIX_TO_TOKEN_PROP = {
+  // Archive workspace databases (Music DB, etc.)
+  // Add prefixes here as needed, e.g.:
+  // '1a2b3c4d': 'ARCHIVE_WORKSPACE_TOKEN'
+};
+
+/**
+ * Gets the appropriate Notion API token for the current context.
+ * MGM 2026-01-19: Added for inter-workspace database synchronization.
+ *
+ * Resolution order:
+ * 1. Database-specific token (if databaseId provided and mapped)
+ * 2. Client-context token (based on getClientContext())
+ * 3. Default NOTION_TOKEN
+ *
+ * @param {string} databaseId - Optional database ID to check for specific token
+ * @returns {string|null} The API token or null if not configured
+ */
+function getWorkspaceToken_(databaseId = null) {
+  // 1. Check for database-specific token
+  if (databaseId) {
+    const cleanId = databaseId.replace(/-/g, '');
+    for (const [prefix, tokenProp] of Object.entries(DATABASE_PREFIX_TO_TOKEN_PROP)) {
+      if (cleanId.startsWith(prefix)) {
+        const token = PROPS.getProperty(tokenProp);
+        if (token) return token;
+      }
+    }
+  }
+
+  // 2. Check for client-context token
+  const clientContext = getClientContext();
+  if (clientContext && CLIENT_TO_WORKSPACE_TOKEN_PROP[clientContext]) {
+    const tokenProp = CLIENT_TO_WORKSPACE_TOKEN_PROP[clientContext];
+    const token = PROPS.getProperty(tokenProp);
+    if (token) return token;
+  }
+
+  // 3. Fall back to default NOTION_TOKEN
+  return PROPS.getProperty('NOTION_TOKEN') || PROPS.getProperty('NOTION_API_KEY');
+}
+
+/**
+ * Checks if inter-workspace sync is configured.
+ * @returns {boolean} True if multiple workspace tokens are available
+ */
+function isInterWorkspaceSyncEnabled_() {
+  const tokens = [
+    PROPS.getProperty('NOTION_TOKEN'),
+    PROPS.getProperty('ARCHIVE_WORKSPACE_TOKEN'),
+    PROPS.getProperty('VIBEVESSEL_WORKSPACE_TOKEN')
+  ].filter(Boolean);
+  return tokens.length > 1;
+}
+
+/**
  * Notion Folders database ID
  * MGM 2026-01-19: Now uses CONFIG.FOLDERS_DB_ID for dynamic discovery
  * Legacy fallback retained for backward compatibility
