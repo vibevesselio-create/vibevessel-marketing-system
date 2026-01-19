@@ -62,25 +62,23 @@ but API requires `appsscript` (no extension). This caused silent fallback to cla
 
 ### GAP-002: Workspace tokens not configured in Apps Script properties
 
-**Status:** PENDING — Requires deployment first (GAP-001)
+**Status:** CONFIGURED (2026-01-19 14:50Z)
 
 **Token Property Mapping:**
 | Client | Property Key | Status |
 |--------|--------------|--------|
-| seren-media-internal | SEREN_INTERNAL_WORKSPACE_TOKEN | To configure |
-| vibe-vessel | VIBEVESSEL_WORKSPACE_TOKEN | To configure |
-| ocean-frontiers | OCEAN_FRONTIERS_WORKSPACE_TOKEN | To configure |
+| seren-media-internal | SEREN_INTERNAL_WORKSPACE_TOKEN | CONFIGURED |
+| vibe-vessel | VIBEVESSEL_WORKSPACE_TOKEN | Pending (no token available) |
+| ocean-frontiers | OCEAN_FRONTIERS_WORKSPACE_TOKEN | CONFIGURED |
 
-**Remediation Required (after GAP-001):**
-```javascript
-// Run in Apps Script console after deployment
-setupWorkspaceToken('seren-media-internal', 'ntn_...')
-setupWorkspaceToken('vibe-vessel', 'secret_...')
-setupWorkspaceToken('ocean-frontiers', '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')
-
-// Validate configuration
-testInterWorkspaceSync()
+**Configured via clasp run:**
 ```
+setupWorkspaceToken('seren-media-internal', 'ntn_620653...')  ✓
+setupWorkspaceToken('ocean-frontiers', 'ntn_541874...')       ✓
+testInterWorkspaceSync()                                       ✓ (executed)
+```
+
+**Remaining:** VibeVessel workspace token not found in local .env files
 
 ---
 
