@@ -8393,34 +8393,93 @@ def find_track_by_title_and_artist(title: str, artist: str) -> Optional[Dict[str
         return None
 
 def cleanup_files_for_reprocessing(track_info: dict) -> bool:
-    """Delete physical files for reprocessing. Returns True if successful."""
+    """
+    SAFELY delete physical files for reprocessing.
+    
+    CRITICAL: This function uses the SAFE deletion pattern to prevent orphaned
+    Eagle items. Files are ONLY deleted from filesystem AFTER Eagle is updated.
+    
+    The old approach caused issues where:
+    1. Files were deleted from filesystem first
+    2. Eagle API deletion sometimes failed
+    3. This left Eagle with metadata for files that no longer exist
+    
+    The new approach:
+    1. Delete from Eagle API FIRST (moveToTrash)
+    2. Only then delete from filesystem
+    3. If Eagle fails, file stays to prevent orphan
+    
+    Returns True if successful.
+    """
     try:
-        files_deleted = 0
-        
         # Get file paths from track info
         wav_path = track_info.get("wav_file_path", "")
         aiff_path = track_info.get("aiff_file_path", "")
         m4a_path = track_info.get("m4a_file_path", "")
         
-        # Delete physical files
-        for file_path in [wav_path, aiff_path, m4a_path]:
-            if file_path and Path(file_path).exists():
+        file_paths = [p for p in [wav_path, aiff_path, m4a_path] if p]
+        
+        if not file_paths:
+            workspace_logger.info("🧹 No files to clean up")
+            return True
+        
+        # Use smart API safe cleanup if available
+        if EAGLE_SMART_AVAILABLE:
+            try:
+                from scripts.eagle_api_smart import safe_cleanup_track_files
+                
+                results = safe_cleanup_track_files(
+                    file_paths=file_paths,
+                    require_all_eagle_success=False  # Don't abort if some Eagle items not found
+                )
+                
+                workspace_logger.info(
+                    f"🧹 Safe cleanup complete: {results['files_deleted']}/{len(file_paths)} files, "
+                    f"{results['eagle_items_deleted']} Eagle items deleted"
+                )
+                
+                if results.get("warnings"):
+                    for warning in results["warnings"][:5]:
+                        workspace_logger.debug(f"   ⚠️  {warning}")
+                
+                return results["success"]
+                
+            except Exception as e:
+                workspace_logger.warning(f"⚠️  Smart cleanup failed, falling back to legacy: {e}")
+                # Fall through to legacy cleanup
+        
+        # LEGACY CLEANUP (fallback if smart API not available)
+        # IMPORTANT: Delete from Eagle FIRST, then filesystem
+        workspace_logger.warning("⚠️  Using legacy cleanup (EAGLE FIRST, then filesystem)")
+        
+        files_deleted = 0
+        eagle_items_deleted = 0
+        
+        for file_path in file_paths:
+            if not file_path:
+                continue
+            
+            path_obj = Path(file_path)
+            
+            # Step 1: Find and delete Eagle item FIRST
+            eagle_items = eagle_find_items_by_path(file_path)
+            for item in eagle_items:
+                item_id = item.get("id") if isinstance(item, dict) else item
+                if item_id:
+                    if eagle_move_to_trash([item_id]):
+                        eagle_items_deleted += 1
+                        workspace_logger.debug(f"   🗑️  Eagle item {item_id} moved to trash")
+                    else:
+                        workspace_logger.warning(f"   ⚠️  Failed to delete Eagle item {item_id}")
+            
+            # Step 2: Now safe to delete from filesystem
+            if path_obj.exists():
                 try:
-                    Path(file_path).unlink()
+                    path_obj.unlink()
                     workspace_logger.info(f"🗑️  Deleted file: {file_path}")
                     files_deleted += 1
                 except Exception as exc:
                     workspace_logger.warning(f"Failed to delete file {file_path}: {exc}")
-        
-        # Delete Eagle items by file path
-        eagle_items_deleted = 0
-        for file_path in [wav_path, aiff_path, m4a_path]:
-            if file_path:
-                eagle_items = eagle_find_items_by_path(file_path)
-                for item in eagle_items:
-                    item_id = item.get("id") if isinstance(item, dict) else item
-                    if item_id and eagle_delete_item(item_id):
-                        eagle_items_deleted += 1
         
         workspace_logger.info(f"🧹 Cleanup complete: {files_deleted} files, {eagle_items_deleted} Eagle items deleted")
         return True

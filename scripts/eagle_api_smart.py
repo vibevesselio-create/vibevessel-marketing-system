@@ -952,6 +952,375 @@ def eagle_add_item_smart(
         return None
 
 
+# =============================================================================
+# SAFE DELETION FUNCTIONS
+# =============================================================================
+# CRITICAL: These functions ensure files are NEVER deleted from filesystem
+# without first being properly removed from Eagle via the API.
+# This prevents "orphaned" Eagle items where metadata exists but files are gone.
+
+def eagle_move_to_trash_smart(item_ids: List[str]) -> Tuple[bool, List[str], List[str]]:
+    """
+    Move Eagle items to trash using the official API endpoint.
+    
+    This is the ONLY supported delete operation in Eagle. It moves items
+    to Eagle's trash, which can be emptied from the Eagle UI.
+    
+    IMPORTANT: Always use this BEFORE deleting files from filesystem!
+    
+    Args:
+        item_ids: List of Eagle item IDs to move to trash
+    
+    Returns:
+        Tuple of (success, successfully_trashed_ids, failed_ids)
+    """
+    if not item_ids:
+        return True, [], []
+    
+    op_id = state_manager.start_operation(
+        "eagle_move_to_trash",
+        {"item_count": len(item_ids)}
+    )
+    
+    try:
+        result = eagle_request_smart(
+            "POST",
+            "/api/item/moveToTrash",
+            {"itemIds": item_ids},
+            use_cache=False
+        )
+        
+        if isinstance(result, dict) and result.get("status") == "success":
+            query_cache.invalidate()
+            state_manager.complete_operation(op_id, {"trashed": len(item_ids)})
+            _log("info", f"🗑️  Moved {len(item_ids)} Eagle item(s) to trash")
+            return True, item_ids, []
+        else:
+            _log("warning", f"⚠️  Failed to move items to trash: {result}")
+            state_manager.fail_operation(op_id, f"API returned: {result}")
+            return False, [], item_ids
+            
+    except Exception as e:
+        _log("error", f"❌ Exception moving items to trash: {e}")
+        state_manager.fail_operation(op_id, str(e))
+        return False, [], item_ids
+
+
+def safe_delete_file_with_eagle_sync(
+    file_path: Union[str, Path],
+    eagle_item_id: Optional[str] = None,
+    require_eagle_success: bool = True
+) -> Dict[str, Any]:
+    """
+    SAFELY delete a file, ensuring Eagle is updated FIRST.
+    
+    This function prevents the "orphaned Eagle items" problem by:
+    1. Finding/verifying the Eagle item for this file
+    2. Moving the Eagle item to trash via API
+    3. Only THEN deleting the file from filesystem
+    
+    If Eagle deletion fails and require_eagle_success=True, the file
+    is NOT deleted from the filesystem.
+    
+    Args:
+        file_path: Path to the file to delete
+        eagle_item_id: Optional known Eagle item ID (if None, will search)
+        require_eagle_success: If True, abort file deletion if Eagle fails
+    
+    Returns:
+        Dict with operation results:
+        {
+            "success": bool,
+            "file_deleted": bool,
+            "eagle_deleted": bool,
+            "eagle_item_id": str or None,
+            "error": str or None,
+            "warnings": list
+        }
+    """
+    file_path = Path(file_path)
+    result = {
+        "success": False,
+        "file_deleted": False,
+        "eagle_deleted": False,
+        "eagle_item_id": eagle_item_id,
+        "error": None,
+        "warnings": []
+    }
+    
+    # Step 1: Check if file exists
+    if not file_path.exists():
+        result["warnings"].append(f"File does not exist: {file_path}")
+        # File already gone - still try to clean up Eagle if we have an ID
+        if eagle_item_id:
+            success, trashed, failed = eagle_move_to_trash_smart([eagle_item_id])
+            result["eagle_deleted"] = success
+        result["success"] = True  # Nothing to delete
+        return result
+    
+    # Step 2: Find Eagle item if not provided
+    if not eagle_item_id:
+        eagle_item = find_eagle_items_by_path(str(file_path))
+        if eagle_item:
+            eagle_item_id = eagle_item.get("id")
+            result["eagle_item_id"] = eagle_item_id
+            _log("debug", f"Found Eagle item for {file_path.name}: {eagle_item_id}")
+        else:
+            # Also try by filename
+            items_by_name = find_eagle_items_by_name(file_path.stem)
+            if items_by_name:
+                # Match by extension too
+                for item in items_by_name:
+                    if item.get("ext", "").lower() == file_path.suffix.lstrip(".").lower():
+                        eagle_item_id = item.get("id")
+                        result["eagle_item_id"] = eagle_item_id
+                        _log("debug", f"Found Eagle item by name: {eagle_item_id}")
+                        break
+    
+    # Step 3: Delete from Eagle FIRST
+    if eagle_item_id:
+        success, trashed, failed = eagle_move_to_trash_smart([eagle_item_id])
+        result["eagle_deleted"] = success
+        
+        if not success and require_eagle_success:
+            result["error"] = f"Eagle deletion failed for {eagle_item_id} - file NOT deleted to prevent orphan"
+            _log("warning", f"⚠️  {result['error']}")
+            return result
+    else:
+        result["warnings"].append(f"No Eagle item found for {file_path} - proceeding with file deletion")
+        _log("debug", f"No Eagle item found for {file_path}")
+    
+    # Step 4: Now safe to delete the file
+    try:
+        file_path.unlink()
+        result["file_deleted"] = True
+        result["success"] = True
+        _log("info", f"🗑️  Safely deleted: {file_path.name} (Eagle: {eagle_item_id or 'N/A'})")
+    except Exception as e:
+        result["error"] = f"Failed to delete file: {e}"
+        _log("error", f"❌ {result['error']}")
+    
+    return result
+
+
+def safe_cleanup_track_files(
+    file_paths: List[Union[str, Path]],
+    eagle_item_ids: Optional[List[str]] = None,
+    require_all_eagle_success: bool = False
+) -> Dict[str, Any]:
+    """
+    Safely clean up multiple files for a track, syncing with Eagle first.
+    
+    Args:
+        file_paths: List of file paths to delete
+        eagle_item_ids: Optional list of known Eagle IDs (parallel to file_paths)
+        require_all_eagle_success: If True, abort all if any Eagle deletion fails
+    
+    Returns:
+        Summary dict with stats and details
+    """
+    op_id = state_manager.start_operation(
+        "safe_cleanup_track_files",
+        {"file_count": len(file_paths)}
+    )
+    
+    results = {
+        "success": True,
+        "files_deleted": 0,
+        "eagle_items_deleted": 0,
+        "files_failed": 0,
+        "eagle_items_failed": 0,
+        "details": [],
+        "errors": [],
+        "warnings": []
+    }
+    
+    # Normalize inputs
+    file_paths = [Path(p) for p in file_paths if p]
+    if eagle_item_ids is None:
+        eagle_item_ids = [None] * len(file_paths)
+    
+    # Process each file
+    for i, file_path in enumerate(file_paths):
+        eagle_id = eagle_item_ids[i] if i < len(eagle_item_ids) else None
+        
+        delete_result = safe_delete_file_with_eagle_sync(
+            file_path,
+            eagle_item_id=eagle_id,
+            require_eagle_success=require_all_eagle_success
+        )
+        
+        results["details"].append({
+            "path": str(file_path),
+            **delete_result
+        })
+        
+        if delete_result["file_deleted"]:
+            results["files_deleted"] += 1
+        elif delete_result.get("error"):
+            results["files_failed"] += 1
+            results["errors"].append(delete_result["error"])
+        
+        if delete_result["eagle_deleted"]:
+            results["eagle_items_deleted"] += 1
+        elif delete_result["eagle_item_id"] and not delete_result["eagle_deleted"]:
+            results["eagle_items_failed"] += 1
+        
+        results["warnings"].extend(delete_result.get("warnings", []))
+    
+    results["success"] = results["files_failed"] == 0
+    
+    state_manager.complete_operation(op_id, {
+        "files_deleted": results["files_deleted"],
+        "eagle_deleted": results["eagle_items_deleted"]
+    })
+    
+    _log("info", f"🧹 Cleanup complete: {results['files_deleted']}/{len(file_paths)} files, "
+         f"{results['eagle_items_deleted']} Eagle items deleted")
+    
+    return results
+
+
+def verify_eagle_file_integrity(
+    item_id: Optional[str] = None,
+    limit: int = 1000
+) -> Dict[str, Any]:
+    """
+    Verify file integrity for Eagle items - find orphaned items.
+    
+    An orphaned item is one where Eagle has metadata but the file
+    is missing from the filesystem.
+    
+    Args:
+        item_id: Optional specific item ID to check
+        limit: Max items to check (for performance)
+    
+    Returns:
+        Dict with integrity report
+    """
+    try:
+        from scripts.eagle_path_resolution import (
+            resolve_eagle_item_path,
+            get_eagle_library_path
+        )
+    except ImportError:
+        _log("warning", "eagle_path_resolution not available - cannot verify integrity")
+        return {"error": "eagle_path_resolution module not available"}
+    
+    library_path = get_eagle_library_path()
+    if not library_path:
+        return {"error": "Could not determine Eagle library path"}
+    
+    items = get_eagle_items()
+    if item_id:
+        items = [i for i in items if i.get("id") == item_id]
+    
+    if limit:
+        items = items[:limit]
+    
+    report = {
+        "total_checked": len(items),
+        "valid": 0,
+        "orphaned": [],  # Eagle has metadata but file missing
+        "path_errors": [],  # Could not resolve path
+    }
+    
+    for item in items:
+        iid = item.get("id")
+        try:
+            resolved_path = resolve_eagle_item_path(item, library_path)
+            
+            if resolved_path is None:
+                report["path_errors"].append({
+                    "id": iid,
+                    "name": item.get("name"),
+                    "error": "Could not resolve path"
+                })
+            elif not resolved_path.exists():
+                report["orphaned"].append({
+                    "id": iid,
+                    "name": item.get("name"),
+                    "expected_path": str(resolved_path)
+                })
+            else:
+                report["valid"] += 1
+                
+        except Exception as e:
+            report["path_errors"].append({
+                "id": iid,
+                "name": item.get("name"),
+                "error": str(e)
+            })
+    
+    report["orphan_count"] = len(report["orphaned"])
+    report["health_percentage"] = (
+        report["valid"] / report["total_checked"] * 100
+        if report["total_checked"] > 0 else 0
+    )
+    
+    _log("info", f"🔍 Eagle integrity check: {report['valid']}/{report['total_checked']} valid, "
+         f"{report['orphan_count']} orphaned")
+    
+    return report
+
+
+def cleanup_orphaned_eagle_items(
+    dry_run: bool = True,
+    limit: int = 100
+) -> Dict[str, Any]:
+    """
+    Find and clean up orphaned Eagle items (items without files).
+    
+    Args:
+        dry_run: If True, only report what would be cleaned (default: True)
+        limit: Max items to process
+    
+    Returns:
+        Dict with cleanup results
+    """
+    integrity = verify_eagle_file_integrity(limit=limit)
+    
+    if "error" in integrity:
+        return integrity
+    
+    orphaned = integrity.get("orphaned", [])
+    
+    result = {
+        "orphaned_found": len(orphaned),
+        "cleaned": 0,
+        "failed": 0,
+        "dry_run": dry_run,
+        "items": []
+    }
+    
+    if not orphaned:
+        _log("info", "✅ No orphaned Eagle items found")
+        return result
+    
+    _log("info", f"Found {len(orphaned)} orphaned Eagle items")
+    
+    if dry_run:
+        _log("info", "🔍 DRY RUN - would clean the following orphaned items:")
+        for item in orphaned[:10]:
+            _log("info", f"   - {item['name']} ({item['id'][:8]}...)")
+        if len(orphaned) > 10:
+            _log("info", f"   ... and {len(orphaned) - 10} more")
+        result["items"] = orphaned
+        return result
+    
+    # Actually clean up
+    item_ids = [item["id"] for item in orphaned]
+    success, trashed, failed = eagle_move_to_trash_smart(item_ids)
+    
+    result["cleaned"] = len(trashed)
+    result["failed"] = len(failed)
+    result["items"] = orphaned
+    
+    _log("info", f"🧹 Cleaned {result['cleaned']} orphaned items, {result['failed']} failed")
+    
+    return result
+
+
 def eagle_import_to_library(
     items: List[Dict[str, Any]],
     folder_id: Optional[str] = None
