@@ -552,15 +552,16 @@ import numpy as np
 import requests
 from notion_client import Client
 # Import smart Eagle API with state tracking
+# NOTE: Module located at scripts/eagle_api_smart.py (2026-01-19)
 try:
-    from eagle_api_smart import (
-        eagle_request_smart as eagle_request,
-        eagle_add_item_smart as eagle_add_item,
+    from scripts.eagle_api_smart import (
+        eagle_request_smart,
+        eagle_add_item_smart,
         eagle_import_to_library,
-        eagle_switch_library_smart as eagle_switch_library,
+        eagle_switch_library_smart,
         test_eagle_connection,
-        state_manager,
-        query_cache,
+        state_manager as eagle_state_manager,
+        query_cache as eagle_query_cache,
         NotionQueryCache,
         set_workspace_logger
     )
@@ -568,9 +569,9 @@ try:
     set_workspace_logger(workspace_logger)
     EAGLE_SMART_AVAILABLE = True
     workspace_logger.info("✅ Using smart Eagle API with state tracking")
-except ImportError:
+except ImportError as e:
     EAGLE_SMART_AVAILABLE = False
-    workspace_logger.warning("⚠️ Smart Eagle API not available, using fallback")
+    workspace_logger.warning(f"⚠️ Smart Eagle API not available, using fallback: {e}")
 
 from dotenv import load_dotenv
 from pathlib import Path

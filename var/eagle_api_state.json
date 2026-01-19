@@ -1,0 +1,47 @@
+{
+  "operations": {
+    "eagle_request_get_1768858190560": {
+      "operation_id": "eagle_request_get_1768858190560",
+      "operation_type": "eagle_request_get",
+      "started_at": "2026-01-19T21:29:50.560123+00:00",
+      "completed_at": "2026-01-19T21:29:50.692455+00:00",
+      "status": "completed",
+      "result": {
+        "status_code": 200
+      },
+      "error": null,
+      "retries": 0,
+      "metadata": {
+        "endpoint": "/api/library/info",
+        "has_payload": false
+      }
+    },
+    "eagle_request_get_1768858238226": {
+      "operation_id": "eagle_request_get_1768858238226",
+      "operation_type": "eagle_request_get",
+      "started_at": "2026-01-19T21:30:38.226777+00:00",
+      "completed_at": "2026-01-19T21:30:38.255208+00:00",
+      "status": "completed",
+      "result": {
+        "status_code": 200
+      },
+      "error": null,
+      "retries": 0,
+      "metadata": {
+        "endpoint": "/api/item/list",
+        "has_payload": false
+      }
+    }
+  },
+  "session_stats": {
+    "total_operations": 2,
+    "successful_operations": 1,
+    "failed_operations": 0,
+    "total_retries": 0,
+    "cache_hits": 0,
+    "cache_misses": 1,
+    "api_calls": 1,
+    "session_started_at": "2026-01-19T21:30:38.224000+00:00"
+  },
+  "last_saved": "2026-01-19T21:30:38.255219+00:00"
+}

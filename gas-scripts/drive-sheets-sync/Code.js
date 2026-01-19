@@ -3,7 +3,7 @@
  * Two-way rows + Two-way SCHEMA + safer rich_text chunking
  * API version: 2025-09-03
  *
- * VERSION: 2.6 - Usage-Driven Property Registry Sync (2026-01-19)
+ * VERSION: 2.7 - Auto-Create Relational Databases (2026-01-19)
  *
  * IMPROVEMENTS IN 2.6:
  *   - FEATURE: Usage-Driven Property Registry Sync - FULLY IMPLEMENTED
@@ -127,9 +127,12 @@ const DB_NAME_MAP = {
   // MGM 2026-01-19: Added for dynamic discovery (eliminate hardcoded IDs)
   'Folders': ['FOLDERS'],
   'Clients': ['CLIENTS'],
+  'Properties': ['PROPERTIES_REGISTRY'],
   'database-parent-page': ['DATABASE_PARENT_PAGE'],
   // MGM 2026-01-19: Properties Registry for usage-driven property sync
-  'Properties': ['PROPERTIES_REGISTRY']
+  'Properties': ['PROPERTIES_REGISTRY'],
+  // MGM 2026-01-19: Files database for upload tracking (required)
+  'Files': ['FILES']
 };
 
 /**
@@ -5965,18 +5968,27 @@ function upsertRegistryPage_(registryDbId, pageData, UL) {
   }
   
   try {
-    // Resolve to data_source_id
-    const dsId = resolveDatabaseToDataSourceId_(registryDbId, UL);
+    // Resolve to data_source_id (or use directly if already a ds_id)
+    let dsId = registryDbId;
+    
+    // Try to resolve if it looks like a database_id (32 chars without dashes)
+    if (registryDbId && !registryDbId.includes('-')) {
+      dsId = resolveDatabaseToDataSourceId_(registryDbId, UL);
+    }
+    
     if (!dsId) {
       result.error = 'Cannot resolve registry database to data_source_id';
       UL?.warn?.(result.error, { registryDbId });
       return result;
     }
     
+    UL?.debug?.('upsertRegistryPage_ using data_source_id', { dsId, registryDbId });
+    
     // Search for existing page by deduplication key
+    // NOTE: Existing Properties database uses "Property ID" for deduplication
     const searchBody = {
       filter: {
-        property: 'Deduplication Key',
+        property: 'Property ID',
         rich_text: { equals: pageData.deduplicationKey }
       },
       page_size: 1
@@ -5997,58 +6009,59 @@ function upsertRegistryPage_(registryDbId, pageData, UL) {
     }
     
     // Build properties payload
+    // NOTE: Uses existing Properties database schema property names
     const properties = {};
     
-    // Title property (Property Name)
+    // Title property - existing schema uses "Name"
     if (pageData.propertyName) {
-      properties['Property Name'] = { 
+      properties['Name'] = { 
         title: [{ type: 'text', text: { content: pageData.propertyName } }] 
       };
     }
     
-    // Database ID
+    // Database ID - existing schema uses "Source Database ID"
     if (pageData.databaseId) {
-      properties['Database ID'] = { 
+      properties['Source Database ID'] = { 
         rich_text: [{ type: 'text', text: { content: pageData.databaseId } }] 
       };
     }
     
-    // Property Type
+    // Property Type - existing schema uses "Property_type"
     if (pageData.propertyType) {
-      properties['Property Type'] = { 
+      properties['Property_type'] = { 
         select: { name: pageData.propertyType } 
       };
     }
     
-    // Deduplication Key (dbId::propertyName)
-    properties['Deduplication Key'] = { 
+    // Deduplication Key - existing schema uses "Property ID"
+    properties['Property ID'] = { 
       rich_text: [{ type: 'text', text: { content: pageData.deduplicationKey } }] 
     };
     
-    // Items Using Count
+    // Items Using Count - added to existing schema
     if (pageData.itemsUsingCount !== undefined) {
       properties['Items Using Count'] = { 
         number: pageData.itemsUsingCount 
       };
     }
     
-    // First Seen At
+    // First Seen At - added to existing schema
     if (pageData.firstSeenAt) {
       properties['First Seen At'] = { 
         date: { start: pageData.firstSeenAt } 
       };
     }
     
-    // Sync Status
+    // Sync Status - existing schema uses "sync_status"
     if (pageData.syncStatus) {
-      properties['Sync Status'] = { 
+      properties['sync_status'] = { 
         select: { name: pageData.syncStatus } 
       };
     }
     
-    // Is Required (for exempted properties)
+    // Is Required - existing schema uses "required"
     if (pageData.isRequired !== undefined) {
-      properties['Is Required'] = { 
+      properties['required'] = { 
         checkbox: pageData.isRequired 
       };
     }
@@ -6650,7 +6663,11 @@ function runPropertySync(dbId) {
   
   console.log(`=== Running Property Sync for ${dbId} ===`);
   
-  const result = syncPropertiesRegistryForDatabase_(dbId, null, UL);
+  // Use existing Properties database (data_source_id)
+  const propertiesRegistryDsId = '299e7361-6c27-8192-8a2c-000b6e005ce6';
+  console.log(`Using Properties Registry: ${propertiesRegistryDsId}`);
+  
+  const result = syncPropertiesRegistryForDatabase_(dbId, propertiesRegistryDsId, UL);
   
   console.log('');
   console.log('=== Sync Results ===');
@@ -6672,8 +6689,60 @@ function runPropertySync(dbId) {
  * Run property sync for Agent-Tasks database (convenience function)
  */
 function syncAgentTasksProperties() {
-  // Use the secondary Agent-Tasks DB which is accessible
-  return runPropertySync('284e73616c278018872aeb14e82e0392');
+  // Use the primary Agent-Tasks data_source_id (discovered via search)
+  return runPropertySync('284e7361-6c27-816c-9d22-000b1b000d4a');
+}
+
+/**
+ * Direct test of upsertRegistryPage_ with explicit values
+ * Run this to verify the upsert mechanism works
+ */
+function testDirectUpsert() {
+  const UL = {
+    info: (msg, data) => console.log(`[INFO] ${msg} ${JSON.stringify(data || {})}`),
+    warn: (msg, data) => console.log(`[WARN] ${msg} ${JSON.stringify(data || {})}`),
+    error: (msg, data) => console.log(`[ERROR] ${msg} ${JSON.stringify(data || {})}`),
+    debug: (msg, data) => console.log(`[DEBUG] ${msg} ${JSON.stringify(data || {})}`)
+  };
+  
+  const propertiesRegistryDsId = '299e7361-6c27-8192-8a2c-000b6e005ce6';
+  const testTimestamp = new Date().toISOString();
+  
+  console.log('=== Testing Direct Upsert ===');
+  console.log(`Registry DS ID: ${propertiesRegistryDsId}`);
+  console.log(`Timestamp: ${testTimestamp}`);
+  
+  const pageData = {
+    deduplicationKey: 'TEST_DB::TestProperty',
+    propertyName: 'TestProperty-' + testTimestamp.slice(11, 19),
+    databaseId: 'TEST_DB_ID',
+    propertyType: 'rich_text',
+    firstSeenAt: testTimestamp,
+    itemsUsingCount: 42,
+    syncStatus: 'Active',
+    isRequired: false
+  };
+  
+  console.log('Page data:', JSON.stringify(pageData));
+  
+  const result = upsertRegistryPage_(propertiesRegistryDsId, pageData, UL);
+  
+  console.log('');
+  console.log('=== Result ===');
+  console.log(`Success: ${result.success}`);
+  console.log(`Created: ${result.created}`);
+  console.log(`Page ID: ${result.pageId}`);
+  console.log(`Error: ${result.error || 'None'}`);
+  
+  return result;
+}
+
+/**
+ * Simple ping function to test if Apps Script execution is working
+ */
+function ping() {
+  console.log('PING executed at ' + new Date().toISOString());
+  return { status: 'ok', timestamp: new Date().toISOString() };
 }
 
 /**
@@ -6736,6 +6805,51 @@ function testUsageDrivenPropertySync() {
   
   console.log('=== Test Complete ===');
   return { passed, failed };
+}
+
+/**
+ * Test function for database auto-creation
+ * Validates that all relational databases can be found or created
+ */
+function testDatabaseAutoCreation() {
+  console.log('=== Testing Database Auto-Creation ===');
+  console.log('');
+  
+  const UL = {
+    info: (msg, data) => console.log(`[INFO] ${msg}`, JSON.stringify(data || {})),
+    warn: (msg, data) => console.log(`[WARN] ${msg}`, JSON.stringify(data || {})),
+    debug: (msg, data) => console.log(`[DEBUG] ${msg}`, JSON.stringify(data || {})),
+    error: (msg, data) => console.error(`[ERROR] ${msg}`, JSON.stringify(data || {}))
+  };
+  
+  console.log('--- Available Database Schemas ---');
+  const schemaNames = Object.keys(DATABASE_SCHEMAS);
+  console.log(`Schemas defined: ${schemaNames.join(', ')}`);
+  console.log('');
+  
+  console.log('--- Testing ensureAllDatabasesExist_ ---');
+  const results = ensureAllDatabasesExist_(UL);
+  
+  console.log('');
+  console.log('--- Results ---');
+  let successCount = 0;
+  let failCount = 0;
+  
+  for (const [dbName, status] of Object.entries(results)) {
+    if (status.exists) {
+      console.log(`✅ ${dbName}: ${status.id}`);
+      successCount++;
+    } else {
+      console.log(`❌ ${dbName}: NOT FOUND/CREATED`);
+      failCount++;
+    }
+  }
+  
+  console.log('');
+  console.log(`Summary: ${successCount} databases accessible, ${failCount} failed`);
+  console.log('=== Test Complete ===');
+  
+  return { success: failCount === 0, results };
 }
 
 /* ============================== NOTION → CSV EXPORT ============================== */
@@ -7989,6 +8103,316 @@ function syncMarkdownFilesToNotion_(folder, ds, UL, options = {}) {
 /* ============================== PROPERTY VALIDATION AND AUTO-CREATION ============================== */
 
 /**
+ * Database schema definitions for all relational databases
+ * Used for auto-creation when a database doesn't exist
+ */
+const DATABASE_SCHEMAS = {
+  'Execution-Logs': {
+    title: 'Execution-Logs',
+    configKey: 'EXECUTION_LOGS_DB_ID',
+    properties: {
+      'Name': { title: {} },
+      'Start Time': { date: {} },
+      'End Time': { date: {} },
+      'Final Status': { select: { options: [
+        { name: 'Running', color: 'blue' },
+        { name: 'Completed', color: 'green' },
+        { name: 'Failed', color: 'red' },
+        { name: 'Cancelled', color: 'gray' }
+      ]}},
+      'Duration (s)': { number: { format: 'number' } },
+      'Script Name-AI': { rich_text: {} },
+      'Session ID': { rich_text: {} },
+      'Environment': { rich_text: {} },
+      'Script ID': { rich_text: {} },
+      'Error Count': { number: { format: 'number' } },
+      'Warning Count': { number: { format: 'number' } },
+      'Plain-English Summary': { rich_text: {} }
+    }
+  },
+  'Workspace-Databases': {
+    title: 'Workspace-Databases',
+    configKey: 'WORKSPACE_REGISTRY_DB_ID',
+    properties: {
+      'Database Name': { title: {} },
+      'Data Source ID': { rich_text: {} },
+      'Database URL': { url: {} },
+      'Status': { select: { options: [
+        { name: 'Success', color: 'green' },
+        { name: 'Failed', color: 'red' },
+        { name: 'Partial', color: 'yellow' },
+        { name: 'Running', color: 'blue' },
+        { name: 'Paused', color: 'gray' }
+      ]}},
+      'Row Count': { number: { format: 'number' } },
+      'Property Count': { number: { format: 'number' } },
+      'Properties': { rich_text: {} },
+      'Last Sync': { date: {} },
+      'Archived': { checkbox: {} },
+      'CSV File ID': { rich_text: {} },
+      'Drive Folder': { url: {} }
+    }
+  },
+  'Scripts': {
+    title: 'Scripts',
+    configKey: 'SCRIPTS_DB_ID',
+    properties: {
+      'Name': { title: {} },
+      'Script ID': { rich_text: {} },
+      'Script Name': { rich_text: {} },
+      'Description': { rich_text: {} },
+      'Status': { select: { options: [
+        { name: 'Active', color: 'green' },
+        { name: 'Inactive', color: 'gray' },
+        { name: 'Development', color: 'blue' },
+        { name: 'Deprecated', color: 'red' }
+      ]}},
+      // Relation to Execution-Logs - target_database triggers auto-creation
+      'Most Recent Log': { relation: { target_database: 'Execution-Logs', type: 'single_property' } }
+    }
+  },
+  'Folders': {
+    title: 'Folders',
+    configKey: 'FOLDERS_DB_ID',
+    properties: {
+      'Name': { title: {} },
+      'Local Path': { rich_text: {} },
+      'Drive ID': { rich_text: {} },
+      'Drive URL': { url: {} },
+      'Parent Folder': { rich_text: {} },
+      'Folder Type': { select: { options: [
+        { name: 'Music', color: 'purple' },
+        { name: 'Video', color: 'blue' },
+        { name: 'Image', color: 'green' },
+        { name: 'Document', color: 'yellow' },
+        { name: 'Project', color: 'orange' },
+        { name: 'Archive', color: 'gray' }
+      ]}},
+      'File Count': { number: { format: 'number' } },
+      'Size (Bytes)': { number: { format: 'number' } },
+      'Last Synced': { date: {} },
+      'Sync Status': { select: { options: [
+        { name: 'Synced', color: 'green' },
+        { name: 'Pending', color: 'yellow' },
+        { name: 'Error', color: 'red' }
+      ]}},
+      // Relation to Client - target_database triggers auto-creation
+      'Client': { relation: { target_database: 'Clients', type: 'single_property' } }
+    }
+  },
+  'Clients': {
+    title: 'Clients',
+    configKey: 'CLIENTS_DB_ID',
+    properties: {
+      'Name': { title: {} },
+      'Client ID': { rich_text: {} },
+      'Status': { select: { options: [
+        { name: 'Active', color: 'green' },
+        { name: 'Inactive', color: 'gray' },
+        { name: 'Prospect', color: 'blue' }
+      ]}},
+      'Contact Email': { email: {} },
+      'Website': { url: {} },
+      'Notes': { rich_text: {} }
+    }
+  },
+  'Agent-Tasks': {
+    title: 'Agent-Tasks',
+    configKey: 'AGENT_TASKS_DB_ID',
+    properties: {
+      'Name': { title: {} },
+      'Status': { select: { options: [
+        { name: 'Not Started', color: 'gray' },
+        { name: 'In Progress', color: 'blue' },
+        { name: 'Blocked', color: 'red' },
+        { name: 'Completed', color: 'green' },
+        { name: 'Cancelled', color: 'default' }
+      ]}},
+      'Priority': { select: { options: [
+        { name: 'Critical', color: 'red' },
+        { name: 'High', color: 'orange' },
+        { name: 'Medium', color: 'yellow' },
+        { name: 'Low', color: 'gray' }
+      ]}},
+      'MCP Assigned Agent': { rich_text: {} },
+      'Due Date': { date: {} },
+      'Description': { rich_text: {} },
+      'MCP Progress Percentage': { number: { format: 'percent' } },
+      // Relation to Execution-Logs - target_database triggers auto-creation
+      'Execution Logs': { relation: { target_database: 'Execution-Logs', type: 'dual_property' } }
+    }
+  },
+  'Properties': {
+    title: 'Properties',
+    configKey: 'PROPERTIES_REGISTRY_DB_ID',
+    properties: PROPERTIES_REGISTRY_SCHEMA
+  }
+};
+
+/**
+ * Universal database auto-creation function
+ * Ensures a database exists, creates it with proper schema if not found
+ * 
+ * @param {string} dbName - Database name (must match key in DATABASE_SCHEMAS)
+ * @param {Object} UL - Unified logger instance
+ * @returns {string|null} Data source ID if accessible or created, null if failed
+ */
+function ensureDatabaseExists_(dbName, UL) {
+  const schema = DATABASE_SCHEMAS[dbName];
+  if (!schema) {
+    UL?.error?.('Unknown database name for auto-creation', { dbName, available: Object.keys(DATABASE_SCHEMAS) });
+    return null;
+  }
+  
+  // Check if already configured and accessible
+  const configuredId = CONFIG[schema.configKey] || PROPS.getProperty(`DB_CACHE_${dbName.toUpperCase().replace(/-/g, '_')}`);
+  
+  if (configuredId) {
+    try {
+      const dsId = resolveDatabaseToDataSourceId_(configuredId, UL);
+      if (dsId) {
+        UL?.debug?.(`${dbName} database is accessible`, { dbId: configuredId, dataSourceId: dsId });
+        return dsId;
+      }
+    } catch (e) {
+      UL?.debug?.(`Configured ${dbName} not accessible, will search or create`, { error: String(e) });
+    }
+  }
+  
+  // Search for existing database by name
+  try {
+    const searchRes = notionFetch_('search', 'POST', {
+      query: schema.title,
+      page_size: 50,
+      filter: { property: 'object', value: 'data_source' }
+    });
+    
+    for (const ds of (searchRes.results || [])) {
+      const title = ds.title?.[0]?.plain_text || ds.name || '';
+      if (title.toLowerCase() === schema.title.toLowerCase()) {
+        const foundDsId = ds.id;
+        UL?.info?.(`Found existing ${dbName} database`, { dataSourceId: foundDsId });
+        PROPS.setProperty(`DB_CACHE_${dbName.toUpperCase().replace(/-/g, '_')}`, foundDsId);
+        return foundDsId;
+      }
+    }
+  } catch (e) {
+    UL?.debug?.(`Search for ${dbName} database failed`, { error: String(e) });
+  }
+  
+  // Create new database
+  UL?.info?.(`Creating ${dbName} database`);
+  
+  try {
+    const parentPageId = CONFIG.DATABASE_PARENT_PAGE_ID;
+    if (!parentPageId) {
+      UL?.error?.(`Cannot create ${dbName} - DATABASE_PARENT_PAGE_ID not configured`);
+      return null;
+    }
+    
+    // Process properties - handle relations by ensuring target databases exist first
+    const processedProperties = {};
+    const deferredRelations = []; // Relations to add after creation
+    
+    for (const [propName, propDef] of Object.entries(schema.properties)) {
+      if (propDef.relation) {
+        // This is a relation property - need to resolve or create target database
+        const targetDbName = propDef.relation.target_database;
+        if (targetDbName && DATABASE_SCHEMAS[targetDbName]) {
+          UL?.debug?.(`Ensuring relation target ${targetDbName} exists for property ${propName}`);
+          const targetDsId = ensureDatabaseExists_(targetDbName, UL);
+          if (targetDsId) {
+            processedProperties[propName] = {
+              relation: {
+                data_source_id: targetDsId,
+                type: propDef.relation.type || 'single_property'
+              }
+            };
+          } else {
+            // Defer this relation - will add after creation
+            deferredRelations.push({ propName, targetDbName });
+            UL?.warn?.(`Deferring relation ${propName} - target ${targetDbName} could not be created`);
+          }
+        } else if (propDef.relation.data_source_id) {
+          // Direct data_source_id provided
+          processedProperties[propName] = propDef;
+        } else {
+          // Skip relation without target
+          UL?.debug?.(`Skipping relation ${propName} - no target database specified`);
+        }
+      } else {
+        // Non-relation property - use as-is
+        processedProperties[propName] = propDef;
+      }
+    }
+    
+    const newDb = notionFetch_('databases', 'POST', {
+      parent: { type: 'page_id', page_id: parentPageId },
+      title: [{ type: 'text', text: { content: schema.title } }],
+      properties: processedProperties
+    });
+    
+    const createdDbId = newDb.id;
+    const dataSources = newDb.data_sources || [];
+    const dsId = dataSources[0]?.id || createdDbId;
+    
+    UL?.info?.(`Created ${dbName} database`, { dbId: createdDbId, dataSourceId: dsId, url: newDb.url });
+    
+    // Cache the ID
+    PROPS.setProperty(`DB_CACHE_${dbName.toUpperCase().replace(/-/g, '_')}`, dsId);
+    
+    // Add deferred relations if any
+    if (deferredRelations.length > 0) {
+      for (const { propName, targetDbName } of deferredRelations) {
+        try {
+          const targetDsId = ensureDatabaseExists_(targetDbName, UL);
+          if (targetDsId) {
+            // Add the relation property via PATCH
+            notionFetch_(`data_sources/${dsId}`, 'PATCH', {
+              properties: {
+                [propName]: {
+                  relation: {
+                    data_source_id: targetDsId,
+                    type: 'single_property'
+                  }
+                }
+              }
+            });
+            UL?.info?.(`Added deferred relation ${propName} to ${dbName}`);
+          }
+        } catch (e) {
+          UL?.warn?.(`Failed to add deferred relation ${propName}`, { error: String(e) });
+        }
+      }
+    }
+    
+    return dsId;
+    
+  } catch (e) {
+    UL?.error?.(`Failed to create ${dbName} database`, { error: String(e), stack: e.stack });
+    return null;
+  }
+}
+
+/**
+ * Ensure all relational databases exist - creates any missing ones
+ * @param {Object} UL - Unified logger instance
+ * @returns {Object} Status of each database { dbName: { exists: boolean, id: string|null } }
+ */
+function ensureAllDatabasesExist_(UL) {
+  const results = {};
+  const dbNames = ['Execution-Logs', 'Workspace-Databases', 'Scripts', 'Folders', 'Clients', 'Properties'];
+  
+  for (const dbName of dbNames) {
+    const dsId = ensureDatabaseExists_(dbName, UL);
+    results[dbName] = { exists: !!dsId, id: dsId };
+  }
+  
+  UL?.info?.('Database existence check complete', results);
+  return results;
+}
+
+/**
  * Required properties configuration for critical databases
  * Maps database ID to required properties with their types and default configs
  */
@@ -8022,7 +8446,7 @@ const REQUIRED_PROPERTIES_CONFIG = {
     'Row Count': { type: 'number', required: false },
     'Property Count': { type: 'number', required: false },
     'Properties': { type: 'rich_text', required: false },
-    'Last Sync': { type: 'date', required: false },
+    'Last Sync': { date: {} },
     'Archived': { type: 'checkbox', required: false },
     'CSV File ID': { type: 'rich_text', required: false },
     'Drive Folder': { type: 'url', required: false },
@@ -9880,4 +10304,393 @@ function auditWorkspaceState() {
  */
 function applyWorkspaceCleanup() {
   return runWorkspaceCleanup(false);
+}
+
+/* ==============================================================================================
+ * GOOGLE DRIVE UPLOAD FROM NOTION FOLDERS DATABASE
+ * ==============================================================================================
+ * Upload files to Google Drive folders specified in the Notion Folders database,
+ * with the target folder determined by the relation on the source page.
+ *
+ * Architecture:
+ *   Source Page (Notion) → Relation: "Folder" → Folders Database → "Drive Folder ID" → Google Drive
+ *
+ * Required Configuration:
+ *   - NOTION_TOKEN / NOTION_API_KEY: Notion API token
+ *   - FOLDERS_DB_ID: Folders database ID (auto-discovered or configured)
+ *   - FILES_DB_ID: Files database ID for tracking uploads (required)
+ *
+ * MGM 2026-01-19: Initial implementation per implementation-plan-google-drive-upload.md
+ * ============================================================================================== */
+
+/**
+ * Files Database ID for tracking uploaded files
+ * MGM 2026-01-19: Required for upload tracking (not optional)
+ */
+const FILES_DB_ID = (() => {
+  const props = PropertiesService.getScriptProperties();
+  // Check environment-specific first, then cache, then hardcoded fallback
+  const envId = props.getProperty('DB_ID_DEV_FILES') || props.getProperty('DB_ID_PROD_FILES');
+  const cacheId = props.getProperty('DB_CACHE_FILES');
+  return envId || cacheId || null;
+})();
+
+/**
+ * Retrieves the Drive Folder ID from a Notion page's Folder relation
+ *
+ * @param {string} sourcePageId - Notion page ID that has a "Folder" relation
+ * @param {UnifiedLoggerGAS} [UL] - Optional logger instance
+ * @returns {string|null} Google Drive folder ID, or null if not found
+ */
+function getDriveFolderIdFromRelation_(sourcePageId, UL) {
+  if (!sourcePageId) {
+    UL?.warn?.('getDriveFolderIdFromRelation_: No source page ID provided');
+    return null;
+  }
+
+  const cleanPageId = sourcePageId.replace(/-/g, '');
+  UL?.debug?.('Retrieving Folder relation from source page', { sourcePageId: cleanPageId });
+
+  try {
+    // Step 1: Get the source page to extract the Folder relation
+    const sourcePage = notionFetch_(`pages/${cleanPageId}`, 'GET');
+
+    // Look for Folder relation property (try common names)
+    const folderRelationNames = ['Folder', 'Folders', 'folder', 'Drive Folder', 'Target Folder'];
+    let folderRelation = null;
+    let relationPropertyName = null;
+
+    for (const name of folderRelationNames) {
+      if (sourcePage.properties?.[name]?.relation?.length > 0) {
+        folderRelation = sourcePage.properties[name].relation;
+        relationPropertyName = name;
+        break;
+      }
+    }
+
+    if (!folderRelation || folderRelation.length === 0) {
+      UL?.warn?.('No Folder relation found on source page', {
+        sourcePageId: cleanPageId,
+        availableProperties: Object.keys(sourcePage.properties || {})
+      });
+      return null;
+    }
+
+    // Step 2: Get the first linked Folder page
+    const folderPageId = folderRelation[0].id.replace(/-/g, '');
+    UL?.debug?.('Found Folder relation', {
+      relationPropertyName,
+      folderPageId,
+      relationCount: folderRelation.length
+    });
+
+    const folderPage = notionFetch_(`pages/${folderPageId}`, 'GET');
+
+    // Step 3: Extract Drive Folder ID from the Folder page
+    const driveFolderIdNames = ['Drive Folder ID', 'Google Drive Folder ID', 'Drive-Folder-ID', 'DriveID'];
+    let driveFolderId = null;
+
+    for (const name of driveFolderIdNames) {
+      const prop = folderPage.properties?.[name];
+      if (prop?.rich_text?.[0]?.plain_text) {
+        driveFolderId = prop.rich_text[0].plain_text.trim();
+        break;
+      }
+    }
+
+    if (!driveFolderId) {
+      UL?.warn?.('Drive Folder ID not found on Folder page', {
+        folderPageId,
+        availableProperties: Object.keys(folderPage.properties || {})
+      });
+      return null;
+    }
+
+    UL?.info?.('Retrieved Drive Folder ID from Notion relation', {
+      sourcePageId: cleanPageId,
+      folderPageId,
+      driveFolderId
+    });
+
+    return driveFolderId;
+
+  } catch (e) {
+    UL?.error?.('Failed to retrieve Drive Folder ID from relation', {
+      sourcePageId: cleanPageId,
+      error: String(e)
+    });
+    return null;
+  }
+}
+
+/**
+ * Creates a file entry in the Notion Files database
+ * MGM 2026-01-19: Required step - tracking uploaded files is mandatory
+ *
+ * @param {Object} fileInfo - Information about the uploaded file
+ * @param {string} fileInfo.fileId - Google Drive file ID
+ * @param {string} fileInfo.fileName - File name
+ * @param {string} fileInfo.url - Google Drive URL
+ * @param {string} fileInfo.mimeType - File MIME type
+ * @param {number} [fileInfo.size] - File size in bytes
+ * @param {string} sourcePageId - Source page ID to link back to
+ * @param {UnifiedLoggerGAS} [UL] - Optional logger instance
+ * @returns {Object} Created Notion page object, or null on failure
+ */
+function createFileTrackingEntry_(fileInfo, sourcePageId, UL) {
+  if (!FILES_DB_ID) {
+    const errorMsg = 'FILES_DB_ID is not configured. File tracking is REQUIRED. ' +
+      'Configure via script properties: DB_ID_DEV_FILES or DB_CACHE_FILES';
+    UL?.error?.(errorMsg);
+    throw new Error(errorMsg);
+  }
+
+  const cleanSourcePageId = sourcePageId?.replace(/-/g, '') || '';
+
+  UL?.debug?.('Creating file tracking entry in Notion', {
+    fileName: fileInfo.fileName,
+    fileId: fileInfo.fileId,
+    filesDbId: FILES_DB_ID
+  });
+
+  // Build properties for the Files database entry
+  const properties = {
+    'Name': {
+      title: [{ text: { content: fileInfo.fileName || 'Untitled' } }]
+    },
+    'File ID': {
+      rich_text: [{ text: { content: fileInfo.fileId || '' } }]
+    },
+    'URL': {
+      url: fileInfo.url || null
+    }
+  };
+
+  // Add optional properties if available
+  if (fileInfo.mimeType) {
+    properties['MIME Type'] = {
+      rich_text: [{ text: { content: fileInfo.mimeType } }]
+    };
+  }
+
+  if (fileInfo.size) {
+    properties['Size (bytes)'] = {
+      number: fileInfo.size
+    };
+  }
+
+  // Add relation to source page if provided
+  if (cleanSourcePageId) {
+    // Try common relation property names
+    properties['Related Workflow'] = {
+      relation: [{ id: cleanSourcePageId }]
+    };
+    properties['Source Page'] = {
+      relation: [{ id: cleanSourcePageId }]
+    };
+  }
+
+  // Add upload timestamp
+  properties['Uploaded At'] = {
+    date: { start: new Date().toISOString() }
+  };
+
+  try {
+    // Filter to only include properties that exist in the database
+    const safeProps = _filterDbPropsToExisting_(FILES_DB_ID, properties);
+
+    // Resolve to data_source_id for 2025-09-03+ API
+    const dsId = resolveDatabaseToDataSourceId_(FILES_DB_ID, UL);
+    const parent = dsId
+      ? { type: 'data_source_id', data_source_id: dsId }
+      : { type: 'database_id', database_id: FILES_DB_ID };
+
+    const newPage = notionFetch_('pages', 'POST', {
+      parent,
+      properties: safeProps
+    });
+
+    UL?.info?.('Created file tracking entry', {
+      pageId: newPage.id,
+      fileName: fileInfo.fileName,
+      fileId: fileInfo.fileId
+    });
+
+    return newPage;
+
+  } catch (e) {
+    UL?.error?.('Failed to create file tracking entry', {
+      fileName: fileInfo.fileName,
+      error: String(e)
+    });
+    throw e; // Re-throw since file tracking is required
+  }
+}
+
+/**
+ * Upload files to Google Drive folder linked via Notion relation
+ *
+ * @param {string} sourcePageId - Notion page ID with a "Folder" relation
+ * @param {Array<{name: string, content: Blob|string, mimeType: string}>} files - Files to upload
+ * @param {UnifiedLoggerGAS} [UL] - Optional logger instance
+ * @returns {Array<{fileId: string, fileName: string, url: string, notionPageId: string}>} Upload results
+ */
+function uploadFilesToLinkedDrive(sourcePageId, files, UL) {
+  if (!sourcePageId) {
+    throw new Error('sourcePageId is required');
+  }
+  if (!files || !Array.isArray(files) || files.length === 0) {
+    throw new Error('files array is required and must not be empty');
+  }
+
+  const cleanSourcePageId = sourcePageId.replace(/-/g, '');
+  UL?.info?.('Starting file upload to linked Drive folder', {
+    sourcePageId: cleanSourcePageId,
+    fileCount: files.length
+  });
+
+  // Step 1: Get the Drive folder ID from the Notion relation
+  const driveFolderId = getDriveFolderIdFromRelation_(cleanSourcePageId, UL);
+
+  if (!driveFolderId) {
+    throw new Error(`Missing folder relation: Source page ${cleanSourcePageId} does not have a valid Folder relation with Drive Folder ID`);
+  }
+
+  // Step 2: Get the target Google Drive folder
+  let targetFolder;
+  try {
+    targetFolder = DriveApp.getFolderById(driveFolderId);
+  } catch (e) {
+    throw new Error(`Invalid Drive Folder ID: ${driveFolderId} - ${String(e)}`);
+  }
+
+  UL?.info?.('Uploading to Google Drive folder', {
+    folderId: driveFolderId,
+    folderName: targetFolder.getName(),
+    folderUrl: targetFolder.getUrl()
+  });
+
+  // Step 3: Upload each file
+  const uploadedFiles = [];
+
+  for (const file of files) {
+    try {
+      // Create blob from content
+      let blob;
+      if (file.content instanceof Blob || (file.content && typeof file.content.getBytes === 'function')) {
+        // Already a blob
+        blob = file.content;
+        if (file.name) {
+          blob.setName(file.name);
+        }
+      } else if (typeof file.content === 'string') {
+        // String content - create blob
+        blob = Utilities.newBlob(file.content, file.mimeType || 'text/plain', file.name);
+      } else if (file.content instanceof Array || file.content instanceof Uint8Array) {
+        // Byte array
+        blob = Utilities.newBlob(file.content, file.mimeType || 'application/octet-stream', file.name);
+      } else {
+        UL?.warn?.('Skipping file with unsupported content type', {
+          fileName: file.name,
+          contentType: typeof file.content
+        });
+        continue;
+      }
+
+      // Upload to Drive
+      const uploadedFile = targetFolder.createFile(blob);
+
+      const fileResult = {
+        fileId: uploadedFile.getId(),
+        fileName: uploadedFile.getName(),
+        url: uploadedFile.getUrl(),
+        mimeType: uploadedFile.getMimeType(),
+        size: uploadedFile.getSize()
+      };
+
+      UL?.debug?.('Uploaded file to Drive', fileResult);
+
+      // Step 4: Track in Notion (REQUIRED)
+      const notionEntry = createFileTrackingEntry_(fileResult, cleanSourcePageId, UL);
+      fileResult.notionPageId = notionEntry?.id || null;
+
+      uploadedFiles.push(fileResult);
+
+    } catch (e) {
+      UL?.error?.('Failed to upload file', {
+        fileName: file.name,
+        error: String(e)
+      });
+      // Re-throw to ensure the caller knows about failures
+      throw e;
+    }
+  }
+
+  UL?.info?.('File upload completed', {
+    sourcePageId: cleanSourcePageId,
+    uploadedCount: uploadedFiles.length,
+    totalFiles: files.length
+  });
+
+  return uploadedFiles;
+}
+
+/**
+ * Test function for uploadFilesToLinkedDrive
+ * Creates a test file and uploads it to a specified workflow page's linked folder
+ *
+ * @param {string} testSourcePageId - Notion page ID with a Folder relation to test
+ */
+function testUploadFilesToLinkedDrive(testSourcePageId) {
+  if (!testSourcePageId) {
+    console.error('Usage: testUploadFilesToLinkedDrive("your-notion-page-id")');
+    console.log('The page must have a "Folder" relation pointing to a Folders database entry');
+    console.log('The Folder entry must have a "Drive Folder ID" property');
+    return;
+  }
+
+  // Create a simple test logger
+  const testLogger = {
+    info: (msg, data) => console.log(`[INFO] ${msg}`, data ? JSON.stringify(data) : ''),
+    debug: (msg, data) => console.log(`[DEBUG] ${msg}`, data ? JSON.stringify(data) : ''),
+    warn: (msg, data) => console.warn(`[WARN] ${msg}`, data ? JSON.stringify(data) : ''),
+    error: (msg, data) => console.error(`[ERROR] ${msg}`, data ? JSON.stringify(data) : '')
+  };
+
+  // Test file content
+  const testFiles = [
+    {
+      name: `test-upload-${new Date().toISOString().replace(/[:.]/g, '-')}.txt`,
+      content: `Test file uploaded at ${new Date().toISOString()}\n\nThis file was created by testUploadFilesToLinkedDrive()`,
+      mimeType: 'text/plain'
+    }
+  ];
+
+  try {
+    const results = uploadFilesToLinkedDrive(testSourcePageId, testFiles, testLogger);
+    console.log('\n✅ Upload successful!');
+    console.log('Results:', JSON.stringify(results, null, 2));
+    return results;
+  } catch (e) {
+    console.error('\n❌ Upload failed:', e.message);
+    throw e;
+  }
+}
+
+/**
+ * Configure the Files database ID for upload tracking
+ *
+ * @param {string} dbId - Notion Files database ID
+ */
+function configureFilesDatabase(dbId) {
+  if (!dbId) {
+    throw new Error('Database ID is required');
+  }
+  const cleanId = dbId.replace(/-/g, '');
+  const props = PropertiesService.getScriptProperties();
+  props.setProperty('DB_ID_DEV_FILES', cleanId);
+  props.setProperty('DB_CACHE_FILES', cleanId);
+  console.log(`✅ Configured Files Database: ${cleanId}`);
+  console.log('You can now use uploadFilesToLinkedDrive() with file tracking enabled.');
+  return { success: true, dbId: cleanId };
 }
