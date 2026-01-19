@@ -104,8 +104,52 @@ from pathlib import Path
 from typing import Optional, Dict, Any, List, Tuple, Set, Iterator
 from typing import Dict, List, Tuple, Any, Optional, Set, Iterator
 from difflib import SequenceMatcher
+# ─────────────────────────────────────────────────────────────────────────────
+# Repo sys.path bootstrap
+# ─────────────────────────────────────────────────────────────────────────────
+# NOTE: This script is often executed by absolute path. In that case, Python
+# includes the script directory on sys.path, but NOT the repo root. We add the
+# repo root (and a couple common sibling dirs) so `shared_core` imports work
+# reliably without requiring an editable install.
+
+def _bootstrap_repo_sys_path() -> None:
+    try:
+        import sys as _sys
+        from pathlib import Path as _Path
+
+        _script_dir = _Path(__file__).resolve().parent
+        _repo_root = _script_dir.parent
+
+        # Prefer inserting at the front so local repo modules win.
+        for _p in (
+            _script_dir,          # monolithic-scripts
+            _repo_root,           # repo root
+            _repo_root / "scripts",
+        ):
+            if _p.is_dir():
+                _ps = str(_p)
+                if _ps not in _sys.path:
+                    _sys.path.insert(0, _ps)
+    except Exception:
+        pass
+
+_bootstrap_repo_sys_path()
+
 # CRITICAL: centralized token access (pre-commit enforced)
-from shared_core.notion.token_manager import get_notion_token
+try:
+    from shared_core.notion.token_manager import get_notion_token
+except Exception as _sc_mod_err:
+    import os as _os
+    import sys as _sys
+
+    # Hard fallback: use env vars directly. (Keeps script runnable even if shared_core is missing.)
+    def get_notion_token() -> str:
+        return (_os.getenv("NOTION_TOKEN") or _os.getenv("NOTION_API_KEY") or "")
+
+    print(
+        f"[soundcloud_download_prod_merge] shared_core import failed ({_sc_mod_err}); using env token fallback.",
+        file=_sys.stderr,
+    )
 # Import unified configuration first, shared logging second
 try:
     from unified_config import load_unified_env, get_unified_config
