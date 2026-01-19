@@ -452,16 +452,20 @@ const CLIENT_TO_NAME = {
  * calls to the correct workspace.
  *
  * Token values are stored in script properties (not hardcoded):
- * - NOTION_TOKEN (default) - Primary workspace token
- * - ARCHIVE_WORKSPACE_TOKEN - Archive/secondary workspace token
+ * - NOTION_TOKEN (default) - Archive Workspace (legacy, being phased out)
+ * - SEREN_INTERNAL_WORKSPACE_TOKEN - Seren Media Internal workspace (NEW PRIMARY)
  * - VIBEVESSEL_WORKSPACE_TOKEN - VibeVessel client workspace token
+ * - OCEAN_FRONTIERS_WORKSPACE_TOKEN - Ocean Frontiers client workspace token
+ *
+ * NOTE: NOTION_TOKEN currently points to Archive Workspace (most-used, phasing out)
  *
  * @const {Object}
  */
 const CLIENT_TO_WORKSPACE_TOKEN_PROP = {
-  'seren-media-internal': 'NOTION_TOKEN',           // Primary workspace
-  'vibe-vessel': 'VIBEVESSEL_WORKSPACE_TOKEN',      // VibeVessel workspace
-  'ocean-frontiers': 'NOTION_TOKEN'                 // Uses primary workspace
+  'seren-media-internal': 'SEREN_INTERNAL_WORKSPACE_TOKEN', // Seren Internal (NEW PRIMARY)
+  'vibe-vessel': 'VIBEVESSEL_WORKSPACE_TOKEN',              // VibeVessel workspace
+  'ocean-frontiers': 'OCEAN_FRONTIERS_WORKSPACE_TOKEN',     // Ocean Frontiers workspace
+  'archive': 'NOTION_TOKEN'                                 // Archive (legacy, phasing out)
 };
 
 /**
@@ -522,9 +526,10 @@ function getWorkspaceToken_(databaseId = null) {
  */
 function isInterWorkspaceSyncEnabled_() {
   const tokens = [
-    PROPS.getProperty('NOTION_TOKEN'),
-    PROPS.getProperty('ARCHIVE_WORKSPACE_TOKEN'),
-    PROPS.getProperty('VIBEVESSEL_WORKSPACE_TOKEN')
+    PROPS.getProperty('NOTION_TOKEN'),                      // Archive (legacy)
+    PROPS.getProperty('SEREN_INTERNAL_WORKSPACE_TOKEN'),    // Seren Internal (new primary)
+    PROPS.getProperty('VIBEVESSEL_WORKSPACE_TOKEN'),        // VibeVessel
+    PROPS.getProperty('OCEAN_FRONTIERS_WORKSPACE_TOKEN')    // Ocean Frontiers
   ].filter(Boolean);
   return tokens.length > 1;
 }
@@ -564,9 +569,10 @@ function testInterWorkspaceSync() {
 
   // 1. Check configured tokens
   const tokenProps = [
-    'NOTION_TOKEN',
-    'ARCHIVE_WORKSPACE_TOKEN',
-    'VIBEVESSEL_WORKSPACE_TOKEN'
+    'NOTION_TOKEN',                      // Archive (legacy, phasing out)
+    'SEREN_INTERNAL_WORKSPACE_TOKEN',    // Seren Internal (new primary)
+    'VIBEVESSEL_WORKSPACE_TOKEN',        // VibeVessel
+    'OCEAN_FRONTIERS_WORKSPACE_TOKEN'    // Ocean Frontiers
   ];
 
   console.log('Token Configuration:');
