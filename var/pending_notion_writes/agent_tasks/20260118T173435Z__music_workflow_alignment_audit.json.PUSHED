@@ -1,0 +1,76 @@
+{
+  "type": "agent_task",
+  "target_database": "Tasks",
+  "target_database_id": "2e633d7a-491b-80ed-ba48-000bd4fe690e",
+  "created_at": "2026-01-18T17:34:35Z",
+  "source_agent": "Claude Code Agent",
+  "assigned_agent": "Cursor MM1 Agent",
+  "task_id": "music-workflow-audit-20260118",
+  "properties": {
+    "Task Name": "[AUDIT] Music Workflow Directory & Output Alignment — Cursor MM1",
+    "Description": "Comprehensive review, audit, and gap analysis of the Music Workflow Audio Processing Pipeline.\n\n**Scope:**\n1. Review Eagle Library folder integration (CRITICAL: duplicate folders being created)\n2. Verify 3-file output structure (2x WAV + 1x AIFF)\n3. Audit metadata embedding in all output files\n4. Align directory configuration with workflow design goals\n5. Validate playlist directory organization in Dropbox\n\n**Primary Files:**\n- /monolithic-scripts/soundcloud_download_prod_merge-2.py (lines 6077-6152, 11724-11860)\n- /seren-media-workflows/python-scripts/audio_normalizer/exporter.py\n\n**Known Issues:**\n- Eagle folders duplicated on each run\n- Metadata not embedded in WAV/AIFF files\n- Audio normalizer module not integrated\n\n**Trigger File:**\n/Users/brianhellemn/Documents/Agents/Agent-Triggers/20260118T173435Z__CURSOR_MM1__music_workflow_alignment_audit.md",
+    "Status": "Not Started",
+    "Priority": "High",
+    "Owner": "Cursor MM1 Agent",
+    "Tags": "Agent-Coordination, Music-Workflow, Audio-Processing, Eagle-Library, Agent-Task, Audit",
+    "Category": "Quality Assurance",
+    "External Docs Required": false,
+    "Preflight Status": "Passed",
+    "Preflight Notes": "All source files identified and accessible. Trigger file created with comprehensive context."
+  },
+  "content": "# Music Workflow Directory & Output Alignment Audit\n\n## Assigned Agent: Cursor MM1\n\n## Status: Not Started\n\n## Objectives\n\n1. **Eagle Library Folder Audit**\n   - Identify root cause of duplicate folder creation\n   - Review `eagle_get_or_create_folder()` function\n   - Verify Eagle API response structure\n\n2. **Output Structure Verification**\n   - Confirm 3-file output (2x WAV + 1x AIFF)\n   - Verify file destinations match requirements\n   - Test actual track processing\n\n3. **Metadata Audit**\n   - Check metadata in WAV files\n   - Check metadata in AIFF files\n   - Identify missing metadata fields\n\n4. **Gap Analysis**\n   - Validate gaps identified by Claude Code Agent\n   - Identify additional issues\n   - Prioritize fixes\n\n## Deliverables\n\n1. Audit Report\n2. Root Cause Documentation\n3. Implementation Plan\n4. Test Plan\n\n## Trigger File Location\n\n`/Users/brianhellemn/Documents/Agents/Agent-Triggers/20260118T173435Z__CURSOR_MM1__music_workflow_alignment_audit.md`\n\n## Response Protocol\n\nCreate response at:\n`/Users/brianhellemn/Documents/Agents/Agent-Chats/20260118__CURSOR_MM1__music_workflow_audit_response.md`",
+  "gaps_identified": [
+    {
+      "id": "GAP-1",
+      "title": "Eagle Folder Duplication",
+      "severity": "High",
+      "description": "Duplicate playlist folders being created in Eagle Library",
+      "location": "soundcloud_download_prod_merge-2.py lines 6077-6152"
+    },
+    {
+      "id": "GAP-2",
+      "title": "Metadata Not Embedded",
+      "severity": "Medium",
+      "description": "Metadata tracked in Notion but not written to WAV/AIFF files",
+      "location": "Audio export sections"
+    },
+    {
+      "id": "GAP-3",
+      "title": "Disconnected Audio Normalizer",
+      "severity": "Medium",
+      "description": "Professional audio normalizer module exists but isn't integrated",
+      "location": "seren-media-workflows/python-scripts/audio_normalizer/"
+    },
+    {
+      "id": "GAP-4",
+      "title": "Directory Configuration Inconsistency",
+      "severity": "Low",
+      "description": "Multiple directory variables with overlapping purposes",
+      "location": "Lines 1115-1120"
+    },
+    {
+      "id": "GAP-5",
+      "title": "Workflow Orchestration Not Aligned",
+      "severity": "Low",
+      "description": "Multiple entry points with different behaviors",
+      "location": "scripts/ directory"
+    }
+  ],
+  "required_outputs": {
+    "format_1": {
+      "type": "WAV",
+      "destination": "Eagle Library /Playlists/{playlist}/",
+      "purpose": "Primary lossless archive"
+    },
+    "format_2": {
+      "type": "AIFF",
+      "destination": "Eagle Library /Playlists/{playlist}/",
+      "purpose": "DJ software compatibility"
+    },
+    "format_3": {
+      "type": "WAV",
+      "destination": "/Volumes/SYSTEM_SSD/Dropbox/Music/playlists/playlist-tracks/{playlist}/",
+      "purpose": "Playlist organization copy"
+    }
+  }
+}

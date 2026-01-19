@@ -1,0 +1,19 @@
+{
+  "type": "agent_task",
+  "target_database": "Tasks",
+  "target_database_id": "2e633d7a-491b-80ed-ba48-000bd4fe690e",
+  "created_at": "2026-01-18T17:37:43Z",
+  "source_agent": "Cursor GPT-5.2 Agent",
+  "task_id": "llmstack-task-7",
+  "parent_project_id": "local-llm-stack-m2pro16-v1",
+  "properties": {
+    "Task Name": "[TASK 7] Models — RAG (BGE-M3 embeddings + bge-reranker-v2-m3)",
+    "Description": "Deploy the retrieval stack for 'chat with our knowledge base' and marketing automation context injection.\n\n**Models:**\n- BGE-M3 embeddings (MIT): multilingual; up to 8K input\n- bge-reranker-v2-m3: rerank top-k for accuracy\n\n**Why this matters:** improves correctness and reduces hallucination by supplying the right snippets.\n\n**Storage:**\n- Cache HF weights under `$SEREN_LLM_ROOT/hf`\n- Store vector indexes under `$SEREN_LLM_ROOT/indexes`",
+    "Status": "Not Started",
+    "Priority": "High",
+    "Owner": "Cursor GPT-5.2 Agent",
+    "Tags": "Agent-Coordination, LocalLLM, RAG, Embeddings, Reranker, Agent-Task",
+    "Category": "Model Acquisition"
+  },
+  "content": "# Models — RAG (BGE-M3 + bge-reranker-v2-m3)\n\n## Objective\n\nEnable reliable retrieval for:\n- Brand voice docs / messaging framework\n- Product/service descriptions\n- Past campaigns / performance notes\n- Transcripts and creative briefs\n\n## References\n\n- BGE-M3 reference: https://docs.api.nvidia.com/nim/reference/baai-bge-m3\n- bge-reranker-v2-m3: https://huggingface.co/BAAI/bge-reranker-v2-m3\n\n## Acceptance Criteria\n\n- Embedding and reranker models are available locally.\n- A standard indexing format is defined.\n- Query pipeline is defined: embed → retrieve → rerank(top-10/20) → prompt inject.\n"
+}

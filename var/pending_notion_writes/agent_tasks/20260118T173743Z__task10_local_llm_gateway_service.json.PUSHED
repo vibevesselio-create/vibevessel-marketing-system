@@ -1,0 +1,19 @@
+{
+  "type": "agent_task",
+  "target_database": "Tasks",
+  "target_database_id": "2e633d7a-491b-80ed-ba48-000bd4fe690e",
+  "created_at": "2026-01-18T17:37:43Z",
+  "source_agent": "Cursor GPT-5.2 Agent",
+  "task_id": "llmstack-task-10",
+  "parent_project_id": "local-llm-stack-m2pro16-v1",
+  "properties": {
+    "Task Name": "[TASK 10] Codebase Integration — Local LLM Gateway Service (single-model-at-a-time)",
+    "Description": "Implement a small local gateway/service inside this repo that standardizes how automations call local models.\n\n**Why a gateway:**\n- Enforces 16GB guardrails (one heavy model loaded at a time)\n- Centralizes prompt templates and output schemas\n- Provides consistent endpoints for text, vision, OCR, transcription post-processing, and RAG\n\n**Proposed location in repo:**\n- `/services/local_llm/` (service entrypoint)\n- `/shared_core/local_llm/` (shared client + templates)\n\n**Backends:**\n- llama.cpp `llama-server` for GGUF text models\n- whisper.cpp as subprocess\n- Transformers Python for Florence-2 + embeddings/reranker\n\n**Deliverable:** OpenAI-compatible-ish endpoints for internal use (not public).",
+    "Status": "Not Started",
+    "Priority": "High",
+    "Owner": "Cursor GPT-5.2 Agent",
+    "Tags": "Agent-Coordination, LocalLLM, Gateway, Services, Agent-Task",
+    "Category": "Code Implementation"
+  },
+  "content": "# Codebase Integration — Local LLM Gateway Service\n\n## Objective\n\nCreate a single place to:\n- Start/stop models\n- Route tasks to the right model\n- Apply consistent schemas, logging, and safety checks\n\n## Key Constraints\n\n- 16GB unified memory: enforce sequential execution and one heavy model in RAM.\n\n## Acceptance Criteria\n\n- A service module exists in the repo with a clear interface.\n- Gateway can call:\n  - text model (llama.cpp)\n  - OCR model (Florence-2)\n  - embeddings + rerank\n  - safety gate\n  - transcription post-processing\n- Logs and outputs are stored deterministically.\n"
+}

@@ -1,0 +1,19 @@
+{
+  "type": "agent_task",
+  "target_database": "Tasks",
+  "target_database_id": "2e633d7a-491b-80ed-ba48-000bd4fe690e",
+  "created_at": "2026-01-18T17:37:43Z",
+  "source_agent": "Cursor GPT-5.2 Agent",
+  "task_id": "llmstack-task-12",
+  "parent_project_id": "local-llm-stack-m2pro16-v1",
+  "properties": {
+    "Task Name": "[TASK 12] Performance Guardrails + Runbook (16GB Unified Memory)",
+    "Description": "Document and enforce performance defaults for 16GB operation.\n\n**Guardrails:**\n- Only one heavy model loaded at a time\n- Default contexts: 4K–8K for 7–9B models\n- Prefer Q4 for ≥7B\n- Explicit 'unload model' step between pipeline phases\n\n**Runbook:**\n- Where models live (hot vs archive)\n- How to start/stop runtimes\n- How to run each workflow adapter\n- How to diagnose memory pressure and slowdowns\n\n**Benchmarking:**\n- Define per-model baseline: tokens/sec, time-to-first-token, RAM usage peak\n- Record results under `reports/` or `$SEREN_LLM_ROOT/logs`",
+    "Status": "Not Started",
+    "Priority": "Medium",
+    "Owner": "Cursor GPT-5.2 Agent",
+    "Tags": "Agent-Coordination, LocalLLM, Performance, Runbook, Agent-Task",
+    "Category": "Documentation"
+  },
+  "content": "# Performance Guardrails + Runbook (16GB)\n\n## Objective\n\nPrevent memory thrash and keep automations predictable.\n\n## Defaults\n\n- One heavy model loaded at a time.\n- Q4 quantization for ≥7B.\n- Context bounded to what is needed.\n\n## Benchmarks\n\nRecord:\n- tokens/sec\n- time-to-first-token\n- peak RSS / memory pressure signals\n\n## Acceptance Criteria\n\n- A runbook exists.\n- Guardrails are implemented in gateway defaults.\n- Baseline benchmarks recorded for the chosen models.\n"
+}

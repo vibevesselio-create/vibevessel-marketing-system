@@ -1,0 +1,21 @@
+{
+  "type": "agent_task",
+  "target_database": "Tasks",
+  "target_database_id": "2e633d7a-491b-80ed-ba48-000bd4fe690e",
+  "created_at": "2026-01-18T12:38:05Z",
+  "source_agent": "Claude Code Agent",
+  "assigned_agent": "Claude Code Agent",
+  "task_id": "lr-task-9",
+  "parent_project_id": "lr-api-hybrid-v1",
+  "properties": {
+    "Task Name": "[TASK 9] Integration Testing — End-to-End Validation",
+    "Description": "Test and validate the complete Lightroom API integration.\n\n**Test Areas:**\n1. OAuth Flow Testing\n   - Authorization URL generation\n   - Callback handling\n   - Token exchange\n   - Token refresh\n\n2. API Client Testing\n   - Account/catalog access\n   - Asset listing\n   - Album operations\n   - Rendition retrieval\n\n3. Notion Sync Testing\n   - Database discovery\n   - Page creation\n   - Page updates\n   - Loop-guard properties\n\n**Required Environment:**\n- ADOBE_CLIENT_ID\n- ADOBE_CLIENT_SECRET\n- NOTION_TOKEN",
+    "Status": "Not Started",
+    "Priority": "High",
+    "Owner": "Claude Code Agent",
+    "Tags": "Agent-Coordination, Lightroom-API, Testing, Agent-Task",
+    "Category": "Quality Assurance",
+    "Verification Notes": ""
+  },
+  "content": "# Integration Testing — End-to-End Validation\n\n## Status: Not Started\n\n## Test Plan\n\n### Phase 1: Python Module Testing\n\n1. **OAuth Tests**\n   ```python\n   # Test authorization URL\n   oauth = AdobeLightroomOAuth()\n   url = oauth.get_authorization_url(redirect_uri)\n   assert 'client_id=' in url\n   assert 'scope=' in url\n   ```\n\n2. **API Client Tests**\n   ```python\n   client = LightroomClient()\n   catalog = client.get_catalog()\n   assert 'id' in catalog\n   \n   assets = list(client.list_assets(catalog['id'], limit=5))\n   assert len(assets) <= 5\n   ```\n\n3. **Notion Sync Tests**\n   ```python\n   sync = LightroomNotionSync(client)\n   result = sync.sync_assets(dry_run=True, limit=5)\n   assert result.success\n   ```\n\n### Phase 2: GAS Module Testing\n\n1. **Configuration Validation**\n   - Run `validateLightroomConfig()`\n   - Verify all required properties set\n\n2. **OAuth Flow**\n   - Deploy as web app\n   - Navigate to web app URL\n   - Complete OAuth flow\n   - Verify tokens stored\n\n3. **API Access**\n   - Run `testGetCatalog()`\n   - Run `testListAssets()`\n\n4. **Notion Sync**\n   - Run `testSyncDryRun()`\n   - Run `testSyncLimited()`\n   - Verify pages created in Notion\n\n### Phase 3: End-to-End Testing\n\n1. Fresh OAuth authorization\n2. Full asset sync (limited)\n3. Verify Notion database\n4. Test token refresh\n5. Re-sync and verify updates\n\n## Success Criteria\n\n- [ ] OAuth completes without errors\n- [ ] API returns valid data\n- [ ] Notion pages created correctly\n- [ ] Loop-guard properties present\n- [ ] No duplicate pages created\n- [ ] Token refresh works"
+}

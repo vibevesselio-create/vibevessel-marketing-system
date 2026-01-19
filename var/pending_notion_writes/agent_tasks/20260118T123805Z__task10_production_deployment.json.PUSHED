@@ -1,0 +1,21 @@
+{
+  "type": "agent_task",
+  "target_database": "Tasks",
+  "target_database_id": "2e633d7a-491b-80ed-ba48-000bd4fe690e",
+  "created_at": "2026-01-18T12:38:05Z",
+  "source_agent": "Claude Code Agent",
+  "assigned_agent": "Claude Code Agent",
+  "task_id": "lr-task-10",
+  "parent_project_id": "lr-api-hybrid-v1",
+  "properties": {
+    "Task Name": "[TASK 10] Production Deployment — GAS and Webhook Integration",
+    "Description": "Deploy the Lightroom API integration to production.\n\n**Deployment Steps:**\n1. Add token exchange endpoints to webhook server\n2. Deploy GAS project as web app\n3. Configure Adobe Console redirect URI\n4. Set up production Script Properties\n5. Create scheduled sync trigger\n6. Monitor initial syncs\n\n**Dependencies:**\n- Task 9 (Integration Testing) must pass",
+    "Status": "Not Started",
+    "Priority": "Medium",
+    "Owner": "Claude Code Agent",
+    "Tags": "Agent-Coordination, Lightroom-API, Deployment, Agent-Task",
+    "Category": "Deployment",
+    "Verification Notes": ""
+  },
+  "content": "# Production Deployment — GAS and Webhook Integration\n\n## Status: Not Started\n\n## Prerequisites\n- [ ] Task 9 (Integration Testing) completed\n- [ ] All tests passing\n- [ ] Adobe Console access available\n\n## Deployment Checklist\n\n### 1. Webhook Server Updates\n\n```python\n# Add to webhook server\n@app.post(\"/api/adobe/token\")\nasync def adobe_token_exchange(request: TokenExchangeRequest):\n    oauth = AdobeLightroomOAuth()\n    tokens = oauth.exchange_code(request.code, request.redirect_uri)\n    return tokens.to_dict()\n\n@app.post(\"/api/adobe/refresh\")\nasync def adobe_token_refresh(request: TokenRefreshRequest):\n    oauth = AdobeLightroomOAuth()\n    tokens = oauth.refresh_token(request.refresh_token)\n    return tokens.to_dict()\n```\n\n### 2. GAS Deployment\n\n```bash\ncd /gas-scripts/lightroom-api\nclasp push\nclasp deploy --description \"Production v1.0.0\"\n```\n\n### 3. Adobe Console Configuration\n\n- Add production redirect URI\n- Verify scopes are correct\n- Test OAuth flow\n\n### 4. Script Properties\n\nSet in GAS editor:\n- ADOBE_CLIENT_ID\n- ADOBE_REDIRECT_URI (production URL)\n- NOTION_TOKEN\n- TOKEN_EXCHANGE_ENDPOINT\n- TOKEN_REFRESH_ENDPOINT\n- PHOTOS_LIBRARY_DB_NAME\n\n### 5. Scheduled Sync\n\n```javascript\n// Run once to create trigger\ncreateync();\n```\n\n### 6. Monitoring\n\n- Check Execution-Logs database\n- Verify Photos Library updates\n- Monitor for errors\n\n## Post-Deployment\n\n- [ ] First sync completed successfully\n- [ ] Scheduled trigger active\n- [ ] Execution logs being created\n- [ ] No duplicate pages\n- [ ] Token refresh working"
+}

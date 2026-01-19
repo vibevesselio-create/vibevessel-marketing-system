@@ -1,0 +1,19 @@
+{
+  "type": "agent_task",
+  "target_database": "Tasks",
+  "target_database_id": "2e633d7a-491b-80ed-ba48-000bd4fe690e",
+  "created_at": "2026-01-18T17:37:43Z",
+  "source_agent": "Cursor GPT-5.2 Agent",
+  "task_id": "llmstack-task-1",
+  "parent_project_id": "local-llm-stack-m2pro16-v1",
+  "properties": {
+    "Task Name": "[TASK 1] Storage Layout + Env Vars — Local LLM Stack (M2 Pro 16GB)",
+    "Description": "Create the standardized, performance-optimized model storage layout and environment variable plan.\n\n**Most technically performant hot path (internal SSD / Apple Fabric):**\n- `/Users/brianhellemn/Library/Application Support/SerenLocalLLM/models`\n\n**Cold/archive path (external Samsung T7 USB):**\n- `/Volumes/SYSTEM_SSD/SerenLocalLLM/models-archive`\n\n**Layout (hot):**\n- `gguf/` (llama.cpp models: phi/gemma/qwen-vl-if-gguf/llama-guard)\n- `whisper/` (whisper.cpp models)\n- `hf/` (Transformers models: florence-2, bge-m3, reranker, clap)\n- `indexes/` (vector indexes / sqlite / qdrant if used)\n- `registry/` (local registry JSON with checksums + licenses)\n- `logs/`\n\n**Env vars to standardize:**\n- `SEREN_LLM_ROOT` (points to hot model root)\n- `SEREN_LLM_ARCHIVE_ROOT` (points to cold archive)\n- `HF_HOME` + `TRANSFORMERS_CACHE` (point to hot `hf/` unless space forces external)\n- `XDG_CACHE_HOME` (optional)\n- `OLLAMA_MODELS` (only if Ollama is used; point to hot root)\n\n**16GB guardrails:**\n- Default quantization: Q4 for ≥7B\n- Run one heavy model at a time; sequential pipeline steps",
+    "Status": "In Progress",
+    "Priority": "High",
+    "Owner": "Cursor GPT-5.2 Agent",
+    "Tags": "Agent-Coordination, LocalLLM, Storage, Environment, Agent-Task",
+    "Category": "Infrastructure"
+  },
+  "content": "# Storage Layout + Env Vars — Local LLM Stack (M2 Pro 16GB)\n\n## Objective\n\nStandardize where model weights live and how tooling locates them.\n\n## Storage Choice (Performance)\n\n### Hot path (best performance)\n- `/Users/brianhellemn/Library/Application Support/SerenLocalLLM/models`\n- Rationale: internal Apple SSD (Apple Fabric) has the lowest latency and best sustained throughput.\n\n### Cold archive (capacity)\n- `/Volumes/SYSTEM_SSD/SerenLocalLLM/models-archive`\n- Rationale: external Samsung T7 USB SSD is slower than internal, but provides capacity.\n\n## Directory Layout (hot)\n\n- `gguf/` — llama.cpp GGUF model files\n- `whisper/` — whisper.cpp ggml/gguf whisper models\n- `hf/` — Hugging Face / Transformers cache root\n- `indexes/` — RAG indices and metadata (sqlite/json)\n- `registry/` — registry JSON (model id → file path, sha256, license, size, quant)\n- `logs/` — local LLM stack logs\n\n## Environment Variables\n\n- `SEREN_LLM_ROOT=/Users/brianhellemn/Library/Application Support/SerenLocalLLM/models`\n- `SEREN_LLM_ARCHIVE_ROOT=/Volumes/SYSTEM_SSD/SerenLocalLLM/models-archive`\n- `HF_HOME=$SEREN_LLM_ROOT/hf`\n- `TRANSFORMERS_CACHE=$SEREN_LLM_ROOT/hf`\n- `OLLAMA_MODELS=$SEREN_LLM_ROOT/ollama` (only if Ollama is installed)\n\n## Acceptance Criteria\n\n- Storage layout documented and consistent.\n- A single authoritative env-var set exists for shells and service LaunchAgents.\n- Clear policy for hot vs archive placement.\n"
+}

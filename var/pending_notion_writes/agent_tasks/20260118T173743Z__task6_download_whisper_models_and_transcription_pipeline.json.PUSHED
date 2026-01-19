@@ -1,0 +1,19 @@
+{
+  "type": "agent_task",
+  "target_database": "Tasks",
+  "target_database_id": "2e633d7a-491b-80ed-ba48-000bd4fe690e",
+  "created_at": "2026-01-18T17:37:43Z",
+  "source_agent": "Cursor GPT-5.2 Agent",
+  "task_id": "llmstack-task-6",
+  "parent_project_id": "local-llm-stack-m2pro16-v1",
+  "properties": {
+    "Task Name": "[TASK 6] Models — Whisper (medium default) + Transcript→Summary Pipeline",
+    "Description": "Download Whisper models for whisper.cpp and implement the standard transcription→LLM post-processing pipeline.\n\n**Default model (16GB):** Whisper medium\n- Disk ~1.5GB; optimized RAM ~1.7GB (fits well).\n\n**Automation output artifacts:**\n- raw transcript\n- timecoded transcript (SRT/VTT)\n- LLM summary + key quotes + CTA suggestions\n\n**References:**\n- Whisper repo (MIT): https://github.com/openai/whisper\n- whisper.cpp repo: https://github.com/ggml-org/whisper.cpp",
+    "Status": "Not Started",
+    "Priority": "High",
+    "Owner": "Cursor GPT-5.2 Agent",
+    "Tags": "Agent-Coordination, LocalLLM, Whisper, Audio, Pipeline, Agent-Task",
+    "Category": "Workflow Implementation"
+  },
+  "content": "# Models — Whisper (medium default) + Transcript→Summary Pipeline\n\n## Objective\n\nCreate a reusable pipeline for marketing media:\n1) Transcribe audio/video\n2) Summarize with local LLM\n3) Extract clips/quotes, titles, hooks, and CTA candidates\n\n## Default Resource Plan\n\n- Use whisper.cpp + Whisper medium.\n- Run summarization with Phi-4-mini by default; use Gemma 9B for final polish.\n\n## Acceptance Criteria\n\n- Whisper medium model available under `$SEREN_LLM_ROOT/whisper`.\n- A standard output format is defined (json + md + srt/vtt).\n- A deterministic post-processing template exists for summaries and quote extraction.\n"
+}

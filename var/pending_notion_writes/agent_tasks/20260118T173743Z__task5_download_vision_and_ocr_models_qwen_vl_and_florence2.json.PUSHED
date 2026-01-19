@@ -1,0 +1,19 @@
+{
+  "type": "agent_task",
+  "target_database": "Tasks",
+  "target_database_id": "2e633d7a-491b-80ed-ba48-000bd4fe690e",
+  "created_at": "2026-01-18T17:37:43Z",
+  "source_agent": "Cursor GPT-5.2 Agent",
+  "task_id": "llmstack-task-5",
+  "parent_project_id": "local-llm-stack-m2pro16-v1",
+  "properties": {
+    "Task Name": "[TASK 5] Models — Vision + OCR (Qwen2.5-VL 7B + Florence-2)",
+    "Description": "Install the vision stack needed for marketing automation: creative analysis + captioning + screenshot OCR.\n\n**Models:**\n- Vision (creative QA): Qwen2.5-VL 7B Instruct (Apache-2.0 per model card)\n- OCR/doc-vision: Florence-2 (MIT, Transformers)\n\n**Why two models:**\n- Qwen2.5-VL handles general image+text reasoning.\n- Florence-2 provides efficient OCR and region OCR without loading a heavy VLM LLM.\n\n**16GB guidance:**\n- Run vision as a dedicated pipeline step; unload text model first.\n- Prefer smaller Florence-2 base/base-ft for speed.",
+    "Status": "Not Started",
+    "Priority": "High",
+    "Owner": "Cursor GPT-5.2 Agent",
+    "Tags": "Agent-Coordination, LocalLLM, Vision, OCR, Florence-2, Qwen-VL, Agent-Task",
+    "Category": "Model Acquisition"
+  },
+  "content": "# Models — Vision + OCR (Qwen2.5-VL 7B + Florence-2)\n\n## Objective\n\nEnable marketing automation steps that depend on images:\n- Captions / alt text\n- Creative QA (what is shown, what text is visible, what the CTA says)\n- OCR of screenshots and forms\n\n## References\n\n- Qwen2.5-VL 7B Instruct (example model card): https://huggingface.co/wangkanai/qwen2.5-vl-7b-instruct\n- Florence-2 Transformers docs: https://huggingface.co/docs/transformers/main/model_doc/florence2\n\n## Acceptance Criteria\n\n- Qwen2.5-VL 7B available in a locally runnable format.\n- Florence-2 available via Transformers and cached under `$SEREN_LLM_ROOT/hf`.\n- Documented “vision step” pipeline pattern to avoid memory thrash on 16GB.\n"
+}

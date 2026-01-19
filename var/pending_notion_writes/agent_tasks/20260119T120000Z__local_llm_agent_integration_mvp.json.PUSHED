@@ -1,0 +1,39 @@
+{
+  "title": "[TASK] Local LLM Agent Integration MVP — Embedding-Based Task Deduplication",
+  "priority": "High",
+  "status": "Not Started",
+  "dependency_status": "Blocked",
+  "blocking_tasks": ["Task 1: Storage Layout + Env Vars", "Task 7: Download RAG Models (BGE-M3)"],
+  "assigned_agents": ["Claude MM1"],
+  "review_handoff_to": ["Cursor MM1"],
+  "objective": "Implement Phase 1 of Local LLM Stack integration with agent workflow: embedding-based task deduplication using local BGE-M3 embeddings to detect duplicate tasks before creation.",
+  "preflight": [
+    "Verify Task 10 (Local LLM Gateway Service) is complete",
+    "Confirm BGE-M3 model is downloaded to /Volumes/SerenMediaModels/embeddings/bge-m3/",
+    "Review technical analysis document: [DOC] Local LLM Stack + Agent Workflow Integration"
+  ],
+  "steps": [
+    "Complete Task 1: Storage Layout + Env Vars for Local LLM Stack",
+    "Complete Task 7: Download RAG Models (BGE-M3 + Reranker)",
+    "Verify embedding model loads correctly via Local LLM Gateway",
+    "Create simple JSON-based vector store in shared_core/local_llm/vector_store.py",
+    "Modify scripts/create_handoff_task.py to generate embeddings on task creation",
+    "Add duplicate detection check (similarity threshold 0.85)",
+    "Test with known duplicate and distinct task descriptions",
+    "Document results and create iteration plan"
+  ],
+  "success_criteria": [
+    "Embedding generation latency < 500ms per request",
+    "Duplicate task detection accuracy > 90%",
+    "Zero cloud API costs for embedding generation",
+    "No false positives on clearly unrelated tasks",
+    "Vector store persists between sessions"
+  ],
+  "related_documents": [
+    "https://www.notion.so/2ed33d7a491b81c496afe7f7b0b2e707",
+    "https://www.notion.so/2ed33d7a491b819b8e3cdebc070f8457"
+  ],
+  "tags": ["Local-LLM", "Agent-Integration", "Embeddings", "MVP", "Task-Deduplication"],
+  "created_at": "20260119T120000Z",
+  "created_by": "Claude Cowork Agent"
+}

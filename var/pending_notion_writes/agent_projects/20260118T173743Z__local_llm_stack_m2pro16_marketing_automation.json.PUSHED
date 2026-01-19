@@ -1,0 +1,45 @@
+{
+  "type": "agent_project",
+  "target_database": "Tasks",
+  "target_database_id": "2e633d7a-491b-80ed-ba48-000bd4fe690e",
+  "created_at": "2026-01-18T17:37:43Z",
+  "source_agent": "Cursor GPT-5.2 Agent",
+  "project_id": "local-llm-stack-m2pro16-v1",
+  "properties": {
+    "Task Name": "[PROJECT] Local LLM Stack — Marketing Automation (Mac mini M2 Pro 16GB)",
+    "Description": "Implement the optimal, most performant local open(-weight) model stack for marketing automation on Mac mini (Apple M2 Pro, 16GB unified memory). This project standardizes model storage, installs runtimes, downloads/validates models for text+vision+OCR+audio+RAG+safety, and integrates a small local gateway/service layer into this repo for reliable automation usage.\n\n**Hardware constraints (verified):**\n- Apple M2 Pro (10 CPU cores; 16 GPU cores; Metal 4)\n- 16GB unified memory\n- Internal SSD (Apple Fabric) has ~100GB free\n- External SSDs available (USB Samsung T7, etc.)\n\n**Model set (optimal for 16GB):**\n- Text router/controller: Phi-4-mini-instruct (MIT)\n- Copy/rewrite model: Gemma 2 9B (Gemma license)\n- Vision: Qwen2.5-VL 7B Instruct (Apache-2.0 per model card)\n- OCR/doc-vision: Florence-2 (MIT, via Transformers)\n- Transcription: Whisper medium (MIT, via whisper.cpp)\n- RAG embeddings: BGE-M3 (MIT)\n- RAG reranking: bge-reranker-v2-m3\n- Safety gate: Llama Guard 3 1B (Llama license)\n- Optional audio similarity/tagging: CLAP (CC0/Apache variants)\n\n**Most technically performant model storage location:**\n- Hot models (fastest): `/Users/brianhellemn/Library/Application Support/SerenLocalLLM/models` (internal Apple SSD; Apple Fabric)\n- Cold/archive models: `/Volumes/SYSTEM_SSD/SerenLocalLLM/models-archive` (external Samsung T7 USB SSD)\n\n**Repo integration location (configs + gateway code):**\n- Proposed: `/services/local_llm/` for the local gateway/service\n- Proposed: `/shared_core/local_llm/` for reusable client + prompt templates\n\n**Deliverables:**\n1) Standardized model storage layout + env vars\n2) Installed local runtimes (llama.cpp + whisper.cpp; optional Ollama/Open WebUI)\n3) Downloaded + validated model artifacts with a local registry\n4) Local LLM gateway and workflow adapters for marketing automation\n5) Performance guardrails (16GB-safe defaults) + runbook",
+    "Status": "In Progress",
+    "Priority": "High",
+    "Owner": "Cursor GPT-5.2 Agent",
+    "Tags": "Agent-Coordination, LocalLLM, Marketing-Automation, Multimodal, RAG, Whisper, OCR, Agent-Project",
+    "Category": "LocalLLM",
+    "External Docs Required": true,
+    "Preflight Status": "Passed",
+    "Preflight Notes": "Hardware verified via system_profiler: Mac mini M2 Pro, 16GB unified memory, 16-core GPU (Metal 4). Storage profiled: internal SSD (Apple Fabric) fastest; SYSTEM_SSD is external Samsung T7 (USB)."
+  },
+  "content": "# Local LLM Stack — Marketing Automation (Mac mini M2 Pro 16GB)\n\n## Objective\n\nStand up a reliable, repeatable local model stack that covers:\n- Text generation + structured extraction (marketing automations)\n- Vision creative analysis + captions\n- OCR for screenshots/forms\n- Audio transcription and post-processing\n- RAG (embeddings + reranking)\n- Safety gating\n\n## Key Constraints\n\n- 16GB unified memory → plan for **one heavy model loaded at a time**.\n- Prefer internal SSD for hot models (best latency + throughput).\n\n## Storage Decision\n\n**Hot (internal, best performance):**\n- `/Users/brianhellemn/Library/Application Support/SerenLocalLLM/models`\n\n**Cold (external archive, capacity):**\n- `/Volumes/SYSTEM_SSD/SerenLocalLLM/models-archive`\n\n## Integration Targets in Repo\n\n- `/services/local_llm/` (local gateway / endpoints)\n- `/shared_core/local_llm/` (clients, prompt templates, model registry helpers)\n\n## Linked Tasks\n\nSee linked Agent-Tasks for step-by-step implementation.\n\n---\n*Created by Cursor GPT-5.2 Agent — 2026-01-18*",
+  "linked_tasks": [
+    "20260118T173743Z__task1_storage_layout_and_env_vars",
+    "20260118T173743Z__task2_install_llama_cpp_runtime",
+    "20260118T173743Z__task3_install_whisper_cpp_runtime",
+    "20260118T173743Z__task4_download_text_models_phi_and_gemma",
+    "20260118T173743Z__task5_download_vision_and_ocr_models_qwen_vl_and_florence2",
+    "20260118T173743Z__task6_download_whisper_models_and_transcription_pipeline",
+    "20260118T173743Z__task7_download_rag_models_bge_m3_and_reranker",
+    "20260118T173743Z__task8_download_safety_model_llama_guard",
+    "20260118T173743Z__task9_optional_audio_embedding_clap",
+    "20260118T173743Z__task10_local_llm_gateway_service",
+    "20260118T173743Z__task11_marketing_automation_workflow_adapters",
+    "20260118T173743Z__task12_performance_guardrails_and_runbook",
+    "20260118T173743Z__task13_model_manifest_and_checksums",
+    "20260118T173743Z__task14_memory_management_strategy"
+  ],
+  "audit_notes": {
+    "audit_date": "2026-01-18",
+    "auditor": "Claude Code Agent (Opus 4.5)",
+    "audit_report": "reports/LOCAL_LLM_STACK_AUDIT_20260118.md",
+    "verdict": "CONDITIONAL GO",
+    "critical_gaps_added": ["task13_model_manifest_and_checksums", "task14_memory_management_strategy"],
+    "notion_sync_status": "PENDING - JSON artifacts exist but not synced to Notion"
+  }
+}

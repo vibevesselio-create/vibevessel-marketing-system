@@ -1,0 +1,19 @@
+{
+  "type": "agent_task",
+  "target_database": "Tasks",
+  "target_database_id": "2e633d7a-491b-80ed-ba48-000bd4fe690e",
+  "created_at": "2026-01-18T21:30:00Z",
+  "source_agent": "Claude Code Agent (Opus 4.5)",
+  "task_id": "llmstack-task-14",
+  "parent_project_id": "local-llm-stack-m2pro16-v1",
+  "properties": {
+    "Task Name": "[TASK 14] Memory Management — Explicit Unload Strategy for 16GB",
+    "Description": "Implement explicit memory management strategy for the 16GB unified memory constraint.\n\n**Problem:** The plan mentions 'one heavy model at a time' but lacks implementation details for:\n- How models are unloaded\n- What triggers unload\n- Memory pressure detection\n- Cooldown/warmup timing\n\n**Implementation Requirements:**\n\n1. **Model Unload API**\n   - Gateway endpoint: `POST /models/{model_id}/unload`\n   - Graceful shutdown with timeout\n   - Confirmation of memory release\n\n2. **Memory Pressure Detection**\n   - Use `psutil` to monitor system memory\n   - Define thresholds (e.g., warn at 80%, unload at 90%)\n   - Log memory state before/after model operations\n\n3. **Automatic Unload Triggers**\n   - Memory threshold exceeded\n   - Inactivity timeout (e.g., 5 minutes idle)\n   - Explicit pipeline phase transition\n\n4. **Cooldown/Warmup**\n   - Document time to load each model\n   - Minimum cooldown between unload/load (avoid thrashing)\n   - Warm-up inference to ensure model is ready\n\n5. **Graceful Degradation**\n   - What happens on OOM?\n   - Fallback to smaller model variant?\n   - Clear error messaging to caller\n\n**Gap Addressed:** GAP-TECH-3 from audit report.\n\n**Integration:** Integrate with Task 10 (Gateway Service) and Task 12 (Performance Guardrails).",
+    "Status": "Not Started",
+    "Priority": "High",
+    "Owner": "Brian Hellemn",
+    "Tags": "Agent-Coordination, LocalLLM, Memory, Performance, Gateway, Audit-Remediation, Agent-Task",
+    "Category": "Code Implementation"
+  },
+  "content": "# Memory Management — Explicit Unload Strategy for 16GB\n\n## Objective\n\nEnsure reliable operation on 16GB unified memory by implementing explicit model lifecycle management.\n\n## Gap Being Addressed\n\nGAP-TECH-3 from LOCAL_LLM_STACK_AUDIT_20260118: \"No explicit unload/memory management strategy\"\n\n## Key Deliverables\n\n1. Gateway API for model unload\n2. Memory monitoring integration\n3. Automatic unload triggers\n4. Documented cooldown/warmup times\n5. OOM handling\n\n## Acceptance Criteria\n\n- Gateway can unload models on demand\n- Memory usage logged before/after operations\n- No OOM crashes during sequential pipeline\n- Documented model swap timing\n"
+}

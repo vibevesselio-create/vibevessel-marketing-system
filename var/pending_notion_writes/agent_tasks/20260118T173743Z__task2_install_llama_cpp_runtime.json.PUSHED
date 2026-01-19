@@ -1,0 +1,19 @@
+{
+  "type": "agent_task",
+  "target_database": "Tasks",
+  "target_database_id": "2e633d7a-491b-80ed-ba48-000bd4fe690e",
+  "created_at": "2026-01-18T17:37:43Z",
+  "source_agent": "Cursor GPT-5.2 Agent",
+  "task_id": "llmstack-task-2",
+  "parent_project_id": "local-llm-stack-m2pro16-v1",
+  "properties": {
+    "Task Name": "[TASK 2] Runtime Install — llama.cpp (Metal) + OpenAI-Compatible Server",
+    "Description": "Install/build llama.cpp with Metal support and validate basic inference + OpenAI-compatible server mode.\n\n**Why llama.cpp:** minimal overhead, predictable memory on 16GB, supports GGUF quantized models.\n\n**Deliverables:**\n- llama.cpp built with Metal\n- `llama-cli` validated\n- `llama-server` validated (OpenAI-compatible endpoints)\n\n**Model dir integration:** uses `SEREN_LLM_ROOT/gguf`",
+    "Status": "Not Started",
+    "Priority": "High",
+    "Owner": "Cursor GPT-5.2 Agent",
+    "Tags": "Agent-Coordination, LocalLLM, llama.cpp, Runtime, Agent-Task",
+    "Category": "Infrastructure"
+  },
+  "content": "# Runtime Install — llama.cpp (Metal) + OpenAI-Compatible Server\n\n## Objective\n\nBuild and validate llama.cpp as the primary local inference backend.\n\n## Requirements\n\n- Mac mini M2 Pro, Metal 4\n- `SEREN_LLM_ROOT/gguf` exists\n\n## Acceptance Criteria\n\n- `llama-cli` runs a small prompt with a small GGUF model.\n- `llama-server` can serve a model and answer an OpenAI-style chat completion request.\n- Default config uses 16GB-safe settings (reasonable context, Q4 models for ≥7B).\n"
+}

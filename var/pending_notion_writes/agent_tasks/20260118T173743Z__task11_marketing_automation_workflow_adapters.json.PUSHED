@@ -1,0 +1,19 @@
+{
+  "type": "agent_task",
+  "target_database": "Tasks",
+  "target_database_id": "2e633d7a-491b-80ed-ba48-000bd4fe690e",
+  "created_at": "2026-01-18T17:37:43Z",
+  "source_agent": "Cursor GPT-5.2 Agent",
+  "task_id": "llmstack-task-11",
+  "parent_project_id": "local-llm-stack-m2pro16-v1",
+  "properties": {
+    "Task Name": "[TASK 11] Workflow Adapters — Marketing Automations (text + vision + audio + RAG)",
+    "Description": "Create concrete workflow adapters that use the local gateway for specific automation components.\n\n**Required adapters (high leverage):**\n1) Brand voice + offer brief → multi-channel copy pack (email/SMS/web/social)\n2) Transcript → summary + hooks + clip/quote extraction\n3) Creative image batch → captions + alt text + on-image CTA extraction (vision+OCR)\n4) Knowledge base Q&A (RAG) for consistent claims/specs\n5) Safety gate before publish\n\n**Output standards:**\n- JSON-first (for automation) + Markdown (for human review)\n- Deterministic file naming + storage under `var/` or `$SEREN_LLM_ROOT/logs`",
+    "Status": "Not Started",
+    "Priority": "High",
+    "Owner": "Cursor GPT-5.2 Agent",
+    "Tags": "Agent-Coordination, LocalLLM, Marketing-Automation, Workflows, Agent-Task",
+    "Category": "Workflow Implementation"
+  },
+  "content": "# Workflow Adapters — Marketing Automations\n\n## Objective\n\nTurn the model stack into repeatable automation building blocks.\n\n## Target Workflows\n\n1. Brief → copy pack (structured JSON outputs)\n2. Transcript → summary + hooks + quotes\n3. Creatives → captions + OCR + QA\n4. RAG Q&A (claims/spec consistency)\n5. Safety gate before publish\n\n## Acceptance Criteria\n\n- Each workflow has a clear input schema and output schema.\n- Workflows run on 16GB with sequential steps and bounded context.\n- Workflows produce artifacts suitable for Notion/Drive ingestion.\n"
+}

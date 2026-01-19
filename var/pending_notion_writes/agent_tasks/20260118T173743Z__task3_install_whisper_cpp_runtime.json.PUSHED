@@ -1,0 +1,19 @@
+{
+  "type": "agent_task",
+  "target_database": "Tasks",
+  "target_database_id": "2e633d7a-491b-80ed-ba48-000bd4fe690e",
+  "created_at": "2026-01-18T17:37:43Z",
+  "source_agent": "Cursor GPT-5.2 Agent",
+  "task_id": "llmstack-task-3",
+  "parent_project_id": "local-llm-stack-m2pro16-v1",
+  "properties": {
+    "Task Name": "[TASK 3] Runtime Install — whisper.cpp (Local Transcription Engine)",
+    "Description": "Install/build whisper.cpp and validate transcription with a medium model.\n\n**Why whisper.cpp:** fast, predictable RAM, simple CLI integration for automation pipelines.\n\n**Deliverables:**\n- whisper.cpp built\n- Model download script wired to `SEREN_LLM_ROOT/whisper`\n- Baseline transcription command tested\n\n**Resource target:** Whisper medium optimized RAM ~1.7GB; fits alongside a small text model on 16GB",
+    "Status": "Not Started",
+    "Priority": "High",
+    "Owner": "Cursor GPT-5.2 Agent",
+    "Tags": "Agent-Coordination, LocalLLM, whisper.cpp, Audio, Runtime, Agent-Task",
+    "Category": "Infrastructure"
+  },
+  "content": "# Runtime Install — whisper.cpp\n\n## Objective\n\nProvide local, reliable transcription for marketing media workflows.\n\n## Default Model Choice (16GB)\n\n- Whisper **medium** is the default quality/speed compromise.\n\n## Acceptance Criteria\n\n- whisper.cpp builds successfully.\n- Model file stored under `$SEREN_LLM_ROOT/whisper`.\n- A sample audio file transcribes to text with timestamps.\n"
+}

@@ -1,0 +1,21 @@
+{
+  "type": "agent_task",
+  "target_database": "Tasks",
+  "target_database_id": "2e633d7a-491b-80ed-ba48-000bd4fe690e",
+  "created_at": "2026-01-18T12:38:05Z",
+  "source_agent": "Claude Code Agent",
+  "assigned_agent": "Claude Code Agent",
+  "task_id": "lr-task-6",
+  "parent_project_id": "lr-api-hybrid-v1",
+  "properties": {
+    "Task Name": "[TASK 6] Python API Client — Lightroom Operations",
+    "Description": "Created comprehensive Python client for Lightroom API operations.\n\n**Features:**\n- Typed dataclasses for Asset and Album\n- Full pagination support with iterators\n- Auto token refresh callback support\n- Rate limiting handling\n- Rendition download\n- Search functionality\n\n**File Created:**\n- /shared_core/integrations/adobe/lightroom_client.py",
+    "Status": "Completed",
+    "Priority": "High",
+    "Owner": "Claude Code Agent",
+    "Tags": "Agent-Coordination, Lightroom-API, Python-Implementation, Agent-Task",
+    "Category": "Integration Development",
+    "Verification Notes": "Completed 2026-01-18. Full API coverage with typed responses."
+  },
+  "content": "# Python API Client — Lightroom Operations\n\n## Completed: 2026-01-18\n\n## Dataclasses\n\n### Asset\n- id, subtype, filename\n- capture_date, import_timestamp\n- width, height, location, camera\n- raw_data (original response)\n- from_api_response() class method\n\n### Album\n- id, name, subtype, asset_count\n- created, updated, raw_data\n- from_api_response() class method\n\n## LightroomClient Methods\n\n### Account & Catalog\n- get_account() -> dict\n- get_catalog() -> dict\n- get_catalog_stats(catalog_id) -> dict\n\n### Assets (Iterator-based)\n- list_assets(catalog_id, **options) -> Iterator[Asset]\n- get_asset(catalog_id, asset_id) -> Asset\n- get_all_assets(catalog_id, max_assets) -> list[Asset]\n- search_by_filename(catalog_id, filename) -> list[Asset]\n\n### Albums\n- list_albums(catalog_id, **options) -> Iterator[Album]\n- get_album(catalog_id, album_id) -> Album\n- list_album_assets(catalog_id, album_id) -> Iterator[Asset]\n\n### Renditions\n- get_rendition_url(catalog_id, asset_id, size) -> str\n- download_rendition(catalog_id, asset_id, size, output_path) -> bytes\n\n## Error Handling\n- 401: Calls refresh_callback if provided\n- 429: Waits for retry-after period"
+}

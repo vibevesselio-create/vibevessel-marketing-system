@@ -1,0 +1,19 @@
+{
+  "type": "agent_task",
+  "target_database": "Tasks",
+  "target_database_id": "2e633d7a-491b-80ed-ba48-000bd4fe690e",
+  "created_at": "2026-01-18T21:30:00Z",
+  "source_agent": "Claude Code Agent (Opus 4.5)",
+  "task_id": "llmstack-task-13",
+  "parent_project_id": "local-llm-stack-m2pro16-v1",
+  "properties": {
+    "Task Name": "[TASK 13] Model Manifest — Pinned Model IDs, Checksums, and Licenses",
+    "Description": "Create authoritative model manifest with pinned specifications for all models in the Local LLM Stack.\n\n**Manifest Contents (per model):**\n- Exact HuggingFace repository ID (e.g., `bartowski/microsoft_Phi-4-mini-instruct-GGUF`)\n- Specific file name and quantization level (e.g., `Phi-4-mini-instruct-Q4_K_M.gguf`)\n- SHA256 checksum for verification\n- File size in bytes\n- License type and attribution requirements\n- Download URL (primary + mirror if available)\n- Compatible runtime (llama.cpp / whisper.cpp / Transformers)\n- Minimum RAM requirement\n\n**Storage Location:**\n- `$SEREN_LLM_ROOT/registry/models.json`\n\n**Models to Document:**\n1. Phi-4-mini-instruct (Q4_K_M)\n2. Gemma 2 9B (Q4_K_M)\n3. Qwen2.5-VL 7B Instruct (Q4_K_L + mmproj)\n4. Florence-2-large (Transformers)\n5. Whisper medium (ggml Q5_0)\n6. BGE-M3 (Transformers)\n7. bge-reranker-v2-m3 (Transformers)\n8. Llama Guard 3 1B (Q4_K_M)\n9. CLAP (Transformers, optional)\n\n**Gap Addressed:** GAP-TECH-2 from audit report.\n\n**Acceptance Criteria:**\n- All 9 models have pinned specs\n- Checksums verified by downloading and hashing\n- Manifest is JSON with schema validation",
+    "Status": "Not Started",
+    "Priority": "High",
+    "Owner": "Brian Hellemn",
+    "Tags": "Agent-Coordination, LocalLLM, Models, Documentation, Audit-Remediation, Agent-Task",
+    "Category": "Documentation"
+  },
+  "content": "# Model Manifest — Pinned Model IDs, Checksums, and Licenses\n\n## Objective\n\nCreate a single source of truth for all model artifacts in the Local LLM Stack.\n\n## Gap Being Addressed\n\nGAP-TECH-2 from LOCAL_LLM_STACK_AUDIT_20260118: \"No pinned model IDs/checksums\"\n\n## Deliverable\n\nJSON manifest at `$SEREN_LLM_ROOT/registry/models.json` with schema:\n\n```json\n{\n  \"version\": \"1.0\",\n  \"updated\": \"2026-01-18T00:00:00Z\",\n  \"models\": [\n    {\n      \"id\": \"phi-4-mini-instruct\",\n      \"display_name\": \"Phi-4-mini-instruct\",\n      \"hf_repo\": \"bartowski/microsoft_Phi-4-mini-instruct-GGUF\",\n      \"file_name\": \"Phi-4-mini-instruct-Q4_K_M.gguf\",\n      \"sha256\": \"abc123...\",\n      \"size_bytes\": 2500000000,\n      \"quantization\": \"Q4_K_M\",\n      \"license\": \"MIT\",\n      \"attribution_required\": false,\n      \"runtime\": \"llama.cpp\",\n      \"min_ram_gb\": 4.5,\n      \"download_url\": \"https://huggingface.co/...\"\n    }\n  ]\n}\n```\n\n## Acceptance Criteria\n\n- All 9 models documented\n- Checksums verified\n- JSON validates against schema\n"
+}
