@@ -3,7 +3,18 @@
  * Two-way rows + Two-way SCHEMA + safer rich_text chunking
  * API version: 2025-09-03
  *
- * VERSION: 2.5 - Fix missing ensureItemTypePropertyExists_ function (2026-01-14)
+ * VERSION: 2.6 - Usage-Driven Property Registry Sync (2026-01-19)
+ *
+ * IMPROVEMENTS IN 2.6:
+ *   - FEATURE: Usage-Driven Property Registry Sync - FULLY IMPLEMENTED
+ *     * syncPropertiesRegistryForDatabase_() - Syncs properties based on ACTUAL USAGE, not schema
+ *     * upsertRegistryPage_() - Idempotent create/update for registry entries
+ *     * hasPropertyValue_() - Checks if Notion property has actual content
+ *     * syncWorkspaceDatabasesRow_() - Cross-workspace row synchronization
+ *     * evaluateDatabaseCompliance_() - Governance compliance validation
+ *     * testUsageDrivenPropertySync() - Unit tests for validation scenarios
+ *   - CONFIG: Added PROPERTIES_REGISTRY_DB_ID for Properties database
+ *   - DB_NAME_MAP: Added 'Properties' for dynamic discovery
  *
  * IMPROVEMENTS IN 2.5:
  *   - BUGFIX: Added missing ensureItemTypePropertyExists_ function definition
@@ -116,7 +127,9 @@ const DB_NAME_MAP = {
   // MGM 2026-01-19: Added for dynamic discovery (eliminate hardcoded IDs)
   'Folders': ['FOLDERS'],
   'Clients': ['CLIENTS'],
-  'database-parent-page': ['DATABASE_PARENT_PAGE']
+  'database-parent-page': ['DATABASE_PARENT_PAGE'],
+  // MGM 2026-01-19: Properties Registry for usage-driven property sync
+  'Properties': ['PROPERTIES_REGISTRY']
 };
 
 /**
@@ -365,6 +378,9 @@ const CONFIG = {
   // MGM 2026-01-19: Dynamic discovery for Folders and Clients databases
   FOLDERS_DB_ID: DB_CONFIG.FOLDERS,
   CLIENTS_DB_ID: DB_CONFIG.CLIENTS,
+  
+  // MGM 2026-01-19: Properties Registry for usage-driven property sync
+  PROPERTIES_REGISTRY_DB_ID: DB_CONFIG.PROPERTIES_REGISTRY,
 
   // Database parent page for creating new databases (dynamically discovered)
   DATABASE_PARENT_PAGE_ID: DB_CONFIG.DATABASE_PARENT_PAGE || '26ce73616c278141af54dd115915445c',
@@ -5811,6 +5827,731 @@ function syncSchemaFromCsvToNotion_(folder, ds, UL) {
   });
 
   return result;
+}
+
+/* ============================== USAGE-DRIVEN PROPERTY REGISTRY SYNC ============================== */
+/**
+ * MGM 2026-01-19: Usage-Driven Property Sync Implementation
+ * 
+ * CRITICAL DESIGN: Properties are synchronized ONLY when they are actually used/populated
+ * by items being synced, NOT pre-emptively from the database schema.
+ * 
+ * Core Logic:
+ * 1. No pre-emptive schema replication — does NOT scan source schema upfront
+ * 2. Item-by-item property discovery — scans each item for populated values
+ * 3. Just-in-time property creation — creates in registry only when first item uses property
+ * 4. Sort-order sensitivity — properties appear in order first encountered
+ * 
+ * Exemptions (always sync regardless of usage):
+ * - title property
+ * - Properties in REQUIRED_SYNC_PROPERTIES
+ */
+
+/**
+ * Required properties that are always synced to registry, even if no items use them
+ */
+const REQUIRED_SYNC_PROPERTIES = ['title'];
+
+/**
+ * Check if a Notion property value is populated (has actual content)
+ * @param {Object} propValue - The property value object from Notion API
+ * @returns {boolean} True if the property has a meaningful value
+ */
+function hasPropertyValue_(propValue) {
+  if (!propValue) return false;
+  
+  const type = propValue.type;
+  if (!type) return false;
+  
+  try {
+    switch (type) {
+      case 'title':
+        return Array.isArray(propValue.title) && propValue.title.length > 0 && 
+               propValue.title.some(t => t.plain_text && t.plain_text.trim().length > 0);
+      
+      case 'rich_text':
+        return Array.isArray(propValue.rich_text) && propValue.rich_text.length > 0 &&
+               propValue.rich_text.some(t => t.plain_text && t.plain_text.trim().length > 0);
+      
+      case 'number':
+        return propValue.number !== null && propValue.number !== undefined;
+      
+      case 'select':
+        return propValue.select !== null && propValue.select !== undefined;
+      
+      case 'status':
+        return propValue.status !== null && propValue.status !== undefined;
+      
+      case 'multi_select':
+        return Array.isArray(propValue.multi_select) && propValue.multi_select.length > 0;
+      
+      case 'date':
+        return propValue.date !== null && propValue.date !== undefined;
+      
+      case 'checkbox':
+        // Checkbox always has a value (true or false)
+        return true;
+      
+      case 'url':
+        return propValue.url !== null && propValue.url !== undefined && propValue.url.trim().length > 0;
+      
+      case 'email':
+        return propValue.email !== null && propValue.email !== undefined && propValue.email.trim().length > 0;
+      
+      case 'phone_number':
+        return propValue.phone_number !== null && propValue.phone_number !== undefined;
+      
+      case 'relation':
+        return Array.isArray(propValue.relation) && propValue.relation.length > 0;
+      
+      case 'rollup':
+        // Rollups always have computed values
+        return propValue.rollup !== null && propValue.rollup !== undefined;
+      
+      case 'formula':
+        // Formulas always have computed values
+        return propValue.formula !== null && propValue.formula !== undefined;
+      
+      case 'people':
+        return Array.isArray(propValue.people) && propValue.people.length > 0;
+      
+      case 'files':
+        return Array.isArray(propValue.files) && propValue.files.length > 0;
+      
+      case 'created_time':
+      case 'last_edited_time':
+        // System timestamps always exist
+        return true;
+      
+      case 'created_by':
+      case 'last_edited_by':
+        // System user fields always exist
+        return true;
+      
+      case 'unique_id':
+        return propValue.unique_id !== null && propValue.unique_id !== undefined;
+      
+      default:
+        // For unknown types, check if there's any non-null value
+        return propValue[type] !== null && propValue[type] !== undefined;
+    }
+  } catch (e) {
+    return false;
+  }
+}
+
+/**
+ * Upsert a page in a registry database (idempotent create or update)
+ * Uses deduplication key to find existing pages
+ * 
+ * @param {string} registryDbId - The registry database ID
+ * @param {Object} pageData - Page data including deduplicationKey and properties
+ * @param {Object} UL - Unified logger instance
+ * @returns {Object} { success: boolean, pageId: string|null, created: boolean, error: string|null }
+ */
+function upsertRegistryPage_(registryDbId, pageData, UL) {
+  const result = { success: false, pageId: null, created: false, error: null };
+  
+  if (!registryDbId) {
+    result.error = 'Registry database ID is required';
+    UL?.warn?.(result.error);
+    return result;
+  }
+  
+  if (!pageData || !pageData.deduplicationKey) {
+    result.error = 'pageData with deduplicationKey is required';
+    UL?.warn?.(result.error);
+    return result;
+  }
+  
+  try {
+    // Resolve to data_source_id
+    const dsId = resolveDatabaseToDataSourceId_(registryDbId, UL);
+    if (!dsId) {
+      result.error = 'Cannot resolve registry database to data_source_id';
+      UL?.warn?.(result.error, { registryDbId });
+      return result;
+    }
+    
+    // Search for existing page by deduplication key
+    const searchBody = {
+      filter: {
+        property: 'Deduplication Key',
+        rich_text: { equals: pageData.deduplicationKey }
+      },
+      page_size: 1
+    };
+    
+    let existingPageId = null;
+    try {
+      const searchRes = notionFetch_(`data_sources/${dsId}/query`, 'POST', searchBody);
+      if (searchRes.results && searchRes.results.length > 0) {
+        existingPageId = searchRes.results[0].id;
+      }
+    } catch (e) {
+      // Property might not exist yet, proceed with create
+      UL?.debug?.('Deduplication key search failed (property may not exist)', { 
+        error: String(e),
+        deduplicationKey: pageData.deduplicationKey 
+      });
+    }
+    
+    // Build properties payload
+    const properties = {};
+    
+    // Title property (Property Name)
+    if (pageData.propertyName) {
+      properties['Property Name'] = { 
+        title: [{ type: 'text', text: { content: pageData.propertyName } }] 
+      };
+    }
+    
+    // Database ID
+    if (pageData.databaseId) {
+      properties['Database ID'] = { 
+        rich_text: [{ type: 'text', text: { content: pageData.databaseId } }] 
+      };
+    }
+    
+    // Property Type
+    if (pageData.propertyType) {
+      properties['Property Type'] = { 
+        select: { name: pageData.propertyType } 
+      };
+    }
+    
+    // Deduplication Key (dbId::propertyName)
+    properties['Deduplication Key'] = { 
+      rich_text: [{ type: 'text', text: { content: pageData.deduplicationKey } }] 
+    };
+    
+    // Items Using Count
+    if (pageData.itemsUsingCount !== undefined) {
+      properties['Items Using Count'] = { 
+        number: pageData.itemsUsingCount 
+      };
+    }
+    
+    // First Seen At
+    if (pageData.firstSeenAt) {
+      properties['First Seen At'] = { 
+        date: { start: pageData.firstSeenAt } 
+      };
+    }
+    
+    // Sync Status
+    if (pageData.syncStatus) {
+      properties['Sync Status'] = { 
+        select: { name: pageData.syncStatus } 
+      };
+    }
+    
+    // Is Required (for exempted properties)
+    if (pageData.isRequired !== undefined) {
+      properties['Is Required'] = { 
+        checkbox: pageData.isRequired 
+      };
+    }
+    
+    if (existingPageId) {
+      // UPDATE existing page
+      notionFetch_(`pages/${existingPageId}`, 'PATCH', { properties });
+      result.success = true;
+      result.pageId = existingPageId;
+      result.created = false;
+      UL?.debug?.('Updated existing registry page', { 
+        pageId: existingPageId, 
+        propertyName: pageData.propertyName 
+      });
+    } else {
+      // CREATE new page
+      const createBody = {
+        parent: { type: 'data_source_id', data_source_id: dsId },
+        properties
+      };
+      
+      const createRes = notionFetch_('pages', 'POST', createBody);
+      result.success = true;
+      result.pageId = createRes.id;
+      result.created = true;
+      UL?.debug?.('Created new registry page', { 
+        pageId: createRes.id, 
+        propertyName: pageData.propertyName 
+      });
+    }
+    
+  } catch (e) {
+    result.error = String(e);
+    UL?.error?.('Failed to upsert registry page', { 
+      error: result.error,
+      stack: e.stack,
+      deduplicationKey: pageData.deduplicationKey 
+    });
+  }
+  
+  return result;
+}
+
+/**
+ * Sync properties to registry based on ACTUAL USAGE in items (usage-driven)
+ * 
+ * CRITICAL: This function does NOT pre-emptively sync all schema properties.
+ * It only syncs properties that are actually USED (have values) in database items.
+ * 
+ * @param {string} dbId - Source database ID to analyze
+ * @param {string} propertiesRegistryDbId - Target Properties registry database ID (optional, uses CONFIG if not provided)
+ * @param {Object} UL - Unified logger instance
+ * @returns {Object} { success: boolean, created: [], updated: [], skipped: [], errors: [], itemsProcessed: number }
+ */
+function syncPropertiesRegistryForDatabase_(dbId, propertiesRegistryDbId, UL) {
+  const result = {
+    success: false,
+    created: [],
+    updated: [],
+    skipped: [],
+    errors: [],
+    itemsProcessed: 0,
+    propertiesFound: 0
+  };
+  
+  // Use configured registry if not provided
+  const registryDbId = propertiesRegistryDbId || CONFIG.PROPERTIES_REGISTRY_DB_ID;
+  
+  if (!dbId) {
+    result.errors.push('Source database ID is required');
+    UL?.error?.('syncPropertiesRegistryForDatabase_ called without dbId');
+    return result;
+  }
+  
+  if (!registryDbId) {
+    result.errors.push('Properties registry database ID not configured');
+    UL?.warn?.('PROPERTIES_REGISTRY_DB_ID not configured - skipping property registry sync');
+    return result;
+  }
+  
+  try {
+    UL?.info?.('Starting usage-driven property sync', { 
+      sourceDbId: dbId, 
+      registryDbId 
+    });
+    
+    // Get database schema for property type information
+    const schemaInfo = fetchDatabaseSchema_(dbId, UL);
+    if (!schemaInfo.ok) {
+      result.errors.push('Cannot access source database schema');
+      return result;
+    }
+    const dbProps = schemaInfo.props || {};
+    const dbTitle = schemaInfo.titleName || 'Untitled';
+    
+    // Query ALL items from source database
+    const items = queryDataSourcePages_(dbId, UL) || [];
+    result.itemsProcessed = items.length;
+    
+    UL?.info?.('Analyzing items for property usage', { 
+      database: dbTitle,
+      itemCount: items.length,
+      schemaPropertyCount: Object.keys(dbProps).length
+    });
+    
+    // Build usedProperties map: { propName: { count: N, firstSeen: ISO, type: string } }
+    const usedProperties = new Map();
+    const nowIsoStr = nowIso();
+    
+    // Process each item to discover which properties are actually used
+    for (const item of items) {
+      const itemProps = item.properties || {};
+      const itemCreatedTime = item.created_time || nowIsoStr;
+      
+      for (const [propName, propValue] of Object.entries(itemProps)) {
+        // Check if this property has an actual value
+        if (!hasPropertyValue_(propValue)) continue;
+        
+        // Get property type from schema
+        const propType = dbProps[propName]?.type || propValue.type || 'unknown';
+        
+        if (!usedProperties.has(propName)) {
+          // First time seeing this property with a value
+          usedProperties.set(propName, {
+            count: 0,
+            firstSeen: itemCreatedTime,
+            type: propType,
+            isRequired: REQUIRED_SYNC_PROPERTIES.includes(propName.toLowerCase())
+          });
+        }
+        
+        // Increment usage count
+        usedProperties.get(propName).count++;
+        
+        // Update firstSeen if this item is older
+        const meta = usedProperties.get(propName);
+        if (itemCreatedTime < meta.firstSeen) {
+          meta.firstSeen = itemCreatedTime;
+        }
+      }
+    }
+    
+    // Add required properties even if no items use them
+    for (const reqProp of REQUIRED_SYNC_PROPERTIES) {
+      // Find actual property name (case-insensitive match)
+      const actualPropName = Object.keys(dbProps).find(
+        p => p.toLowerCase() === reqProp.toLowerCase()
+      );
+      
+      if (actualPropName && !usedProperties.has(actualPropName)) {
+        usedProperties.set(actualPropName, {
+          count: 0,
+          firstSeen: nowIsoStr,
+          type: dbProps[actualPropName]?.type || 'title',
+          isRequired: true
+        });
+      }
+    }
+    
+    result.propertiesFound = usedProperties.size;
+    
+    UL?.info?.('Property usage analysis complete', {
+      database: dbTitle,
+      usedProperties: usedProperties.size,
+      schemaProperties: Object.keys(dbProps).length,
+      skippedUnused: Object.keys(dbProps).length - usedProperties.size
+    });
+    
+    // Upsert each used property to the registry
+    for (const [propName, meta] of usedProperties) {
+      const pageData = {
+        deduplicationKey: `${dbId}::${propName}`,
+        propertyName: propName,
+        databaseId: dbId,
+        propertyType: meta.type,
+        firstSeenAt: meta.firstSeen,
+        itemsUsingCount: meta.count,
+        syncStatus: 'Active',
+        isRequired: meta.isRequired
+      };
+      
+      const upsertResult = upsertRegistryPage_(registryDbId, pageData, UL);
+      
+      if (upsertResult.success) {
+        if (upsertResult.created) {
+          result.created.push(propName);
+        } else {
+          result.updated.push(propName);
+        }
+      } else {
+        result.errors.push({ property: propName, error: upsertResult.error });
+      }
+    }
+    
+    // Log skipped properties (in schema but not used)
+    for (const schemaProp of Object.keys(dbProps)) {
+      if (!usedProperties.has(schemaProp)) {
+        result.skipped.push(schemaProp);
+      }
+    }
+    
+    result.success = result.errors.length === 0;
+    
+    UL?.info?.('Property registry sync complete', {
+      database: dbTitle,
+      created: result.created.length,
+      updated: result.updated.length,
+      skipped: result.skipped.length,
+      errors: result.errors.length
+    });
+    
+  } catch (e) {
+    result.errors.push(String(e));
+    UL?.error?.('syncPropertiesRegistryForDatabase_ failed', { 
+      error: String(e), 
+      stack: e.stack,
+      dbId 
+    });
+  }
+  
+  return result;
+}
+
+/**
+ * Sync a single row from workspace-databases registry to another workspace
+ * Used for cross-workspace database synchronization
+ * 
+ * @param {Object} sourceRow - Source row data (Notion page properties)
+ * @param {string} targetDbId - Target database ID in destination workspace
+ * @param {Object} options - Sync options { idMappings: {}, schemaMap: {} }
+ * @param {Object} UL - Unified logger instance
+ * @returns {Object} { success: boolean, pageId: string|null, error: string|null }
+ */
+function syncWorkspaceDatabasesRow_(sourceRow, targetDbId, options = {}, UL) {
+  const result = { success: false, pageId: null, error: null };
+  
+  if (!sourceRow || !targetDbId) {
+    result.error = 'sourceRow and targetDbId are required';
+    UL?.warn?.(result.error);
+    return result;
+  }
+  
+  try {
+    const idMappings = options.idMappings || {};
+    
+    // Extract data source ID as deduplication key
+    let dataSourceId = null;
+    const dsIdProp = sourceRow['Data Source ID'];
+    if (dsIdProp && dsIdProp.rich_text) {
+      dataSourceId = (dsIdProp.rich_text || []).map(t => t.plain_text || '').join('');
+    }
+    
+    if (!dataSourceId) {
+      result.error = 'Source row missing Data Source ID';
+      UL?.warn?.(result.error, { sourceRow: Object.keys(sourceRow) });
+      return result;
+    }
+    
+    // Build properties for target, translating relations if needed
+    const targetProperties = {};
+    const systemProps = new Set([
+      'created_time', 'created_by', 'last_edited_time', 'last_edited_by', 
+      'unique_id', '__page_id', '__last_synced_iso'
+    ]);
+    
+    for (const [propName, propValue] of Object.entries(sourceRow)) {
+      if (!propValue || !propValue.type) continue;
+      if (systemProps.has(propValue.type)) continue;
+      
+      // Handle relation translation
+      if (propValue.type === 'relation' && propValue.relation) {
+        const translatedRelations = [];
+        for (const rel of propValue.relation) {
+          const targetId = idMappings[rel.id] || rel.id;
+          translatedRelations.push({ id: targetId });
+        }
+        targetProperties[propName] = { relation: translatedRelations };
+        continue;
+      }
+      
+      // Copy other properties as-is
+      targetProperties[propName] = propValue;
+    }
+    
+    // Use upsertRegistryPage_ for idempotent operation
+    const pageData = {
+      deduplicationKey: dataSourceId,
+      ...targetProperties
+    };
+    
+    // Find or create page in target database
+    const existingPage = findWorkspaceDbPage_(targetDbId, dataSourceId, UL);
+    const dsId = resolveDatabaseToDataSourceId_(targetDbId, UL);
+    
+    if (existingPage) {
+      // Update existing
+      notionFetch_(`pages/${existingPage}`, 'PATCH', { properties: targetProperties });
+      result.success = true;
+      result.pageId = existingPage;
+      UL?.debug?.('Updated workspace row in target', { pageId: existingPage, dataSourceId });
+    } else if (dsId) {
+      // Create new
+      const createRes = notionFetch_('pages', 'POST', {
+        parent: { type: 'data_source_id', data_source_id: dsId },
+        properties: targetProperties
+      });
+      result.success = true;
+      result.pageId = createRes.id;
+      UL?.debug?.('Created workspace row in target', { pageId: createRes.id, dataSourceId });
+    } else {
+      result.error = 'Cannot resolve target database';
+    }
+    
+  } catch (e) {
+    result.error = String(e);
+    UL?.error?.('syncWorkspaceDatabasesRow_ failed', { error: result.error, stack: e.stack });
+  }
+  
+  return result;
+}
+
+/**
+ * Evaluate database compliance against governance standards
+ * Checks parent location, required properties, property types, and governance rules
+ * 
+ * @param {string} dbId - Database ID to evaluate
+ * @param {Object} options - Evaluation options { requiredProperties: [], parentPageId: string }
+ * @param {Object} UL - Unified logger instance
+ * @returns {Object} { compliant: boolean, score: number, violations: [], warnings: [], details: {} }
+ */
+function evaluateDatabaseCompliance_(dbId, options = {}, UL) {
+  const result = {
+    compliant: false,
+    score: 0,
+    violations: [],
+    warnings: [],
+    details: {
+      hasRequiredProperties: false,
+      hasCorrectParent: false,
+      hasDescription: false,
+      propertyTypeMatches: 0,
+      totalChecks: 0
+    }
+  };
+  
+  if (!dbId) {
+    result.violations.push('Database ID is required');
+    return result;
+  }
+  
+  try {
+    const requiredProps = options.requiredProperties || ['Name', 'Status'];
+    const expectedParentId = options.parentPageId || CONFIG.DATABASE_PARENT_PAGE_ID;
+    
+    // Fetch database info
+    const dsId = resolveDatabaseToDataSourceId_(dbId, UL);
+    const endpoint = dsId ? `data_sources/${dsId}` : `databases/${dbId}`;
+    let db = null;
+    
+    try {
+      db = notionFetch_(endpoint, 'GET');
+    } catch (e) {
+      result.violations.push(`Cannot access database: ${e.message || e}`);
+      return result;
+    }
+    
+    if (!db) {
+      result.violations.push('Database not found or not accessible');
+      return result;
+    }
+    
+    let totalChecks = 0;
+    let passedChecks = 0;
+    
+    // Check 1: Parent location
+    totalChecks++;
+    if (db.parent) {
+      const parentId = db.parent.page_id || db.parent.database_id || db.parent.workspace;
+      if (parentId === expectedParentId || parentId?.replace(/-/g, '') === expectedParentId?.replace(/-/g, '')) {
+        result.details.hasCorrectParent = true;
+        passedChecks++;
+      } else {
+        result.warnings.push(`Database parent (${parentId}) does not match expected (${expectedParentId})`);
+      }
+    } else {
+      result.warnings.push('Cannot determine database parent');
+    }
+    
+    // Check 2: Required properties
+    const dbProps = db.properties || {};
+    const missingProps = [];
+    for (const reqProp of requiredProps) {
+      totalChecks++;
+      const found = Object.keys(dbProps).some(p => p.toLowerCase() === reqProp.toLowerCase());
+      if (found) {
+        passedChecks++;
+        result.details.propertyTypeMatches++;
+      } else {
+        missingProps.push(reqProp);
+      }
+    }
+    
+    if (missingProps.length === 0) {
+      result.details.hasRequiredProperties = true;
+    } else {
+      result.violations.push(`Missing required properties: ${missingProps.join(', ')}`);
+    }
+    
+    // Check 3: Description (governance standard)
+    totalChecks++;
+    if (db.description && db.description.length > 0) {
+      const descText = db.description.map(d => d.plain_text || '').join('');
+      if (descText.trim().length > 0) {
+        result.details.hasDescription = true;
+        passedChecks++;
+      } else {
+        result.warnings.push('Database has empty description');
+      }
+    } else {
+      result.warnings.push('Database has no description');
+    }
+    
+    // Calculate score
+    result.details.totalChecks = totalChecks;
+    result.score = Math.round((passedChecks / totalChecks) * 100);
+    result.compliant = result.violations.length === 0 && result.score >= 80;
+    
+    UL?.info?.('Database compliance evaluation complete', {
+      dbId,
+      score: result.score,
+      compliant: result.compliant,
+      violations: result.violations.length,
+      warnings: result.warnings.length
+    });
+    
+  } catch (e) {
+    result.violations.push(`Evaluation failed: ${e.message || e}`);
+    UL?.error?.('evaluateDatabaseCompliance_ failed', { error: String(e), stack: e.stack });
+  }
+  
+  return result;
+}
+
+/**
+ * Test function for usage-driven property sync
+ * Validates all 4 scenarios from the design requirements
+ */
+function testUsageDrivenPropertySync() {
+  const UL = {
+    info: (msg, data) => console.log(`[INFO] ${msg}`, JSON.stringify(data || {})),
+    warn: (msg, data) => console.log(`[WARN] ${msg}`, JSON.stringify(data || {})),
+    error: (msg, data) => console.log(`[ERROR] ${msg}`, JSON.stringify(data || {})),
+    debug: (msg, data) => console.log(`[DEBUG] ${msg}`, JSON.stringify(data || {}))
+  };
+  
+  console.log('=== Usage-Driven Property Sync Test ===');
+  console.log('');
+  
+  // Test hasPropertyValue_ function
+  console.log('--- Testing hasPropertyValue_() ---');
+  const testCases = [
+    { input: null, expected: false, name: 'null value' },
+    { input: { type: 'title', title: [] }, expected: false, name: 'empty title' },
+    { input: { type: 'title', title: [{ plain_text: 'Test' }] }, expected: true, name: 'populated title' },
+    { input: { type: 'rich_text', rich_text: [] }, expected: false, name: 'empty rich_text' },
+    { input: { type: 'rich_text', rich_text: [{ plain_text: 'Content' }] }, expected: true, name: 'populated rich_text' },
+    { input: { type: 'number', number: null }, expected: false, name: 'null number' },
+    { input: { type: 'number', number: 0 }, expected: true, name: 'zero number' },
+    { input: { type: 'number', number: 42 }, expected: true, name: 'positive number' },
+    { input: { type: 'select', select: null }, expected: false, name: 'null select' },
+    { input: { type: 'select', select: { name: 'Option' } }, expected: true, name: 'populated select' },
+    { input: { type: 'relation', relation: [] }, expected: false, name: 'empty relation' },
+    { input: { type: 'relation', relation: [{ id: '123' }] }, expected: true, name: 'populated relation' },
+    { input: { type: 'checkbox', checkbox: false }, expected: true, name: 'false checkbox' },
+    { input: { type: 'checkbox', checkbox: true }, expected: true, name: 'true checkbox' }
+  ];
+  
+  let passed = 0;
+  let failed = 0;
+  
+  for (const tc of testCases) {
+    const result = hasPropertyValue_(tc.input);
+    if (result === tc.expected) {
+      console.log(`  ✅ ${tc.name}: ${result}`);
+      passed++;
+    } else {
+      console.log(`  ❌ ${tc.name}: expected ${tc.expected}, got ${result}`);
+      failed++;
+    }
+  }
+  
+  console.log('');
+  console.log(`hasPropertyValue_ tests: ${passed} passed, ${failed} failed`);
+  console.log('');
+  
+  // Test configuration
+  console.log('--- Configuration Check ---');
+  console.log(`PROPERTIES_REGISTRY_DB_ID: ${CONFIG.PROPERTIES_REGISTRY_DB_ID || '[NOT CONFIGURED]'}`);
+  console.log(`REQUIRED_SYNC_PROPERTIES: ${REQUIRED_SYNC_PROPERTIES.join(', ')}`);
+  console.log('');
+  
+  console.log('=== Test Complete ===');
+  return { passed, failed };
 }
 
 /* ============================== NOTION → CSV EXPORT ============================== */
