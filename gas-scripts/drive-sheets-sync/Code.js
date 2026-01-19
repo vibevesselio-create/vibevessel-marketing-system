@@ -6093,13 +6093,143 @@ function upsertRegistryPage_(registryDbId, pageData, UL) {
 }
 
 /**
+ * Properties Registry database schema for auto-creation
+ */
+const PROPERTIES_REGISTRY_SCHEMA = {
+  'Property Name': { title: {} },
+  'Database ID': { rich_text: {} },
+  'Property Type': { 
+    select: { 
+      options: [
+        { name: 'title', color: 'blue' },
+        { name: 'rich_text', color: 'gray' },
+        { name: 'number', color: 'green' },
+        { name: 'select', color: 'orange' },
+        { name: 'multi_select', color: 'yellow' },
+        { name: 'date', color: 'pink' },
+        { name: 'checkbox', color: 'purple' },
+        { name: 'url', color: 'red' },
+        { name: 'relation', color: 'default' },
+        { name: 'rollup', color: 'gray' },
+        { name: 'formula', color: 'blue' },
+        { name: 'people', color: 'orange' },
+        { name: 'files', color: 'green' },
+        { name: 'status', color: 'yellow' },
+        { name: 'created_time', color: 'pink' },
+        { name: 'last_edited_time', color: 'purple' },
+        { name: 'created_by', color: 'red' },
+        { name: 'last_edited_by', color: 'brown' },
+        { name: 'unique_id', color: 'default' }
+      ]
+    }
+  },
+  'First Seen At': { date: {} },
+  'Items Using Count': { number: { format: 'number' } },
+  'Sync Status': { 
+    select: { 
+      options: [
+        { name: 'Active', color: 'green' },
+        { name: 'Deleted', color: 'red' },
+        { name: 'Pending', color: 'yellow' }
+      ]
+    }
+  },
+  'Deduplication Key': { rich_text: {} },
+  'Is Required': { checkbox: {} }
+};
+
+/**
+ * Ensures Properties Registry database exists, creates it if not
+ * @param {Object} UL - Unified logger instance
+ * @returns {string|null} Database ID (data_source_id) if accessible or created, null if failed
+ */
+function ensurePropertiesRegistryExists_(UL) {
+  // Check if already configured and accessible
+  const configuredId = CONFIG.PROPERTIES_REGISTRY_DB_ID || PROPS.getProperty('DB_CACHE_PROPERTIES');
+  
+  if (configuredId) {
+    try {
+      const dsId = resolveDatabaseToDataSourceId_(configuredId, UL);
+      if (dsId) {
+        UL?.debug?.('Properties Registry database is accessible', { dbId: configuredId, dataSourceId: dsId });
+        return dsId;
+      }
+    } catch (e) {
+      UL?.debug?.('Configured Properties Registry not accessible, will create new', { error: String(e) });
+    }
+  }
+  
+  // Search for existing Properties database
+  try {
+    const searchBody = {
+      query: 'Properties',
+      page_size: 50,
+      filter: { property: 'object', value: 'data_source' }
+    };
+    const searchRes = notionFetch_('search', 'POST', searchBody);
+    
+    for (const ds of (searchRes.results || [])) {
+      const title = ds.title?.[0]?.plain_text || ds.name || '';
+      if (title.toLowerCase() === 'properties') {
+        const foundDsId = ds.id;
+        UL?.info?.('Found existing Properties Registry database', { dataSourceId: foundDsId });
+        // Cache it
+        PROPS.setProperty('DB_CACHE_PROPERTIES', foundDsId);
+        return foundDsId;
+      }
+    }
+  } catch (e) {
+    UL?.debug?.('Search for Properties database failed', { error: String(e) });
+  }
+  
+  // Create new Properties Registry database
+  UL?.info?.('Creating Properties Registry database');
+  
+  try {
+    const parentPageId = CONFIG.DATABASE_PARENT_PAGE_ID;
+    if (!parentPageId) {
+      UL?.error?.('Cannot create Properties Registry - DATABASE_PARENT_PAGE_ID not configured');
+      return null;
+    }
+    
+    const newDb = notionFetch_('databases', 'POST', {
+      parent: { type: 'page_id', page_id: parentPageId },
+      title: [{ type: 'text', text: { content: 'Properties' } }],
+      properties: PROPERTIES_REGISTRY_SCHEMA
+    });
+    
+    const createdDbId = newDb.id;
+    UL?.info?.('Created Properties Registry database', { 
+      dbId: createdDbId,
+      url: newDb.url 
+    });
+    
+    // Get the data_source_id from the created database
+    const dataSources = newDb.data_sources || [];
+    const dsId = dataSources[0]?.id || createdDbId;
+    
+    // Cache the ID
+    PROPS.setProperty('DB_CACHE_PROPERTIES', dsId);
+    PROPS.setProperty('DB_ID_DEV_PROPERTIES_REGISTRY', dsId);
+    
+    return dsId;
+    
+  } catch (e) {
+    UL?.error?.('Failed to create Properties Registry database', { error: String(e), stack: e.stack });
+    return null;
+  }
+}
+
+/**
  * Sync properties to registry based on ACTUAL USAGE in items (usage-driven)
  * 
  * CRITICAL: This function does NOT pre-emptively sync all schema properties.
  * It only syncs properties that are actually USED (have values) in database items.
  * 
+ * AUTO-CREATE: If Properties Registry database doesn't exist, it will be created automatically.
+ * 
  * @param {string} dbId - Source database ID to analyze
- * @param {string} propertiesRegistryDbId - Target Properties registry database ID (optional, uses CONFIG if not provided)
+ * @param {string} propertiesRegistryDbId - Target Properties registry database ID (optional, auto-detected/created if not provided)
  * @param {Object} UL - Unified logger instance
  * @returns {Object} { success: boolean, created: [], updated: [], skipped: [], errors: [], itemsProcessed: number }
  */
@@ -6114,19 +6244,26 @@ function syncPropertiesRegistryForDatabase_(dbId, propertiesRegistryDbId, UL) {
     propertiesFound: 0
   };
   
-  // Use configured registry if not provided
-  const registryDbId = propertiesRegistryDbId || CONFIG.PROPERTIES_REGISTRY_DB_ID;
-  
   if (!dbId) {
     result.errors.push('Source database ID is required');
     UL?.error?.('syncPropertiesRegistryForDatabase_ called without dbId');
     return result;
   }
   
+  // Auto-detect or create Properties Registry if not provided
+  let registryDbId = propertiesRegistryDbId || CONFIG.PROPERTIES_REGISTRY_DB_ID;
+  
   if (!registryDbId) {
-    result.errors.push('Properties registry database ID not configured');
-    UL?.warn?.('PROPERTIES_REGISTRY_DB_ID not configured - skipping property registry sync');
-    return result;
+    UL?.info?.('Properties Registry not configured - attempting to find or create');
+    registryDbId = ensurePropertiesRegistryExists_(UL);
+    
+    if (!registryDbId) {
+      result.errors.push('Could not find or create Properties Registry database');
+      UL?.error?.('Failed to ensure Properties Registry exists');
+      return result;
+    }
+    
+    UL?.info?.('Using Properties Registry', { dataSourceId: registryDbId });
   }
   
   try {
