@@ -248,7 +248,7 @@ class GASDeployment:
             if not self.auto_fallback:
                 return result
 
-            logger.info("API deployment failed, falling back to clasp")
+            logger.warning(f"API deployment failed: {result.error}. Falling back to clasp")
 
         # Fall back to clasp
         if self.clasp_available:
@@ -286,7 +286,7 @@ class GASDeployment:
             if not self.auto_fallback:
                 return result
 
-            logger.info("API update failed, falling back to clasp")
+            logger.warning(f"API update failed: {result.error}. Falling back to clasp")
 
         # Fall back to clasp
         if self.clasp_available:
@@ -302,7 +302,8 @@ class GASDeployment:
         self,
         script_id: str,
         function_name: str,
-        parameters: Optional[List[Any]] = None
+        parameters: Optional[List[Any]] = None,
+        project_path: Optional[str] = None
     ) -> DeploymentResult:
         """
         Execute a function in a GAS project.
@@ -311,6 +312,7 @@ class GASDeployment:
             script_id: Script ID
             function_name: Function to execute
             parameters: Optional parameters to pass
+            project_path: Optional path to project (for clasp fallback)
 
         Returns:
             DeploymentResult with execution details
@@ -324,9 +326,12 @@ class GASDeployment:
             if not self.auto_fallback:
                 return result
 
+            logger.warning(f"API execution failed: {result.error}. Falling back to clasp")
+
         # Fall back to clasp
         if self.clasp_available:
-            return self._execute_via_clasp(script_id, function_name, parameters)
+            proj_path = Path(project_path) if project_path else None
+            return self._execute_via_clasp(script_id, function_name, parameters, proj_path)
 
         return DeploymentResult(
             success=False,
@@ -486,7 +491,7 @@ class GASDeployment:
                 try:
                     manifest = json.loads(content)
                     file_list.append({
-                        'name': name,
+                        'name': 'appsscript',  # API requires 'appsscript' not 'appsscript.json'
                         'type': 'JSON',
                         'source': json.dumps(manifest, indent=2)
                     })
@@ -616,18 +621,71 @@ class GASDeployment:
         self,
         script_id: str,
         function_name: str,
-        parameters: Optional[List[Any]]
+        parameters: Optional[List[Any]],
+        project_path: Optional[Path] = None
     ) -> DeploymentResult:
         """Execute function via clasp CLI"""
         try:
-            # clasp run requires the project directory
-            # For now, we'll return failure and recommend API
+            if not project_path:
+                # Try to find project directory from script_id
+                # Search common locations for .clasp.json with matching scriptId
+                search_paths = [
+                    Path.cwd() / 'gas-scripts',
+                    Path.home() / 'Projects' / 'github-production' / 'gas-scripts',
+                ]
+                for search_path in search_paths:
+                    if search_path.exists():
+                        for clasp_file in search_path.rglob('.clasp.json'):
+                            try:
+                                config = json.loads(clasp_file.read_text())
+                                if config.get('scriptId') == script_id:
+                                    project_path = clasp_file.parent
+                                    break
+                            except (json.JSONDecodeError, IOError):
+                                continue
+                    if project_path:
+                        break
+
+            if not project_path:
+                return DeploymentResult(
+                    success=False,
+                    method=DeploymentMethod.CLASP,
+                    error=f"Cannot find project directory for script {script_id}. Provide project_path or use API."
+                )
+
+            # Build clasp run command
+            cmd = ['clasp', 'run', function_name]
+            if parameters:
+                cmd.extend(['--params', json.dumps(parameters)])
+
+            result = subprocess.run(
+                cmd,
+                cwd=str(project_path),
+                capture_output=True,
+                text=True,
+                timeout=120  # 2 min timeout for function execution
+            )
+
+            if result.returncode != 0:
+                return DeploymentResult(
+                    success=False,
+                    method=DeploymentMethod.CLASP,
+                    error=f"clasp run failed: {result.stderr}"
+                )
+
+            return DeploymentResult(
+                success=True,
+                method=DeploymentMethod.CLASP,
+                script_id=script_id,
+                details={'output': result.stdout, 'function': function_name}
+            )
+
+        except subprocess.TimeoutExpired:
             return DeploymentResult(
                 success=False,
                 method=DeploymentMethod.CLASP,
-                error="clasp run requires project directory context. Use API method."
+                error="clasp run timed out after 120 seconds"
             )
-
         except Exception as e:
             return DeploymentResult(
                 success=False,
