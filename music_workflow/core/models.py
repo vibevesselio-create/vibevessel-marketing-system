@@ -222,3 +222,4 @@ class DeduplicationResult:
     similarity_score: float = 0.0
     fingerprint_match: bool = False
     metadata_match: bool = False
+    all_matches: List[Dict[str, Any]] = field(default_factory=list)  # All matching items found

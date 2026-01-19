@@ -31,17 +31,33 @@
         "endpoint": "/api/item/list",
         "has_payload": false
       }
+    },
+    "eagle_request_get_1768858467815": {
+      "operation_id": "eagle_request_get_1768858467815",
+      "operation_type": "eagle_request_get",
+      "started_at": "2026-01-19T21:34:27.815192+00:00",
+      "completed_at": "2026-01-19T21:34:27.826522+00:00",
+      "status": "completed",
+      "result": {
+        "status_code": 200
+      },
+      "error": null,
+      "retries": 0,
+      "metadata": {
+        "endpoint": "/api/item/list",
+        "has_payload": false
+      }
     }
   },
   "session_stats": {
-    "total_operations": 2,
+    "total_operations": 3,
     "successful_operations": 1,
     "failed_operations": 0,
     "total_retries": 0,
     "cache_hits": 0,
     "cache_misses": 1,
     "api_calls": 1,
-    "session_started_at": "2026-01-19T21:30:38.224000+00:00"
+    "session_started_at": "2026-01-19T21:34:27.702733+00:00"
   },
-  "last_saved": "2026-01-19T21:30:38.255219+00:00"
+  "last_saved": "2026-01-19T21:34:27.826535+00:00"
 }

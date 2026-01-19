@@ -1198,12 +1198,26 @@ def verify_eagle_file_integrity(
     Returns:
         Dict with integrity report
     """
+    # Try multiple import paths
+    resolve_eagle_item_path = None
+    get_eagle_library_path = None
+    
     try:
         from scripts.eagle_path_resolution import (
             resolve_eagle_item_path,
             get_eagle_library_path
         )
     except ImportError:
+        try:
+            # Direct import when running from scripts directory
+            from eagle_path_resolution import (
+                resolve_eagle_item_path,
+                get_eagle_library_path
+            )
+        except ImportError:
+            pass
+    
+    if resolve_eagle_item_path is None:
         _log("warning", "eagle_path_resolution not available - cannot verify integrity")
         return {"error": "eagle_path_resolution module not available"}
     
@@ -1466,6 +1480,10 @@ def main():
     parser.add_argument("--limit", type=int, default=10, help="Limit items shown")
     parser.add_argument("--search", type=str, help="Search by name")
     parser.add_argument("--refresh", action="store_true", help="Force cache refresh")
+    # Integrity checking commands
+    parser.add_argument("--integrity", action="store_true", help="Check file integrity (find orphaned items)")
+    parser.add_argument("--cleanup-orphans", action="store_true", help="Clean up orphaned items (dry run)")
+    parser.add_argument("--cleanup-orphans-execute", action="store_true", help="Clean up orphaned items (EXECUTE)")
     
     args = parser.parse_args()
     
@@ -1504,6 +1522,61 @@ def main():
         print(f"\n📦 Cache Statistics:")
         print(f"   Size: {cache_stats.get('size', 0)} entries")
         print(f"   Hit rate: {cache_stats.get('hit_rate', 0):.1%}")
+        return
+    
+    if args.integrity:
+        print("🔍 Checking Eagle library file integrity...")
+        report = verify_eagle_file_integrity(limit=args.limit * 100)
+        
+        if "error" in report:
+            print(f"❌ Error: {report['error']}")
+            return
+        
+        print(f"\n📊 Integrity Report:")
+        print(f"   Total checked: {report['total_checked']}")
+        print(f"   Valid files: {report['valid']}")
+        print(f"   Orphaned items: {report['orphan_count']}")
+        print(f"   Path errors: {len(report.get('path_errors', []))}")
+        print(f"   Health: {report['health_percentage']:.1f}%")
+        
+        if report['orphaned']:
+            print(f"\n⚠️  Orphaned items (files missing):")
+            for item in report['orphaned'][:10]:
+                print(f"   - {item['name']} ({item['id'][:8]}...)")
+            if len(report['orphaned']) > 10:
+                print(f"   ... and {len(report['orphaned']) - 10} more")
+            print(f"\n   Use --cleanup-orphans to preview cleanup")
+            print(f"   Use --cleanup-orphans-execute to actually clean up")
+        return
+    
+    if args.cleanup_orphans:
+        print("🔍 Finding orphaned Eagle items (DRY RUN)...")
+        result = cleanup_orphaned_eagle_items(dry_run=True, limit=args.limit * 100)
+        
+        if "error" in result:
+            print(f"❌ Error: {result['error']}")
+            return
+        
+        print(f"\n📊 Orphan Cleanup Preview:")
+        print(f"   Orphaned items found: {result['orphaned_found']}")
+        print(f"   Would be cleaned: {result['orphaned_found']}")
+        
+        if result['orphaned_found'] > 0:
+            print(f"\n   Use --cleanup-orphans-execute to actually clean up")
+        return
+    
+    if args.cleanup_orphans_execute:
+        print("🧹 Cleaning up orphaned Eagle items (EXECUTE)...")
+        result = cleanup_orphaned_eagle_items(dry_run=False, limit=args.limit * 100)
+        
+        if "error" in result:
+            print(f"❌ Error: {result['error']}")
+            return
+        
+        print(f"\n📊 Orphan Cleanup Results:")
+        print(f"   Orphaned items found: {result['orphaned_found']}")
+        print(f"   Successfully cleaned: {result['cleaned']}")
+        print(f"   Failed: {result['failed']}")
         return
     
     if args.search:

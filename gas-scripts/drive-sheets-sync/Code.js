@@ -7894,23 +7894,14 @@ function syncMarkdownFilesToNotion_(folder, ds, UL, options = {}) {
           }
         }
         
-        // Ensure Clone-URL and Clone-Parent-Folder properties exist
-        const cloneUrlPropName = 'Clone-URL';
-        const cloneParentPropName = 'Clone-Parent-Folder';
+        // Ensure Clone-Item-URL property exists (URL to the CSV clone file in Google Drive)
+        // MGM 2026-01-19: Changed from Clone-URL/Clone-Parent-Folder to Clone-Item-URL per user requirement
+        const cloneItemUrlPropName = 'Clone-Item-URL';
         
         try {
-          ensurePropertyExists_(ds.id, cloneUrlPropName, 'url', UL);
+          ensurePropertyExists_(ds.id, cloneItemUrlPropName, 'url', UL);
         } catch (e) {
-          UL.warn('Could not ensure Clone-URL property exists', {
-            database: title,
-            error: String(e)
-          });
-        }
-        
-        try {
-          ensurePropertyExists_(ds.id, cloneParentPropName, 'relation', UL);
-        } catch (e) {
-          UL.warn('Could not ensure Clone-Parent-Folder property exists', {
+          UL.warn('Could not ensure Clone-Item-URL property exists', {
             database: title,
             error: String(e)
           });
@@ -7929,26 +7920,16 @@ function syncMarkdownFilesToNotion_(folder, ds, UL, options = {}) {
           });
         }
         
-        // Set Clone-URL property (Google Drive URL to the clone file)
+        // Set Clone-Item-URL property (Google Drive URL to the CSV clone file)
+        // MGM 2026-01-19: This is the direct URL to the specific CSV file for this database
         const fileUrl = file.getUrl();
-        if (fileUrl && dbProps[cloneUrlPropName]) {
-          propsPayload[cloneUrlPropName] = { url: fileUrl };
-        }
-        
-        // Get or create folder entry in Folders database and set Clone-Parent-Folder relation
-        const parentFolders = file.getParents();
-        if (parentFolders.hasNext() && dbProps[cloneParentPropName]) {
-          const parentFolder = parentFolders.next();
-          const folderNotionId = getOrCreateFolderInNotion_(parentFolder, UL);
-          if (folderNotionId) {
-            propsPayload[cloneParentPropName] = { relation: [{ id: folderNotionId }] };
-            UL.debug('Set Clone-Parent-Folder relation', {
-              database: title,
-              fileName: fileName,
-              folderNotionId: folderNotionId,
-              folderName: parentFolder.getName()
-            });
-          }
+        if (fileUrl && dbProps[cloneItemUrlPropName]) {
+          propsPayload[cloneItemUrlPropName] = { url: fileUrl };
+          UL.debug('Set Clone-Item-URL', {
+            database: title,
+            fileName: fileName,
+            fileUrl: fileUrl
+          });
         }
         
         // MGM: Validate relations
