@@ -1,18 +1,10 @@
 {
-  "workflow_id": "FP-DEDUP-20260118183355",
-  "started_at": "2026-01-18T18:33:55.640813+00:00",
-  "last_updated": "2026-01-18T18:33:56.555265+00:00",
-  "current_step": "eagle_first_reconcile",
+  "workflow_id": "FP-DEDUP-20260119060801",
+  "started_at": "2026-01-19T06:08:01.829682+00:00",
+  "last_updated": "2026-01-19T06:08:01.829690+00:00",
+  "current_step": null,
   "completed_steps": [],
-  "steps": {
-    "eagle_first_reconcile": {
-      "status": "in_progress",
-      "started_at": "2026-01-18T18:33:56.549478+00:00",
-      "completed_at": null,
-      "stats": {},
-      "progress": {}
-    }
-  },
+  "steps": {},
   "errors": [],
-  "can_resume": true
+  "can_resume": false
 }

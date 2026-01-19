@@ -6493,6 +6493,53 @@ function evaluateDatabaseCompliance_(dbId, options = {}, UL) {
 }
 
 /**
+ * Run usage-driven property sync for a specific database
+ * Creates entries in Properties Registry for all USED properties
+ * @param {string} dbId - Source database ID to sync properties from
+ * @returns {Object} Sync result with created/updated/skipped counts
+ */
+function runPropertySync(dbId) {
+  const UL = {
+    info: (msg, data) => console.log(`[INFO] ${msg} ${JSON.stringify(data || {})}`),
+    warn: (msg, data) => console.log(`[WARN] ${msg} ${JSON.stringify(data || {})}`),
+    error: (msg, data) => console.log(`[ERROR] ${msg} ${JSON.stringify(data || {})}`),
+    debug: (msg, data) => console.log(`[DEBUG] ${msg} ${JSON.stringify(data || {})}`)
+  };
+  
+  if (!dbId) {
+    console.log('ERROR: dbId is required');
+    return { success: false, error: 'dbId is required' };
+  }
+  
+  console.log(`=== Running Property Sync for ${dbId} ===`);
+  
+  const result = syncPropertiesRegistryForDatabase_(dbId, null, UL);
+  
+  console.log('');
+  console.log('=== Sync Results ===');
+  console.log(`Success: ${result.success}`);
+  console.log(`Items Processed: ${result.itemsProcessed}`);
+  console.log(`Properties Found: ${result.propertiesFound}`);
+  console.log(`Created: ${result.created.length} - ${result.created.join(', ')}`);
+  console.log(`Updated: ${result.updated.length} - ${result.updated.join(', ')}`);
+  console.log(`Skipped: ${result.skipped.length} - ${result.skipped.join(', ')}`);
+  console.log(`Errors: ${result.errors.length}`);
+  if (result.errors.length > 0) {
+    console.log(`Error details: ${JSON.stringify(result.errors)}`);
+  }
+  
+  return result;
+}
+
+/**
+ * Run property sync for Agent-Tasks database (convenience function)
+ */
+function syncAgentTasksProperties() {
+  // Use the secondary Agent-Tasks DB which is accessible
+  return runPropertySync('284e73616c278018872aeb14e82e0392');
+}
+
+/**
  * Test function for usage-driven property sync
  * Validates all 4 scenarios from the design requirements
  */
@@ -9086,6 +9133,45 @@ function setupTimeTriggerEvery30m() {
 }
 function resetDriveSheetsState() {
   PROPS.deleteProperty(CONFIG.STATE_KEY_PREFIX + 'drive_sheets');
+}
+
+/**
+ * Set a single script property (for programmatic configuration)
+ * @param {string} key - Property key
+ * @param {string} value - Property value
+ */
+function setScriptProperty(key, value) {
+  if (!key || typeof key !== 'string') {
+    throw new Error('key is required and must be a string');
+  }
+  PROPS.setProperty(key, String(value || ''));
+  console.log(`✅ Set ${key} = ${String(value || '').substring(0, 20)}...`);
+  return { success: true, key, value: String(value || '').substring(0, 20) + '...' };
+}
+
+/**
+ * Get a script property value
+ * @param {string} key - Property key
+ * @returns {string} Property value or null
+ */
+function getScriptProperty(key) {
+  return PROPS.getProperty(key);
+}
+
+/**
+ * Configure the Properties Registry database ID
+ * Run this after creating the Properties database in Notion
+ * @param {string} dbId - The Properties database ID
+ */
+function configurePropertiesRegistry(dbId) {
+  if (!dbId) {
+    throw new Error('Database ID is required');
+  }
+  const cleanId = dbId.replace(/-/g, '');
+  PROPS.setProperty('DB_ID_DEV_PROPERTIES_REGISTRY', cleanId);
+  PROPS.setProperty('DB_CACHE_PROPERTIES', cleanId);
+  console.log(`✅ Configured Properties Registry: ${cleanId}`);
+  return { success: true, dbId: cleanId };
 }
 
 /**
