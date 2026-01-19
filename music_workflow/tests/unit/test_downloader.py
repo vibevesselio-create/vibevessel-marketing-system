@@ -74,7 +74,8 @@ class TestDownloader:
         dl = Downloader()
         assert dl.options is not None
         assert dl.options.output_dir == Path("/tmp/music_downloads")
-        assert "m4a" in dl.options.formats
+        # Default formats changed to wav, aiff for lossless workflow
+        assert "wav" in dl.options.formats or "aiff" in dl.options.formats
 
     def test_init_custom_options(self, tmp_path):
         """Test initialization with custom options."""

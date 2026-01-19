@@ -122,8 +122,8 @@ class TestMusicWorkflow:
         mock = MagicMock()
         mock.organize.return_value = OrganizeResult(
             success=True,
-            original_path=Path("/tmp/test.m4a"),
-            final_path=Path("/music/Artist/test.m4a"),
+            source_path=Path("/tmp/test.m4a"),
+            destination_path=Path("/music/Artist/test.m4a"),
         )
         return mock
 
@@ -220,11 +220,8 @@ class TestMusicWorkflow:
         """Test duplicate detection during processing."""
         mock_downloader.download.side_effect = DuplicateFoundError(
             "Track already exists",
-            existing_track=TrackInfo(
-                id="existing",
-                title="Test",
-                artist="Artist",
-            ),
+            existing_track_id="existing",
+            existing_track_title="Test",
         )
 
         track = TrackInfo(
@@ -236,8 +233,9 @@ class TestMusicWorkflow:
 
         result = workflow.process_track(track)
 
-        assert result.success is False
-        assert any("duplicate" in e.lower() for e in result.errors)
+        # Duplicates are treated as success (skipped, not error)
+        assert result.success is True
+        assert any("duplicate" in w.lower() for w in result.warnings)
 
     def test_progress_callback(self, workflow):
         """Test progress callback is invoked."""
@@ -264,7 +262,7 @@ class TestMusicWorkflow:
         results = workflow.process_batch(urls)
 
         assert len(results) == 3
-        assert all(r.success for r in results)
+        assert all(r.success for r in results.values())
 
     def test_batch_process_with_failures(self, workflow, mock_downloader):
         """Test batch processing with some failures."""
@@ -292,9 +290,9 @@ class TestMusicWorkflow:
         results = workflow.process_batch(urls)
 
         assert len(results) == 3
-        assert results[0].success is True
-        assert results[1].success is False
-        assert results[2].success is True
+        assert results[urls[0]].success is True
+        assert results[urls[1]].success is False
+        assert results[urls[2]].success is True
 
 
 class TestWorkflowErrorHandling:
@@ -391,8 +389,8 @@ class TestWorkflowIntegration:
         wf.organizer.organize = Mock(
             return_value=OrganizeResult(
                 success=True,
-                original_path=Path("/tmp/test.m4a"),
-                final_path=Path("/music/test.m4a"),
+                source_path=Path("/tmp/test.m4a"),
+                destination_path=Path("/music/test.m4a"),
             )
         )
 

@@ -1,0 +1,19 @@
+{
+  "type": "agent_task",
+  "target_database": "Agent-Tasks",
+  "target_database_id": "284e73616c278018872aeb14e82e0392",
+  "created_at": "2026-01-19T07:15:00Z",
+  "source_agent": "Claude Cowork Agent",
+  "assigned_agent": "Claude Code Agent",
+  "task_id": "drivesheets-dynamic-discovery-20260119",
+  "properties": {
+    "Task Name": "[TASK] DriveSheetsSync — Eliminate Hardcoded Values & Implement Dynamic Database Discovery",
+    "Description": "Eliminate all hardcoded database IDs and configuration values in DriveSheetsSync Code.js and replace them with dynamic discovery from categorical/meta databases.\n\n**Hardcoded Values Identified:**\n1. DATABASE_PARENT_PAGE_ID (line 362) - '26ce73616c278141af54dd115915445c'\n2. FOLDERS_DB_ID (line 439) - '26ce73616c2781bb81b7dd43760ee6cc'\n3. CLIENTS_DB_ID (line 442) - '20fe73616c278100a2aee337bfdcb535'\n4. EMAIL_TO_CLIENT (lines 412-416) - hardcoded email mapping\n5. CLIENT_TO_NAME (lines 432-436) - hardcoded name mapping\n6. CLIENT_TO_LOCAL_PATH (lines 419-430) - hardcoded path mapping\n\n**Implementation:**\n- Add Folders, Clients, database-parent-page to DB_NAME_MAP\n- Create loadClientConfiguration_() to query Clients DB\n- Replace hardcoded constants with DB_CONFIG values\n- Cache with TTL in script properties",
+    "Status": "Not Started",
+    "Priority": "High",
+    "Owner": "Claude Code Agent",
+    "Tags": "DriveSheetsSync, Agent-Coordination, Technical-Debt",
+    "Category": "Technical Debt"
+  },
+  "content": "# DriveSheetsSync — Eliminate Hardcoded Values\n\n## Objective\nEliminate all hardcoded database IDs and configuration values in DriveSheetsSync Code.js.\n\n## Files to Modify\n- /gas-scripts/drive-sheets-sync/Code.js\n\n## Success Criteria\n- Zero hardcoded database IDs\n- All databases discovered dynamically\n- Client config loaded from Clients database\n- No regressions in sync functionality"
+}

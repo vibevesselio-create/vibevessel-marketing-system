@@ -821,6 +821,26 @@ class MusicWorkflowLogger(UnifiedLogger):
             {"processed": processed, "failed": failed, "skipped": skipped}
         )
 
+    def log_track_operation(
+        self, track_id: str, operation: str, message: str, **kwargs
+    ) -> None:
+        """Log a track operation (called from workflow.py)."""
+        self.info(f"[{operation.upper()}] {message}", {"track_id": track_id, **kwargs})
+
+    def log_error(self, error: Exception, context: Optional[Dict[str, Any]] = None) -> None:
+        """Log an error with optional context (called from workflow.py)."""
+        error_message = str(error)
+        error_type = type(error).__name__
+        ctx = context or {}
+        ctx.update({"error_type": error_type, "error_message": error_message})
+        self.error(f"[ERROR] {error_type}: {error_message}", ctx)
+
+    def log_workflow_event(
+        self, event: str, context: Optional[Dict[str, Any]] = None
+    ) -> None:
+        """Log a workflow event (called from workflow.py for batch processing)."""
+        self.info(f"[WORKFLOW] {event}", context or {})
+
 
 def get_music_logger(
     name: str = "music_workflow",

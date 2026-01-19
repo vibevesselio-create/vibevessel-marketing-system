@@ -1,0 +1,16 @@
+{
+  "database": "Tasks",
+  "title": "Configure client workspace tokens in Apps Script",
+  "properties": {
+    "Name": "Configure client workspace tokens in Apps Script",
+    "Status": "To Do",
+    "Priority": "Critical",
+    "Description": "Configure workspace tokens for each client in Apps Script properties:\n\n1. SEREN_INTERNAL_WORKSPACE_TOKEN - Create integration in Seren Media Internal workspace\n2. VIBEVESSEL_WORKSPACE_TOKEN - Create integration in VibeVessel workspace\n3. OCEAN_FRONTIERS_WORKSPACE_TOKEN - Use token from clients/.env.ocean-frontiers-compass-point (ntn_541874813768A5mH...)\n\nUse setupWorkspaceToken(clientId, token) helper after pushing code.",
+    "Agent": "Human",
+    "Parent Project": "Inter-Workspace Client Database Synchronization",
+    "Tags": "drivesheetssync, configuration, tokens, critical"
+  },
+  "created_at": "2026-01-19T10:00:00Z",
+  "source": "Claude Cowork Agent",
+  "push_status": "pending"
+}

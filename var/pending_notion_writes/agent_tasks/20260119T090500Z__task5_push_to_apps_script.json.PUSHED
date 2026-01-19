@@ -1,0 +1,16 @@
+{
+  "database": "Tasks",
+  "title": "Push DriveSheetsSync changes to Apps Script",
+  "properties": {
+    "Name": "Push DriveSheetsSync changes to Apps Script",
+    "Status": "To Do",
+    "Priority": "Critical",
+    "Description": "Push committed changes to Google Apps Script using clasp push. Changes include: dynamic discovery for Folders/Clients/database-parent-page, inter-workspace token routing, setupWorkspaceToken(), testInterWorkspaceSync().",
+    "Agent": "Human",
+    "Parent Project": "Inter-Workspace Client Database Synchronization",
+    "Tags": "drivesheetssync, deployment, clasp"
+  },
+  "created_at": "2026-01-19T09:05:00Z",
+  "source": "Claude Cowork Agent",
+  "push_status": "pending"
+}

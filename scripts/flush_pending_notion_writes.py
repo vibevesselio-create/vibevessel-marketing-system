@@ -71,44 +71,81 @@ def build_rich_text(text: str) -> List[Dict[str, Any]]:
     return blocks
 
 
+# Status mapping: JSON file status -> Agent-Tasks database status options
+# Valid options: Archived, Completed, Ready, Draft, Planning, Ready To Publish, In Progress, Review, Blocked, Failed
+STATUS_MAP = {
+    # Common variations -> canonical status
+    "Done": "Completed",
+    "done": "Completed",
+    "Complete": "Completed",
+    "complete": "Completed",
+    "Completed": "Completed",
+    "To Do": "Draft",
+    "to do": "Draft",
+    "Todo": "Draft",
+    "todo": "Draft",
+    "Not Started": "Draft",
+    "not started": "Draft",
+    "Pending": "Draft",
+    "pending": "Draft",
+    "Draft": "Draft",
+    "In Progress": "In Progress",
+    "in progress": "In Progress",
+    "In progress": "In Progress",
+    "Active": "In Progress",
+    "Blocked": "Blocked",
+    "blocked": "Blocked",
+    "Failed": "Failed",
+    "failed": "Failed",
+    "Review": "Review",
+    "review": "Review",
+    "Ready": "Ready",
+    "ready": "Ready",
+    "Planning": "Planning",
+    "Archived": "Archived",
+}
+
+
 def build_properties(task_data: Dict[str, Any]) -> Dict[str, Any]:
-    """Build Notion properties from task JSON"""
+    """Build Notion properties from task JSON.
+
+    Agent-Tasks database schema (verified 2026-01-19):
+    - Task Name: title (NOT 'Name')
+    - Status: status
+    - Priority: select
+    - Description: rich_text
+    - Category: select
+    - Owner: people (NOT rich_text)
+    - No 'Tags' property exists
+    """
     props = task_data.get("properties", {})
     notion_props = {}
 
-    # Task Name / Name (title)
-    if "Task Name" in props:
-        notion_props["Name"] = {"title": [{"text": {"content": props["Task Name"]}}]}
-    elif "Name" in props:
-        notion_props["Name"] = {"title": [{"text": {"content": props["Name"]}}]}
+    # Task Name (title) - the actual property name in Agent-Tasks DB
+    title_value = props.get("Task Name") or props.get("Name") or task_data.get("title")
+    if title_value:
+        notion_props["Task Name"] = {"title": [{"text": {"content": title_value}}]}
 
     # Description (rich_text)
     if "Description" in props:
         notion_props["Description"] = {"rich_text": build_rich_text(props["Description"])}
 
-    # Status (status or select)
+    # Status (status type, not select) - map to valid database options
     if "Status" in props:
-        notion_props["Status"] = {"status": {"name": props["Status"]}}
+        raw_status = props["Status"]
+        mapped_status = STATUS_MAP.get(raw_status, "Draft")  # Default to Draft if unknown
+        notion_props["Status"] = {"status": {"name": mapped_status}}
 
     # Priority (select)
     if "Priority" in props:
         notion_props["Priority"] = {"select": {"name": props["Priority"]}}
 
-    # Owner (rich_text)
-    if "Owner" in props:
-        notion_props["Owner"] = {"rich_text": build_rich_text(props["Owner"])}
-
-    # Tags (multi_select)
-    if "Tags" in props:
-        notion_props["Tags"] = {"multi_select": parse_tags(props["Tags"])}
-
     # Category (select)
     if "Category" in props:
         notion_props["Category"] = {"select": {"name": props["Category"]}}
 
-    # Source Agent (rich_text)
-    if task_data.get("source_agent"):
-        notion_props["Source Agent"] = {"rich_text": build_rich_text(task_data["source_agent"])}
+    # Note: 'Tags' does not exist in Agent-Tasks schema
+    # Note: 'Owner' is a people type, not rich_text - skip unless we have user IDs
 
     return notion_props
 
@@ -219,12 +256,16 @@ def create_page(json_path: Path, dry_run: bool = False) -> bool:
             print(f"  [DRY RUN] Would create page")
             return True
 
-        # Create the page
-        response = notion.pages.create(
-            parent={"database_id": db_id},
-            properties=properties,
-            children=content_blocks if content_blocks else None
-        )
+        # Create the page - only include children if content_blocks is non-empty
+        # (Notion API rejects children=null, must be omitted entirely)
+        create_kwargs = {
+            "parent": {"database_id": db_id},
+            "properties": properties,
+        }
+        if content_blocks:
+            create_kwargs["children"] = content_blocks
+
+        response = notion.pages.create(**create_kwargs)
 
         page_id = response.get("id")
         print(f"  SUCCESS: Created page {page_id}")

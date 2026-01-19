@@ -254,10 +254,14 @@ class SpotifyCSVBackup:
                 except UnicodeDecodeError:
                     continue
             
-            if not csv_data:
-                logger.error(f"Failed to read CSV file: {csv_path}")
+            if csv_data is None:
+                logger.error(f"Failed to read CSV file (encoding issues): {csv_path}")
                 return []
-            
+
+            if len(csv_data) == 0:
+                logger.debug(f"CSV file is empty (headers only): {csv_path.name}")
+                return []
+
             for row in csv_data:
                 track = self._parse_csv_row(row)
                 if track.get("id"):
@@ -265,7 +269,7 @@ class SpotifyCSVBackup:
                     # Index track if caching enabled
                     if self.cache:
                         self.cache.index_track(track)
-            
+
             logger.info(f"Loaded {len(tracks)} tracks from {csv_path.name}")
             
         except Exception as e:

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# ruff: noqa: E402
 """
 DEPRECATED: Use run_fingerprint_dedup_production.py instead
 ==============================================================
@@ -34,6 +35,8 @@ Aligned with Seren Media Workspace Standards
 Version: 2026-01-12
 DEPRECATED: 2026-01-18
 """
+# Note: __future__ import moved after deprecation warning to allow deprecation
+# to be shown before any type annotation features are used
 
 import warnings
 warnings.warn(
@@ -42,8 +45,6 @@ warnings.warn(
     DeprecationWarning,
     stacklevel=2
 )
-
-from __future__ import annotations
 
 import os
 import sys

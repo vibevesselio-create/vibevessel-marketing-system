@@ -6138,27 +6138,39 @@ def eagle_get_or_create_folder(folder_name: str, parent_folder_id: Optional[str]
         # NOTE: Eagle API requires /api/ prefix for all endpoints
         data = eagle_request("get", "/api/folder/list")
 
-        def find_folder_recursive(folders, name, parent_id=None):
-            """Recursively search for folder by name and parent."""
+        def find_folder_recursive(folders, name, target_parent_id=None, current_parent_id=None):
+            """Recursively search for folder by name and parent.
+
+            Eagle API returns folders with 'children' nesting but NO 'parent' field.
+            We track parent context via recursion: when descending into children,
+            the current folder's ID becomes the parent context for those children.
+
+            Args:
+                folders: List of folder objects to search
+                name: Folder name to find
+                target_parent_id: The parent ID we're looking for (None = root level)
+                current_parent_id: The parent ID of folders at this recursion level
+            """
             for f in folders:
-                # Check if this folder matches
+                folder_id = f.get("id")
+                # Check if this folder matches by name
                 if f.get("name") == name:
-                    # If no parent specified, return first match
-                    if parent_id is None:
-                        return f["id"]
-                    # If parent specified, check if this folder is under that parent
-                    # Eagle folders have parent field
-                    if f.get("parent") == parent_id:
-                        return f["id"]
-                # Check children recursively
+                    # If no parent specified, return first match at any level
+                    if target_parent_id is None:
+                        return folder_id
+                    # If parent specified, check if this folder is a child of that parent
+                    # We know current_parent_id from recursion context, not from f.get("parent")
+                    if current_parent_id == target_parent_id:
+                        return folder_id
+                # Check children recursively - pass this folder's ID as the parent context
                 children = f.get("children", [])
                 if children:
-                    result = find_folder_recursive(children, name, parent_id)
+                    result = find_folder_recursive(children, name, target_parent_id, folder_id)
                     if result:
                         return result
             return None
 
-        folder_id = find_folder_recursive(data.get("data", []), folder_name, parent_folder_id)
+        folder_id = find_folder_recursive(data.get("data", []), folder_name, parent_folder_id, None)
         if folder_id:
             return folder_id
 
@@ -6754,6 +6766,16 @@ def _item_has_artist_tag(item: dict, artist: str, threshold: float = 0.85) -> bo
         if _artist_tag_match_score(artist_norm, tag) >= threshold:
             return True
     return False
+
+
+def eagle_find_item_by_name(filename: str) -> bool:
+    """
+    Check if an Eagle item exists by filename.
+    Returns True if at least one matching item is found.
+    """
+    items = eagle_find_items_by_filename(filename)
+    return len(items) > 0
+
 
 def eagle_find_best_matching_item(
     filename: str,
@@ -11918,6 +11940,9 @@ def download_track(
         # ── Upsert / update Notion track item ─────────────────────
         # 2026-01-16: Updated file paths for new 3-file output structure
         try:
+            # 2026-01-19 FIX: Don't write temp paths to Notion - they get deleted in finally block
+            # AIFF is in Eagle Library (use Eagle ID, not temp path)
+            # WAV copy is in playlist_wav_path (permanent location)
             meta_dict = {
                 "title": title,
                 "artist": artist,
@@ -11928,14 +11953,15 @@ def download_track(
                 "duration_seconds": duration,
                 "source_url": url,
                 "fingerprint": fingerprint,
-                "aiff_file_path": str(aiff_path),  # AIFF in Eagle Library (temp path for now)
-                "wav_file_path": str(playlist_wav_path),  # WAV in playlist tracks directory
+                # aiff_file_path: REMOVED - temp path gets deleted, use Eagle ID instead
+                "wav_file_path": str(playlist_wav_path),  # WAV in playlist tracks directory (permanent)
                 # Note: m4a_file_path removed from new structure
                 "page_id": track_info.get("page_id"),  # Include page_id for update
                 "audio_processing_status": audio_processing_status,  # Include audio processing status
                 "playlist_name": playlist_names[0] if playlist_names else None,  # 2026-01-15 fix: Include playlist for relation linking
             }
             workspace_logger.info(f"📊 UPDATING NOTION WITH: BPM={bpm}, Key={trad_key}, Duration={duration}s")
+            # Pass eagle_aiff_item_id as well for AIFF tracking (Eagle ID instead of file path)
             upsert_track_page(meta_dict, eagle_item_id)
 
             # CRITICAL FIX: After upsert_track_page, the page_id may have changed due to de-duplication

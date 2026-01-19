@@ -268,6 +268,18 @@ class SpotifyAPI:
                             logger.info(f"Token refresh failed, attempting CSV fallback for {endpoint}")
                             return self._try_csv_fallback(endpoint, params)
                         return None
+                elif response.status_code == 403:
+                    # 403 on audio-features is expected - Spotify deprecated this endpoint for non-partner apps (Nov 2024)
+                    if "/audio-features/" in endpoint:
+                        logger.debug(f"Audio features API returned 403 (expected - deprecated endpoint)")
+                    else:
+                        logger.warning(f"API request forbidden: {response.status_code} - {endpoint}")
+                    # Try CSV fallback if enabled
+                    if self.csv_fallback_on_error and self.csv_backup and use_csv_fallback:
+                        csv_result = self._try_csv_fallback(endpoint, params)
+                        if csv_result:
+                            return csv_result
+                    return None
                 else:
                     logger.error(f"API request failed: {response.status_code} - {response.text}")
                     # Try CSV fallback on error if enabled
@@ -606,7 +618,12 @@ class NotionSpotifyIntegration:
         release_date = track_data.get("album", {}).get("release_date", "")
         isrc = track_data.get("external_ids", {}).get("isrc", "")
         preview_url = track_data.get("preview_url", "")
-        
+
+        # Get database schema to filter properties
+        db_info = self._make_notion_request("GET", f"/databases/{self.tracks_db_id}")
+        db_props = db_info.get("properties", {}) if db_info else {}
+        db_prop_names = set(db_props.keys())
+
         # Build comprehensive properties
         properties = {
             "Title": {"title": [{"text": {"content": track_data.get("name", "Unknown Track")}}]},
@@ -617,26 +634,14 @@ class NotionSpotifyIntegration:
             "Popularity": {"number": track_data.get("popularity", 0)},
             "Explicit": {"checkbox": track_data.get("explicit", False)},
         }
-        
+
         # Set DL=False for Spotify tracks so they can be processed for YouTube download
-        # CRITICAL FIX: Always set DL=False for new Spotify tracks, even if property check fails
-        # This ensures Spotify tracks are eligible for download processing
         # Try both property names (DL and Downloaded) - set both if both exist
-        db_info = self._make_notion_request("GET", f"/databases/{self.tracks_db_id}")
-        if db_info:
-            db_props = db_info.get("properties", {})
-            # Try "DL" property first
-            if "DL" in db_props and db_props["DL"].get("type") == "checkbox":
-                properties["DL"] = {"checkbox": False}
-            # Also try "Downloaded" property (some databases use different name)
-            if "Downloaded" in db_props and db_props["Downloaded"].get("type") == "checkbox":
-                properties["Downloaded"] = {"checkbox": False}
-        else:
-            # Fallback: If database info retrieval fails, try setting both properties
-            # Notion API will ignore properties that don't exist, so this is safe
+        if "DL" in db_props and db_props["DL"].get("type") == "checkbox":
             properties["DL"] = {"checkbox": False}
+        if "Downloaded" in db_props and db_props["Downloaded"].get("type") == "checkbox":
             properties["Downloaded"] = {"checkbox": False}
-        
+
         # Add optional fields if they exist
         if album_name:
             properties["Album"] = {"rich_text": [{"text": {"content": album_name}}]}
@@ -657,15 +662,15 @@ class NotionSpotifyIntegration:
             properties["ISRC"] = {"rich_text": [{"text": {"content": isrc}}]}
         if preview_url:
             properties["Preview URL"] = {"url": preview_url}
-            
+
         # Add audio features if available
         if audio_features:
             properties.update({
                 "Danceability": {"number": audio_features.get("danceability", 0)},
                 "Energy": {"number": audio_features.get("energy", 0)},
-                "Key": {"select": {"name": str(audio_features.get("key", 0))}},
+                "Key": {"number": audio_features.get("key", 0)},
                 "Loudness": {"number": audio_features.get("loudness", 0)},
-                "Mode": {"select": {"name": "Major" if audio_features.get("mode", 0) == 1 else "Minor"}},
+                "Mode": {"number": audio_features.get("mode", 0)},
                 "Speechiness": {"number": audio_features.get("speechiness", 0)},
                 "Acousticness": {"number": audio_features.get("acousticness", 0)},
                 "Instrumentalness": {"number": audio_features.get("instrumentalness", 0)},
@@ -674,7 +679,11 @@ class NotionSpotifyIntegration:
                 "Tempo": {"number": audio_features.get("tempo", 0)},
                 "Time Signature": {"number": audio_features.get("time_signature", 0)},
             })
-            
+
+        # Filter to only include properties that exist in the database
+        if db_prop_names:
+            properties = {k: v for k, v in properties.items() if k in db_prop_names}
+
         payload = {"parent": {"database_id": self.tracks_db_id}, "properties": properties}
         result = self._make_notion_request("POST", "/pages", payload)
         return result.get("id") if result else None
@@ -756,6 +765,11 @@ class NotionSpotifyIntegration:
         if not page_id:
             return False
 
+        # Get database schema to filter properties
+        db_info = self._make_notion_request("GET", f"/databases/{self.tracks_db_id}")
+        db_props = db_info.get("properties", {}) if db_info else {}
+        db_prop_names = set(db_props.keys())
+
         # Check if djay Pro data exists (source of truth for Tempo/Key)
         existing_page = self.get_page(page_id)
         existing_props = existing_page.get("properties", {}) if existing_page else {}
@@ -806,7 +820,7 @@ class NotionSpotifyIntegration:
                 "Danceability": {"number": audio_features.get("danceability", 0)},
                 "Energy": {"number": audio_features.get("energy", 0)},
                 "Loudness": {"number": audio_features.get("loudness", 0)},
-                "Mode": {"select": {"name": "Major" if audio_features.get("mode", 0) == 1 else "Minor"}},
+                "Mode": {"number": audio_features.get("mode", 0)},
                 "Speechiness": {"number": audio_features.get("speechiness", 0)},
                 "Acousticness": {"number": audio_features.get("acousticness", 0)},
                 "Instrumentalness": {"number": audio_features.get("instrumentalness", 0)},
@@ -819,9 +833,13 @@ class NotionSpotifyIntegration:
                 audio_props["Tempo"] = {"number": audio_features.get("tempo", 0)}
             # Only add Key if no djay Pro key exists (djay Pro is source of truth)
             if not has_djay_key and not has_djay_id:
-                audio_props["Key"] = {"select": {"name": str(audio_features.get("key", 0))}}
+                audio_props["Key"] = {"number": audio_features.get("key", 0)}
             properties.update(audio_props)
-            
+
+        # Filter to only include properties that exist in the database
+        if db_prop_names:
+            properties = {k: v for k, v in properties.items() if k in db_prop_names}
+
         result = self._make_notion_request("PATCH", f"/pages/{page_id}", {"properties": properties})
         return bool(result)
 

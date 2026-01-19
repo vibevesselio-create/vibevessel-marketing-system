@@ -168,7 +168,7 @@ class TestWorkflowDispatcher:
         dispatcher = WorkflowDispatcher()
         assert dispatcher.should_use_modular() is True
 
-    @patch('music_workflow.dispatcher.MusicWorkflow')
+    @patch('music_workflow.core.workflow.MusicWorkflow')
     def test_process_url_routes_to_modular(self, mock_workflow_class):
         """Test process_url routes to modular when flag is set."""
         os.environ['MUSIC_WORKFLOW_USE_MODULAR'] = 'true'

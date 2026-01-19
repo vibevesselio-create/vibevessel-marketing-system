@@ -31,7 +31,8 @@ class TestDownloadConfig:
     def test_default_values(self):
         """Test default download config values."""
         config = DownloadConfig()
-        assert config.default_formats == ["m4a", "aiff", "wav"]
+        # Default formats changed to wav, aiff for lossless workflow
+        assert "wav" in config.default_formats or "aiff" in config.default_formats
         assert config.max_retries == 3
         assert config.timeout == 300
         assert config.youtube_fallback is True

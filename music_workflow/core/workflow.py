@@ -208,8 +208,9 @@ class MusicWorkflow:
 
         except DuplicateFoundError as e:
             track.status = TrackStatus.DUPLICATE
-            result.warnings.append(f"Duplicate found: {e.existing_track}")
-            track.add_warning(f"Duplicate of: {e.existing_track}")
+            dup_info = e.existing_track_id or e.existing_track_title or "unknown"
+            result.warnings.append(f"Duplicate found: {dup_info}")
+            track.add_warning(f"Duplicate of: {dup_info}")
             result.success = True  # Not an error, just skipped
 
         except MusicWorkflowError as e:
