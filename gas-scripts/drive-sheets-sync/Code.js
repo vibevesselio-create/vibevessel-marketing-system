@@ -112,7 +112,11 @@ const DB_NAME_MAP = {
   'Scripts': ['SCRIPTS'],
   'Projects': ['PROJECTS'],
   'Tasks': ['TASKS'],
-  'Item-Types': ['ITEM_TYPES']
+  'Item-Types': ['ITEM_TYPES'],
+  // MGM 2026-01-19: Added for dynamic discovery (eliminate hardcoded IDs)
+  'Folders': ['FOLDERS'],
+  'Clients': ['CLIENTS'],
+  'database-parent-page': ['DATABASE_PARENT_PAGE']
 };
 
 /**
@@ -357,9 +361,13 @@ const CONFIG = {
   SCRIPTS_DB_ID: DB_CONFIG.SCRIPTS,
   PROJECTS_DB_ID: DB_CONFIG.PROJECTS,
   TASKS_DB_ID: DB_CONFIG.TASKS,
-  
-  // Database parent page for creating new databases
-  DATABASE_PARENT_PAGE_ID: '26ce73616c278141af54dd115915445c', // database-parent-page
+
+  // MGM 2026-01-19: Dynamic discovery for Folders and Clients databases
+  FOLDERS_DB_ID: DB_CONFIG.FOLDERS,
+  CLIENTS_DB_ID: DB_CONFIG.CLIENTS,
+
+  // Database parent page for creating new databases (dynamically discovered)
+  DATABASE_PARENT_PAGE_ID: DB_CONFIG.DATABASE_PARENT_PAGE || '26ce73616c278141af54dd115915445c',
 
   STATE_KEY_PREFIX: 'nds_drive_sheets_',
   DRIVE_PARENT_FALLBACK_NAME: 'workspace-databases',
@@ -435,11 +443,19 @@ const CLIENT_TO_NAME = {
   'ocean-frontiers': 'Ocean Frontiers'
 };
 
-/** Notion Folders database ID */
-const FOLDERS_DB_ID = '26ce73616c2781bb81b7dd43760ee6cc';
+/**
+ * Notion Folders database ID
+ * MGM 2026-01-19: Now uses CONFIG.FOLDERS_DB_ID for dynamic discovery
+ * Legacy fallback retained for backward compatibility
+ */
+const FOLDERS_DB_ID = CONFIG.FOLDERS_DB_ID || '26ce73616c2781bb81b7dd43760ee6cc';
 
-/** Notion Clients database ID */
-const CLIENTS_DB_ID = '20fe73616c278100a2aee337bfdcb535';
+/**
+ * Notion Clients database ID
+ * MGM 2026-01-19: Now uses CONFIG.CLIENTS_DB_ID for dynamic discovery
+ * Legacy fallback retained for backward compatibility
+ */
+const CLIENTS_DB_ID = CONFIG.CLIENTS_DB_ID || '20fe73616c278100a2aee337bfdcb535';
 
 /**
  * Get the client context for this script instance.
@@ -510,6 +526,135 @@ function getClientEmail() {
   } catch (e) {
     return null;
   }
+}
+
+/**
+ * Loads client configuration dynamically from the Clients database.
+ * MGM 2026-01-19: Added for dynamic client configuration (eliminate hardcoded mappings)
+ *
+ * Queries the Clients database and builds:
+ * - EMAIL_TO_CLIENT_DYNAMIC: email -> client-id mapping
+ * - CLIENT_TO_NAME_DYNAMIC: client-id -> display name mapping
+ * - CLIENT_TO_LOCAL_PATH_DYNAMIC: client-id -> local Drive path mapping
+ *
+ * Results are cached in script properties with a 1-hour TTL.
+ *
+ * @param {Object} UL - Unified logger instance (optional)
+ * @returns {Object} Client configuration object with mappings
+ */
+function loadClientConfiguration_(UL) {
+  const CACHE_KEY = 'CLIENT_CONFIG_CACHE';
+  const CACHE_TTL_MS = 60 * 60 * 1000; // 1 hour
+
+  // Check cache first
+  try {
+    const cached = PROPS.getProperty(CACHE_KEY);
+    if (cached) {
+      const parsed = JSON.parse(cached);
+      if (parsed.timestamp && (Date.now() - parsed.timestamp) < CACHE_TTL_MS) {
+        UL?.debug?.('Using cached client configuration', { age: Date.now() - parsed.timestamp });
+        return parsed.data;
+      }
+    }
+  } catch (e) {
+    UL?.warn?.('Failed to parse cached client config', { error: e.message });
+  }
+
+  // Query Clients database
+  const clientsDbId = CLIENTS_DB_ID;
+  if (!clientsDbId) {
+    UL?.warn?.('Clients database not configured, using static mappings');
+    return {
+      EMAIL_TO_CLIENT: EMAIL_TO_CLIENT,
+      CLIENT_TO_NAME: CLIENT_TO_NAME,
+      CLIENT_TO_LOCAL_PATH: CLIENT_TO_LOCAL_PATH
+    };
+  }
+
+  try {
+    const clientsDsId = resolveDatabaseToDataSourceId_(clientsDbId, UL);
+    const queryResource = clientsDsId
+      ? `data_sources/${clientsDsId}/query`
+      : `databases/${clientsDbId}/query`;
+
+    const response = notionFetch_(queryResource, 'POST', { page_size: 100 });
+
+    if (!response || !response.results) {
+      UL?.warn?.('No results from Clients database query');
+      return null;
+    }
+
+    const emailToClient = {};
+    const clientToName = {};
+    const clientToPath = {};
+
+    for (const page of response.results) {
+      const props = page.properties || {};
+
+      // Extract client-id (slug/identifier)
+      const clientId = props['client-id']?.rich_text?.[0]?.plain_text
+                    || props['Client-ID']?.rich_text?.[0]?.plain_text
+                    || props['slug']?.rich_text?.[0]?.plain_text;
+
+      // Extract display name
+      const clientName = props['Name']?.title?.[0]?.plain_text
+                      || props['name']?.title?.[0]?.plain_text
+                      || props['Client Name']?.title?.[0]?.plain_text;
+
+      // Extract email
+      const clientEmail = props['email']?.email
+                       || props['Email']?.email
+                       || props['primary-email']?.email;
+
+      // Extract local Drive path
+      const localPath = props['local-drive-path']?.rich_text?.[0]?.plain_text
+                     || props['Local Drive Path']?.rich_text?.[0]?.plain_text;
+
+      if (clientId) {
+        if (clientEmail) emailToClient[clientEmail] = clientId;
+        if (clientName) clientToName[clientId] = clientName;
+        if (localPath) clientToPath[clientId] = localPath;
+      }
+    }
+
+    const config = {
+      EMAIL_TO_CLIENT: emailToClient,
+      CLIENT_TO_NAME: clientToName,
+      CLIENT_TO_LOCAL_PATH: clientToPath
+    };
+
+    // Cache the result
+    try {
+      PROPS.setProperty(CACHE_KEY, JSON.stringify({
+        timestamp: Date.now(),
+        data: config
+      }));
+      UL?.debug?.('Cached client configuration', {
+        clients: Object.keys(clientToName).length
+      });
+    } catch (e) {
+      UL?.warn?.('Failed to cache client config', { error: e.message });
+    }
+
+    return config;
+  } catch (e) {
+    UL?.error?.('Failed to load client configuration from Notion', { error: e.message });
+    // Return static mappings as fallback
+    return {
+      EMAIL_TO_CLIENT: EMAIL_TO_CLIENT,
+      CLIENT_TO_NAME: CLIENT_TO_NAME,
+      CLIENT_TO_LOCAL_PATH: CLIENT_TO_LOCAL_PATH
+    };
+  }
+}
+
+/**
+ * Clears the client configuration cache.
+ * Run this after updating the Clients database to force a refresh.
+ */
+function clearClientConfigCache() {
+  PROPS.deleteProperty('CLIENT_CONFIG_CACHE');
+  console.log('[INFO] Cleared client configuration cache');
 }
 
 /**
