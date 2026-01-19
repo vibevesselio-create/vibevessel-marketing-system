@@ -530,6 +530,97 @@ function isInterWorkspaceSyncEnabled_() {
 }
 
 /**
+ * Configure a workspace token for a specific client.
+ * MGM 2026-01-19: Helper to set up inter-workspace sync.
+ *
+ * Usage: setupWorkspaceToken('vibe-vessel', 'secret_xxx...')
+ *
+ * @param {string} clientId - Client identifier (e.g., 'vibe-vessel', 'ocean-frontiers')
+ * @param {string} token - Notion integration token for that workspace
+ */
+function setupWorkspaceToken(clientId, token) {
+  if (!clientId || !token) {
+    console.error('Usage: setupWorkspaceToken("client-id", "secret_xxx...")');
+    return;
+  }
+
+  const tokenProp = CLIENT_TO_WORKSPACE_TOKEN_PROP[clientId];
+  if (!tokenProp) {
+    console.error(`Unknown client: ${clientId}. Valid clients: ${Object.keys(CLIENT_TO_WORKSPACE_TOKEN_PROP).join(', ')}`);
+    return;
+  }
+
+  PROPS.setProperty(tokenProp, token);
+  console.log(`[OK] Set ${tokenProp} for client ${clientId}`);
+  console.log(`[INFO] Inter-workspace sync enabled: ${isInterWorkspaceSyncEnabled_()}`);
+}
+
+/**
+ * Test inter-workspace sync configuration.
+ * MGM 2026-01-19: Validates token configuration and connectivity.
+ */
+function testInterWorkspaceSync() {
+  console.log('=== Inter-Workspace Sync Configuration Test ===\n');
+
+  // 1. Check configured tokens
+  const tokenProps = [
+    'NOTION_TOKEN',
+    'ARCHIVE_WORKSPACE_TOKEN',
+    'VIBEVESSEL_WORKSPACE_TOKEN'
+  ];
+
+  console.log('Token Configuration:');
+  for (const prop of tokenProps) {
+    const token = PROPS.getProperty(prop);
+    const status = token ? `✓ Set (${token.substring(0, 10)}...)` : '✗ Not configured';
+    console.log(`  ${prop}: ${status}`);
+  }
+
+  console.log(`\nInter-workspace sync enabled: ${isInterWorkspaceSyncEnabled_()}`);
+
+  // 2. Test connectivity for each configured token
+  console.log('\nConnectivity Tests:');
+  for (const prop of tokenProps) {
+    const token = PROPS.getProperty(prop);
+    if (!token) continue;
+
+    try {
+      const response = UrlFetchApp.fetch('https://api.notion.com/v1/users/me', {
+        method: 'GET',
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Notion-Version': CONFIG.NOTION_VERSION
+        },
+        muteHttpExceptions: true
+      });
+
+      const code = response.getResponseCode();
+      if (code === 200) {
+        const data = JSON.parse(response.getContentText());
+        console.log(`  ${prop}: ✓ Connected as "${data.name || data.bot?.owner?.user?.name || 'Unknown'}"`);
+      } else {
+        console.log(`  ${prop}: ✗ Error ${code}`);
+      }
+    } catch (e) {
+      console.log(`  ${prop}: ✗ ${e.message}`);
+    }
+  }
+
+  // 3. Test client context routing
+  console.log('\nClient Context Routing:');
+  const currentContext = getClientContext();
+  console.log(`  Current context: ${currentContext || 'none'}`);
+
+  for (const [client, tokenProp] of Object.entries(CLIENT_TO_WORKSPACE_TOKEN_PROP)) {
+    const token = PROPS.getProperty(tokenProp);
+    const status = token ? `→ ${tokenProp} (configured)` : `→ ${tokenProp} (NOT configured)`;
+    console.log(`  ${client} ${status}`);
+  }
+
+  console.log('\n=== Test Complete ===');
+}
+
+/**
  * Notion Folders database ID
  * MGM 2026-01-19: Now uses CONFIG.FOLDERS_DB_ID for dynamic discovery
  * Legacy fallback retained for backward compatibility
@@ -3193,13 +3284,42 @@ function normalizeNotionId_(idString) {
   ].join('-');
 }
 
-function notionFetch_(endpoint, method = 'GET', body = null) {
+/**
+ * Performs a Notion API request with workspace-aware token routing.
+ * MGM 2026-01-19: Updated for inter-workspace database synchronization.
+ *
+ * @param {string} endpoint - API endpoint (e.g., 'pages', 'databases/123')
+ * @param {string} method - HTTP method (GET, POST, PATCH, DELETE)
+ * @param {Object|null} body - Request body for POST/PATCH
+ * @param {Object} options - Additional options
+ * @param {string} options.databaseId - Database ID for workspace token routing
+ * @param {string} options.workspaceToken - Direct token override (bypasses routing)
+ * @returns {Object} Parsed JSON response
+ */
+function notionFetch_(endpoint, method = 'GET', body = null, options = {}) {
+  // MGM 2026-01-19: Inter-workspace token routing
+  // Priority: options.workspaceToken > getWorkspaceToken_(databaseId) > getNotionApiKey()
+  let apiToken;
+  if (options.workspaceToken) {
+    apiToken = options.workspaceToken;
+  } else if (options.databaseId) {
+    apiToken = getWorkspaceToken_(options.databaseId) || getNotionApiKey();
+  } else {
+    // Try to extract database ID from endpoint for automatic routing
+    const dbIdMatch = endpoint.match(/(?:databases|data_sources)\/([a-f0-9-]{32,36})/i);
+    if (dbIdMatch) {
+      apiToken = getWorkspaceToken_(dbIdMatch[1]) || getNotionApiKey();
+    } else {
+      apiToken = getNotionApiKey();
+    }
+  }
+
   const url = `https://api.notion.com/v1/${endpoint}`;
   const base = {
     method,
     muteHttpExceptions: true,
     headers: {
-      'Authorization': `Bearer ${getNotionApiKey()}`,
+      'Authorization': `Bearer ${apiToken}`,
       'Notion-Version': CONFIG.NOTION_VERSION,
       'Content-Type': 'application/json'
     }
