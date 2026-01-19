@@ -8,15 +8,31 @@ Since the Eagle API doesn't return file paths, we construct them from the librar
 
 Eagle stores files in: {library_path}/images/{item_id}.info/{filename}.{ext}
 
-Version: 2026-01-12
+Version: 2026-01-18 - Integrated with file verification system
+
+NOTE: For comprehensive file verification, use the sync_framework.core.file_verification
+module which provides EagleFileVerifier with full integrity checking.
 """
 
 import logging
 import os
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Tuple, Any
 
 logger = logging.getLogger(__name__)
+
+# Import file verification (with graceful fallback)
+try:
+    from sync_framework.core.file_verification import (
+        EagleFileVerifier,
+        FileVerificationResult,
+        FileStatus,
+        get_eagle_file_verifier,
+    )
+    FILE_VERIFICATION_AVAILABLE = True
+except ImportError:
+    FILE_VERIFICATION_AVAILABLE = False
+    logger.debug("File verification module not available")
 
 # Cache for resolved paths to improve performance
 _path_cache: Dict[str, Optional[Path]] = {}
@@ -223,17 +239,196 @@ def clear_path_cache() -> None:
 def get_path_cache_stats() -> Dict[str, int]:
     """
     Get statistics about the path resolution cache.
-    
+
     Returns:
         Dictionary with cache statistics
     """
     total = len(_path_cache)
     resolved = sum(1 for p in _path_cache.values() if p is not None)
     unresolved = total - resolved
-    
+
     return {
         "total_cached": total,
         "resolved": resolved,
         "unresolved": unresolved,
         "hit_rate": (resolved / total * 100) if total > 0 else 0.0
     }
+
+
+# ============================================================================
+# FILE VERIFICATION INTEGRATED FUNCTIONS
+# ============================================================================
+
+def resolve_and_verify_eagle_item(
+    item: dict,
+    library_path: Optional[Path] = None
+) -> Tuple[Optional[Path], bool, Optional[str]]:
+    """
+    Resolve file path for an Eagle item AND verify file integrity.
+
+    This combines path resolution with file verification to ensure
+    the item has a valid, non-corrupt file.
+
+    Args:
+        item: Eagle item dictionary with 'id', 'ext', and optionally 'path'
+        library_path: Path to Eagle library (optional)
+
+    Returns:
+        Tuple of (resolved_path, is_valid, error_message)
+    """
+    # First resolve the path
+    resolved_path = resolve_eagle_item_path(item, library_path)
+
+    if not resolved_path:
+        return None, False, f"Cannot resolve path for item {item.get('id', 'unknown')}"
+
+    # Verify the file if verification is available
+    if FILE_VERIFICATION_AVAILABLE:
+        verifier = get_eagle_file_verifier(library_path)
+        result = verifier.verify_file(resolved_path)
+
+        if not result.is_valid:
+            return resolved_path, False, result.error_message
+
+        return resolved_path, True, None
+    else:
+        # Basic existence check if verification module not available
+        if resolved_path.exists():
+            return resolved_path, True, None
+        else:
+            return resolved_path, False, "File does not exist"
+
+
+def batch_resolve_and_verify_eagle_items(
+    items: List[dict],
+    library_path: Optional[Path] = None
+) -> Dict[str, Tuple[Optional[Path], bool, Optional[str]]]:
+    """
+    Batch resolve and verify file paths for multiple Eagle items.
+
+    Args:
+        items: List of Eagle item dictionaries
+        library_path: Path to Eagle library (optional)
+
+    Returns:
+        Dictionary mapping item IDs to (path, is_valid, error_message) tuples
+    """
+    results = {}
+
+    for item in items:
+        item_id = item.get("id", "")
+        if not item_id:
+            continue
+
+        path, is_valid, error = resolve_and_verify_eagle_item(item, library_path)
+        results[item_id] = (path, is_valid, error)
+
+    return results
+
+
+def get_verified_eagle_items(
+    items: List[dict],
+    library_path: Optional[Path] = None,
+    skip_invalid: bool = True
+) -> List[dict]:
+    """
+    Filter Eagle items to only those with valid, verified files.
+
+    Args:
+        items: List of Eagle item dictionaries
+        library_path: Path to Eagle library (optional)
+        skip_invalid: If True, skip items without valid files
+
+    Returns:
+        List of items with verified files (with resolved paths added)
+    """
+    verified_items = []
+
+    for item in items:
+        path, is_valid, error = resolve_and_verify_eagle_item(item, library_path)
+
+        # Add verification results to item
+        item_copy = item.copy()
+        item_copy["_resolved_path"] = str(path) if path else None
+        item_copy["file_path"] = str(path) if path else None
+        item_copy["path"] = str(path) if path else None
+        item_copy["_file_verified"] = True
+        item_copy["_file_valid"] = is_valid
+        item_copy["_verification_error"] = error
+
+        if skip_invalid and not is_valid:
+            logger.debug(f"Skipping invalid item {item.get('id')}: {error}")
+            continue
+
+        verified_items.append(item_copy)
+
+    return verified_items
+
+
+def scan_eagle_library_for_orphans(
+    library_path: Optional[Path] = None
+) -> List[dict]:
+    """
+    Scan Eagle library and return items without valid files.
+
+    Args:
+        library_path: Path to Eagle library (optional)
+
+    Returns:
+        List of orphaned items (items in Eagle DB but files missing/corrupt)
+    """
+    if not library_path:
+        library_path = get_eagle_library_path()
+
+    if not library_path:
+        logger.error("Cannot determine Eagle library path")
+        return []
+
+    # Get all items from Eagle API
+    try:
+        import urllib.request
+        import json
+
+        url = 'http://localhost:41595/api/item/list'
+        req = urllib.request.Request(url)
+        with urllib.request.urlopen(req, timeout=30) as response:
+            data = json.loads(response.read().decode('utf-8'))
+            items = data.get('data', [])
+    except Exception as e:
+        logger.error(f"Failed to get Eagle items: {e}")
+        return []
+
+    # Check each item
+    orphans = []
+    for item in items:
+        path, is_valid, error = resolve_and_verify_eagle_item(item, library_path)
+
+        if not is_valid:
+            item["_verification_error"] = error
+            item["_resolved_path"] = str(path) if path else None
+            orphans.append(item)
+
+    logger.info(f"Found {len(orphans)} orphaned items out of {len(items)} total")
+    return orphans
+
+
+def generate_eagle_integrity_report(
+    library_path: Optional[Path] = None
+) -> str:
+    """
+    Generate a comprehensive integrity report for the Eagle library.
+
+    Args:
+        library_path: Path to Eagle library (optional)
+
+    Returns:
+        Formatted report string
+    """
+    if FILE_VERIFICATION_AVAILABLE:
+        from sync_framework.core.file_verification import verify_eagle_library_integrity
+        report = verify_eagle_library_integrity()
+        return report.summary()
+    else:
+        # Fallback to basic scan
+        orphans = scan_eagle_library_for_orphans(library_path)
+        return f"Found {len(orphans)} orphaned items (basic scan, full verification unavailable)"
