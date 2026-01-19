@@ -7895,13 +7895,30 @@ function syncMarkdownFilesToNotion_(folder, ds, UL, options = {}) {
         }
         
         // Ensure Clone-Item-URL property exists (URL to the CSV clone file in Google Drive)
-        // MGM 2026-01-19: Changed from Clone-URL/Clone-Parent-Folder to Clone-Item-URL per user requirement
         const cloneItemUrlPropName = 'Clone-Item-URL';
+        const cloneParentFolderPropName = 'Clone-Parent-Folder';
         
         try {
           ensurePropertyExists_(ds.id, cloneItemUrlPropName, 'url', UL);
         } catch (e) {
           UL.warn('Could not ensure Clone-Item-URL property exists', {
+            database: title,
+            error: String(e)
+          });
+        }
+        
+        // Ensure Clone-Parent-Folder relation property exists (links to folders database)
+        try {
+          // Get/create the folders database ID first
+          const foldersDsId = ensureDatabaseExists_('Folders', UL);
+          if (foldersDsId) {
+            ensurePropertyExists_(ds.id, cloneParentFolderPropName, 'relation', UL, { 
+              data_source_id: foldersDsId, 
+              type: 'single_property' 
+            });
+          }
+        } catch (e) {
+          UL.warn('Could not ensure Clone-Parent-Folder property exists', {
             database: title,
             error: String(e)
           });
@@ -7921,7 +7938,6 @@ function syncMarkdownFilesToNotion_(folder, ds, UL, options = {}) {
         }
         
         // Set Clone-Item-URL property (Google Drive URL to the CSV clone file)
-        // MGM 2026-01-19: This is the direct URL to the specific CSV file for this database
         const fileUrl = file.getUrl();
         if (fileUrl && dbProps[cloneItemUrlPropName]) {
           propsPayload[cloneItemUrlPropName] = { url: fileUrl };
@@ -7930,6 +7946,22 @@ function syncMarkdownFilesToNotion_(folder, ds, UL, options = {}) {
             fileName: fileName,
             fileUrl: fileUrl
           });
+        }
+        
+        // Set Clone-Parent-Folder relation (link to folders database entry for parent folder)
+        const parentFolders = file.getParents();
+        if (parentFolders.hasNext() && dbProps[cloneParentFolderPropName]) {
+          const parentFolder = parentFolders.next();
+          const folderNotionId = getOrCreateFolderInNotion_(parentFolder, UL);
+          if (folderNotionId) {
+            propsPayload[cloneParentFolderPropName] = { relation: [{ id: folderNotionId }] };
+            UL.debug('Set Clone-Parent-Folder relation', {
+              database: title,
+              fileName: fileName,
+              folderNotionId: folderNotionId,
+              folderName: parentFolder.getName()
+            });
+          }
         }
         
         // MGM: Validate relations
@@ -8731,7 +8763,8 @@ function ensureScriptsDatabaseExists_(UL) {
   }
 }
 
-function ensurePropertyExists_(dbId, propName, propType, UL) {
+function ensurePropertyExists_(dbId, propName, propType, UL, relationConfig) {
+  // relationConfig is optional: { data_source_id: '...', type: 'single_property'|'dual_property' }
   try {
     // dbId might already be a data_source_id (from search results) or a database_id (from config)
     // resolveDatabaseToDataSourceId_ now handles both cases - it will return the data_source_id
@@ -8753,7 +8786,18 @@ function ensurePropertyExists_(dbId, propName, propType, UL) {
     }
     
     // Property missing - create it
-    const propDef = buildPropertyConfigFromType_(propType, []);
+    let propDef;
+    if (propType === 'relation' && relationConfig && relationConfig.data_source_id) {
+      // For relations, use the provided config with target database
+      propDef = { 
+        relation: { 
+          database_id: relationConfig.data_source_id,
+          type: relationConfig.type || 'single_property'
+        }
+      };
+    } else {
+      propDef = buildPropertyConfigFromType_(propType, []);
+    }
     const patch = { properties: { [propName]: propDef } };
     
     notionFetch_(endpoint, 'PATCH', patch);
