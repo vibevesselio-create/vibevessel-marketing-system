@@ -25,13 +25,25 @@ Before creating any handoff tasks or running main.py, the receiving agent MUST:
 3. **Execute the resolution work using available tools** - Edit files, run commands, update Notion
 4. **Document completed work** - Update issue/task status, add resolution notes
 
-### Step 2: CREATE HANDOFF ONLY AT BLOCKING POINTS
+### Step 2: CREATE HANDOFF ONLY AT BLOCKING POINTS (NEVER REQUEST HUMAN ACTION)
 
 Only create a handoff trigger file when:
 - The issue requires capabilities the current agent doesn't have
 - The issue requires access/permissions the current agent lacks
 - The issue is blocked waiting on external input/approval
 - The resolution is partially complete and needs another agent to continue
+
+**CRITICAL: When creating a handoff, send it to another AGENT, not to a human.**
+
+Available agent inboxes for escalation:
+- `ChatGPT-Code-Review-Agent-Trigger-gd/01_inbox` - Code review
+- `ChatGPT-Strategic-Agent-Trigger-gd/01_inbox` - Strategic decisions
+- `Claude-MM1-Agent-Trigger-gd/01_inbox` - Local environment access
+- `Codex-MM1-Agent-Trigger-gd/01_inbox` - Background processing
+- `Notion-AI-Data-Operations-Agent-Trigger-gd/01_inbox` - Notion operations
+- `Notion-AI-Research-Agent-Trigger-gd/01_inbox` - Research tasks
+
+**ABSOLUTE PROHIBITION: Never respond with "Human Action Required" or similar phrases. Always escalate to an agent or find a programmatic solution.**
 
 ### Step 3: RUN main.py AS THE LAST STEP
 
@@ -73,8 +85,17 @@ main.py will then:
    - Test/validate the changes
    - Update Notion with completed work
 4. IF BLOCKED:
-   - Create handoff trigger file manually with specific instructions
-   - Include all context and work completed so far
+   - **DO NOT** request human intervention or respond with "Human Action Required"
+   - **FIRST** attempt alternative resolution methods:
+     a. Use different API endpoint (data_sources vs databases)
+     b. Use Python script with direct API calls if MCP fails
+     c. Use clasp CLI if GAS API execution fails
+     d. Create the resource programmatically if it doesn't exist
+   - **IF** truly blocked (no programmatic path exists):
+     - Create handoff trigger file to appropriate agent inbox
+     - Use the Google Drive agent inboxes for cross-environment handoffs
+     - Specify exactly what is blocked and what capability is needed
+   - **NEVER** give up without exhausting all options
 5. LAST STEP: Run main.py to orchestrate handoff flow
 ```
 
