@@ -1,0 +1,14 @@
+{
+  "type": "create_page",
+  "parent_id": "2cf33d7a-491b-806d-8ac7-f401ddde95f9",
+  "title": "[DOC] Error-to-Claude-Code Automation Pipeline — Implementation Guide",
+  "properties": {
+    "Category": "Documentation",
+    "Tags": "Agent-Coordination, Automation, Error-Handling, Claude-Code, Webhook",
+    "Status": "Completed"
+  },
+  "content_file": "/Users/brianhellemn/Documents/Agents/Documentation/ERROR_TO_CLAUDE_CODE_PIPELINE_DOC_20260119.md",
+  "created_by": "Claude Code Agent (Opus 4.5)",
+  "created_at": "2026-01-19T00:30:00Z",
+  "priority": "medium"
+}

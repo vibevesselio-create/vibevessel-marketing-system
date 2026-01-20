@@ -1,0 +1,62 @@
+2026-01-19 18:45:12,688 - __main__ - INFO - Starting Claude Code automation (prompt: 6689 chars)
+2026-01-19 18:45:12,711 - __main__ - INFO - Clipboard content set (6689 chars)
+2026-01-19 18:45:12,711 - __main__ - INFO - Using native automation approach
+2026-01-19 18:45:14,487 - __main__ - INFO - Claude app activated
+2026-01-19 18:45:16,006 - __main__ - INFO - Claude window positioned
+2026-01-19 18:45:17,131 - __main__ - INFO - Input area selected
+2026-01-19 18:45:17,639 - __main__ - INFO - Content pasted
+2026-01-19 18:45:17,944 - __main__ - INFO - Prompt pasted (manual submit required)
+2026-01-19 18:48:54,521 - __main__ - INFO - Starting Claude Code automation (prompt: 10476 chars)
+2026-01-19 18:48:54,537 - __main__ - INFO - Clipboard content set (10476 chars)
+2026-01-19 18:48:54,537 - __main__ - INFO - Using native automation approach
+2026-01-19 18:48:56,279 - __main__ - INFO - Claude app activated
+2026-01-19 18:48:57,539 - __main__ - INFO - Claude window positioned
+2026-01-19 18:48:58,639 - __main__ - INFO - Input area selected
+2026-01-19 18:48:59,120 - __main__ - INFO - Content pasted
+2026-01-19 18:48:59,591 - __main__ - INFO - Request submitted
+2026-01-19 18:48:59,591 - __main__ - INFO - Prompt submitted to Claude
+2026-01-19 18:49:51,437 - __main__ - INFO - Starting Claude Code automation (prompt: 10476 chars)
+2026-01-19 18:49:51,451 - __main__ - INFO - Clipboard content set (10476 chars)
+2026-01-19 18:49:51,451 - __main__ - INFO - Using native automation approach
+2026-01-19 18:49:53,236 - __main__ - INFO - Claude app activated
+2026-01-19 18:49:58,305 - __main__ - INFO - Claude window positioned to right half
+2026-01-19 18:49:59,426 - __main__ - INFO - Input area selected
+2026-01-19 18:49:59,916 - __main__ - INFO - Content pasted
+2026-01-19 18:50:00,382 - __main__ - INFO - Request submitted
+2026-01-19 18:50:00,382 - __main__ - INFO - Prompt submitted to Claude
+2026-01-19 18:53:00,916 - __main__ - INFO - ============================================================
+2026-01-19 18:53:00,916 - __main__ - INFO - Starting Claude Code automation
+2026-01-19 18:53:00,916 - __main__ - INFO - Prompt: 72 chars, auto_submit=True
+2026-01-19 18:53:00,916 - __main__ - INFO - ============================================================
+2026-01-19 18:53:00,932 - __main__ - INFO - [Step 01] [18:53:00.932] Clipboard set (72 chars)
+2026-01-19 18:53:00,932 - __main__ - INFO - Using native automation sequence...
+2026-01-19 18:53:00,933 - __main__ - INFO - [Step 02] [18:53:00.932] Hide all other applications
+2026-01-19 18:53:01,211 - __main__ - INFO - [Step 03] [18:53:01.210] Pause 0.5s
+2026-01-19 18:53:01,716 - __main__ - INFO - [Step 04] [18:53:01.716] Activate Claude app
+2026-01-19 18:53:01,903 - __main__ - INFO - [Step 05] [18:53:01.903] Pause 1.5s - wait for app activation
+2026-01-19 18:53:03,407 - __main__ - INFO - [Step 06] [18:53:03.407] Create new conversation (Cmd+N)
+2026-01-19 18:53:03,601 - __main__ - INFO - [Step 07] [18:53:03.601] Pause 1.0s - wait for new conversation
+2026-01-19 18:53:04,606 - __main__ - INFO - [Step 08] [18:53:04.606] Click into text input area
+2026-01-19 18:54:03,487 - __main__ - INFO - ============================================================
+2026-01-19 18:54:03,488 - __main__ - INFO - Starting Claude Code automation
+2026-01-19 18:54:03,488 - __main__ - INFO - Prompt: 40 chars, auto_submit=True
+2026-01-19 18:54:03,488 - __main__ - INFO - ============================================================
+2026-01-19 18:54:03,506 - __main__ - INFO - [Step 01] [18:54:03.506] Clipboard set (40 chars)
+2026-01-19 18:54:03,506 - __main__ - INFO - Using native automation sequence...
+2026-01-19 18:54:03,506 - __main__ - INFO - [Step 02] [18:54:03.506] Hide all other applications
+2026-01-19 18:54:03,830 - __main__ - INFO - [Step 03] [18:54:03.830] Pause 0.5s
+2026-01-19 18:54:04,336 - __main__ - INFO - [Step 04] [18:54:04.335] Activate Claude app
+2026-01-19 18:54:04,464 - __main__ - INFO - [Step 05] [18:54:04.464] Pause 1.5s - wait for app activation
+2026-01-19 18:54:05,966 - __main__ - INFO - [Step 06] [18:54:05.966] Click into text input area
+2026-01-19 18:57:16,125 - __main__ - INFO - ============================================================
+2026-01-19 18:57:16,125 - __main__ - INFO - Starting Claude Code automation (25 chars)
+2026-01-19 18:57:16,125 - __main__ - INFO - ============================================================
+2026-01-19 18:57:16,140 - __main__ - INFO - [Step 01] [18:57:16.140] Set clipboard (25 chars)
+2026-01-19 18:57:16,140 - __main__ - INFO - [Step 02] [18:57:16.140] Pause 1.0s (before activation)
+2026-01-19 18:57:17,145 - __main__ - INFO - [Step 03] [18:57:17.145] Bring Claude to front + position right half
+2026-01-19 18:57:18,246 - __main__ - INFO - [Step 04] [18:57:18.246] Pause 1.0s (after activation)
+2026-01-19 18:57:19,251 - __main__ - INFO - [Step 05] [18:57:19.251] Paste clipboard (Cmd+V)
+2026-01-19 18:57:19,667 - __main__ - INFO - [Step 06] [18:57:19.667] Pause 1.0s (after paste)
+2026-01-19 18:57:20,672 - __main__ - INFO - [Step 07] [18:57:20.672] Press Return (submit)
+2026-01-19 18:57:20,891 - __main__ - INFO - [Step 08] [18:57:20.891] DONE - Prompt submitted
+2026-01-19 18:57:20,891 - __main__ - INFO - Completed in 4.77s

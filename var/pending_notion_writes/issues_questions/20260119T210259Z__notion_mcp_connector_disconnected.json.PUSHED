@@ -1,0 +1,19 @@
+{
+  "title": "[ISSUE] Notion MCP Connector Disconnected — Cowork Session 2026-01-19",
+  "type": ["Internal Issue"],
+  "status": "Unreported",
+  "priority": "Medium",
+  "component": "Notion MCP Integration",
+  "blocked": false,
+  "description": "During Cross-Workspace Database Sync gap analysis session, the Notion MCP connector (mcp__9195f809-cc08-4573-8e6f-834d11a5c04e) disconnected mid-session. Initial searches and fetches succeeded, but subsequent calls returned 'No such tool available' error. This prevented direct document creation in Notion Documents database.",
+  "evidence": {
+    "initial_success": "notion-search for 'drivesheets sync script' returned 50 results",
+    "failure_error": "Error: No such tool available: mcp__9195f809-cc08-4573-8e6f-834d11a5c04e__notion-fetch",
+    "session_timestamp": "2026-01-19T19:12:00Z"
+  },
+  "impact": "Unable to create documents directly in Notion; forced to use fallback methods (pending_notion_writes JSON queue, trigger files)",
+  "workaround": "Created handoff trigger file and pending_notion_writes JSON entries as fallback",
+  "next_step": "Investigate MCP connector stability; check for session timeout or authentication issues; consider implementing auto-reconnect logic",
+  "owner": ["Claude Cowork Agent", "System Admin"],
+  "created_at": "20260119T210259Z"
+}

@@ -1,0 +1,44 @@
+{
+  "title": "[HANDOFF] Execute Cross-Workspace Database Sync — Critical Blockers Resolution",
+  "priority": "Critical",
+  "status": "Not Started",
+  "dependency_status": "Ready",
+  "assigned_agents": ["Claude Code Agent"],
+  "review_handoff_to": ["Cursor MM1 Agent", "Claude MM1 Agent"],
+  "objective": "Resolve 4 critical blockers preventing Cross-Workspace Database Synchronization production deployment: (1) Deploy DriveSheetsSync v2.6 to Apps Script, (2) Configure workspace tokens, (3) Fix Google OAuth credentials, (4) Configure Slack webhook.",
+  "preflight": [
+    "Verify gap analysis document exists at Projects/Cross-Workspace-Database-Sync-Gap-Analysis-Remediation-Plan.md",
+    "Verify DriveSheetsSync codebase has commits ahead of origin in gas-scripts/drive-sheets-sync/",
+    "Verify Cloudflare tunnel operational: curl https://webhook.vibevessel.space/health",
+    "Verify clasp is authenticated: npx clasp login --status"
+  ],
+  "steps": [
+    "GAP-001: Deploy DriveSheetsSync v2.6 to Apps Script — cd gas-scripts/drive-sheets-sync && npx clasp push",
+    "GAP-002: Configure workspace tokens — Run setupWorkspaceToken() for seren-media-internal, vibe-vessel, ocean-frontiers in Apps Script",
+    "GAP-003: Fix Google OAuth credentials — Download from GCP Console project 797362328200, save to credentials/google-oauth/VibeVessel/",
+    "GAP-004: Configure Slack webhook — Create incoming webhook, add SLACK_WEBHOOK_URL to LaunchAgent plist, reload agent",
+    "VALIDATION: Run testInterWorkspaceSync() in Apps Script to verify all tokens configured and connectivity working"
+  ],
+  "success_criteria": [
+    "DriveSheetsSync v2.6 deployed and visible in Apps Script editor with all 6 new functions",
+    "testInterWorkspaceSync() returns all tokens showing ✓ Set and all connectivity tests passing",
+    "Google OAuth credentials file is non-empty valid JSON with correct client_id",
+    "Slack webhook configured and test notification received",
+    "Linear issues VV-22 and VV-23 marked as Done"
+  ],
+  "related_issues": ["VV-7", "VV-22", "VV-23", "VV-24", "VV-25"],
+  "related_documents": [
+    "Projects/Cross-Workspace-Database-Sync-Gap-Analysis-Remediation-Plan.md",
+    "CROSS_WORKSPACE_SYNC_PHASE1_COMPLETION_SUMMARY.md",
+    "services/webhook_server/IMPLEMENTATION_SUMMARY.md"
+  ],
+  "created_at": "20260119T210259Z",
+  "created_by": "Claude Cowork Agent (Opus 4.5)",
+  "estimated_effort": "2-3 hours",
+  "metadata": {
+    "trigger_file": "Agent-Triggers/Claude-Code-Agent-Trigger/01_inbox/execute-cross-workspace-sync-critical-blockers-20260119.md",
+    "gap_count": 4,
+    "project_completion": "70%",
+    "phase": "Critical Blockers Resolution"
+  }
+}
