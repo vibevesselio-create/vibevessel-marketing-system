@@ -216,7 +216,7 @@ def _build_config_from_env() -> Dict[str, Any]:
         "backup_dir": get_env_value("BACKUP_DIR", "/Volumes/VIBES/Djay-Pro-Auto-Import"),
         "wav_backup_dir": get_env_value("WAV_BACKUP_DIR", "/Volumes/VIBES/Apple-Music-Auto-Add"),
         # NEW 2026-01-16: Playlist tracks directory for new 3-file output structure
-        "playlist_tracks_dir": get_env_value("PLAYLIST_TRACKS_DIR", "/Volumes/SYSTEM_SSD/Dropbox/Music/playlists/playlist-tracks"),
+        "playlist_tracks_dir": get_env_value("PLAYLIST_TRACKS_DIR", "/Volumes/SYSTEM-SSD/Dropbox/Music-Dropbox/playlists/playlist-tracks"),
         "eagle_wav_temp_dir": get_env_value("EAGLE_WAV_TEMP_DIR", "/Volumes/PROJECTS-MM1/OTHER/TEMP"),
         "eagle_api_url": get_env_value("EAGLE_API_BASE") or get_env_value("EAGLE_BASE_URL", "http://localhost:41595"),
         "eagle_library_path": get_env_value("EAGLE_LIBRARY_PATH", ""),
