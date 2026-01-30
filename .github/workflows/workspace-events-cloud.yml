@@ -6,9 +6,10 @@ on:
     branches: ["main"]
     paths:
       - "seren-media-workflows/scripts/workspace_events/**"
-  schedule:
-    # Lightweight poll/health cadence (Cloud Run should primarily be Pub/Sub push-driven)
-    - cron: "*/5 * * * *"
+  # Schedule disabled - seren-media-workflows is gitignored (separate repo)
+  # To re-enable: uncomment schedule trigger and ensure files are tracked in git
+  # schedule:
+  #   - cron: "*/5 * * * *"
 
 permissions:
   contents: read
