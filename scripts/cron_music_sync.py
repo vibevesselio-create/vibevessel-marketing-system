@@ -94,11 +94,16 @@ class CronMusicSync:
         }
 
     def _load_state(self) -> Dict[str, Any]:
-        """Load sync state from file."""
+        """Load sync state from file with file locking."""
         if STATE_FILE.exists():
             try:
-                with open(STATE_FILE) as f:
-                    return json.load(f)
+                with open(STATE_FILE, 'r') as f:
+                    # Acquire shared lock for reading
+                    fcntl.flock(f.fileno(), fcntl.LOCK_SH)
+                    try:
+                        return json.load(f)
+                    finally:
+                        fcntl.flock(f.fileno(), fcntl.LOCK_UN)
             except Exception as e:
                 logger.warning(f"Failed to load state: {e}")
 
@@ -106,14 +111,32 @@ class CronMusicSync:
             "last_sync": None,
             "batch_index": 0,
             "total_synced": 0,
-            "last_track_id": None
+            "last_track_id": None,
+            "version": 0  # State version for conflict detection
         }
 
     def _save_state(self):
-        """Save sync state to file."""
+        """Save sync state to file with atomic write and file locking."""
         try:
-            with open(STATE_FILE, 'w') as f:
-                json.dump(self.state, f, indent=2)
+            # Increment version for conflict detection
+            self.state["version"] = self.state.get("version", 0) + 1
+            self.state["updated_at"] = datetime.now(timezone.utc).isoformat()
+
+            # Write to temp file first, then atomic rename
+            temp_file = STATE_FILE.with_suffix('.tmp')
+            with open(temp_file, 'w') as f:
+                # Acquire exclusive lock for writing
+                fcntl.flock(f.fileno(), fcntl.LOCK_EX)
+                try:
+                    json.dump(self.state, f, indent=2)
+                    f.flush()
+                    os.fsync(f.fileno())
+                finally:
+                    fcntl.flock(f.fileno(), fcntl.LOCK_UN)
+
+            # Atomic rename
+            os.replace(temp_file, STATE_FILE)
+            logger.debug(f"State saved (version {self.state['version']})")
         except Exception as e:
             logger.error(f"Failed to save state: {e}")
 

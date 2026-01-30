@@ -175,21 +175,66 @@ var SpotifyConfig = (function() {
   }
 
   /**
-   * Update sync state tracking
+   * Update sync state tracking with atomic compare-and-set semantics
+   * Prevents race conditions by verifying expected state before update
    * @param {Object} state - State to update
+   * @param {Object} expected - Expected current state for CAS (optional)
+   * @returns {boolean} True if update succeeded
    */
-  function updateSyncState(state) {
+  function updateSyncState(state, expected) {
     var props = PropertiesService.getScriptProperties();
+    var lock = LockService.getScriptLock();
 
-    if (state.lastSyncTimestamp !== undefined) {
-      props.setProperty(STATE_KEY_LAST_SYNC, state.lastSyncTimestamp);
+    try {
+      // Acquire lock with 10-second timeout
+      lock.waitLock(10000);
+
+      // If expected state provided, verify it matches current
+      if (expected && expected.syncBatchIndex !== undefined) {
+        var currentBatch = parseInt(props.getProperty(STATE_KEY_SYNC_BATCH) || '0', 10);
+        if (currentBatch !== expected.syncBatchIndex) {
+          console.warn('[SpotifyConfig] CAS conflict: expected batch ' + expected.syncBatchIndex + ', got ' + currentBatch);
+          return false;
+        }
+      }
+
+      // Update state version
+      var currentVersion = parseInt(props.getProperty('STATE_VERSION') || '0', 10);
+      props.setProperty('STATE_VERSION', String(currentVersion + 1));
+      props.setProperty('STATE_UPDATED_AT', new Date().toISOString());
+
+      if (state.lastSyncTimestamp !== undefined) {
+        props.setProperty(STATE_KEY_LAST_SYNC, state.lastSyncTimestamp);
+      }
+      if (state.syncCursor !== undefined) {
+        props.setProperty(STATE_KEY_SYNC_CURSOR, state.syncCursor);
+      }
+      if (state.syncBatchIndex !== undefined) {
+        props.setProperty(STATE_KEY_SYNC_BATCH, String(state.syncBatchIndex));
+      }
+
+      return true;
+    } catch (e) {
+      console.error('[SpotifyConfig] Failed to update state: ' + e.message);
+      return false;
+    } finally {
+      lock.releaseLock();
     }
-    if (state.syncCursor !== undefined) {
-      props.setProperty(STATE_KEY_SYNC_CURSOR, state.syncCursor);
-    }
-    if (state.syncBatchIndex !== undefined) {
-      props.setProperty(STATE_KEY_SYNC_BATCH, String(state.syncBatchIndex));
-    }
+  }
+
+  /**
+   * Get current state version for conflict detection
+   * @returns {Object} Current state with version
+   */
+  function getStateWithVersion() {
+    var props = PropertiesService.getScriptProperties();
+    return {
+      syncBatchIndex: parseInt(props.getProperty(STATE_KEY_SYNC_BATCH) || '0', 10),
+      syncCursor: props.getProperty(STATE_KEY_SYNC_CURSOR) || '',
+      lastSyncTimestamp: props.getProperty(STATE_KEY_LAST_SYNC) || '',
+      version: parseInt(props.getProperty('STATE_VERSION') || '0', 10),
+      updatedAt: props.getProperty('STATE_UPDATED_AT') || ''
+    };
   }
 
   /**
@@ -351,6 +396,7 @@ var SpotifyConfig = (function() {
     clearTokens: clearTokens,
     isTokenExpired: isTokenExpired,
     updateSyncState: updateSyncState,
+    getStateWithVersion: getStateWithVersion,
     resetSyncState: resetSyncState,
     validateConfig: validateConfig,
     initialize: initialize,
