@@ -1169,7 +1169,9 @@ OUT_DIR = Path(unified_config.get("out_dir") or os.getenv("OUT_DIR", "/Users/bri
 BACKUP_DIR = None  # DEPRECATED - was "/Volumes/VIBES/Djay-Pro-Auto-Import"
 WAV_BACKUP_DIR = None  # DEPRECATED - was "/Volumes/VIBES/Apple-Music-Auto-Add"
 # Playlist tracks directory for WAV files organized by playlist (3rd output file)
-PLAYLIST_TRACKS_DIR = Path(unified_config.get("playlist_tracks_dir") or os.getenv("PLAYLIST_TRACKS_DIR", "/Volumes/SYSTEM_SSD/Dropbox/Music/playlists/playlist-tracks"))
+# NOTE: Will be set to None in Eagle-only mode (see below)
+_playlist_tracks_dir_raw = unified_config.get("playlist_tracks_dir") or os.getenv("PLAYLIST_TRACKS_DIR", "")
+PLAYLIST_TRACKS_DIR = Path(_playlist_tracks_dir_raw) if _playlist_tracks_dir_raw else None
 
 # Eagle API configuration
 EAGLE_API_BASE = unified_config.get("eagle_api_url") or os.getenv("EAGLE_API_BASE", "http://localhost:41595")
@@ -2013,9 +2015,32 @@ def ensure_writable_dir(p: Path, name: str) -> Path:
         workspace_logger.error(f"❌ Failed to prepare {name} '{p}': {e}")
         raise SystemExit(1)
 
-# Preflight the user-configured directories early so we fail fast with a clear message
-OUT_DIR = ensure_writable_dir(OUT_DIR, "OUT_DIR")
-PLAYLIST_TRACKS_DIR = ensure_writable_dir(PLAYLIST_TRACKS_DIR, "PLAYLIST_TRACKS_DIR")
+# ============================================================================
+# OUTPUT DESTINATION CONFIGURATION
+# ============================================================================
+# Check for Eagle-only output mode (all files go directly to Eagle library)
+EAGLE_ONLY_OUTPUT = _truthy(os.getenv("EAGLE_ONLY_OUTPUT", "0"))
+
+if EAGLE_ONLY_OUTPUT:
+    # Eagle library is the SOLE output destination
+    workspace_logger.info("🦅 EAGLE-ONLY MODE: All outputs go directly to Eagle library")
+    workspace_logger.info(f"   Eagle Library: {EAGLE_LIBRARY_PATH}")
+    # OUT_DIR is set to Eagle library path for compatibility but files are imported via API
+    if EAGLE_LIBRARY_PATH:
+        OUT_DIR = Path(EAGLE_LIBRARY_PATH)
+    else:
+        OUT_DIR = Path(os.getenv("OUT_DIR", "/tmp/eagle-staging"))
+    # PLAYLIST_TRACKS_DIR is disabled in Eagle-only mode
+    PLAYLIST_TRACKS_DIR = None
+else:
+    # Legacy mode: Multiple output directories
+    OUT_DIR = ensure_writable_dir(OUT_DIR, "OUT_DIR")
+    _playlist_dir = os.getenv("PLAYLIST_TRACKS_DIR", "")
+    if _playlist_dir:
+        PLAYLIST_TRACKS_DIR = ensure_writable_dir(Path(_playlist_dir), "PLAYLIST_TRACKS_DIR")
+    else:
+        PLAYLIST_TRACKS_DIR = None
+
 # NOTE: BACKUP_DIR and WAV_BACKUP_DIR are deprecated (set to None above)
 
 # ---------- Pre-download existence check ----------
@@ -6115,7 +6140,17 @@ def eagle_get_active_library_info() -> Optional[Dict[str, Any]]:
 
 
 def log_active_eagle_library() -> None:
-    """Log information about the currently active Eagle library."""
+    """Log information about the currently active Eagle library.
+
+    Automatically launches Eagle if not running (when EAGLE_AUTO_LAUNCH is enabled).
+    """
+    # Ensure Eagle is running before trying to get library info
+    if not _is_eagle_api_available():
+        workspace_logger.info("🦅 Eagle not running - attempting to launch...")
+        if not ensure_eagle_app_running():
+            workspace_logger.warning("🦅 Could not launch Eagle application - continuing without Eagle integration")
+            return
+
     lib_info = eagle_get_active_library_info()
     if lib_info:
         workspace_logger.info(f"🦅 Active Eagle Library: {lib_info.get('name', 'Unknown')}")
@@ -7870,19 +7905,24 @@ def create_audio_processing_summary(
         else:
             summary_lines.append(f"❌ {file_type}: No path provided")
     
-    # Add playlist WAV copy status (3rd output file)
+    # Add playlist WAV copy status (3rd output file) - only if PLAYLIST_TRACKS_DIR is configured
     title = track_info.get('title', 'Unknown')
     safe_base = re.sub(r"[^\w\s-]", "", title).strip()
-    # Check if playlist WAV copy exists in PLAYLIST_TRACKS_DIR
     playlist_names = track_info.get('playlist_names', [])
     playlist_name = playlist_names[0] if playlist_names else "Uncategorized"
-    playlist_wav_path = PLAYLIST_TRACKS_DIR / playlist_name / f"{safe_base}.wav"
-    if playlist_wav_path.exists():
-        file_size = playlist_wav_path.stat().st_size
-        file_size_mb = file_size / (1024 * 1024)
-        summary_lines.append(f"✅ Playlist WAV: Created in {playlist_name}/ ({file_size_mb:.2f} MB)")
+
+    if PLAYLIST_TRACKS_DIR is not None:
+        # Check if playlist WAV copy exists in PLAYLIST_TRACKS_DIR
+        playlist_wav_path = PLAYLIST_TRACKS_DIR / playlist_name / f"{safe_base}.wav"
+        if playlist_wav_path.exists():
+            file_size = playlist_wav_path.stat().st_size
+            file_size_mb = file_size / (1024 * 1024)
+            summary_lines.append(f"✅ Playlist WAV: Created in {playlist_name}/ ({file_size_mb:.2f} MB)")
+        else:
+            summary_lines.append(f"ℹ️  Playlist WAV: Not yet created (will be saved to {playlist_name}/)")
     else:
-        summary_lines.append(f"ℹ️  Playlist WAV: Not yet created (will be saved to {playlist_name}/)")
+        # Eagle-only mode - all outputs go to Eagle library
+        summary_lines.append("🦅 Eagle-Only Mode: All files imported to Eagle library")
     
     summary_lines.append("")
     
@@ -11019,16 +11059,19 @@ def download_track(
 
     playlist_dir.mkdir(parents=True, exist_ok=True)
 
-    # 3-FILE OUTPUT STRUCTURE:
-    # 1. WAV  -> Eagle Library (Playlists/{playlist}/)
-    # 2. AIFF -> Eagle Library (Playlists/{playlist}/)
-    # 3. WAV  -> PLAYLIST_TRACKS_DIR/{playlist}/{filename}.wav
-    playlist_wav_path = PLAYLIST_TRACKS_DIR / playlist_names[0] / f"{safe_base}.wav" if playlist_names else PLAYLIST_TRACKS_DIR / "Uncategorized" / f"{safe_base}.wav"
+    # OUTPUT STRUCTURE (depends on EAGLE_ONLY_OUTPUT mode):
+    # Eagle-Only Mode: All files go to Eagle Library only
+    # Legacy Mode: WAV+AIFF -> Eagle, WAV copy -> PLAYLIST_TRACKS_DIR
+    if PLAYLIST_TRACKS_DIR is not None:
+        playlist_wav_path = PLAYLIST_TRACKS_DIR / playlist_names[0] / f"{safe_base}.wav" if playlist_names else PLAYLIST_TRACKS_DIR / "Uncategorized" / f"{safe_base}.wav"
+    else:
+        playlist_wav_path = None  # Eagle-only mode - no playlist dir copy
 
-    # Skip if already done - check Eagle Library for WAV and AIFF, and playlist dir for WAV copy
+    # Skip if already done - check Eagle Library for WAV and AIFF
     eagle_wav_exists = eagle_find_item_by_name(f"{safe_base}.wav")
     eagle_aiff_exists = eagle_find_item_by_name(f"{safe_base}.aiff")
-    if eagle_wav_exists and eagle_aiff_exists and playlist_wav_path.exists():
+    playlist_wav_exists = playlist_wav_path.exists() if playlist_wav_path else True  # Skip check in Eagle-only mode
+    if eagle_wav_exists and eagle_aiff_exists and playlist_wav_exists:
         # All 3 output files exist - skip processing
         try:
             cmd = [
@@ -11864,9 +11907,9 @@ def download_track(
 
         # ── Move to final destinations (NEW 3-FILE OUTPUT STRUCTURE) ──────────────────────────
         # 2026-01-16: Updated output structure per user requirements:
-        # 1. Primary WAV -> Eagle Library (organized by playlist folder)
-        # 2. Secondary AIFF -> Eagle Library (organized by playlist folder)
-        # 3. WAV copy -> /Volumes/SYSTEM_SSD/Dropbox/Music/playlists/playlist-tracks/{playlist}/{filename}.wav
+        # OUTPUT DESTINATIONS:
+        # - All files -> Eagle Library (organized by playlist folder via API import)
+        # - Legacy mode: Additional WAV copy -> PLAYLIST_TRACKS_DIR (if configured)
         #
         # REMOVED: M4A outputs and BACKUP_DIR M4A copies (no longer needed)
 
@@ -11875,13 +11918,14 @@ def download_track(
         # Get playlist name for folder organization
         playlist_name_for_folder = playlist_names[0] if playlist_names else "Uncategorized"
 
-        # Create playlist directory in PLAYLIST_TRACKS_DIR for the WAV copy
-        playlist_wav_dir = PLAYLIST_TRACKS_DIR / playlist_name_for_folder
-        playlist_wav_dir.mkdir(parents=True, exist_ok=True)
-
-        # Copy WAV to playlist tracks directory (3rd output file)
-        playlist_wav_path = playlist_wav_dir / f"{safe_base}.wav"
-        shutil.copy2(wav_tmp, playlist_wav_path)
+        # Copy WAV to playlist tracks directory (3rd output file) - only if PLAYLIST_TRACKS_DIR is configured
+        if PLAYLIST_TRACKS_DIR is not None:
+            playlist_wav_dir = PLAYLIST_TRACKS_DIR / playlist_name_for_folder
+            playlist_wav_dir.mkdir(parents=True, exist_ok=True)
+            playlist_wav_path = playlist_wav_dir / f"{safe_base}.wav"
+            shutil.copy2(wav_tmp, playlist_wav_path)
+        else:
+            workspace_logger.info("🦅 Eagle-Only Mode: Skipping PLAYLIST_TRACKS_DIR copy")
 
         # Rename WAV to clean filename for Eagle import (remove _final suffix)
         # Note: wav_clean_path may be the same as normalized_wav_path, so we check for that
